@@ -79,3 +79,14 @@
 - Dimensión de rúbrica: Evidencias (15), IA (15), Seguridad (5).
 - Archivos/módulos afectados: `scayl/gen/*`.
 - Riesgos: borradores más escuetos (aceptable). Esfuerzo: 3–4 h. Recomendación: **ACCEPT**.
+
+## AP-007 · Proveedor opcional Claude (Sonnet 5.5) como comparación medida
+- Autor / fecha: Lead · 2026-10-06 · Estado: **ABIERTA — requiere aprobación humana** (costo + API externa)
+- Problema u oportunidad: un modelo local de 8–9B puede dar borradores más pobres en español que un modelo de frontera; el equipo pregunta si usar Sonnet en la demo en vivo.
+- Cambio propuesto: `scayl/gen/llm.py` con dos proveedores tras la misma interfaz: `ollama` (por defecto, offline) y `anthropic` (`claude-sonnet-5-5`, opcional con `ANTHROPIC_API_KEY`). Los mismos prompts, esquema JSON y validadores. El Trust Lab compara local frente a Sonnet: validez de citas, preservación de atribución, latencia y costo medidos.
+- Por qué mejora el proyecto: convierte la elección de modelo en un resultado medido ("IA: mejora o limitación medida"); mantiene el relato local/$0 y el modo offline (T10).
+- Dimensión de rúbrica: IA (15), Calidad técnica (10).
+- Archivos/módulos afectados: `scayl/gen/llm.py`, `.env.example`, `requirements-ai.txt` (+`anthropic`), Trust Lab, docs de costo.
+- Riesgos: costo (estimado de unos US$3–6 por 200 llamadas); dependencia de red (mitigada con fallback local y caché); solo se envían titulares públicos.
+- Esfuerzo estimado: 1–2 h.
+- Recomendación: **CONSIDER**. Local como camino principal; Sonnet como comparación y como respaldo de calidad si B-10 muestra borradores locales débiles.
