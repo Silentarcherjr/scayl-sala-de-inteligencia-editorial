@@ -98,3 +98,11 @@
 - **Motivo:** es la práctica estándar de evaluación por *pooling*. Da una comparación baseline frente a IA con datos reales y declara sus límites con honestidad.
 - **Compromiso:** el recall es relativo, no absoluto; se declara así en el Trust Lab.
 - **Fecha:** 2026-10-07
+
+### DL-017 · Ventana de noticias según aclaración oficial C-01 (supera DL-007, DL-008 y DL-014)
+- **Decisión:** las noticias van en **[2025-10-02, 2026-10-01)**, con corte del snapshot el **2026-10-01T00:00:00Z** (objetivo: 30 días previos al corte, ampliable a 90). World Bank 2010–2024 y USGS 2024 se mantienen como contexto histórico. **AP-004 aceptada:** USGS ampliado a la ventana de noticias en un archivo separado. Las 48 entradas históricas de TVN (DL-014) quedan fuera; se usan las entradas del RSS dentro de la ventana nueva. Las fechas se centralizan en `scayl/config/data_window.v1.yaml`.
+- **Origen:** aclaración de la organizadora en el grupo oficial (2026-10-07), registrada en `docs/official_clarifications.md` (C-01) con captura como evidencia.
+- **Alternativas:** mantener el intervalo del §7 (contradice a la organización y al §6-A, "30 días previos a la extracción").
+- **Motivo:** jerarquía de autoridad: una aclaración oficial posterior prevalece sobre el PDF. Además, resuelve la contradicción §6-A/§7 que marcamos el día 1 (PLAN_REVIEW D14/D19).
+- **Compromiso:** hay que volver a descargar las noticias. Los fetchers, el manifest y las pruebas de frictionspp-svg se reutilizan sin cambios; las respuestas de 2025 ya descargadas se conservan (raw inmutable) y quedan fuera del corpus con motivo registrado. La distancia temporal entre noticias de 2026 y datos WB de 2024 refuerza la demostración del Temporal Guard (T04).
+- **Fecha:** 2026-10-07

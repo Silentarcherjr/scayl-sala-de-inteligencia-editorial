@@ -8,20 +8,23 @@ Tu dueño humano está contigo: pídele confirmación antes de cualquier acción
 Camino crítico del proyecto: **datos → inteligencia semántica → primera UI visible**. Otros dependen de ti
 (el snapshot desbloquea todo), así que prioriza entregar pronto y en PRs pequeños.
 
-## 📌 Notas del Lead pendientes (2026-10-07) — aplícalas antes de seguir
-Revisión de `worker-b/snapshot`: buen trabajo, 76/76 verificadas. Decisiones ya en `main`:
-- **AP-008 ACEPTADA (DL-013):** cuadrícula WB = 540 filas (6×6×15).
-- **AP-009 ACEPTADA con condiciones (DL-014):** solo `pubDate` dentro de [2024-01-01, 2025-10-01); `origen=tvn_rss`;
-  `fecha_publicacion` = pubDate; **`fecha_deteccion` = null** (no 2026); `alcance_texto=titular_metadatos`;
-  declarar en el catálogo la cobertura real de TVN.
-- **DL-015:** el Lead ya corrigió la urgencia para GDELT sin fecha de publicación; mantén `fecha_publicacion` = null en GDELT.
+## 📌 Notas del Lead pendientes (actualizado 2026-10-07) — aplícalas antes de seguir
+**Cambio importante: aclaración OFICIAL de la organizadora (C-01, `docs/official_clarifications.md`, DL-017).**
+La ventana de noticias ya **no** es septiembre de 2025: es **[2025-10-02, 2026-10-01)**, con corte el 2026-10-01.
+Las fechas viven en `scayl/config/data_window.v1.yaml`: léelas de ahí y no las escribas a mano.
+
+Decisiones vigentes:
+- **AP-008 ACEPTADA (DL-013):** cuadrícula WB = 540 filas (6×6×15). WB 2010–2024 **sin cambios**.
+- **AP-009 SUPERADA (DL-017):** las 48 entradas TVN de 2024–2025 quedan **fuera** de la ventana. En su lugar, usa las entradas del RSS actual con `pubDate` dentro de [2025-10-02, 2026-10-01): `origen=tvn_rss`, `fecha_publicacion` = pubDate, `fecha_deteccion` = null, `alcance_texto=titular_metadatos`.
+- **DL-015:** GDELT con `fecha_publicacion` = null (el Lead ya resolvió la urgencia).
+- **AP-004 ACEPTADA (DL-017):** además de USGS 2024 (oficial), descarga `eventos_ext.geojson` con la misma caja y M≥3 para la ventana de noticias, declarado como extensión.
 
 Pasos al retomar:
-1. `git fetch origin && git merge origin/main` en `worker-b/snapshot` (sin conflictos verificados; sin rebase).
-2. En AP-008 y AP-009 completa la línea "Decisión": ACEPTADA, ver DL-013 / DL-014.
-3. Termina B-01/B-02: `noticias.csv` (GDELT DOC+GKG + las 48 de TVN, deduplicado por URL), `fuentes.json`,
-   manifest congelado y verificado; luego exporta `data/labels/editor_candidates.csv`.
-4. Abre el PR hacia `main` (borrador si falta algo) y sigue con A-01/A-08/A-02.
+1. `git fetch origin && git merge origin/main` en `worker-b/snapshot` (sin rebase).
+2. Completa la línea "Decisión" de AP-008 (ACEPTADA, DL-013) y de AP-009 (SUPERADA por DL-017).
+3. **Vuelve a descargar las noticias para la ventana nueva:** GDELT DOC del 2026-09-01 al 2026-10-01 partido por día (ampliable a 90 días; GKG como respaldo). Las respuestas de septiembre de 2025 ya descargadas **no se borran** (raw inmutable): quedan fuera del corpus con motivo `fuera_de_ventana_C-01` en la auditoría.
+4. Construye `noticias.csv` (GDELT + TVN en ventana, deduplicado por URL), `fuentes.json`, `eventos_ext.geojson`; congela y verifica el manifest con `fecha_corte_UTC = 2026-10-01T00:00:00Z`; exporta `data/labels/editor_candidates.csv`.
+5. Abre el PR hacia `main` (borrador si falta algo) y sigue con A-01/A-08/A-02.
 Cuando cumplas los pasos, borra esta sección en tu PR.
 
 ## ⚠️ Relevo de sesión (lee esto primero)
@@ -37,7 +40,7 @@ Cuando cumplas los pasos, borra esta sección en tu PR.
 
 ## Orden de trabajo (un PR por bloque; rama `worker-b/<bloque>` para datos, `worker-a/<bloque>` para UI)
 1. **B-01 + B-02 · Snapshot** (meta: miércoles 7 a las 10:00, hora de Panamá).
-   - GDELT DOC 2.0 `mode=ArtList&format=json&maxrecords=250` con `STARTDATETIME`/`ENDDATETIME` de 2025-09-01 a 2025-10-01, **un día por consulta**; consultas: Panama/Panamá y logística/Canal, turismo, economía y eventos naturales. Deduplica por URL.
+   - GDELT DOC 2.0 `mode=ArtList&format=json&maxrecords=250` con `STARTDATETIME`/`ENDDATETIME` de la ventana de `scayl/config/data_window.v1.yaml` (objetivo 2026-09-01 → 2026-10-01), **un día por consulta**; consultas: Panama/Panamá y logística/Canal, turismo, economía y eventos naturales. Deduplica por URL.
    - TVN: la misma API con `domain:tvn-2.com` (≥20 registros). Guarda también el RSS actual de TVN aparte (no entra al intervalo).
    - World Bank: PAN, CRI, COL, DOM, MEX y GTM × los 6 indicadores × 2010–2024; completa la cuadrícula de 540 filas (6×6×15, DL-013) con `valor` nulo.
    - USGS: 2024-01-01..2024-12-31, lat 5..12, lon −86..−76, M≥3, todos los eventos.

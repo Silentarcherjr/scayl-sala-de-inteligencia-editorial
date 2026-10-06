@@ -1,0 +1,15 @@
+# Data windows. Source of truth: official clarification by the organizer (2026-10-07),
+# see docs/official_clarifications.md (C-01) and DL-017. Supersedes the §7 PDF interval.
+version: data-window-v1
+news:
+  start_inclusive: "2025-10-02T00:00:00Z"      # organizer: "desde 2025-10-02"
+  end_exclusive: "2026-10-01T00:00:00Z"        # "hasta el último mes completo (septiembre)"
+  target_days_before_cutoff: 30                # PDF §6-A: 30 days before extraction ...
+  max_days_before_cutoff: 90                   # ... extendable to 90; record effective coverage
+cutoff_utc: "2026-10-01T00:00:00Z"
+world_bank:                                    # PDF §6-B, unchanged: historical CONTEXT
+  years: [2010, 2024]
+  countries: [PAN, CRI, COL, DOM, MEX, GTM]
+usgs:                                          # PDF §6-C, unchanged
+  official: ["2024-01-01", "2024-12-31"]
+  extension_news_window: true                  # AP-004 accepted (DL-017): separate file, declared as extension

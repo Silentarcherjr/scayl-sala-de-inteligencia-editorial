@@ -64,7 +64,7 @@
 - Riesgos: bajos. Esfuerzo: 2–3 h. Recomendación: **ACCEPT**.
 
 ## AP-004 · Ampliar USGS a la ventana de las noticias
-- Autor / fecha: Lead · 2026-10-06 · Estado: **DIFERIDA (P2)**
+- Autor / fecha: Lead · 2026-10-06 · Estado: **ACEPTADA (DL-017, 2026-10-07)**: con la ventana oficial de 2026, sin esta extensión ningún sismo de 2024 coincide con las noticias
 - Problema u oportunidad: USGS oficial cubre 2024 y las noticias rondan septiembre de 2025; puede que no haya vínculos sismo–noticia.
 - Cambio propuesto: descarga adicional de USGS con la misma caja y M≥3 para la ventana de las noticias, en un archivo separado (`eventos_ext.geojson`) declarado como extensión.
 - Por qué mejora el proyecto: permite demostrar un HECHO sustentado real.

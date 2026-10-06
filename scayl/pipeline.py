@@ -177,7 +177,15 @@ def _cutoff(snapshot: Path) -> datetime:
         raw = json.loads(manifest.read_text(encoding="utf-8")).get("fecha_corte_UTC")
         if raw:
             return datetime.fromisoformat(raw)
-    return datetime(2025, 10, 1, tzinfo=UTC)  # official interval end
+    return data_window_cutoff()
+
+
+def data_window_cutoff() -> datetime:
+    """Cutoff from scayl/config/data_window.v1.yaml (organizer clarification C-01, DL-017)."""
+    import yaml
+
+    cfg = yaml.safe_load((Path(__file__).parent / "config" / "data_window.v1.yaml").read_text(encoding="utf-8"))
+    return datetime.fromisoformat(cfg["cutoff_utc"])
 
 
 def main(argv: list[str] | None = None) -> None:

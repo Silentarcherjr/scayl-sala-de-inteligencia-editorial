@@ -11,7 +11,7 @@
 | Usuario principal | Editor/a y periodista de TVN · secundario: productor/a digital |
 | Problema | Las fuentes dispersas y la repetición de noticias se confunden con confirmación; preparar piezas con evidencia trazable toma tiempo. |
 | Propuesta | SCAYL convierte un snapshot de señales públicas en eventos priorizados con evidencia, vacíos de investigación y un borrador citado listo para revisión humana. |
-| Alcance | Snapshot congelado (TVN RSS + GDELT + World Bank + USGS). Lotes, no tiempo real. Sin publicación automática. |
+| Alcance | Snapshot congelado (TVN RSS + GDELT + World Bank + USGS). Noticias de [2025-10-02, 2026-10-01) según la aclaración oficial C-01; World Bank 2010–2024 y USGS 2024 (+ extensión) como contexto. Lotes, no tiempo real. Sin publicación automática. |
 | Fuera de alcance | Detección de fake news, audiencia/rating, contenido tras paywall, producción audiovisual, modalidad bancaria. |
 | Criterios de éxito | Flujo completo Cargar→Revisar sin internet; T01–T10 en verde; 100% de cobertura de citas; abstención ≥80% en preguntas sin respuesta; métricas medidas frente al baseline. |
 | Repositorio | github.com/silentarcherjr/scayl-sala-de-inteligencia-editorial |
