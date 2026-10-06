@@ -30,10 +30,12 @@ Horas en hora de Panamá (UTC−5).
 - **P0** (admisión + flujo completo): ingesta/validación, temas, agrupación, puntaje, estado de evidencia,
   vínculo oficial + Temporal Guard, conflictos numéricos, Story Studio validado, Q&A con abstención, guard
   de inyección, revisión humana, UI de 4 pantallas, espejo Notion, PDF de herramientas IA y enlace.
+  Además (DL-009): Agenda de la mañana, tarjeta de evidencia al hacer clic, CI en GitHub Actions, video
+  offline y registro de prueba fallida → corrección.
 - **P1** (ventaja): Source DNA con agencias; Trust Lab completo con baseline frente a IA medido;
-  Investigation Gap generado; matriz Prioridad × Evidencia.
-- **P2** (si sobra): sincronización con Notion vía MCP; contradicciones semánticas por LLM; estudio de
-  tiempo manual vs asistido; USGS ampliado.
+  Investigation Gap generado; matriz Prioridad × Evidencia; simulador de pesos; recibo de trazabilidad;
+  preservación de atribución; set de 10 ataques; modo jurado; mini-estudio manual vs asistido.
+- **P2** (si sobra): sincronización con Notion vía MCP; contradicciones semánticas por LLM; USGS ampliado.
 
 ## 4. Pantallas
 1. **Sala de Situación**: embudo "N señales → M eventos → top 5"; tabla de eventos (P, rango,

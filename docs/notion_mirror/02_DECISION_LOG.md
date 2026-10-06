@@ -30,7 +30,9 @@
 - **Compromiso:** borradores más sobrios. · **Fecha:** 2026-10-06
 
 ### DL-006 · Modelos locales (PROVISIONAL, pendiente de B-10)
-- **Candidatos:** embeddings `BAAI/bge-m3` frente a `intfloat/multilingual-e5-base`; LLM `qwen3:8b` (Q4_K_M, thinking off) frente a `qwen3:4b`.
+- **Hardware del equipo:** RTX 4060 (8 GB) y RTX 3050. La 4060 es la máquina de demo y de precálculo.
+- **Candidatos:** embeddings `BAAI/bge-m3`, `intfloat/multilingual-e5-base` y `Qwen/Qwen3-Embedding-0.6B`. LLM en la 4060: `qwen3.5:9b` (Apache 2.0, unos 6,6 GB en Q4 según fuentes externas) frente a `qwen3:8b`. En la 3050: `qwen3:4b` frente a Gemma 4 E4B. Fallback sin GPU: caché/plantilla.
+- **Referencia externa (no medida por nosotros):** unos 25–45 tokens/s en una 4060 para modelos de 7–9B en Q4.
 - **Motivo:** multilingüe con buen español, licencia abierta, disponibles en Ollama/HF.
 - **Evidencia:** _pendiente de medición en el hardware del equipo. No hay cifras todavía._ · **Fecha:** 2026-10-06
 
@@ -44,3 +46,17 @@
 - **Motivo:** el PDF prioriza el intervalo y también dice "registrar la cobertura efectiva"; documentar la desviación es más honesto que forzar los datos.
 - **Compromiso:** con la ventana reciente, WB (≤2024) y USGS (2024) quedan aún más lejos en el tiempo → el Temporal Guard gana protagonismo (y eso es bueno para T04).
 - **Fecha:** 2026-10-06 · **Estado:** propuesta del Lead, validar en equipo.
+
+**Actualización DL-008 (2026-10-06):** la investigación indica que la API DOC de GDELT acepta `STARTDATETIME`/`ENDDATETIME` desde 2017. Con eso, septiembre de 2025 es alcanzable directamente y TVN se obtiene con `domain:tvn-2.com`. El plan GKG queda solo como respaldo. **Aprobada por el equipo.**
+
+### DL-009 · Adoptar las 10 ideas "10/10" + 2 surgidas de la investigación
+- **Decisión:** Agenda de la mañana, mini-estudio manual vs asistido, tarjeta de evidencia al hacer clic, simulador de pesos, tabla baseline vs IA con "dónde no ayudó", video offline, registro de prueba fallida → corrección, CI en GitHub Actions, set de 10 ataques y modo jurado. Más: **recibo de trazabilidad** y **métrica de preservación de atribución**.
+- **Alternativas:** solo el MVP.
+- **Motivo:** cada idea corresponde a un criterio "5 = excepcional y verificado" de la rúbrica o a una prueba dinámica del jurado. La investigación de mercado mostró que la agrupación y el conteo de orígenes ya existen (Ground News, Event Registry, corroborate-mcp). El diferencial debe ser la **producción condicionada por la evidencia con atribución obligatoria**, que responde a un problema documentado en arXiv 2509.25498.
+- **Compromiso:** más alcance. Por eso la mayoría queda en P1, detrás del flujo P0.
+- **Fecha:** 2026-10-06 · **Aprobada por el equipo.**
+
+### DL-010 · Separación de roles en la evaluación
+- **Decisión:** Humano 2 actúa como "editor" (top 5 a ciegas antes de que exista ranking y revisión de ≥30 afirmaciones). Humano 3 etiqueta temas y agrupación. Humano 1 + Lead ajustan pesos y umbrales.
+- **Motivo:** quien ajusta el sistema no debe evaluarlo (evita fuga de información en P@5 y en la validez de sustento).
+- **Compromiso:** el editor no es un periodista de TVN → P@5 se declara exploratoria. · **Fecha:** 2026-10-06

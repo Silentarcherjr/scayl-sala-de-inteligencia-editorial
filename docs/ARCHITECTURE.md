@@ -181,9 +181,9 @@ def get_embedder(kind: Literal["tfidf", "st"], model: str | None) -> Embedder
 - Recuperación (Q&A): híbrida BM25 + coseno sobre unidades de evidencia (titulares, filas WB, eventos USGS).
 
 ### 5.2 Inteligencia generativa (Lead)
-- Proveedor: **Ollama local**. Modelo por defecto `qwen3:8b` (Q4_K_M) con thinking desactivado,
-  `temperature=0`, `seed=42` y `format=<JSON schema del contrato>`. Para Q&A en CPU se usa un modelo
-  más pequeño (`qwen3:4b`) si el benchmark de latencia lo exige. Decisión final en DL-006 tras la medición.
+- Proveedor: **Ollama local**. Candidatos (DL-006, decide B-10): RTX 4060 → `qwen3.5:9b` o `qwen3:8b`
+  (Q4_K_M, `num_ctx=4096`); RTX 3050 → `qwen3:4b` o Gemma 4 E4B. Thinking desactivado, `temperature=0`,
+  `seed=42` y `format=<JSON schema del contrato>`. Sin GPU → modo `cache`/`template`.
 - Tres llamadas, nunca libres:
   1. `claims.extract(event) → Claim[]` (borrador; la clasificación de estado la hace el motor determinista).
   2. `studio.generate(event) → StoryPackage`. El LLM recibe **solo** las afirmaciones con ID y debe
@@ -239,10 +239,17 @@ Mientras `service.py` no exista, la UI usa un `FixtureService` con la misma firm
   Sin red no falla; `scripts/notion_sync.py` (P2) la vacía cuando Notion esté disponible.
 - Exportación para Notion: `scripts/export_fichas.py` → `fichas.jsonl` + `docs/notion_mirror/05_CASES_AND_EVIDENCE.md`.
 
+## 7b. Funciones 10/10 (DL-009)
+- **Simulador de pesos:** `scoring.rescore()`; los pesos oficiales reproducen `scoring-v1` exactamente; los cambios exigen justificación (`weight_changes.jsonl`).
+- **Recibo de trazabilidad:** `data/state/receipts/<review_id>.json` + sha256 (snapshot, evidencia, afirmaciones, revisor y modo de generación).
+- **Fuentes de verificación sugeridas:** `config/verification_sources.v1.yaml` (tema → instituciones panameñas). Son sugerencias, nunca evidencia.
+- **Preservación de atribución:** métrica derivada del validador `STATUS_MISMATCH` (motivación: arXiv 2509.25498).
+
 ## 8. Despliegue
-- **Local (demo principal):** `make demo`, Ollama opcional.
-- **Enlace "en ejecución":** la misma app en modo `cache`, sin Ollama ni torch, con `bundle.json` y caché
-  LLM incluidos. Destino propuesto en AP-001.
+- **Local (demo principal):** `make demo` en la RTX 4060, con Ollama.
+- **Enlace "en ejecución" (AP-001 aceptada):** la misma app en un Hugging Face Space en modo `cache`, sin
+  Ollama ni torch, con `bundle.json` y caché LLM incluidos. Protegido con contraseña (Streamlit secrets) que
+  se comparte en el correo de entrega. Solo titular + URL.
 
 ## 9. Presupuesto de dependencias
 Núcleo: `pydantic`, `numpy`, `scikit-learn`, `rank-bm25`, `pyyaml`, `streamlit`, `pandas`, `requests`,

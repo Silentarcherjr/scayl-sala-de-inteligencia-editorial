@@ -72,8 +72,9 @@ el **jueves 8 de octubre a las 23:59** como fecha límite. **No hay canal para c
    **Investigation Gap + abstención**, no la cantidad de hechos sustentados.
 2. **"Podremos descargar los datos ahora".** [OFICIAL] Intervalo [2024-01-01, 2025-10-01) y "no asumir que
    el RSS conserva el histórico". Hoy es octubre de 2026: **el RSS de TVN de septiembre de 2025 ya no es
-   recuperable**. [EXTERNO, verificar] La API DOC 2.0 de GDELT solo busca en una ventana móvil de unos 3
-   meses. → **Construimos nuestro propio snapshot siguiendo el PDF** (ver DL-008: estrategia del intervalo). Si el intervalo no es alcanzable para alguna fuente, se usan las fechas
+   recuperable**. [EXTERNO, corregido tras la búsqueda] La API DOC 2.0 de GDELT permite
+   `STARTDATETIME`/`ENDDATETIME` desde 2017; en modo ArtList devuelve como máximo 3 meses de la ventana
+   pedida (septiembre de 2025 cabe). Las noticias de TVN se obtienen con el filtro `domain:tvn-2.com`. → **Construimos nuestro propio snapshot siguiendo el PDF** (ver DL-008: estrategia del intervalo). Si el intervalo no es alcanzable para alguna fuente, se usan las fechas
    reales de extracción, documentado como desviación, o casos sintéticos claramente marcados.
 3. **"Las noticias sobre sismos se vinculan con eventos USGS".** [OFICIAL] USGS cubre 2024 y las noticias
    están cerca de septiembre de 2025. Es probable que no haya coincidencia temporal. → El vínculo se hace
@@ -248,11 +249,59 @@ Motivo: el reto pide literalmente "abrir una ficha"; el jurado navega menos y el
 
 ---
 
-## 9. Decisiones internas pendientes (no hay canal con la organización)
+## 9. Decisiones internas (cerradas el 2026-10-06)
 
-1. Estrategia del intervalo de datos → DL-008 (propuesta del Lead; validar en equipo).
-2. Benchmark: lo construimos nosotros (60 consultas con la proporción oficial: 40 dev + 20 "reservadas" que nadie mira hasta la evaluación final).
-3. Hardware de cada integrante (GPU/VRAM, RAM) → define el modelo (B-10).
-4. Quién actúa como "editor" para P@5 y la revisión de ≥30 afirmaciones (no puede ser quien ajusta los pesos).
-5. Destino del enlace desplegado (AP-001).
-6. Uso de las descripciones del RSS de TVN: por defecto solo en local; en la UI pública solo titular + URL.
+| # | Tema | Decisión |
+|---|---|---|
+| 1 | Intervalo de datos | DL-008: snapshot propio. Noticias de septiembre de 2025 vía GDELT DOC con `STARTDATETIME`/`ENDDATETIME`; TVN vía `domain:tvn-2.com`. |
+| 2 | Benchmark | Propio: 60 consultas con la proporción oficial (40 dev + 20 reservadas). |
+| 3 | Hardware | RTX 4060 (8 GB) = máquina de demo y de precálculo; RTX 3050 = desarrollo con modelo pequeño; CPU = modo caché/plantilla (DL-006). |
+| 4 | "Editor" independiente | **Humano 2**: elige el top 5 a ciegas apenas se congela el snapshot (antes de que exista ranking) y revisa ≥30 afirmaciones. Humano 3 etiqueta temas y agrupación. Humano 1 + Lead ajustan pesos. Nadie evalúa lo que ajustó (DL-010). |
+| 5 | Enlace desplegado | AP-001 aceptada: Hugging Face Space con contraseña compartida en el correo de entrega; solo titular + URL. |
+| 6 | Descripciones RSS | Solo en local; en el enlace público solo titular + URL. |
+| 7 | Ideas 10/10 | Las 10 adoptadas + 2 surgidas de la investigación (DL-009, §10). |
+
+---
+
+## 10. Estado del arte: qué ya existe y cómo nos diferenciamos  [EXTERNO, búsqueda web 2026-10-06]
+
+> Objetivo: no vender como novedad algo que ya existe. Fuentes consultadas por búsqueda; algunas páginas no
+> se pudieron abrir desde el entorno cloud (se citan según el resumen del buscador).
+
+| Capacidad | Ya existe en | Implicación para SCAYL |
+|---|---|---|
+| Agrupar noticias del mismo evento | **Ground News** (agrupa historias y cuenta fuentes por sesgo/propiedad), **Event Registry** (agrupación online y multilingüe de eventos) | **No** presentar la agrupación como innovación. Es infraestructura. |
+| Contar el origen y no las copias (agencias) | `corroborate-mcp` (herramienta para desarrolladores: "40 copias de un cable = 1 origen"; "nunca declara verdadero, solo corroborado") | La idea existe para desarrolladores. Nuestro aporte es **integrarla en la decisión editorial** con etiquetas conservadoras ("independencia desconocida") y separada de la evidencia oficial. |
+| Detección y priorización de afirmaciones verificables | **Full Fact AI** (human-in-the-loop, prioriza por daño), **Chequeabot** (Chequeado, adoptado por decenas de organizaciones de LatAm), **Newtral ClaimHunter**, **Factiverse** | Son herramientas de **fact-checking posterior**: verifican lo que otros dijeron. SCAYL actúa **antes de producir**: de la señal a una pieza investigable. No competir en "verificación". |
+| Detección de tendencias | Dataminr, NewsWhip | Detectan señales pero no organizan evidencia ni producen. |
+| IA local para redacciones | Investigación académica: "On-Premise AI for the Newsroom" (arXiv 2509.25494) | Respalda nuestra decisión 100% local (privacidad y costo) como dirección reconocida. |
+
+**Hallazgo clave para el pitch:** Hagar, Agustianto y Diakopoulos, *"Not Wrong, But Untrue: LLM
+Overconfidence in Document-Based Queries"* (arXiv 2509.25498). En una tarea periodística, el 30% de las
+salidas de ChatGPT, Gemini y NotebookLM tuvo al menos una alucinación (40% en ChatGPT/Gemini). **La mayoría
+no fueron cifras inventadas sino "sobreconfianza interpretativa": opiniones atribuidas convertidas en
+afirmaciones generales.** Los autores piden "arquitecturas que impongan atribución precisa en lugar de
+optimizar fluidez". → Ese es exactamente el diseño de SCAYL: tipos HECHO/DECLARACIÓN y el validador
+`STATUS_MISMATCH`, que impide convertir una declaración en hecho. Lo medimos como métrica propia
+(**tasa de preservación de atribución**, DL-009).
+
+**Lo que sí podemos presentar como diferencial (combinación, no piezas sueltas):**
+1. Prioridad y suficiencia de evidencia como **dos ejes separados**: "urgente, pero no publicable aún".
+2. **Producción condicionada por la evidencia**: el borrador no puede afirmar como HECHO lo que no está sustentado, por construcción.
+3. **Temporal Guard**: lo histórico nunca aparece como actual.
+4. **Investigation Gap**: qué sabemos, qué se afirma, qué inferimos, qué no sabemos y qué preguntar.
+5. **Recibo de trazabilidad** por decisión humana (hash de la evidencia).
+6. **Todo medido y local**: costo de API $0, en hardware de consumo.
+
+**Frases prohibidas en el pitch:** "primeros en agrupar noticias", "detectamos noticias falsas",
+"verificamos hechos automáticamente", "N medios confirman".
+
+Fuentes: [Reuters Institute 2026](https://reutersinstitute.politics.ox.ac.uk/news/ai-and-future-news-2026-what-we-learnt-about-its-impact-newsrooms-fact-checking-and-news) ·
+[Full Fact AI](https://www.aitools-directory.com/tools/full-fact-fact-checking-tools/) ·
+[Factiverse](https://www.factiverse.ai/industries/media-and-research) ·
+[Chequeado/Chequeabot](https://journalismcourses.org/wp-content/uploads/2020/07/Caso_Chequeado_con_IA-6.pdf) ·
+[corroborate-mcp](https://glama.ai/mcp/servers/chefcohen/corroborate-mcp) ·
+[Ground News](https://apify.com/automation-lab/ground-news-bias-coverage-scraper) ·
+[Event Registry](https://eventregistry.org/blog/new-to-event-registry-/) ·
+[arXiv 2509.25498](https://arxiv.org/abs/2509.25498v1) · [arXiv 2509.25494](https://arxiv.org/pdf/2509.25494) ·
+[GDELT DOC: búsqueda desde 2017](https://blog.gdeltproject.org/doc-2-0-updates-1-5-year-searching-and-updated-mobile-interface/)

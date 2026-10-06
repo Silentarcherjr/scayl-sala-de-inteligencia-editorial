@@ -26,7 +26,7 @@
 
 ## AP-001 · Enlace "en ejecución" en modo snapshot con salidas IA precalculadas
 - Autor / fecha: Lead · 2026-10-06
-- Estado: **ABIERTA — requiere aprobación humana** (publicar en un servicio externo)
+- Estado: **ACEPTADA (2026-10-06)**: Hugging Face Space con contraseña, solo titular + URL, modo caché
 - Problema u oportunidad: las Bases exigen el "enlace del agente desarrollado y en ejecución"; el objetivo 100% local choca con un hosting sin GPU.
 - Cambio propuesto: desplegar la app Streamlit en modo `cache` (sin Ollama ni torch) con `bundle.json` y la caché LLM generada localmente, cada salida etiquetada con su modelo, prompt y hora. Destino: Hugging Face Space (privado/compartido con el jurado) o Streamlit Community Cloud; alternativa: túnel desde una laptop el día de la evaluación. Solo titular + URL; sin descripciones.
 - Por qué mejora el proyecto: cumple un entregable obligatorio sin pagar APIs y sin mentir sobre el modo.
@@ -55,6 +55,13 @@
 - Por qué mejora el proyecto: el reto pide "abrir una ficha"; la demo es lineal.
 - Dimensión de rúbrica: Utilidad (20), Prototipo (20). Archivos: `app/`.
 - Riesgos: ninguno relevante. Esfuerzo: reduce trabajo. Recomendación: **ACCEPT**.
+
+## AP-006 · Recibo de trazabilidad y métrica de preservación de atribución
+- Autor / fecha: Lead · 2026-10-06 · Estado: **ACEPTADA (DL-009)**
+- Problema u oportunidad: la investigación (arXiv 2509.25498) muestra que el error típico de los LLM en redacciones es convertir declaraciones atribuidas en hechos.
+- Cambio propuesto: medir explícitamente la preservación de atribución y emitir un recibo con hash por cada decisión humana.
+- Dimensión de rúbrica: Evidencias (15), IA (15), Notion (15: trazabilidad). Archivos: `scayl/gen/validators.py`, `scayl/review/`, `scayl/eval/`.
+- Riesgos: bajos. Esfuerzo: 2–3 h. Recomendación: **ACCEPT**.
 
 ## AP-004 · Ampliar USGS a la ventana de las noticias
 - Autor / fecha: Lead · 2026-10-06 · Estado: **DIFERIDA (P2)**

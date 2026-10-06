@@ -19,3 +19,4 @@
 ## Cronología
 - **2026-10-06 19:40 UTC** — Lectura de las especificaciones oficiales; inspección del repo (vacío); prueba de acceso a las fuentes (bloqueadas en el entorno cloud).
 - **2026-10-06 20:45 UTC** — Revisión crítica del plan, contratos y tareas de los workers publicados (M0 parcial).
+- **2026-10-06 21:40 UTC** — El equipo aprueba DL-008 (snapshot propio), DL-009 (ideas 10/10) y AP-001. Investigación de mercado y modelos (PLAN_REVIEW §10). PR #1 abierto para mergear M0.
