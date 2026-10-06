@@ -10,7 +10,7 @@ import hashlib
 import json
 import sqlite3
 import uuid
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 from scayl.contracts import Event, ReviewRecord, ReviewState, StoryPackage, can_transition
@@ -97,7 +97,7 @@ class ReviewStore:
             to_state=to_state,
             reviewer=reviewer,
             justification=justification,
-            decided_at=now or datetime.now(timezone.utc),
+            decided_at=now or datetime.now(UTC),
             evidence_snapshot_sha256=canonical_sha256(event),
         )
         with self._conn() as conn:
@@ -135,7 +135,7 @@ class ReviewStore:
             "op": "upsert_review",
             "page": "05_CASES_AND_EVIDENCE",
             "payload": rec.model_dump(mode="json"),
-            "created_at": datetime.now(timezone.utc).isoformat(),
+            "created_at": datetime.now(UTC).isoformat(),
             "synced_at": None,
         }
         with (self.state_dir / "notion_outbox.jsonl").open("a", encoding="utf-8") as f:

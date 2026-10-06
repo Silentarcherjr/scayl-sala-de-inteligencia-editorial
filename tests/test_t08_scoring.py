@@ -1,5 +1,5 @@
 """T08: high-priority case exposes components and rule; priority does not authorize publication."""
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 
 import pytest
 
@@ -7,7 +7,7 @@ from scayl.contracts import EvidenceStatus, PriorityTier, Topic
 from scayl.evidence.scoring import ScoringInput, load_rules, rank, rescore, score
 from scayl.evidence.status import NOT_AUTHORIZED, recommended_action
 
-CUTOFF = datetime(2025, 10, 1, tzinfo=timezone.utc)
+CUTOFF = datetime(2025, 10, 1, tzinfo=UTC)
 
 
 def _inp(**kw):
@@ -54,7 +54,7 @@ def test_duplicates_do_not_raise_score():
 def test_recirculated_story_uses_original_date_and_loses_urgency():
     """T03 guard: urgency comes from the ORIGINAL publication date."""
     fresh = score(_inp())
-    old = score(_inp(latest_original_publication=datetime(2024, 3, 1, tzinfo=timezone.utc)))
+    old = score(_inp(latest_original_publication=datetime(2024, 3, 1, tzinfo=UTC)))
     assert old.components.U < 0.01 < fresh.components.U
 
 

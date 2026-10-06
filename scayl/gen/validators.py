@@ -33,7 +33,7 @@ _ATTRIBUTION = re.compile(
     r"publicó|publicaron|asegura|aseguró|informa|informó)\b",
     re.IGNORECASE,
 )
-_ABSENCE = re.compile(r"\b(no hay|no existen?|sin datos|no se (ha|han)|no consta|no se dispone|no contiene)\b", re.I)
+_ABSENCE = re.compile(r"\b(no hay|no existen?|sin datos|no se (ha|han)|no consta|no se dispone|no contiene)\b", re.IGNORECASE)
 _PRESENT = re.compile(r"\b(actual|actualmente|hoy|este año|en la actualidad|ahora mismo|vigente)\b", re.IGNORECASE)
 _INVENTION = re.compile(
     r"(entrevist|en exclusiva|declaró a tvn|dijo a tvn|imágenes exclusivas|video exclusivo|fotograf[ií]as? de)",
@@ -222,10 +222,9 @@ def validate_package(pkg: StoryPackage, event: Event) -> tuple[StoryPackage, Att
 
     disclaimer = pkg.scope_disclaimer
     scope_is_headline = (event.text_scope_note or "").lower().startswith("basado únicamente")
-    if scope_is_headline or pkg.scope_disclaimer:
-        if (disclaimer or "").strip() != SCOPE_PHRASE:
-            ctx.add("SCOPE_DISCLAIMER", "warning", "Se inyectó la frase obligatoria de alcance", "scope_disclaimer")
-            disclaimer = SCOPE_PHRASE
+    if (scope_is_headline or pkg.scope_disclaimer) and (disclaimer or "").strip() != SCOPE_PHRASE:
+        ctx.add("SCOPE_DISCLAIMER", "warning", "Se inyectó la frase obligatoria de alcance", "scope_disclaimer")
+        disclaimer = SCOPE_PHRASE
 
     if not brief:
         ctx.add("EMPTY_BRIEF", "error", "Ninguna oración del brief sobrevivió a la validación", "brief")

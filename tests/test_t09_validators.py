@@ -1,7 +1,7 @@
 """T09 (validator half): citations valid, facts vs statements distinguished, no invented numbers."""
 from scayl.contracts import ClaimType, TaggedSentence
 from scayl.gen.template import build_template_package
-from scayl.gen.validators import SCOPE_PHRASE, check_sentence, _Ctx, numbers_in, validate_package
+from scayl.gen.validators import SCOPE_PHRASE, _Ctx, check_sentence, numbers_in, validate_package
 
 
 def _ctx(event):
@@ -23,7 +23,7 @@ def test_supported_fact_passes(events):
 
 
 def test_invented_number_is_removed(events):
-    e, ctx = events["EVT-0001"], _ctx(events["EVT-0001"])
+    ctx = _ctx(events["EVT-0001"])
     assert check_sentence(S("El sismo fue de magnitud 5.2.", ids=["CLM-0001-001"]), ctx, "t") is None
     assert ctx.issues[0].code == "NUMBER_NOT_IN_EVIDENCE"
 

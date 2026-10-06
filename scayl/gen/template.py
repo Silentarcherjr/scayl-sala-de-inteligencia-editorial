@@ -6,7 +6,7 @@ Its output still goes through ``validators.validate_package``.
 
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from scayl.contracts import (
     Claim,
@@ -81,7 +81,7 @@ def build_template_package(event: Event, now: datetime | None = None) -> StoryPa
         validation=ValidationReport(passed=False),
         generated_by=GenerationMeta(mode="template", model=None, prompt_version=TEMPLATE_VERSION,
                                     latency_ms=0, tokens_in=None, tokens_out=None,
-                                    created_at=now or datetime.now(timezone.utc)),
+                                    created_at=now or datetime.now(UTC)),
     )
     cleaned, _ = validate_package(pkg, event)
     return cleaned

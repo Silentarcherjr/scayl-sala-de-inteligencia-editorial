@@ -228,10 +228,12 @@ def generate_package(event_id: str, mode: Literal["live","cache","template"]) ->
 def ask(question: str, mode: Literal["live","cache"]) -> QAAnswer
 def review(event_id: str, to_state: ReviewState, reviewer: str, justification: str) -> ReviewRecord
 def review_history(event_id: str) -> list[ReviewRecord]
+def current_state(event_id: str) -> ReviewState
+def reload() -> None      # re-read bundle after a pipeline build
 def trust_lab() -> dict   # lee eval/results/latest.json + resultados de pytest
 ```
-Mientras `service.py` no exista, la UI usa un `FixtureService` con la misma firma sobre
-`tests/fixtures/ui_bundle.example.json`.
+`scayl/service.py` está implementado: si no hay bundle procesado, sirve el fixture sintético. `ask()` se
+abstiene honestamente hasta L-11; `generate_package(mode="live"|"cache")` cae a plantilla con aviso `MODE_FALLBACK` hasta L-08/L-10.
 
 ## 7. Estado y Notion
 - `data/state/reviews.sqlite`: tabla `reviews` (campos de `ReviewRecord`), solo inserción.

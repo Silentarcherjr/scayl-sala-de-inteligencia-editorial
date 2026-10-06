@@ -10,22 +10,22 @@ from __future__ import annotations
 
 import json
 import sys
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-from scayl.contracts import (  # noqa: E402
+from scayl.contracts import (
     Claim,
     ClaimStatus,
     ClaimType,
     Conflict,
     ConflictKind,
     ConflictVersion,
+    Event,
     EvidenceKind,
     EvidenceRef,
     EvidenceStatus,
-    Event,
     GenerationMeta,
     InvestigationGap,
     PriorityScore,
@@ -43,7 +43,6 @@ from scayl.contracts import (  # noqa: E402
 )
 
 OUT = Path(__file__).resolve().parents[1] / "tests" / "fixtures" / "ui_bundle.example.json"
-UTC = timezone.utc
 NO_INDEP = "La procedencia independiente no puede determinarse con la evidencia disponible."
 SCOPE = "Basado únicamente en titular/metadatos."
 WEIGHTS = {"R": 30, "I": 25, "U": 20, "N": 15, "E": 10}
