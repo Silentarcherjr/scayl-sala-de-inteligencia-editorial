@@ -1,0 +1,12 @@
+# Core runtime (no ML): pipeline, evidence engine, UI, tests. Works offline from snapshot.
+# Python 3.11–3.13. Pre-approved by Lead (no proposal needed to use these).
+pydantic==2.13.5
+numpy==2.5.3
+pandas==3.0.5
+scikit-learn==1.9.1
+rank-bm25==0.2.2
+PyYAML==6.0.3
+requests==2.34.2
+streamlit==1.65.0
+tzdata==2026.5   # zoneinfo America/Panama on Windows
+pytest==9.1.1

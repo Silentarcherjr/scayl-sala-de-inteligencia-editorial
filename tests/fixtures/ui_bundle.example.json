@@ -1,0 +1,420 @@
+{
+  "contract_version": "0.1.0",
+  "snapshot_version": "fixture-synthetic-0",
+  "snapshot_cutoff_utc": "2025-10-01T00:00:00Z",
+  "signals_total": 6,
+  "signals_valid": 6,
+  "events": [
+    {
+      "event_id": "EVT-0001",
+      "title": "[SINTÉTICO] Sismo de magnitud 4.6 sacude el occidente de Panamá",
+      "topic": "eventos_naturales",
+      "topic_confidence": 0.91,
+      "member_ids": [
+        "syn-n001",
+        "syn-n002",
+        "syn-n003"
+      ],
+      "first_published": "2025-09-12T04:00:00Z",
+      "last_published": "2025-09-12T09:30:00Z",
+      "first_detected": "2025-09-12T04:15:00Z",
+      "is_recirculated": false,
+      "entities": [
+        "Panamá",
+        "Chiriquí"
+      ],
+      "source_dna": {
+        "publications": 3,
+        "outlets": 3,
+        "groups": [
+          {
+            "group_id": "PG-1",
+            "label": "procedencia_comun_identificada",
+            "member_ids": [
+              "syn-n002",
+              "syn-n003"
+            ],
+            "basis": "Titular idéntico en dos medios; firma de agencia en ambos."
+          },
+          {
+            "group_id": "PG-2",
+            "label": "independencia_desconocida",
+            "member_ids": [
+              "syn-n001"
+            ],
+            "basis": "Sin información de procedencia."
+          }
+        ],
+        "confirmed_independent": 0,
+        "max_possible_independent": 2,
+        "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+      },
+      "official_evidence": [
+        {
+          "evidence_id": "usgs:syn0001",
+          "kind": "sismo",
+          "field": "magnitude",
+          "value": 4.6,
+          "period": "2025-09-12T03:14:00Z",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/syn0001",
+          "excerpt": null
+        }
+      ],
+      "claims": [
+        {
+          "claim_id": "CLM-0001-001",
+          "event_id": "EVT-0001",
+          "statement": "La magnitud fue 4.6",
+          "type": "HECHO",
+          "status": "SUSTENTADA",
+          "attributed_to": null,
+          "evidence": [
+            {
+              "evidence_id": "usgs:syn0001",
+              "kind": "sismo",
+              "field": "magnitude",
+              "value": 4.6,
+              "period": "2025-09-12T03:14:00Z",
+              "url": "https://earthquake.usgs.gov/earthquakes/eventpage/syn0001",
+              "excerpt": null
+            }
+          ],
+          "reason": "USGS:syn0001 → magnitude = 4.6",
+          "temporal_note": null,
+          "extracted_by": "rule"
+        },
+        {
+          "claim_id": "CLM-0001-002",
+          "event_id": "EVT-0001",
+          "statement": "El sismo causó daños",
+          "type": "HECHO",
+          "status": "SIN_SUSTENTO",
+          "attributed_to": null,
+          "evidence": [],
+          "reason": "La evidencia confirma el sismo pero no contiene datos verificados de daños.",
+          "temporal_note": null,
+          "extracted_by": "rule"
+        }
+      ],
+      "conflicts": [],
+      "temporal_warnings": [],
+      "priority": {
+        "score": 81.5,
+        "tier": "alto",
+        "components": {
+          "R": 0.9,
+          "I": 0.7,
+          "U": 0.9,
+          "N": 0.8,
+          "E": 0.7,
+          "rationale": {
+            "R": "Menciona Panamá; tema en alcance",
+            "I": "Evento natural M≥4.5",
+            "U": "Publicado hace <24 h respecto al corte",
+            "N": "Sin evento previo similar",
+            "E": "1 fuente oficial; 0 independientes confirmadas"
+          }
+        },
+        "rules_version": "scoring-v1"
+      },
+      "evidence_status": "suficiente_para_borrador",
+      "evidence_status_reason": "El hecho central (sismo, magnitud) está respaldado por USGS.",
+      "recommended_action": "Preparar borrador; verificar daños con SINAPROC antes de mencionarlos.",
+      "gap": {
+        "we_know": [
+          "CLM-0001-001"
+        ],
+        "it_is_claimed": [],
+        "we_infer": [
+          "[INFERENCIA] El sismo fue perceptible en Chiriquí (basado en la ubicación reportada por USGS)."
+        ],
+        "we_dont_know": [
+          "Si hubo daños o personas afectadas."
+        ],
+        "investigate_next": [
+          "¿SINAPROC reporta daños?",
+          "¿Hubo réplicas?",
+          "¿Qué zonas lo sintieron?"
+        ]
+      },
+      "text_scope_note": "Basado únicamente en titular/metadatos.",
+      "synthetic": true
+    },
+    {
+      "event_id": "EVT-0002",
+      "title": "[SINTÉTICO] Inflación en Panamá: medios reportan cifras distintas",
+      "topic": "economia",
+      "topic_confidence": 0.84,
+      "member_ids": [
+        "syn-n010",
+        "syn-n011"
+      ],
+      "first_published": "2025-09-20T13:00:00Z",
+      "last_published": "2025-09-21T15:00:00Z",
+      "first_detected": "2025-09-20T13:05:00Z",
+      "is_recirculated": false,
+      "entities": [
+        "Panamá"
+      ],
+      "source_dna": {
+        "publications": 2,
+        "outlets": 2,
+        "groups": [
+          {
+            "group_id": "PG-3",
+            "label": "independencia_desconocida",
+            "member_ids": [
+              "syn-n010",
+              "syn-n011"
+            ],
+            "basis": "Titulares distintos; sin firma."
+          }
+        ],
+        "confirmed_independent": 0,
+        "max_possible_independent": 2,
+        "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+      },
+      "official_evidence": [
+        {
+          "evidence_id": "wb:PAN:FP.CPI.TOTL.ZG:2024",
+          "kind": "indicador",
+          "field": "valor",
+          "value": 0.7,
+          "period": "2024",
+          "url": "https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=PA",
+          "excerpt": null
+        }
+      ],
+      "claims": [],
+      "conflicts": [
+        {
+          "conflict_id": "CNF-0002-001",
+          "event_id": "EVT-0002",
+          "kind": "numerico",
+          "field": "inflacion_anual",
+          "version_a": {
+            "value": "1.2%",
+            "evidence": [
+              {
+                "evidence_id": "news:syn-n010",
+                "kind": "noticia",
+                "field": "titulo",
+                "value": "[SINTÉTICO] Inflación sube a 1.2%",
+                "period": null,
+                "url": "https://example.invalid/syn-n010",
+                "excerpt": "[SINTÉTICO] Inflación sube a 1.2%"
+              }
+            ]
+          },
+          "version_b": {
+            "value": "2.1%",
+            "evidence": [
+              {
+                "evidence_id": "news:syn-n011",
+                "kind": "noticia",
+                "field": "titulo",
+                "value": "[SINTÉTICO] Inflación llega a 2.1%",
+                "period": null,
+                "url": "https://example.invalid/syn-n011",
+                "excerpt": "[SINTÉTICO] Inflación llega a 2.1%"
+              }
+            ]
+          },
+          "status": "sin_resolver",
+          "verification_needed": "Confirmar cifra y período con INEC antes de publicar cualquiera."
+        }
+      ],
+      "temporal_warnings": [
+        {
+          "evidence_id": "wb:PAN:FP.CPI.TOTL.ZG:2024",
+          "period": "2024",
+          "message": "Dato histórico — 2024. No presentarlo como medición actual."
+        }
+      ],
+      "priority": {
+        "score": 67.5,
+        "tier": "medio",
+        "components": {
+          "R": 0.8,
+          "I": 0.8,
+          "U": 0.6,
+          "N": 0.5,
+          "E": 0.4,
+          "rationale": {
+            "R": "Panamá + economía",
+            "I": "Indicador macro",
+            "U": "2 días",
+            "N": "Tema recurrente",
+            "E": "Conflicto sin resolver"
+          }
+        },
+        "rules_version": "scoring-v1"
+      },
+      "evidence_status": "parcial",
+      "evidence_status_reason": "Hay dato oficial histórico, pero las cifras recientes están en conflicto.",
+      "recommended_action": "Requiere verificación: no publicar ninguna cifra hasta confirmar con INEC.",
+      "gap": null,
+      "text_scope_note": "Basado únicamente en titular/metadatos.",
+      "synthetic": true
+    },
+    {
+      "event_id": "EVT-0003",
+      "title": "[SINTÉTICO] Rumor de cierre de esclusas del Canal circula en redes",
+      "topic": "logistica_canal",
+      "topic_confidence": 0.77,
+      "member_ids": [
+        "syn-n020"
+      ],
+      "first_published": "2025-09-29T22:00:00Z",
+      "last_published": "2025-09-29T22:00:00Z",
+      "first_detected": "2025-09-29T22:10:00Z",
+      "is_recirculated": false,
+      "entities": [],
+      "source_dna": {
+        "publications": 1,
+        "outlets": 1,
+        "groups": [
+          {
+            "group_id": "PG-4",
+            "label": "independencia_desconocida",
+            "member_ids": [
+              "syn-n020"
+            ],
+            "basis": "Fuente única."
+          }
+        ],
+        "confirmed_independent": 0,
+        "max_possible_independent": 1,
+        "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+      },
+      "official_evidence": [],
+      "claims": [
+        {
+          "claim_id": "CLM-0003-001",
+          "event_id": "EVT-0003",
+          "statement": "Las esclusas cerrarán la próxima semana",
+          "type": "DECLARACION",
+          "status": "SOLO_REPORTADA",
+          "attributed_to": "medio syn-n020",
+          "evidence": [
+            {
+              "evidence_id": "news:syn-n020",
+              "kind": "noticia",
+              "field": "titulo",
+              "value": "[SINTÉTICO] Rumor de cierre de esclusas",
+              "period": null,
+              "url": "https://example.invalid/syn-n020",
+              "excerpt": "[SINTÉTICO] Rumor de cierre de esclusas"
+            }
+          ],
+          "reason": "Solo un medio lo afirma; no hay fuente oficial en el corpus.",
+          "temporal_note": null,
+          "extracted_by": "rule"
+        }
+      ],
+      "conflicts": [],
+      "temporal_warnings": [],
+      "priority": {
+        "score": 84.0,
+        "tier": "alto",
+        "components": {
+          "R": 0.9,
+          "I": 0.9,
+          "U": 1.0,
+          "N": 0.9,
+          "E": 0.1,
+          "rationale": {
+            "R": "Canal de Panamá",
+            "I": "Logística global",
+            "U": "<12 h",
+            "N": "Nuevo",
+            "E": "Fuente única, sin oficial"
+          }
+        },
+        "rules_version": "scoring-v1"
+      },
+      "evidence_status": "insuficiente",
+      "evidence_status_reason": "Una sola publicación y ninguna fuente oficial.",
+      "recommended_action": "Investigar: contactar a la ACP. Prioridad alta NO habilita publicación.",
+      "gap": null,
+      "text_scope_note": "Basado únicamente en titular/metadatos.",
+      "synthetic": true
+    }
+  ],
+  "packages": [
+    {
+      "package_id": "PKG-0001-v1",
+      "event_id": "EVT-0001",
+      "proposed_title": "[SINTÉTICO] Sismo de 4.6 en el occidente",
+      "public_interest_angle": "Informar con precisión y evitar alarma por daños no confirmados.",
+      "brief": [
+        {
+          "text": "USGS registró un sismo de magnitud 4.6.",
+          "tag": "HECHO",
+          "claim_ids": [
+            "CLM-0001-001"
+          ]
+        },
+        {
+          "text": "No hay datos verificados de daños en el corpus.",
+          "tag": "HECHO",
+          "claim_ids": [
+            "CLM-0001-002"
+          ]
+        }
+      ],
+      "investigation_questions": [
+        "¿SINAPROC reporta daños?",
+        "¿Hubo réplicas?",
+        "¿Qué zonas lo sintieron?"
+      ],
+      "script": [
+        {
+          "text": "Un sismo de magnitud 4.6 fue registrado por el USGS.",
+          "tag": "HECHO",
+          "claim_ids": [
+            "CLM-0001-001"
+          ]
+        }
+      ],
+      "social_copy": {
+        "text": "USGS: sismo de magnitud 4.6. Sin reportes verificados de daños.",
+        "tag": "HECHO",
+        "claim_ids": [
+          "CLM-0001-001"
+        ]
+      },
+      "pending_verifications": [
+        "Daños (SINAPROC)"
+      ],
+      "sources": [
+        {
+          "evidence_id": "usgs:syn0001",
+          "kind": "sismo",
+          "field": "magnitude",
+          "value": 4.6,
+          "period": "2025-09-12T03:14:00Z",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/syn0001",
+          "excerpt": null
+        }
+      ],
+      "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+      "validation": {
+        "passed": true,
+        "issues": []
+      },
+      "generated_by": {
+        "mode": "template",
+        "model": null,
+        "prompt_version": null,
+        "params": {},
+        "latency_ms": null,
+        "tokens_in": null,
+        "tokens_out": null,
+        "cost_usd": 0.0,
+        "created_at": "2025-10-01T00:00:00Z"
+      }
+    }
+  ],
+  "reviews": []
+}
