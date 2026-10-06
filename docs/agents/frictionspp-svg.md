@@ -8,6 +8,22 @@ Tu dueño humano está contigo: pídele confirmación antes de cualquier acción
 Camino crítico del proyecto: **datos → inteligencia semántica → primera UI visible**. Otros dependen de ti
 (el snapshot desbloquea todo), así que prioriza entregar pronto y en PRs pequeños.
 
+## 📌 Notas del Lead pendientes (2026-10-07) — aplícalas antes de seguir
+Revisión de `worker-b/snapshot`: buen trabajo, 76/76 verificadas. Decisiones ya en `main`:
+- **AP-008 ACEPTADA (DL-013):** cuadrícula WB = 540 filas (6×6×15).
+- **AP-009 ACEPTADA con condiciones (DL-014):** solo `pubDate` dentro de [2024-01-01, 2025-10-01); `origen=tvn_rss`;
+  `fecha_publicacion` = pubDate; **`fecha_deteccion` = null** (no 2026); `alcance_texto=titular_metadatos`;
+  declarar en el catálogo la cobertura real de TVN.
+- **DL-015:** el Lead ya corrigió la urgencia para GDELT sin fecha de publicación; mantén `fecha_publicacion` = null en GDELT.
+
+Pasos al retomar:
+1. `git fetch origin && git merge origin/main` en `worker-b/snapshot` (sin conflictos verificados; sin rebase).
+2. En AP-008 y AP-009 completa la línea "Decisión": ACEPTADA, ver DL-013 / DL-014.
+3. Termina B-01/B-02: `noticias.csv` (GDELT DOC+GKG + las 48 de TVN, deduplicado por URL), `fuentes.json`,
+   manifest congelado y verificado; luego exporta `data/labels/editor_candidates.csv`.
+4. Abre el PR hacia `main` (borrador si falta algo) y sigue con A-01/A-08/A-02.
+Cuando cumplas los pasos, borra esta sección en tu PR.
+
 ## ⚠️ Relevo de sesión (lee esto primero)
 - **Al empezar:** si existe `docs/handoff/frictionspp-svg.md`, léelo antes que cualquier otra cosa y continúa desde su "Siguiente paso concreto".
 - **Al acercarte al límite (~15% restante)**, o si tu humano escribe **"RELEVO"**: detente, haz commit (`WIP:` si está a medias), escribe `docs/handoff/frictionspp-svg.md` con la plantilla `docs/handoff/TEMPLATE.md`, haz push y avísale a tu humano. Si no puedes ver tu límite, díselo a tu humano al empezar y haz un relevo preventivo al terminar cada tarea. Detalle en `AGENTS.md` §2b.
