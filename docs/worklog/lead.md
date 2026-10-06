@@ -10,3 +10,4 @@
 - 2026-10-06 22:30 UTC · DL-006/011 · la RTX 4060 es de frictionspp-svg → B-10, máquina de demo y precálculo
 - 2026-10-06 23:30 UTC · L-03..L-07, L-09, L-12, L-15..L-17 · núcleo de evidencia + service/pipeline; 46 pruebas
 - 2026-10-07 00:30 UTC · L-08, L-10, L-11, L-18 · LLM local + Story Studio + consultas + reporte; 63 pruebas
+- 2026-10-07 01:00 UTC · docs · protocolo de relevo (AGENTS §2b, docs/handoff/TEMPLATE.md)
