@@ -21,3 +21,4 @@
 - **2026-10-06 20:45 UTC** — Revisión crítica del plan, contratos y tareas de los workers publicados (M0 parcial).
 - **2026-10-06 21:40 UTC** — El equipo aprueba DL-008 (snapshot propio), DL-009 (ideas 10/10) y AP-001. Investigación de mercado y modelos (PLAN_REVIEW §10). PR #1 abierto para mergear M0.
 - **2026-10-06 22:00 UTC** — AP-007 (Claude en la nube) diferida: primero se mide el modelo local. Dependencias fijadas y verificadas en un venv limpio. `docs/ONBOARDING.md` con prompts para Worker A/B. M0 listo para mergear.
+- **2026-10-06 22:20 UTC** — PR #1 mergeado (M0). Reparto por persona (DL-011): frictionspp-svg (camino crítico) y LowCrime (UI restante, evaluación, despliegue, editor). Instrucciones en `docs/agents/`.

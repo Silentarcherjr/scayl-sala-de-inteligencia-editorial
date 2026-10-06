@@ -2,7 +2,9 @@
 
 > El estado oficial lo actualiza solo el Lead (al mergear). Los workers reportan en su PR y en `docs/worklog/`.
 > Estados: `TODO` · `DOING` · `REVIEW` · `DONE` · `BLOCKED`. Prioridad: P0/P1/P2. Hito: M0–M4.
-> Dueños: **L** = Humano 1 + Claude (Lead) · **A** = Humano 2 + Codex/Astra (UI) · **B** = Humano 3 + Codex/Astra (datos/eval) · **H** = tareas humanas.
+> Dueños (DL-011): **L** = Humano 1 + Claude (Lead) · **F** = **frictionspp-svg** + su agente (camino crítico: datos, semántica y primera UI; empieza ya) · **W** = **LowCrime** + su agente (resto de la UI, evaluación, Trust Lab y despliegue; llega más tarde; es el "editor" independiente) · **H** = tareas humanas.
+> Las secciones de contrato siguen llamándose "A-xx" (UI) y "B-xx" (datos/eval) por su tipo, no por la persona: el dueño real es el de esta tabla.
+> Instrucciones por persona y agente: `docs/agents/frictionspp-svg.md` y `docs/agents/LowCrime.md`.
 
 ## Resumen
 
@@ -22,22 +24,22 @@
 | L-12 | `review/store.py` + `outbox.py` | L | P0 | M1 | TODO | L-01 |
 | L-13 | `evidence/gaps.py` (Investigation Gap) | L | P1 | M2 | TODO | L-05 |
 | L-14 | Integración, merges, README final, pitch | L | P0 | M3–M4 | TODO | todo |
-| A-01 | App Streamlit: esqueleto + `FixtureService` + navegación | A | P0 | M1 | TODO | L-01 |
-| A-02 | Sala de Situación | A | P0 | M1 | TODO | A-01 |
-| A-03 | Ficha de Caso (6 pestañas) | A | P0 | M1–M2 | TODO | A-01 |
-| A-04 | Consultas (Q&A) | A | P0 | M2 | TODO | A-01 |
-| A-05 | Trust Lab (vista) | A | P1 | M3 | TODO | B-08 |
-| A-06 | Despliegue del enlace en modo `cache` | A | P0 | M3 | TODO | AP-001, L-07 |
-| B-01 | Construir el snapshot propio según el PDF §6–7 (fetchers) → `data/raw/v1` | B | P0 | M0 | TODO | — |
-| B-02 | `ingest/manifest.py` (SHA-256, conteos, transformaciones) + diccionario | B | P0 | M0 | TODO | B-01 |
-| B-03 | `ingest/validate.py` + normalización → `data/processed` + `quality_report` (T01) | B | P0 | M1 | TODO | B-01 |
-| B-04 | Casos sintéticos T01/T03/T05/T07 en `data/synthetic/` | B | P0 | M1 | TODO | L-01 |
-| B-05 | `intel/embed.py` + `topics.py` + `cluster.py` (baseline + IA) | B | P0 | M1–M2 | TODO | B-03 |
-| B-06 | `intel/retrieve.py` (BM25 + coseno) | B | P0 | M2 | TODO | B-05 |
-| B-07 | Etiquetas humanas: temas (≥100), pares de agrupación, top 5 ciego, benchmark dev (40) | B + H | P0 | M2 | TODO | B-03 |
-| B-08 | `eval/`: métricas, benchmark, latencia → `eval/results/latest.json` | B | P0/P1 | M3 | TODO | B-05, L-10, L-11 |
-| B-09 | Revisión humana de ≥30 afirmaciones (validez de sustento) | H | P0 | M3 | TODO | L-10 |
-| B-10 | Benchmark de modelos locales (embeddings + LLM) en hardware declarado | B | P0 | M1 | TODO | — |
+| A-01 | App Streamlit: esqueleto + `FixtureService` + navegación | **F** frictionspp-svg | P0 | M1 | TODO | L-01 |
+| A-02 | Sala de Situación | **F** frictionspp-svg | P0 | M1 | TODO | A-01 |
+| A-03 | Ficha de Caso (6 pestañas) | **W** LowCrime | P0 | M1–M2 | TODO | A-01 |
+| A-04 | Consultas (Q&A) | **W** LowCrime | P0 | M2 | TODO | A-01 |
+| A-05 | Trust Lab (vista) | **W** LowCrime | P1 | M3 | TODO | B-08 |
+| A-06 | Despliegue del enlace en modo `cache` | **W** LowCrime | P0 | M3 | TODO | AP-001, L-07 |
+| B-01 | Construir el snapshot propio según el PDF §6–7 (fetchers) → `data/raw/v1` | **F** frictionspp-svg | P0 | M0 | TODO | — |
+| B-02 | `ingest/manifest.py` (SHA-256, conteos, transformaciones) + diccionario | **F** frictionspp-svg | P0 | M0 | TODO | B-01 |
+| B-03 | `ingest/validate.py` + normalización → `data/processed` + `quality_report` (T01) | **F** frictionspp-svg | P0 | M1 | TODO | B-01 |
+| B-04 | Casos sintéticos T01/T03/T05/T07 en `data/synthetic/` | **F** frictionspp-svg | P0 | M1 | TODO | L-01 |
+| B-05 | `intel/embed.py` + `topics.py` + `cluster.py` (baseline + IA) | **F** frictionspp-svg | P0 | M1–M2 | TODO | B-03 |
+| B-06 | `intel/retrieve.py` (BM25 + coseno) | **F** frictionspp-svg | P0 | M2 | TODO | B-05 |
+| B-07 | Etiquetas humanas: temas (≥100), pares de agrupación, top 5 ciego, benchmark dev (40) | F (etiquetas) + W (top 5 ciego) | P0 | M2 | TODO | B-03 |
+| B-08 | `eval/`: métricas, benchmark, latencia → `eval/results/latest.json` | **W** LowCrime | P0/P1 | M3 | TODO | B-05, L-10, L-11 |
+| B-09 | Revisión humana de ≥30 afirmaciones (validez de sustento) | W (editor) | P0 | M3 | TODO | L-10 |
+| B-10 | Benchmark de modelos locales (embeddings + LLM) en hardware declarado | F o W: quien tenga la RTX 4060 | P0 | M1 | TODO | — |
 | H-01 | Preparar el espacio Notion (estructura de §5) para migrar en cuanto haya licencia | H1 | P0 | M3 | TODO | — |
 | H-02 | Bitácora `docs/AI_TOOLS_USED.md` → PDF | Todos | P0 | M4 | DOING | — |
 | H-03 | Publicaciones en redes (@hackiathon @viamatica @adenbs) | H | P0 | M1–M4 | TODO | — |
@@ -46,16 +48,16 @@
 | L-16 | **Recibo de trazabilidad** por decisión (JSON + hash: snapshot, afirmaciones, revisor) | L | P1 | M2 | TODO | L-12 |
 | L-17 | `config/verification_sources.v1.yaml`: tema → institución oficial sugerida (INEC, SINAPROC, ACP, MEF, ATP, ASEP…) | L | P1 | M1 | TODO | — |
 | L-18 | Métrica de **preservación de atribución** (validador `STATUS_MISMATCH`) | L | P1 | M3 | TODO | L-09 |
-| A-07 | **Agenda de la mañana** (top 5 + por qué + a quién verificar) en la Sala de Situación | A | P0 | M2 | TODO | A-02, L-17 |
-| A-08 | **Clic en número → tarjeta de evidencia**, componente reutilizable en todas las pantallas | A | P0 | M1 | TODO | A-01 |
-| A-09 | **Modo jurado** en Consultas (las 4 preguntas del PDF precargadas) | A | P1 | M2 | TODO | A-04 |
-| A-10 | Vista del simulador de pesos (sliders → ranking nuevo vs v1, justificación obligatoria) | A | P1 | M2 | TODO | L-15 |
-| B-11 | **GitHub Actions**: pytest (T01–T10) en cada PR + badge en el README | B | P0 | M1 | TODO | — |
-| B-12 | **Set de 10 ataques** (inyección, preguntas trampa, pedir secretos, acusaciones) + tasa de resistencia | B | P1 | M3 | TODO | L-10, L-11 |
-| H-05 | **Video de la demo con internet apagado** → Notion | H2 | P0 | M4 | TODO | M3 |
-| H-06 | **Mini-estudio manual vs asistido** (3 tareas cronometradas, protocolo en 06) | H3 + H2 | P1 | M3 | TODO | M2 |
+| A-07 | **Agenda de la mañana** (top 5 + por qué + a quién verificar) en la Sala de Situación | **W** LowCrime | P0 | M2 | TODO | A-02, L-17 |
+| A-08 | **Clic en número → tarjeta de evidencia**, componente reutilizable en todas las pantallas | **F** frictionspp-svg | P0 | M1 | TODO | A-01 |
+| A-09 | **Modo jurado** en Consultas (las 4 preguntas del PDF precargadas) | **W** LowCrime | P1 | M2 | TODO | A-04 |
+| A-10 | Vista del simulador de pesos (sliders → ranking nuevo vs v1, justificación obligatoria) | **W** LowCrime | P1 | M2 | TODO | L-15 |
+| B-11 | **GitHub Actions**: pytest (T01–T10) en cada PR + badge en el README | **F** frictionspp-svg | P0 | M1 | TODO | — |
+| B-12 | **Set de 10 ataques** (inyección, preguntas trampa, pedir secretos, acusaciones) + tasa de resistencia | **W** LowCrime | P1 | M3 | TODO | L-10, L-11 |
+| H-05 | **Video de la demo con internet apagado** → Notion | W | P0 | M4 | TODO | M3 |
+| H-06 | **Mini-estudio manual vs asistido** (3 tareas cronometradas, protocolo en 06) | F + W | P1 | M3 | TODO | M2 |
 | H-07 | Registro de **prueba fallida → corrección** (regla continua: cada fallo real se anota en 06) | Todos | P0 | M1–M4 | DOING | — |
-| H-08 | Top 5 **a ciego** del editor (Humano 2), antes de que exista ranking | H2 | P0 | M0–M1 | TODO | B-01 |
+| H-08 | Top 5 **a ciego** del editor (Humano 2), antes de que exista ranking | W (editor) | P0 | M0–M1 | TODO | B-01 |
 
 ---
 

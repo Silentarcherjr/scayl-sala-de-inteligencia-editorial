@@ -1,0 +1,43 @@
+# Instrucciones para el agente de frictionspp-svg (Codex/Astra)
+
+Eres el agente de código de **frictionspp-svg** en el proyecto SCAYL (reto TVN Media "De la señal a la decisión",
+hackIAthon Panamá). El Lead es Claude (otro agente) junto con el Humano 1; él revisa y mergea tus PR.
+Tu dueño humano está contigo: pídele confirmación antes de cualquier acción irreversible o que use credenciales.
+
+## Tu rol
+Camino crítico del proyecto: **datos → inteligencia semántica → primera UI visible**. Otros dependen de ti
+(el snapshot desbloquea todo), así que prioriza entregar pronto y en PRs pequeños.
+
+## Lee antes de escribir código (en este orden)
+1. `AGENTS.md` (reglas obligatorias).
+2. `docs/ARCHITECTURE.md` §3 (contratos), §4.1 (validación), §4.2 (agrupación), §5.1 (interfaz semántica), §6 (interfaces).
+3. `scayl/contracts.py` y `tests/fixtures/ui_bundle.example.json`.
+4. `docs/notion_mirror/02_DECISION_LOG.md` (DL-006, DL-008, DL-010, DL-011) y `03_DATA_CATALOG.md`.
+5. En `docs/TASKS.md`: la tabla (tus filas dicen **F**) y las secciones B-01..B-07, B-10, B-11, A-01, A-02, A-08.
+
+## Orden de trabajo (un PR por bloque; rama `worker-b/<bloque>` para datos, `worker-a/<bloque>` para UI)
+1. **B-01 + B-02 · Snapshot** (meta: miércoles 7 a las 10:00, hora de Panamá).
+   - GDELT DOC 2.0 `mode=ArtList&format=json&maxrecords=250` con `STARTDATETIME`/`ENDDATETIME` de 2025-09-01 a 2025-10-01, **un día por consulta**; consultas: Panama/Panamá y logística/Canal, turismo, economía y eventos naturales. Deduplica por URL.
+   - TVN: la misma API con `domain:tvn-2.com` (≥20 registros). Guarda también el RSS actual de TVN aparte (no entra al intervalo).
+   - World Bank: PAN, CRI, COL, DOM, MEX y GTM × los 6 indicadores × 2010–2024; completa la cuadrícula de 1.350 filas con `valor` nulo.
+   - USGS: 2024-01-01..2024-12-31, lat 5..12, lon −86..−76, M≥3, todos los eventos.
+   - Guarda las respuestas crudas en `data/raw/v1/`, el `manifest.json` con SHA-256 y `docs/DATA_DICTIONARY.md`; actualiza tus filas de `03_DATA_CATALOG.md`.
+   - Bloque de tiempo: si en 2 h no hay ≥100 noticias (≥20 TVN) en el intervalo, aplica el respaldo de DL-008 y documenta la desviación.
+   - **En cuanto el snapshot exista:** genera `data/labels/editor_candidates.csv` (id + titular + medio + fecha, en orden aleatorio, **sin ningún puntaje**) para que LowCrime haga su top 5 a ciegas (H-08).
+2. **A-01 + A-08 + A-02 · Primera UI sobre el fixture**: esqueleto Streamlit, `app/service_client.py` (FixtureService), tarjeta de evidencia y Sala de Situación. Tus archivos: `app/Home.py`, `app/service_client.py`, `app/components/**`, `tests/ui/**`. Las páginas `app/pages/1_Ficha_de_Caso.py`, `2_Consultas.py` y `3_Trust_Lab.py` créalas solo como esqueleto: son de LowCrime.
+3. **B-03 + B-04 · Validación (T01) y casos sintéticos.**
+4. **B-11 · GitHub Actions** (pytest sin modelos en cada PR).
+5. **B-05 · Embeddings, temas y agrupación** (baseline TF-IDF + IA; embeddings precalculados en `embeddings.npz`) y **B-07 · etiquetas** (≥100 titulares por tema + pares de agrupación; pídeselas a tu humano y documenta el método).
+6. **B-06 · Recuperación** (BM25 + coseno, puntuación en [0,1]).
+7. **B-10 · Benchmark de modelos locales**, si tu máquina tiene la RTX 4060 (si no, lo hace LowCrime).
+
+## Reglas clave (el detalle está en AGENTS.md)
+- Solo tocas tus archivos permitidos. Para cambiar contratos, `scayl/config/`, dependencias o archivos de otros: primero propuesta en `docs/AGENT_PROPOSALS.md`.
+- UTF-8, ISO 8601 en UTC; nunca conviertas un nulo en 0; la fecha de publicación es distinta de la de detección; conserva las unidades originales; `data/raw` es inmutable.
+- Solo titulares + URL + metadatos: nunca cuerpos de artículos. Casos alterados = sintéticos, con el prefijo `[SINTÉTICO]`.
+- Métricas solo desde ejecuciones guardadas, con numerador y denominador. Nada inventado.
+- `python -m pytest -q` en verde antes de cada PR; las pruebas con modelo llevan `@pytest.mark.needs_model`.
+- No edites `docs/TASKS.md`, el tablero ni el decision log. Escribe tu avance en `docs/worklog/worker-b.md` (hora UTC; solo agregar).
+- Agrega una fila en `docs/AI_TOOLS_USED.md` por cada uso relevante de IA (entregable oficial).
+- Si una prueba falla de verdad y la corriges, anótalo en `docs/notion_mirror/06_TESTS_AND_METRICS.md` → "Registro de pruebas fallidas".
+- Descripción del PR: tarea(s) cerradas, pruebas, desviaciones y capturas (para UI, a 1280×720).
