@@ -28,7 +28,6 @@ que elija su top 5 leyendo solo ese CSV**, sin abrir la app con datos reales ni 
 5. **B-08 · Evaluación** (`scayl/eval/**`, salida `eval/results/latest.json` con el esquema de TASKS B-08) + **A-05 · Trust Lab** en `app/pages/3_Trust_Lab.py`.
 6. **B-12 · Set de 10 ataques** (`data/labels/redteam.jsonl`, marcados como sintéticos) y su métrica de resistencia.
 7. **A-06 · Despliegue** en un Hugging Face Space con contraseña, modo caché, solo titular + URL (AP-001; carpeta `deploy/**`).
-8. **B-10 · Benchmark de modelos locales**, si tu máquina es la de la RTX 4060.
 
 ## Reglas clave (el detalle está en AGENTS.md)
 - Solo tocas tus archivos permitidos. Para cambiar contratos, `scayl/config/`, dependencias o archivos de otros: primero propuesta en `docs/AGENT_PROPOSALS.md`.

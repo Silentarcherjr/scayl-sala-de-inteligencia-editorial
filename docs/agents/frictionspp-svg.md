@@ -29,7 +29,7 @@ Camino crítico del proyecto: **datos → inteligencia semántica → primera UI
 4. **B-11 · GitHub Actions** (pytest sin modelos en cada PR).
 5. **B-05 · Embeddings, temas y agrupación** (baseline TF-IDF + IA; embeddings precalculados en `embeddings.npz`) y **B-07 · etiquetas** (≥100 titulares por tema + pares de agrupación; pídeselas a tu humano y documenta el método).
 6. **B-06 · Recuperación** (BM25 + coseno, puntuación en [0,1]).
-7. **B-10 · Benchmark de modelos locales**, si tu máquina tiene la RTX 4060 (si no, lo hace LowCrime).
+7. **B-10 · Benchmark de modelos locales.** Tu máquina (RTX 4060) es la **máquina de demo y de precálculo**. Empieza las descargas en paralelo desde el inicio (`ollama pull` de los candidatos de DL-006 y los modelos de embeddings), mientras corren los fetchers. Mide con `num_ctx=4096`, thinking desactivado y salida JSON: tokens/s, latencia (mediana y p95, n≥10), tasa de JSON válido y VRAM. Registra los resultados en tu PR para que el Lead cierre DL-006. Más adelante, el Lead te pedirá correr en esta máquina el precálculo de la caché LLM (`data/cache/llm/`).
 
 ## Reglas clave (el detalle está en AGENTS.md)
 - Solo tocas tus archivos permitidos. Para cambiar contratos, `scayl/config/`, dependencias o archivos de otros: primero propuesta en `docs/AGENT_PROPOSALS.md`.
