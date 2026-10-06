@@ -1,6 +1,6 @@
 # 00 · Inicio del reto (Challenge HQ)
 
-> Espejo temporal de Notion. Notion es **obligatorio** (condición de admisión); se migrará cuando la organización habilite la licencia Business.
+> Espejo temporal de Notion. Notion es **obligatorio** (condición de admisión); se migrará en cuanto se habilite la licencia Business.
 > Última actualización: 2026-10-06 (Lead)
 
 | Campo | Valor |
@@ -20,7 +20,7 @@
 
 ## Fechas
 - Recepción del reto: martes 6 de octubre · Entrega (peor caso, Bases): **jueves 8 de octubre a las 23:59** · Pitch Day: viernes 16 de octubre (finalistas).
-- El doc TVN (fuente de verdad) deja la fecha del evento "por confirmar"; pendiente de confirmación (H-01).
+- El doc TVN (fuente de verdad) deja la fecha del evento "por confirmar"; trabajamos con el 8 de octubre a las 23:59 como límite. No hay canal de consulta: todo se resuelve según el PDF.
 
 ## Índice
 01 Plan y ejecución · 02 Decisiones · 03 Catálogo de datos · 04 Diseño de solución · 05 Casos y evidencias · 06 Pruebas y métricas · 07 Riesgos y ética · 08 Presentación al jurado

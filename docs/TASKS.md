@@ -28,7 +28,7 @@
 | A-04 | Consultas (Q&A) | A | P0 | M2 | TODO | A-01 |
 | A-05 | Trust Lab (vista) | A | P1 | M3 | TODO | B-08 |
 | A-06 | Despliegue del enlace en modo `cache` | A | P0 | M3 | TODO | AP-001, L-07 |
-| B-01 | Obtener snapshot oficial **o** Plan B (fetchers) → `data/raw/v1` | B | P0 | M0 | TODO | — |
+| B-01 | Construir el snapshot propio según el PDF §6–7 (fetchers) → `data/raw/v1` | B | P0 | M0 | TODO | — |
 | B-02 | `ingest/manifest.py` (SHA-256, conteos, transformaciones) + diccionario | B | P0 | M0 | TODO | B-01 |
 | B-03 | `ingest/validate.py` + normalización → `data/processed` + `quality_report` (T01) | B | P0 | M1 | TODO | B-01 |
 | B-04 | Casos sintéticos T01/T03/T05/T07 en `data/synthetic/` | B | P0 | M1 | TODO | L-01 |
@@ -38,7 +38,7 @@
 | B-08 | `eval/`: métricas, benchmark, latencia → `eval/results/latest.json` | B | P0/P1 | M3 | TODO | B-05, L-10, L-11 |
 | B-09 | Revisión humana de ≥30 afirmaciones (validez de sustento) | H | P0 | M3 | TODO | L-10 |
 | B-10 | Benchmark de modelos locales (embeddings + LLM) en hardware declarado | B | P0 | M1 | TODO | — |
-| H-01 | Pedir a la organización: snapshot, benchmark, fecha exacta, acceso a Notion | H1 | P0 | M0 | TODO | — |
+| H-01 | Preparar el espacio Notion (estructura de §5) para migrar en cuanto haya licencia | H1 | P0 | M3 | TODO | — |
 | H-02 | Bitácora `docs/AI_TOOLS_USED.md` → PDF | Todos | P0 | M4 | DOING | — |
 | H-03 | Publicaciones en redes (@hackiathon @viamatica @adenbs) | H | P0 | M1–M4 | TODO | — |
 | H-04 | Migrar el espejo a Notion y compartirlo con el jurado | H1 + L | P0 | M3 | BLOCKED (sin acceso) | Notion |
@@ -87,8 +87,11 @@ Cada tarea define: objetivo · archivos permitidos · entradas · salidas · int
 
 ### B-01 · Snapshot
 - **Objetivo:** `data/raw/v1/` con `noticias.csv`, `fuentes.json`, `indicadores.csv`, `eventos.geojson` y `manifest.json`.
-- **Ruta 1:** paquete oficial de la organización (preferido) → copiar sin modificar.
-- **Ruta 2 (Plan B):** `scayl/ingest/fetch_{tvn_rss,gdelt,worldbank,usgs}.py` ejecutados en máquina con internet.
+- **Fuente de verdad:** PDF TVN §6–7. No hay paquete oficial: lo construimos y lo congelamos nosotros.
+- **Fetchers:** `scayl/ingest/fetch_{tvn,gdelt,worldbank,usgs}.py`, ejecutados en una máquina con internet; cada uno es idempotente y guarda la respuesta cruda.
+- **Noticias, estrategia del intervalo (DL-008), con un bloque de tiempo de 2 h:**
+  1. Intentar el intervalo oficial: últimos 30 días antes de 2025-10-01 (ampliable a 90). GDELT: la API DOC solo cubre unos 3 meses recientes → usar los archivos históricos GKG 2.1 (`data.gdeltproject.org/gdeltv2/`, campo `<PAGE_TITLE>` en V2EXTRASXML, filtrando por Panamá y temas), muestreando N archivos de 15 min por día. TVN: sitemap(s) de tvn-2.com con `lastmod`/fechas de septiembre de 2025 (solo titular + URL + fecha).
+  2. Si no se alcanzan ≥100 registros (≥20 TVN) en el intervalo: usar los últimos 30–90 días hasta la fecha de extracción y documentarlo como **desviación** en el catálogo y el manifest (`cobertura_efectiva`, motivo).
   - WB: 6 países (PAN, CRI, COL, DOM, MEX, GTM) × 6 indicadores × 2010–2024; completar la cuadrícula de 1.350 filas con `valor` nulo.
   - USGS: 2024-01-01..2024-12-31, lat 5–12, lon −86..−76, M≥3, todos los eventos.
   - GDELT: consultas "Panama" + logística/turismo/economía/eventos naturales, partidas por fecha, deduplicadas por URL; ≤250 por consulta.

@@ -37,3 +37,10 @@
 ### DL-007 · Fechas definitivas según el doc TVN
 - **Decisión:** el doc TVN (el más reciente) manda: intervalo de datos [2024-01-01, 2025-10-01). Fecha de entrega: peor caso jueves 8 de octubre a las 23:59 (Bases) hasta que se confirme.
 - **Motivo:** indicación del equipo; jerarquía de autoridad. · **Fecha:** 2026-10-06
+
+### DL-008 · Snapshot propio y estrategia del intervalo de fechas
+- **Decisión:** no existe paquete común disponible ni canal de consulta → construimos el snapshot siguiendo el PDF §6–7. Para las noticias se intenta primero el intervalo oficial [2024-01-01, 2025-10-01) (30 días previos a 2025-10-01; GDELT GKG histórico + sitemap TVN). Si en 2 h no hay ≥100 registros (≥20 TVN), se usa la ventana reciente y se documenta la desviación.
+- **Alternativas:** solo ventana reciente (más simple, pero viola literalmente el intervalo); solo intervalo oficial (riesgo de volumen insuficiente).
+- **Motivo:** el PDF prioriza el intervalo y también dice "registrar la cobertura efectiva"; documentar la desviación es más honesto que forzar los datos.
+- **Compromiso:** con la ventana reciente, WB (≤2024) y USGS (2024) quedan aún más lejos en el tiempo → el Temporal Guard gana protagonismo (y eso es bueno para T04).
+- **Fecha:** 2026-10-06 · **Estado:** propuesta del Lead, validar en equipo.

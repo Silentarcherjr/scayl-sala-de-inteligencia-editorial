@@ -7,8 +7,8 @@
 |---|---|---|---|---|---|---|---|
 | L-01 | Contratos de datos + fixture de UI | Lead (H1+Claude) | DONE | 2026-10-06 19:45 | 2026-10-06 20:30 | rama claude/fervent-babbage-q9fg7h | `scayl/contracts.py`, fixture sintético, 3 pruebas en verde |
 | L-02 | Docs de gobernanza + espejo Notion | Lead | DONE | 2026-10-06 19:40 | 2026-10-06 20:45 | rama claude/fervent-babbage-q9fg7h | PLAN_REVIEW, ARCHITECTURE, MASTER_PLAN, TASKS, AGENTS, CLAUDE, espejo |
-| H-01 | Solicitar snapshot, benchmark, fecha y acceso a Notion a la organización | H1 | TODO | — | — | — | — |
-| B-01 | Snapshot `data/raw/v1` (oficial o Plan B) | Worker B (H3) | TODO | — | — | — | — |
+| H-01 | Preparar el espacio Notion para migrar | H1 | TODO | — | — | — | — |
+| B-01 | Snapshot propio `data/raw/v1` según el PDF (DL-008) | Worker B (H3) | TODO | — | — | — | — |
 | B-10 | Benchmark de modelos locales | Worker B (H3) | TODO | — | — | — | — |
 | A-01 | Esqueleto Streamlit + FixtureService | Worker A (H2) | TODO | — | — | — | — |
 | L-03 | Puntaje P + estado de evidencia | Lead | TODO | — | — | — | — |

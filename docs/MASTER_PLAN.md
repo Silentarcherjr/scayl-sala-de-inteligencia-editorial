@@ -18,7 +18,7 @@ Horas en hora de Panamá (UTC−5).
 
 | Bloque | Ventana | Hito | Criterio de salida |
 |---|---|---|---|
-| D1 · Inicio + diseño | mar 6, tarde y noche | **M0 — Contratos y datos** | Contratos y docs mergeados; workers con tareas; snapshot (oficial o Plan B) en `data/raw/v1` con manifest |
+| D1 · Inicio + diseño | mar 6, tarde y noche | **M0 — Contratos y datos** | Contratos y docs mergeados; workers con tareas; snapshot propio construido según el PDF §6–7 en `data/raw/v1` con manifest |
 | D2 · mañana | mié 7, hasta 14:00 | **M1 — Rebanada delgada de punta a punta** | `make demo` muestra bandeja → ficha → paquete `template` → revisión, con datos reales y sin LLM; T01–T04, T08 y T10 en verde |
 | D2 · tarde y noche | mié 7, hasta 23:59 | **M2 — IA integrada** | Embeddings + afirmaciones LLM + Story Studio validado + Q&A con abstención; T05, T06, T07 y T09 en verde |
 | D3 · mañana | jue 8, hasta 14:00 | **M3 — Evaluación + despliegue** | Trust Lab con métricas medidas; tabla baseline frente a IA; enlace desplegado; Notion migrado (si está disponible) |

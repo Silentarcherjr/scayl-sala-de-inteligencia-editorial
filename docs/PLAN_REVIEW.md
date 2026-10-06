@@ -48,7 +48,7 @@ pruebas de contrato, el esqueleto de directorios y toda la documentación de pla
 | D8 | Rangos y desempate | Fórmula P | **[OFICIAL §4]** bajo [0,40), medio [40,70), alto [70,100]; empate → mayor U, luego ID; mostrar versión de reglas; permitir justificar cambios de pesos | `rules_version` en contrato y desempate en el ranking. |
 | D9 | Taxonomía | "topic" libre | **[OFICIAL §3]** economía, logística/Canal, turismo, servicios públicos, eventos naturales, regulación | Enum `Topic` fijo + `otro`. |
 | D10 | Casos sintéticos | No mencionado | **[OFICIAL §7]** "Identificar los casos alterados como sintéticos" | Campo `sintetico`, prefijo `[SINTÉTICO]` visible y directorio `data/synthetic/` separado. |
-| D11 | Benchmark | Etiquetas humanas genéricas | **[OFICIAL §7]** `benchmark.jsonl` de 60 consultas (30 sustentadas / 10 contradicción / 10 sin respuesta / 10 adversariales); 40 dev + 20 reservadas para el jurado | Si la organización no lo entrega, construimos 40 de desarrollo con la misma proporción. **Nunca** mezclamos el set reservado con el corpus. |
+| D11 | Benchmark | Etiquetas humanas genéricas | **[OFICIAL §7]** `benchmark.jsonl` de 60 consultas (30 sustentadas / 10 contradicción / 10 sin respuesta / 10 adversariales); 40 dev + 20 reservadas para el jurado | Lo construimos nosotros: 60 con la proporción oficial, 40 de desarrollo + 20 "reservadas" que no se usan para ajustar nada. **Nunca** mezclamos el set reservado con el corpus. |
 | D12 | Archivos | 5 archivos | **[OFICIAL §6–7]** También `fuentes.json`, diccionario de datos y separación raw/processed | Añadidos al catálogo. |
 | D13 | Hora | ISO 8601 | **[OFICIAL §7]** Almacenar en UTC y **mostrar hora de Panamá** en la interfaz | Regla de UI en AGENTS.md. |
 | D14 | Intervalo de datos | No mencionado | **[OFICIAL §7]** Excluir registros fuera de [2024-01-01, 2025-10-01) | Filtro con registro de excluidos (T01). Ver R2. |
@@ -59,7 +59,7 @@ pruebas de contrato, el esqueleto de directorios y toda la documentación de pla
 **Sobre las fechas:** el documento TVN es el más reciente y manda. Fija el intervalo de datos y deja la
 fecha del evento "por confirmar". Las Bases indican recepción el 6 de octubre, entrega el 8 de octubre a
 las 23:59 y Pitch Day el 16 de octubre. Planificamos en bloques D1/D2/D3, como sugiere el doc TVN, y usamos
-el **jueves 8 de octubre a las 23:59** como peor caso hasta que la organización confirme otra fecha.
+el **jueves 8 de octubre a las 23:59** como fecha límite. **No hay canal para consultar a la organización:** todo se resuelve con lo que dice el PDF y se documenta.
 
 ---
 
@@ -73,7 +73,7 @@ el **jueves 8 de octubre a las 23:59** como peor caso hasta que la organización
 2. **"Podremos descargar los datos ahora".** [OFICIAL] Intervalo [2024-01-01, 2025-10-01) y "no asumir que
    el RSS conserva el histórico". Hoy es octubre de 2026: **el RSS de TVN de septiembre de 2025 ya no es
    recuperable**. [EXTERNO, verificar] La API DOC 2.0 de GDELT solo busca en una ventana móvil de unos 3
-   meses. → **Dependemos del snapshot congelado de la organización.** Plan B: snapshot propio con fechas
+   meses. → **Construimos nuestro propio snapshot siguiendo el PDF** (ver DL-008: estrategia del intervalo). Si el intervalo no es alcanzable para alguna fuente, se usan las fechas
    reales de extracción, documentado como desviación, o casos sintéticos claramente marcados.
 3. **"Las noticias sobre sismos se vinculan con eventos USGS".** [OFICIAL] USGS cubre 2024 y las noticias
    están cerca de septiembre de 2025. Es probable que no haya coincidencia temporal. → El vínculo se hace
@@ -210,8 +210,8 @@ Motivo: el reto pide literalmente "abrir una ficha"; el jurado navega menos y el
 
 | # | Riesgo | Prob. | Impacto | Mitigación | Dueño |
 |---|---|---|---|---|---|
-| R1 | **Notion no habilitado a tiempo** → no admisión | Media | Crítico | Espejo Markdown fechado; migración manual en <1 h con plantilla lista; pedir acceso a la organización hoy | H1 |
-| R2 | **Snapshot oficial no entregado** y RSS/GDELT históricos irrecuperables | Media | Alto | Pedir el paquete; Plan B con snapshot propio documentado como desviación + casos sintéticos | B |
+| R1 | **Notion no habilitado a tiempo** → no admisión | Media | Crítico | Espejo Markdown fechado; migración manual en <1 h con plantilla lista; tener el espacio listo para migrar en cuanto se habilite la licencia | H1 |
+| R2 | RSS/GDELT históricos difíciles de obtener para el intervalo oficial | Alta | Alto | DL-008: GDELT histórico (GKG con PAGE_TITLE) + sitemap TVN para septiembre de 2025, en un bloque de tiempo de 2 h; si falla, ventana reciente con desviación documentada y "cobertura efectiva" registrada | B |
 | R3 | Plazo (~52 h) para el flujo completo | Alta | Alto | Rebanada delgada de punta a punta primero (M1), luego profundidad | Lead |
 | R4 | Sin GPU → LLM lento | Media | Medio | Precálculo + modo caché etiquetado + modelo 4B para Q&A | B |
 | R5 | Conflictos de merge en documentos compartidos | Alta | Medio | Propiedad por archivo; el tablero lo actualiza solo el Lead; los workers escriben en `docs/worklog/` | Lead |
@@ -248,11 +248,11 @@ Motivo: el reto pide literalmente "abrir una ficha"; el jurado navega menos y el
 
 ---
 
-## 9. Preguntas abiertas para el equipo humano / la organización
+## 9. Decisiones internas pendientes (no hay canal con la organización)
 
-1. ¿La organización entregará el snapshot congelado "Panamá · Señales y Evidencias v1" y `benchmark.jsonl`? ¿Cuándo?
-2. ¿Fecha y hora exactas de entrega (confirmar 8 de octubre a las 23:59, hora de Panamá)?
-3. ¿Qué hardware local tiene cada integrante (GPU/VRAM, RAM)? Define el modelo LLM.
-4. ¿Quién actúa como "editor" para P@5 y la revisión de ≥30 afirmaciones?
-5. ¿Se permite un despliegue con acceso restringido como "enlace del agente"? ¿Dónde (HF Spaces privado, Streamlit Cloud, túnel)?
-6. ¿Condiciones de uso de las descripciones del RSS de TVN?
+1. Estrategia del intervalo de datos → DL-008 (propuesta del Lead; validar en equipo).
+2. Benchmark: lo construimos nosotros (60 consultas con la proporción oficial: 40 dev + 20 "reservadas" que nadie mira hasta la evaluación final).
+3. Hardware de cada integrante (GPU/VRAM, RAM) → define el modelo (B-10).
+4. Quién actúa como "editor" para P@5 y la revisión de ≥30 afirmaciones (no puede ser quien ajusta los pesos).
+5. Destino del enlace desplegado (AP-001).
+6. Uso de las descripciones del RSS de TVN: por defecto solo en local; en la UI pública solo titular + URL.
