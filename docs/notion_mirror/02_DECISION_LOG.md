@@ -30,7 +30,7 @@
 - **Compromiso:** borradores más sobrios. · **Fecha:** 2026-10-06
 
 ### DL-006 · Modelos locales (PROVISIONAL, pendiente de B-10)
-- **Hardware del equipo:** RTX 4060 (8 GB) y RTX 3050. La 4060 es la máquina de demo y de precálculo.
+- **Hardware del equipo:** RTX 4060 (8 GB, **frictionspp-svg**) = máquina de demo y de precálculo; RTX 3050 = desarrollo.
 - **Candidatos:** embeddings `BAAI/bge-m3`, `intfloat/multilingual-e5-base` y `Qwen/Qwen3-Embedding-0.6B`. LLM en la 4060: `qwen3.5:9b` (Apache 2.0, unos 6,6 GB en Q4 según fuentes externas) frente a `qwen3:8b`. En la 3050: `qwen3:4b` frente a Gemma 4 E4B. Fallback sin GPU: caché/plantilla.
 - **Referencia externa (no medida por nosotros):** unos 25–45 tokens/s en una 4060 para modelos de 7–9B en Q4.
 - **Motivo:** multilingüe con buen español, licencia abierta, disponibles en Ollama/HF.
@@ -62,7 +62,7 @@
 - **Compromiso:** el editor no es un periodista de TVN → P@5 se declara exploratoria. · **Fecha:** 2026-10-06
 
 ### DL-011 · Asignación de personas: frictionspp-svg carga el camino crítico
-- **Decisión:** frictionspp-svg (empieza ya) toma los datos (B-01..B-07, B-11), la primera UI (A-01, A-02, A-08) y la parte semántica. LowCrime (llega más tarde) toma el resto de la UI (A-03..A-07, A-09, A-10), la evaluación (B-08, B-12), el despliegue (A-06) y el rol de editor independiente (H-08, B-09). El benchmark de modelos (B-10) lo hace quien tenga la RTX 4060.
+- **Decisión:** frictionspp-svg (empieza ya) toma los datos (B-01..B-07, B-11), la primera UI (A-01, A-02, A-08) y la parte semántica. LowCrime (llega más tarde) toma el resto de la UI (A-03..A-07, A-09, A-10), la evaluación (B-08, B-12), el despliegue (A-06) y el rol de editor independiente (H-08, B-09). El benchmark de modelos (B-10) lo hace frictionspp-svg, que tiene la RTX 4060.
 - **Alternativas:** el reparto original por tipo (UI frente a datos).
 - **Motivo:** el snapshot y una UI visible temprano desbloquean a todos y permiten probar antes; la llegada tardía de LowCrime es compatible con tareas que dependen de lo anterior. Además, que el editor llegue después ayuda a que elija el top 5 sin conocer el ranking.
 - **Compromiso:** frictionspp-svg tiene más carga; `app/Home.py` es suyo y LowCrime aporta componentes. · **Fecha:** 2026-10-06

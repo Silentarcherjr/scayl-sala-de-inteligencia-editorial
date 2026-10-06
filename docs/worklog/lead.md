@@ -7,3 +7,4 @@
 - 2026-10-06 21:40 UTC · docs · investigación del estado del arte, decisiones DL-008/009/010, tareas 10/10 añadidas
 - 2026-10-06 22:00 UTC · M0 · dependencias fijadas, ONBOARDING con prompts de Codex, AP-007 diferida
 - 2026-10-06 22:20 UTC · M0 · PR #1 mergeado; DL-011 reparto por persona; docs/agents/*.md
+- 2026-10-06 22:30 UTC · DL-006/011 · la RTX 4060 es de frictionspp-svg → B-10, máquina de demo y precálculo
