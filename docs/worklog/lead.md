@@ -14,3 +14,4 @@
 - 2026-10-07 01:30 UTC · revisión B-01 · DL-013/014/015; corrección de urgencia GDELT; GPU real = AMD RX 9060 XT
 - 2026-10-07 02:00 UTC · DL-016 · muestreo de pares de agrupación por pool (B-07/B-08)
 - 2026-10-07 02:30 UTC · DL-017 · aclaración oficial C-01 de la ventana de datos; config data_window.v1; notas para frictionspp-svg
+- 2026-10-07 03:00 UTC · C-02 · DL-018 conjunto de desarrollo; AP-010 propuesta (ACP, INEC)
