@@ -56,3 +56,10 @@ def test_pipeline_builds_bundle_and_fichas_offline(tmp_path):
     assert {f["id_caso"] for f in fichas} == {e.event_id for e in bundle.events}
     assert all(set(f) >= {"id_caso", "modalidad", "ids_fuente", "afirmaciones", "citas", "puntaje", "componentes",
                           "estado_evidencia", "borrador", "estado_revision"} for f in fichas)
+
+
+def test_default_cutoff_follows_organizer_clarification():
+    from datetime import UTC, datetime
+
+    from scayl.pipeline import data_window_cutoff
+    assert data_window_cutoff() == datetime(2026, 10, 1, tzinfo=UTC)

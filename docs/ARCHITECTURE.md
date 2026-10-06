@@ -91,7 +91,7 @@ Fixture para desarrollo de UI: `tests/fixtures/ui_bundle.example.json` (generado
 - Fechas: parseo ISO 8601; si falla → `None` + `quality_flags += ["fecha_invalida:<campo>"]`. **No** se descarta la fila.
 - Campos obligatorios (`id_noticia`, `titulo`) ausentes → fila a `excluded.jsonl` con motivo.
 - URL inválida → `url=None` + flag.
-- Fuera de [2024-01-01, 2025-10-01) por `fecha_publicacion` → excluida con motivo `fuera_de_intervalo`.
+- Fuera de la ventana de noticias **[2025-10-02, 2026-10-01)** (`scayl/config/data_window.v1.yaml`, aclaración oficial C-01) por `fecha_publicacion` → excluida con motivo `fuera_de_intervalo`. El corte del snapshot es 2026-10-01.
   Si `fecha_publicacion` es nula, se usa `fecha_deteccion` y se marca.
 - Duplicado exacto por URL normalizada → se conserva el primero y se registra.
 - `quality_report.json`: totales, válidos, excluidos por motivo y nulos por campo.
