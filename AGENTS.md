@@ -19,6 +19,21 @@ Antes de tocar código lee: `docs/ARCHITECTURE.md` (canónico), tu tarea en `doc
 - No edites `docs/TASKS.md`, `01_EXECUTION_BOARD.md` ni `02_DECISION_LOG.md`: los actualiza el Lead.
   Registra tu avance en `docs/worklog/<tu-worker>.md` (solo agregar, con hora UTC).
 
+## 2b. Protocolo de relevo (obligatorio)
+Las sesiones de los agentes tienen límite. Para que otro agente pueda continuar sin perder trabajo:
+
+1. **Cuándo detenerse:**
+   - **Automático:** cuando te quede **~15% o menos** de la sesión (contexto, tokens o tiempo, lo que primero se agote). No empieces otra subtarea: pasa directamente al relevo.
+   - **A pedido del usuario:** si tu humano escribe **"RELEVO"** (o "para y haz el resumen"), detente en ese momento, aunque estés a mitad de algo.
+   - **Si no puedes ver tus límites:** no intentes adivinarlos. Avísale una vez a tu humano al empezar ("no veo mi límite de sesión; escribe RELEVO cuando quieras que me detenga") y además haz un relevo preventivo **cada vez que cierres una tarea** del orden de trabajo.
+2. **Qué hacer al detenerte** (en este orden; reserva el margen para esto):
+   1. Deja el código en un estado coherente. Si hay cambios a medias, haz commit de todas formas con el prefijo `WIP:` en tu rama (nunca en `main`). Las pruebas pueden fallar en un WIP, pero indícalo.
+   2. Escribe `docs/handoff/<tu-usuario>.md` usando `docs/handoff/TEMPLATE.md`. Sobrescribe el anterior; el historial queda en git.
+   3. Agrega una línea en tu `docs/worklog/` ("relevo: ver docs/handoff/<usuario>.md").
+   4. `git push` de tu rama.
+   5. Dile a tu humano en una línea: rama, último commit y siguiente paso.
+3. **Al empezar una sesión nueva:** si existe `docs/handoff/<tu-usuario>.md` (en tu rama o en `main`), léelo **primero** y continúa desde "Siguiente paso concreto". Comprueba con `git log` y `pytest` que el estado coincide con lo que dice el relevo.
+
 ## 3. Datos
 - UTF-8, IDs estables, ISO 8601 en **UTC** en datos; la UI muestra **hora de Panamá**.
 - **Nunca** reemplaces un nulo por 0 o por "". Conserva las unidades originales.

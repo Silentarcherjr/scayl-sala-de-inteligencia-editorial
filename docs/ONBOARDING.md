@@ -25,6 +25,7 @@ Sin `make` (Windows): `python scripts/make_ui_fixture.py` y `python -m pytest -q
 - Las dependencias de `requirements*.txt` ya están aprobadas. Una nueva requiere propuesta.
 - `pytest` en verde antes de cada PR. Sin secretos. Sin métricas inventadas.
 - Usaste IA (Codex/Astra) → agrega una fila en `docs/AI_TOOLS_USED.md` (entregable oficial).
+- **Relevo:** cuando el agente se acerque al límite de su sesión (~15%) o cuando le escribas **"RELEVO"**, se detiene y deja `docs/handoff/<usuario>.md` para que otro agente continúe (AGENTS.md §2b). Si cambias de agente o de sesión, el nuevo empieza leyendo ese archivo.
 - Cada vez que una prueba falle de verdad y la corrijas, anótalo en `docs/notion_mirror/06_TESTS_AND_METRICS.md` → "Registro de pruebas fallidas" (el jurado lo pedirá).
 
 ## 3. Ritmo y puntos de sincronización
@@ -48,8 +49,9 @@ Cada persona le pega a su agente (Codex/Astra) el mensaje corto de abajo; las in
 Mensaje para pegar (cambia el nombre de usuario):
 ```
 Estás en el repo SCAYL. Lee y sigue al pie de la letra docs/agents/<usuario>.md, que contiene tu rol, el orden
-de tareas y las reglas (AGENTS.md es obligatorio). Empieza por la sección "Lee antes de escribir código"
-y luego por la primera tarea de tu lista. Trabaja en ramas propias y abre PR hacia main; no mergees tú.
+de tareas y las reglas (AGENTS.md es obligatorio). Si existe docs/handoff/<usuario>.md, léelo primero y continúa
+desde ahí. Trabaja en ramas propias y abre PR hacia main; no mergees tú. Cuando te quede ~15% de sesión, o si
+escribo RELEVO, detente y deja el relevo según AGENTS.md §2b.
 ```
 
 ## 6. Tareas humanas (sin Codex)

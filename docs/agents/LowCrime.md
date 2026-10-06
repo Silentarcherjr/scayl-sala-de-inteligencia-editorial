@@ -9,6 +9,10 @@ Llegas cuando el proyecto ya avanzó: **completas la interfaz, la evaluación me
 Tu humano además es el **"editor" independiente**: su juicio sirve para medir el sistema, así que no debe ver
 el ranking antes de entregar su top 5.
 
+## ⚠️ Relevo de sesión (lee esto primero)
+- **Al empezar:** si existe `docs/handoff/LowCrime.md`, léelo antes que cualquier otra cosa y continúa desde su "Siguiente paso concreto".
+- **Al acercarte al límite (~15% restante)**, o si tu humano escribe **"RELEVO"**: detente, haz commit (`WIP:` si está a medias), escribe `docs/handoff/LowCrime.md` con la plantilla `docs/handoff/TEMPLATE.md`, haz push y avísale a tu humano. Si no puedes ver tu límite, díselo a tu humano al empezar y haz un relevo preventivo al terminar cada tarea. Detalle en `AGENTS.md` §2b.
+
 ## Primero: ponte al día (unos 10 min)
 1. `git pull`; lee `AGENTS.md`, `docs/MASTER_PLAN.md` y `docs/worklog/*.md` (qué hicieron los demás).
 2. `docs/ARCHITECTURE.md` §3, §5.2 (validadores) y §6 (interfaces); `scayl/contracts.py`; `tests/fixtures/ui_bundle.example.json`.

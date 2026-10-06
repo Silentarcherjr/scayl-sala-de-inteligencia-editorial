@@ -36,6 +36,9 @@ Si el plan contradice un requisito oficial, gana lo oficial y se documenta en `d
 - Sin red hacia las fuentes de datos ni HuggingFace/Ollama; con acceso a PyPI y npm. Sin GPU.
 - Por eso: el código del Lead debe ser testeable con el fixture, TF-IDF y el modo `template`. Las pruebas que requieren modelo usan `@pytest.mark.needs_model`.
 
+## Relevo
+Aplica `AGENTS.md` §2b también al Lead: relevo en `docs/handoff/lead.md`. Al revisar los PR de los workers, lee primero su `docs/handoff/<usuario>.md` si existe.
+
 ## Flujo de sesión
 1. `git pull`; leer `docs/TASKS.md`, `docs/AGENT_PROPOSALS.md` y `docs/worklog/*`.
 2. Decidir propuestas abiertas → `02_DECISION_LOG.md`.
