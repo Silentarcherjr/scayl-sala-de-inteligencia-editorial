@@ -8,23 +8,20 @@ from __future__ import annotations
 
 import json
 import os
-from datetime import UTC, datetime
 from functools import lru_cache
 from pathlib import Path
 from typing import Literal
 
 from scayl.contracts import (
     Event,
-    GenerationMeta,
     QAAnswer,
     ReviewRecord,
     ReviewState,
     StoryPackage,
     UIBundle,
-    ValidationIssue,
-    ValidationReport,
 )
-from scayl.gen.template import build_template_package
+from scayl.gen import qa, studio
+from scayl.gen.llm import LLM
 from scayl.review.store import ReviewStore
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -49,6 +46,7 @@ def load_bundle() -> UIBundle:
 def reload() -> None:
     load_bundle.cache_clear()
     _store.cache_clear()
+    _retriever.cache_clear()
 
 
 @lru_cache(maxsize=1)
@@ -72,26 +70,20 @@ def get_package(event_id: str) -> StoryPackage | None:
     return next((p for p in load_bundle().packages if p.event_id == event_id), None)
 
 
-def generate_package(event_id: str, mode: Mode = "template") -> StoryPackage:
-    """'live'/'cache' arrive with L-08/L-10; until then they fall back to template (reported in meta)."""
-    pkg = build_template_package(get_event(event_id))
-    if mode != "template":
-        pkg.validation.issues.append(ValidationIssue(
-            code="MODE_FALLBACK", severity="warning",
-            detail=f"Modo '{mode}' aún no disponible; se usó la plantilla determinista."))
-    return pkg
+def generate_package(event_id: str, mode: Mode | None = None) -> StoryPackage:
+    """Story Studio. mode: live (Ollama), cache (precomputed), template (deterministic).
+    Default: SCAYL_LLM_MODE (cache). Any LLM problem falls back to template, reported in validation."""
+    return studio.generate(get_event(event_id), LLM(mode=mode))
 
 
-def ask(question: str, mode: Mode = "cache") -> QAAnswer:
-    """Placeholder until L-11: honest abstention, never an invented answer."""
-    return QAAnswer(
-        question=question, abstained=True,
-        abstention_reason="El módulo de consultas con evidencia (L-11) aún no está integrado.",
-        needed_information=["Recuperación de evidencia (B-06) y generación de respuestas citadas (L-11)."],
-        validation=ValidationReport(passed=True),
-        generated_by=GenerationMeta(mode="template", model=None, prompt_version=None, latency_ms=0,
-                                    tokens_in=None, tokens_out=None, created_at=datetime.now(UTC)),
-    )
+@lru_cache(maxsize=1)
+def _retriever() -> qa.Retriever:
+    return qa.Retriever(qa.build_units(load_bundle()))
+
+
+def ask(question: str, mode: Mode | None = None) -> QAAnswer:
+    """Grounded Q&A with explicit abstention (T06). Never invents a figure or a citation."""
+    return qa.answer(question, load_bundle(), LLM(mode=mode), retriever=_retriever())
 
 
 def review(event_id: str, to_state: ReviewState, reviewer: str, justification: str) -> ReviewRecord:

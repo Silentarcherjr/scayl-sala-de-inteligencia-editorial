@@ -99,3 +99,10 @@ def test_date_parts_only_support_numbers_used_as_dates(events):
     assert check_sentence(S("Murieron 12 personas.", ids=["CLM-0001-001"]), _ctx(e), "t") is None
     assert check_sentence(S("El 12 de septiembre de 2025 USGS registró magnitud 4.6.", ids=["CLM-0001-001"]),
                           _ctx(e), "t")
+
+
+def test_absence_phrasings_are_recognised(events):
+    e = events["EVT-0001"]
+    for text in ["Sin reportes verificados de daños.", "No se reportan daños en el corpus.",
+                 "Sin información confirmada sobre daños."]:
+        assert check_sentence(S(text, ids=["CLM-0001-002"]), _ctx(e), "t"), text

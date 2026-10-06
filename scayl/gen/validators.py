@@ -33,13 +33,23 @@ _ATTRIBUTION = re.compile(
     r"publicó|publicaron|asegura|aseguró|informa|informó)\b",
     re.IGNORECASE,
 )
-_ABSENCE = re.compile(r"\b(no hay|no existen?|sin datos|no se (ha|han)|no consta|no se dispone|no contiene)\b", re.IGNORECASE)
+_ABSENCE = re.compile(
+    r"\b(no hay|no existen?|no se (ha|han)|no consta|no se dispone|no contiene|no se reporta[n]?|"
+    r"sin (datos|reportes?|registros?|evidencia|informaci[oó]n|confirmaci[oó]n))\b",
+    re.IGNORECASE,
+)
 _PRESENT = re.compile(r"\b(actual|actualmente|hoy|este año|en la actualidad|ahora mismo|vigente)\b", re.IGNORECASE)
 _INVENTION = re.compile(
     r"(entrevist|en exclusiva|declaró a tvn|dijo a tvn|imágenes exclusivas|video exclusivo|fotograf[ií]as? de)",
     re.IGNORECASE,
 )
 _QUOTE = re.compile(r"[\"“«]([^\"”»]+)[\"”»]")
+
+
+def _injection_echo(text: str) -> bool:
+    from scayl.gen.guard import output_obeys_injection
+
+    return output_obeys_injection(text)
 
 
 def words(text: str) -> int:
@@ -141,6 +151,11 @@ def check_sentence(s: TaggedSentence, ctx: _Ctx, location: str) -> TaggedSentenc
         return None
     if s.tag in (ClaimType.HECHO, ClaimType.DECLARACION) and not cited:
         ctx.add("UNCITED_FACT", "error", f"Oración {s.tag.value} sin afirmación citada: «{s.text}»", location)
+        return None
+
+    if _injection_echo(s.text):
+        ctx.add("INJECTION_ECHO", "error", f"La salida reproduce/obedece una instrucción de una fuente: «{s.text}»",
+                location)
         return None
 
     if _INVENTION.search(s.text) or any(words(q) >= 3 for q in _QUOTE.findall(s.text)):

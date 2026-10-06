@@ -1,5 +1,5 @@
 {
-  "contract_version": "0.1.0",
+  "contract_version": "0.2.0",
   "snapshot_version": "fixture-synthetic-0",
   "snapshot_cutoff_utc": "2025-10-01T00:00:00Z",
   "signals_total": 6,
@@ -138,7 +138,8 @@
         ]
       },
       "text_scope_note": "Basado únicamente en titular/metadatos.",
-      "synthetic": true
+      "synthetic": true,
+      "security_flags": []
     },
     {
       "event_id": "EVT-0002",
@@ -255,7 +256,8 @@
       "recommended_action": "Requiere verificación: no publicar ninguna cifra hasta confirmar con INEC.",
       "gap": null,
       "text_scope_note": "Basado únicamente en titular/metadatos.",
-      "synthetic": true
+      "synthetic": true,
+      "security_flags": []
     },
     {
       "event_id": "EVT-0003",
@@ -338,7 +340,8 @@
       "recommended_action": "Investigar: contactar a la ACP. Prioridad alta NO habilita publicación.",
       "gap": null,
       "text_scope_note": "Basado únicamente en titular/metadatos.",
-      "synthetic": true
+      "synthetic": true,
+      "security_flags": []
     }
   ],
   "packages": [
@@ -416,5 +419,8 @@
       }
     }
   ],
+  "news": [],
+  "indicators": [],
+  "seismic": [],
   "reviews": []
 }

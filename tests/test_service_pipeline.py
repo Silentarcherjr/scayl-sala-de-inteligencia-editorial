@@ -34,7 +34,7 @@ def test_service_over_fixture_end_to_end(svc):
     pkg = svc.generate_package(e.event_id, mode="template")
     assert pkg.generated_by.mode == "template"
     live = svc.generate_package(e.event_id, mode="live")
-    assert any(i.code == "MODE_FALLBACK" for i in live.validation.issues)
+    assert any(i.code == "LLM_FALLBACK" for i in live.validation.issues)  # no Ollama offline
     svc.review(e.event_id, ReviewState.EN_REVISION, "editor-demo", "Revisar")
     assert svc.current_state(e.event_id) == ReviewState.EN_REVISION
     assert svc.trust_lab()["status"] == "no medido"
