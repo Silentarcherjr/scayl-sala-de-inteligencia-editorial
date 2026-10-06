@@ -6,7 +6,7 @@
 | ID | Tarea | Responsable | Estado | Inicio (UTC) | Actualizado (UTC) | Commit/PR | Resultado |
 |---|---|---|---|---|---|---|---|
 | L-01 | Contratos de datos + fixture de UI | Lead (H1+Claude) | DONE | 2026-10-06 19:45 | 2026-10-06 20:30 | rama claude/fervent-babbage-q9fg7h | `scayl/contracts.py`, fixture sintético, 3 pruebas en verde |
-| L-02 | Docs de gobernanza + espejo Notion | Lead | DONE | 2026-10-06 19:40 | 2026-10-06 20:45 | rama claude/fervent-babbage-q9fg7h | PLAN_REVIEW, ARCHITECTURE, MASTER_PLAN, TASKS, AGENTS, CLAUDE, espejo |
+| L-02 | Docs de gobernanza + espejo Notion + onboarding | Lead | DONE | 2026-10-06 19:40 | 2026-10-06 22:00 | rama claude/fervent-babbage-q9fg7h | PLAN_REVIEW, ARCHITECTURE, MASTER_PLAN, TASKS, AGENTS, CLAUDE, espejo |
 | H-01 | Preparar el espacio Notion para migrar | H1 | TODO | — | — | — | — |
 | B-01 | Snapshot propio `data/raw/v1` según el PDF (DL-008) | Worker B (H3) | TODO | — | — | — | — |
 | B-10 | Benchmark de modelos locales | Worker B (H3) | TODO | — | — | — | — |
@@ -20,3 +20,4 @@
 - **2026-10-06 19:40 UTC** — Lectura de las especificaciones oficiales; inspección del repo (vacío); prueba de acceso a las fuentes (bloqueadas en el entorno cloud).
 - **2026-10-06 20:45 UTC** — Revisión crítica del plan, contratos y tareas de los workers publicados (M0 parcial).
 - **2026-10-06 21:40 UTC** — El equipo aprueba DL-008 (snapshot propio), DL-009 (ideas 10/10) y AP-001. Investigación de mercado y modelos (PLAN_REVIEW §10). PR #1 abierto para mergear M0.
+- **2026-10-06 22:00 UTC** — AP-007 (Claude en la nube) diferida: primero se mide el modelo local. Dependencias fijadas y verificadas en un venv limpio. `docs/ONBOARDING.md` con prompts para Worker A/B. M0 listo para mergear.

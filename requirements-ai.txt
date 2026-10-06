@@ -1,0 +1,5 @@
+# Optional local AI (embeddings + Ollama client). Not needed for the hosted demo or CI.
+# Install torch FIRST matching your GPU/CUDA (see README "IA local"), then: pip install -r requirements-ai.txt
+-r requirements.txt
+sentence-transformers==6.1.0
+ollama==0.6.3

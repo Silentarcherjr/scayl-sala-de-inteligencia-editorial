@@ -19,6 +19,9 @@ para **revisión humana**. SCAYL no decide qué es verdad ni qué se publica.
 | `docs/notion_mirror/` | Espejo temporal de las páginas obligatorias de Notion |
 | `docs/AI_TOOLS_USED.md` | Bitácora de herramientas IA (entregable PDF) |
 
+## Para el equipo
+Empieza por **`docs/ONBOARDING.md`** (configuración del entorno + prompts listos para Codex).
+
 ## Instalación y pruebas (estado actual)
 ```bash
 python -m venv .venv && source .venv/bin/activate
@@ -32,6 +35,9 @@ make test
 cp .env.example .env
 make demo      # build del snapshot + streamlit; funciona sin internet
 ```
+
+## IA local (opcional)
+Ollama + `pip install -r requirements-ai.txt` (instala antes torch con CUDA desde pytorch.org). Ver `docs/ONBOARDING.md` §1.
 
 ## Datos, modelos y licencias
 Ver `docs/notion_mirror/03_DATA_CATALOG.md` y `docs/ARCHITECTURE.md` §5. Inferencia 100% local (Ollama); costo de API $0.

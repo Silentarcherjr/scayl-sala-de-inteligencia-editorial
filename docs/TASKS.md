@@ -66,7 +66,7 @@ Cada tarea define: objetivo · archivos permitidos · entradas · salidas · int
 
 ### A-01 · Esqueleto Streamlit + FixtureService
 - **Objetivo:** app navegable de 4 páginas que lee el fixture.
-- **Archivos permitidos:** `app/**`, `tests/ui/**`, `requirements.txt` (solo agregar `streamlit` y `pandas` fijados; avisar en el PR).
+- **Archivos permitidos:** `app/**`, `tests/ui/**`, (las dependencias necesarias ya están fijadas en `requirements.txt`).
 - **Entradas:** `tests/fixtures/ui_bundle.example.json` (modelo `UIBundle`).
 - **Salidas:** `app/Home.py` (Sala de Situación), `app/pages/1_Ficha_de_Caso.py`, `2_Consultas.py`, `3_Trust_Lab.py`, `app/service_client.py`.
 - **Interfaz:** `app/service_client.py` expone las mismas funciones que `scayl/service.py` (ARCHITECTURE §6). Selección por `SCAYL_UI_SOURCE=fixture|service`. La UI **solo** importa `scayl.contracts` y `service_client`.
