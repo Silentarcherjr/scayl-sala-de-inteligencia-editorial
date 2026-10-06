@@ -91,3 +91,10 @@
 - **Decisión:** GDELT solo aporta la detección (seendate); la publicación queda **nula**, como manda el contrato. Para la urgencia (U), y solo si no existe ninguna fecha de publicación en el evento, se usa la detección más reciente como **aproximación explícita** ("Fecha de publicación desconocida; aproximación por detección") en la justificación del componente. Nunca se muestra ni se guarda como fecha de publicación.
 - **Motivo:** sin esto, todos los eventos solo-GDELT tenían U=0 y el ranking quedaba distorsionado (hallazgo al revisar el snapshot de frictionspp-svg).
 - **Fecha:** 2026-10-07
+
+### DL-016 · Evaluación de la agrupación por pool de pares candidatos
+- **Decisión:** las etiquetas de agrupación (B-07) se toman sobre un pool de pares: todos los pares que proponen el baseline o la IA, más pares difíciles (mismo día y palabra clave, no agrupados) y un control al azar. El etiquetado es ciego al método. Se reportan precisión, **recall relativo** al pool y F1 por método.
+- **Alternativas:** muestra aleatoria de noticias (casi no produce pares del mismo evento: métrica vacía); etiquetar todos los pares (O(n²), inviable).
+- **Motivo:** es la práctica estándar de evaluación por *pooling*. Da una comparación baseline frente a IA con datos reales y declara sus límites con honestidad.
+- **Compromiso:** el recall es relativo, no absoluto; se declara así en el Trust Lab.
+- **Fecha:** 2026-10-07
