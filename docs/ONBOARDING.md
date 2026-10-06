@@ -15,7 +15,7 @@ cp .env.example .env # nunca subas .env
 Sin `make` (Windows): `python scripts/make_ui_fixture.py` y `python -m pytest -q`.
 
 ### IA local (solo para la máquina con GPU; necesario para B-10 y la demo)
-1. Instala Ollama (https://ollama.com) y descarga los candidatos: `ollama pull qwen3.5:9b`, `ollama pull qwen3:8b` (4060) o `ollama pull qwen3:4b` (3050). Si un tag no existe, anota el que uses.
+1. Instala Ollama (https://ollama.com) y descarga los candidatos: `ollama pull qwen3.5:9b`, `ollama pull qwen3:8b` (GPU de 8 GB) o `ollama pull qwen3:4b` (3050). Si un tag no existe, anota el que uses.
 2. Instala torch con CUDA según https://pytorch.org (elige tu versión de CUDA) y luego `pip install -r requirements-ai.txt`.
 
 ## 2. Reglas en 60 segundos (detalle en `AGENTS.md`)

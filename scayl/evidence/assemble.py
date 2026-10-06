@@ -139,6 +139,7 @@ def build_event(
         mentions_panama=mentions_panama(items), is_tvn=any(is_tvn(i) for i in items), topic=topic,
         topic_confidence=topic_confidence, has_official_evidence=bool(official),
         latest_original_publication=max(pubs) if pubs else None, cutoff=cutoff,
+        latest_detection=max(dets) if dets else None,
         max_prior_similarity=max_prior_similarity, max_possible_independent=dna.max_possible_independent,
         confirmed_independent=dna.confirmed_independent))
     status, reason = evidence_status(claims, conflicts, official, dna)

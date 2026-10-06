@@ -30,8 +30,8 @@
 | A-04 | Consultas (Q&A) | **W** LowCrime | P0 | M2 | TODO | A-01 |
 | A-05 | Trust Lab (vista) | **W** LowCrime | P1 | M3 | TODO | B-08 |
 | A-06 | Despliegue del enlace en modo `cache` | **W** LowCrime | P0 | M3 | TODO | AP-001, L-07 |
-| B-01 | Construir el snapshot propio según el PDF §6–7 (fetchers) → `data/raw/v1` | **F** frictionspp-svg | P0 | M0 | TODO | — |
-| B-02 | `ingest/manifest.py` (SHA-256, conteos, transformaciones) + diccionario | **F** frictionspp-svg | P0 | M0 | TODO | B-01 |
+| B-01 | Construir el snapshot propio según el PDF §6–7 (fetchers) → `data/raw/v1` | **F** frictionspp-svg | P0 | M0 | DOING (fetchers listos; falta noticias.csv/manifest) | — |
+| B-02 | `ingest/manifest.py` (SHA-256, conteos, transformaciones) + diccionario | **F** frictionspp-svg | P0 | M0 | DOING (fetchers listos; falta noticias.csv/manifest) | B-01 |
 | B-03 | `ingest/validate.py` + normalización → `data/processed` + `quality_report` (T01) | **F** frictionspp-svg | P0 | M1 | TODO | B-01 |
 | B-04 | Casos sintéticos T01/T03/T05/T07 en `data/synthetic/` | **F** frictionspp-svg | P0 | M1 | TODO | L-01 |
 | B-05 | `intel/embed.py` + `topics.py` + `cluster.py` (baseline + IA) | **F** frictionspp-svg | P0 | M1–M2 | TODO | B-03 |
@@ -39,7 +39,7 @@
 | B-07 | Etiquetas humanas: temas (≥100), pares de agrupación, top 5 ciego, benchmark dev (40) | F (etiquetas) + W (top 5 ciego) | P0 | M2 | TODO | B-03 |
 | B-08 | `eval/`: métricas, benchmark, latencia → `eval/results/latest.json` | **W** LowCrime | P0/P1 | M3 | TODO | B-05, L-10, L-11 |
 | B-09 | Revisión humana de ≥30 afirmaciones (validez de sustento) | W (editor) | P0 | M3 | TODO | L-10 |
-| B-10 | Benchmark de modelos locales (embeddings + LLM) en hardware declarado | **F** frictionspp-svg (RTX 4060) | P0 | M1 | TODO | — |
+| B-10 | Benchmark de modelos locales (embeddings + LLM) en hardware declarado | **F** frictionspp-svg (AMD Radeon RX 9060 XT 8 GB, Vulkan) | P0 | M1 | TODO | — |
 | H-01 | Preparar el espacio Notion (estructura de §5) para migrar en cuanto haya licencia | H1 | P0 | M3 | TODO | — |
 | H-02 | Bitácora `docs/AI_TOOLS_USED.md` → PDF | Todos | P0 | M4 | DOING | — |
 | H-03 | Publicaciones en redes (@hackiathon @viamatica @adenbs) | H | P0 | M1–M4 | TODO | — |
@@ -108,7 +108,7 @@ Cada tarea define: objetivo · archivos permitidos · entradas · salidas · int
 - **Noticias, estrategia del intervalo (DL-008), con un bloque de tiempo de 2 h:**
   1. Intervalo oficial: 2025-09-01T00:00:00Z → 2025-10-01T00:00:00Z (ampliable a 90 días hacia atrás). **GDELT DOC 2.0** `mode=ArtList&format=json&maxrecords=250&STARTDATETIME=YYYYMMDDHHMMSS&ENDDATETIME=...` (la API busca desde 2017), con consultas "Panama", "Panamá" + logística/Canal, turismo, economía y eventos naturales, **partidas por día** y deduplicadas por URL. **TVN:** la misma API con `domain:tvn-2.com` (`origen=tvn_rss` no aplica → `origen=gdelt`, `medio=TVN`, documentado). El RSS actual de TVN se guarda aparte solo como evidencia de la fuente (no entra al intervalo). Si GDELT falla o es inestable, plan de respaldo: archivos GKG 2.1 (`<PAGE_TITLE>`). Bloque de tiempo: 2 h.
   2. Si no se alcanzan ≥100 registros (≥20 TVN) en el intervalo: usar los últimos 30–90 días hasta la fecha de extracción y documentarlo como **desviación** en el catálogo y el manifest (`cobertura_efectiva`, motivo).
-  - WB: 6 países (PAN, CRI, COL, DOM, MEX, GTM) × 6 indicadores × 2010–2024; completar la cuadrícula de 1.350 filas con `valor` nulo.
+  - WB: 6 países (PAN, CRI, COL, DOM, MEX, GTM) × 6 indicadores × 2010–2024; completar la cuadrícula de **540** filas (6×6×15; ver DL-013) con `valor` nulo.
   - USGS: 2024-01-01..2024-12-31, lat 5–12, lon −86..−76, M≥3, todos los eventos.
   - GDELT: consultas "Panama" + logística/turismo/economía/eventos naturales, partidas por fecha, deduplicadas por URL; ≤250 por consulta.
   - TVN RSS: lo disponible; documentar la cobertura real y la desviación del intervalo oficial.
@@ -144,7 +144,7 @@ Cada tarea define: objetivo · archivos permitidos · entradas · salidas · int
 - Comando: `python -m scayl.eval.run --snapshot v1`.
 
 ### B-10 · Benchmark de modelos locales
-- Medir en el hardware real (RTX 4060 8 GB y RTX 3050): embeddings `BAAI/bge-m3` vs `intfloat/multilingual-e5-base` vs `Qwen/Qwen3-Embedding-0.6B` (tiempo + macro-F1 de temas + F1 de agrupación). LLM: en la 4060 `qwen3.5:9b` vs `qwen3:8b`; en la 3050 `qwen3:4b` vs `gemma4` E4B (verificar los tags exactos en Ollama). Contexto 4096, thinking desactivado y `format` JSON. Medir tokens/s, latencia del paquete y de Q&A (mediana y p95, n≥10), tasa de JSON válido y VRAM. Registrar los resultados en `02_DECISION_LOG.md` (DL-006) mediante PR.
+- Medir en el hardware real (AMD Radeon RX 9060 XT 8 GB, Vulkan; y la RTX 3050 si se usa): embeddings `BAAI/bge-m3` vs `intfloat/multilingual-e5-base` vs `Qwen/Qwen3-Embedding-0.6B` (tiempo + macro-F1 de temas + F1 de agrupación). LLM: en la 4060 `qwen3.5:9b` vs `qwen3:8b`; en la 3050 `qwen3:4b` vs `gemma4` E4B (verificar los tags exactos en Ollama). Contexto 4096, thinking desactivado y `format` JSON. Medir tokens/s, latencia del paquete y de Q&A (mediana y p95, n≥10), tasa de JSON válido y VRAM. Registrar los resultados en `02_DECISION_LOG.md` (DL-006) mediante PR.
 
 ### Contratos de las tareas 10/10 (resumen)
 - **L-15 / A-10 Simulador de pesos.** `scayl.evidence.scoring.rescore(events, weights: dict[str,int]) -> list[Event]`; los pesos deben sumar 100; `rules_version = "scoring-v1+custom:<sha8>"`. La UI muestra el ranking v1 junto al nuevo, con flechas de cambio, y exige justificación; la justificación se guarda en `data/state/weight_changes.jsonl` (y en el outbox de Notion). Prueba: con los pesos oficiales se reproduce exactamente el ranking v1.

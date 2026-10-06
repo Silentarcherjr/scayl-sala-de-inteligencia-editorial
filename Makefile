@@ -14,7 +14,7 @@ demo:
 	python -m scayl.pipeline build --snapshot $${SCAYL_SNAPSHOT_DIR:-data/raw/v1}
 	streamlit run app/Home.py
 
-# --- Demo machine (RTX 4060, Ollama running) ---
+# --- Demo machine (frictionspp-svg: AMD RX 9060 XT 8 GB / Vulkan, Ollama running) ---
 ping:            ## warm-up + latency of the local model
 	python -m scayl.gen.llm ping
 

@@ -56,6 +56,8 @@ pruebas de contrato, el esqueleto de directorios y toda la documentación de pla
 | D16 | Ahorro de tiempo | Implícito en el pitch | **[OFICIAL §9.1]** Solo con una tarea equivalente manual vs asistida y N declarado | Mini-estudio opcional (P1); si no se hace, **no se afirma** ahorro. |
 | D17 | Publicación en redes | — | **[OFICIAL Bases]** Repostear y etiquetar @hackiathon @viamatica @adenbs | Tarea no técnica H-03. |
 
+| D18 | Cuadrícula World Bank | 1.350 filas | **[OFICIAL §6]** "6 países × 6 indicadores × 2010–2024 = 1.350 combinaciones", pero 6×6×15 = **540** (inconsistencia interna del PDF) | Se respetan las enumeraciones explícitas (países, indicadores y años): 540 filas con nulos explícitos (DL-013). |
+
 **Sobre las fechas:** el documento TVN es el más reciente y manda. Fija el intervalo de datos y deja la
 fecha del evento "por confirmar". Las Bases indican recepción el 6 de octubre, entrega el 8 de octubre a
 las 23:59 y Pitch Day el 16 de octubre. Planificamos en bloques D1/D2/D3, como sugiere el doc TVN, y usamos
@@ -255,7 +257,7 @@ Motivo: el reto pide literalmente "abrir una ficha"; el jurado navega menos y el
 |---|---|---|
 | 1 | Intervalo de datos | DL-008: snapshot propio. Noticias de septiembre de 2025 vía GDELT DOC con `STARTDATETIME`/`ENDDATETIME`; TVN vía `domain:tvn-2.com`. |
 | 2 | Benchmark | Propio: 60 consultas con la proporción oficial (40 dev + 20 reservadas). |
-| 3 | Hardware | RTX 4060 (8 GB) = máquina de demo y de precálculo; RTX 3050 = desarrollo con modelo pequeño; CPU = modo caché/plantilla (DL-006). |
+| 3 | Hardware | GPU de frictionspp-svg (AMD Radeon RX 9060 XT 8 GB, Vulkan; se creía RTX 4060) = máquina de demo y de precálculo; RTX 3050 = desarrollo con modelo pequeño; CPU = modo caché/plantilla (DL-006). |
 | 4 | "Editor" independiente | **Humano 2**: elige el top 5 a ciegas apenas se congela el snapshot (antes de que exista ranking) y revisa ≥30 afirmaciones. Humano 3 etiqueta temas y agrupación. Humano 1 + Lead ajustan pesos. Nadie evalúa lo que ajustó (DL-010). |
 | 5 | Enlace desplegado | AP-001 aceptada: Hugging Face Space con contraseña compartida en el correo de entrega; solo titular + URL. |
 | 6 | Descripciones RSS | Solo en local; en el enlace público solo titular + URL. |
