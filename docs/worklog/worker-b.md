@@ -14,3 +14,5 @@
 
 2026-10-06 21:43 UTC · B-01/B-02 · Descargas de los tres embeddings completadas según `models/embeddings-download.log`. Preparación del commit con datos estructurados y recibos: los ZIP GKG (~910 MB) y el RSS XML con descripciones permanecen solo locales; no se publican. `acquisition_inventory.json` inventaría sus SHA-256 y explicita estado parcial. Se añade `data/raw/.gitattributes` para impedir cambios de bytes por autocrlf. El PR debe ser borrador hasta completar el snapshot, empaquetado y decisiones AP-008/AP-009; no cierra B-01/B-02 todavía.
 
+2026-10-06 21:56 UTC · Publicación y relevo · Por instrucción explícita del humano se mostraron status, branch -vv y log -10, y se ejecutó `git push -u origin worker-b/snapshot`: éxito, rama remota creada en eb61312. Git funciona con el remoto aunque gh no tenga sesión. Se detectó que el relevo solicitado no existía; se crea `docs/handoff/frictionspp-svg.md` con estado parcial, datos incluidos/locales, decisiones pendientes, pruebas y entorno, para subirlo en un segundo commit. Sin merge.
+
