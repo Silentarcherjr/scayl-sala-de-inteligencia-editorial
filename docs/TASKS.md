@@ -137,6 +137,13 @@ Cada tarea define: objetivo · archivos permitidos · entradas · salidas · int
 
 ### B-07 · Etiquetas humanas
 - `data/labels/topics.csv` (≥100 titulares, 2 etiquetadores si hay tiempo, registrar el acuerdo); `data/labels/cluster_pairs.csv`; `data/labels/editor_top5.json` (**elegido a ciegas, antes de ver el ranking**, con hora); `data/labels/benchmark_dev.jsonl` (40 consultas: 20 sustentadas / 7 contradicción / 7 sin respuesta / 6 adversariales; misma proporción que el oficial). Documentar el método en `06_TESTS_AND_METRICS.md`.
+- **Muestreo de pares de agrupación (DL-016), obligatorio.** Los pares al azar casi nunca son del mismo evento y dejarían la métrica vacía. Usar un *pool* de candidatos:
+  1. **Todos** los pares que agrupa el baseline (TF-IDF) **o** la IA (embeddings), hasta ~150.
+  2. ~40 pares "difíciles": mismo día ±1 y palabra clave compartida, que **ningún** método agrupó.
+  3. ~30 pares al azar como control.
+  - Columnas: `pair_id,id_a,id_b,titulo_a,titulo_b,medio_a,medio_b,fecha_a,fecha_b,mismo_evento,etiquetador,nota`. **Sin** columna de método ni de puntaje: el orden es aleatorio con semilla fija registrada, y quien etiqueta no sabe qué sistema propuso el par.
+  - El origen de cada par (baseline / IA / ambos / difícil / azar) va en un archivo separado (`cluster_pairs_origin.csv`) que el etiquetador no abre.
+  - B-08 reporta, por método: precisión (sobre los pares que propuso), **recall relativo** (sobre los positivos del pool) y F1, con n y el método declarados. Nunca se llama "recall absoluto".
 
 ### B-08 · Evaluación
 - **Salida:** `eval/results/latest.json`:
