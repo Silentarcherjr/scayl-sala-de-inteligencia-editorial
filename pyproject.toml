@@ -1,0 +1,20 @@
+[project]
+name = "scayl"
+version = "0.1.0"
+description = "SCAYL — Sala de Inteligencia Editorial (hackIAthon, reto TVN Media)"
+requires-python = ">=3.11"
+# Exact pins live in requirements.txt / requirements-ai.txt (single source for installs).
+dependencies = []
+
+[tool.setuptools.packages.find]
+include = ["scayl*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = [
+  "needs_model: requires local embedding model or Ollama (skipped in CI/cloud)",
+]
+
+[tool.ruff]
+line-length = 110

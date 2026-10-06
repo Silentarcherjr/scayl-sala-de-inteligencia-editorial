@@ -1,0 +1,5 @@
+# Worklog · lead
+
+> Solo agregar. Formato: `AAAA-MM-DD HH:MM UTC · tarea · qué se hizo · resultado/commit`.
+
+- 2026-10-06 20:50 UTC · L-01/L-02 · contratos, fixture, docs de plan y espejo Notion · rama claude/fervent-babbage-q9fg7h

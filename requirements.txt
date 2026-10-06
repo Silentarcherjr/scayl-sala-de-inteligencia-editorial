@@ -1,0 +1,3 @@
+# Core runtime (no ML): pipeline, evidence engine, UI, tests. Works offline from snapshot.
+pydantic==2.13.5
+pytest==9.1.1
