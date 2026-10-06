@@ -23,7 +23,7 @@ Camino crítico del proyecto: **datos → inteligencia semántica → primera UI
 1. **B-01 + B-02 · Snapshot** (meta: miércoles 7 a las 10:00, hora de Panamá).
    - GDELT DOC 2.0 `mode=ArtList&format=json&maxrecords=250` con `STARTDATETIME`/`ENDDATETIME` de 2025-09-01 a 2025-10-01, **un día por consulta**; consultas: Panama/Panamá y logística/Canal, turismo, economía y eventos naturales. Deduplica por URL.
    - TVN: la misma API con `domain:tvn-2.com` (≥20 registros). Guarda también el RSS actual de TVN aparte (no entra al intervalo).
-   - World Bank: PAN, CRI, COL, DOM, MEX y GTM × los 6 indicadores × 2010–2024; completa la cuadrícula de 1.350 filas con `valor` nulo.
+   - World Bank: PAN, CRI, COL, DOM, MEX y GTM × los 6 indicadores × 2010–2024; completa la cuadrícula de 540 filas (6×6×15, DL-013) con `valor` nulo.
    - USGS: 2024-01-01..2024-12-31, lat 5..12, lon −86..−76, M≥3, todos los eventos.
    - Guarda las respuestas crudas en `data/raw/v1/`, el `manifest.json` con SHA-256 y `docs/DATA_DICTIONARY.md`; actualiza tus filas de `03_DATA_CATALOG.md`.
    - Bloque de tiempo: si en 2 h no hay ≥100 noticias (≥20 TVN) en el intervalo, aplica el respaldo de DL-008 y documenta la desviación.
@@ -35,7 +35,7 @@ Camino crítico del proyecto: **datos → inteligencia semántica → primera UI
 5. **B-05 · Embeddings, temas y agrupación** (baseline TF-IDF + IA; embeddings precalculados en `embeddings.npz`) y **B-07 · etiquetas** (≥100 titulares por tema + pares de agrupación; pídeselas a tu humano y documenta el método).
 6. **B-06 · Recuperación** (BM25 + coseno, puntuación en [0,1]).
 7. **Máquina de demo (comandos listos del Lead):** `make ping` (calienta el modelo y mide latencia), `make precompute` (LLM sobre el top 15: llena `data/cache/llm/` y genera `data/processed/v1/generation_report.jsonl`). Variables en `.env`: `SCAYL_LLM_MODEL`, `OLLAMA_HOST`. Si `ping` falla, revisa que Ollama esté corriendo y que el tag del modelo exista.
-8. **B-10 · Benchmark de modelos locales.** Tu máquina (RTX 4060) es la **máquina de demo y de precálculo**. Empieza las descargas en paralelo desde el inicio (`ollama pull` de los candidatos de DL-006 y los modelos de embeddings), mientras corren los fetchers. Mide con `num_ctx=4096`, thinking desactivado y salida JSON: tokens/s, latencia (mediana y p95, n≥10), tasa de JSON válido y VRAM. Registra los resultados en tu PR para que el Lead cierre DL-006. Más adelante, el Lead te pedirá correr en esta máquina el precálculo de la caché LLM (`data/cache/llm/`).
+8. **B-10 · Benchmark de modelos locales.** Tu máquina (AMD RX 9060 XT 8 GB, Vulkan) es la **máquina de demo y de precálculo**. Empieza las descargas en paralelo desde el inicio (`ollama pull` de los candidatos de DL-006 y los modelos de embeddings), mientras corren los fetchers. Mide con `num_ctx=4096`, thinking desactivado y salida JSON: tokens/s, latencia (mediana y p95, n≥10), tasa de JSON válido y VRAM. Registra los resultados en tu PR para que el Lead cierre DL-006. Más adelante, el Lead te pedirá correr en esta máquina el precálculo de la caché LLM (`data/cache/llm/`).
 
 ## Reglas clave (el detalle está en AGENTS.md)
 - Solo tocas tus archivos permitidos. Para cambiar contratos, `scayl/config/`, dependencias o archivos de otros: primero propuesta en `docs/AGENT_PROPOSALS.md`.

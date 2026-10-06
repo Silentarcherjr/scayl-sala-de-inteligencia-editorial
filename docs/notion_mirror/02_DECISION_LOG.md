@@ -30,9 +30,9 @@
 - **Compromiso:** borradores más sobrios. · **Fecha:** 2026-10-06
 
 ### DL-006 · Modelos locales (PROVISIONAL, pendiente de B-10)
-- **Hardware del equipo:** RTX 4060 (8 GB, **frictionspp-svg**) = máquina de demo y de precálculo; RTX 3050 = desarrollo.
+- **Hardware del equipo:** **AMD Radeon RX 9060 XT 8 GB, Vulkan** (frictionspp-svg; detectada por Ollama el 2026-10-06, se creía RTX 4060) = máquina de demo y de precálculo; RTX 3050 = desarrollo.
 - **Candidatos:** embeddings `BAAI/bge-m3`, `intfloat/multilingual-e5-base` y `Qwen/Qwen3-Embedding-0.6B`. LLM en la 4060: `qwen3.5:9b` (Apache 2.0, unos 6,6 GB en Q4 según fuentes externas) frente a `qwen3:8b`. En la 3050: `qwen3:4b` frente a Gemma 4 E4B. Fallback sin GPU: caché/plantilla.
-- **Referencia externa (no medida por nosotros):** unos 25–45 tokens/s en una 4060 para modelos de 7–9B en Q4.
+- **Referencia externa (no medida por nosotros):** unos 25–45 tokens/s en una RTX 4060 para modelos de 7–9B en Q4. **No aplica directamente**: la máquina real es AMD con Vulkan, cuyo rendimiento hay que medir (B-10).
 - **Motivo:** multilingüe con buen español, licencia abierta, disponibles en Ollama/HF.
 - **Evidencia:** _pendiente de medición en el hardware del equipo. No hay cifras todavía._ · **Fecha:** 2026-10-06
 
@@ -73,3 +73,21 @@
 - **Motivo:** la abstención determinista es verificable y no depende del modelo; menos dependencias; los mismos validadores en todos los textos generados.
 - **Compromiso:** el umbral 0,6 es heurístico. B-08 debe medir la tasa de abstención correcta e incorrecta y ajustarlo con el benchmark de desarrollo, nunca con el reservado.
 - **Fecha:** 2026-10-06
+
+### DL-013 · Cuadrícula del Banco Mundial: 540 filas (resuelve AP-008)
+- **Decisión:** ACEPTADA. Se usan exactamente los 6 países, 6 indicadores y 15 años (2010–2024) que enumera el PDF, es decir 540 combinaciones con nulos explícitos.
+- **Alternativas:** inventar dimensiones para llegar a 1.350.
+- **Motivo:** el PDF es internamente inconsistente (6×6×15 = 540); entre un total y una enumeración explícita gana la enumeración, y no se inventan datos. Discrepancia D18 en PLAN_REVIEW.
+- **Fecha:** 2026-10-07 · Propuesta por frictionspp-svg.
+
+### DL-014 · Usar las 48 entradas históricas del RSS de TVN (resuelve AP-009), con condiciones
+- **Decisión:** ACEPTADA con condiciones: (1) solo entradas con `pubDate` dentro de [2024-01-01, 2025-10-01); (2) `origen=tvn_rss`, `fecha_publicacion` = pubDate original; (3) **`fecha_deteccion` = null**: el RSS no aporta una señal de detección y la descarga de 2026 queda en `fecha_extraccion`; así no se marcan falsamente como "recirculadas"; (4) `alcance_texto=titular_metadatos` (las descripciones no entran al corpus publicado); (5) el catálogo declara la cobertura real de TVN (2024-01 a 2025-09, solo 3 en septiembre de 2025) y que la fecha proviene del RSS, sin verificar contra el artículo.
+- **Alternativas:** solo septiembre de 2025 (3 registros, por debajo del mínimo oficial de 20); ventana reciente de 2026 (fuera del intervalo oficial).
+- **Motivo:** son datos reales del patrocinador, con fecha original y dentro del intervalo oficial; cumplen el mínimo de ≥20 registros de TVN sin fabricar fechas.
+- **Compromiso:** la mayoría de las noticias de TVN son antiguas respecto al corte, por lo que tendrán urgencia baja. Es lo correcto: el puntaje lo refleja con honestidad.
+- **Fecha:** 2026-10-07 · Propuesta por frictionspp-svg.
+
+### DL-015 · Urgencia de noticias GDELT sin fecha de publicación
+- **Decisión:** GDELT solo aporta la detección (seendate); la publicación queda **nula**, como manda el contrato. Para la urgencia (U), y solo si no existe ninguna fecha de publicación en el evento, se usa la detección más reciente como **aproximación explícita** ("Fecha de publicación desconocida; aproximación por detección") en la justificación del componente. Nunca se muestra ni se guarda como fecha de publicación.
+- **Motivo:** sin esto, todos los eventos solo-GDELT tenían U=0 y el ranking quedaba distorsionado (hallazgo al revisar el snapshot de frictionspp-svg).
+- **Fecha:** 2026-10-07

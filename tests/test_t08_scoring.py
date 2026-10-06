@@ -81,3 +81,16 @@ def test_rescore_custom_weights_are_versioned_and_validated(events):
     assert all(e.priority.rules_version.startswith("scoring-v1+custom:") for e in custom)
     with pytest.raises(ValueError):
         rescore(list(events.values()), {"R": 50, "I": 50, "U": 50, "N": 0, "E": 0})
+
+
+def test_gdelt_without_publication_date_uses_labelled_detection_proxy():
+    """GDELT has seendate (detection) only: urgency must not collapse to 0, and the proxy is explicit."""
+    det = CUTOFF - timedelta(hours=5)
+    p = score(_inp(latest_original_publication=None, latest_detection=det))
+    assert p.components.U > 0.8 and "detección" in p.components.rationale["U"]
+    real = score(_inp(latest_original_publication=CUTOFF - timedelta(days=30), latest_detection=det))
+    assert real.components.U < 0.01  # a real (old) publication date always wins over detection
+
+
+def test_missing_both_dates_gives_zero_urgency():
+    assert score(_inp(latest_original_publication=None, latest_detection=None)).components.U == 0.0

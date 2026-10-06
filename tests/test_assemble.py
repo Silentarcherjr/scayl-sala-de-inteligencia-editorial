@@ -74,3 +74,11 @@ def test_t08_high_priority_insufficient_evidence_recommends_investigation():
     assert e.evidence_status == EvidenceStatus.INSUFICIENTE
     assert "NO habilita publicación" in e.recommended_action
     assert len(e.gap.investigate_next) == 3
+
+
+def test_gdelt_items_without_publication_date_still_rank_by_detection():
+    det = CUTOFF - timedelta(hours=4)
+    e = build_event("EVT-0020", [news("g", "Canal de Panamá anuncia ajustes de calado", pub=None, det=det)],
+                    Topic.LOGISTICA_CANAL, 0.9, [], [], CUTOFF)
+    assert e.first_published is None and e.first_detected == det  # publication stays unknown
+    assert e.priority.components.U > 0.8 and not e.is_recirculated

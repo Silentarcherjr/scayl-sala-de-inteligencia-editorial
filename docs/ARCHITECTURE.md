@@ -181,7 +181,7 @@ def get_embedder(kind: Literal["tfidf", "st"], model: str | None) -> Embedder
 - Recuperación (Q&A): híbrida BM25 + coseno sobre unidades de evidencia (titulares, filas WB, eventos USGS).
 
 ### 5.2 Inteligencia generativa (Lead)
-- Proveedor: **Ollama local**. Candidatos (DL-006, decide B-10): RTX 4060 → `qwen3.5:9b` o `qwen3:8b`
+- Proveedor: **Ollama local**. Candidatos (DL-006, decide B-10): máquina de demo (AMD Radeon RX 9060 XT 8 GB, Vulkan) → `qwen3.5:9b` o `qwen3:8b`
   (Q4_K_M, `num_ctx=4096`); RTX 3050 → `qwen3:4b` o Gemma 4 E4B. Thinking desactivado, `temperature=0`,
   `seed=42` y `format=<JSON schema del contrato>`. Sin GPU → modo `cache`/`template`.
 - Tres llamadas, nunca libres:
@@ -259,7 +259,7 @@ abstiene honestamente hasta L-11; `generate_package(mode="live"|"cache")` cae a 
 - **Preservación de atribución:** métrica derivada del validador `STATUS_MISMATCH` (motivación: arXiv 2509.25498).
 
 ## 8. Despliegue
-- **Local (demo principal):** `make demo` en la RTX 4060, con Ollama.
+- **Local (demo principal):** `make demo` en la máquina de frictionspp-svg (AMD Radeon RX 9060 XT 8 GB, Vulkan), con Ollama.
 - **Enlace "en ejecución" (AP-001 aceptada):** la misma app en un Hugging Face Space en modo `cache`, sin
   Ollama ni torch, con `bundle.json` y caché LLM incluidos. Protegido con contraseña (Streamlit secrets) que
   se comparte en el correo de entrega. Solo titular + URL.
