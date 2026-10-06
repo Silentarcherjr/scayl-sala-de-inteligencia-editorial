@@ -1,0 +1,7 @@
+{
+  "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/IT.NET.USER.ZS?format=json&date=2010%3A2024&per_page=1000&page=1&source=2",
+  "fecha_extraccion": "2026-10-06T21:19:32.078596Z",
+  "status": 200,
+  "content_type": "application/json;charset=utf-8",
+  "sha256": "e0d043c22432a247b3ac3046b7de6c20310be79952ac4e2b9ae395f56943dcf6"
+}

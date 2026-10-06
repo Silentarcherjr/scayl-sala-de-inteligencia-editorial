@@ -1,0 +1,7 @@
+{
+  "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NE.EXP.GNFS.ZS?format=json&date=2010%3A2024&per_page=1000&page=1&source=2",
+  "fecha_extraccion": "2026-10-06T21:21:22.468695Z",
+  "status": 200,
+  "content_type": "application/json;charset=utf-8",
+  "sha256": "e76574bb0b65dbdd4ac248aaaeb968ac910878afc16f2fdf74516ff22259b428"
+}

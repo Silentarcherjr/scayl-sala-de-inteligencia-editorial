@@ -10,7 +10,14 @@
 | 2026-10-06 | Claude Code (cloud), Lead | H1 + Claude | Implementación del núcleo M1 | Puntaje, estado de evidencia, Source DNA, vínculo oficial, conflictos, validadores, plantilla, revisión, service y pipeline, con pruebas | 46 pruebas en verde; 2 fallos reales detectados por las pruebas y corregidos (ver 06) | Pendiente de revisión del equipo en el PR |
 | 2026-10-07 | Claude Code (cloud), Lead | H1 + Claude | Implementación M2 (IA generativa) | Cliente Ollama, prompts v1, Story Studio, consultas con abstención, defensa contra inyección y pruebas con un LLM simulado | 63 pruebas en verde; 2 fallos reales más detectados y corregidos | Pendiente: validación en la RTX 4060 con el modelo real |
 
+## Desarrollo · frictionspp-svg · B-01/B-02 · 2026-10-06
+
+| Fecha (UTC) | Herramienta | Quién | Propósito | Aplicación concreta | Resultado | Verificación humana |
+|---|---|---|---|---|---|---|
+| 2026-10-06 | Codex + búsqueda web de documentación pública | frictionspp-svg | Construir adquisición reproducible y controles del snapshot | Fetchers DOC/GKG, RSS, WB y USGS; conservación de bytes; manifest SHA-256; adaptador RSS local; diccionario; pruebas sin red | 76 pruebas pasan (63 previas + 13 nuevas). Extracción parcial: 300 noticias GDELT, 540 observaciones WB, 82 eventos USGS; propuestas AP-008/AP-009 abiertas | Pendiente de decisiones de alcance y revisión del Lead; snapshot no congelado |
+
 ## Herramientas de IA dentro del producto (no son de desarrollo)
+
 | Componente | Modelo | Uso | Costo |
 |---|---|---|---|
 | Embeddings | _DL-006, pendiente_ | Temas, agrupación, recuperación | $0 (local) |

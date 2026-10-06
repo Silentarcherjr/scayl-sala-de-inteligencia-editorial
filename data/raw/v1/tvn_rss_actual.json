@@ -1,0 +1,917 @@
+{
+  "fuera_del_snapshot": true,
+  "items": [
+    {
+      "titulo": "Aprehenden a Enrique Lau, exdirector de la CSS, por supuesto enriquecimiento injustificado",
+      "url": "https://www.tvn-2.com/nacionales/judicial/aprehenden-enrique-lau-exdirector-css_1_2264560.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 11:50:00 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "MOP solicita $43.1 millones para pagar compromisos y continuar obras en ejecución",
+      "url": "https://www.tvn-2.com/nacionales/mop-solicita-43-1-millones-comision-presupuesto-obras-en-ejecucion_1_2264626.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 18:57:35 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Suspenden audiencia contra Genaro López y otros miembros del Suntracs",
+      "url": "https://www.tvn-2.com/nacionales/judicial/suspenden-audiencia-genaro-lopez-miembros_1_2264607.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 17:52:35 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "PASE-U: compras con la billetera de Caja de Ahorros superan los $45 millones desde junio",
+      "url": "https://www.tvn-2.com/nacionales/paseu-compras-billetera-caja-ahorros_1_2264590.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 16:03:48 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Lionel Messi despedida| Argentina vs Benín: previa de un partido que promete quedar para la historia",
+      "url": "https://www.tvn-2.com/tvmax/futbol-internacional/lionel-messi-despedida-argentina-vs-benin-previa-partido_1_2264530.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 12:00:25 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Alcaldesa Stefany Peñalba: residentes  protestan frente al Municipio de Arraiján y exigen auditorías contra su gestión",
+      "url": "https://www.tvn-2.com/nacionales/provincias/stefany-penalba-residentes-protesta-frente-municipio-de-arraijan-piden-auditoria_1_2264603.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 18:24:07 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Nerys Pérez responde con humor a los comentarios sobre el vestido que usó en un baile",
+      "url": "https://www.tvn-2.com/entretenimiento/nerys-perez-responde-humor-comentarios-vestido-baile-vladimir-atencio_1_2264599.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 18:15:47 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Contenido Exclusivo: El metro por la Tumba Muerto",
+      "url": "https://www.tvn-2.com/contenido-exclusivo/contenido-exclusivo-metro-tumba-muerto-transporte-panama_1_2264473.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 00:47:04 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "MLB Playoffs 2026 resultado| Yankees están contra la pared con nueva derrota ante Rays. José 'Chema' Caballero se estrena en postemporada",
+      "url": "https://www.tvn-2.com/tvmax/beisbol/mlb/yankees-vs-rays-en-vivo-mlb-playoffs-2026-resultado-partido-divisional-series-beisbol-grandes-ligas_1_2264504.html",
+      "fecha_publicacion_original": "Mon, 05 Oct 2026 23:55:06 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Tres hombres asaltan casino y despojan a clientes de sus pertenencias en San Miguelito",
+      "url": "https://www.tvn-2.com/nacionales/tres-hombres-asaltan-casino-despojan_1_2264464.html",
+      "fecha_publicacion_original": "Mon, 05 Oct 2026 22:12:26 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Príncipes de Gales: los nombres que usan en el colegio sus hijos",
+      "url": "https://www.tvn-2.com/entretenimiento/principe-william-kate-middleton-nombres-usan-colegio-hijos_1_2264534.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 21:00:19 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Panamá mantiene vigilancia epidemiológica ante caso sospechoso de peste neumónica en Rusia",
+      "url": "https://www.tvn-2.com/nacionales/panama-mantiene-vigilancia-minsa-peste-neumonica-en-rusia-caso-rusia_1_2264648.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 20:53:52 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Canal de Panamá: Suspensión temporal de operaciones de potabilizadora de Miraflores este miércoles",
+      "url": "https://www.tvn-2.com/nacionales/atencion-canal-panama-anuncia-suspension_1_2264649.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 20:52:31 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Sinaproc extiende vigilancia por lluvias, tormentas y vientos hasta el viernes",
+      "url": "https://www.tvn-2.com/nacionales/sinaproc-extiende-vigilancia-lluvias-tormentas_1_2264646.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 20:51:59 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Agroferias del IMA: Conozca dónde se realizarán este miércoles",
+      "url": "https://www.tvn-2.com/nacionales/agroferias-ima-conozca-realizaran-miercoles_1_2264647.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 20:48:10 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Chiriquí: taxista es asesinado a puñaladas en Remedios",
+      "url": "https://www.tvn-2.com/nacionales/provincias/chiriqui-taxista-asesinado-punaladas-remedios_1_2264612.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 20:46:15 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Kenia anuncia la primera muerte por ébola en el país",
+      "url": "https://www.tvn-2.com/mundo/africa/kenia-anuncia-primera-muerte-ebola_1_2264549.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 11:20:51 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Más de 30 mujeres han muerto de forma violenta en Panamá este año",
+      "url": "https://www.tvn-2.com/nacionales/30-mujeres-han-muerto-forma_1_2264499.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 01:30:01 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Lionel Messi despedida | Argentina vs Benín: El último partido, fiesta de agradecimiento en el Monumental",
+      "url": "https://www.tvn-2.com/tvmax/futbol-internacional/lionel-messi-despedida-estadio-monumental-buenos-aires-argentina-vs-benin_1_2264548.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 14:59:32 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Mafe Achurra comparte el tierno momento en que le canta 'Antología' a su bebé",
+      "url": "https://www.tvn-2.com/entretenimiento/mafe-achurra-comparte-tierno-momento-canta-antologia-shakira-bebe-embarazo_1_2264579.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 14:44:39 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Contenido Exclusivo: Coclé, se seca el campo",
+      "url": "https://www.tvn-2.com/contenido-exclusivo/contenido-exclusivo-cocle-seca-campo-fenomeno-de-el-nino-clima-agua-produccion-sequia_1_2263614.html",
+      "fecha_publicacion_original": "Thu, 01 Oct 2026 01:31:04 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Contenido Exclusivo: Turismo en transporte público",
+      "url": "https://www.tvn-2.com/contenido-exclusivo/contenido-exclusivo-turismo-transporte-publico_1_2263290.html",
+      "fecha_publicacion_original": "Tue, 29 Sep 2026 01:23:06 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Conciliaciones entre consumidores y comercios superan los $12.5 millones hasta agosto, según Acodeco",
+      "url": "https://www.tvn-2.com/nacionales/conciliaciones-consumidores-comercios-superan-12-millones-informe-acodeco_1_2264595.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 18:26:32 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Arranca la Semana de la Responsabilidad Social Empresarial con enfoque en sostenibilidad, juventud y el futuro",
+      "url": "https://www.tvn-2.com/nacionales/arranca-semana-responsabilidad-social-empresarial-sumarse-juventud-retos-futuro_1_2264570.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 13:35:00 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Colegios particulares atribuyen aumento de matrícula a migración al sector oficial y altos costos de operación",
+      "url": "https://www.tvn-2.com/nacionales/colegios-particulares-estudiantes-aumento-matricula-mayores-gastos-informe-acodeco_1_2264562.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 12:41:06 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Mujer es aprehendida en Santiago tras hallazgo de 162 paquetes de presunta droga en el vehículo que conducía",
+      "url": "https://www.tvn-2.com/nacionales/mujer-aprehendida-santiago-hallazgo-162-paquetes-droga_1_2264577.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 16:21:42 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Descentralización explica qué incluye el proyecto de $293,715 para 15 juntas comunales",
+      "url": "https://www.tvn-2.com/nacionales/autoridad-nacional-descentralizacion-explica-incluye-proyecto-junta-comunales_1_2264582.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 14:51:46 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Reformas electorales: Blandón defiende el 3% para nuevos partidos y rechaza aumento del financiamiento privado",
+      "url": "https://www.tvn-2.com/nacionales/reformas-electorales-blandon-defiende-3_1_2264565.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 13:00:36 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Panamá reforzará su presencia marítima en Vietnam con nueva oficina de servicio técnico de la AMP en Ho Chi Minh",
+      "url": "https://www.tvn-2.com/nacionales/panama-reforzara-presencia-maritima-vietnam-autoridad-maritima-de-panama-registro-de-buques_1_2264552.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 11:57:42 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Obispos panameños presentarán en Roma la realidad de sus diócesis durante la visita ad limina",
+      "url": "https://www.tvn-2.com/nacionales/arzobispo-participa-roma-encuentro-papa-leon-xiv-jose-domingo-ulloa-mendieta_1_2264583.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 16:48:00 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Asesinan a taxista en Remedios; fue hallado dentro de su vehículo con varias heridas",
+      "url": "https://www.tvn-2.com/nacionales/asesinan-taxista-remedios-hallado-vehiculo-varias-heridas_1_2264601.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 18:13:55 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Pase-U: Largas filas en Changuinola en el segundo día de entrega de tarjetas Punch del Ifarhu",
+      "url": "https://www.tvn-2.com/nacionales/pase-u-pago-de-becas-ifarhu-largas-filas-changuinola_1_2264609.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 18:12:50 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "La Chorrera proyecta renovar el parque Tomás Martín Feuillet con una inversión de 620 mil dólares",
+      "url": "https://www.tvn-2.com/nacionales/la-chorrera-proyecta-renovar-parque-tomas-martin-feuillet-inversion-620-mil_1_2264420.html",
+      "fecha_publicacion_original": "Mon, 05 Oct 2026 18:30:34 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Líderes 360 | Mario Castrellón: la visión de un chef que convirtió la gastronomía panameña en una marca país",
+      "url": "https://www.tvn-2.com/lideres-360/lideres-360-mario-castrellon-chef-gastronomia-panama-maito_1_2254177.html",
+      "fecha_publicacion_original": "Fri, 07 Aug 2026 12:15:31 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Mario Castrellón protagoniza Líderes 360 este viernes en Noticias AM",
+      "url": "https://www.tvn-2.com/lideres-360/mario-castrellon-protagoniza-lideres-360-noticias-am_1_2254164.html",
+      "fecha_publicacion_original": "Wed, 05 Aug 2026 11:00:19 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Líderes 360: Pedro Heilbron, el hombre que vio despegar a Copa y convertirse en el Hub de las Américas",
+      "url": "https://www.tvn-2.com/lideres-360/lideres-360-pedro-heilbron-despegar-copa-airlines-hub-de-las-americas_1_2249044.html",
+      "fecha_publicacion_original": "Fri, 03 Jul 2026 12:00:47 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Líderes 360: Pedro Heilbron plantea una hoja de ruta para Panamá; turismo sostenible, eficiencia y un país transparente",
+      "url": "https://www.tvn-2.com/lideres-360/lideres-360-pedro-heilbron-panama-turismo-eficiencia-transparencia_1_2249216.html",
+      "fecha_publicacion_original": "Sun, 05 Jul 2026 13:00:06 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Líderes 360 estrena el 3 de julio en Noticias AM con historias de impacto empresarial",
+      "url": "https://www.tvn-2.com/lideres-360/lideres-360-estrena-noticias-am-impacto-empresarial-pedro-heilbron_1_2247767.html",
+      "fecha_publicacion_original": "Wed, 01 Jul 2026 20:03:18 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Gente TVN se sumó a carrera caminata inclusiva de Achilles Panamá en la Cinta Costera",
+      "url": "https://www.tvn-2.com/gente-tvn/gente-tvn-sumo-carrera-caminata_1_2264281.html",
+      "fecha_publicacion_original": "Sun, 04 Oct 2026 23:47:36 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media alcanza el primer lugar en reputación entre los medios de comunicación en Panamá",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-alcanza-primer-lugar-medios-comunicacion-merco-panama_1_2263883.html",
+      "fecha_publicacion_original": "Fri, 02 Oct 2026 01:00:17 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Relevo por la Vida de Fanlyc: 24 horas de esfuerzo y esperanza en la Cinta Costera 3",
+      "url": "https://www.tvn-2.com/nacionales/relevo-vida-fanlyc-24-horas-esfuerzo-esperanza-cinta-costera-tres-cancer_1_2259489.html",
+      "fecha_publicacion_original": "Sun, 06 Sep 2026 00:09:00 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media comparte su experiencia de transformación digital en cumbre WISS LATAM",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-comparte-experiencia-transformacion-cumbre-wiss-latam_1_2257996.html",
+      "fecha_publicacion_original": "Thu, 27 Aug 2026 21:49:51 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "WISS LATAM reúne a mujeres líderes y empresarias para impulsar la innovación y el liderazgo femenino",
+      "url": "https://www.tvn-2.com/nacionales/wiss-latam-reune-mujeres-lideres_1_2257812.html",
+      "fecha_publicacion_original": "Thu, 27 Aug 2026 01:21:28 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media y ADEN Business School firman acuerdo para acceder a programas de estudio superior",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-aden-business-school_1_2255801.html",
+      "fecha_publicacion_original": "Fri, 14 Aug 2026 00:59:23 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media moviliza a sus colaboradores para convertir la solidaridad en vidas",
+      "url": "https://www.tvn-2.com/gente-tvn/tvn-media-moviliza-colaboradores-convertir_1_2255762.html",
+      "fecha_publicacion_original": "Thu, 13 Aug 2026 22:07:30 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media y la Asociación de Directoras de Panamá firman alianza para impulsar el liderazgo femenino",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-asociacion-directoras-panama_1_2254586.html",
+      "fecha_publicacion_original": "Thu, 06 Aug 2026 01:08:53 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media recibe reconocimiento del programa Reduce Tu Huella por su compromiso con la gestión ambiental",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-recibe-reconocimiento-programa-reduce-tu-huella-gestion-ambiental_1_2254331.html",
+      "fecha_publicacion_original": "Wed, 05 Aug 2026 00:38:03 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media y UDELAS firman alianza para impulsar la educación, el bienestar y el desarrollo social",
+      "url": "https://www.tvn-2.com/gente-tvn/tvn-media-udelas-firman-alianza_1_2253105.html",
+      "fecha_publicacion_original": "Tue, 28 Jul 2026 17:00:00 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media oficializa patrocinio para el World of Coffee Panamá 2026",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-oficializa-patrocinio-world_1_2251452.html",
+      "fecha_publicacion_original": "Fri, 17 Jul 2026 01:20:25 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media oficializa su patrocinio de la Feria Internacional del Libro de Panamá",
+      "url": "https://www.tvn-2.com/gente-tvn/tvn-media-oficializa-patrocinio-feria_1_2250436.html",
+      "fecha_publicacion_original": "Fri, 10 Jul 2026 20:03:53 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media avanza en Merco Talento Panamá 2026 y reafirma su liderazgo como número uno en el sector de medios de comunicación",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-avanza-merco-talento_1_2250207.html",
+      "fecha_publicacion_original": "Thu, 09 Jul 2026 17:36:21 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "CEO Women Summit 2026: TVN Media destaca la importancia de abrir espacios para el liderazgo femenino",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-ceo-women-summit-potenciar-crecimiento-profesional-mujeres_1_2250211.html",
+      "fecha_publicacion_original": "Thu, 09 Jul 2026 18:24:38 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN estrena Líderes 360 y consolida su cobertura del Mundial 2026",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-estrena-lideres-360-mundial-2026_1_2249178.html",
+      "fecha_publicacion_original": "Fri, 03 Jul 2026 14:17:00 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media y el Teatro Nacional sellan alianza para promover la cultura panameña",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-teatro-nacional-sellan-alianza-firma-convenio-cultura_1_2247507.html",
+      "fecha_publicacion_original": "Tue, 23 Jun 2026 15:06:20 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media y Fundación Relaciones Sanas firman convenio para impulsar la educación y sensibilización sobre salud mental",
+      "url": "https://www.tvn-2.com/gente-tvn/tvn-media-fundacion-relaciones-sanas_1_2246715.html",
+      "fecha_publicacion_original": "Thu, 18 Jun 2026 17:10:05 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Gente TVN fortalece su compromiso social con jornada deportiva inclusiva",
+      "url": "https://www.tvn-2.com/nacionales/gente-tvn-fortalece-compromiso-social-jornada-deportiva-inclusiva_1_2245912.html",
+      "fecha_publicacion_original": "Sun, 14 Jun 2026 02:02:12 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media y XCOM se unen para impulsar la innovación y el futuro de la comunicación en Panamá",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-excom-unen-impulsar_1_2242806.html",
+      "fecha_publicacion_original": "Tue, 26 May 2026 20:20:00 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media y Universidad Latina firman convenio para fortalecer formación de estudiantes",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-firma-convenio-universidad-latina-fortalecer-formacion-estudiantes_1_2242290.html",
+      "fecha_publicacion_original": "Sat, 23 May 2026 02:30:00 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media firma alianza para promover 'Mosaico Panamá'",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-firma-alianza-promover-mosaico-panama_1_2240535.html",
+      "fecha_publicacion_original": "Tue, 12 May 2026 00:59:45 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media y Fundamorgan firman alianza para sensibilizar sobre la problemáticas sociales como la violencia",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-fundamorgan-firman-alianza_1_2238967.html",
+      "fecha_publicacion_original": "Fri, 01 May 2026 01:19:41 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media y Capadeso sellan alianza para visibilizar labor social",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-camara-panamena-desarrollo-social_1_2238469.html",
+      "fecha_publicacion_original": "Tue, 28 Apr 2026 18:53:57 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media y Jump renuevan alianza para impulsar el emprendimiento en Panamá",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-jump-renuevan-alianza-emprendimiento-panama_1_2237758.html",
+      "fecha_publicacion_original": "Thu, 23 Apr 2026 18:22:28 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media conmemora el Día de las Buenas Acciones con jornada solidaria junto a ADAVION, Héroes por Panamá 2019",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-conmemora-dia-buenas-acciones-adavion-heroes-por-panama_1_2236132.html",
+      "fecha_publicacion_original": "Mon, 13 Apr 2026 23:02:47 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Voces femeninas comparten liderazgo y experiencias en encuentro de Speed Mentoring de TVN",
+      "url": "https://www.tvn-2.com/nacionales/voces-femeninas-comparten-liderazgo-experiencias-encuentro-de-speed-mentoring-de-tvn_1_2230766.html",
+      "fecha_publicacion_original": "Sat, 07 Mar 2026 23:01:00 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Colaboradores de TVN Media participan en voluntariado en beneficio de la Fundación Latidos",
+      "url": "https://www.tvn-2.com/nacionales/colaboradores-tvn-media-participan-voluntariado_1_2230514.html",
+      "fecha_publicacion_original": "Fri, 06 Mar 2026 00:00:00 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN encendió la fiesta y animó al público en 'Sabores de Colón'",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-encendio-fiesta-publico-sabores-de-colon_1_2229801.html",
+      "fecha_publicacion_original": "Mon, 02 Mar 2026 00:29:43 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Radio y TVMAX dan el 'Kick-Off' al Carnaval con una lluvia de regalos en vía Centenario",
+      "url": "https://www.tvn-2.com/nacionales/tvn-radio-tvmax-dan-kick-carnaval_1_2227551.html",
+      "fecha_publicacion_original": "Fri, 13 Feb 2026 23:13:59 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media y el Carnaval de La Villa de Los Santos renuevan su alianza estratégica",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-carnaval-la-villa-de-los-santos-alianza_1_2225701.html",
+      "fecha_publicacion_original": "Mon, 02 Feb 2026 18:40:15 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media y la Feria de La Chorrera firman alianza estratégica",
+      "url": "https://www.tvn-2.com/videos/noticias/video-tvn-media-feria-chorrera-firman_8_2225013.html",
+      "fecha_publicacion_original": "Thu, 29 Jan 2026 01:16:20 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media dice presente en la Teletón 20-30 con una donación de 100,000 dólares",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-dice-presente-teleton-100-mil-dolares_1_2218658.html",
+      "fecha_publicacion_original": "Sun, 14 Dec 2025 00:09:23 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Noticias gana dos categorías del premio de Periodismo sobre Niñez y Adolescencia 2025",
+      "url": "https://www.tvn-2.com/nacionales/periodista-claudya-carolina-morales-yenny-caballero-periodismo-sobre-ninez-y-adolescencia-ganador_1_2218367.html",
+      "fecha_publicacion_original": "Thu, 11 Dec 2025 19:12:00 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media refuerza su compromiso social con jornada de voluntariado en el Banco de Alimentos",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-refuerza-compromiso-social_1_2217708.html",
+      "fecha_publicacion_original": "Sat, 06 Dec 2025 01:42:12 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media arrasa en los Premios Excelencia en la gala 'Los Faroles'",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-arrasa-premios-victoria-universidad-de-panama_1_2217570.html",
+      "fecha_publicacion_original": "Fri, 05 Dec 2025 12:28:16 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media reafirma alianza con la Teletón 20-30",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-reafirma-alianza-teleton-20-30_1_2214825.html",
+      "fecha_publicacion_original": "Thu, 13 Nov 2025 21:11:59 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Conape reconoce la trayectoria de periodistas de TVN Media",
+      "url": "https://www.tvn-2.com/nacionales/conape-reconoce-trayectoria-periodistas-tvn-media_1_2215048.html",
+      "fecha_publicacion_original": "Sat, 15 Nov 2025 01:39:04 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Héroes por Panamá culminan su diplomado en Servicio, Liderazgo y Transformación Social",
+      "url": "https://www.tvn-2.com/nacionales/heroes-por-panama-culminan-diplomado-servicio-liderazgo-transformacion_1_2212969.html",
+      "fecha_publicacion_original": "Thu, 30 Oct 2025 00:42:53 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media firma convenio como medio oficial del Concurso Nacional de Oratoria 2025",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-firma-convenio-concurso-nacional-de-oratoria_1_2212606.html",
+      "fecha_publicacion_original": "Tue, 28 Oct 2025 02:00:44 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Documental Panamá Reseñas de Nuestra Identidad llega al cine",
+      "url": "https://www.tvn-2.com/nacionales/documental-panama-llega-pantalla-grande-cine-tvn-media_1_2212034.html",
+      "fecha_publicacion_original": "Thu, 23 Oct 2025 21:33:32 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media y DIRCOM Panamá se unen para fortalecer la voz de los Héroes por Panamá",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-dircom-panama-unen_1_2211616.html",
+      "fecha_publicacion_original": "Tue, 21 Oct 2025 17:48:33 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media se consolida en primer lugar como medio de comunicación con mejor reputación en Panamá, según Merco 2025",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-nuevamente-consolida-empresas-mejor-reputacion_1_2211002.html",
+      "fecha_publicacion_original": "Fri, 17 Oct 2025 02:44:03 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media y Senacyt firman alianza para promover la ciencia en Panamá",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-senacyt-firman-alianza_1_2208344.html",
+      "fecha_publicacion_original": "Tue, 30 Sep 2025 01:06:16 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Multitudinario desfile de carretas en Guararé; TVN Media se tomó el Festival de la Mejorana",
+      "url": "https://www.tvn-2.com/nacionales/multitudinario-desfile-carretas-guarare-tvn-media-hecho-en-panama-festival-nacional-de-la-mejorana_1_2208163.html",
+      "fecha_publicacion_original": "Sun, 28 Sep 2025 23:00:00 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media dijo presente en Relevos por la Vida 2025 de Fanlyc",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-dijo-presente-relevos_1_2205996.html",
+      "fecha_publicacion_original": "Sat, 13 Sep 2025 23:41:33 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Una alianza por el conocimiento: Ciudad del Saber y TVN Media unen esfuerzos",
+      "url": "https://www.tvn-2.com/nacionales/alianza-conocimiento-ciudad-del-saber-tvn-media_1_2203982.html",
+      "fecha_publicacion_original": "Sat, 09 Aug 2025 01:43:00 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media y Sumarse firman convenio para promover la Semana de la Responsabilidad Empresarial",
+      "url": "https://www.tvn-2.com/nacionales/tvnmedia-sumarse-firman-convenio_1_2201601.html",
+      "fecha_publicacion_original": "Mon, 11 Aug 2025 19:19:00 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media y Sabores de Colón se unen para resaltar la gastronomía y cultura colonense",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-sabores-colon-gastronomia-cultura-colonense_1_2201366.html",
+      "fecha_publicacion_original": "Sat, 09 Aug 2025 01:00:00 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media recibe reconocimiento por su compromiso ambiental en el programa 'Reduce Tu Huella'",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-recibe-reconocimiento-compromiso-ambiental-reduce-tu-huella_1_2200815.html",
+      "fecha_publicacion_original": "Tue, 05 Aug 2025 19:11:19 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media presentó el documental que revela la experiencia de las escuelas que lideraron el reciclaje en Panamá",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-presenta-documental-competencia-intercolegial-reciclaje_1_2202782.html",
+      "fecha_publicacion_original": "Wed, 20 Aug 2025 22:00:00 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media y el MAC Panamá se unen para promover el arte y la cultura nacional",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-mac-panama-unen_1_2199530.html",
+      "fecha_publicacion_original": "Fri, 25 Jul 2025 19:00:00 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media presenta su Informe de Sostenibilidad bajo los principios de Ambiente, Sociedad y Gobernanza",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-presenta-informe-sostenibilidad_1_2199363.html",
+      "fecha_publicacion_original": "Wed, 06 Aug 2025 12:00:00 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media y Quality Leadership University firman alianza estratégica",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-quality-leadership-university-acuerdo-educacion-desarrollo_1_2198338.html",
+      "fecha_publicacion_original": "Wed, 16 Jul 2025 20:00:00 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media y FSU Panamá firmaron acuerdo de colaboración para formar estudiantes",
+      "url": "https://www.tvn-2.com/videos/noticias/video-ext-tvn-media-fsu-panama-firmaron_7_2197723.html",
+      "fecha_publicacion_original": "Sat, 12 Jul 2025 01:34:57 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media se consolida en el ranking de Merco Talento 2025",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-consolida-ranking-merco-talento_1_2195639.html",
+      "fecha_publicacion_original": "Thu, 26 Jun 2025 21:17:21 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Escuela de San Miguelito gana competencia intercolegial de reciclaje ‘Gente TVN Media’ con 1,445 libras recolectadas",
+      "url": "https://www.tvn-2.com/nacionales/escuela-gana-competencia-intercolegial-gente-tvn-media-reciclaje_1_2195259.html",
+      "fecha_publicacion_original": "Tue, 24 Jun 2025 02:31:01 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media y FSU Panamá apuestan por la nueva generación que transformará la industria",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-fundacion-florida-state-university-panama-apuestan-industria-audiovisual_1_2190375.html",
+      "fecha_publicacion_original": "Tue, 20 May 2025 21:20:33 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Periodistas de TVN Noticias son galardonados por el Fórum de Periodistas",
+      "url": "https://www.tvn-2.com/nacionales/periodistas-tvn-noticias-premios-forum-de-periodistas_1_2189759.html",
+      "fecha_publicacion_original": "Fri, 16 May 2025 03:01:48 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Noticias y Tráfico Panamá firman alianza estratégica",
+      "url": "https://www.tvn-2.com/nacionales/tvn-noticias-trafico-panama-firman-alianza-estrategia-medios_1_2187423.html",
+      "fecha_publicacion_original": "Tue, 29 Apr 2025 23:08:14 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media nombra gerente de Información Digital para  continuar posicionando el liderazgo en noticias desde sus plataformas digitales",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-nombra-gerente-informacion-digital-magda-maxwell_1_2186722.html",
+      "fecha_publicacion_original": "Thu, 24 Apr 2025 17:25:48 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN celebra 63 años",
+      "url": "https://www.tvn-2.com/videos/noticias/video-ext-tvn-celebra-63-anos_7_2186633.html",
+      "fecha_publicacion_original": "Thu, 24 Apr 2025 01:21:16 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media celebra la cultura con mural en La Casa del Artesano de La Chorrera",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-la-chorrera-celebra-cultura-mural_1_2186471.html",
+      "fecha_publicacion_original": "Wed, 23 Apr 2025 01:56:51 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media apoya el 'reality Jump' que busca impulsar el emprendimiento de jóvenes",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-impulsa-reality-jump-emprendimientos-jovenes_1_2185537.html",
+      "fecha_publicacion_original": "Wed, 16 Apr 2025 00:59:06 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media se une al Día de las Buenas Acciones con jornada solidaria en el Instituto Oncológico Nacional",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-une-dias-de-las-buenas-acciones-instituto-oncologico_1_2184947.html",
+      "fecha_publicacion_original": "Fri, 11 Apr 2025 02:08:16 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media, UNICEF y el Despacho de la Primera Dama se unen para promover la campaña 'Crianza amorosa, raíces fuertes'",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-unicef-despacho-primera-crianza-amoroza-raices-fuertes_1_2183004.html",
+      "fecha_publicacion_original": "Fri, 28 Mar 2025 01:00:00 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media firma alianza estratégica con Apede para la Conferencia Anual de Ejecutivos",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-alianza-estrategica-apede-conferencia-anual-de-ejecutivos-2025_1_2182741.html",
+      "fecha_publicacion_original": "Wed, 26 Mar 2025 19:17:03 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media será parte del Día de las Buenas Acciones",
+      "url": "https://www.tvn-2.com/nacionales/dia-de-las-buenas-acciones-fundacion-jupa-tvn-media_1_2182521.html",
+      "fecha_publicacion_original": "Tue, 25 Mar 2025 01:29:54 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media y el IFF Panamá firman alianza para la 13ª edición del Festival Internacional de Cine de Panamá",
+      "url": "https://www.tvn-2.com/entretenimiento/cine-y-tv/tvn-media-iff-panama-firman-convenio-festival-de-cine-de-panama_1_2181612.html",
+      "fecha_publicacion_original": "Tue, 18 Mar 2025 19:31:35 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media destaca en el ranking Merco Responsabilidad ESG Panamá 2024",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-destaca-ranking-merco-responsabilidad-social-empresarial_1_2174203.html",
+      "fecha_publicacion_original": "Fri, 24 Jan 2025 19:42:54 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Macrofest 2025 presenta su cartel oficial y entrega reconocimiento a TVN Media",
+      "url": "https://www.tvn-2.com/nacionales/macrofest-2025-presenta-cartel-oficial-reconocimiento-tvnmedia_1_2173050.html",
+      "fecha_publicacion_original": "Thu, 16 Jan 2025 20:59:29 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media y el Municipio de La Villa firman alianza para impulsar los Carnavales 2025",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-municipio-la-villa-de-los-santos-firman-alianza-carnaval-2025_1_2172852.html",
+      "fecha_publicacion_original": "Wed, 15 Jan 2025 17:35:47 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media recibe reconocimiento por cobertura del 9 de enero de 1964",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-recibe-reconocimiento-cobertura_1_2172034.html",
+      "fecha_publicacion_original": "Thu, 09 Jan 2025 00:56:01 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media regala alegría a niños de Loma Brígida en La Chorrera por Día de Reyes",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-loma-brigida-la-chorrera-dia-de-reyes_1_2171661.html",
+      "fecha_publicacion_original": "Mon, 06 Jan 2025 19:11:01 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media reafirma su alianza con firma para el Panamá Jazz Festival 2025, dedicado a Princess Orelia Benskia",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-firma-alianza-panama-jazz-festival-princess-orelia-benskia_1_2171990.html",
+      "fecha_publicacion_original": "Wed, 08 Jan 2025 21:35:17 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Sueños de diciembre: La familia de TVN Noticias llevó alegría a los niños de Cerro Cabra",
+      "url": "https://www.tvn-2.com/nacionales/suenos-diciembre-familia-tvn-noticias-ninos-cerro-cabra-navidad_1_2170326.html",
+      "fecha_publicacion_original": "Wed, 25 Dec 2024 00:16:31 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media dice presente en la Teletón 20-30 con una donación de 100,000 dólares",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-dice-presente-teleton-20-30_1_2169266.html",
+      "fecha_publicacion_original": "Sun, 15 Dec 2024 23:17:28 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media recibe reconocimiento en el Simposio Internacional de Innovación en Sostenibilidad: Edificio y Ciudad",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-recibe-reconocimiento-simposio-innovacion-sostenibilidad-en-ambiente_1_2169077.html",
+      "fecha_publicacion_original": "Fri, 13 Dec 2024 18:17:01 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Gerente de TVN Media, Luis Mouynes en el ranking de los líderes con mejor reputación en Panamá",
+      "url": "https://www.tvn-2.com/nacionales/ranking-de-los-lideres-luis-mouynes-gerente-tvn-media_1_2168690.html",
+      "fecha_publicacion_original": "Wed, 11 Dec 2024 01:18:24 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media gana categoría de Mejor Medio de Comunicación en ranking de Merco Empresas de Panamá 2024",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-gana-categoria-mejor-merco-empresas-panama-2024-premio-ranking_1_2167542.html",
+      "fecha_publicacion_original": "Mon, 02 Dec 2024 18:23:32 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Claudya Morales de TVN Media gana Premio de Periodismo sobre Niñez y Adolescencia 2024",
+      "url": "https://www.tvn-2.com/nacionales/claudya-morales-tvn-media-premio-de-periodismo-ninez-y-adolescencia-unicef-celap_1_2166205.html",
+      "fecha_publicacion_original": "Thu, 21 Nov 2024 20:28:55 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media arrasa en los Premios Excelencia de la Universidad de Panamá",
+      "url": "https://www.tvn-2.com/nacionales/premios-excelencia-2024-universidad-de-panama-tvn-noticias-facultad-de-comunicacion-social_1_2166104.html",
+      "fecha_publicacion_original": "Thu, 21 Nov 2024 02:59:16 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Periodistas de TVN Media participan de conversatorio sobre desinformación y 'fake news' con estudiantes de la Universidad Latina",
+      "url": "https://www.tvn-2.com/nacionales/periodistas-tvn-media-participan-conversatorio-desinformacion-fake-news-universidad-latina_1_2165356.html",
+      "fecha_publicacion_original": "Fri, 15 Nov 2024 22:23:28 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media realiza homenaje a Luz María Noli, heroína de la información",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-realiza-homenaje-luz-maria-noli-dia-del-periodista-heroes-por-panama_1_2165138.html",
+      "fecha_publicacion_original": "Thu, 14 Nov 2024 17:41:38 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Municipio capitalino entrega pergamino y llaves de la ciudad para Hecho en Panamá",
+      "url": "https://www.tvn-2.com/nacionales/municipio-de-panama-pergamino-llaves-ciudad-hecho-panama_1_2163410.html",
+      "fecha_publicacion_original": "Fri, 01 Nov 2024 00:23:19 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media arrasa en los Premios Victoria 2024",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-tres-galardones-premios-victoria-usma_1_2160381.html",
+      "fecha_publicacion_original": "Fri, 11 Oct 2024 02:07:51 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Reportaje de Mundo Verde de TVN gana premio del Concurso Nacional de Periodismo Científico",
+      "url": "https://www.tvn-2.com/nacionales/mundo-verde-reportaje-tvn-gana-premio-nacional-periodismo-cientifico-senacyt_1_2157388.html",
+      "fecha_publicacion_original": "Fri, 20 Sep 2024 18:19:27 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Mundo Verde de TVN gana premio en Concurso para Comunicadores Sociales Carla Uliantzeff",
+      "url": "https://www.tvn-2.com/nacionales/mundo-verde-ballenas-jorobadas-premio-concurso-comunicadores-sociales-carla-uliantzeff_1_2158333.html",
+      "fecha_publicacion_original": "Fri, 27 Sep 2024 18:57:50 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Presentan a las obras ganadoras de Documental Panamá",
+      "url": "https://www.tvn-2.com/nacionales/presentan-ganadoras-documental-panama-documentales-cine-fundacion-alberto-motta-noticias-en-panama-hoy_1_2163165.html",
+      "fecha_publicacion_original": "Wed, 30 Oct 2024 20:15:28 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media firma alianza con el Concurso Nacional de Oratoria 2024",
+      "url": "https://www.tvn-2.com/videos/noticias/video-ext-tvn-media-firma-alianza-concurso_7_2163037.html",
+      "fecha_publicacion_original": "Wed, 30 Oct 2024 00:11:16 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "TVN Media reafirma alianza con  la Teletón 20-30",
+      "url": "https://www.tvn-2.com/videos/noticias/video-ext-tvn-media-reafirma-alianza-teleton_7_2163364.html",
+      "fecha_publicacion_original": "Thu, 31 Oct 2024 20:32:52 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "MLB Playoffs 2026 previa| Cerveceros vs Padres: la acción se traslada a San Diego para el Juego 3 de la Serie Divisional de la Liga Nacional",
+      "url": "https://www.tvn-2.com/tvmax/beisbol/mlb/brewers-vs-padres-mlb-playoffs-2026-previa-juego-3-divisional-series-beisbol-grandes-ligas_1_2264543.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 13:00:35 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Liga de Naciones Concacaf | Resultados, calendario y todos los cruces para cuartos de final",
+      "url": "https://www.tvn-2.com/tvmax/somos-la-sele/liga-de-naciones-concacaf-seleccion-de-panama-guatemala-curazao-mexico-canada-estados-unidos_1_2264553.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 15:59:18 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Liga de Naciones Concacaf resultados| Panamá ya tiene rival para cuartos de final. Guatemala y Jamaica cierran la clasificación",
+      "url": "https://www.tvn-2.com/tvmax/somos-la-sele/panama-seleccion-liga-de-naciones-resultados-curazao-guatemala-jamaica_1_2264545.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 07:27:23 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "LPF resultado Torneo Apertura 2026| Sporting San Miguelito reacciona y supera a Unión Coclé en cierre de la Jornada 11",
+      "url": "https://www.tvn-2.com/tvmax/lpf/sporting-san-miguelito-vs-union-cocle-lpf-resultado-partido-jornada-11-cierre-futbol-panama_1_2264541.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 04:27:49 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "MLB Playoffs 2026 resultado| Medias Blancas remontan y ponen a Guardianes al borde del abismo",
+      "url": "https://www.tvn-2.com/tvmax/beisbol/mlb/white-sox-vs-guardians-mlb-playoffs-2026-resultado-juego-2-divisional-series-grandes-ligas-beisbol_1_2264521.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 01:41:57 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Liga de Naciones UEFA resultados| Francia e Italia afianzan sus nuevos proyectos ante Bélgica y Turquía",
+      "url": "https://www.tvn-2.com/tvmax/futbol-internacional/liga-de-naciones-uefa-resultados-francia-italia-belgica-turquia-futbol_1_2264492.html",
+      "fecha_publicacion_original": "Mon, 05 Oct 2026 23:20:04 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Pacífica Salud reafirma su compromiso con la calidad y seguridad del paciente con nuevas acreditaciones de Joint Commission International",
+      "url": "https://www.tvn-2.com/economia/empresas/publirreportajes/pacifica-salud-reafirma-compromiso-calidad_1_2256763.html",
+      "fecha_publicacion_original": "Fri, 21 Aug 2026 15:00:37 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Costa Coffee se expande a Panamá con dos nuevas tiendas operadas por el socio franquiciado Grupo Maritanos",
+      "url": "https://www.tvn-2.com/economia/empresas/publirreportajes/costa-coffee-expande-panama-nuevas_1_2256771.html",
+      "fecha_publicacion_original": "Fri, 21 Aug 2026 15:41:33 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "BYD y Cofiño presentan oficialmente el nuevo TI 7 en Panamá",
+      "url": "https://www.tvn-2.com/economia/empresas/publirreportajes/byd-cofino-presentan-oficialmente-nuevo_1_2256978.html",
+      "fecha_publicacion_original": "Tue, 25 Aug 2026 15:28:18 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Tu Banco, tu Istmo: Banistmo presenta nueva identidad como parte del Grupo Financiero BSC",
+      "url": "https://www.tvn-2.com/economia/empresas/publirreportajes/banco-istmo-banistmo-presenta-nueva_1_2258123.html",
+      "fecha_publicacion_original": "Fri, 28 Aug 2026 18:15:25 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "El inesperado carro de chatarra que sacó risas a Jorge Quirós, reportero de TVN Noticias",
+      "url": "https://www.tvn-2.com/entretenimiento/inesperado-momento-saco-risas-reportero-tvn-noticias-jorge-quiros_1_2264634.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 19:44:15 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Caleb Flynn, de American Idol, es condenado a cadena perpetua por el asesinato de su esposa",
+      "url": "https://www.tvn-2.com/entretenimiento/caleb-flynn-american-ido-condenado-cadena-perpetua-asesinato-esposa_1_2264537.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 19:00:44 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Tom Cruise defiende Digger tras el fracaso en taquilla y responde a las críticas",
+      "url": "https://www.tvn-2.com/entretenimiento/cine-y-tv/tom-cruise-defiende-digger-fracaso-taquilla-responde-criticas_1_2264580.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 17:00:58 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Lindsay Lohan revive a Cady Heron con la escena de 'Chicas pesadas'",
+      "url": "https://www.tvn-2.com/entretenimiento/cine-y-tv/lindsay-lohan-revive-cady-cady-heron-escena-chicas-pesadas_1_2264311.html",
+      "fecha_publicacion_original": "Mon, 05 Oct 2026 18:15:12 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Pedro Pascal se convierte en violonchelista para su nuevo papel en “¡Behemoth!”",
+      "url": "https://www.tvn-2.com/entretenimiento/pedro-pascal-convierte-violonchelista-nuevo-papel-pelicula-behemoth_1_2264390.html",
+      "fecha_publicacion_original": "Mon, 05 Oct 2026 17:30:36 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Lionel Messi despedida| Argentina se dispone a honrar al gestor de sus más grandes alegrías",
+      "url": "https://www.tvn-2.com/tvmax/futbol-internacional/lionel-messi-despedida-argentina-vs-benin-honrar-alegrias_1_2264463.html",
+      "fecha_publicacion_original": "Mon, 05 Oct 2026 22:24:39 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "México detiene a líder regional del Cártel Jalisco Nueva Generación",
+      "url": "https://www.tvn-2.com/mundo/mexico-detiene-lider-regional-cartel-jalisco-nueva-generacion-ivan-cazarin-molina-alias-el-tanque_1_2264592.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 15:45:50 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Una estudiante muerta y siete heridas en un ataque con cuchillo en una escuela en Estambul",
+      "url": "https://www.tvn-2.com/mundo/estudiante-muerta-siete-heridas-ataque-cuchillo-escuela-estambul_1_2264575.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 14:15:54 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Francis Halzen gana el Nobel de Física por descubrir neutrinos de origen cósmico",
+      "url": "https://www.tvn-2.com/mundo/francis-halzen-gana-nobel-fisica_1_2264558.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 11:55:21 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Finlandia frena la construcción de dos centros de datos de Google por su impacto ambiental",
+      "url": "https://www.tvn-2.com/mundo/finlandia-frena-construccion-centros-datos-google-impacto-ambiental_1_2264594.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 16:17:17 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Rusia niega haber ordenado restricciones por un supuesto caso de peste neumónica",
+      "url": "https://www.tvn-2.com/mundo/rusia-niega-haber-ordenado-restricciones-supuesto-caso-peste-neumonica_1_2264573.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 14:02:14 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "Dos navíos golpeados por drones en el mar Negro frente a la costa de Bulgaria",
+      "url": "https://www.tvn-2.com/mundo/navios-golpeados-drones-mar-negro_1_2264554.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 11:40:13 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "La ultraderechista Le Pen promete recortes drásticos para evitar el 'impago' de Francia",
+      "url": "https://www.tvn-2.com/mundo/europa/ultraderechista-le-pen-promete-recortes_1_2264559.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 12:10:30 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    },
+    {
+      "titulo": "La COP31 se perfila con ambiciones modestas pese a la emergencia climática",
+      "url": "https://www.tvn-2.com/mundo/cop31-perfila-ambiciones-modestas-pese_1_2264551.html",
+      "fecha_publicacion_original": "Tue, 06 Oct 2026 11:25:02 +0000",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z"
+    }
+  ]
+}
