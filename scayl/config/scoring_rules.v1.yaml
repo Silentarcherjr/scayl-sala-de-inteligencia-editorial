@@ -1,0 +1,31 @@
+# Attention score rules. P = sum(weight_k * component_k), components in [0,1].
+# This is an ATTENTION/prioritization score: not a probability of truth or of impact.
+# Changing anything here = new file (scoring_rules.vN.yaml) + entry in 02_DECISION_LOG.md.
+version: scoring-v1
+weights: {R: 30, I: 25, U: 20, N: 15, E: 10}   # official challenge weights (doc TVN §4)
+tiers:            # official non-overlapping ranges
+  alto: 70        # [70, 100]
+  medio: 40       # [40, 70); below -> bajo [0, 40)
+relevance:
+  panama_signal: 0.6          # mentions Panama / Panamanian entity, or source is TVN
+  topic_in_scope: 0.4         # scaled by topic confidence (None -> 0.5)
+impact:
+  # Editorial base weight per topic. Justification: potential public-interest reach for a
+  # Panamanian audience (safety, essential services, Canal economy). Editable with justification.
+  topic_base:
+    eventos_naturales: 0.7
+    logistica_canal: 0.7
+    servicios_publicos: 0.6
+    economia: 0.6
+    regulacion: 0.5
+    turismo: 0.4
+    otro: 0.2
+  official_evidence_bonus: 0.2   # pertinent official evidence linked
+urgency:
+  half_life_hours: 48            # U = exp(-h / 48), h from latest ORIGINAL publication to cutoff
+novelty:
+  prior_window_days: 30          # N = 1 - max similarity to earlier events; duplicates never add
+evidence:
+  official: 0.5                  # >=1 pertinent official evidence
+  independent_groups: 0.3        # * min(max_possible_independent, 3) / 3
+  confirmed_independent: 0.2     # >=1 confirmed independent provenance

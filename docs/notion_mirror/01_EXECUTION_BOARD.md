@@ -11,8 +11,8 @@
 | B-01 | Snapshot propio `data/raw/v1` según el PDF (DL-008) | Worker B (H3) | TODO | — | — | — | — |
 | B-10 | Benchmark de modelos locales | Worker B (H3) | TODO | — | — | — | — |
 | A-01 | Esqueleto Streamlit + FixtureService | Worker A (H2) | TODO | — | — | — | — |
-| L-03 | Puntaje P + estado de evidencia | Lead | TODO | — | — | — | — |
-| L-09 | Validadores + fallback template | Lead | TODO | — | — | — | — |
+| L-03 | Puntaje P + estado de evidencia | Lead | DONE | 2026-10-06 22:35 | 2026-10-06 23:30 | rama claude/fervent-babbage-q9fg7h | scoring-v1, rangos, desempate, simulador; 11 pruebas T08 |
+| L-09 | Validadores + fallback template | Lead | DONE | 2026-10-06 22:40 | 2026-10-06 23:30 | rama claude/fervent-babbage-q9fg7h | 7 validadores; 1 fallo real corregido (cifras de fechas) |
 | H-02 | Bitácora de herramientas IA → PDF | Todos | DOING | 2026-10-06 19:40 | 2026-10-06 20:45 | — | Bitácora iniciada |
 | H-04 | Migrar a Notion | H1 + Lead | BLOCKED | — | — | — | Sin acceso a Notion todavía |
 
@@ -22,3 +22,4 @@
 - **2026-10-06 21:40 UTC** — El equipo aprueba DL-008 (snapshot propio), DL-009 (ideas 10/10) y AP-001. Investigación de mercado y modelos (PLAN_REVIEW §10). PR #1 abierto para mergear M0.
 - **2026-10-06 22:00 UTC** — AP-007 (Claude en la nube) diferida: primero se mide el modelo local. Dependencias fijadas y verificadas en un venv limpio. `docs/ONBOARDING.md` con prompts para Worker A/B. M0 listo para mergear.
 - **2026-10-06 22:20 UTC** — PR #1 mergeado (M0). Reparto por persona (DL-011): frictionspp-svg (camino crítico) y LowCrime (UI restante, evaluación, despliegue, editor). Instrucciones en `docs/agents/`.
+- **2026-10-06 23:30 UTC** — Núcleo M1 del Lead: puntaje scoring-v1 + simulador, estado de evidencia, Source DNA, vínculo WB/USGS + Temporal Guard, conflictos numéricos, ensamblado de eventos, validadores claim-first, paquete plantilla, registro de revisiones con recibo, `service.py` y `pipeline.py`. 46 pruebas en verde; 2 fallos reales registrados con su corrección. Esperando B-03/B-05 para correr con datos reales.

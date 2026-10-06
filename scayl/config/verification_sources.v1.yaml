@@ -1,0 +1,11 @@
+# Suggested official institutions to VERIFY with, per topic. Suggestions only:
+# the system never claims these institutions said anything.
+version: verification-sources-v1
+topics:
+  eventos_naturales: [SINAPROC (Sistema Nacional de Protección Civil), Instituto de Geociencias (UP), ETESA - Hidrometeorología]
+  logistica_canal: [Autoridad del Canal de Panamá (ACP), Autoridad Marítima de Panamá (AMP)]
+  economia: [INEC (Instituto Nacional de Estadística y Censo), MEF (Ministerio de Economía y Finanzas)]
+  turismo: [ATP (Autoridad de Turismo de Panamá), INEC]
+  servicios_publicos: [ASEP (Autoridad Nacional de los Servicios Públicos), IDAAN, MINSA]
+  regulacion: [Gaceta Oficial, Asamblea Nacional, entidad reguladora del sector]
+  otro: [Fuente primaria del hecho reportado]
