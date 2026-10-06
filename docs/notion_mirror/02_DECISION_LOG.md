@@ -106,3 +106,10 @@
 - **Motivo:** jerarquía de autoridad: una aclaración oficial posterior prevalece sobre el PDF. Además, resuelve la contradicción §6-A/§7 que marcamos el día 1 (PLAN_REVIEW D14/D19).
 - **Compromiso:** hay que volver a descargar las noticias. Los fetchers, el manifest y las pruebas de frictionspp-svg se reutilizan sin cambios; las respuestas de 2025 ya descargadas se conservan (raw inmutable) y quedan fuera del corpus con motivo registrado. La distancia temporal entre noticias de 2026 y datos WB de 2024 refuerza la demostración del Temporal Guard (T04).
 - **Fecha:** 2026-10-07
+
+### DL-018 · Conjunto de desarrollo con datos de 2025; demo solo con datos recientes (aclaración C-02)
+- **Decisión:** las descargas fuera de la ventana C-01 (GDELT de septiembre de 2025 y las 48 entradas históricas del RSS de TVN) se conservan como **conjunto de desarrollo**: ajuste de umbrales (agrupación τ, abstención θ), pruebas de etiquetado y del benchmark de desarrollo. La **evaluación reportada** y la **demo** usan solo el corpus de la ventana [2025-10-02, 2026-10-01).
+- **Alternativas:** descartar esos datos; o mezclarlos con el corpus de la demo (lo prohíbe C-02 para la demo).
+- **Motivo:** aprovecha trabajo ya hecho y evita ajustar con los mismos datos que se evalúan y se muestran, lo cual es más defendible ante el jurado.
+- **Compromiso:** el desarrollo y la demo tienen distribuciones temporales distintas; las métricas se reportan sobre 2026.
+- **Fecha:** 2026-10-07

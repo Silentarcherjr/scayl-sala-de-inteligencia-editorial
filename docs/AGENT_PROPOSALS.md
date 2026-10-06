@@ -90,3 +90,14 @@
 - Riesgos: costo (estimado de unos US$3–6 por 200 llamadas); dependencia de red (mitigada con fallback local y caché); solo se envían titulares públicos.
 - Esfuerzo estimado: 1–2 h.
 - Recomendación: **CONSIDER**. Local como camino principal; Sonnet como comparación y como respaldo de calidad si B-10 muestra borradores locales débiles.
+
+## AP-010 · Evidencia oficial reciente: ACP (nivel del lago Gatún) e INEC (IPC mensual)
+- Autor / fecha: Lead · 2026-10-07 · Estado: **ABIERTA — requiere aprobación humana** (agrega alcance)
+- Problema u oportunidad: con WB hasta 2024 (solo contexto) y noticias de 2026, casi ningún evento puede quedar "suficiente para el borrador". La aclaración C-02 permite fuentes adicionales y exige datos recientes en la demo.
+- Cambio propuesto: (1) **ACP**, CSV de niveles históricos y proyectados del lago Gatún (evtms-rpts.pancanal.com/eng/h2o/), con la advertencia de la ACP de que es una estimación informativa; (2) **INEC**, IPC urbano nacional mensual 2025–2026 desde los cuadros PDF, citando cuadro y página. Contrato 0.3.0 aditivo: `IndicatorObservation.periodo` (p. ej. "2026-07" o "2026-09-28") y `fuente`; ids `ind:<fuente>:<serie>:<periodo>`. Vinculación: noticias del Canal → ACP; inflación → INEC. Coincidencia numérica ⇒ SUSTENTADA; discrepancia ⇒ conflicto.
+- Por qué mejora el proyecto: permite afirmaciones recientes realmente sustentadas en la demo y muestra el Temporal Guard con datos reales (WB 2024 histórico frente a INEC 2026 reciente).
+- Dimensión de rúbrica: Evidencias (15), Utilidad (20), cumplimiento de C-02.
+- Archivos/módulos afectados: `scayl/contracts.py`, `scayl/evidence/linking.py` (Lead); fetchers en `scayl/ingest/` (worker con acceso a internet); catálogo.
+- Riesgos: la extracción del PDF del INEC puede ser frágil (mitigación: pocas filas, verificación humana, cita de cuadro y página); tiempo.
+- Esfuerzo estimado: ACP ~2 h; INEC ~3–4 h.
+- Recomendación: **ACCEPT para ACP; CONSIDER para INEC** (solo si B-01 cierra a tiempo).
