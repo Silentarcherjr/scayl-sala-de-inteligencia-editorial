@@ -17,12 +17,12 @@
 | L-05 | `evidence/linking.py` + `temporal.py` (WB/USGS, Temporal Guard) | L | P0 | M1 | DONE | B-03 |
 | L-06 | `evidence/conflicts.py` (numéricos, fechas, unidades, períodos) | L | P0 | M2 | DONE (numérico; fechas/unidades en M2) | L-05 |
 | L-07 | `pipeline.py build` + `service.py` + `bundle.json` + `fichas.jsonl` | L | P0 | M1 | DOING (pipeline + service listos; esperan B-03/B-05) | L-03, B-03, B-05 |
-| L-08 | `gen/llm.py` (Ollama + caché + meta) + `guard.py` | L | P0 | M2 | TODO | — |
+| L-08 | `gen/llm.py` (Ollama + caché + meta) + `guard.py` | L | P0 | M2 | DONE | — |
 | L-09 | `gen/validators.py` + fallback `template` | L | P0 | M1 | DONE | L-01 |
-| L-10 | `gen/claims.py` + `studio.py` + prompts v1 | L | P0 | M2 | TODO | L-08, L-09 |
-| L-11 | `gen/qa.py` con abstención | L | P0 | M2 | TODO | B-06, L-08 |
+| L-10 | `gen/claims.py` + `studio.py` + prompts v1 | L | P0 | M2 | DONE | L-08, L-09 |
+| L-11 | `gen/qa.py` con abstención | L | P0 | M2 | DONE | B-06, L-08 |
 | L-12 | `review/store.py` + `outbox.py` | L | P0 | M1 | DONE | L-01 |
-| L-13 | `evidence/gaps.py` (Investigation Gap) | L | P1 | M2 | DOING (parte determinista lista) | L-05 |
+| L-13 | `evidence/gaps.py` (Investigation Gap) | L | P1 | M2 | DOING (determinista listo; inferencias vía Story Studio) | L-05 |
 | L-14 | Integración, merges, README final, pitch | L | P0 | M3–M4 | TODO | todo |
 | A-01 | App Streamlit: esqueleto + `FixtureService` + navegación | **F** frictionspp-svg | P0 | M1 | TODO | L-01 |
 | A-02 | Sala de Situación | **F** frictionspp-svg | P0 | M1 | TODO | A-01 |
@@ -47,7 +47,7 @@
 | L-15 | **Simulador de pesos**: `scoring.rescore(bundle, weights)` + registro de justificación | L | P1 | M2 | DONE (núcleo; vista = A-10) | L-03 |
 | L-16 | **Recibo de trazabilidad** por decisión (JSON + hash: snapshot, afirmaciones, revisor) | L | P1 | M2 | DONE | L-12 |
 | L-17 | `config/verification_sources.v1.yaml`: tema → institución oficial sugerida (INEC, SINAPROC, ACP, MEF, ATP, ASEP…) | L | P1 | M1 | DONE | — |
-| L-18 | Métrica de **preservación de atribución** (validador `STATUS_MISMATCH`) | L | P1 | M3 | TODO | L-09 |
+| L-18 | Métrica de **preservación de atribución** (validador `STATUS_MISMATCH`) | L | P1 | M3 | DONE (generation_report.jsonl) | L-09 |
 | A-07 | **Agenda de la mañana** (top 5 + por qué + a quién verificar) en la Sala de Situación | **W** LowCrime | P0 | M2 | TODO | A-02, L-17 |
 | A-08 | **Clic en número → tarjeta de evidencia**, componente reutilizable en todas las pantallas | **F** frictionspp-svg | P0 | M1 | TODO | A-01 |
 | A-09 | **Modo jurado** en Consultas (las 4 preguntas del PDF precargadas) | **W** LowCrime | P1 | M2 | TODO | A-04 |

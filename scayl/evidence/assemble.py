@@ -27,6 +27,8 @@ from scayl.evidence.linking import link_indicators, link_seismic, news_ref, perc
 from scayl.evidence.provenance import outlet_key, source_dna
 from scayl.evidence.scoring import ScoringInput, score
 from scayl.evidence.status import evidence_status, recommended_action, verification_sources
+from scayl.gen.guard import FLAG as INJECTION_FLAG
+from scayl.gen.guard import scan as scan_injection
 from scayl.gen.validators import SCOPE_PHRASE
 
 RECIRCULATION_GAP = timedelta(days=7)
@@ -153,4 +155,6 @@ def build_event(
         gap=build_gap(topic, claims, bool(official), headline_only),
         text_scope_note=SCOPE_PHRASE if headline_only else "Basado en titular y descripción del RSS.",
         synthetic=any(i.sintetico for i in items),
+        security_flags=[f"{INJECTION_FLAG}:news:{i.id_noticia}" for i in items
+                        if scan_injection(i.titulo) or scan_injection(i.descripcion)],
     )

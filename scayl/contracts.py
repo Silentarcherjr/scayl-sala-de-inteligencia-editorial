@@ -18,7 +18,7 @@ from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
-CONTRACT_VERSION = "0.1.0"
+CONTRACT_VERSION = "0.2.0"  # 0.2.0: Event.security_flags; UIBundle.news/indicators/seismic (additive)
 
 
 class _Model(BaseModel):
@@ -268,7 +268,7 @@ class ScoreComponents(_Model):
     """Each component normalized to [0, 1] with a documented rule."""
 
     R: float = Field(ge=0, le=1)
-    I: float = Field(ge=0, le=1)  # noqa: E741
+    I: float = Field(ge=0, le=1)
     U: float = Field(ge=0, le=1)
     N: float = Field(ge=0, le=1)
     E: float = Field(ge=0, le=1)
@@ -315,6 +315,8 @@ class Event(_Model):
     gap: InvestigationGap | None = None
     text_scope_note: str | None = None  # "Basado únicamente en titular/metadatos"
     synthetic: bool = False
+    # e.g. ["posible_inyeccion:news:<id>"]: source text with instruction-like content, treated as data
+    security_flags: list[str] = Field(default_factory=list)
 
 
 # ---------------------------------------------------------------------------
@@ -424,4 +426,9 @@ class UIBundle(_Model):
     signals_valid: int
     events: list[Event]
     packages: list[StoryPackage] = Field(default_factory=list)
+    # Source records (titles + metadata only; descriptions stripped in public builds). Used by the
+    # Event Room (constituent publications) and by Q&A retrieval.
+    news: list[NewsItem] = Field(default_factory=list)
+    indicators: list[IndicatorObservation] = Field(default_factory=list)
+    seismic: list[SeismicEvent] = Field(default_factory=list)
     reviews: list[ReviewRecord] = Field(default_factory=list)

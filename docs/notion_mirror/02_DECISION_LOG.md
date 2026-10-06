@@ -66,3 +66,10 @@
 - **Alternativas:** el reparto original por tipo (UI frente a datos).
 - **Motivo:** el snapshot y una UI visible temprano desbloquean a todos y permiten probar antes; la llegada tardía de LowCrime es compatible con tareas que dependen de lo anterior. Además, que el editor llegue después ayuda a que elija el top 5 sin conocer el ranking.
 - **Compromiso:** frictionspp-svg tiene más carga; `app/Home.py` es suyo y LowCrime aporta componentes. · **Fecha:** 2026-10-06
+
+### DL-012 · Contrato 0.2.0 y diseño de generación/consultas (M2)
+- **Decisión:** (a) contrato 0.2.0, aditivo: `Event.security_flags` y `UIBundle.news/indicators/seismic` (la Sala de Eventos necesita los titulares de cada evento y las consultas necesitan todas las filas del Banco Mundial). (b) Cliente Ollama por HTTP (`requests`), sin dependencia nueva; caché direccionada por contenido; modos live/cache/template. (c) Consultas: prefiltro determinista (cobertura de términos ≥0,6; año pedido presente; valor nulo ⇒ abstención) antes de llamar al LLM; las respuestas pasan por los mismos validadores que el Story Studio; sin modelo, modo extractivo etiquetado. (d) Afirmaciones extraídas por LLM: siempre DECLARACION/SOLO_REPORTADA atribuida al medio.
+- **Alternativas:** cliente `ollama` de Python; recuperación densa para la abstención; que el LLM decida solo cuándo abstenerse.
+- **Motivo:** la abstención determinista es verificable y no depende del modelo; menos dependencias; los mismos validadores en todos los textos generados.
+- **Compromiso:** el umbral 0,6 es heurístico. B-08 debe medir la tasa de abstención correcta e incorrecta y ajustarlo con el benchmark de desarrollo, nunca con el reservado.
+- **Fecha:** 2026-10-06

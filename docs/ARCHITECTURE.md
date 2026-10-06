@@ -203,6 +203,17 @@ def get_embedder(kind: Literal["tfidf", "st"], model: str | None) -> Embedder
 - **Caché:** clave = sha256(prompt_version + modelo + JSON de entrada). Cada entrada guarda `GenerationMeta`.
   La UI siempre muestra si una salida es `live`, `cache` o `template`.
 
+### 5.2b Consultas (implementado, DL-012)
+`scayl/gen/qa.py`: unidades de evidencia (`news:`, `wb:`, `usgs:`) → BM25 + cobertura de términos →
+prefiltro determinista de abstención (cobertura <0,6; año pedido ausente; valor nulo) → LLM con unidades
+dentro de un bloque de datos no confiables → validadores (mismos códigos que el Story Studio) → si no
+sobrevive nada, abstención. Sin modelo: respuesta extractiva etiquetada `EXTRACTIVE_MODE`.
+
+### 5.2c Reporte de generación medido
+`data/processed/<snap>/generation_report.jsonl` (una línea por paquete LLM): oraciones generadas y
+conservadas, eliminadas por código, preservación de atribución antes/después de validar, latencia, tokens
+y costo. Es la fuente del Trust Lab para cobertura de citas y atribución (B-08).
+
 ### 5.3 Defensa contra inyección (T07)
 1. El texto de las fuentes se pasa **solo** dentro de bloques JSON de datos, delimitados como
    `<<<FUENTE id=... >>> ... <<<FIN>>>`, después de eliminar los delimitadores del propio contenido.

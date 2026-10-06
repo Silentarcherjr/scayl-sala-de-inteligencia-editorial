@@ -28,9 +28,13 @@ from scayl.contracts import (
 )
 from scayl.evidence.assemble import build_event
 from scayl.evidence.scoring import rank
+from scayl.gen.claims import extract as extract_claims
+from scayl.gen.llm import LLM
+from scayl.gen.studio import generate_with_report
 from scayl.gen.template import build_template_package
 
 log = logging.getLogger("scayl.pipeline")
+GENERATION_REPORTS: list[dict] = []  # measured per-package generation facts of the last build (Trust Lab)
 ClassifyFn = Callable[[list[NewsItem]], list[tuple[Topic, float | None]]]
 ClusterFn = Callable[[list[NewsItem]], list[list[str]]]
 
@@ -63,7 +67,12 @@ def build_bundle(
     signals_total: int,
     classify: ClassifyFn = fallback_classify,
     cluster: ClusterFn = fallback_cluster,
+    llm: LLM | None = None,
+    llm_top_n: int = 15,
+    public: bool = False,
 ) -> UIBundle:
+    """``llm`` (live/cache) enriches the top-N events with LLM claims and an LLM Story Studio package;
+    other events get the deterministic template. ``public`` strips RSS descriptions (rights)."""
     by_id = {n.id_noticia: n for n in news}
     topics = dict(zip((n.id_noticia for n in news), classify(news)))
     clusters = [c for c in cluster(news) if c]
@@ -79,9 +88,31 @@ def build_bundle(
         events.append(build_event(f"EVT-{n:04d}", items, topic, conf, indicators, quakes, cutoff))
 
     events = rank(events)
-    packages = [build_template_package(e) for e in events if e.claims]
+    if llm is not None and llm.mode != "template":
+        enriched = []
+        for idx, e in enumerate(events):
+            if idx < llm_top_n:
+                extra = extract_claims(e, [by_id[i] for i in e.member_ids], llm)
+                if extra:
+                    gap = e.gap.model_copy(update={"it_is_claimed": e.gap.it_is_claimed + [c.claim_id for c in extra]})
+                    e = e.model_copy(update={"claims": e.claims + extra, "gap": gap})
+            enriched.append(e)
+        events = enriched
+    packages, reports = [], []
+    for idx, e in enumerate(events):
+        if not e.claims:
+            continue
+        if llm is not None and idx < llm_top_n:
+            pkg, report = generate_with_report(e, llm)
+            reports.append(report)
+        else:
+            pkg = build_template_package(e)
+        packages.append(pkg)
+    GENERATION_REPORTS[:] = reports
+    kept_news = [n.model_copy(update={"descripcion": None}) if public else n for n in news]
     return UIBundle(snapshot_version=snapshot_version, snapshot_cutoff_utc=cutoff, signals_total=signals_total,
-                    signals_valid=len(news), events=events, packages=packages)
+                    signals_valid=len(news), events=events, packages=packages, news=kept_news,
+                    indicators=indicators, seismic=quakes)
 
 
 def fichas(bundle: UIBundle) -> list[Ficha]:
@@ -105,6 +136,9 @@ def write_outputs(bundle: UIBundle, out_dir: Path) -> None:
     with (out_dir / "fichas.jsonl").open("w", encoding="utf-8") as f:
         for ficha in fichas(bundle):
             f.write(json.dumps(ficha.model_dump(mode="json"), ensure_ascii=False) + "\n")
+    with (out_dir / "generation_report.jsonl").open("w", encoding="utf-8") as f:
+        for report in GENERATION_REPORTS:
+            f.write(json.dumps(report, ensure_ascii=False) + "\n")
 
 
 def _load_worker_b(snapshot: Path):
@@ -152,12 +186,17 @@ def main(argv: list[str] | None = None) -> None:
     b = sub.add_parser("build", help="snapshot -> bundle.json + fichas.jsonl")
     b.add_argument("--snapshot", type=Path, default=Path("data/raw/v1"))
     b.add_argument("--out", type=Path, default=None)
+    b.add_argument("--llm", choices=["template", "live", "cache"], default="template",
+                   help="live: Ollama on this machine (fills the cache); cache: reuse precomputed outputs")
+    b.add_argument("--top", type=int, default=15, help="events enriched with LLM claims + package")
+    b.add_argument("--public", action="store_true", help="strip RSS descriptions (hosted demo)")
     args = parser.parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
 
     news, indicators, quakes, classify, cluster, total = _load_worker_b(args.snapshot)
+    llm = None if args.llm == "template" else LLM(mode=args.llm)
     bundle = build_bundle(news, indicators, quakes, _cutoff(args.snapshot), args.snapshot.name, total,
-                          classify, cluster)
+                          classify, cluster, llm=llm, llm_top_n=args.top, public=args.public)
     out = args.out or Path("data/processed") / args.snapshot.name
     write_outputs(bundle, out)
     log.info("bundle: %d signals -> %d events -> %s", len(news), len(bundle.events), out / "bundle.json")
