@@ -60,3 +60,9 @@
 - **Decisión:** Humano 2 actúa como "editor" (top 5 a ciegas antes de que exista ranking y revisión de ≥30 afirmaciones). Humano 3 etiqueta temas y agrupación. Humano 1 + Lead ajustan pesos y umbrales.
 - **Motivo:** quien ajusta el sistema no debe evaluarlo (evita fuga de información en P@5 y en la validez de sustento).
 - **Compromiso:** el editor no es un periodista de TVN → P@5 se declara exploratoria. · **Fecha:** 2026-10-06
+
+### DL-011 · Asignación de personas: frictionspp-svg carga el camino crítico
+- **Decisión:** frictionspp-svg (empieza ya) toma los datos (B-01..B-07, B-11), la primera UI (A-01, A-02, A-08) y la parte semántica. LowCrime (llega más tarde) toma el resto de la UI (A-03..A-07, A-09, A-10), la evaluación (B-08, B-12), el despliegue (A-06) y el rol de editor independiente (H-08, B-09). El benchmark de modelos (B-10) lo hace quien tenga la RTX 4060.
+- **Alternativas:** el reparto original por tipo (UI frente a datos).
+- **Motivo:** el snapshot y una UI visible temprano desbloquean a todos y permiten probar antes; la llegada tardía de LowCrime es compatible con tareas que dependen de lo anterior. Además, que el editor llegue después ayuda a que elija el top 5 sin conocer el ranking.
+- **Compromiso:** frictionspp-svg tiene más carga; `app/Home.py` es suyo y LowCrime aporta componentes. · **Fecha:** 2026-10-06
