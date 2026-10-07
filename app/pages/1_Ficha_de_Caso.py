@@ -219,19 +219,20 @@ def main() -> None:
             st.subheader(title)
             entries = getattr(event.gap, field) if event.gap else []
             if not entries:
-                st.info("No disponible.")
+                st.info("No hay elementos registrados en este apartado para el caso.")
             for entry in entries:
                 st.text(claims.get(entry, entry))
     with tabs[4]:
         # Keep the package tied to its snapshot and event across Streamlit reruns.
         key = f"case-package:{bundle.snapshot_version}:{event.event_id}"
-        if st.button("Generar", key=f"generate-{event.event_id}"):
+        if st.button("Generar", key=f"generate-{event.event_id}",
+                     help="Crea un borrador con la evidencia del caso. No aprueba ni publica contenido."):
             st.session_state[key] = service.generate_package(event.event_id)
         if key in st.session_state and st.button("Volver al paquete del snapshot"):
             del st.session_state[key]
         package = st.session_state.get(key) or service.get_package(event.event_id)
         if package is None:
-            st.info("No hay un paquete generado para este caso.")
+            st.info("No hay un paquete generado para este caso. Usa Generar para preparar un borrador con la evidencia disponible.")
         else:
             show_package(package, event)
     with tabs[5]:
