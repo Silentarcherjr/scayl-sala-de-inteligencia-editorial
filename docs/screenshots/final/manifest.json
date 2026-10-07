@@ -12,9 +12,9 @@
   "event_id": "EVT-0111",
   "no_rss_descriptions": true,
   "notes": [
-    "Screenshots capture main, not unpublished PR41 metrics or AP014 UI proposal. Refresh Trust Lab after their integration.",
-    "Local browser screenshots, not HF deployment or a recorded offline video.",
-    "No human review or weight change was submitted; temporary review state."
+    "Root provenance describes the original screenshot batch. Per-file provenance overrides it for refreshed images.",
+    "Images 10, 12 and 13 use public reviewed artifacts from main 5b6fd71 and the completed B-09 evaluation. Other screenshots were not recaptured.",
+    "Local browser screenshots only; no HF deployment, no submitted review or changed weights."
   ],
   "files": [
     {
@@ -75,13 +75,67 @@
       "path": "10-trust-lab.png",
       "width": 1280,
       "height": 720,
-      "sha256": "d11850c42261ef8e355820de323469b3dd32fd7789552ea7c14b53a28b3f82c2"
+      "sha256": "a2ed058c09254ae4c8e38c1008bb29adaee0ef6532309885fd0e19b2b6732881",
+      "provenance": {
+        "captured_at": "2026-10-07T22:17:54.689607+00:00",
+        "source_commit": "5b6fd71",
+        "stage": "deploy/stage-human-reviewed",
+        "bundle_sha256": "45cd5d7524bb295565bd00476357f1b9fc2bfa8329af71d4f549eecb5d08ce2c",
+        "evaluation_sha256": "bccf10fcba83e6755ae64b225a80be88c2bf90d7914f7f74e391aa46fe889ffd",
+        "signals": 187,
+        "events": 165,
+        "generation_modes": {
+          "cache": 15,
+          "template": 150
+        },
+        "ui": "AP-014 applied, local password-gated Streamlit; not HF deployment"
+      }
     },
     {
       "path": "11-simulador.png",
       "width": 1280,
       "height": 720,
       "sha256": "e8ab01ac81b806c6f8876d10d50e491e83899410a1180e62b6d31974019e71d9"
+    },
+    {
+      "path": "12-space-acceso.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "0daaacd391448214c895a912c956259a95ff31136aec385b636d5dc8138d777b",
+      "provenance": {
+        "captured_at": "2026-10-07T22:17:54.689607+00:00",
+        "source_commit": "5b6fd71",
+        "stage": "deploy/stage-human-reviewed",
+        "bundle_sha256": "45cd5d7524bb295565bd00476357f1b9fc2bfa8329af71d4f549eecb5d08ce2c",
+        "evaluation_sha256": "bccf10fcba83e6755ae64b225a80be88c2bf90d7914f7f74e391aa46fe889ffd",
+        "signals": 187,
+        "events": 165,
+        "generation_modes": {
+          "cache": 15,
+          "template": 150
+        },
+        "ui": "AP-014 applied, local password-gated Streamlit; not HF deployment"
+      }
+    },
+    {
+      "path": "13-trust-lab-procedencia.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "11a5701ba4a01f9f0a9b401465b1a477007aba1e8efe94f5049bed3cbb34bed5",
+      "provenance": {
+        "captured_at": "2026-10-07T22:17:54.689607+00:00",
+        "source_commit": "5b6fd71",
+        "stage": "deploy/stage-human-reviewed",
+        "bundle_sha256": "45cd5d7524bb295565bd00476357f1b9fc2bfa8329af71d4f549eecb5d08ce2c",
+        "evaluation_sha256": "bccf10fcba83e6755ae64b225a80be88c2bf90d7914f7f74e391aa46fe889ffd",
+        "signals": 187,
+        "events": 165,
+        "generation_modes": {
+          "cache": 15,
+          "template": 150
+        },
+        "ui": "AP-014 applied, local password-gated Streamlit; not HF deployment"
+      }
     }
   ]
 }

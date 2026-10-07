@@ -75,6 +75,28 @@ def pytest_results(path: Path | None) -> dict:
     return results
 
 
+def human_label_metrics(path: Path) -> dict:
+    """B-07 (human topic labels and reviewed clustering pairs), imported with its provenance; absent -> unchanged."""
+    if not path.exists():
+        return {}
+    data = json.loads(path.read_text(encoding="utf-8"))
+    evidence = {"evidence": path.relative_to(ROOT).as_posix() if path.is_relative_to(ROOT) else path.name,
+                "sha256": hashlib.sha256(path.read_bytes()).hexdigest()}
+    out = {}
+    topics, clustering = data.get("topics") or {}, data.get("clustering") or {}
+    if str(topics.get("status", "")).startswith("medido"):
+        out["topics_macro_f1"] = {"status": "medido", "baseline": topics["baseline"]["macro_f1"],
+                                  "ai": topics["ai"]["macro_f1"], "n": topics["baseline"]["n"],
+                                  "scope": "100 titulares C-01 etiquetados por un humano (B-07); el humano vio antes la propuesta IA.",
+                                  "measurement": evidence}
+    if str(clustering.get("status", "")).startswith("medido"):
+        out["clustering"] = {"status": "medido", "baseline_f1": clustering["baseline"]["f1"],
+                             "ai_f1": clustering["ai"]["f1"],
+                             "scope": "Pares de desarrollo 2025 revisados por un humano; usados para calibrar τ: resultado optimista.",
+                             "measurement": evidence}
+    return out
+
+
 def build_report(bundle: UIBundle, selection: dict, pytest_report: Path | None = None,
                  redteam_report: Path | None = None, precompute_report: Path | None = None) -> dict:
     missing = "No hay conjunto etiquetado y ejecución de benchmark guardada para esta métrica."
@@ -160,11 +182,14 @@ def main() -> None:
     if args.redteam_report:
         redteam_report = saved.with_suffix(".redteam.json")
         shutil.copyfile(args.redteam_report, redteam_report)
-    precompute_report = args.precompute_report or ROOT / "eval/results/b13-b14-precompute.json"
+    default_precompute = next((ROOT / "eval/results" / name for name in ("dl029-precompute.json", "b13-b14-precompute.json")
+                               if (ROOT / "eval/results" / name).exists()), ROOT / "eval/results/b13-b14-precompute.json")
+    precompute_report = args.precompute_report or default_precompute
     if not precompute_report.exists() and args.precompute_report:
         raise FileNotFoundError(precompute_report)
     precompute_report = precompute_report if precompute_report.exists() else None
     report = build_report(bundle, selection, pytest_report, redteam_report, precompute_report)
+    report["metrics"].update(human_label_metrics(ROOT / "eval/results/b07-human-metrics.json"))
     if precompute_report:
         archive = saved.with_suffix(".precompute.json")
         shutil.copyfile(precompute_report, archive)

@@ -212,3 +212,10 @@
 - **Set reservado v2 (10 preguntas escritas por un humano sin ver el código):** 6/6 trampas con abstención correcta. Las 4 preguntas esperadas como "respondibles" eran de cultura general (moneda, año de inauguración del Canal, provincia más grande, presidente que inauguró el Canal) y **no están en el corpus** (verificado: 0 coincidencias). SCAYL responde solo con evidencia citada, no de memoria, así que la abstención es el comportamiento diseñado. Se reportan ambas lecturas sin reescribir las expectativas humanas: 6/10 según las expectativas del autor; 10/10 con el criterio "solo con evidencia del corpus".
 - **Para el pitch:** "no responde de memoria" es una garantía, no una carencia; se muestra con HV2-07 ("¿Cuál es la moneda oficial de Panamá?" → abstención con la información que faltaría).
 - **Fecha:** 2026-10-07
+
+### DL-031 · B-09: validez de sustento 25/30, reportada sin retocar
+- **Resultado (LowCrime, humano):** 25 sí, 2 parcial y 3 no sobre 30 afirmaciones de paquetes template: **83%**, por debajo de la meta orientativa (≥90%).
+- **Revisión del Lead (sin cambiar etiquetas):** los 5 casos no "sí" (SR04, SR05, SR10, SR19, SR25) son frases "Según <medio>: <titular>" cuya evidencia es ese mismo titular, palabra por palabra. Dos están en otro idioma (portugués; inglés con maratí) y uno es un caso judicial ajeno a Panamá. Lo más probable es que el revisor juzgara relevancia o veracidad, no sustento. Es un hallazgo de producto: **la cita textual de un titular irrelevante o en otro idioma no le sirve al editor aunque esté "respaldada"**. Siguiente paso fuera de alcance: filtrar por relevancia para Panamá e idioma antes de producir.
+- **No se re-etiqueta** después de ver el resultado (sería sesgo). En la entrega se reporta 25/30 con esta lectura.
+- **Evaluación final consolidada:** `eval/results/latest.json` integra citas 45/45, validez 25/30, red-team 16/16, temas (0,76 / 0,25), agrupación (0,44 / 0,99), P@5 1/5 y latencia 13,1 / 17,0 s. Siguen "no medido": tokens, preservación de atribución y latencia de Consultas.
+- **Fecha:** 2026-10-07

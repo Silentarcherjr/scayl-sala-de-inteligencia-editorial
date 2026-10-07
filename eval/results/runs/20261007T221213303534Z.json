@@ -1,7 +1,7 @@
 {
-  "run_at": "2026-10-07T22:25:11.862309+00:00",
+  "run_at": "2026-10-07T22:12:13.845297+00:00",
   "snapshot": "v1",
-  "hardware": "Linux x86_64 · x86_64 · Python 3.13.16",
+  "hardware": "Windows AMD64 · AMD64 Family 25 Model 116 Stepping 1, AuthenticAMD · Python 3.14.7",
   "models": [
     "ollama:qwen3:8b"
   ],
@@ -12,52 +12,21 @@
   "metrics": {
     "citation_coverage": {
       "status": "medido",
-      "num": 45,
-      "den": 45,
+      "num": 49,
+      "den": 49,
       "value": 1.0,
       "scope": "Kept brief/script sentences with claim_ids, from generation_report; includes nonfactual disclaimer sentences in denominator. Social copy excluded by existing report. Not support-validity or human fact-checking.",
       "measurement": {
-        "evidence": "eval/results/dl029-precompute.json",
-        "sha256": "1c802665cc10a2be7088cc073efe86870142b879a21b32592df0d6fd0a8a8e1e",
-        "run_at": "2026-10-07T21:01:16.650991Z",
-        "hardware": {
-          "gpu": "AMD Radeon RX 9060 XT 8 GiB / Ollama Vulkan",
-          "gpu_offloaded_layers": "37/37 (local server log)",
-          "ollama_version": {
-            "version": "0.40.0"
-          },
-          "ollama_ps": {
-            "models": [
-              {
-                "name": "qwen3:8b",
-                "model": "qwen3:8b",
-                "size": 5569815510,
-                "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
-                "details": {
-                  "parent_model": "",
-                  "format": "gguf",
-                  "family": "qwen3",
-                  "families": [
-                    "qwen3"
-                  ],
-                  "parameter_size": "8.2B",
-                  "quantization_level": "Q4_K_M"
-                },
-                "expires_at": "2026-10-07T16:29:05.5604381-05:00",
-                "size_vram": 5569815510,
-                "context_length": 4096,
-                "runner": "llamacpp"
-              }
-            ]
-          },
-          "embedding_device": "cpu"
-        },
+        "evidence": "eval/results/b13-b14-precompute.json",
+        "sha256": "9b9c691bd9f7eee7901f8b8ae07ffe8191c6bd5a58e6084f4c535bbcc3bd32ee",
+        "run_at": "2026-10-07T05:05:47.367393Z",
+        "hardware": "AMD Radeon RX 9060 XT, 8 GiB; Ollama 0.40.0 Vulkan; qwen3:8b 37/37 layers offloaded (server log). Embeddings E5 on CPU.",
         "models": [
           "ollama:qwen3:8b"
         ],
         "packages": 15,
-        "generation_report_sha256": "75ec877a3be918441cb3a4198044e935c643b5f9b22c661d191361ce44653a2f",
-        "archive": "eval/results/runs/20261007T222511745754Z.precompute.json"
+        "generation_report_sha256": "0f9fb7e8b9d801b3667784b6ee69fe2da148a09a00f9f624163a57f358cfab4d",
+        "archive": "eval/results/runs/20261007T221213303534Z.precompute.json"
       }
     },
     "support_validity": {
@@ -98,10 +67,10 @@
         "template"
       ],
       "method": "sí / todas las filas revisadas; parcial no suma al numerador. Requiere toda la muestra (>=30).",
-      "evidence": "support_review.csv",
-      "sha256": "0ca6ed55369ee8993f89030484456dda445133aeacf5b46a3b3305544f8a6626",
+      "evidence": "data/labels/support_review.csv",
+      "sha256": "98d793970c43cb5fc7902048c7d64c5b29214ab3f36f6ffc909c10cd26e1b73e",
       "bundle_sha256": "564c2142637436e7c3af2692672f4b4eb07c0b1f1857fc12b8fb3bc749e936bf",
-      "archive": "eval/results/runs/20261007T222511745754Z.support.csv"
+      "archive": "eval/results/runs/20261007T221213303534Z.support.csv"
     },
     "abstention_correct": {
       "status": "medido",
@@ -120,25 +89,16 @@
       "definition": "Abstenciones observadas / controles contestables (menor es mejor)."
     },
     "topics_macro_f1": {
-      "status": "medido",
-      "baseline": 0.7568136932192232,
-      "ai": 0.24645960051496715,
-      "n": 100,
-      "scope": "100 titulares C-01 etiquetados por un humano (B-07); el humano vio antes la propuesta IA.",
-      "measurement": {
-        "evidence": "eval/results/b07-human-metrics.json",
-        "sha256": "80f86d3b6a0f92fe868f69bbcea176f944eaf8f0e1769f676a6c7cc928878919"
-      }
+      "status": "no medido",
+      "reason": "No hay conjunto etiquetado y ejecución de benchmark guardada para esta métrica.",
+      "num": null,
+      "den": null
     },
     "clustering": {
-      "status": "medido",
-      "baseline_f1": 0.43636363636363634,
-      "ai_f1": 0.988235294117647,
-      "scope": "Pares de desarrollo 2025 revisados por un humano; usados para calibrar τ: resultado optimista.",
-      "measurement": {
-        "evidence": "eval/results/b07-human-metrics.json",
-        "sha256": "80f86d3b6a0f92fe868f69bbcea176f944eaf8f0e1769f676a6c7cc928878919"
-      }
+      "status": "no medido",
+      "reason": "No hay conjunto etiquetado y ejecución de benchmark guardada para esta métrica.",
+      "num": null,
+      "den": null
     },
     "tokens": {
       "status": "no medido",
@@ -191,26 +151,26 @@
       "editor_unique_events": 5,
       "system_top5": [
         "EVT-0101",
-        "EVT-0116",
-        "EVT-0078",
+        "EVT-0102",
+        "EVT-0100",
         "EVT-0051",
-        "EVT-0083"
+        "EVT-0078"
       ],
       "matched_events": [
         "EVT-0078"
       ],
       "unmatched_top5": [
         "EVT-0101",
-        "EVT-0116",
-        "EVT-0051",
-        "EVT-0083"
+        "EVT-0102",
+        "EVT-0100",
+        "EVT-0051"
       ],
       "editor_positions": {
-        "EVT-0078": 3,
-        "EVT-0087": 19,
-        "EVT-0107": 10,
-        "EVT-0121": 23,
-        "EVT-0143": 6
+        "EVT-0078": 5,
+        "EVT-0087": 23,
+        "EVT-0107": 15,
+        "EVT-0121": 54,
+        "EVT-0143": 22
       },
       "event_count": 165,
       "duplicates_collapsed": 0,
@@ -246,53 +206,22 @@
       },
       "package": {
         "n": 15,
-        "median": 13131.0,
-        "p95": 16997.499999999996,
+        "median": 15068.0,
+        "p95": 17755.0,
         "scope": "Story Studio live successful responses, wall clock; includes first load if any. Claims calls excluded. Cached/fallback latency excluded.",
         "percentile_method": "linear / Hyndman-Fan type 7",
         "status": "medido",
         "measurement": {
-          "evidence": "eval/results/dl029-precompute.json",
-          "sha256": "1c802665cc10a2be7088cc073efe86870142b879a21b32592df0d6fd0a8a8e1e",
-          "run_at": "2026-10-07T21:01:16.650991Z",
-          "hardware": {
-            "gpu": "AMD Radeon RX 9060 XT 8 GiB / Ollama Vulkan",
-            "gpu_offloaded_layers": "37/37 (local server log)",
-            "ollama_version": {
-              "version": "0.40.0"
-            },
-            "ollama_ps": {
-              "models": [
-                {
-                  "name": "qwen3:8b",
-                  "model": "qwen3:8b",
-                  "size": 5569815510,
-                  "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
-                  "details": {
-                    "parent_model": "",
-                    "format": "gguf",
-                    "family": "qwen3",
-                    "families": [
-                      "qwen3"
-                    ],
-                    "parameter_size": "8.2B",
-                    "quantization_level": "Q4_K_M"
-                  },
-                  "expires_at": "2026-10-07T16:29:05.5604381-05:00",
-                  "size_vram": 5569815510,
-                  "context_length": 4096,
-                  "runner": "llamacpp"
-                }
-              ]
-            },
-            "embedding_device": "cpu"
-          },
+          "evidence": "eval/results/b13-b14-precompute.json",
+          "sha256": "9b9c691bd9f7eee7901f8b8ae07ffe8191c6bd5a58e6084f4c535bbcc3bd32ee",
+          "run_at": "2026-10-07T05:05:47.367393Z",
+          "hardware": "AMD Radeon RX 9060 XT, 8 GiB; Ollama 0.40.0 Vulkan; qwen3:8b 37/37 layers offloaded (server log). Embeddings E5 on CPU.",
           "models": [
             "ollama:qwen3:8b"
           ],
           "packages": 15,
-          "generation_report_sha256": "75ec877a3be918441cb3a4198044e935c643b5f9b22c661d191361ce44653a2f",
-          "archive": "eval/results/runs/20261007T222511745754Z.precompute.json"
+          "generation_report_sha256": "0f9fb7e8b9d801b3667784b6ee69fe2da148a09a00f9f624163a57f358cfab4d",
+          "archive": "eval/results/runs/20261007T221213303534Z.precompute.json"
         }
       }
     },
@@ -303,7 +232,7 @@
       "status": "passed",
       "num": 2,
       "den": 2,
-      "evidence": "eval/results/runs/20261007T222511745754Z.pytest.xml",
+      "evidence": "eval\\results\\runs\\20261007T221213303534Z.pytest.xml",
       "cases": [
         {
           "test": "tests.test_t01_validation.test_invalid_dates_nulls_duplicates_and_window",
@@ -321,7 +250,7 @@
       "status": "passed",
       "num": 1,
       "den": 1,
-      "evidence": "eval/results/runs/20261007T222511745754Z.pytest.xml",
+      "evidence": "eval\\results\\runs\\20261007T221213303534Z.pytest.xml",
       "cases": [
         {
           "test": "tests.test_assemble.test_t02_three_records_same_event_do_not_triple_importance",
@@ -335,7 +264,7 @@
       "status": "passed",
       "num": 1,
       "den": 1,
-      "evidence": "eval/results/runs/20261007T222511745754Z.pytest.xml",
+      "evidence": "eval\\results\\runs\\20261007T221213303534Z.pytest.xml",
       "cases": [
         {
           "test": "tests.test_assemble.test_t03_recirculated_story_keeps_original_date",
@@ -349,7 +278,7 @@
       "status": "passed",
       "num": 1,
       "den": 1,
-      "evidence": "eval/results/runs/20261007T222511745754Z.pytest.xml",
+      "evidence": "eval\\results\\runs\\20261007T221213303534Z.pytest.xml",
       "cases": [
         {
           "test": "tests.test_assemble.test_t04_world_bank_is_historical_context_with_warning",
@@ -363,7 +292,7 @@
       "status": "passed",
       "num": 1,
       "den": 1,
-      "evidence": "eval/results/runs/20261007T222511745754Z.pytest.xml",
+      "evidence": "eval\\results\\runs\\20261007T221213303534Z.pytest.xml",
       "cases": [
         {
           "test": "tests.test_assemble.test_t05_incompatible_figures_are_both_shown_and_unresolved",
@@ -377,7 +306,7 @@
       "status": "passed",
       "num": 13,
       "den": 13,
-      "evidence": "eval/results/runs/20261007T222511745754Z.pytest.xml",
+      "evidence": "eval\\results\\runs\\20261007T221213303534Z.pytest.xml",
       "cases": [
         {
           "test": "tests.test_t06_qa_abstention.test_unanswerable_question_abstains_before_calling_llm",
@@ -439,7 +368,7 @@
       "status": "passed",
       "num": 4,
       "den": 4,
-      "evidence": "eval/results/runs/20261007T222511745754Z.pytest.xml",
+      "evidence": "eval\\results\\runs\\20261007T221213303534Z.pytest.xml",
       "cases": [
         {
           "test": "tests.test_t07_injection.test_injection_is_detected_and_flagged_on_the_event",
@@ -465,7 +394,7 @@
       "status": "passed",
       "num": 16,
       "den": 16,
-      "evidence": "eval/results/runs/20261007T222511745754Z.pytest.xml",
+      "evidence": "eval\\results\\runs\\20261007T221213303534Z.pytest.xml",
       "cases": [
         {
           "test": "tests.test_assemble.test_t08_high_priority_insufficient_evidence_recommends_investigation",
@@ -539,7 +468,7 @@
       "status": "passed",
       "num": 19,
       "den": 19,
-      "evidence": "eval/results/runs/20261007T222511745754Z.pytest.xml",
+      "evidence": "eval\\results\\runs\\20261007T221213303534Z.pytest.xml",
       "cases": [
         {
           "test": "tests.test_t09_studio.test_llm_package_is_validated_and_hallucination_removed",
@@ -625,7 +554,7 @@
       "status": "passed",
       "num": 1,
       "den": 1,
-      "evidence": "eval/results/runs/20261007T222511745754Z.pytest.xml",
+      "evidence": "eval\\results\\runs\\20261007T221213303534Z.pytest.xml",
       "cases": [
         {
           "test": "tests.test_service_pipeline.test_pipeline_builds_bundle_and_fichas_offline",
@@ -638,7 +567,7 @@
   },
   "cost_scope": "Esta evaluación lee artefactos locales, sin llamadas de API; no mide hardware/electricidad.",
   "redteam": {
-    "evidence": "eval/results/runs/20261007T222511745754Z.redteam.json",
+    "evidence": "eval/results/runs/20261007T221213303534Z.redteam.json",
     "run_at": "2026-10-07T17:42:42.287913+00:00",
     "failed_ids": [],
     "scope": "Set sintético de desarrollo escrito por IA; template/extractivo, sin modelo vivo ni gold humano."
@@ -653,37 +582,37 @@
   ],
   "inputs": [
     {
-      "path": "data/processed/v1/bundle.json",
-      "sha256": "cf87681ca0bd272dcf445dd0468cc0f21a14d1cc4b92c4fc5d19be8806213bb8"
+      "path": "data\\processed\\v1\\bundle.json",
+      "sha256": "45cd5d7524bb295565bd00476357f1b9fc2bfa8329af71d4f549eecb5d08ce2c"
     },
     {
-      "path": "data/labels/editor_top5.json",
-      "sha256": "208c25e3aa2f147631c75f1f0154fef0b6b10156cb6132737b475745d862a2bc"
+      "path": "data\\labels\\editor_top5.json",
+      "sha256": "49b463d2cbf976a605bba3ddd52353f83da18a92b3baa0354ae286b49ce34f7c"
     },
     {
-      "path": "eval/results/runs/20261007T222511745754Z.support.csv",
-      "sha256": "0ca6ed55369ee8993f89030484456dda445133aeacf5b46a3b3305544f8a6626"
+      "path": "eval\\results\\runs\\20261007T221213303534Z.support.csv",
+      "sha256": "98d793970c43cb5fc7902048c7d64c5b29214ab3f36f6ffc909c10cd26e1b73e"
     },
     {
-      "path": "eval/results/runs/20261007T222511745754Z.support.meta.json",
-      "sha256": "0ca03de08a55d6db66d42fda071596d729f86116aa503bbcf5d769f4c5fca9ca"
+      "path": "eval\\results\\runs\\20261007T221213303534Z.support.meta.json",
+      "sha256": "ad8c8c8fd7c56635409d9758e97c34d4ed6778c5771d27cb5a3e9462ae0ab103"
     },
     {
-      "path": "eval/results/runs/20261007T222511745754Z.pytest.xml",
-      "sha256": "dbbd101d4a5775a5209e0392cf01b1c73f164d933192059ace390b4878e80f2d"
+      "path": "eval\\results\\runs\\20261007T221213303534Z.pytest.xml",
+      "sha256": "e588a528851d798634e308adacc32923a467ebf2753346fc52bd4e1bf876c8f4"
     },
     {
-      "path": "eval/results/runs/20261007T222511745754Z.redteam.json",
-      "sha256": "01ba7a7b36d46624f5274958e1a65729f6a4551b192b33e6f9c4226a23b21b0b"
+      "path": "eval\\results\\runs\\20261007T221213303534Z.redteam.json",
+      "sha256": "ddf7c5f3eb6336318f7ad9a4df64035052260835bb640ca7b2983be4e40a47fc"
     },
     {
-      "path": "eval/results/dl029-precompute.json",
-      "sha256": "1c802665cc10a2be7088cc073efe86870142b879a21b32592df0d6fd0a8a8e1e"
+      "path": "eval\\results\\b13-b14-precompute.json",
+      "sha256": "9b9c691bd9f7eee7901f8b8ae07ffe8191c6bd5a58e6084f4c535bbcc3bd32ee"
     },
     {
-      "path": "eval/results/runs/20261007T222511745754Z.precompute.json",
-      "sha256": "1c802665cc10a2be7088cc073efe86870142b879a21b32592df0d6fd0a8a8e1e"
+      "path": "eval\\results\\runs\\20261007T221213303534Z.precompute.json",
+      "sha256": "9b9c691bd9f7eee7901f8b8ae07ffe8191c6bd5a58e6084f4c535bbcc3bd32ee"
     }
   ],
-  "saved_run": "eval/results/runs/20261007T222511745754Z.json"
+  "saved_run": "eval\\results\\runs\\20261007T221213303534Z.json"
 }

@@ -29,7 +29,7 @@
 | A-03 | Ficha de Caso (6 pestañas) | **W** LowCrime | P0 | M1–M2 | DONE (PR #13) | A-01 |
 | A-04 | Consultas (Q&A) | **W** LowCrime | P0 | M2 | DONE (PR #25) | A-01 |
 | A-05 | Trust Lab (vista) | **L** Lead (DL-021) | P1 | M3 | DONE (AP-014 aplicada: red-team, procedencia y limitaciones visibles) | B-08 |
-| A-06 | Despliegue del enlace en modo `cache` | **W** LowCrime | P0 | M3 | PREPARADA (caché pública en main, PR #38; falta prueba del contenedor y confirmación del Lead para publicar) | AP-001, L-07 |
+| A-06 | Despliegue del enlace en modo `cache` | **W** LowCrime | P0 | M3 | PROBADO EN LOCAL (PR #58: stage con caché revisada, contraseña y rutas protegidas; falta publicar el Space privado) | AP-001, L-07 |
 | B-01 | Construir el snapshot propio según el PDF §6–7 (fetchers) → `data/raw/v1` | **F** frictionspp-svg | P0 | M0 | DONE (PR #19) | — |
 | B-02 | `ingest/manifest.py` (SHA-256, conteos, transformaciones) + diccionario | **F** frictionspp-svg | P0 | M0 | DONE (PR #19) | B-01 |
 | B-03 | `ingest/validate.py` + normalización → `data/processed` + `quality_report` (T01) | **L** Lead (DL-023) | P0 | M1 | DONE | B-01 |
@@ -37,8 +37,8 @@
 | B-05 | `intel/embed.py` + `topics.py` + `cluster.py` (baseline + IA) | **L** baseline / **F** IA (DL-023) | P0 | M1–M2 | DONE (PR #28: E5 multilingüe, τ=0,87 calibrado en desarrollo 2025; validación humana en B-07) | B-03 |
 | B-06 | `intel/retrieve.py` (BM25 + coseno) | **F** frictionspp-svg | P0 | M2 | DONE (PR #50: opcional, desactivado por defecto; no reemplaza el recuperador de Consultas) | B-05 |
 | B-07 | Etiquetas humanas: temas (≥100), pares de agrupación, top 5 ciego, benchmark dev (40) | F (etiquetas) + W (top 5 ciego) | P0 | M2 | DONE (PR #53: 100 temas + 32 titulares por humano; DL-029/DL-030) | B-03 |
-| B-08 | `eval/`: métricas, benchmark, latencia → `eval/results/latest.json` | **W** LowCrime | P0/P1 | M3 | DONE (PR #27/#41: P@5, red-team, precompute importado; se recalcula al llegar B-07/B-09) | B-05, L-10, L-11 |
-| B-09 | Revisión humana de ≥30 afirmaciones (validez de sustento) | W (editor) | P0 | M3 | PREPARADA (PR #43: 30 afirmaciones listas; falta marcar sí/no/parcial) | L-10 |
+| B-08 | `eval/`: métricas, benchmark, latencia → `eval/results/latest.json` | **W** LowCrime | P0/P1 | M3 | DONE (latest.json final: citas, validez, red-team, temas, agrupación, P@5, latencia) | B-05, L-10, L-11 |
+| B-09 | Revisión humana de ≥30 afirmaciones (validez de sustento) | W (editor) | P0 | M3 | DONE (PR #58: 25/30, DL-031) | L-10 |
 | B-10 | Benchmark de modelos locales (embeddings + LLM) en hardware declarado | **F** frictionspp-svg (AMD Radeon RX 9060 XT 8 GB, Vulkan) | P0 | M1 | DONE (PR #48: qwen3:8b recomendado frente a 4b) | — |
 | H-01 | Preparar el espacio Notion (estructura de §5) para migrar en cuanto haya licencia | H1 | P0 | M3 | TODO | — |
 | H-02 | Bitácora `docs/AI_TOOLS_USED.md` → PDF | Todos | P0 | M4 | DOING | — |

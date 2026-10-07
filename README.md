@@ -28,6 +28,7 @@ revisión humana. **La IA no decide qué es verdad ni qué se publica**: "aproba
 | Métrica | Resultado | Alcance |
 |---|---|---|
 | Cobertura de citas del borrador | **45/45** | Top 15 con qwen3:8b; las frases sin cita las elimina el validador |
+| Validez de sustento (revisión humana) | **25/30 = 83%** | Los 5 casos fallidos son titulares citados textualmente pero poco relevantes o en otro idioma (DL-031) |
 | Abstención correcta (red-team de desarrollo) | **16/16**; abstención incorrecta 0/4 | Set sintético; antes de las correcciones era 6/16 (DL-027) |
 | Set reservado escrito por un humano | 6/6 trampas con abstención | Los 4 "controles" de cultura general no están en el corpus: SCAYL no responde de memoria (DL-030) |
 | Temas (macro-F1, 100 etiquetas humanas) | Reglas **0,76** · E5 0,25 | Por eso los temas usan reglas (DL-029) |
