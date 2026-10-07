@@ -16,3 +16,7 @@
 
 2026-10-06 21:56 UTC · Publicación y relevo · Por instrucción explícita del humano se mostraron status, branch -vv y log -10, y se ejecutó `git push -u origin worker-b/snapshot`: éxito, rama remota creada en eb61312. Git funciona con el remoto aunque gh no tenga sesión. Se detectó que el relevo solicitado no existía; se crea `docs/handoff/frictionspp-svg.md` con estado parcial, datos incluidos/locales, decisiones pendientes, pruebas y entorno, para subirlo en un segundo commit. Sin merge.
 
+
+## 2026-10-07 02:35 UTC - Historial y manifest portable
+
+Respaldo backup/wip-617d6e2 exclusivamente local; reconstruido historial sin ZIP/RSS y push normal 0997fb9 a origin/worker-b/snapshot. Los 117 ZIP y RSS permanecen en disco; 118 hashes y tamanos verificados. Manifest excluye auxiliares locales, valida inventario y lee corte YAML. Solo se anota disponibilidad del inventario previo por instruccion humana; hashes y respuestas intactos. AP-008/AP-009 actualizadas segun Lead. Pruebas: 99/99, docs/worklog/worker-b-manifest-pytest.xml; Python global sin pytest, usar .venv. Snapshot todavia no congelado.

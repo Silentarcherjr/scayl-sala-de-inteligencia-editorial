@@ -16,6 +16,10 @@ from scayl.ingest.fetch_tvn import historical_rows
 from datetime import datetime, timezone
 import io
 import zipfile
+import hashlib
+import shutil
+from pathlib import Path
+import yaml
 
 
 def test_immutable_bytes(tmp_path):
@@ -83,6 +87,42 @@ def test_manifest_detects_one_byte_missing_and_extra(tmp_path):
 def test_manifest_refuses_incomplete_snapshot(tmp_path):
     with pytest.raises(ValueError, match="Incomplete"):
         build_manifest(tmp_path)
+
+
+def test_manifest_is_portable_without_local_responses(tmp_path):
+    source = tmp_path / "source"
+    make_snapshot(source)
+    local = {"responses/gkg/sample.gkg.csv.zip": b"local GKG bytes",
+             "responses/tvn-current/rss.xml": b"<rss><description>local</description></rss>"}
+    for name, data in local.items():
+        write_once(source / name, data)
+    manifest = build_manifest(source)
+    window = yaml.safe_load(Path("scayl/config/data_window.v1.yaml").read_text(encoding="utf-8"))
+    assert manifest["fecha_corte_UTC"] == window["cutoff_utc"]
+    assert not set(local) & manifest["archivos"].keys()
+    inventory = json.loads((source / "acquisition_inventory.json").read_text())
+    for name, data in local.items():
+        assert inventory["files"][name]["sha256"] == hashlib.sha256(data).hexdigest()
+        assert inventory["files"][name]["disponibilidad"] == "solo local"
+        assert (source / name).read_bytes() == data
+    clone = tmp_path / "clone"
+    for name in [*manifest["archivos"], "manifest.json"]:
+        (clone / name).parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(source / name, clone / name)
+    assert verify_manifest(clone) == []
+    assert build_manifest(clone) == manifest
+    assert verify_manifest(source) == []
+    (clone / "acquisition_inventory.json").write_text("{}")
+    assert verify_manifest(clone) == ["changed:acquisition_inventory.json"]
+
+
+def test_manifest_refuses_inconsistent_local_hashes(tmp_path):
+    make_snapshot(tmp_path)
+    write_once(tmp_path / "responses/gkg/sample.zip", b"local")
+    write_once(tmp_path / "acquisition_inventory.json", b'{"files":{}}')
+    with pytest.raises(ValueError, match="Local acquisition inventory mismatch"):
+        build_manifest(tmp_path)
+    assert not (tmp_path / "manifest.json").exists()
 
 
 def test_editor_handoff_has_no_scores_and_keeps_dates(tmp_path):

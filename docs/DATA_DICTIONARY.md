@@ -1,7 +1,7 @@
 # Diccionario del snapshot · B-01 / B-02
 
 Estado: extracción en curso; no considerar `data/raw/v1` congelado hasta que exista y se verifique
-`manifest.json`. AP-008 (cardinalidad WB) y AP-009 (histórico conservado en RSS) pendientes de decisión.
+`manifest.json`. AP-008 aceptada (540 filas, DL-013); AP-009 superada por la ventana C-01 (DL-017).
 
 ## Convenciones
 
@@ -96,7 +96,13 @@ Si hay más de 20.000 eventos, itera `offset` y detecta IDs duplicados entre pá
 - `fuentes.json`: origen, URL, licencia/condiciones, cobertura real, limitaciones y desviaciones.
 - `manifest.json`: versión, corte, congelación, consultas, fuentes, transformaciones y mapa `archivos`
   con SHA-256, bytes y cantidad (cuando se puede contar). El manifest no se incluye en su propio hash.
-- `verify_manifest(dir)` detecta cambios, archivos ausentes y archivos inesperados. No requiere red.
+- `verify_manifest(dir)` detecta cambios, archivos ausentes y archivos inesperados del paquete portable. No requiere red.
+- `responses/gkg/*.zip` y `responses/tvn-current/rss.xml` son auxiliares **solo locales**:
+  no se suben a Git ni aparecen en `manifest.archivos`. Sus SHA-256 y tamaños permanecen en
+  `acquisition_inventory.json`, con `disponibilidad: "solo local"`. El inventario sí está cubierto
+  por el manifest; una copia sin los auxiliares verifica igual que la máquina de adquisición.
+  Antes de congelar se comprueban los hashes locales contra el inventario existente; nunca se
+  reescribe automáticamente un inventario o manifest previo. El corte se lee de `data_window.v1.yaml`.
 - `tvn_rss_actual.json`: proyección de metadatos del feed obtenido en 2026; separado del corpus.
 - `data/labels/editor_candidates.csv`: orden aleatorio sin puntajes ni temas predichos; conserva columnas
   separadas para publicación y detección. No sustituir la selección humana del top 5.
