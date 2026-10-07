@@ -56,3 +56,12 @@ Preparación comprobada de esta sesión: `deploy/stage-final/` (ignorado), inven
 publicar. Se conserva porque la revisión automática bloqueó su limpieza. Para reconstruir, elegir
 una carpeta nueva y regenerar inventario/capturas. La prueba de Chromium verificó login por URL
 `/Trust_Lab`, lectura de métricas y cierre de sesión; no abrió conexión con HF.
+
+## Backlog final · 2026-10-07
+Nueva preparación desde dc1a990 (AP-013 y evidencia ACP/INEC): `deploy/stage-backlog-final/`, solo local.
+Estado medido en `deploy/readiness-backlog.json`:187 señales,183 eventos,0 descripciones RSS,0 entradas
+cache y183 paquetes template. Es preparación funcional con fallbacks, no prueba de precálculo LLM.
+No existe data/cache/llm en este checkout. Se pidió al humano solo la ruta/PR de la caché pública revisada.
+Motor Docker aún inactivo; build y HF no medidos. Volver al final del backlog; si sigue sin caché, mantener
+bloqueado. No pedir confirmación de publicación antes de recibir/auditar caché y probar el contenedor.
+La contraseña y URL se entregarán por canal privado después de confirmación del Lead, nunca en el PR.

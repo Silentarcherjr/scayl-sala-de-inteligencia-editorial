@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-10-07T18:02:58.559129+00:00",
+  "published": false,
+  "stage_local": "deploy/stage-backlog-final",
+  "source_commit": "dc1a990",
+  "signals": 187,
+  "events": 183,
+  "news_with_rss_description": 0,
+  "cache_entries": 0,
+  "package_modes": {
+    "template": 183
+  },
+  "docker_build": {
+    "status": "no medido",
+    "reason": "Docker Desktop Linux engine pipe unavailable"
+  },
+  "hosted_test": {
+    "status": "no medido"
+  },
+  "blockers": [
+    "Public reviewed LLM cache not delivered in this checkout",
+    "Docker engine unavailable for container validation",
+    "Lead publication confirmation not requested until ready"
+  ],
+  "manifest_sha256": "8badf4127d28bb81ad1e91c96516d0c41517baf59e29717ef911753d939ff698"
+}
