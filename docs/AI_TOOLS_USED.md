@@ -18,6 +18,7 @@
 
 | 2026-10-07 | Codex | LowCrime | A-04/A-09 | Consultas, citas y modo jurado; AppTest y capturas Chromium con snapshot real | 128 passed; abstención y respuesta extractiva verificadas | Pendiente del Lead |
 | 2026-10-07 | Codex | LowCrime | A-07 | Agenda, pruebas y captura real Chromium | 123 passed, dos pruebas nuevas | Pendiente del Lead |
+| 2026-10-07 | Codex | LowCrime | B-08 | P@5 por eventos, trazabilidad de ejecución y pruebas, limitación DL-024 | P@5 1/5 medido; 127 passed; otras métricas no medidas | Pendiente del Lead |
 
 ## Herramientas de IA dentro del producto (no son de desarrollo)
 
