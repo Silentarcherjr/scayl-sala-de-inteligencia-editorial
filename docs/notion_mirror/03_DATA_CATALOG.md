@@ -1,5 +1,18 @@
 # 03 · Catálogo de datos
 
+## Adición declarada v1.1 · B-13/B-14 · 2026-10-07
+
+`indicadores_recientes.csv`, 812 filas, extraído 2026-10-07 04:55 UTC.
+ACP: nivel diario 2025-09-02..2026-09-30, 394 valores en pies; CSV original y recibo SHA-256.
+Proyección al corte no recuperada: 394 filas null; el CSV disponible empieza 2026-10-07,
+por eso no entra como evidencia. Estimación informativa, sin licencia abierta declarada.
+INEC: mensual/interanual, 2025-09..2026-08, 24 valores en %, signos conservados, Anexo 4
+página PDF 1 (base 2024=100), publicado 14/09/2026; CC BY 4.0. PDF y transcripción por
+Codex con hash; revisión humana pendiente. Sin modificación de raw previos.
+Manifest v1.1 SHA-256: `6d7542a1b5e508340dde315c413d7954f4dddddd035996cfdae9c6c210f35535`.
+CSV SHA-256: `8288ad7479f6a6dc7afd6b58b3565e7467f2089ea1e83fd025d7acac9c451cbd`.
+Fuentes, limitaciones y reproducción: [B13_B14_RECENT_OFFICIAL.md](../B13_B14_RECENT_OFFICIAL.md).
+
 > Campos oficiales: fuente, URL, fecha de extracción, cobertura, campos, licencia/condiciones, transformaciones, hash del snapshot.
 > Estado: **v1 congelado y verificado, C-01** (2026-10-07). 187 noticias (50 TVN), 540 WB,
 > 82 sismos oficiales 2024 y 87 de extensión. Candidatos ciegos exportados, sin ranking real.

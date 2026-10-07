@@ -159,3 +159,14 @@
 - **Limitación declarada:** los pares de desarrollo fueron anotados por un agente (Codex), no son gold humano. La revisión humana queda en B-07; hasta entonces F1 de agrupación se reporta como "calibración sobre etiquetas provisionales", no como métrica de evaluación.
 - **Robustez (Lead):** el pipeline solo usa IA si el modelo local carga de verdad. Si falta el paquete o los pesos, cae al baseline TF-IDF con aviso (`select_embedder`, 2 pruebas nuevas).
 - **Fecha:** 2026-10-07
+
+### DL-026 · Evidencia oficial reciente integrada; AP-012 aceptada; 0 "suficiente" es un resultado honesto
+- **Decisión:** se mergea PR #31 (frictionspp-svg): 394 niveles diarios de Gatún (ACP) y 24 variaciones del IPC (INEC, CC BY 4.0) como adición declarada v1.1 del snapshot. Se conservan los bytes previos y el manifest padre. La proyección ACP anterior al corte **no existe** en la fuente: queda nula, no se inventa.
+- **AP-012 aceptada** y ampliada por el Lead en `recent.py`:
+  1. palabras genéricas (restricción, agua, calado, El Niño) solo cuentan junto a "Canal";
+  2. una cifra confirma el nivel de Gatún solo si el titular nombra esa medida, y nunca si la cifra es un calado (misma unidad, otra medida);
+  3. **fallo propio corregido:** el contexto usaba el último dato antes del corte, no antes del evento. Un titular de julio recibía el nivel del 30/09.
+- **Por qué sigue habiendo 0 eventos "suficiente":** ningún titular del corpus C-01 menciona una cifra del nivel de Gatún ni del IPC. Sin una cifra que comparar no hay confirmación, solo contexto. No se relajan las reglas para fabricar "suficientes": en el pitch se presenta como abstención correcta. Los casos "suficiente" se muestran con el fixture SINTÉTICO, etiquetado.
+- **Precálculo medido (B-10 parcial):** qwen3:8b en AMD RX 9060 XT (Vulkan), 15/15 en vivo, 0 de respaldo. Mediana 15,1 s, p95 17,8 s (n = 15); la meta orientativa de ≤15 s se supera por 0,1 s, se reporta tal cual. Cobertura de citas 49/49 oraciones conservadas; el validador eliminó 5 (3 STATUS_MISMATCH, 2 UNCITED_FACT). Costo de API $0.
+- **Consecuencia:** cambian afirmaciones de contexto, así que el caché LLM de esos eventos debe regenerarse (`make precompute` otra vez en la GPU).
+- **Fecha:** 2026-10-07

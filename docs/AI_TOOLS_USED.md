@@ -20,6 +20,8 @@
 | 2026-10-07 | Codex | LowCrime | B-08 | P@5 por eventos, trazabilidad de ejecución y pruebas, limitación DL-024 | P@5 1/5 medido; 127 passed; otras métricas no medidas | Pendiente del Lead |
 | 2026-10-07 | Claude Code | Lead (Silentarcherjr) | A-05/A-10, B-03, baseline B-05, revisión H-08 y PR #25–#27 | Trust Lab y simulador; `load_snapshot`; temas por reglas + agrupación TF-IDF; correcciones USGS con datos reales; integración de UI y evaluación | 136 pruebas; P@5 = 1/5 reproducida por B-08 | Revisado y mergeado por el Lead |
 | 2026-10-07 | Codex | frictionspp-svg | B-05 IA y calibración sin top 5 | E5 multilingüe local; prototipos; 488 pares de 2025 anotados provisionalmente por IA; medición posterior C-01 | τ=0,87; 183→165 eventos; P@5 1/5→1/5; cuatro casos separados por guard temporal; 129 pruebas pasan; inferencia CPU | Revisión humana de etiquetas B-07 y revisión del Lead pendientes |
+| 2026-10-07 | Codex + consulta de fuentes oficiales | frictionspp-svg | B-13/B-14, evidencia ACP/INEC | CSV históricos ACP, transcripción con hash del Anexo 4 INEC, manifest v1.1 y medición pareada | 812 filas (394 proyecciones null); estados 0 suficiente/131 parcial/34 insuficiente antes y después; AP-012 abierta; 152 pruebas pasan | Cotejo humano INEC y decisión del Lead pendientes |
+| 2026-10-07 | Ollama local, Qwen3 8B + E5 | frictionspp-svg | Precálculo real top 15 | AMD RX 9060 XT Vulkan, 37/37 capas GPU; E5 CPU; caché inicialmente vacía | 15 paquetes live, 0 fallback; mediana 15068 ms, p95 17755 ms; citas brief/guion 49/49; resultados guardados en eval/results | Validez del apoyo no medida; revisión del Lead pendiente |
 
 ## Herramientas de IA dentro del producto (no son de desarrollo)
 

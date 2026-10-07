@@ -28,7 +28,7 @@
 | Temas macro-F1 (baseline vs IA) | reportar | no medido | — | ≥100 etiquetas humanas |
 | Agrupación P/R/F1 (baseline vs IA) | reportar | no medido | — | Pares etiquetados |
 | Precision@5 | reportar (exploratoria) | **1/5 = 0.20** (baseline TF-IDF + reglas, sin ACP/INEC; preliminar del Lead, B-08 la formaliza). Los 5 elegidos quedan en las posiciones 2, 6, 12, 22 y 26 de 183 | 5 eventos | Top 5 de LowCrime (PR #23, 2026-10-07). Limitación: vio antes una propuesta de IA (coincide en 1 de 5) y no vio el ranking del sistema (DL-024) |
-| Latencia mediana / p95 | mediana ≤15 s | no medido | — | Hardware declarado |
+| Latencia mediana / p95 | mediana ≤15 s | **15,1 s / 17,8 s** (Story Studio en vivo, qwen3:8b, AMD RX 9060 XT 8 GB Vulkan) | 15 | `eval/results/b13-b14-precompute.json` |
 | Costo de API | — | $0.00 por diseño (local); se confirma al medir | — | — |
 
 ## Registro de pruebas fallidas y correcciones
@@ -56,3 +56,4 @@ _(el jurado pedirá "una prueba fallida y su corrección": registrarlas aquí en
 | 2026-10-07 | AppTest rutas del jurado (2 casos) | page_link no encontraba la Ficha al ejecutar Consultas como entrada independiente. | El arnés omitía Home, que registra las páginas. | Arrancar AppTest desde Home y navegar a Consultas como en producción; sin omitir pruebas. | tests/ui/test_queries.py; 7 passed tras corregir el arnés, suite 128 passed. |
 | 2026-10-07 | CLI B-08 | UnicodeEncodeError al imprimir flecha en consola Windows cp1252 tras guardar JSON. | stdout no era UTF-8. | JSON de consola ASCII escapado; artefactos UTF-8; test CLI añadido. | tests/test_eval_run.py, 127 passed. |
 | 2026-10-07 | test_service_over_fixture_end_to_end | Falló al existir latest.json real. | Fixture suponía instalación sin evaluación pero leía el repo real. | Aislar service.ROOT en tmp_path, conservando la comprobación de no medido. | tests/test_service_pipeline.py, 127 passed. |
+| 2026-10-07 | B-13/B-14 con datos reales (`test_context_never_comes_from_after_the_event`, `test_real_case_generic_restriction_headline_gets_no_canal_context`, `test_ship_draught_in_feet_never_confirms_lake_level`) | Un titular de julio recibía el nivel de Gatún del 30/09; una noticia de homicidios con "restricciones nocturnas" recibía contexto del Canal (AP-012). | El contexto usaba el último dato antes del corte; "restricción" era una palabra clave suelta; el calado en pies podía confirmar el nivel del lago. | Contexto con el último dato a la fecha del evento; palabras genéricas solo junto a "Canal"; la confirmación exige nombrar la medida y excluye calados. | `scayl/evidence/recent.py` |

@@ -1,24 +1,8 @@
 {
-  "version": "v1.1",
+  "version": "v1",
   "fecha_corte_UTC": "2026-10-01T00:00:00Z",
-  "fecha_congelacion_UTC": "2026-10-07T04:59:27.292414Z",
+  "fecha_congelacion_UTC": "2026-10-07T02:57:22.205347Z",
   "consultas": [
-    {
-      "url": "https://evtms-rpts.pancanal.com/eng/h2o/Download_Gatun_Lake_Water_Level_History.csv",
-      "fecha_extraccion": "2026-10-07T04:55:24.534602Z",
-      "status": 200,
-      "content_type": "application/octet-stream",
-      "sha256": "311233070c988370b2f54eac23bc7bc018f2eebe08d2bf44c98ffcf5e2b8e239",
-      "previous_failures": []
-    },
-    {
-      "url": "https://evtms-rpts.pancanal.com/eng/h2o/Gatun_Water_Level_Projection.csv",
-      "fecha_extraccion": "2026-10-07T04:55:24.793546Z",
-      "status": 200,
-      "content_type": "application/octet-stream",
-      "sha256": "12a4962087ef66246f6e6e2e86d0240e19306e14107a72341d0906c60dfcf961",
-      "previous_failures": []
-    },
     {
       "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%28Panama+OR+Panam%C3%A1%29+%28economy+OR+econom%C3%ADa%29&mode=ArtList&format=json&maxrecords=250&STARTDATETIME=20250902000000&ENDDATETIME=20250902235959",
       "fecha_extraccion": "2026-10-06T21:22:29.540255Z",
@@ -1668,22 +1652,6 @@
       "previous_failures": []
     },
     {
-      "url": "https://www.inec.gob.pa/archivos/A0705547520260914092740Anexo%204.pdf",
-      "fecha_extraccion": "2026-10-07T04:55:25.189550Z",
-      "status": 200,
-      "content_type": "application/pdf",
-      "sha256": "ca9b07ecf265b912be45b7450f88f3d322e8f3fef56bbb3b5e5372b74020bb6e",
-      "previous_failures": []
-    },
-    {
-      "url": "https://www.inec.gob.pa/avance/Default2.aspx?ID_CATEGORIA=2&ID_CIFRAS=10&ID_IDIOMA=1",
-      "fecha_extraccion": "2026-10-07T04:55:25.321905Z",
-      "status": 200,
-      "content_type": "text/html; charset=utf-8",
-      "sha256": "72df8576f42912cf393a95779fd4950d736066a5a5ee23d8f8d91ba998fdb4d5",
-      "previous_failures": []
-    },
-    {
       "url": "https://www.tvn-2.com/rss/",
       "fecha_extraccion": "2026-10-06T21:21:58.100143Z",
       "status": 200,
@@ -1779,32 +1747,6 @@
       "licencia": "Dominio público USGS, salvo contenido de terceros",
       "cobertura": "2024 oficial + extensión ventana C-01 (AP-004)",
       "limitaciones": "Caja lat 5..12, lon -86..-76; M>=3; la caja no equivale al territorio de Panamá."
-    },
-    {
-      "origen": "acp",
-      "url": "https://evtms-rpts.pancanal.com/eng/h2o/Download_Gatun_Lake_Water_Level_History.csv",
-      "licencia": "Sin licencia abierta declarada; datos numéricos para uso informativo",
-      "cobertura": [
-        "2025-09-02",
-        "2026-10-01"
-      ],
-      "limitaciones": "Estimación informativa. Niveles históricos descargados después del corte; no son niveles en tiempo real. No se reproduce el dashboard ni gráficos.",
-      "proyecciones": {
-        "url": "https://evtms-rpts.pancanal.com/eng/h2o/Gatun_Water_Level_Projection.csv",
-        "disponibles_al_corte": false,
-        "motivo": "CSV obtenido el 7 de octubre; fechas proyectadas 2026-10-07..2026-12-06, sin fecha de emisión anterior al corte. Filas solicitadas son null; no se reconstruye el pronóstico."
-      }
-    },
-    {
-      "origen": "inec",
-      "url": "https://www.inec.gob.pa/archivos/A0705547520260914092740Anexo%204.pdf",
-      "licencia": "CC BY 4.0",
-      "publicado": "2026-09-14",
-      "cobertura": [
-        "2025-09",
-        "2026-08"
-      ],
-      "limitaciones": "IPC nacional urbano, base 2024=100, Anexo 4 página PDF 1; transcripción de variaciones publicadas (signo incluido), revisión humana pendiente. No recalculadas desde índices redondeados. Septiembre 2026 aún no publicado antes del corte."
     }
   ],
   "archivos": {
@@ -1833,11 +1775,6 @@
       "bytes": 54050,
       "cantidad": null
     },
-    "addition-recent-official.json": {
-      "sha256": "867a63f19bfc7809ec3c294e278a009e595a717930d0ca857e0445faf74f947c",
-      "bytes": 2099,
-      "cantidad": null
-    },
     "assembly-c01.json": {
       "sha256": "ceab836e53f5f552dab4776375511822b7f41a163e9793ae7fe5a1cbcda6a182",
       "bytes": 185134,
@@ -1863,11 +1800,6 @@
       "bytes": 1300,
       "cantidad": 4
     },
-    "fuentes.recientes.json": {
-      "sha256": "50828dda4666c12697a4e8ee7f70b43ed5892df9e2864f79478ffd6992f00f4a",
-      "bytes": 1304,
-      "cantidad": 2
-    },
     "gkg-c01-20261007T025103.082535Z.json": {
       "sha256": "e823377d1d81878a1177ac00137dd8031fdd5662ccffd3308ad1e2c4353829bd",
       "bytes": 30289,
@@ -1883,40 +1815,10 @@
       "bytes": 148683,
       "cantidad": 540
     },
-    "indicadores_recientes.csv": {
-      "sha256": "8288ad7479f6a6dc7afd6b58b3565e7467f2089ea1e83fd025d7acac9c451cbd",
-      "bytes": 221551,
-      "cantidad": 812
-    },
-    "manifest.before-97a5cd2b7ac6.json": {
-      "sha256": "97a5cd2b7ac64c24769c380d368369c24c24ab2df3d7d9dac23fe0bd86db2aa7",
-      "bytes": 133904,
-      "cantidad": null
-    },
     "noticias.csv": {
       "sha256": "cd2d4bb9910aaa89e7b353e04416cc280d9e17385782d928809c2c1e7189ce73",
       "bytes": 75279,
       "cantidad": 187
-    },
-    "responses/acp/gatun-history.csv": {
-      "sha256": "311233070c988370b2f54eac23bc7bc018f2eebe08d2bf44c98ffcf5e2b8e239",
-      "bytes": 406077,
-      "cantidad": 22558
-    },
-    "responses/acp/gatun-history.csv.request.json": {
-      "sha256": "54144c5c1147bad524bac470d79144fe9629f6b1dbfb98621eab779e3ae1e94e",
-      "bytes": 322,
-      "cantidad": null
-    },
-    "responses/acp/gatun-projection.csv": {
-      "sha256": "12a4962087ef66246f6e6e2e86d0240e19306e14107a72341d0906c60dfcf961",
-      "bytes": 2540,
-      "cantidad": 63
-    },
-    "responses/acp/gatun-projection.csv.request.json": {
-      "sha256": "1bb32d128c78d1944009e1976b645da21f1438b961dd3b74b8724445e588505a",
-      "bytes": 311,
-      "cantidad": null
     },
     "responses/gdelt/2025-09-02.economia.json": {
       "sha256": "0332a6d3803495c6657997cc6433e8cfa39dac159f04817a9ed8417bcb2e7d01",
@@ -3103,31 +3005,6 @@
       "bytes": 306,
       "cantidad": null
     },
-    "responses/inec/ipc-anexo4-2026-08.pdf": {
-      "sha256": "ca9b07ecf265b912be45b7450f88f3d322e8f3fef56bbb3b5e5372b74020bb6e",
-      "bytes": 243664,
-      "cantidad": null
-    },
-    "responses/inec/ipc-anexo4-2026-08.pdf.request.json": {
-      "sha256": "e0b735ce27a43c93d614df34261a95632e470032064d0848d2a0925744ed35b6",
-      "bytes": 299,
-      "cantidad": null
-    },
-    "responses/inec/ipc-anexo4-2026-08.transcription.json": {
-      "sha256": "3ac8a224ef693f6698d439f0d5735e5251ee6abf274f02fdde6a64c7a9d46e54",
-      "bytes": 1284,
-      "cantidad": null
-    },
-    "responses/inec/ipc-publication-index.html": {
-      "sha256": "72df8576f42912cf393a95779fd4950d736066a5a5ee23d8f8d91ba998fdb4d5",
-      "bytes": 114154,
-      "cantidad": null
-    },
-    "responses/inec/ipc-publication-index.html.request.json": {
-      "sha256": "96cfed92591743fb87eb2541d3ab76bedd172ae8bce19f78cfbeee06e72838dd",
-      "bytes": 323,
-      "cantidad": null
-    },
     "responses/tvn-current/rss.xml.request.json": {
       "sha256": "1b692dee0fb7a0113a1117abeb72ee1c4c11f0686a234878b49d7c7d368935f8",
       "bytes": 237,
@@ -3230,8 +3107,7 @@
     "USGS: unir páginas; excluir el instante 2025-01-01T00:00:00Z del límite inclusivo de API.",
     "RSS TVN: pubDate dentro de C-01; detección nula; sin descripciones en el corpus.",
     "USGS extensión AP-004 separada de los eventos oficiales de 2024.",
-    "Raw 2025 conservado; exclusiones fuera_de_ventana_C-01 en assembly-c01.json.",
-    "B-13/B-14: adición autorizada de ACP/INEC; bytes raw anteriores intactos. Detalles y ausencias en addition-recent-official.json; fuentes.recientes.json amplía fuentes sin sobrescribir el original."
+    "Raw 2025 conservado; exclusiones fuera_de_ventana_C-01 en assembly-c01.json."
   ],
   "cobertura_efectiva": {
     "window": [
@@ -3250,23 +3126,5 @@
       "news": 159,
       "tvn": 22
     }
-  },
-  "parent_manifest": {
-    "file": "manifest.before-97a5cd2b7ac6.json",
-    "sha256": "97a5cd2b7ac64c24769c380d368369c24c24ab2df3d7d9dac23fe0bd86db2aa7"
-  },
-  "adicion_declarada": [
-    "addition-recent-official.json",
-    "fuentes.recientes.json",
-    "indicadores_recientes.csv",
-    "responses/acp/gatun-history.csv",
-    "responses/acp/gatun-history.csv.request.json",
-    "responses/acp/gatun-projection.csv",
-    "responses/acp/gatun-projection.csv.request.json",
-    "responses/inec/ipc-anexo4-2026-08.pdf",
-    "responses/inec/ipc-anexo4-2026-08.pdf.request.json",
-    "responses/inec/ipc-anexo4-2026-08.transcription.json",
-    "responses/inec/ipc-publication-index.html",
-    "responses/inec/ipc-publication-index.html.request.json"
-  ]
+  }
 }

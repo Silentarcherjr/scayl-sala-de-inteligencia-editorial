@@ -1,0 +1,8 @@
+{
+  "url": "https://www.inec.gob.pa/avance/Default2.aspx?ID_CATEGORIA=2&ID_CIFRAS=10&ID_IDIOMA=1",
+  "fecha_extraccion": "2026-10-07T04:55:25.321905Z",
+  "status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "sha256": "72df8576f42912cf393a95779fd4950d736066a5a5ee23d8f8d91ba998fdb4d5",
+  "previous_failures": []
+}

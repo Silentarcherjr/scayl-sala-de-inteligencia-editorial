@@ -1,0 +1,8 @@
+{
+  "url": "https://evtms-rpts.pancanal.com/eng/h2o/Download_Gatun_Lake_Water_Level_History.csv",
+  "fecha_extraccion": "2026-10-07T04:55:24.534602Z",
+  "status": 200,
+  "content_type": "application/octet-stream",
+  "sha256": "311233070c988370b2f54eac23bc7bc018f2eebe08d2bf44c98ffcf5e2b8e239",
+  "previous_failures": []
+}

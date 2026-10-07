@@ -131,6 +131,39 @@ def verify_manifest(directory: str | Path) -> list[str]:
     return differences
 
 
+def declare_addition(directory: str | Path, *, parent_sha256: str, version: str) -> dict:
+    """Explicitly authorized expansion; archive the parent and reject edits to existing raw."""
+    directory = Path(directory)
+    target = directory / "manifest.json"
+    parent_bytes = target.read_bytes()
+    if hashlib.sha256(parent_bytes).hexdigest() != parent_sha256:
+        raise ValueError("Parent manifest fingerprint does not match")
+    parent = json.loads(parent_bytes)
+    actual = _inventory(directory)
+    for name, meta in parent["archivos"].items():
+        if actual.get(name) != meta:
+            raise ValueError(f"Existing raw changed: {name}")
+    added = sorted(actual.keys() - parent["archivos"].keys())
+    if not added:
+        raise ValueError("No new files to declare")
+    _ensure_acquisition_inventory(directory)
+    archive = f"manifest.before-{parent_sha256[:12]}.json"
+    write_once(directory / archive, parent_bytes)
+    sources_path = directory / "fuentes.recientes.json"
+    sources = json.loads(sources_path.read_text(encoding="utf-8")) if sources_path.exists() else []
+    result = {**parent, "version": version, "fecha_congelacion_UTC": utc_now(),
+              "parent_manifest": {"file": archive, "sha256": parent_sha256},
+              "adicion_declarada": added, "archivos": _inventory(directory),
+              "fuentes": parent["fuentes"] + sources,
+              "consultas": [json.loads(p.read_text(encoding="utf-8"))
+                            for p in sorted(directory.rglob("*.request.json"))],
+              "transformaciones": parent["transformaciones"] + [
+                  "B-13/B-14: adición autorizada de ACP/INEC; bytes raw anteriores intactos. "
+                  "Detalles y ausencias en addition-recent-official.json; fuentes.recientes.json amplía fuentes sin sobrescribir el original."]}
+    target.write_bytes(json_bytes(result))
+    return result
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("directory", type=Path)

@@ -1,0 +1,68 @@
+{
+  "run_at": "2026-10-07T05:03:40.459602Z",
+  "cutoff": "2026-10-01T00:00:00+00:00",
+  "embedder": "st:intfloat/multilingual-e5-base",
+  "event_count": 165,
+  "before": {
+    "suficiente_para_borrador": 0,
+    "parcial": 131,
+    "insuficiente": 34
+  },
+  "after": {
+    "suficiente_para_borrador": 0,
+    "parcial": 131,
+    "insuficiente": 34
+  },
+  "changes": [],
+  "comparison": "Same fixed C-01 news, topic labels, clusters and rules; only ACP/INEC added. Template mode; no LLM.",
+  "manifest_sha256": "6d7542a1b5e508340dde315c413d7954f4dddddd035996cfdae9c6c210f35535",
+  "parent_manifest": {
+    "file": "manifest.before-97a5cd2b7ac6.json",
+    "sha256": "97a5cd2b7ac64c24769c380d368369c24c24ab2df3d7d9dac23fe0bd86db2aa7"
+  },
+  "recent_csv_sha256": "8288ad7479f6a6dc7afd6b58b3565e7467f2089ea1e83fd025d7acac9c451cbd",
+  "recent_rows": 812,
+  "recent_nulls": 394,
+  "recent_linked_events": [
+    {
+      "event_id": "EVT-0101",
+      "title": "Canal de Panamá aumentará a 33 los cupos diarios de tránsito y fija calado Neopanamax en 14,94 metros",
+      "refs": [
+        "ind:acp:ACP.GATUN.NIVEL:2026-09-30"
+      ]
+    },
+    {
+      "event_id": "EVT-0078",
+      "title": "Canal de Panamá reduce el tránsito de buques por El Niño: ¿qué significa para el país?",
+      "refs": [
+        "ind:acp:ACP.GATUN.NIVEL:2026-09-30"
+      ]
+    },
+    {
+      "event_id": "EVT-0116",
+      "title": "Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño",
+      "refs": [
+        "ind:acp:ACP.GATUN.NIVEL:2026-09-30"
+      ]
+    },
+    {
+      "event_id": "EVT-0143",
+      "title": "El Canal de Panamá aplica nueva reducción del calado para enfrentar el fenómeno de El Niño",
+      "refs": [
+        "ind:acp:ACP.GATUN.NIVEL:2026-09-30"
+      ]
+    },
+    {
+      "event_id": "EVT-0161",
+      "title": "Populoso distrito de Panamá completa una semana sin homicidios tras imponer restricciones nocturnas",
+      "refs": [
+        "ind:acp:ACP.GATUN.NIVEL:2026-09-30"
+      ]
+    }
+  ],
+  "limitations": [
+    "ACP projections unavailable before cutoff: explicit nulls, never confirmation.",
+    "INEC signed PDF transcription by Codex; human review pending.",
+    "AP-012: generic restriction keyword links ACP context to EVT-0161 (crime). No confirmation; Lead decision pending."
+  ]
+}
