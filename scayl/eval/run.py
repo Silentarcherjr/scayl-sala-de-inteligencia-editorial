@@ -2,15 +2,15 @@
 from __future__ import annotations
 
 import argparse
-from datetime import UTC, datetime
 import hashlib
 import json
 import math
-from pathlib import Path
 import platform
 import re
 import shutil
 import xml.etree.ElementTree as ET
+from datetime import UTC, datetime
+from pathlib import Path
 
 from scayl.contracts import UIBundle
 
@@ -130,9 +130,9 @@ def build_report(bundle: UIBundle, selection: dict, pytest_report: Path | None =
             "cost_scope": "Esta evaluación lee artefactos locales, sin llamadas de API; no mide hardware/electricidad.",
             "redteam": {"evidence": str(redteam_report), "run_at": redteam["run_at"],
                         "failed_ids": redteam["failed_ids"], "scope": redteam["scope"]} if redteam else None,
-            "limitations": [LIMITATION, "Solo se miden las métricas con ejecución adjunta; "
+            "limitations": [LIMITATION, ("Solo se miden las métricas con ejecución adjunta; "
                              "las mediciones importadas pertenecen a su corrida/hardware de origen, no al equipo evaluador. "
-                             "Cobertura de citas no mide validez humana del sustento; QA y paquetes tienen latencias separadas."]
+                             "Cobertura de citas no mide validez humana del sustento; QA y paquetes tienen latencias separadas.")]
                             + (redteam["limitations"] if redteam else [])}
 
 

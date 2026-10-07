@@ -4,8 +4,8 @@ from __future__ import annotations
 import argparse
 import json
 import os
-from pathlib import Path
 import subprocess
+from pathlib import Path
 
 from scayl.eval.generation_summary import summarize
 from scayl.ingest.common import json_bytes, write_once

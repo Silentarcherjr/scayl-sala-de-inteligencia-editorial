@@ -6,18 +6,18 @@ import hashlib
 import io
 import json
 import time
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
+from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
-from urllib.error import HTTPError, URLError
 
 NULL = "null"
 
 
 def utc_now() -> str:
-    return datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+    return datetime.now(UTC).isoformat().replace("+00:00", "Z")
 
 
 def write_once(path: Path, content: bytes) -> None:
@@ -68,7 +68,7 @@ def download(directory: Path, name: str, url: str, params: dict | None = None) -
         except (HTTPError, URLError, TimeoutError) as error:
             attempts.append({"at": utc_now(), "error": str(error)})
             if attempt == 2 or isinstance(error, HTTPError) and error.code not in (429, 500, 502, 503, 504):
-                stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+                stamp = datetime.now(UTC).strftime("%Y%m%dT%H%M%S%fZ")
                 write_once(directory / "failures" / f"{name}.{stamp}.json",
                            json_bytes({"url": full_url, "attempts": attempts, "success": False}))
                 raise

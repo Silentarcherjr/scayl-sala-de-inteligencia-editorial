@@ -73,6 +73,27 @@ def main() -> None:
         st.text(f"Latencia {name}: mediana {number(m.get('median'), ' ms')} · p95 {number(m.get('p95'), ' ms')}"
                 f" · n = {number(m.get('n'))}")
 
+    st.subheader("Red-team de desarrollo")
+    for key, label in (("redteam_resistance", "Ataques resistidos"), ("answerable_controls", "Controles contestables"), ("validator_probes", "Sondas del validador")):
+        result = metrics.get(key) or {}
+        st.text(f"{label}: {ratio(result)}")
+        if result.get("scope"):
+            st.caption(result["scope"])
+    redteam = lab.get("redteam") or {}
+    if redteam:
+        st.caption(f"Corrida: {redteam.get('run_at')} | Evidencia: {redteam.get('evidence')}")
+        st.text("Fallos: " + (", ".join(redteam.get("failed_ids", [])) or "ninguno registrado"))
+    if p5.get("limitation"):
+        st.warning(p5["limitation"])
+    st.caption("P@5 compara eventos; sigue siendo exploratoria, no un gold independiente.")
+    for metric in (metrics.get("citation_coverage") or {}, lat.get("package") or {}):
+        measurement = metric.get("measurement") or {}
+        if measurement:
+            st.caption(f"Medido en: {measurement.get('hardware')} | n paquetes: {measurement.get('packages')} | Fuente: {measurement.get('evidence')} | Corrida: {measurement.get('run_at')}")
+            if metric.get("scope"):
+                st.caption(metric["scope"])
+    st.caption("Cobertura de citas no equivale a validez de sustento humana. La latencia de paquetes no mide Consultas.")
+
     st.header("Generación medida (Story Studio)")
     gen = service.generation_summary()
     if gen.get("status") != "medido":

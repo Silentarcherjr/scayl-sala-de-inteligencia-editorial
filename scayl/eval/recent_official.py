@@ -23,8 +23,8 @@ def measure(snapshot: Path = Path("data/raw/v1")) -> dict:
     manifest_bytes = (snapshot / "manifest.json").read_bytes()
     manifest = json.loads(manifest_bytes)
     cutoff = datetime.fromisoformat(manifest["fecha_corte_UTC"])
-    common = dict(news=news, quakes=quakes, cutoff=cutoff, snapshot_version=snapshot.name,
-                  signals_total=report["total"], classify=lambda _: topics, cluster=lambda _: groups)
+    common = {"news": news, "quakes": quakes, "cutoff": cutoff, "snapshot_version": snapshot.name,
+                  "signals_total": report["total"], "classify": lambda _: topics, "cluster": lambda _: groups}
     before = build_bundle(indicators=[o for o in indicators if o.fuente == "wb"], **common)
     after = build_bundle(indicators=indicators, **common)
     def counts(bundle):
@@ -41,18 +41,18 @@ def measure(snapshot: Path = Path("data/raw/v1")) -> dict:
                                if r.evidence_id.startswith("ind:")})}
               for e in after.events if any(r.evidence_id.startswith("ind:")
                                           for c in e.claims for r in c.evidence)]
-    result = dict(run_at=utc_now(), cutoff=cutoff.isoformat(), embedder=embedder.name,
-                  event_count=len(after.events), before=counts(before), after=counts(after), changes=changed,
-                  comparison="Same fixed C-01 news, topic labels, clusters and rules; only ACP/INEC added. Template mode; no LLM.",
-                  manifest_sha256=hashlib.sha256(manifest_bytes).hexdigest(),
-                  parent_manifest=manifest["parent_manifest"],
-                  recent_csv_sha256=hashlib.sha256((snapshot / "indicadores_recientes.csv").read_bytes()).hexdigest(),
-                  recent_rows=sum(o.fuente != "wb" for o in indicators),
-                  recent_nulls=sum(o.fuente != "wb" and o.valor is None for o in indicators),
-                  recent_linked_events=linked,
-                  limitations=["ACP projections unavailable before cutoff: explicit nulls, never confirmation.",
+    result = {"run_at": utc_now(), "cutoff": cutoff.isoformat(), "embedder": embedder.name,
+                  "event_count": len(after.events), "before": counts(before), "after": counts(after), "changes": changed,
+                  "comparison": "Same fixed C-01 news, topic labels, clusters and rules; only ACP/INEC added. Template mode; no LLM.",
+                  "manifest_sha256": hashlib.sha256(manifest_bytes).hexdigest(),
+                  "parent_manifest": manifest["parent_manifest"],
+                  "recent_csv_sha256": hashlib.sha256((snapshot / "indicadores_recientes.csv").read_bytes()).hexdigest(),
+                  "recent_rows": sum(o.fuente != "wb" for o in indicators),
+                  "recent_nulls": sum(o.fuente != "wb" and o.valor is None for o in indicators),
+                  "recent_linked_events": linked,
+                  "limitations": ["ACP projections unavailable before cutoff: explicit nulls, never confirmation.",
                                "INEC signed PDF transcription by Codex; human review pending.",
-                               "AP-012: generic restriction keyword links ACP context to EVT-0161 (crime). No confirmation; Lead decision pending."])
+                               "AP-012: generic restriction keyword links ACP context to EVT-0161 (crime). No confirmation; Lead decision pending."]}
     Path("eval/results/b13-b14-evidence-before-after.json").write_bytes(json_bytes(result))
     return result
 

@@ -2,12 +2,12 @@
 from __future__ import annotations
 
 import argparse
-from collections import Counter
-from datetime import UTC, datetime
 import hashlib
 import json
-from pathlib import Path
 import shutil
+from collections import Counter
+from datetime import UTC, datetime
+from pathlib import Path
 
 from scayl.contracts import UIBundle
 

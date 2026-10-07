@@ -4,7 +4,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
@@ -35,7 +35,7 @@ def audit(directory: Path) -> dict:
             gkg_rows.setdefault(row["url"], row)
         gkg_batches.append({"file": path.relative_to(directory).as_posix(), "selected": len(rows), "excluded": excluded})
     rss = json.loads((directory / "tvn_rss_actual.json").read_text(encoding="utf-8"))["items"]
-    start, end = datetime(2024, 1, 1, tzinfo=timezone.utc), datetime(2025, 10, 1, tzinfo=timezone.utc)
+    start, end = datetime(2024, 1, 1, tzinfo=UTC), datetime(2025, 10, 1, tzinfo=UTC)
     historical = [row for row in rss if start <= parsedate_to_datetime(row["fecha_publicacion_original"]) < end]
     with (directory / "indicadores.csv").open(encoding="utf-8", newline="") as handle:
         indicators = list(csv.DictReader(handle))

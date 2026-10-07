@@ -38,7 +38,7 @@ def extract(content: bytes, extracted: str, excluded: list[dict] | None = None) 
                     tvn = fields[3] in ("tvn-2.com", "www.tvn-2.com")
                     # GKG location country code PM is Panama. Do not infer it from a person's name.
                     panama = bool(re.search(r"(?:^|;)\d+#[^#]*#PM#", fields[9]))
-                    if not tvn and not (panama and re.search(r"panam[aá]", title, re.I)):
+                    if not tvn and not (panama and re.search(r"panam[aá]", title, re.IGNORECASE)):
                         continue
                     detected = fields[1][:8] + "T" + fields[1][8:14] + "Z"
                     language = re.search(r"srclc:([^;]+)", fields[25])

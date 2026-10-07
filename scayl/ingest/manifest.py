@@ -158,8 +158,8 @@ def declare_addition(directory: str | Path, *, parent_sha256: str, version: str)
               "consultas": [json.loads(p.read_text(encoding="utf-8"))
                             for p in sorted(directory.rglob("*.request.json"))],
               "transformaciones": parent["transformaciones"] + [
-                  "B-13/B-14: adición autorizada de ACP/INEC; bytes raw anteriores intactos. "
-                  "Detalles y ausencias en addition-recent-official.json; fuentes.recientes.json amplía fuentes sin sobrescribir el original."]}
+                  ("B-13/B-14: adición autorizada de ACP/INEC; bytes raw anteriores intactos. "
+                  "Detalles y ausencias en addition-recent-official.json; fuentes.recientes.json amplía fuentes sin sobrescribir el original.")]}
     target.write_bytes(json_bytes(result))
     return result
 

@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import argparse
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 from .common import download, json_bytes, write_once
@@ -21,8 +21,8 @@ def fetch(directory: Path, *, extension: bool = False) -> dict:
         start, end = news_window()
         params.update(starttime=start.isoformat(), endtime=end.isoformat())
     else:
-        start = datetime.fromisoformat(params["starttime"]).replace(tzinfo=timezone.utc)
-        end = datetime.fromisoformat(params["endtime"]).replace(tzinfo=timezone.utc)
+        start = datetime.fromisoformat(params["starttime"]).replace(tzinfo=UTC)
+        end = datetime.fromisoformat(params["endtime"]).replace(tzinfo=UTC)
     features = []
     offset = 1
     while True:

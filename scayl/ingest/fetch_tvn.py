@@ -4,7 +4,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import xml.etree.ElementTree as ET
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
@@ -19,7 +19,7 @@ def historical_rows(items: list[dict], start: datetime, end: datetime) -> list[d
         published = parsedate_to_datetime(item["fecha_publicacion_original"])
         if published.tzinfo is None:
             raise ValueError("RSS publication must include a timezone")
-        published = published.astimezone(timezone.utc)
+        published = published.astimezone(UTC)
         if not start <= published < end:
             continue
         url = normalize_url(item["url"])

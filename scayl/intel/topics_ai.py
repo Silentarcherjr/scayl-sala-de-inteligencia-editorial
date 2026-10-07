@@ -4,6 +4,7 @@ from __future__ import annotations
 import numpy as np
 
 from scayl.contracts import NewsItem, Topic
+
 from .embed_st import SentenceTransformerEmbedder
 
 PROTOTYPES: dict[Topic, str] = {

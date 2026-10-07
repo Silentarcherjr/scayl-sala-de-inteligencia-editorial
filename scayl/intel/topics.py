@@ -38,7 +38,7 @@ def classify_one(text: str) -> tuple[Topic, float | None]:
     if best == 0:
         return Topic.OTRO, None
     winners = [t for t, h in hits.items() if h == best]
-    topic = sorted(winners, key=lambda t: list(KEYWORDS).index(t))[0]
+    topic = min(winners, key=lambda t: list(KEYWORDS).index(t))
     conf = min(1.0, 0.5 + 0.2 * (best - 1)) * (1.0 if len(winners) == 1 else 0.6)
     return topic, round(conf, 2)
 

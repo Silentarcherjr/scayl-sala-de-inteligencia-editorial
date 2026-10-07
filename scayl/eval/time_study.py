@@ -1,12 +1,12 @@
 """H-06: summarize three human timed pairs without inventing missing durations."""
 import argparse
 import csv
-from datetime import UTC, datetime
 import hashlib
 import json
 import math
-from pathlib import Path
 import statistics
+from datetime import UTC, datetime
+from pathlib import Path
 
 
 def summarize(path: Path) -> dict:
@@ -23,7 +23,7 @@ def summarize(path: Path) -> dict:
                     raise ValueError("Duraciones medidas positivas y finitas, en segundos")
         if all(row[k].strip() for k in ("participant", "order", "manual_seconds", "assisted_seconds",
                                        "completed_at_utc", "manual_output", "assisted_output")):
-            at = datetime.fromisoformat(row["completed_at_utc"].replace("Z", "+00:00"))
+            at = datetime.fromisoformat(row["completed_at_utc"])
             if at.utcoffset() is None or at.utcoffset().total_seconds() != 0:
                 raise ValueError("Registrar fecha UTC")
             if row["order"] not in {"manual-asistido", "asistido-manual"}:

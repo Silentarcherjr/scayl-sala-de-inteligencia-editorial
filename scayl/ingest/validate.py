@@ -67,7 +67,7 @@ def _date(value: str | None) -> tuple[datetime | None, bool]:
     if raw is None:
         return None, False
     try:
-        dt = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+        dt = datetime.fromisoformat(raw)
     except ValueError:
         return None, True
     return (dt if dt.tzinfo else dt.replace(tzinfo=UTC)).astimezone(UTC), False

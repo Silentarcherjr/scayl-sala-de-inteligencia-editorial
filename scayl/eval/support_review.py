@@ -3,9 +3,9 @@ from __future__ import annotations
 
 import argparse
 import csv
-from datetime import UTC, datetime
 import hashlib
 import json
+from datetime import UTC, datetime
 from pathlib import Path
 
 from scayl.contracts import UIBundle
@@ -46,11 +46,11 @@ def export(bundle_path: Path, output: Path, n: int = 30) -> dict:
                          "attributed_to": c.attributed_to,
                          "refs": [ref.model_dump(mode="json") for ref in c.evidence]} for c in cited]
             seen.add(sentence.text.casefold())
-            rows.append(dict(review_id=f"SR{len(rows)+1:02}", event_id=package.event_id,
-                package_id=package.package_id, generation_mode=package.generated_by.mode, section=section,
-                statement=sentence.text, tag=sentence.tag.value, claim_ids=json.dumps(sentence.claim_ids),
-                evidence_json=json.dumps(evidence, ensure_ascii=False), decision="", reviewer="",
-                reviewed_at_utc="", comment=""))
+            rows.append({"review_id": f"SR{len(rows)+1:02}", "event_id": package.event_id,
+                "package_id": package.package_id, "generation_mode": package.generated_by.mode, "section": section,
+                "statement": sentence.text, "tag": sentence.tag.value, "claim_ids": json.dumps(sentence.claim_ids),
+                "evidence_json": json.dumps(evidence, ensure_ascii=False), "decision": "", "reviewer": "",
+                "reviewed_at_utc": "", "comment": ""})
     if len(rows) < n or n < 30:
         raise ValueError("Se requieren al menos 30 afirmaciones distintas; no duplicar para alcanzar n")
     output.parent.mkdir(parents=True, exist_ok=True)
@@ -81,7 +81,7 @@ def measure(path: Path) -> dict:
         if label:
             if not row["reviewer"].strip() or not row["reviewed_at_utc"].strip():
                 raise ValueError("Cada etiqueta requiere revisor humano y hora UTC")
-            at = datetime.fromisoformat(row["reviewed_at_utc"].replace("Z", "+00:00"))
+            at = datetime.fromisoformat(row["reviewed_at_utc"])
             if at.utcoffset() is None or at.utcoffset().total_seconds() != 0:
                 raise ValueError("La hora de revisión debe estar en UTC")
             labels.append((row["review_id"], label))

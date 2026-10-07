@@ -5,8 +5,8 @@ import argparse
 import csv
 import hashlib
 import json
-from pathlib import Path
 import random
+from pathlib import Path
 
 from sklearn.metrics import precision_recall_fscore_support
 
