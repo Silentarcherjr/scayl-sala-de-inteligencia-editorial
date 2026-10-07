@@ -90,3 +90,5 @@ Medición real E5 en CPU (torch 2.14.1+cpu, CUDA no disponible). Matrices ignora
 2026-10-07T19:56:07.086875Z - B-07 humano: grupos de titulares 1-10 confirmados explícitamente por frictionspp-svg; 10/32 revisados. Hora y respuesta en data/labels/human_review_log.jsonl.
 
 2026-10-07T19:57:06.719717Z - B-07 humano: grupos de titulares 11-20 confirmados explícitamente por frictionspp-svg; 20/32 revisados. Hora y respuesta en data/labels/human_review_log.jsonl.
+
+2026-10-07T19:58:01.135281Z - B-07 humano: grupos de titulares 21-30 confirmados explícitamente por frictionspp-svg; 30/32 revisados. Hora y respuesta en data/labels/human_review_log.jsonl.
