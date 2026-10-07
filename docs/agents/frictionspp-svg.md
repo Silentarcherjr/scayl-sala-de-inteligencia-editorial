@@ -8,20 +8,27 @@ Tu dueño humano está contigo: pídele confirmación antes de cualquier acción
 Camino crítico del proyecto: **datos → inteligencia semántica → primera UI visible**. Otros dependen de ti
 (el snapshot desbloquea todo), así que prioriza entregar pronto y en PRs pequeños.
 
-## 📌 Notas del Lead pendientes (actualizado 2026-10-07, tras mergear tu PR #19)
-**Tu snapshot C-01 está en `main` y verificado** (187 noticias, 50 TVN, manifest con 0 diferencias). Gracias.
-Como te quedaste sin sesión y B-03 bloqueaba el hito M1, el Lead hizo (DL-023):
-- **B-03** `scayl/ingest/validate.py::load_snapshot` (nulos preservados, fechas inválidas marcadas, exclusiones con motivo, ventana C-01, URL duplicadas, idioma normalizado a ISO 639-1; lee también `indicadores_recientes.csv` y `eventos_ext.geojson`).
-- **B-05 baseline:** `scayl/intel/embed.py` (TF-IDF de caracteres), `topics.py` (reglas por palabras clave) y `cluster.py` (aglomerativo con restricción de 7 días). **El pipeline ya corre con datos reales.**
-- Se quitó `tmp/` del repo (ahora está en `.gitignore`; tus archivos siguen en tu disco). `data/processed/*/` no se sube hasta que exista el top 5 ciego.
+## 📌 Notas del Lead pendientes — backlog final (actualizado 2026-10-07, tras PR #31)
+Integrado en main: B-05 IA (DL-025), B-13/B-14 (DL-026, AP-012 aceptada), red-team y nuevas guardias de Consultas (DL-027). Entrega: **jueves 8, 23:59 hora de Panamá**. Trabaja en este orden:
 
-**Tu orden ahora:**
-1. **B-13 ACP** y **B-14 INEC** → `data/raw/v1/indicadores_recientes.csv` (formato exacto en TASKS B-13/B-14). Snapshot v1 ya congelado: agrega estos archivos como **adición declarada** (nuevo inventario + manifest recongelado como v1.1 o con su recibo; no alteres bytes existentes).
-2. **B-05 variante IA** (tu GPU): crea `scayl/intel/embed_st.py` con `class SentenceTransformerEmbedder` (atributo `name`, `encode(texts) -> np.ndarray` L2-normalizado) y `scayl/intel/topics_ai.py` con `classify(items) -> list[(Topic, conf)]`. El pipeline los usa solo (`SCAYL_INTEL=ai`). Agrega `DEFAULT_TAU[<name>]` en `cluster.py` (eso es local a tu tarea).
-3. **Calibra** τ y las reglas con el **conjunto de desarrollo de 2025** (DL-018), nunca con la ventana C-01.
-4. **B-07** etiquetas (≥100 temas + pares por pool DL-016) y **B-10** benchmark de modelos (`make ping`, latencia real en tu AMD).
-5. **Cuando LowCrime haya entregado `data/labels/editor_top5.json`**: `make precompute` en tu máquina (LLM real sobre el top 15) y guarda `data/processed/v1/generation_report.jsonl` para el Trust Lab.
-Cuando cumplas los pasos, borra esta sección en tu PR.
+1. **Repetir `make precompute`** (GPU, E5 activo). Cambiaron afirmaciones de contexto y el caché LLM viejo no coincide. Guarda en `eval/results/` la latencia mediana y el p95, la cobertura de citas, los modos (live/fallback) y el hardware.
+2. **Caché pública para A-06:** `make public-bundle` + la caché LLM necesaria (solo entradas revisadas, sin descripciones RSS), por PR. Avisa a LowCrime en el PR (`@LowCrime`).
+3. **B-11 CI:** `.github/workflows/ci.yml` con Python 3.12, `pip install -r requirements.txt`, `python -m pytest -q` y `ruff check .`; badge en el README. Corrige los avisos de ruff en `tests/` (no toques la lógica de `scayl/` del Lead; si ruff marca algo ahí, solo reporta).
+4. **Set reservado de red-team v2 (humano):** tu humano escribe a mano 10 preguntas trampa nuevas, **sin mirar** `scayl/gen/qa.py` ni `eval/redteam/cases.jsonl`. Guárdalas en `eval/redteam/holdout_v2.jsonl` (mismo formato) y córrelas con el runner sin cambiar código. Reporta num/den tal como salgan, aunque sean malos.
+5. **B-07 etiquetas humanas:** el agente propone y el humano confirma o corrige. ≥100 temas (de C-01, `data/labels/topics_human.csv`) y revisión humana de los pares de desarrollo de agrupación. Con eso, calcula macro-F1 de temas (baseline vs IA) y P/R/F1 de agrupación en `eval/results/b07-*.json`.
+6. **B-10 benchmark:** compara qwen3:8b con al menos un modelo más pequeño (p. ej. qwen3:4b o llama3.2:3b) en el top 15: latencia mediana y p95, cobertura de citas y oraciones eliminadas por el validador. Recomienda el modelo para la demo, con datos.
+7. **B-04 casos sintéticos** T01/T03/T05/T07 en `data/synthetic/`, marcados `sintetico=true`, para la demo de casos que el corpus real no tiene (incluye **un caso "suficiente para borrador"** con cifra coincidente de ACP o INEC, claramente SINTÉTICO).
+8. **H-06 mini-estudio (con LowCrime):** 3 tareas cronometradas, manual vs con SCAYL (protocolo en TASKS §H-06). n=3, exploratorio.
+9. **B-06** (opcional, solo si sobra tiempo): `scayl/intel/retrieve.py` híbrido BM25 + coseno E5 detrás de un flag. No reemplaces el recuperador de `qa.py` sin propuesta.
+
+### Reglas de autonomía (trabaja hasta terminar sin esperar al Lead)
+- **No esperes merges.** Al terminar una tarea, abre su PR y pasa a la siguiente. Antes de cada tarea: `git fetch origin && git checkout -b <rama-nueva> origin/main` (una rama y un PR por tarea; sin rebase ni force-push sobre ramas compartidas).
+- **Si una tarea está bloqueada** (depende de otra persona o de un merge), sáltala, anótalo en el PR o en el worklog y sigue con la próxima; vuelve a ella al final.
+- **Tareas con humano:** pídele a tu humano lo mínimo y concreto (p. ej., "elige sí/no en estas 30 filas"). Mientras responde, avanza con otra tarea.
+- **Nunca:** publicar nada externo sin confirmación del Lead; subir `data/processed/`, ZIP de GKG, RSS con descripciones, secretos o `.env`; editar `01_EXECUTION_BOARD.md`, `02_DECISION_LOG.md` ni el estado de `TASKS.md` (eso es del Lead). Si una decisión cambia contratos, alcance o el módulo de otro, abre una propuesta en `docs/AGENT_PROPOSALS.md` (con el siguiente número libre) y sigue con lo demás.
+- **Cada PR:** `python -m pytest -q` en verde; métricas con num/den y "no medido" en lo que no midas; fallos reales en el registro de `06`; tu fila en `docs/AI_TOOLS_USED.md` (en conflictos de bitácoras, conserva ambos lados).
+- **Relevo:** cerca del 15% de sesión o si tu humano escribe "RELEVO", aplica AGENTS §2b. Quien te releve continúa desde esta lista.
+- **Al terminar todo:** escribe en `docs/handoff/frictionspp-svg.md` la lista de PRs abiertos y lo que quedó pendiente, y avísale a tu humano con "TERMINADO".
 
 ## ⚠️ Relevo de sesión (lee esto primero)
 - **Al empezar:** sincroniza tu rama con `main` (`git fetch origin && git merge origin/main`, sin rebase) y lee las "Notas del Lead pendientes". Luego, si existe `docs/handoff/frictionspp-svg.md`, léelo antes que cualquier otra cosa y continúa desde su "Siguiente paso concreto".
