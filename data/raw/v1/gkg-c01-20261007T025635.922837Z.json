@@ -1,0 +1,3176 @@
+{
+  "at": "2026-10-07T02:56:35.922844Z",
+  "start": "2026-07-03T00:00:00+00:00",
+  "end_exclusive": "2026-10-01T00:00:00+00:00",
+  "method": "Daily 18:00 UTC GKG translation sample; not exhaustive",
+  "reason": "DOC rate limiting (HTTP 429), DL-008 fallback",
+  "unique": 109,
+  "batches": [
+    {
+      "file": "20260703180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": []
+    },
+    {
+      "file": "20260704180000.translation.gkg.csv.zip",
+      "selected": 2,
+      "excluded": []
+    },
+    {
+      "file": "20260705180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": [
+        {
+          "member": "20260705180000.translation.gkg.csv",
+          "line": 367,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260705180000.translation.gkg.csv",
+          "line": 368,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260706180000.translation.gkg.csv.zip",
+      "selected": 1,
+      "excluded": [
+        {
+          "member": "20260706180000.translation.gkg.csv",
+          "line": 536,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260706180000.translation.gkg.csv",
+          "line": 537,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260706180000.translation.gkg.csv",
+          "line": 538,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260706180000.translation.gkg.csv",
+          "line": 539,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260706180000.translation.gkg.csv",
+          "line": 546,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260706180000.translation.gkg.csv",
+          "line": 547,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260706180000.translation.gkg.csv",
+          "line": 548,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260706180000.translation.gkg.csv",
+          "line": 549,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260706180000.translation.gkg.csv",
+          "line": 552,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260706180000.translation.gkg.csv",
+          "line": 553,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260706180000.translation.gkg.csv",
+          "line": 554,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260706180000.translation.gkg.csv",
+          "line": 555,
+          "reason": "fewer_than_27_fields"
+        }
+      ]
+    },
+    {
+      "file": "20260707180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": [
+        {
+          "member": "20260707180000.translation.gkg.csv",
+          "line": 390,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260707180000.translation.gkg.csv",
+          "line": 1034,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260707180000.translation.gkg.csv",
+          "line": 1035,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260707180000.translation.gkg.csv",
+          "line": 1036,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260707180000.translation.gkg.csv",
+          "line": 1037,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260707180000.translation.gkg.csv",
+          "line": 1039,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260707180000.translation.gkg.csv",
+          "line": 1040,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260707180000.translation.gkg.csv",
+          "line": 1041,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260707180000.translation.gkg.csv",
+          "line": 1042,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260707180000.translation.gkg.csv",
+          "line": 1059,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260707180000.translation.gkg.csv",
+          "line": 1060,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260707180000.translation.gkg.csv",
+          "line": 1061,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260707180000.translation.gkg.csv",
+          "line": 1062,
+          "reason": "fewer_than_27_fields"
+        }
+      ]
+    },
+    {
+      "file": "20260708180000.translation.gkg.csv.zip",
+      "selected": 1,
+      "excluded": [
+        {
+          "member": "20260708180000.translation.gkg.csv",
+          "line": 494,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260708180000.translation.gkg.csv",
+          "line": 495,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260708180000.translation.gkg.csv",
+          "line": 496,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260708180000.translation.gkg.csv",
+          "line": 497,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260708180000.translation.gkg.csv",
+          "line": 516,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260708180000.translation.gkg.csv",
+          "line": 517,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260708180000.translation.gkg.csv",
+          "line": 518,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260708180000.translation.gkg.csv",
+          "line": 519,
+          "reason": "fewer_than_27_fields"
+        }
+      ]
+    },
+    {
+      "file": "20260709180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": [
+        {
+          "member": "20260709180000.translation.gkg.csv",
+          "line": 944,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260709180000.translation.gkg.csv",
+          "line": 1047,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260709180000.translation.gkg.csv",
+          "line": 1197,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260710180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": [
+        {
+          "member": "20260710180000.translation.gkg.csv",
+          "line": 1653,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260711180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": []
+    },
+    {
+      "file": "20260712180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": []
+    },
+    {
+      "file": "20260713180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": []
+    },
+    {
+      "file": "20260714180000.translation.gkg.csv.zip",
+      "selected": 1,
+      "excluded": []
+    },
+    {
+      "file": "20260715180000.translation.gkg.csv.zip",
+      "selected": 4,
+      "excluded": [
+        {
+          "member": "20260715180000.translation.gkg.csv",
+          "line": 386,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260715180000.translation.gkg.csv",
+          "line": 603,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260715180000.translation.gkg.csv",
+          "line": 1454,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260716180000.translation.gkg.csv.zip",
+      "selected": 4,
+      "excluded": [
+        {
+          "member": "20260716180000.translation.gkg.csv",
+          "line": 1919,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260717180000.translation.gkg.csv.zip",
+      "selected": 5,
+      "excluded": []
+    },
+    {
+      "file": "20260718180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": []
+    },
+    {
+      "file": "20260719180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": [
+        {
+          "member": "20260719180000.translation.gkg.csv",
+          "line": 718,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260719180000.translation.gkg.csv",
+          "line": 742,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260719180000.translation.gkg.csv",
+          "line": 1130,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260719180000.translation.gkg.csv",
+          "line": 1216,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260720180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": []
+    },
+    {
+      "file": "20260721180000.translation.gkg.csv.zip",
+      "selected": 1,
+      "excluded": [
+        {
+          "member": "20260721180000.translation.gkg.csv",
+          "line": 1092,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260721180000.translation.gkg.csv",
+          "line": 1267,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260722180000.translation.gkg.csv.zip",
+      "selected": 1,
+      "excluded": []
+    },
+    {
+      "file": "20260723180000.translation.gkg.csv.zip",
+      "selected": 2,
+      "excluded": []
+    },
+    {
+      "file": "20260724180000.translation.gkg.csv.zip",
+      "selected": 1,
+      "excluded": []
+    },
+    {
+      "file": "20260725180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": [
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 719,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 722,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 723,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 724,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 725,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 726,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 735,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 736,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 737,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 738,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 739,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 744,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 745,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 746,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 747,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 748,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 753,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 754,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 755,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 756,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 757,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 770,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 771,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 772,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 773,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 774,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 778,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 805,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 806,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 807,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 808,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 809,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 816,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 817,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 818,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 819,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 820,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 826,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 827,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 828,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 829,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260725180000.translation.gkg.csv",
+          "line": 830,
+          "reason": "fewer_than_27_fields"
+        }
+      ]
+    },
+    {
+      "file": "20260726180000.translation.gkg.csv.zip",
+      "selected": 2,
+      "excluded": [
+        {
+          "member": "20260726180000.translation.gkg.csv",
+          "line": 530,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260726180000.translation.gkg.csv",
+          "line": 554,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260727180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": []
+    },
+    {
+      "file": "20260728180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": []
+    },
+    {
+      "file": "20260729180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": []
+    },
+    {
+      "file": "20260730180000.translation.gkg.csv.zip",
+      "selected": 2,
+      "excluded": [
+        {
+          "member": "20260730180000.translation.gkg.csv",
+          "line": 1192,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260731180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": []
+    },
+    {
+      "file": "20260801180000.translation.gkg.csv.zip",
+      "selected": 6,
+      "excluded": []
+    },
+    {
+      "file": "20260802180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": [
+        {
+          "member": "20260802180000.translation.gkg.csv",
+          "line": 533,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260803180000.translation.gkg.csv.zip",
+      "selected": 1,
+      "excluded": [
+        {
+          "member": "20260803180000.translation.gkg.csv",
+          "line": 469,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260803180000.translation.gkg.csv",
+          "line": 1499,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260804180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": [
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 317,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 366,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 478,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 505,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1462,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1475,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1476,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1477,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1478,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1479,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1485,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1486,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1487,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1488,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1489,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1503,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1504,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1505,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1506,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1507,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1527,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1528,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1529,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1530,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1531,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1551,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1552,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1553,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1554,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1555,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1562,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1563,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1564,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1565,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1566,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1571,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1572,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1573,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1574,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1575,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1578,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1579,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1580,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1581,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1582,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1584,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1585,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1586,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1587,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1588,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1609,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1610,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1611,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1612,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1613,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1633,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1634,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1635,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1636,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1637,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1643,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1644,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1645,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1646,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1647,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1657,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1658,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1659,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1660,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1661,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1668,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1669,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1670,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1671,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1672,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1675,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1676,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1677,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1678,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1679,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1685,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1686,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1687,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1688,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260804180000.translation.gkg.csv",
+          "line": 1689,
+          "reason": "fewer_than_27_fields"
+        }
+      ]
+    },
+    {
+      "file": "20260805180000.translation.gkg.csv.zip",
+      "selected": 2,
+      "excluded": [
+        {
+          "member": "20260805180000.translation.gkg.csv",
+          "line": 1193,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260806180000.translation.gkg.csv.zip",
+      "selected": 2,
+      "excluded": [
+        {
+          "member": "20260806180000.translation.gkg.csv",
+          "line": 1803,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260806180000.translation.gkg.csv",
+          "line": 1970,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260806180000.translation.gkg.csv",
+          "line": 2116,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260806180000.translation.gkg.csv",
+          "line": 2129,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260807180000.translation.gkg.csv.zip",
+      "selected": 1,
+      "excluded": []
+    },
+    {
+      "file": "20260808180000.translation.gkg.csv.zip",
+      "selected": 2,
+      "excluded": []
+    },
+    {
+      "file": "20260809180000.translation.gkg.csv.zip",
+      "selected": 1,
+      "excluded": []
+    },
+    {
+      "file": "20260810180000.translation.gkg.csv.zip",
+      "selected": 1,
+      "excluded": [
+        {
+          "member": "20260810180000.translation.gkg.csv",
+          "line": 1788,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260811180000.translation.gkg.csv.zip",
+      "selected": 1,
+      "excluded": []
+    },
+    {
+      "file": "20260812180000.translation.gkg.csv.zip",
+      "selected": 1,
+      "excluded": [
+        {
+          "member": "20260812180000.translation.gkg.csv",
+          "line": 2109,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260813180000.translation.gkg.csv.zip",
+      "selected": 1,
+      "excluded": [
+        {
+          "member": "20260813180000.translation.gkg.csv",
+          "line": 329,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260813180000.translation.gkg.csv",
+          "line": 486,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260813180000.translation.gkg.csv",
+          "line": 544,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260813180000.translation.gkg.csv",
+          "line": 751,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260813180000.translation.gkg.csv",
+          "line": 1498,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260814180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": [
+        {
+          "member": "20260814180000.translation.gkg.csv",
+          "line": 1021,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260814180000.translation.gkg.csv",
+          "line": 1094,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260814180000.translation.gkg.csv",
+          "line": 1112,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260815180000.translation.gkg.csv.zip",
+      "selected": 3,
+      "excluded": []
+    },
+    {
+      "file": "20260816180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": []
+    },
+    {
+      "file": "20260817180000.translation.gkg.csv.zip",
+      "selected": 2,
+      "excluded": [
+        {
+          "member": "20260817180000.translation.gkg.csv",
+          "line": 43,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260817180000.translation.gkg.csv",
+          "line": 1599,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260818180000.translation.gkg.csv.zip",
+      "selected": 1,
+      "excluded": [
+        {
+          "member": "20260818180000.translation.gkg.csv",
+          "line": 1608,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260818180000.translation.gkg.csv",
+          "line": 2009,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260819180000.translation.gkg.csv.zip",
+      "selected": 4,
+      "excluded": []
+    },
+    {
+      "file": "20260820180000.translation.gkg.csv.zip",
+      "selected": 2,
+      "excluded": []
+    },
+    {
+      "file": "20260821180000.translation.gkg.csv.zip",
+      "selected": 1,
+      "excluded": []
+    },
+    {
+      "file": "20260822180000.translation.gkg.csv.zip",
+      "selected": 1,
+      "excluded": []
+    },
+    {
+      "file": "20260823180000.translation.gkg.csv.zip",
+      "selected": 3,
+      "excluded": []
+    },
+    {
+      "file": "20260824180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": [
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 780,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1522,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1523,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1524,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1525,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1526,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1537,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1538,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1539,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1540,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1541,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1570,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1571,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1572,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1573,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1574,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1579,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1580,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1581,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1582,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1583,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1589,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1590,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1591,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1592,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1593,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1613,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1614,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1615,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1616,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1617,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1620,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1621,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1622,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1623,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1624,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1628,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1629,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1630,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1631,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1632,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1649,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1650,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1651,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1652,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1653,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1665,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1666,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1667,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1668,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1669,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1674,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1675,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1676,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1677,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1678,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1705,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1706,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1707,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1708,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1709,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1713,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1714,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1715,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1716,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1717,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1745,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1746,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1747,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1748,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1749,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1753,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1754,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1755,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1756,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1757,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1759,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1760,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1761,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1762,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1763,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1782,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1783,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1784,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1785,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1786,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1791,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1792,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1793,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1794,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1795,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1805,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1806,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1807,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1808,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260824180000.translation.gkg.csv",
+          "line": 1809,
+          "reason": "fewer_than_27_fields"
+        }
+      ]
+    },
+    {
+      "file": "20260825180000.translation.gkg.csv.zip",
+      "selected": 3,
+      "excluded": []
+    },
+    {
+      "file": "20260826180000.translation.gkg.csv.zip",
+      "selected": 1,
+      "excluded": [
+        {
+          "member": "20260826180000.translation.gkg.csv",
+          "line": 1928,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260827180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": []
+    },
+    {
+      "file": "20260828180000.translation.gkg.csv.zip",
+      "selected": 1,
+      "excluded": []
+    },
+    {
+      "file": "20260829180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": [
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 557,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 558,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 559,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 560,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 561,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 568,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 569,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 570,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 571,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 572,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 586,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 587,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 588,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 589,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 590,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 607,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 608,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 609,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 610,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 611,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 621,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 622,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 623,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 624,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 625,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 631,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 632,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 633,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 634,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 635,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 647,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 648,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 649,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 650,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260829180000.translation.gkg.csv",
+          "line": 651,
+          "reason": "fewer_than_27_fields"
+        }
+      ]
+    },
+    {
+      "file": "20260830180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": [
+        {
+          "member": "20260830180000.translation.gkg.csv",
+          "line": 140,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260830180000.translation.gkg.csv",
+          "line": 141,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260830180000.translation.gkg.csv",
+          "line": 142,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260830180000.translation.gkg.csv",
+          "line": 143,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260830180000.translation.gkg.csv",
+          "line": 146,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260830180000.translation.gkg.csv",
+          "line": 147,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260830180000.translation.gkg.csv",
+          "line": 148,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260830180000.translation.gkg.csv",
+          "line": 149,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260830180000.translation.gkg.csv",
+          "line": 151,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260830180000.translation.gkg.csv",
+          "line": 152,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260830180000.translation.gkg.csv",
+          "line": 153,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260830180000.translation.gkg.csv",
+          "line": 154,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260830180000.translation.gkg.csv",
+          "line": 158,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260830180000.translation.gkg.csv",
+          "line": 159,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260830180000.translation.gkg.csv",
+          "line": 160,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260830180000.translation.gkg.csv",
+          "line": 161,
+          "reason": "fewer_than_27_fields"
+        }
+      ]
+    },
+    {
+      "file": "20260831180000.translation.gkg.csv.zip",
+      "selected": 4,
+      "excluded": []
+    },
+    {
+      "file": "20260901180000.translation.gkg.csv.zip",
+      "selected": 6,
+      "excluded": []
+    },
+    {
+      "file": "20260902180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": [
+        {
+          "member": "20260902180000.translation.gkg.csv",
+          "line": 626,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260903180000.translation.gkg.csv.zip",
+      "selected": 2,
+      "excluded": [
+        {
+          "member": "20260903180000.translation.gkg.csv",
+          "line": 1001,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260904180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": []
+    },
+    {
+      "file": "20260905180000.translation.gkg.csv.zip",
+      "selected": 4,
+      "excluded": []
+    },
+    {
+      "file": "20260906180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": [
+        {
+          "member": "20260906180000.translation.gkg.csv",
+          "line": 498,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260906180000.translation.gkg.csv",
+          "line": 499,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260906180000.translation.gkg.csv",
+          "line": 500,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260906180000.translation.gkg.csv",
+          "line": 501,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260906180000.translation.gkg.csv",
+          "line": 505,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260906180000.translation.gkg.csv",
+          "line": 506,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260906180000.translation.gkg.csv",
+          "line": 507,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260906180000.translation.gkg.csv",
+          "line": 508,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260906180000.translation.gkg.csv",
+          "line": 513,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260906180000.translation.gkg.csv",
+          "line": 514,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260906180000.translation.gkg.csv",
+          "line": 515,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260906180000.translation.gkg.csv",
+          "line": 516,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260906180000.translation.gkg.csv",
+          "line": 528,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260906180000.translation.gkg.csv",
+          "line": 529,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260906180000.translation.gkg.csv",
+          "line": 530,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260906180000.translation.gkg.csv",
+          "line": 531,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260906180000.translation.gkg.csv",
+          "line": 534,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260906180000.translation.gkg.csv",
+          "line": 535,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260906180000.translation.gkg.csv",
+          "line": 536,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260906180000.translation.gkg.csv",
+          "line": 537,
+          "reason": "fewer_than_27_fields"
+        }
+      ]
+    },
+    {
+      "file": "20260907180000.translation.gkg.csv.zip",
+      "selected": 3,
+      "excluded": []
+    },
+    {
+      "file": "20260908180000.translation.gkg.csv.zip",
+      "selected": 1,
+      "excluded": [
+        {
+          "member": "20260908180000.translation.gkg.csv",
+          "line": 2078,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260908180000.translation.gkg.csv",
+          "line": 2116,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260908180000.translation.gkg.csv",
+          "line": 2135,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260909180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": []
+    },
+    {
+      "file": "20260910180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": [
+        {
+          "member": "20260910180000.translation.gkg.csv",
+          "line": 1866,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260910180000.translation.gkg.csv",
+          "line": 2021,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260910180000.translation.gkg.csv",
+          "line": 2102,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260910180000.translation.gkg.csv",
+          "line": 2256,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260911180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": []
+    },
+    {
+      "file": "20260912180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": [
+        {
+          "member": "20260912180000.translation.gkg.csv",
+          "line": 1522,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260912180000.translation.gkg.csv",
+          "line": 1549,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260913180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": []
+    },
+    {
+      "file": "20260914180000.translation.gkg.csv.zip",
+      "selected": 3,
+      "excluded": [
+        {
+          "member": "20260914180000.translation.gkg.csv",
+          "line": 262,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260914180000.translation.gkg.csv",
+          "line": 496,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260914180000.translation.gkg.csv",
+          "line": 1152,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260914180000.translation.gkg.csv",
+          "line": 1156,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260914180000.translation.gkg.csv",
+          "line": 1236,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260915180000.translation.gkg.csv.zip",
+      "selected": 6,
+      "excluded": [
+        {
+          "member": "20260915180000.translation.gkg.csv",
+          "line": 287,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260915180000.translation.gkg.csv",
+          "line": 485,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260916180000.translation.gkg.csv.zip",
+      "selected": 2,
+      "excluded": []
+    },
+    {
+      "file": "20260917180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": []
+    },
+    {
+      "file": "20260918180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": []
+    },
+    {
+      "file": "20260919180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": [
+        {
+          "member": "20260919180000.translation.gkg.csv",
+          "line": 1134,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260919180000.translation.gkg.csv",
+          "line": 1142,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260919180000.translation.gkg.csv",
+          "line": 1176,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260920180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": [
+        {
+          "member": "20260920180000.translation.gkg.csv",
+          "line": 972,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260920180000.translation.gkg.csv",
+          "line": 1071,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260920180000.translation.gkg.csv",
+          "line": 1152,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260921180000.translation.gkg.csv.zip",
+      "selected": 1,
+      "excluded": [
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 1989,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 1990,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 1991,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 1992,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 1993,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 1995,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 1996,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 1997,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 1998,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 1999,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2006,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2008,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2009,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2010,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2011,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2012,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2038,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2039,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2040,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2041,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2042,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2055,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2056,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2057,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2058,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2059,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2063,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2064,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2065,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2066,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2067,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2075,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2076,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2077,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2078,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2079,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2098,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2099,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2100,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2101,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2102,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2114,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2115,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2116,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2117,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2118,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2127,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2128,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2129,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2130,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2131,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2145,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2146,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2147,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2148,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2149,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2151,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2152,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2153,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2154,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2155,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2168,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2169,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2170,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2171,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2172,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2182,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2183,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2184,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2185,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2186,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2188,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2189,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2190,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2191,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2192,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2209,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2210,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2211,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2212,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2213,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2234,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2235,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2236,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2237,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2238,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2241,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2242,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2243,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2244,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2245,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2249,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2250,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2251,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2252,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2253,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2263,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2264,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2265,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2266,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2267,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2277,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2278,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2279,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2280,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2281,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2287,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2288,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2289,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2290,
+          "reason": "fewer_than_27_fields"
+        },
+        {
+          "member": "20260921180000.translation.gkg.csv",
+          "line": 2291,
+          "reason": "fewer_than_27_fields"
+        }
+      ]
+    },
+    {
+      "file": "20260922180000.translation.gkg.csv.zip",
+      "selected": 3,
+      "excluded": [
+        {
+          "member": "20260922180000.translation.gkg.csv",
+          "line": 1677,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260922180000.translation.gkg.csv",
+          "line": 1779,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260922180000.translation.gkg.csv",
+          "line": 2132,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260922180000.translation.gkg.csv",
+          "line": 2193,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260922180000.translation.gkg.csv",
+          "line": 2248,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260922180000.translation.gkg.csv",
+          "line": 2265,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260922180000.translation.gkg.csv",
+          "line": 2318,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260922180000.translation.gkg.csv",
+          "line": 2325,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260922180000.translation.gkg.csv",
+          "line": 2412,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260922180000.translation.gkg.csv",
+          "line": 2497,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260922180000.translation.gkg.csv",
+          "line": 2594,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260922180000.translation.gkg.csv",
+          "line": 2595,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260923180000.translation.gkg.csv.zip",
+      "selected": 1,
+      "excluded": [
+        {
+          "member": "20260923180000.translation.gkg.csv",
+          "line": 396,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260924180000.translation.gkg.csv.zip",
+      "selected": 1,
+      "excluded": [
+        {
+          "member": "20260924180000.translation.gkg.csv",
+          "line": 2400,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260925180000.translation.gkg.csv.zip",
+      "selected": 1,
+      "excluded": [
+        {
+          "member": "20260925180000.translation.gkg.csv",
+          "line": 135,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260925180000.translation.gkg.csv",
+          "line": 677,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260926180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": []
+    },
+    {
+      "file": "20260927180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": []
+    },
+    {
+      "file": "20260928180000.translation.gkg.csv.zip",
+      "selected": 0,
+      "excluded": []
+    },
+    {
+      "file": "20260929180000.translation.gkg.csv.zip",
+      "selected": 1,
+      "excluded": [
+        {
+          "member": "20260929180000.translation.gkg.csv",
+          "line": 2022,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260929180000.translation.gkg.csv",
+          "line": 2064,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260929180000.translation.gkg.csv",
+          "line": 2283,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260929180000.translation.gkg.csv",
+          "line": 2356,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260929180000.translation.gkg.csv",
+          "line": 2381,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260929180000.translation.gkg.csv",
+          "line": 2433,
+          "reason": "invalid_utf8"
+        }
+      ]
+    },
+    {
+      "file": "20260930180000.translation.gkg.csv.zip",
+      "selected": 2,
+      "excluded": [
+        {
+          "member": "20260930180000.translation.gkg.csv",
+          "line": 1429,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260930180000.translation.gkg.csv",
+          "line": 1483,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260930180000.translation.gkg.csv",
+          "line": 1603,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260930180000.translation.gkg.csv",
+          "line": 1643,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260930180000.translation.gkg.csv",
+          "line": 1802,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260930180000.translation.gkg.csv",
+          "line": 1843,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260930180000.translation.gkg.csv",
+          "line": 1945,
+          "reason": "invalid_utf8"
+        },
+        {
+          "member": "20260930180000.translation.gkg.csv",
+          "line": 2002,
+          "reason": "invalid_utf8"
+        }
+      ]
+    }
+  ],
+  "complete": true
+}

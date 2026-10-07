@@ -1,0 +1,7 @@
+{
+  "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/SL.UEM.TOTL.ZS?format=json&date=2010%3A2024&per_page=1000&page=1&source=2",
+  "fecha_extraccion": "2026-10-06T21:19:27.557320Z",
+  "status": 200,
+  "content_type": "application/json;charset=utf-8",
+  "sha256": "1181f8e669628663be0601eef7910fcada5188aac722284c463c1a28ac2dc1fd"
+}

@@ -1,0 +1,7 @@
+{
+  "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/SP.POP.TOTL?format=json&date=2010%3A2024&per_page=1000&page=1&source=2",
+  "fecha_extraccion": "2026-10-06T21:19:29.420060Z",
+  "status": 200,
+  "content_type": "application/json;charset=utf-8",
+  "sha256": "e06e40801774c234af8de85ee9f42b0c25c547a8e2d5f454751ba60753939c0f"
+}

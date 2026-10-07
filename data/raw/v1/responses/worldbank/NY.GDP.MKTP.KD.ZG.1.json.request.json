@@ -1,0 +1,7 @@
+{
+  "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NY.GDP.MKTP.KD.ZG?format=json&date=2010%3A2024&per_page=1000&page=1&source=2",
+  "fecha_extraccion": "2026-10-06T21:19:24.551363Z",
+  "status": 200,
+  "content_type": "application/json;charset=utf-8",
+  "sha256": "c86460294554efe74cbfa8904d3cb3ea3e8ad7227f692ba8673d29a1c7802efb"
+}

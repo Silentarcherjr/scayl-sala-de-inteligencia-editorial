@@ -1,0 +1,7 @@
+{
+  "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%28Panama+OR+Panam%C3%A1%29+%28economy+OR+econom%C3%ADa%29&mode=ArtList&format=json&maxrecords=250&STARTDATETIME=20250902000000&ENDDATETIME=20250902235959",
+  "fecha_extraccion": "2026-10-06T21:22:29.540255Z",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "sha256": "0332a6d3803495c6657997cc6433e8cfa39dac159f04817a9ed8417bcb2e7d01"
+}

@@ -1,0 +1,5 @@
+La adquisición B-01/B-02 incorpora fetchers y recibos reproducibles. Esta continuación evita que los ZIP auxiliares GKG y el RSS con descripciones entren al historial publicado o al conjunto de archivos exigidos por el manifest. Los hashes se conservan en acquisition_inventory.json como «solo local»; el corte se lee de la configuración oficial.
+
+Validación: 99 pruebas pasan en el entorno .venv; reporte en docs/worklog/worker-b-manifest-pytest.xml. Dos pruebas nuevas cubren verificación de una copia sin auxiliares locales, integridad del inventario y rechazo de hashes inconsistentes. Se verificaron los 118 hashes/tamaños contra los archivos locales y el historial publicado no contiene ZIP ni rss.xml nuevos.
+
+PR en borrador: B-01/B-02 NO se declaran cerradas. Faltan noticias para la ventana C-01, eventos_ext.geojson, fuentes.json, manifest congelado y candidatos ciegos. AP-008/AP-009 reflejan las decisiones del Lead. No se cambian contratos ni dependencias. Los raw antiguos se conservan; pendiente registrar su exclusión por fuera_de_ventana_C-01. Solo el Lead mergea.

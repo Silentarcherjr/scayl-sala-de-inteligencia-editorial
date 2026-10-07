@@ -1,0 +1,7 @@
+{
+  "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=domain%3Atvn-2.com&mode=ArtList&format=json&maxrecords=250&STARTDATETIME=20250908000000&ENDDATETIME=20250908235959",
+  "fecha_extraccion": "2026-10-06T21:30:22.527791Z",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+}

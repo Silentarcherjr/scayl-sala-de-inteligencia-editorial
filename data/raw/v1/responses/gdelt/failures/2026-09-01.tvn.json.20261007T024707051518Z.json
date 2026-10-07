@@ -1,0 +1,18 @@
+{
+  "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=domain%3Atvn-2.com&mode=ArtList&format=json&maxrecords=250&STARTDATETIME=20260901000000&ENDDATETIME=20260901235959",
+  "attempts": [
+    {
+      "at": "2026-10-07T02:46:22.025286Z",
+      "error": "<urlopen error [WinError 10013] Intento de acceso a un socket no permitido por sus permisos de acceso>"
+    },
+    {
+      "at": "2026-10-07T02:46:37.037942Z",
+      "error": "<urlopen error [WinError 10013] Intento de acceso a un socket no permitido por sus permisos de acceso>"
+    },
+    {
+      "at": "2026-10-07T02:47:07.051470Z",
+      "error": "<urlopen error [WinError 10013] Intento de acceso a un socket no permitido por sus permisos de acceso>"
+    }
+  ],
+  "success": false
+}

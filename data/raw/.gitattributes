@@ -1,0 +1,2 @@
+# Raw evidence is byte-exact; checkout must not change line endings or hashes.
+* -text

@@ -1,0 +1,7 @@
+{
+  "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2024-01-01T00%3A00%3A00&endtime=2025-01-01T00%3A00%3A00&minlatitude=5&maxlatitude=12&minlongitude=-86&maxlongitude=-76&minmagnitude=3&orderby=time-asc&limit=20000&offset=1",
+  "fecha_extraccion": "2026-10-06T21:19:27.277126Z",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "sha256": "147863f91d3b040943b76eec8120439c722a8f11e71b423f7eb5e68dd061b9b9"
+}

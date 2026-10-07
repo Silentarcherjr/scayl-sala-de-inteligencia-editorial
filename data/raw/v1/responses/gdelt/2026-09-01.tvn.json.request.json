@@ -1,0 +1,17 @@
+{
+  "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=domain%3Atvn-2.com&mode=ArtList&format=json&maxrecords=250&STARTDATETIME=20260901000000&ENDDATETIME=20260901235959",
+  "fecha_extraccion": "2026-10-07T02:48:54.244453Z",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+  "previous_failures": [
+    {
+      "at": "2026-10-07T02:47:42.801835Z",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "at": "2026-10-07T02:48:08.688734Z",
+      "error": "HTTP Error 429: Too Many Requests"
+    }
+  ]
+}

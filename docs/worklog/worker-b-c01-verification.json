@@ -1,0 +1,21 @@
+{
+  "at": "2026-10-07T02:58:25.656120Z",
+  "manifest_sha256": "97a5cd2b7ac64c24769c380d368369c24c24ab2df3d7d9dac23fe0bd86db2aa7",
+  "verify_manifest": [],
+  "portable_copy_verify": [],
+  "candidate_count": 187,
+  "news": 187,
+  "tvn": 50,
+  "target_30_days": {
+    "news": 67,
+    "tvn": 2
+  },
+  "extended_90_days": {
+    "news": 159,
+    "tvn": 22
+  },
+  "wb": 540,
+  "usgs_official": 82,
+  "usgs_extension": 87,
+  "local_only_zip_count": 207
+}

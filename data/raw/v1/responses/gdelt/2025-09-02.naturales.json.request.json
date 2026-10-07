@@ -1,0 +1,7 @@
+{
+  "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%28Panama+OR+Panam%C3%A1%29+%28earthquake+OR+sismo+OR+inundaciones+OR+flood%29&mode=ArtList&format=json&maxrecords=250&STARTDATETIME=20250902000000&ENDDATETIME=20250902235959",
+  "fecha_extraccion": "2026-10-06T21:22:49.131596Z",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "sha256": "8ac01c53989703748ba302ff36cd8f1ac66b2e5795e2a7cd8be5999aabf52df4"
+}

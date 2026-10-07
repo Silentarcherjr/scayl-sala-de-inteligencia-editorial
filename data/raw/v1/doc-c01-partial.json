@@ -1,0 +1,54 @@
+{
+  "at": "2026-10-07T02:54:41.979245Z",
+  "complete": false,
+  "reason": "DOC stopped after repeated HTTP 429; daily GKG fallback used under DL-008",
+  "responses": [
+    {
+      "file": "responses/gdelt/2026-09-01.canal.json.request.json",
+      "records": 28,
+      "retry_count": 0
+    },
+    {
+      "file": "responses/gdelt/2026-09-01.tvn.json.request.json",
+      "records": 0,
+      "retry_count": 2
+    }
+  ],
+  "failures": [
+    {
+      "file": "responses/gdelt/failures/2026-09-01.turismo.json.20261007T025045127947Z.json",
+      "attempts": [
+        {
+          "at": "2026-10-07T02:49:37.011109Z",
+          "error": "HTTP Error 429: Too Many Requests"
+        },
+        {
+          "at": "2026-10-07T02:50:03.757266Z",
+          "error": "HTTP Error 429: Too Many Requests"
+        },
+        {
+          "at": "2026-10-07T02:50:45.127910Z",
+          "error": "HTTP Error 429: Too Many Requests"
+        }
+      ]
+    },
+    {
+      "file": "responses/gdelt/failures/2026-09-01.tvn.json.20261007T024707051518Z.json",
+      "attempts": [
+        {
+          "at": "2026-10-07T02:46:22.025286Z",
+          "error": "<urlopen error [WinError 10013] Intento de acceso a un socket no permitido por sus permisos de acceso>"
+        },
+        {
+          "at": "2026-10-07T02:46:37.037942Z",
+          "error": "<urlopen error [WinError 10013] Intento de acceso a un socket no permitido por sus permisos de acceso>"
+        },
+        {
+          "at": "2026-10-07T02:47:07.051470Z",
+          "error": "<urlopen error [WinError 10013] Intento de acceso a un socket no permitido por sus permisos de acceso>"
+        }
+      ]
+    }
+  ],
+  "window_source": "scayl/config/data_window.v1.yaml"
+}

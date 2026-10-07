@@ -1,5 +1,32 @@
 # AGENT_PROPOSALS — propuestas transversales
 
+## AP-009 · Usar entradas históricas que el RSS actual de TVN sí conserva
+- Autor / fecha: frictionspp-svg + Codex · 2026-10-06.
+- Estado: **SUPERADA por DL-017**.
+- Problema u oportunidad: GDELT DOC responde repetidamente 429 y las consultas TVN que respondieron no trajeron artículos; el muestreo histórico GKG no trajo TVN. Sin embargo, el RSS público descargado tiene 152 entradas: 48 con pubDate dentro de [2024-01-01, 2025-10-01), incluidas 3 de septiembre de 2025. La suposición de que el RSS solo contiene fechas actuales no se cumple en esta extracción.
+- Cambio propuesto: incluir esas 48 entradas históricas, deduplicadas por URL, con origen=tvn_rss y fechas de publicación originales; conservar detección/extracción en 2026. Declarar la cobertura TVN más amplia que septiembre y conservar el RSS completo separado. Excluir del corpus las entradas posteriores al corte.
+- Por qué mejora el proyecto: permite mantener el intervalo oficial sin fabricar fechas ni cambiar contratos; aporta al menos 20 registros reales del patrocinador.
+- Dimensión de rúbrica: cobertura, reproducibilidad, procedencia y Temporal Guard.
+- Archivos/módulos afectados: scayl/ingest/fetch_tvn.py, noticias.csv, manifest y catálogo. Ningún cambio de contracts.py ni del filtro oficial de B-03.
+- Riesgos: publicación declarada por el RSS, no verificada contra el artículo; muestra histórica desigual y no exhaustiva. La fecha de detección de 2026 debe mantenerse visible como recirculación.
+- Esfuerzo estimado: adaptador local y prueba de filtro por publicación.
+- Recomendación: ACCEPT.
+- Evidencia: data/raw/v1/responses/tvn-current/rss.xml y recibo SHA-256; data/raw/v1/tvn_rss_actual.json.
+- Decisión (Lead/humano + fecha): **SUPERADA por DL-017, Lead, 2026-10-07**. Las 48 entradas antiguas quedan fuera; usar únicamente pubDate dentro de la ventana C-01 y fecha_deteccion nula.
+
+## AP-008 · Cardinalidad de la cuadrícula World Bank (B-01)
+- Autor / fecha: frictionspp-svg + Codex · 2026-10-06.
+- Estado: **ACEPTADA (DL-013)**.
+- Problema u oportunidad: los seis países y seis indicadores enumerados para 2010–2024 generan 6 × 6 × 15 = 540 claves únicas, no las 1.350 filas indicadas en TASKS y el catálogo.
+- Cambio propuesto: confirmar 540 filas como cardinalidad, conservando exactamente países, indicadores y años; el Lead corregiría los documentos canónicos.
+- Por qué mejora el proyecto: evita inventar países, indicadores, años o duplicados para alcanzar un total incompatible.
+- Dimensión de rúbrica: calidad técnica y trazabilidad de datos.
+- Archivos/módulos afectados: docs/TASKS.md (Lead), catálogo y diccionario; adaptador local scayl/ingest/fetch_worldbank.py.
+- Riesgos: el número 1.350 podría referirse a dimensiones adicionales no documentadas.
+- Esfuerzo estimado: confirmación del alcance; implementación local calcula el producto cartesiano explícito.
+- Recomendación: ACCEPT.
+- Decisión (Lead/humano + fecha): **ACEPTADA por Lead, 2026-10-07, DL-013**. Cuadrícula de 540 filas (6 países × 6 indicadores × 15 años), sin ampliar dimensiones.
+
 > Todo cambio que afecte arquitectura, UX global, contratos de datos, alcance, seguridad, evaluación,
 > dependencias, interfaces u otros workers se propone **aquí primero**. El Lead decide; los humanos
 > deciden lo marcado como "requiere aprobación humana".
