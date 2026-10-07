@@ -112,6 +112,85 @@ def current_state(event_id: str) -> ReviewState:
     return _store().current_state(event_id)
 
 
+def official_weights() -> dict[str, int]:
+    from scayl.evidence.scoring import load_rules
+
+    return dict(load_rules()["weights"])
+
+
+def simulate_weights(weights: dict[str, int]) -> list[Event]:
+    """Weight simulator (L-15/A-10): re-rank the bundle; official weights reproduce scoring-v1 exactly."""
+    from scayl.evidence.scoring import rescore
+
+    return rescore(list(load_bundle().events), weights)
+
+
+def record_weight_change(weights: dict[str, int], author: str, justification: str) -> dict:
+    """Weight changes must be justified (PDF §4). Appended to data/state/weight_changes.jsonl + Notion outbox."""
+    from datetime import UTC, datetime
+
+    from scayl.evidence.scoring import custom_version, load_rules
+
+    if not author.strip() or not justification.strip():
+        raise ValueError("Autor y justificación son obligatorios para cambiar pesos.")
+    ranked = simulate_weights(weights)  # validates weights (sum 100, R/I/U/N/E, non-negative)
+    entry = {
+        "at_utc": datetime.now(UTC).isoformat(), "author": author.strip(), "justification": justification.strip(),
+        "weights": weights, "official_weights": official_weights(),
+        "rules_version": ranked[0].priority.rules_version if ranked else custom_version(weights, load_rules()),
+        "snapshot_version": load_bundle().snapshot_version,
+        "top5_official": [e.event_id for e in simulate_weights(official_weights())[:5]],
+        "top5_new": [e.event_id for e in ranked[:5]],
+        "note": "Simulación: no cambia el ranking oficial (scoring-v1) hasta una decisión registrada.",
+    }
+    state = _store().state_dir
+    with (state / "weight_changes.jsonl").open("a", encoding="utf-8") as f:
+        f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+    with (state / "notion_outbox.jsonl").open("a", encoding="utf-8") as f:
+        f.write(json.dumps({"op": "append_weight_change", "page": "02_DECISION_LOG", "payload": entry,
+                            "created_at": entry["at_utc"], "synced_at": None}, ensure_ascii=False) + "\n")
+    return entry
+
+
+def generation_summary() -> dict:
+    """Measured facts from data/processed/<snap>/generation_report.jsonl (Trust Lab). Never estimates."""
+    import statistics
+
+    path = bundle_path().parent / "generation_report.jsonl"
+    rows = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines() if line.strip()] \
+        if path.exists() and bundle_path() != FIXTURE else []
+    if not rows:
+        return {"status": "no medido", "packages": 0}
+    removed: dict[str, int] = {}
+    for r in rows:
+        for code, n in (r.get("removed_by_code") or {}).items():
+            removed[code] = removed.get(code, 0) + n
+    llm_rows = [r for r in rows if r.get("mode") in ("live", "cache") and not r.get("fallback_reason")]
+    lat = sorted(r["latency_ms"] for r in llm_rows if r.get("latency_ms"))
+    attr = [r["attribution"] for r in rows if r.get("attribution")]
+    kept = sum(r.get("sentences_kept", 0) for r in rows)
+    cited = sum(r.get("kept_sentences_with_valid_citation", 0) for r in rows)
+    return {
+        "status": "medido",
+        "packages": len(rows),
+        "llm_packages": len(llm_rows),
+        "fallbacks": sum(1 for r in rows if r.get("fallback_reason")),
+        "models": sorted({r["model"] for r in rows if r.get("model")}),
+        "prompt_versions": sorted({r["prompt_version"] for r in rows if r.get("prompt_version")}),
+        "sentences_generated": sum(r.get("sentences_generated", 0) for r in rows),
+        "sentences_kept": kept,
+        "removed_by_code": removed,
+        "citation_coverage": {"num": cited, "den": sum(r.get("kept_brief_script", 0) for r in rows)},
+        "attribution": {"candidates": sum(a["candidates"] for a in attr),
+                        "preserved_before": sum(a["preserved_before_validation"] for a in attr),
+                        "preserved_after": sum(a["preserved_after_validation"] for a in attr)},
+        "latency_ms": {"n": len(lat), "median": statistics.median(lat) if lat else None,
+                       "p95": lat[min(len(lat) - 1, int(round(0.95 * (len(lat) - 1))))] if lat else None},
+        "tokens_out": sum(r.get("tokens_out") or 0 for r in llm_rows),
+        "cost_usd": sum(r.get("cost_usd") or 0.0 for r in rows),
+    }
+
+
 def trust_lab() -> dict:
     path = ROOT / "eval" / "results" / "latest.json"
     if not path.exists():
@@ -125,11 +204,15 @@ __all__ = [
     "current_state",
     "generate_package",
     "get_event",
+    "generation_summary",
     "get_package",
     "load_bundle",
+    "official_weights",
     "receipt",
+    "record_weight_change",
     "reload",
     "review",
     "review_history",
+    "simulate_weights",
     "trust_lab",
 ]

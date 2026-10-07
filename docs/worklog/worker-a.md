@@ -8,3 +8,6 @@
 
 
 - 2026-10-07 02:11 UTC · A-03/A-08 · PR #13 listo para revisión, sin merge; relevo: ver docs/handoff/LowCrime.md · siguiente bloque A-01/A-02, luego A-07.
+- 2026-10-07 02:34 UTC · A-01/A-02 · rama worker-a/sala-de-situacion desde origin/main 61aba5e tras sincronización limpia; Home, navegación, tabla ordenada, filtros, matriz 3×3, componentes y enlaces a ficha; Consultas provisional; seis pruebas nuevas, suite 95 passed y capturas Chromium 1280×720 · sin tocar A-05/A-10.
+
+- 2026-10-07 02:36 UTC · A-01/A-02 · PR #18 abierto, listo para revisión, sin merge; relevo: ver docs/handoff/LowCrime.md · siguiente A-07 desde main con Home integrado, luego A-04/A-09; A-05/A-10 del Lead.

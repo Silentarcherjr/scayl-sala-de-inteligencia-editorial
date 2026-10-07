@@ -126,3 +126,14 @@
 - **Alternativas:** mantener la UI inicial en frictionspp-svg (que además tiene el snapshot y dos fuentes nuevas); dejar la revisión atada solo al paquete del snapshot.
 - **Motivo:** el cuello de botella era frictionspp-svg; la tarjeta A-08 bloqueaba A-03. Revisar contenido distinto del mostrado rompería la trazabilidad (hallazgo de LowCrime).
 - **Fecha:** 2026-10-07
+
+### DL-021 · El Lead toma A-05 (vista del Trust Lab) y A-10 (simulador de pesos)
+- **Decisión:** para liberar a LowCrime (Sala de Situación, Agenda, Consultas y despliegue), el Lead implementa la vista del Trust Lab y el simulador de pesos. LowCrime conserva B-08 (evaluación), que escribe `eval/results/latest.json`.
+- **Detalle:** el Trust Lab muestra solo resultados medidos, con numerador y denominador, y "no medido" en lo demás; además resume `generation_report.jsonl` (cobertura de citas, eliminaciones por validador, preservación de atribución, latencia y tokens). El simulador re-rankea sin tocar el ranking oficial y exige autor y justificación para registrar el cambio (`data/state/weight_changes.jsonl` + cola de Notion), como pide el PDF §4.
+- **Hallazgo:** Streamlit envía telemetría de uso a internet por defecto; se desactiva en `.streamlit/config.toml` (demo offline y privacidad).
+- **Fecha:** 2026-10-07
+
+### DL-022 · B-03 (`load_snapshot`) sube antes que ACP/INEC
+- **Decisión:** después de congelar el snapshot, frictionspp-svg hace primero B-03 (validación y carga) y luego B-13/B-14.
+- **Motivo:** sin `load_snapshot` el pipeline no corre con datos reales, y eso bloquea el hito M1, la prueba en la GPU, el top 5 a ciegas y la evaluación. ACP e INEC suman evidencia, pero no bloquean el flujo.
+- **Fecha:** 2026-10-07

@@ -19,3 +19,7 @@
 - 2026-10-07 04:00 UTC · revisión PR #13 · AP-011 (review con paquete visible + receipt); DL-020 reasignación UI
 - 2026-10-07 04:20 UTC · docs · sincronización con main incluida en el mensaje estándar del agente
 - 2026-10-07 05:00 UTC · revisión y merge PR #13 (A-03, A-08)
+- 2026-10-07 05:40 UTC · A-05/A-10 (DL-021), config Streamlit sin telemetría
+- 2026-10-07 05:40 UTC · (pendiente para AI_TOOLS_USED al consolidar) Claude Code: UI Trust Lab + simulador, 5 AppTest, capturas Chromium; telemetría Streamlit desactivada
+- 2026-10-07 06:10 UTC · merge PR #18; revisión PR #19 (historial limpio verificado)
+- 2026-10-07 06:20 UTC · DL-022 · orden de frictionspp-svg: B-03 antes de ACP/INEC
