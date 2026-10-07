@@ -42,6 +42,14 @@ Ollama + `pip install -r requirements-ai.txt` (instala antes torch con CUDA desd
 ## Datos, modelos y licencias
 Ver `docs/notion_mirror/03_DATA_CATALOG.md` y `docs/ARCHITECTURE.md` §5. Inferencia 100% local (Ollama); costo de API $0.
 
+## Recorrido visual
+
+![Sala de Situación con el snapshot público](docs/screenshots/final/01-sala.png)
+
+[Galería para el pitch: Agenda, las seis pestañas de Ficha, abstención, Trust Lab y Simulador](docs/screenshots/final/README.md).
+Capturas locales de main dc1a990,1280×720, datos reales sin descripciones RSS. Trust Lab debe recapturarse
+al integrar las nuevas métricas de PR #41; no representan un despliegue HF.
+
 ## Despliegue
 Preparación del Hugging Face Space con contraseña y modo cache: [deploy/README.md](deploy/README.md).
 Ejecutar `make public-bundle` y `python -m deploy.prepare`. Sin publicación hasta confirmación del Lead.
