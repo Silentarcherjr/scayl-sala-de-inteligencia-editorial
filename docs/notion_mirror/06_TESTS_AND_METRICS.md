@@ -79,3 +79,11 @@ Capturas finales: el primer arnés buscaba h2 Respuesta pero la UI usa h3 Result
 | 2026-10-07 | B-06 smoke real | AttributeError report.total. | El script local asumió objeto donde load_snapshot devuelve dict. | Usar report["total"] en el script; no cambio del loader. | eval/results/b06-smoke.json al repetir. |
 | 2026-10-07 | Holdout v2 HV2-03/05/07/09 | Abstención observada donde el humano esperaba respuesta:4/4; controles respondidos0/4. | El runner declara que su corpus no contiene evidencia pertinente; controles de conocimiento general sin soporte garantizado en el fixture. | Sin cambio de código, datos de soporte ni expectativas; conservar fallos. No mide rechazo de respuestas sustentadas. | eval/results/holdout-v2.json; companion y procedencia humana; coincidencias6/10. |
 | 2026-10-07 | DL-029 sondeo local de Ollama | localhost:11434 rechazó la conexión (WinError 10061). | Servicio detenido antes del precálculo. | Iniciar Ollama local oculto con Vulkan y verificar qwen3:8b; repetir con caché nueva. | eval/results/dl029-precompute.json: live15/15, fallback0/15, citas45/45; mediana13131ms, p9516997,5ms; 188 pruebas y Ruff en verde. |
+
+### B-09 y A-06 ? 2026-10-07 22:18 UTC
+
+Revision humana LowCrime completa: 25 si, 3 no (SR05, SR10, SR19), 2 parcial (SR04, SR25). Validez estricta 25/30 = 83,3%; parcial no suma. Muestra determinista template, no generalizable a salidas LLM cache. CSV/meta inmutables verificados; etiquetas y UTC archivadas en la corrida 20261007T221213303534Z. P@5 exploratoria 1/5 sobre 165 eventos del bundle publico, con DL-024. Red-team y precompute importados con su procedencia original.
+
+188 pruebas pasaron y ruff check . limpio. Stage probado en Streamlit local: 31 hashes coinciden, cero descripciones/citas RSS, cache forzada y 15/15 paquetes precalculados recuperados sin llamar al backend. Autenticacion y rutas verificadas con AppTest y Chromium. Docker y HF: no medido; sin publicar. Evidencia: deploy/readiness-human-inputs.json y capturas finales 10/12/13.
+
+Incidencia de verificacion: el script temporal de captura tuvo un error de separacion de texto PowerShell y tiempos de espera al reintentar el login en navegador. Se corrigio el script y se comprobo entrada en sesion nueva; AppTest sobre stage tambien comprobo incorrecta seguida de correcta. No se modifico ni desactivo el control de acceso.

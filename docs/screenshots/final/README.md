@@ -1,5 +1,12 @@
 # Capturas de entrega · 1280×720
 
+**Actualización tras PR #51:** las imágenes 10, 12 y 13 provienen del stage público con
+contraseña `deploy/stage-human-reviewed`, código `5b6fd71`, 187 señales y 165 eventos,
+15 paquetes cache y 150 template. Muestran AP-014 aplicada y B-09 completa (25/30).
+Su procedencia y hashes están en cada entrada de `manifest.json`; sustituyen para esas
+imágenes la procedencia general del lote original. Las otras diez imágenes no se recapturaron.
+No es un despliegue HF. La muestra humana evaluada es template, no la caché LLM.
+
 Capturas reales de Chromium local sobre `main` dc1a990, snapshot v1 con ACP/INEC, bundle público sin
 descripciones RSS: 187 señales,183 eventos baseline, paquetes template. No se editaron las imágenes
 ni se publicaron revisiones/simulaciones. Estado de revisión temporal. Hashes de bundle/evaluación/PNG
@@ -16,12 +23,13 @@ en `manifest.json`. No son imágenes de un Space desplegado ni el video H-05 (re
 | [07-ficha-producir.png](07-ficha-producir.png) | Paquete template, alcance y validación |
 | [08-ficha-revision.png](08-ficha-revision.png) | Control humano; formulario sin enviar |
 | [09-consultas-abstencion.png](09-consultas-abstencion.png) | Pregunta fuera del corpus: motivo e información necesaria |
-| [10-trust-lab.png](10-trust-lab.png) | Red-team corregido16/16 y0/4; restantes datos de latest en main |
+| [10-trust-lab.png](10-trust-lab.png) | Revisión humana 25/30, abstención y latencia con n |
 | [11-simulador.png](11-simulador.png) | Pesos oficiales y ranking, sin registrar cambios |
+| [12-space-acceso.png](12-space-acceso.png) | Ruta directa protegida por contraseña, sin datos antes de entrar |
+| [13-trust-lab-procedencia.png](13-trust-lab-procedencia.png) | Red-team, limitación DL-024 y procedencia del precompute |
 
-La captura de Trust Lab refleja **main**, no los PR pendientes #41 (precompute medido) y #42 (AP-014,
-propuesta de vista). Regenerarla después de integrar esas mejoras o nuevas etiquetas humanas; no
-presentar el no medido de esta captura como ausencia de la medición ya guardada en b13-b14-precompute.
+La captura actual de Trust Lab incluye #41 y AP-014 integradas vía #51. La evaluación distingue
+la revisión humana template de las mediciones importadas de precompute y red-team.
 La evaluación mostrada tiene su propia fecha de ejecución; no se presenta como recalculada al capturar.
 
 Reproducir: ejecutar `python -m scayl.pipeline build --snapshot data/raw/v1 --llm cache --top 15 --public`

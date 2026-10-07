@@ -1,5 +1,10 @@
 # A-06 · Preparación local del Space (sin publicar)
 
+**Estado vigente tras PR #51:** [stage con caché pública probado localmente](HUMAN_INPUTS_READINESS.md).
+`deploy/stage-human-reviewed/` contiene 30 entradas revisadas y la evaluación B-09 completa.
+No publicado; pendiente confirmación del Lead. Las preparaciones sin caché descritas abajo
+son históricas y no deben usarse para la entrega actual.
+
 AP-001 aceptada; publicación pendiente de confirmación del Lead. No se creó Space ni se usaron
 credenciales HF. El acceso se cierra si falta `SCAYL_SPACE_PASSWORD`; ese valor será un **Secret**
 de runtime del Space, nunca un archivo, argumento Docker o variable pública.

@@ -52,3 +52,5 @@ Codex · LowCrime · 2026-10-07 · A-06: preparación actualizada y auditoría l
 Codex · LowCrime · 2026-10-07 · H-06: protocolo, hoja de tiempos y evaluador. No inventó duraciones ni ahorro; medición humana pendiente. Pruebas de ausencias y desaceleración.
 Codex · LowCrime · 2026-10-07 · Capturas finales: automatizó navegación/captura Chromium, inspección visual y hashes; imágenes reales sin generación ni edición, snapshot público sin RSS visible.
 Codex · LowCrime · 2026-10-07 · Pulido UI: textos/ayudas en español y vacíos de Ficha, sin cambios funcionales; validación con suite existente, sin tests que dupliquen textos triviales.
+
+Codex ? LowCrime ? 2026-10-07 22:18 UTC ? B-09: transcripcion de 30 decisiones humanas recibidas interactivamente; no genero etiquetas. B-08 recalculada con alcance template explicito. A-06: auditoria de hashes/campos RSS, prueba local de autenticacion y cache, capturas reales del Trust Lab; no publico HF ni uso credenciales remotas.
