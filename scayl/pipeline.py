@@ -155,10 +155,14 @@ def _load_worker_b(snapshot: Path):
 
     method = os.environ.get("SCAYL_INTEL", "ai" if _ai_available() else "baseline")
     embedder, method = select_embedder(method, get_embedder)
-    log.info("Inteligencia semántica: temas=%s, agrupación=%s", method, embedder.name)
+    # Topics and clustering are chosen separately, by measurement (DL-029): on 100 human-labelled C-01
+    # headlines the keyword rules beat the E5 prototype classifier (macro-F1 0.76 vs 0.25), while E5 is kept
+    # for clustering. SCAYL_TOPICS=ai re-enables the prototype classifier for experiments.
+    topics_method = os.environ.get("SCAYL_TOPICS", "baseline")
+    log.info("Inteligencia semántica: temas=%s, agrupación=%s", topics_method, embedder.name)
 
     def classify(items):
-        return topics_mod.classify(items, method=method)
+        return topics_mod.classify(items, method=topics_method)
 
     def cluster(items):
         return cluster_mod.cluster(items, embedder)
