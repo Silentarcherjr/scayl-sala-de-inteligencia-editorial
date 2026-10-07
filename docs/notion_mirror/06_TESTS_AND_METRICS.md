@@ -28,7 +28,7 @@
 | Temas macro-F1 (baseline vs IA) | reportar | **0.7568136932 / 0.2464596005**; siete clases, zero_division=0 | 100 | `eval/results/b07-human-metrics.json`; etiquetas explícitas de frictionspp-svg, propuestas visibles |
 | Agrupación P/R/F1 (baseline vs IA) | reportar | Baseline: **P12/12, R12/43, F1=0.4363636364**; IA: **P42/42, R42/43, F1=0.9882352941** | 488 pares / 32 titulares | `eval/results/b07-human-metrics.json`; desarrollo2025 ya usado para calibrar τ provisional, revisión asistida; recall relativo al pool, no holdout |
 | Precision@5 | reportar (exploratoria) | **1/5 = 0.20** (baseline TF-IDF + reglas, sin ACP/INEC; preliminar del Lead, B-08 la formaliza). Los 5 elegidos quedan en las posiciones 2, 6, 12, 22 y 26 de 183 | 5 eventos | Top 5 de LowCrime (PR #23, 2026-10-07). Limitación: vio antes una propuesta de IA (coincide en 1 de 5) y no vio el ranking del sistema (DL-024) |
-| Latencia mediana / p95 | mediana ≤15 s | **14,6 s / 17,6 s** (Story Studio en vivo, qwen3:8b, AMD RX 9060 XT 8 GB Vulkan; corrida tras DL-026). qwen3:4b: 9,1 s / 12,9 s, con 3 paquetes vacíos | 15 | `eval/results/final-precompute*.json`, `eval/results/b10-model-comparison.json` |
+| Latencia mediana / p95 | mediana ≤15 s | **13,1 s / 17,0 s** (corrida final tras DL-029, PR #55; antes 14,6 / 17,6) (Story Studio en vivo, qwen3:8b, AMD RX 9060 XT 8 GB Vulkan; corrida tras DL-026). qwen3:4b: 9,1 s / 12,9 s, con 3 paquetes vacíos | 15 | `eval/results/final-precompute*.json`, `eval/results/b10-model-comparison.json` |
 | Costo de API | — | $0.00 por diseño (local); se confirma al medir | — | — |
 
 ## Registro de pruebas fallidas y correcciones
