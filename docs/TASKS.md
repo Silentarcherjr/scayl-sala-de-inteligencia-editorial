@@ -23,7 +23,7 @@
 | L-11 | `gen/qa.py` con abstención | L | P0 | M2 | DONE | B-06, L-08 |
 | L-12 | `review/store.py` + `outbox.py` | L | P0 | M1 | DONE | L-01 |
 | L-13 | `evidence/gaps.py` (Investigation Gap) | L | P1 | M2 | DOING (determinista listo; inferencias vía Story Studio) | L-05 |
-| L-14 | Integración, merges, README final, pitch | L | P0 | M3–M4 | TODO | todo |
+| L-14 | Integración, merges, README final, pitch | L | P0 | M3–M4 | DOING (README final, pitch 08 y guion de video listos; falta la entrega) | todo |
 | A-01 | App Streamlit: esqueleto + `FixtureService` + navegación | **W** LowCrime (DL-020) | P0 | M1 | DONE (PR #18) | L-01 |
 | A-02 | Sala de Situación | **W** LowCrime (DL-020) | P0 | M1 | DONE (PR #18) | A-01 |
 | A-03 | Ficha de Caso (6 pestañas) | **W** LowCrime | P0 | M1–M2 | DONE (PR #13) | A-01 |
@@ -54,7 +54,7 @@
 | A-10 | Vista del simulador de pesos (sliders → ranking nuevo vs v1, justificación obligatoria) | **L** Lead (DL-021) | P1 | M2 | DONE | L-15 |
 | B-11 | **GitHub Actions**: pytest (T01–T10) en cada PR + badge en el README | **F** frictionspp-svg | P0 | M1 | DONE (PR #39: CI pytest + ruff; ruff en verde tras limpieza del Lead) | — |
 | B-12 | **Set de 10 ataques** (inyección, preguntas trampa, pedir secretos, acusaciones) + tasa de resistencia | **W** LowCrime | P1 | M3 | DONE (PR #32: 16 ataques + 4 controles; fallos corregidos en qa.py, DL-027) | L-10, L-11 |
-| H-05 | **Video de la demo con internet apagado** → Notion | H1 + L (guion del Lead, grabación local del Humano 1) | P0 | M4 | TODO | M3 |
+| H-05 | **Video de la demo con internet apagado** → Notion | H1 + L (guion del Lead, grabación local del Humano 1) | P0 | M4 | DOING (guion `docs/DEMO_SCRIPT.md` + `make demo-offline`; falta grabar) | M3 |
 | H-06 | **Mini-estudio manual vs asistido** (3 tareas cronometradas, protocolo en 06) | F + W | P1 | M3 | PREPARADA (PR #45: protocolo y hoja; faltan los tiempos humanos) | M2 |
 | H-07 | Registro de **prueba fallida → corrección** (regla continua: cada fallo real se anota en 06) | Todos | P0 | M1–M4 | DOING | — |
 | H-08 | Top 5 **a ciego** del editor (Humano 2), antes de que exista ranking | W (editor) | P0 | M0–M1 | DONE (PR #23; ver DL-024) | B-01 |

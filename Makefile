@@ -23,3 +23,6 @@ precompute:      ## LLM claims + Story Studio for the top events; fills data/cac
 
 public-bundle:   ## hosted demo: reuse cached outputs, strip RSS descriptions
 	python -m scayl.pipeline build --snapshot $${SCAYL_SNAPSHOT_DIR:-data/raw/v1} --llm cache --top 15 --public
+
+demo-offline:    ## video/rehearsal: public bundle + cached LLM outputs, no internet, no build
+	python scripts/demo_offline.py
