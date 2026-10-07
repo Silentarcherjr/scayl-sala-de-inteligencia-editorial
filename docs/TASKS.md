@@ -27,7 +27,7 @@
 | A-01 | App Streamlit: esqueleto + `FixtureService` + navegación | **W** LowCrime (DL-020) | P0 | M1 | DONE (PR #18) | L-01 |
 | A-02 | Sala de Situación | **W** LowCrime (DL-020) | P0 | M1 | DONE (PR #18) | A-01 |
 | A-03 | Ficha de Caso (6 pestañas) | **W** LowCrime | P0 | M1–M2 | DONE (PR #13) | A-01 |
-| A-04 | Consultas (Q&A) | **W** LowCrime | P0 | M2 | TODO | A-01 |
+| A-04 | Consultas (Q&A) | **W** LowCrime | P0 | M2 | DONE (PR #25) | A-01 |
 | A-05 | Trust Lab (vista) | **L** Lead (DL-021) | P1 | M3 | DONE (vista; métricas reales pendientes de B-08) | B-08 |
 | A-06 | Despliegue del enlace en modo `cache` | **W** LowCrime | P0 | M3 | TODO | AP-001, L-07 |
 | B-01 | Construir el snapshot propio según el PDF §6–7 (fetchers) → `data/raw/v1` | **F** frictionspp-svg | P0 | M0 | DONE (PR #19) | — |
@@ -37,7 +37,7 @@
 | B-05 | `intel/embed.py` + `topics.py` + `cluster.py` (baseline + IA) | **L** baseline / **F** IA (DL-023) | P0 | M1–M2 | DOING (baseline listo; falta variante IA + calibración) | B-03 |
 | B-06 | `intel/retrieve.py` (BM25 + coseno) | **F** frictionspp-svg | P0 | M2 | TODO | B-05 |
 | B-07 | Etiquetas humanas: temas (≥100), pares de agrupación, top 5 ciego, benchmark dev (40) | F (etiquetas) + W (top 5 ciego) | P0 | M2 | TODO | B-03 |
-| B-08 | `eval/`: métricas, benchmark, latencia → `eval/results/latest.json` | **W** LowCrime | P0/P1 | M3 | TODO | B-05, L-10, L-11 |
+| B-08 | `eval/`: métricas, benchmark, latencia → `eval/results/latest.json` | **W** LowCrime | P0/P1 | M3 | PARCIAL (PR #27: P@5 y T01–T10; el resto no medido hasta B-05 IA, L-10/L-11 en vivo y benchmark B-10) | B-05, L-10, L-11 |
 | B-09 | Revisión humana de ≥30 afirmaciones (validez de sustento) | W (editor) | P0 | M3 | TODO | L-10 |
 | B-10 | Benchmark de modelos locales (embeddings + LLM) en hardware declarado | **F** frictionspp-svg (AMD Radeon RX 9060 XT 8 GB, Vulkan) | P0 | M1 | TODO | — |
 | H-01 | Preparar el espacio Notion (estructura de §5) para migrar en cuanto haya licencia | H1 | P0 | M3 | TODO | — |
@@ -48,9 +48,9 @@
 | L-16 | **Recibo de trazabilidad** por decisión (JSON + hash: snapshot, afirmaciones, revisor) | L | P1 | M2 | DONE | L-12 |
 | L-17 | `config/verification_sources.v1.yaml`: tema → institución oficial sugerida (INEC, SINAPROC, ACP, MEF, ATP, ASEP…) | L | P1 | M1 | DONE | — |
 | L-18 | Métrica de **preservación de atribución** (validador `STATUS_MISMATCH`) | L | P1 | M3 | DONE (generation_report.jsonl) | L-09 |
-| A-07 | **Agenda de la mañana** (top 5 + por qué + a quién verificar) en la Sala de Situación | **W** LowCrime | P0 | M2 | TODO | A-02, L-17 |
+| A-07 | **Agenda de la mañana** (top 5 + por qué + a quién verificar) en la Sala de Situación | **W** LowCrime | P0 | M2 | DONE (PR #26) | A-02, L-17 |
 | A-08 | **Clic en número → tarjeta de evidencia**, componente reutilizable en todas las pantallas | **W** LowCrime (DL-020) | P0 | M1 | DONE (PR #13) | A-01 |
-| A-09 | **Modo jurado** en Consultas (las 4 preguntas del PDF precargadas) | **W** LowCrime | P1 | M2 | TODO | A-04 |
+| A-09 | **Modo jurado** en Consultas (las 4 preguntas del PDF precargadas) | **W** LowCrime | P1 | M2 | DONE (PR #25) | A-04 |
 | A-10 | Vista del simulador de pesos (sliders → ranking nuevo vs v1, justificación obligatoria) | **L** Lead (DL-021) | P1 | M2 | DONE | L-15 |
 | B-11 | **GitHub Actions**: pytest (T01–T10) en cada PR + badge en el README | **F** frictionspp-svg | P0 | M1 | TODO | — |
 | B-12 | **Set de 10 ataques** (inyección, preguntas trampa, pedir secretos, acusaciones) + tasa de resistencia | **W** LowCrime | P1 | M3 | TODO | L-10, L-11 |
