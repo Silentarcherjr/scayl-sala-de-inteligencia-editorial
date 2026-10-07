@@ -1,0 +1,140 @@
+{
+  "at": "2026-10-07T04:41:58.987124+00:00",
+  "snapshot": "v1",
+  "manifest_sha256": "97a5cd2b7ac64c24769c380d368369c24c24ab2df3d7d9dac23fe0bd86db2aa7",
+  "calibration_sha256": "516563738f10850038e54281d48546b65cd807e2dce61fd3df25a63740ff68a1",
+  "model": "st:intfloat/multilingual-e5-base",
+  "tau": 0.87,
+  "device": "cpu",
+  "embedding_seconds": 8.91013250000833,
+  "before": {
+    "event_count": 183,
+    "p_at_5": {
+      "num": 1,
+      "den": 5,
+      "value": 0.2
+    },
+    "selected_headline_coverage_at_5": {
+      "num": 1,
+      "den": 5
+    },
+    "top5_event_ids": [
+      "EVT-0111",
+      "EVT-0088",
+      "EVT-0127",
+      "EVT-0057",
+      "EVT-0091"
+    ]
+  },
+  "after": {
+    "event_count": 165,
+    "p_at_5": {
+      "num": 1,
+      "den": 5,
+      "value": 0.2
+    },
+    "selected_headline_coverage_at_5": {
+      "num": 1,
+      "den": 5
+    },
+    "top5_event_ids": [
+      "EVT-0101",
+      "EVT-0102",
+      "EVT-0100",
+      "EVT-0051",
+      "EVT-0078"
+    ]
+  },
+  "requested_four": {
+    "EVT-0088": {
+      "member_ids": [
+        "gdt-f63259a11c73800d786e"
+      ],
+      "after_event_ids": [
+        "EVT-0078"
+      ]
+    },
+    "EVT-0127": {
+      "member_ids": [
+        "gdt-6efeaf413fa97fd71039"
+      ],
+      "after_event_ids": [
+        "EVT-0116"
+      ]
+    },
+    "EVT-0158": {
+      "member_ids": [
+        "gdt-01a0b491689ea24c2bae"
+      ],
+      "after_event_ids": [
+        "EVT-0143"
+      ]
+    },
+    "EVT-0096": {
+      "member_ids": [
+        "gdt-11224bbdacde85be739d"
+      ],
+      "after_event_ids": [
+        "EVT-0087"
+      ]
+    }
+  },
+  "four_in_one_event": false,
+  "evaluation_notes": [
+    "P@5 is an exploratory observation, never a calibration objective.",
+    "P@5 counts top-five event slots overlapping editor headlines; headline coverage is separate because several selections may collapse into one event.",
+    "Editor saw an AI suggestion before selecting; assistance disclosed in DL-024.",
+    "No ACP/INEC added; prototype cosine is not calibrated truth or evidence confidence.",
+    "Development labels are provisional agent annotations; human B-07 validation pending."
+  ],
+  "requested_pair_diagnostics": [
+    {
+      "left": "EVT-0088",
+      "right": "EVT-0127",
+      "gap_days": 50.0,
+      "blocked_by_7_day_rule": true,
+      "cosine": 0.9052057266235352,
+      "tau": 0.87
+    },
+    {
+      "left": "EVT-0088",
+      "right": "EVT-0158",
+      "gap_days": 21.0,
+      "blocked_by_7_day_rule": true,
+      "cosine": 0.9064836502075195,
+      "tau": 0.87
+    },
+    {
+      "left": "EVT-0088",
+      "right": "EVT-0096",
+      "gap_days": 10.0,
+      "blocked_by_7_day_rule": true,
+      "cosine": 0.8597710132598877,
+      "tau": 0.87
+    },
+    {
+      "left": "EVT-0127",
+      "right": "EVT-0158",
+      "gap_days": 29.0,
+      "blocked_by_7_day_rule": true,
+      "cosine": 0.9390705823898315,
+      "tau": 0.87
+    },
+    {
+      "left": "EVT-0127",
+      "right": "EVT-0096",
+      "gap_days": 60.0,
+      "blocked_by_7_day_rule": true,
+      "cosine": 0.8394379615783691,
+      "tau": 0.87
+    },
+    {
+      "left": "EVT-0158",
+      "right": "EVT-0096",
+      "gap_days": 31.0,
+      "blocked_by_7_day_rule": true,
+      "cosine": 0.8607748746871948,
+      "tau": 0.87
+    }
+  ]
+}

@@ -25,3 +25,10 @@ Respaldo backup/wip-617d6e2 exclusivamente local; reconstruido historial sin ZIP
 
 ## 2026-10-07T02:58:25.658387Z - B-01/B-02 C-01
 Snapshot congelado: 187 noticias, 50 TVN; 159/22 en 90 dias. 540 WB, 82 USGS oficiales y 87 ampliados. RSS deteccion nula; GKG muestreo 18 UTC diario, DOC parcial por 429. Raw anteriores conservados y excluidos. Manifest y copia sin auxiliares verifican. 187 candidatos ciegos exportados y aviso dado al humano; no ranking real. Suite 114/114 (timeout UI inicial, repeticion pasa sin cambios). Ver worker-b-c01-verification.json y worker-b-c01-final-pytest.xml.
+
+## 2026-10-07 04:47 UTC · B-05 IA
+Sincronizado main por fast-forward a 2db3455. El borrador local de validate.py se preservó en data/cache/local-drafts/validate-before-dl024.py; se usa B-03 integrado por Lead. Rama nueva worker-b/b05-multilingual.
+Implementados SentenceTransformerEmbedder E5 local y clasificación por prototipos. Calibración provisional sobre 32 titulares de 2025 y 488 pares anotados por Codex: 43 positivos, 445 negativos; τ=0,87, TP42 FP0 FN1 TN445. No es gold humano ni evaluación generalizable. No leyó C-01/top5.
+Evaluación posterior: 183→165 eventos; P@5 exploratorio 1/5→1/5. Cuatro casos quedan separados: fechas 17/07, 15/08, 05/09 y 15/09/2026, mínimo 10 días; todas las parejas bloqueadas por límite de 7 días. Coseno francés menor que τ también. No se modificó horizonte ni pesos.
+Medición real E5 en CPU (torch 2.14.1+cpu, CUDA no disponible). Matrices ignoradas en processed/v1/embeddings.npz. Resultados en eval/results/b05-dev2025-calibration.json y b05-c01-before-after.json. Integración SCAYL_INTEL=ai comprobada con tres noticias: 3 etiquetas/3 grupos.
+129/129 pruebas pasan, worker-b-b05-pytest.xml. Carga nativa inicial falló en DLL sklearn después de PyTorch; verificación con orden inverso e implementación local de carga antes del modelo permitió ejecutar. No se relajó ninguna política Windows.
