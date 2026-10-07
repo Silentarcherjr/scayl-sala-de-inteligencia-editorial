@@ -5,7 +5,7 @@ import pytest
 from streamlit.testing.v1 import AppTest
 
 from scayl import service
-from scayl.contracts import QAAnswer, TaggedSentence, ClaimType
+from scayl.contracts import ClaimType, QAAnswer, TaggedSentence
 
 PAGE = Path(__file__).resolve().parents[2] / "app/pages/2_Consultas.py"
 

@@ -60,6 +60,7 @@ def test_saved_pytest_failures_and_skips_are_visible(tmp_path):
 
 def test_cli_writes_utf8_artifacts_with_portable_console(bundle, tmp_path, monkeypatch, capsys):
     import json
+
     from scayl.eval import run
 
     bundle_dir = tmp_path / "data/processed/v1"
