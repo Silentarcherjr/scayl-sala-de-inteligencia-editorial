@@ -16,6 +16,8 @@
 | 2026-10-07 | Codex | LowCrime | A-01/A-02 | Home, navegación, filtros, matriz de evidencia y pruebas de UI; validación visual Chromium | 95 pruebas pasando; capturas y navegación a EVT-0003 verificadas | Pendiente del Lead en PR |
 | 2026-10-07 | Codex | frictionspp-svg | Cerrar snapshot C-01 B-01/B-02 | Adaptador RSS con detección nula; adquisición DOC/GKG y USGS ampliado; auditoría de exclusiones; manifest portable; candidatos ciegos | 187 noticias (50 TVN), 540 WB, 82+87 USGS; manifest verificado; 114 pruebas pasan | Top 5 ciego y revisión del Lead pendientes |
 
+| 2026-10-07 | Codex | LowCrime | B-08 | P@5 por eventos, trazabilidad de ejecución y pruebas, limitación DL-024 | P@5 1/5 medido; 127 passed; otras métricas no medidas | Pendiente del Lead |
+
 ## Herramientas de IA dentro del producto (no son de desarrollo)
 
 | Componente | Modelo | Uso | Costo |

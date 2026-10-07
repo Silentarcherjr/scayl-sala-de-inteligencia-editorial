@@ -21,6 +21,8 @@ def no_network(monkeypatch):
 @pytest.fixture
 def svc(tmp_path, monkeypatch):
     monkeypatch.setenv("SCAYL_STATE_DIR", str(tmp_path / "state"))
+    # This fixture exercises a fresh installation without evaluation artifacts (B-08).
+    monkeypatch.setattr(service, "ROOT", tmp_path)
     monkeypatch.setattr(service, "bundle_path", lambda: service.FIXTURE)
     service.reload()
     yield service
