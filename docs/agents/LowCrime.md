@@ -9,6 +9,27 @@ Llegas cuando el proyecto ya avanzó: **completas la interfaz, la evaluación me
 Tu humano además es el **"editor" independiente**: su juicio sirve para medir el sistema, así que no debe ver
 el ranking antes de entregar su top 5.
 
+## 📌 Notas del Lead pendientes — backlog final (actualizado 2026-10-07, tras PR #32)
+Integrado en main: tus PR #25–#27 y #32. Los fallos del red-team se corrigieron (16/16, DL-027, AP-013). Entrega: **jueves 8, 23:59 hora de Panamá**. Trabaja en este orden:
+
+1. **B-08:** incorpora a `eval/results/latest.json` las métricas ya medidas en `eval/results/b13-b14-precompute.json` (latencia mediana y p95, cobertura de citas, n, hardware), citando el archivo de origen. Cuando frictionspp-svg suba un precompute nuevo o B-07/B-10, vuelve a correr la evaluación.
+2. **Trust Lab:** si `latest.json` trae métricas nuevas que la vista A-05 no muestra (red-team, P@5 con su limitación DL-024, latencia), propón el cambio en `docs/AGENT_PROPOSALS.md`. A-05 es del Lead; puedes adjuntar el parche en la propuesta.
+3. **H-05 demo:** escribe `docs/DEMO_SCRIPT.md`, un guion de 3 minutos con internet apagado: Sala + Agenda → Ficha (Source DNA, Temporal Guard, conflicto) → Consultas (modo jurado: cifra con fuente, abstención, inyección) → revisión con recibo → Trust Lab → Simulador. Tu humano graba el video siguiendo el guion; guarda el enlace en el PR, sin subir el archivo de video al repo.
+4. **B-09 validez de sustento (humano):** el agente prepara `data/labels/support_review.csv` con ≥30 afirmaciones de los paquetes (afirmación, evidencia citada, texto de la evidencia) y tu humano marca sí/no/parcial. Calcula la métrica en B-08.
+5. **A-06 publicar:** cuando frictionspp-svg suba la caché pública, prepara el Space y **pide confirmación al Lead** (vía tu humano → Humano 1) antes de publicar. La URL y la contraseña se comparten solo por privado.
+6. **H-06 mini-estudio (con frictionspp-svg):** 3 tareas cronometradas, manual vs con SCAYL (protocolo en TASKS §H-06). Registra los tiempos en `06`, como exploratorio con n=3.
+7. **Capturas finales** para el README y el pitch en `docs/screenshots/final/` (1280×720, datos reales, sin descripciones RSS visibles): Sala, Agenda, Ficha (cada pestaña clave), Consultas con abstención, Trust Lab y Simulador.
+8. **Pulido de UI** (si sobra tiempo): textos en español consistentes, estados vacíos y accesibilidad básica (contraste, etiquetas), sin cambiar contratos.
+
+### Reglas de autonomía (trabaja hasta terminar sin esperar al Lead)
+- **No esperes merges.** Al terminar una tarea, abre su PR y pasa a la siguiente. Antes de cada tarea: `git fetch origin && git checkout -b <rama-nueva> origin/main` (una rama y un PR por tarea; sin rebase ni force-push sobre ramas compartidas).
+- **Si una tarea está bloqueada** (depende de otra persona o de un merge), sáltala, anótalo en el PR o en el worklog y sigue con la próxima; vuelve a ella al final.
+- **Tareas con humano:** pídele a tu humano lo mínimo y concreto (p. ej., "elige sí/no en estas 30 filas"). Mientras responde, avanza con otra tarea.
+- **Nunca:** publicar nada externo sin confirmación del Lead; subir `data/processed/`, ZIP de GKG, RSS con descripciones, secretos o `.env`; editar `01_EXECUTION_BOARD.md`, `02_DECISION_LOG.md` ni el estado de `TASKS.md` (eso es del Lead). Si una decisión cambia contratos, alcance o el módulo de otro, abre una propuesta en `docs/AGENT_PROPOSALS.md` (con el siguiente número libre) y sigue con lo demás.
+- **Cada PR:** `python -m pytest -q` en verde; métricas con num/den y "no medido" en lo que no midas; fallos reales en el registro de `06`; tu fila en `docs/AI_TOOLS_USED.md` (en conflictos de bitácoras, conserva ambos lados).
+- **Relevo:** cerca del 15% de sesión o si tu humano escribe "RELEVO", aplica AGENTS §2b. Quien te releve continúa desde esta lista.
+- **Al terminar todo:** escribe en `docs/handoff/LowCrime.md` la lista de PRs abiertos y lo que quedó pendiente, y avísale a tu humano con "TERMINADO".
+
 ## ⚠️ Relevo de sesión (lee esto primero)
 - **Al empezar:** sincroniza tu rama con `main` (`git fetch origin && git merge origin/main`, sin rebase) y lee las "Notas del Lead pendientes". Luego, si existe `docs/handoff/LowCrime.md`, léelo antes que cualquier otra cosa y continúa desde su "Siguiente paso concreto".
 - **Al acercarte al límite (~15% restante)**, o si tu humano escribe **"RELEVO"**: detente, haz commit (`WIP:` si está a medias), escribe `docs/handoff/LowCrime.md` con la plantilla `docs/handoff/TEMPLATE.md`, haz push y avísale a tu humano. Si no puedes ver tu límite, díselo a tu humano al empezar y haz un relevo preventivo al terminar cada tarea. Detalle en `AGENTS.md` §2b.
