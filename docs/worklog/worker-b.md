@@ -20,3 +20,5 @@
 ## 2026-10-07 02:35 UTC - Historial y manifest portable
 
 Respaldo backup/wip-617d6e2 exclusivamente local; reconstruido historial sin ZIP/RSS y push normal 0997fb9 a origin/worker-b/snapshot. Los 117 ZIP y RSS permanecen en disco; 118 hashes y tamanos verificados. Manifest excluye auxiliares locales, valida inventario y lee corte YAML. Solo se anota disponibilidad del inventario previo por instruccion humana; hashes y respuestas intactos. AP-008/AP-009 actualizadas segun Lead. Pruebas: 99/99, docs/worklog/worker-b-manifest-pytest.xml; Python global sin pytest, usar .venv. Snapshot todavia no congelado.
+
+2026-10-07 02:38 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md. c1f67ae subido a origin/worker-b/snapshot; PR borrador #19. Siguiente: adquisicion C-01; B-01/B-02 incompletas.

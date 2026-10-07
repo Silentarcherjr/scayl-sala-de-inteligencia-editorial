@@ -1,72 +1,45 @@
-# Relevo · frictionspp-svg
+# Relevo · frictionspp-svg · 2026-10-07 02:38 UTC
 
-Actualizado: 2026-10-06 21:56 UTC. Rama: `worker-b/snapshot`. Destino de revisión: `main`.
-El Lead revisa y mergea; este worker no mergea.
+- **Motivo:** relevo preventivo al cerrar la corrección del historial y manifest, según AGENTS.md §2b (sin porcentaje fiable de sesión).
+- **Rama local:** worker-b/frictionspp-svg. Upstream y destino exclusivo: origin/worker-b/snapshot.
+- **Último commit de implementación:** c1f67ae, subido. Este relevo queda en un commit posterior.
+- **PR:** https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/19 (borrador hacia main; solo el Lead mergea).
 
-## Estado de entrega
+## Tarea en curso
+B-01/B-02 siguen incompletas. Snapshot NO congelado. Esta sesión reparó el historial y la portabilidad del manifest; no adquirió noticias nuevas.
 
-El commit de implementación `eb61312` fue subido correctamente a `origin/worker-b/snapshot`
-con `git push -u origin worker-b/snapshot`. Este relevo se añade en un commit posterior.
-No hay PR abierto todavía. **B-01/B-02 siguen incompletas: el snapshot no está congelado.**
+## Hecho en esta sesión
+- backup/wip-617d6e2 apunta a 89c48c0: SOLO LOCAL, NUNCA SUBIR. Contiene ZIP y RSS con descripciones.
+- Historial reconstruido desde a525a6f por instrucción humana; archivos recuperados en disco y retirados del índice. Exclusiones en .gitignore y merge normal 0997fb9, sin rebase ni force-push.
+- Bitácora IA conserva filas de ambos lados en una tabla ordenada.
+- Objetos a525a6f..HEAD sin ZIP ni rss.xml. Permanecen en disco 117 ZIP y RSS (195516 bytes).
+- Manifest excluye auxiliares locales, comprueba sus hashes contra el inventario antes de congelar y lee corte de data_window.v1.yaml.
+- acquisition_inventory.json: 118 hashes/tamaños verificados, anotados disponibilidad="solo local" por instrucción humana; respuestas raw intactas.
+- AP-008 ACEPTADA (DL-013, 540 filas); AP-009 SUPERADA (DL-017). Las notas del Lead siguen pendientes.
 
-Implementados: fetchers DOC/GKG, RSS TVN, World Bank y USGS; escritura inmutable y recibos
-SHA-256; constructor/verificador de manifest; adaptador RSS histórico; exportador de candidatos
-ciegos; auditoría de adquisición; diccionario y pruebas. No se cambiaron contratos ni dependencias
-fijadas. No se avanzó a la UI ni se generó un ranking para el editor.
+## Siguiente paso concreto
+1. Sincronizar con main y revisar notas del Lead. Nunca push --all ni subir backup.
+2. Actualizar fetchers a scayl/config/data_window.v1.yaml: noticias [2025-10-02, 2026-10-01), 30 días previos al corte ampliables a 90. GDELT publicación nula; RSS publicación=pubDate y detección nula (el adaptador anterior aún usa extracción como detección: corregir con prueba).
+3. Descargar DOC diario de ventana nueva, GKG como respaldo. Conservar raw 2025 y auditar fuera_de_ventana_C-01. Escribir salidas nuevas de forma inmutable.
+4. Construir noticias deduplicadas, fuentes.json y eventos_ext.geojson (USGS ampliado separado del oficial 2024). Reconciliar inventario con nuevas respuestas sin sobrescribir bytes raw: build_manifest rechaza hashes locales ausentes/inconsistentes en inventario existente.
+5. Congelar/verificar manifest y exportar candidatos ciegos. Actualizar catálogo/diccionario (aún contiene comandos históricos), pruebas y PR. Solo entonces borrar Notas del Lead pendientes.
+6. Después B-13 ACP y B-14 INEC; luego B-03/B-04, B-11, B-05/B-07, B-06 y B-10. Sin UI (DL-020: LowCrime).
 
-## Datos disponibles y límites
+## Estado de las pruebas
+.\.venv\Scripts\python -m pytest -q --junitxml=docs/worklog/worker-b-manifest-pytest.xml → 99 passed.
+Dos pruebas nuevas: copia sin auxiliares verifica y detecta alteración del inventario; hashes inconsistentes impiden congelar.
+No se verificó v1 congelado: aún faltan noticias.csv, fuentes.json y manifest. Python global no tiene pytest; usar .venv.
 
-La ejecución guardada en `data/raw/v1/acquisition-20261006T2140.json` registra:
+## Archivos tocados
+.gitignore; scayl/ingest/manifest.py; tests/test_snapshot_fetchers.py; data/raw/v1/acquisition_inventory.json; docs/AGENT_PROPOSALS.md; docs/DATA_DICTIONARY.md; docs/AI_TOOLS_USED.md; docs/worklog/worker-b.md y reporte XML.
 
-- 300 noticias GDELT únicas combinando DOC y GKG; ninguna de TVN en esas respuestas.
-- 540 observaciones WB para 6 países × 6 indicadores × 15 años; 0 valores nulos en esta descarga.
-- 82 eventos USGS de 2024 dentro de la caja y magnitud requeridas.
-- 152 entradas en el RSS TVN actual; 48 con publicación dentro del intervalo oficial completo,
-  de las cuales 3 son de septiembre de 2025. No están incorporadas al corpus.
+## Bloqueos, dudas y decisiones pendientes
+- Falta cobertura nueva ≥100 noticias/≥20 TVN. Las cifras antiguas (300 GDELT, 540 WB, 82 USGS) no prueban cobertura C-01.
+- No falta autorizar AP-008/AP-009.
+- Usuario exige git push -u origin HEAD:worker-b/snapshot; no crear otra rama remota.
+- tmp/ sin seguimiento: auditoría del WIP, cuerpo del PR y helper de autenticación sin secretos guardados. No añadir indiscriminadamente.
 
-DOC sufrió errores 429; GKG es un muestreo histórico, no cobertura exhaustiva. Hay 76 filas GKG
-excluidas con motivo en la auditoría. Las fechas de detección nunca sustituyen a las de publicación.
-
-**Incluido en Git:** respuestas estructuradas DOC/WB/USGS, metadatos RSS sin descripciones,
-recibos de solicitudes, auditorías y `acquisition_inventory.json`.
-
-**Solo local:** ZIP auxiliares GKG (~910 MB), RSS XML con descripciones y directorio ignorado `models/`.
-El inventario contiene también hashes de esos archivos locales: no debe confundirse con un snapshot
-portable completo. Una clonación no incluye los ZIP ni el RSS XML original. No publicar descripciones
-RSS ni modificar los bytes raw para resolver el empaquetado.
-
-## Decisiones y trabajo pendientes
-
-1. Resolver **AP-008** en `docs/AGENT_PROPOSALS.md`: las dimensiones WB producen 540 filas,
-   aunque el plan dice 1.350. El worker no modifica TASKS ni el decision log.
-2. Resolver **AP-009**: autorizar o rechazar el uso de las 48 entradas históricas conservadas
-   en RSS, ampliando la cobertura TVN más allá de septiembre. Adaptador preparado, no aplicado.
-3. Acordar el empaquetado de las fuentes auxiliares; completar `noticias.csv`, `fuentes.json`
-   y `manifest.json`; comprobar integridad y cobertura. No declarar B-01/B-02 cerradas antes.
-4. Generar `data/labels/editor_candidates.csv` sin puntajes al congelar el snapshot, para el top 5 ciego.
-5. Abrir PR hacia `main` como borrador mientras haya pendientes; después seguir el orden del rol:
-   A-01/A-08/A-02, B-03/B-04, B-11, B-05/B-07, B-06 y preparación/benchmark local.
-
-## Verificación y entorno
-
-Última ejecución guardada: **76/76 pruebas pasan**, 13 nuevas, en
-`docs/worklog/worker-b-pytest.xml`. Comando:
-
-```powershell
-.\.venv\Scripts\python -m pytest -q
-```
-
-Se comprobó igualdad byte a byte de los 163 archivos raw preparados para el primer commit.
-`data/raw/.gitattributes` impide conversión CRLF y preserva los hashes al clonar.
-Fallos reales de extracción y correcciones: `docs/notion_mirror/06_TESTS_AND_METRICS.md`.
-
-Entorno de esta ejecución: Windows, Python 3.14. Ollama portable 0.40.0 y GitHub CLI portable
-2.102.0 están en `models/tools/`. `gh auth status` indicó que no había sesión, pero el push mediante
-Git sí funcionó; no asumir que la ausencia de sesión en gh impide usar el remoto Git.
-
-Modelos descargados localmente: `qwen3.5:9b`, `qwen3:8b`, `BAAI/bge-m3`,
-`intfloat/multilingual-e5-base` y `Qwen/Qwen3-Embedding-0.6B`.
-Ollama detectó **AMD Radeon RX 9060 XT, 8 GiB, Vulkan**, no RTX 4060.
-Benchmark de calidad, latencia y tokens/s: **no medido**.
-
-Detalle de actividad: `docs/worklog/worker-b.md`. Bitácora IA: `docs/AI_TOOLS_USED.md`.
+## Contexto que no está en el código
+- El respaldo tiene archivos prohibidos para publicación; no subirlo.
+- gh portable en models/tools/gh/bin/gh.exe, sin sesión propia. PR creado con credencial Git existente solo en memoria, sin mostrarla ni persistirla.
+- Modelos/Ollama siguen locales en models/. GPU AMD RX 9060 XT 8 GiB Vulkan; benchmark no medido.
