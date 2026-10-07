@@ -1,0 +1,71 @@
+{
+ "data": {
+  "proposed_title": "Sheinbaum recibe al presidente de Panamá en Palacio Nacional",
+  "public_interest_angle": "La visita de la mandataria mexicana al país centroamericano se centra en temas relacionados con el Canal de Panamá.",
+  "brief": [
+   {
+    "text": "Según unmasuno.com.mx y otros medios, Sheinbaum recibe al presidente de Panamá en Palacio Nacional.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0108-001"
+    ]
+   },
+   {
+    "text": "Según lajornadasanluis.com.mx, Sheinbaum dialogará con el presidente José Raúl Mulino sobre la neutralidad del uso del Canal de Panamá.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0108-002"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Qué temas específicos se abordaron durante la reunión entre Sheinbaum y el presidente de Panamá?",
+   "¿Qué declaraciones hizo el presidente de Panamá sobre el uso del Canal de Panamá durante la reunión?",
+   "¿Qué acuerdos o compromisos se alcanzaron en la visita de Sheinbaum al país?"
+  ],
+  "script": [
+   {
+    "text": "La mandataria mexicana, Claudia Sheinbaum, recibió al presidente de Panamá, José Raúl Mulino, en el Palacio Nacional. Según unmasuno.com.mx y otros medios, la reunión se enmarca en temas relacionados con el Canal de Panamá.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0108-001"
+    ]
+   },
+   {
+    "text": "Durante la reunión, se abordó la cuestión de la neutralidad del uso del Canal de Panamá, según lajornadasanluis.com.mx.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0108-002"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "Claudia Sheinbaum recibió al presidente de Panamá en Palacio Nacional. La reunión abordó temas relacionados con el Canal de Panamá. #NoticiasPanama #Sheinbaum",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0108-001",
+    "CLM-0108-002"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar el contenido completo de los artículos para verificar los detalles de la reunión y los temas discutidos.",
+   "Verificar si la reunión abordó otros temas además de la neutralidad del Canal de Panamá.",
+   "Confirmar si hubo declaraciones oficiales de parte del presidente de Panamá sobre el uso del Canal."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 12886,
+  "tokens_in": 1178,
+  "tokens_out": 665,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-07T20:57:55.885913Z"
+ }
+}

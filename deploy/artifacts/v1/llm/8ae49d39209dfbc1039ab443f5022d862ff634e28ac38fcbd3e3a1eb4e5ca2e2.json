@@ -1,0 +1,66 @@
+{
+ "data": {
+  "proposed_title": "Panamá investiga la pérdida total del buque carguero que naufragó en India y dejó 22 desaparecidos",
+  "public_interest_angle": "Panamá está revisando su responsabilidad en la pérdida de un buque carguero que naufragó en India, dejando 22 personas desaparecidas.",
+  "brief": [
+   {
+    "text": "Según infobae.com, Panamá investiga la pérdida total del buque carguero que naufragó en India y dejó 22 desaparecidos. La noticia se basa únicamente en el titular de un artículo.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0160-001"
+    ]
+   },
+   {
+    "text": "No se dispone de información detallada sobre el incidente ni de la causa del naufragio.",
+    "tag": "HECHO",
+    "claim_ids": []
+   }
+  ],
+  "investigation_questions": [
+   "¿Cuál fue la causa exacta del naufragio del buque carguero?",
+   "¿Qué medidas tomó Panamá para prevenir semejantes incidentes en el Canal de Panamá?",
+   "¿Cómo se está evaluando la responsabilidad de Panamá en este incidente?"
+  ],
+  "script": [
+   {
+    "text": "Según infobae.com, Panamá investiga la pérdida total del buque carguero que naufragó en India y dejó 22 desaparecidos. La noticia se basa únicamente en el titular de un artículo.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0160-001"
+    ]
+   },
+   {
+    "text": "No se dispone de información detallada sobre el incidente ni de la causa del naufragio.",
+    "tag": "HECHO",
+    "claim_ids": []
+   }
+  ],
+  "social_copy": {
+   "text": "Panamá investiga la pérdida total del buque carguero que naufragó en India y dejó 22 desaparecidos. La noticia se basa únicamente en el titular de un artículo.",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0160-001"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar si Panamá está efectivamente investigando el incidente.",
+   "Verificar si el buque carguero estaba relacionado con el Canal de Panamá.",
+   "Obtener información detallada sobre el incidente y la causa del naufragio."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 11705,
+  "tokens_in": 1025,
+  "tokens_out": 612,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-07T20:59:05.561218Z"
+ }
+}

@@ -12,4 +12,6 @@ b06-smoke.json -text
 b07-human-review-summary.json -text
 b07-human-metrics.json -text
 holdout-v2*.json -text
+dl029-*.json -text
+dl029-*.jsonl -text
 runs/redteam-20261007T202802939484Z.json -text

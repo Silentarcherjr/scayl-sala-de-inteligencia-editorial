@@ -1,0 +1,31 @@
+{
+ "data": {
+  "claims": [
+   {
+    "source_id": "gdt-c6b01656acfd72f77213",
+    "statement": "Sismo de magnitud 7.4 entre México y Guatemala no genera riesgo de tsunami para Panamá",
+    "type": "HECHO"
+   },
+   {
+    "source_id": "gdt-d8c316078fe594bf3304",
+    "statement": "Sismo de magnitud 4.7 sacude la frontera entre Panamá y Costa Rica; no se reportan daños",
+    "type": "HECHO"
+   }
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "claims-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 2877,
+  "tokens_in": 540,
+  "tokens_out": 151,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-07T20:55:44.204223Z"
+ }
+}

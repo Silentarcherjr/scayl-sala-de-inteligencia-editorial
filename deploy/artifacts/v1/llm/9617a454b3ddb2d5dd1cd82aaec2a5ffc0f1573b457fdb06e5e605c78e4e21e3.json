@@ -1,0 +1,56 @@
+{
+ "data": {
+  "proposed_title": "Panama Canal Water Shortage: Impact on Global Shipping",
+  "public_interest_angle": "Impacto del déficit hídrico en el Canal de Panamá en la logística internacional",
+  "brief": [
+   {
+    "text": "Según maharashtratimes.com, se reporta un déficit hídrico en el Canal de Panamá que podría afectar la logística global, incluyendo el comercio con India. La situación se complica tras la temporada de lluvias, lo que pone en riesgo la operación del 'gatway artificial'.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0083-001"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Qué medidas ha tomado el gobierno panameño para mitigar el déficit hídrico en el Canal de Panamá?",
+   "¿Cuál es el impacto real del déficit hídrico en las operaciones de carga y descarga en el Canal de Panamá?",
+   "¿Qué países o empresas están más afectados por esta situación y cuál es su postura ante el retraso en el transporte marítimo?"
+  ],
+  "script": [
+   {
+    "text": "Según maharashtratimes.com, se reporta un déficit hídrico en el Canal de Panamá que podría afectar la logística global, incluyendo el comercio con India. La situación se complica tras la temporada de lluvias, lo que pone en riesgo la operación del 'gatway artificial'.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0083-001"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "El déficit hídrico en el Canal de Panamá podría afectar la logística global, incluyendo el comercio con India. La situación se complica tras la temporada de lluvias. #PanamaCanal #LogísticaGlobal",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0083-001"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar el impacto real del déficit hídrico en el comercio internacional, especialmente con India.",
+   "Verificar si el 'gatway artificial' está realmente en riesgo debido al déficit hídrico.",
+   "Investigar las medidas tomadas por el gobierno panameño para abordar la situación hídrica."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 11171,
+  "tokens_in": 1212,
+  "tokens_out": 572,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-07T20:56:57.498562Z"
+ }
+}

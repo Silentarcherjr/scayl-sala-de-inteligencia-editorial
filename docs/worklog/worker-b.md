@@ -108,3 +108,5 @@ Medición real E5 en CPU (torch 2.14.1+cpu, CUDA no disponible). Matrices ignora
 2026-10-07T20:43:16.928195Z - Integrado origin/main5dcac75/PR52 mediante merge limpio; solo el Lead cambió pipeline a temas por reglas (DL029). Evaluador y runner/QA intactos. Checks finales188pytest y Ruffglobal verdes;132labels y diez preguntas/hashes íntegros. Preparado único PR de entradas humanas.
 
 2026-10-07T20:45:22.309333Z - relevo final: ver docs/handoff/frictionspp-svg.md. Terminado el alcance humano B-07/holdoutv2; único PR53 abierto, listo para revisión. 188pytest/Ruffglobal verdes; cuatro discrepancias humanas del holdout conservadas. Solo el Lead mergea.
+
+2026-10-07 21:03 UTC - DL-029: Temas por reglas y E5 para agrupar; nuevo top15 qwen3:8b live15/15, fallback0/15, citas45/45, mediana13131ms p9516997.5ms. Cache publica30 entradas sin descripciones; hashes32/32, stage118/118. pytest188 y Ruff verde. Space pendiente de LowCrime y Lead.

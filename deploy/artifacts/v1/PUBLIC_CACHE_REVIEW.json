@@ -1,7 +1,7 @@
 {
-  "created_at": "2026-10-07T05:46:58.014573Z",
+  "created_at": "2026-10-07T21:01:27.572202Z",
   "published": false,
-  "code_git_sha": "dc1a9906749880b381dec27aabd1ba6955e6c6f0",
+  "code_git_sha": "f951bb249fdcb5b163d15e2d8bbae91131075594",
   "snapshot_manifest_sha256": "6d7542a1b5e508340dde315c413d7954f4dddddd035996cfdae9c6c210f35535",
   "news": 187,
   "source_descriptions": 0,
@@ -27,213 +27,213 @@
   "reviewed_by": "Codex / frictionspp-svg",
   "reviewed_entries": [
     {
-      "key": "15aef9056d8d716b52098ac81c960a943f9f203266e167dfcb08b207d661bd27",
+      "key": "0f9641152d9cb9ce268bd6622373fe894fd67af411b25e6fe9c39e4918700f1c",
       "prompt_version": "claims-v1",
-      "input_sha256": "d06462c52001c2ed9ab6c721d403c81be1867fc935de460a906fb8e52738197b",
-      "sha256": "ea4ff0146d4a11e402c8dd7593f9bfd5a85e47cd6610c4cca1444892330f027d",
+      "input_sha256": "2d5aa04125828ad2c0511d8966c1b0acb0a7d275b5c289115038a98ca1afcffa",
+      "sha256": "5a8b94ab61bbb07fc39ef25c430f93fc222afe357913bb9742083e49bef00425",
       "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
     },
     {
-      "key": "1b4124358efd4dc37d81280412ea8465beb11901b162e9a8f9beb52f0c3cba83",
+      "key": "1b6e1e095e2ca93cc8cc3d28ebf28c17bd41167e4614cfec99e7617f53b819af",
       "prompt_version": "studio-v1",
-      "input_sha256": "0f19f31e49ddccf9e35c6bffdc882a539910bf3a6fd179916f825ce35df26fa5",
-      "sha256": "377b905a3002feeedf46eef1baef5f086c574f53158d461c86afbd1aa739d00c",
+      "input_sha256": "2c2055ddad05c0c334061ac7f5c1db7d84e4f2e960ff50493520b9a2707f0aa5",
+      "sha256": "2b0922078d6be7a13eec84ac6dd841e7c21a28846bf84b723c1b495a8881d38e",
       "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
     },
     {
-      "key": "2073208e740d76d001fb9fd7e32d164e256e1f48a59a8c4613c6b04e5a38443e",
-      "prompt_version": "studio-v1",
-      "input_sha256": "fc8ba153dbf2c73c0a5a3b31a68c2fa5333fc512abd8d30a4179fb8f6be1cf3a",
-      "sha256": "dda8672161a1ce397498f0977c1cee442ca0f59df57fcd2549abdae854421fe2",
-      "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
-    },
-    {
-      "key": "2df0d976e917145d74cd83ce635f311712821b2f2c2db8cd8e1d9cd3ecfb1be6",
+      "key": "1eb7de90fc487caaa4d4de96fa1e80e421d35173bcb3fc1abbef0cdb38538c89",
       "prompt_version": "claims-v1",
-      "input_sha256": "9bf36a445a03995ffc479e145378c2eb6fe386bab77122884214d22dcdeeee68",
-      "sha256": "65afca6595aedc11791ffcf1d566812276be11b21dbdb839f9120da9762f7620",
+      "input_sha256": "c4017811bc59e12b1a53e41ab254aab86a019442ef6907ecac2559d9cf535292",
+      "sha256": "9f11379a1e4bc01f82556a329279e055b12c950530d178ec764e847afb735979",
       "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
     },
     {
-      "key": "36fd47a2ac4a36794370288e8dd8aac4dd08aadc41bcc3401c99a9e273a0cd22",
+      "key": "24ebd714a01c3f3945f50a783de3851702b466e930a32cdd70c927d53c48e540",
       "prompt_version": "claims-v1",
-      "input_sha256": "1812f245aa952da7b63aa292c824d31ceaf99afd053192b5bdc98bf206ceb604",
-      "sha256": "1666b9165909311128eaa4879a441fbe546775f593b2adb4573c1e45b4b35495",
+      "input_sha256": "4a5b7796ba8b539b4caf0781cc53149dc67449a85863a994e1bcc7438db3b27d",
+      "sha256": "d5d775b2eb7d29d0eecd746ab91e5ba458fcb2984f1be063e79aa418e828b1bd",
       "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
     },
     {
-      "key": "372fe1dc7c5fcd589a13a96d93d683511800ebca214a00b51c52adf718d8553f",
+      "key": "689e60824767dd59b2ec4c20e74682ffd212dea1235dec51d64e5cdcabc97b53",
+      "prompt_version": "studio-v1",
+      "input_sha256": "af0fba66f6bada8fd7bf4c776c4babdb469baca401f8ca129641f82b894e2788",
+      "sha256": "d9c5ab46439ee13b31ae28b56c4838c9d0c480e007bc0d3b4fcd13b3ce360d25",
+      "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
+    },
+    {
+      "key": "6da1cbe79c57998d761c41e081e4e6930174287840363af49c0258378a5a8427",
       "prompt_version": "claims-v1",
-      "input_sha256": "f25ed40c0a071bcbc0f7a11b0f986de93dd3af5bd0eb00f5b8e55597488ccfa4",
-      "sha256": "5214a40b14e5994961d48d213b40f8f5d93d954f6b576fcd426b461a44ae1ba0",
+      "input_sha256": "54c47b2ebb230cc2bfa5f87025016c1d56723394c06e82f5069156ddd62364d2",
+      "sha256": "129c9c13988fe995780b6c682bf2889d49d54bede79ae90ca0cdd742f21c47d8",
       "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
     },
     {
-      "key": "3e369f0d99213de14048b0f74a73990189a6ce6dbf19f076431a672b256a2db3",
+      "key": "7be726dfddd704e94cdae6430ef49c5e9b285b3cc45670b84612bffba3c46353",
       "prompt_version": "studio-v1",
-      "input_sha256": "649012304d882a0f5056b58e5ea2fdf38cef7a75ec3eda4f95d041366221acb1",
-      "sha256": "83cc3098b7c6d0b3706e0be2124dec1ae02e3523972ee72a0578b54a2ec17e41",
-      "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
-    },
-    {
-      "key": "4d64acb7420c9d51c2f794f211aed9886b5650928bb34d207e3c06687c42a2f7",
-      "prompt_version": "studio-v1",
-      "input_sha256": "63c4d1e2b94459a73350996a3cc9abacf8952294be11640bb88b3170a48a2140",
-      "sha256": "52bd7965f2d7203101355887cffc990c01db51713722799f7496b0d1a54c4c69",
-      "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
-    },
-    {
-      "key": "577ed4813a1d8fb4d98eb71797db516ef828bc8cb545000f9c6de6f853cbefc1",
-      "prompt_version": "studio-v1",
-      "input_sha256": "e6908700decad981acdeaa5c2bebabe3a590c10a2c7865aa2732ab736170d7af",
-      "sha256": "4785a7202c322a87b78313e6f6806e1e245cc858c453a15eb94395b40ad5dd4c",
-      "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
-    },
-    {
-      "key": "5b1bfc77fd0442836e661455fc2b76971a66b16aff0c6d95546e768aa51d4801",
-      "prompt_version": "studio-v1",
-      "input_sha256": "0288774d5d62406a8b221920294d09d46fdfc1c16a4efe39c9ca976665c56816",
-      "sha256": "da87442923d0606bb65e53c4d0fd8093dbece0713682536cf158de728077c0c9",
-      "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
-    },
-    {
-      "key": "74919984a9cc089f9fc5d33eee9893074b4a6778cbed27ea0a5299772f4cd3b1",
-      "prompt_version": "claims-v1",
-      "input_sha256": "55dcb482b448ffd5c19026628552cb57a247868b5dd27c1cdbcf6abe66183970",
-      "sha256": "9cb3151d0bf07d37037e8c92a81e5090b36490345bf7f51fa9714c8a1df53193",
-      "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
-    },
-    {
-      "key": "7d79c8be8b14eb5f9618d026334feea3f5a1302019252fa89aa57a25eb0c89d7",
-      "prompt_version": "studio-v1",
-      "input_sha256": "100a5943a7d64756389ba62b6dbb31817ee4a09a2b47387a9486263ab6b41abc",
-      "sha256": "d1412458a282356582ca65dd7c4c5a2e775114aa290afa524dd47a2db3d003cf",
-      "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
-    },
-    {
-      "key": "804975c4b00cce7c1f0eec455fb0d00ce91862679d293ee73659f02521450c04",
-      "prompt_version": "claims-v1",
-      "input_sha256": "5fc7472edc31d9d05a8b08fda89b06dc966f3d2aef2cc8fea28915f03bb7870f",
-      "sha256": "4589cea20b89aa6ed6e76dc3686aa5903b407534a88c13002e29dfeff2b1a456",
+      "input_sha256": "ee2402bb09071c5f1feab94ec2f6b888a15877f406da5ba75ec17715ef4bc364",
+      "sha256": "45a54c10417862980d479fb5aaa5d50162a0d0a7eb8bd1fce498ec304672137e",
       "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
     },
     {
       "key": "82f931d9985d9487e342611233ffbadfb0e447e5a4825a1c7d5de1ff99a509ce",
       "prompt_version": "studio-v1",
       "input_sha256": "4f7a12278fefd6b55bae733af7678934f0c31d5c286703dbc79c51becdd5a2f2",
-      "sha256": "333d6955730a91314323d42f64f85c8487ce33b796e156b0387b4de3e5adb50f",
+      "sha256": "a2282017b9db58f78e0800533e0e8ec132d3e2f2681d791d07155778820d16f9",
       "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
     },
     {
-      "key": "882de6c45a56ffdb4685573d7c89a12edddd147d7548b1283cc4952397da437a",
+      "key": "8321f21f0beb7a8bddf3881acc3cefbe5e3b2d497a301c0a0d3208c3719684ce",
       "prompt_version": "studio-v1",
-      "input_sha256": "0d483c7e6f0956d9b7a3435135e64bf068ae8dbdbf66224181dc6eda97f178f2",
-      "sha256": "786c40de425af877b16629f16ea40a1ef600ba5223ac0e6a12e8fefaaf428edd",
+      "input_sha256": "889025fb87a754aa989fab6bdffe211d087f1ee3bca8a857b539e7caf3481ad7",
+      "sha256": "d800befe789663a9e63651287a232fae5e06cf9aae77c2a66a263fd1677d85d6",
       "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
     },
     {
-      "key": "8e51aa571eaa84c4958c1e5d07a292deade63603a7cb6d860992dd891656a124",
-      "prompt_version": "claims-v1",
-      "input_sha256": "dbb78b346be2e97797a71c9f755d257a74e4acaa05901e4f9734cc539caf4c3f",
-      "sha256": "321688dcb520b44200fbbcd2a5115bfe8b5c2fc1dcf2adb46f1c0f1fde51eef3",
+      "key": "8ae49d39209dfbc1039ab443f5022d862ff634e28ac38fcbd3e3a1eb4e5ca2e2",
+      "prompt_version": "studio-v1",
+      "input_sha256": "abc58054c4b4baf9c22626fcdf895885ee014847b332ab88befba82fcab21e5d",
+      "sha256": "1e06d2b06327c11f63b57452b172dce26183dd1dae5909883809eef1cde061ed",
       "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
     },
     {
-      "key": "8eb945d9d693e750dbde3558f2845c1a2b8f2fa907a25bac788c894a4b7c45ca",
-      "prompt_version": "claims-v1",
-      "input_sha256": "59efbba9cb61e2086327632047a27d90abbe2573a08bf0d84263e810a443cda1",
-      "sha256": "7b7acf90d593c7d5af00a7f4a7884920129479f226268b35c5173f60ef75e87b",
+      "key": "8b762b4e2aaa1a520c40276d8c5cadcc8016063554db4721b256589f81dfdbf8",
+      "prompt_version": "studio-v1",
+      "input_sha256": "27bbf2ead3dca0f8b78e9a7d8f26874fb8999de1a65b9cb9058a7960ebb342ea",
+      "sha256": "2b0e70278f4b03707fd7c4ff5e0b5572c4264d8d26c7d944546686fd1538223b",
+      "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
+    },
+    {
+      "key": "9273ab603bd09ec677e5234d4f0176f44b096a408fa7b40dd052d674ae1781c2",
+      "prompt_version": "studio-v1",
+      "input_sha256": "64f52e04c65a2c5a8b8e4f367a541cac67277d3ffffbd650d031e20b11258ce9",
+      "sha256": "5ebd6488c7aca73dfbf12536a3644707bcecf341f7095d94630df9f189c5f82b",
       "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
     },
     {
       "key": "930d64a1c2239719b0d4be0cdf9363cca937027c9c442473db7faeec9c78222a",
       "prompt_version": "claims-v1",
       "input_sha256": "2847b10c374cb47c5ac4baf69baccfd2a7e6c8129da41bfcf2730fd1a2ad730b",
-      "sha256": "20f9bf5055bd22b93bb53c029b1b938dd934ff5ce99966991e3d77e677e5909d",
+      "sha256": "e8a7030b9b95844c371e30d47dba3f432a8eae17cb2ae36f3330f80aeacb1886",
       "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
     },
     {
-      "key": "9f095635029c387d52bdef8826d403124e78d8515dc256e5a42ee051bfe9202d",
-      "prompt_version": "claims-v1",
-      "input_sha256": "0fa880536329e512851c3fa26f1166515118d407ecd6ffaa18565e766dd452b8",
-      "sha256": "ee6313a13518323d4d3f3d56632e95da6a25f3fe13c4ffd4498c8dd07c8277db",
+      "key": "9617a454b3ddb2d5dd1cd82aaec2a5ffc0f1573b457fdb06e5e605c78e4e21e3",
+      "prompt_version": "studio-v1",
+      "input_sha256": "a4d0b9b9a70333d47a689d57135e3adb7c245e1ebc626409dbbd0a8dbe94a4a8",
+      "sha256": "a91e09f26366088c8938673e3eb007ade59a88c8247224d710fa988f80598048",
+      "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
+    },
+    {
+      "key": "a154999f7360f8968847499ad597dbe91b0450a26b1877888347d8eb9ac1c5cb",
+      "prompt_version": "studio-v1",
+      "input_sha256": "7dbeedc62812a3f549061fa283cc133403d5e70fc5baadae4e048e7aad8b1af6",
+      "sha256": "9939c3d3681d6778f11d7b8f7b1730bb02d775a9ded4f518850147784e5ec316",
       "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
     },
     {
       "key": "a2bd2e86cf8266b7b5a7434f87078d2121742fbfc87f2643a44ddc79c8a03328",
       "prompt_version": "claims-v1",
       "input_sha256": "eedfb7f4f4f9ce30ad67c5c9e6d9ce5bf46f4a6c2745732f001f84cc1f9e0014",
-      "sha256": "75a84001ca32d79d52bb5bcf04db52d6de6d1566db783004fe0d7aca8c325336",
+      "sha256": "9ee2f88756491104e4db965851d80164279f35e78d5523216e27d99cae09a4f7",
       "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
     },
     {
-      "key": "a5e38663dd251c4d4bb6e4aa9270073eebf910b62bb335d64ea9d8a837c7cc29",
+      "key": "a67acc56d5f0281991dfee7bd3616cbf9c7a4e4ef372f529fc2af431ee733734",
       "prompt_version": "claims-v1",
-      "input_sha256": "a96419b4a6fa17146d7bae2cba922391e5cc417056c4fa8118b65a60987def37",
-      "sha256": "d5c2d4afd41d5c37afb4714daa626c10d41c5fe41e16d335f3d4c1e313f2d7b5",
+      "input_sha256": "7b13892956102693b2bee8055a6653e6a74d2c935d8a4ce375f327ae2ab6692e",
+      "sha256": "e5bd16eb4f5043429059c8bfa82fde79922f102cb6b3064fd3e8a90b828206fa",
       "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
     },
     {
-      "key": "a7b28dab383e3c97679130c929bdc0a3ced62fcbfdd1ee5cff1cdd59e9d573b7",
+      "key": "b612144245acc807dc9c8adfd4bdebd89b1b2741bd378490f1e3fb14dd303ec5",
       "prompt_version": "studio-v1",
-      "input_sha256": "ea45c9ed01343ffc7585d701bd2927065e8603fc009875760fa8e2574d8b3dca",
-      "sha256": "060a3444cf08fec9cb6e8b37bf686f5eaa19048dba95a3b28ec082e71567fa0b",
+      "input_sha256": "0a261285a66a6e5f10dd367f74cd04d8d6c590ce18f16b78d02e244b217a765a",
+      "sha256": "ae844b4b7ce8cf8146b4751adcc39f29e5c688e0cf09ce5f84f70e3e7964946e",
+      "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
+    },
+    {
+      "key": "b82b6a6deb18d5ad766de83ca49d26be64feb3988aff97362f133dddfb56ba63",
+      "prompt_version": "claims-v1",
+      "input_sha256": "97d6aaf550816fae172de641233435ac2fbcbf7d08bfc32a682fe810b0342cfb",
+      "sha256": "af58eff2ab2339871e31e3863c45025751ee79aa5f1e7978d614c1803c511f27",
       "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
     },
     {
       "key": "bfd66ce49175ec55c1fed4dcb4653ca6981a68ffaf016d4ecf1cbbc3bcfbda66",
       "prompt_version": "claims-v1",
       "input_sha256": "9b4e5c2c60a26e14524103950d80e21e6f272fcdac7db977f45e85260ef573ba",
-      "sha256": "44608713fa76e89d5eb25298e91f97c27cb8ba96784f92eaab65b1c34d4a09ed",
+      "sha256": "f9231816b56101f27e25fd332b5066450b0cbde622d647e212295aa985c53298",
       "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
     },
     {
       "key": "c874e9b86060c28bf8480afdc1751eeab44db18dc334dd48a00b56fa90dafa44",
       "prompt_version": "claims-v1",
       "input_sha256": "6a8fcd8de5eb1ecc5c36787f840df374535d160e3e18c249395c10f87c103ee5",
-      "sha256": "6953db9b899041c6e318c981fd41099f577e6c379fa3bc4721e94852fac96cca",
+      "sha256": "b38dcecb9b7db495a460753f0e4f6152da5e6208130dd1f33899e71244d8b370",
       "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
     },
     {
-      "key": "d8ad8e4e7d57b2641c3f2e0ca478c40663538c4ee1b2060e3bb53460d0fd005b",
-      "prompt_version": "studio-v1",
-      "input_sha256": "c5dbe38c005dcfae0a11adde108a2d006c05730bbddaa9c8e611600729c0a3ec",
-      "sha256": "1940f355cebc0c7fcef3f41c318ae5d0d10858be1e597cbf2241bcb427ca52b4",
+      "key": "d0b5dabbd02eaf0b9b9bd2d3f4645c8cffe7fb4ac12b08ec432da05d1ab4b153",
+      "prompt_version": "claims-v1",
+      "input_sha256": "a23fc6655d910dda341649aa71a7deb96bda8718c24ee95d65c03f29c63b76c9",
+      "sha256": "021696e967932a477c08c307e7a7748894cbba036ba4bd8bb5837afbb20ca7bf",
+      "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
+    },
+    {
+      "key": "dad3e08f12c9cb57c83bf563229d6f8c6df1df5635cc40dbff8426abae3fee15",
+      "prompt_version": "claims-v1",
+      "input_sha256": "c3e5538f1474508cdb0e6520e798445db9f862edc7c6205e3e8dc64e2d7a6bd4",
+      "sha256": "fd0b366368a1060920ae196c17c9454e620df5749901559eae1c7dd2163b05f5",
       "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
     },
     {
       "key": "dae8404030f2bc20a51b7ed912c293a8e641d549373eded608c42b5199948bd6",
       "prompt_version": "studio-v1",
       "input_sha256": "623875ba8f63be353c62357a4e07c51802ecccc69e6751829881e668063c7498",
-      "sha256": "23a183e5b95f1f3fb1a14480df5cd85cab894fda0ff541be097233e9d3ce75b7",
+      "sha256": "8566df3ba0aa884cb9567142764e14fd3a9a9bd90204f2808a765c319a1f136d",
       "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
     },
     {
       "key": "e6f507c599e71184c96252abe167f1e00bbbd222bb00343364f434d7b15da704",
       "prompt_version": "studio-v1",
       "input_sha256": "54b752170a5e7b2e4c921d42c231e5080752b8c9317f95eea8d523dbbad40604",
-      "sha256": "407951b092cafa65041df9921f23c33de6f1eb12b3af743553b6de670fe59a78",
+      "sha256": "7626ae7a1a23c18e5ca2ec92e4cbb5a33e56696c09013733467e24a18bf34629",
+      "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
+    },
+    {
+      "key": "e8b925e9246135ef4ae2668ef5a1dd4c0a68775a57b9d2eba8ab123e24a60d0c",
+      "prompt_version": "claims-v1",
+      "input_sha256": "aa81e3979bc41a7e0f0a95e5e3413c895884a474e794a725bd62752bf7063643",
+      "sha256": "b3d94d66754c7eea3e3d9e9149a14829692a13ba29a186c7d115f90ca12a24fb",
+      "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
+    },
+    {
+      "key": "e8ced81be38546ba16dc88f1868e6bd89c2e67a25866e5e4a9f5332e94def024",
+      "prompt_version": "claims-v1",
+      "input_sha256": "e44af37eea7c66a3092df2566ddd3bf48379e07c0ae2135cfac129f4411ebc79",
+      "sha256": "1cb307a12cc04a15287228bc5a15e7c237dc4e3250bf3aac78112bf5ea3340bf",
       "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
     },
     {
       "key": "f06f70581dc3b456b4a78c73b20e07f189aa867ce644050ac508537a24763272",
       "prompt_version": "claims-v1",
       "input_sha256": "94825851f7ce9c4149e5617383d1851125450cf0546545981b2ed35789b704ce",
-      "sha256": "cce35cd42616c810335dc32878aba7fc40aa99c39d1c30635c8adc2fc7662930",
+      "sha256": "ad8421ab544d9f8d5a27714a8aa71bce9e3e869317e3c82709762582fd19d350",
       "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
     },
     {
       "key": "f5657bd0a2b1ddf68429bb3ba76d32a6156751704fe5223d949eab9102ead60f",
       "prompt_version": "studio-v1",
       "input_sha256": "ae5812998e620f5dc6ed1fc8d1005917af67f1134c0e5c2aa20fb3becbe4a1f0",
-      "sha256": "f990563a4112b6bdf642a6775ee3d87b40ddd06b6493fcc30275df5369813c6c",
+      "sha256": "69cdf628402fa8e568b05dc3af1212394153dbb645b826aae68470f978d2f5fc",
       "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
     },
     {
       "key": "ff9e2c6bc1dd8b3eaaf53ff9c5b3070ae5b7fde7277b3fa1b644ca7cb9efde21",
       "prompt_version": "studio-v1",
       "input_sha256": "79a766667663ce3d425dfa8d9cd0c6d9494f5bab12e6b48726279ed2cfd23056",
-      "sha256": "49e51eb095b9370c1c4e9bb017f168b606c20b70bc3ff4ee63fa36af7e61a9f3",
+      "sha256": "8fda7dab7bedd1e8dea0b968c148a9bdcca140d32e081c160146abb5914c73ac",
       "review": "Codex: metadata-only inputs; no description data/citations; actual pipeline schema/validators applied. Raw model output is revalidated when read."
     }
   ],
@@ -243,36 +243,36 @@
     "No deployment performed; Lead confirmation required."
   ],
   "files": {
-    "bundle.public.json": "45cd5d7524bb295565bd00476357f1b9fc2bfa8329af71d4f549eecb5d08ce2c",
-    "llm/15aef9056d8d716b52098ac81c960a943f9f203266e167dfcb08b207d661bd27.json": "ea4ff0146d4a11e402c8dd7593f9bfd5a85e47cd6610c4cca1444892330f027d",
-    "llm/1b4124358efd4dc37d81280412ea8465beb11901b162e9a8f9beb52f0c3cba83.json": "377b905a3002feeedf46eef1baef5f086c574f53158d461c86afbd1aa739d00c",
-    "llm/2073208e740d76d001fb9fd7e32d164e256e1f48a59a8c4613c6b04e5a38443e.json": "dda8672161a1ce397498f0977c1cee442ca0f59df57fcd2549abdae854421fe2",
-    "llm/2df0d976e917145d74cd83ce635f311712821b2f2c2db8cd8e1d9cd3ecfb1be6.json": "65afca6595aedc11791ffcf1d566812276be11b21dbdb839f9120da9762f7620",
-    "llm/36fd47a2ac4a36794370288e8dd8aac4dd08aadc41bcc3401c99a9e273a0cd22.json": "1666b9165909311128eaa4879a441fbe546775f593b2adb4573c1e45b4b35495",
-    "llm/372fe1dc7c5fcd589a13a96d93d683511800ebca214a00b51c52adf718d8553f.json": "5214a40b14e5994961d48d213b40f8f5d93d954f6b576fcd426b461a44ae1ba0",
-    "llm/3e369f0d99213de14048b0f74a73990189a6ce6dbf19f076431a672b256a2db3.json": "83cc3098b7c6d0b3706e0be2124dec1ae02e3523972ee72a0578b54a2ec17e41",
-    "llm/4d64acb7420c9d51c2f794f211aed9886b5650928bb34d207e3c06687c42a2f7.json": "52bd7965f2d7203101355887cffc990c01db51713722799f7496b0d1a54c4c69",
-    "llm/577ed4813a1d8fb4d98eb71797db516ef828bc8cb545000f9c6de6f853cbefc1.json": "4785a7202c322a87b78313e6f6806e1e245cc858c453a15eb94395b40ad5dd4c",
-    "llm/5b1bfc77fd0442836e661455fc2b76971a66b16aff0c6d95546e768aa51d4801.json": "da87442923d0606bb65e53c4d0fd8093dbece0713682536cf158de728077c0c9",
-    "llm/74919984a9cc089f9fc5d33eee9893074b4a6778cbed27ea0a5299772f4cd3b1.json": "9cb3151d0bf07d37037e8c92a81e5090b36490345bf7f51fa9714c8a1df53193",
-    "llm/7d79c8be8b14eb5f9618d026334feea3f5a1302019252fa89aa57a25eb0c89d7.json": "d1412458a282356582ca65dd7c4c5a2e775114aa290afa524dd47a2db3d003cf",
-    "llm/804975c4b00cce7c1f0eec455fb0d00ce91862679d293ee73659f02521450c04.json": "4589cea20b89aa6ed6e76dc3686aa5903b407534a88c13002e29dfeff2b1a456",
-    "llm/82f931d9985d9487e342611233ffbadfb0e447e5a4825a1c7d5de1ff99a509ce.json": "333d6955730a91314323d42f64f85c8487ce33b796e156b0387b4de3e5adb50f",
-    "llm/882de6c45a56ffdb4685573d7c89a12edddd147d7548b1283cc4952397da437a.json": "786c40de425af877b16629f16ea40a1ef600ba5223ac0e6a12e8fefaaf428edd",
-    "llm/8e51aa571eaa84c4958c1e5d07a292deade63603a7cb6d860992dd891656a124.json": "321688dcb520b44200fbbcd2a5115bfe8b5c2fc1dcf2adb46f1c0f1fde51eef3",
-    "llm/8eb945d9d693e750dbde3558f2845c1a2b8f2fa907a25bac788c894a4b7c45ca.json": "7b7acf90d593c7d5af00a7f4a7884920129479f226268b35c5173f60ef75e87b",
-    "llm/930d64a1c2239719b0d4be0cdf9363cca937027c9c442473db7faeec9c78222a.json": "20f9bf5055bd22b93bb53c029b1b938dd934ff5ce99966991e3d77e677e5909d",
-    "llm/9f095635029c387d52bdef8826d403124e78d8515dc256e5a42ee051bfe9202d.json": "ee6313a13518323d4d3f3d56632e95da6a25f3fe13c4ffd4498c8dd07c8277db",
-    "llm/a2bd2e86cf8266b7b5a7434f87078d2121742fbfc87f2643a44ddc79c8a03328.json": "75a84001ca32d79d52bb5bcf04db52d6de6d1566db783004fe0d7aca8c325336",
-    "llm/a5e38663dd251c4d4bb6e4aa9270073eebf910b62bb335d64ea9d8a837c7cc29.json": "d5c2d4afd41d5c37afb4714daa626c10d41c5fe41e16d335f3d4c1e313f2d7b5",
-    "llm/a7b28dab383e3c97679130c929bdc0a3ced62fcbfdd1ee5cff1cdd59e9d573b7.json": "060a3444cf08fec9cb6e8b37bf686f5eaa19048dba95a3b28ec082e71567fa0b",
-    "llm/bfd66ce49175ec55c1fed4dcb4653ca6981a68ffaf016d4ecf1cbbc3bcfbda66.json": "44608713fa76e89d5eb25298e91f97c27cb8ba96784f92eaab65b1c34d4a09ed",
-    "llm/c874e9b86060c28bf8480afdc1751eeab44db18dc334dd48a00b56fa90dafa44.json": "6953db9b899041c6e318c981fd41099f577e6c379fa3bc4721e94852fac96cca",
-    "llm/d8ad8e4e7d57b2641c3f2e0ca478c40663538c4ee1b2060e3bb53460d0fd005b.json": "1940f355cebc0c7fcef3f41c318ae5d0d10858be1e597cbf2241bcb427ca52b4",
-    "llm/dae8404030f2bc20a51b7ed912c293a8e641d549373eded608c42b5199948bd6.json": "23a183e5b95f1f3fb1a14480df5cd85cab894fda0ff541be097233e9d3ce75b7",
-    "llm/e6f507c599e71184c96252abe167f1e00bbbd222bb00343364f434d7b15da704.json": "407951b092cafa65041df9921f23c33de6f1eb12b3af743553b6de670fe59a78",
-    "llm/f06f70581dc3b456b4a78c73b20e07f189aa867ce644050ac508537a24763272.json": "cce35cd42616c810335dc32878aba7fc40aa99c39d1c30635c8adc2fc7662930",
-    "llm/f5657bd0a2b1ddf68429bb3ba76d32a6156751704fe5223d949eab9102ead60f.json": "f990563a4112b6bdf642a6775ee3d87b40ddd06b6493fcc30275df5369813c6c",
-    "llm/ff9e2c6bc1dd8b3eaaf53ff9c5b3070ae5b7fde7277b3fa1b644ca7cb9efde21.json": "49e51eb095b9370c1c4e9bb017f168b606c20b70bc3ff4ee63fa36af7e61a9f3"
+    "bundle.public.json": "cf87681ca0bd272dcf445dd0468cc0f21a14d1cc4b92c4fc5d19be8806213bb8",
+    "llm/0f9641152d9cb9ce268bd6622373fe894fd67af411b25e6fe9c39e4918700f1c.json": "5a8b94ab61bbb07fc39ef25c430f93fc222afe357913bb9742083e49bef00425",
+    "llm/1b6e1e095e2ca93cc8cc3d28ebf28c17bd41167e4614cfec99e7617f53b819af.json": "2b0922078d6be7a13eec84ac6dd841e7c21a28846bf84b723c1b495a8881d38e",
+    "llm/1eb7de90fc487caaa4d4de96fa1e80e421d35173bcb3fc1abbef0cdb38538c89.json": "9f11379a1e4bc01f82556a329279e055b12c950530d178ec764e847afb735979",
+    "llm/24ebd714a01c3f3945f50a783de3851702b466e930a32cdd70c927d53c48e540.json": "d5d775b2eb7d29d0eecd746ab91e5ba458fcb2984f1be063e79aa418e828b1bd",
+    "llm/689e60824767dd59b2ec4c20e74682ffd212dea1235dec51d64e5cdcabc97b53.json": "d9c5ab46439ee13b31ae28b56c4838c9d0c480e007bc0d3b4fcd13b3ce360d25",
+    "llm/6da1cbe79c57998d761c41e081e4e6930174287840363af49c0258378a5a8427.json": "129c9c13988fe995780b6c682bf2889d49d54bede79ae90ca0cdd742f21c47d8",
+    "llm/7be726dfddd704e94cdae6430ef49c5e9b285b3cc45670b84612bffba3c46353.json": "45a54c10417862980d479fb5aaa5d50162a0d0a7eb8bd1fce498ec304672137e",
+    "llm/82f931d9985d9487e342611233ffbadfb0e447e5a4825a1c7d5de1ff99a509ce.json": "a2282017b9db58f78e0800533e0e8ec132d3e2f2681d791d07155778820d16f9",
+    "llm/8321f21f0beb7a8bddf3881acc3cefbe5e3b2d497a301c0a0d3208c3719684ce.json": "d800befe789663a9e63651287a232fae5e06cf9aae77c2a66a263fd1677d85d6",
+    "llm/8ae49d39209dfbc1039ab443f5022d862ff634e28ac38fcbd3e3a1eb4e5ca2e2.json": "1e06d2b06327c11f63b57452b172dce26183dd1dae5909883809eef1cde061ed",
+    "llm/8b762b4e2aaa1a520c40276d8c5cadcc8016063554db4721b256589f81dfdbf8.json": "2b0e70278f4b03707fd7c4ff5e0b5572c4264d8d26c7d944546686fd1538223b",
+    "llm/9273ab603bd09ec677e5234d4f0176f44b096a408fa7b40dd052d674ae1781c2.json": "5ebd6488c7aca73dfbf12536a3644707bcecf341f7095d94630df9f189c5f82b",
+    "llm/930d64a1c2239719b0d4be0cdf9363cca937027c9c442473db7faeec9c78222a.json": "e8a7030b9b95844c371e30d47dba3f432a8eae17cb2ae36f3330f80aeacb1886",
+    "llm/9617a454b3ddb2d5dd1cd82aaec2a5ffc0f1573b457fdb06e5e605c78e4e21e3.json": "a91e09f26366088c8938673e3eb007ade59a88c8247224d710fa988f80598048",
+    "llm/a154999f7360f8968847499ad597dbe91b0450a26b1877888347d8eb9ac1c5cb.json": "9939c3d3681d6778f11d7b8f7b1730bb02d775a9ded4f518850147784e5ec316",
+    "llm/a2bd2e86cf8266b7b5a7434f87078d2121742fbfc87f2643a44ddc79c8a03328.json": "9ee2f88756491104e4db965851d80164279f35e78d5523216e27d99cae09a4f7",
+    "llm/a67acc56d5f0281991dfee7bd3616cbf9c7a4e4ef372f529fc2af431ee733734.json": "e5bd16eb4f5043429059c8bfa82fde79922f102cb6b3064fd3e8a90b828206fa",
+    "llm/b612144245acc807dc9c8adfd4bdebd89b1b2741bd378490f1e3fb14dd303ec5.json": "ae844b4b7ce8cf8146b4751adcc39f29e5c688e0cf09ce5f84f70e3e7964946e",
+    "llm/b82b6a6deb18d5ad766de83ca49d26be64feb3988aff97362f133dddfb56ba63.json": "af58eff2ab2339871e31e3863c45025751ee79aa5f1e7978d614c1803c511f27",
+    "llm/bfd66ce49175ec55c1fed4dcb4653ca6981a68ffaf016d4ecf1cbbc3bcfbda66.json": "f9231816b56101f27e25fd332b5066450b0cbde622d647e212295aa985c53298",
+    "llm/c874e9b86060c28bf8480afdc1751eeab44db18dc334dd48a00b56fa90dafa44.json": "b38dcecb9b7db495a460753f0e4f6152da5e6208130dd1f33899e71244d8b370",
+    "llm/d0b5dabbd02eaf0b9b9bd2d3f4645c8cffe7fb4ac12b08ec432da05d1ab4b153.json": "021696e967932a477c08c307e7a7748894cbba036ba4bd8bb5837afbb20ca7bf",
+    "llm/dad3e08f12c9cb57c83bf563229d6f8c6df1df5635cc40dbff8426abae3fee15.json": "fd0b366368a1060920ae196c17c9454e620df5749901559eae1c7dd2163b05f5",
+    "llm/dae8404030f2bc20a51b7ed912c293a8e641d549373eded608c42b5199948bd6.json": "8566df3ba0aa884cb9567142764e14fd3a9a9bd90204f2808a765c319a1f136d",
+    "llm/e6f507c599e71184c96252abe167f1e00bbbd222bb00343364f434d7b15da704.json": "7626ae7a1a23c18e5ca2ec92e4cbb5a33e56696c09013733467e24a18bf34629",
+    "llm/e8b925e9246135ef4ae2668ef5a1dd4c0a68775a57b9d2eba8ab123e24a60d0c.json": "b3d94d66754c7eea3e3d9e9149a14829692a13ba29a186c7d115f90ca12a24fb",
+    "llm/e8ced81be38546ba16dc88f1868e6bd89c2e67a25866e5e4a9f5332e94def024.json": "1cb307a12cc04a15287228bc5a15e7c237dc4e3250bf3aac78112bf5ea3340bf",
+    "llm/f06f70581dc3b456b4a78c73b20e07f189aa867ce644050ac508537a24763272.json": "ad8421ab544d9f8d5a27714a8aa71bce9e3e869317e3c82709762582fd19d350",
+    "llm/f5657bd0a2b1ddf68429bb3ba76d32a6156751704fe5223d949eab9102ead60f.json": "69cdf628402fa8e568b05dc3af1212394153dbb645b826aae68470f978d2f5fc",
+    "llm/ff9e2c6bc1dd8b3eaaf53ff9c5b3070ae5b7fde7277b3fa1b644ca7cb9efde21.json": "8fda7dab7bedd1e8dea0b968c148a9bdcca140d32e081c160146abb5914c73ac"
   }
 }

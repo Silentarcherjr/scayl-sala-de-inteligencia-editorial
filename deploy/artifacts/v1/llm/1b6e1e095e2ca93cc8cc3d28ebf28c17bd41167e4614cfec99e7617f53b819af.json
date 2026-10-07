@@ -1,0 +1,92 @@
+{
+ "data": {
+  "proposed_title": "Sismo de magnitud 4.5 registrado en Panamá; se reporta sismo de 4.7 en la frontera con Costa Rica",
+  "public_interest_angle": "Evento natural con posible impacto regional",
+  "brief": [
+   {
+    "text": "El USGS registró un sismo de magnitud 4.5 a 3 km al este-noreste de Santa Cruz, Panamá, el 16 de julio de 2026, a las 10:33 hora local. Este evento no fue reportado por el Instituto Geológico de Panamá (IGUP).",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0114-001"
+    ]
+   },
+   {
+    "text": "Según telemetro.com, se reportó un sismo de magnitud 4.7 en la frontera entre Panamá y Costa Rica, sin daños reportados. Sin embargo, la magnitud difiere de la registrada por el USGS.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0114-002"
+    ]
+   },
+   {
+    "text": "No hay evidencia de daños o personas afectadas por el sismo, según los registros disponibles.",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0114-003"
+    ]
+   },
+   {
+    "text": "Telemetro.com también reportó que un sismo de magnitud 7.4 entre México y Guatemala no generó riesgo de tsunami para Panamá. Esta afirmación requiere verificación.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0114-004"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Cuál es la magnitud exacta del sismo reportado en la frontera entre Panamá y Costa Rica?",
+   "¿El Instituto Geológico de Panamá (IGUP) confirmó el sismo de magnitud 4.5 o no?",
+   "¿Qué instituciones verificaron la afirmación sobre el sismo de magnitud 7.4 y su riesgo de tsunami para Panamá?"
+  ],
+  "script": [
+   {
+    "text": "El USGS registró un sismo de magnitud 4.5 a 3 km al este-noreste de Santa Cruz, Panamá, el 16 de julio de 2026, a las 10:33 hora local. Este evento no fue reportado por el Instituto Geológico de Panamá (IGUP).",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0114-001"
+    ]
+   },
+   {
+    "text": "Según telemetro.com, se reportó un sismo de magnitud 4.7 en la frontera entre Panamá y Costa Rica, sin daños reportados. Sin embargo, la magnitud difiere de la registrada por el USGS.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0114-002"
+    ]
+   },
+   {
+    "text": "No hay evidencia de daños o personas afectadas por el sismo, según los registros disponibles.",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0111-003"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "Sismo de magnitud 4.5 registrado en Panamá; se reporta sismo de 4.7 en la frontera con Costa Rica. No hay daños reportados. ¿Cuál es la magnitud real?",
+   "tag": "HECHO",
+   "claim_ids": [
+    "CLM-0114-001",
+    "CLM-0114-002"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar la magnitud del sismo reportado en la frontera entre Panamá y Costa Rica.",
+   "Verificar si el Instituto Geológico de Panamá (IGUP) confirmó el sismo de magnitud 4.5.",
+   "Validar la afirmación sobre el sismo de magnitud 7.4 y su riesgo de tsunami para Panamá."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 18926,
+  "tokens_in": 1648,
+  "tokens_out": 968,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-07T20:58:23.463248Z"
+ }
+}

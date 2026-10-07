@@ -4,7 +4,9 @@ Artefactos en `deploy/artifacts/v1/`: bundle público (187 señales, 165 eventos
 de caché consumidas realmente (15 claims y 15 Studio). Los 15 paquetes prioritarios son cache;
 el resto conserva template. No se renombra ningún modo ni se despliega nada.
 
-Procedencia: main dc1a990, reglas DL-026/DL-027, precálculo qwen3:8b con E5 CPU y Ollama Vulkan.
+Procedencia: main f951bb2, DL-029: temas por reglas y E5 solamente para agrupación;
+precálculo nuevo qwen3:8b con E5 CPU y Ollama Vulkan. Métricas y reproducción en
+`docs/DL029_PRECOMPUTE.md`; auditoría en `eval/results/dl029-public-cache-audit.json`.
 Se comprobó **antes de construir prompts** que las 187 noticias tenían descripcion=null.
 Solo titulares/metadatos; bundle y entradas revisados por Codex: esquema, ausencia de
 descripciones/citas a descripcion y aplicación del pipeline/validadores reales. No es revisión
@@ -19,10 +21,12 @@ autorizado para preparar A-06. La publicación del Space requiere confirmación 
 
 ```powershell
 $env:SCAYL_INTEL = 'ai'
+$env:SCAYL_TOPICS = 'baseline'
+$env:SCAYL_LLM_MODEL = 'qwen3:8b'
 # Equivalente de make public-bundle; cache, top15, public=True, sin inferencia LLM:
-python -m scayl.ingest.export_public_cache --cache data/cache/llm/final-precompute-20261007 --out deploy/artifacts/v1
+python -m scayl.ingest.export_public_cache --cache data/cache/llm/precompute-dl029-20261007T205446Z --out tmp/public-dl029-reproduction
 # Para LowCrime, tras integrar el PR; destino nuevo, sin subir el stage:
-python -m deploy.prepare --bundle deploy/artifacts/v1/bundle.public.json --cache deploy/artifacts/v1/llm --out deploy/stage-reviewed
+python -m deploy.prepare --bundle deploy/artifacts/v1/bundle.public.json --cache deploy/artifacts/v1/llm --out deploy/stage-dl029
 ```
 
 No sobrescribir destino existente. Para reproducir, usar otro destino y comparar hashes.

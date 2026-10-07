@@ -1,0 +1,105 @@
+{
+  "run_at": "2026-10-07T21:01:27.737454Z",
+  "code_git_sha": "f951bb249fdcb5b163d15e2d8bbae91131075594",
+  "snapshot_manifest_sha256": "6d7542a1b5e508340dde315c413d7954f4dddddd035996cfdae9c6c210f35535",
+  "topics_method": "baseline",
+  "clustering": "st:intfloat/multilingual-e5-base",
+  "before_top15": [
+    "EVT-0101",
+    "EVT-0102",
+    "EVT-0100",
+    "EVT-0051",
+    "EVT-0078",
+    "EVT-0099",
+    "EVT-0081",
+    "EVT-0095",
+    "EVT-0093",
+    "EVT-0059",
+    "EVT-0153",
+    "EVT-0098",
+    "EVT-0111",
+    "EVT-0134",
+    "EVT-0107"
+  ],
+  "after_top15": [
+    "EVT-0101",
+    "EVT-0116",
+    "EVT-0078",
+    "EVT-0051",
+    "EVT-0083",
+    "EVT-0143",
+    "EVT-0165",
+    "EVT-0081",
+    "EVT-0108",
+    "EVT-0107",
+    "EVT-0114",
+    "EVT-0133",
+    "EVT-0141",
+    "EVT-0145",
+    "EVT-0160"
+  ],
+  "top15_overlap": {
+    "num": 5,
+    "den": 15
+  },
+  "newly_in_top15": [
+    "EVT-0083",
+    "EVT-0108",
+    "EVT-0114",
+    "EVT-0116",
+    "EVT-0133",
+    "EVT-0141",
+    "EVT-0143",
+    "EVT-0145",
+    "EVT-0160",
+    "EVT-0165"
+  ],
+  "removed_from_top15": [
+    "EVT-0059",
+    "EVT-0093",
+    "EVT-0095",
+    "EVT-0098",
+    "EVT-0099",
+    "EVT-0100",
+    "EVT-0102",
+    "EVT-0111",
+    "EVT-0134",
+    "EVT-0153"
+  ],
+  "package_modes": {
+    "cache": 15,
+    "template": 150
+  },
+  "source_descriptions": {
+    "num": 0,
+    "den": 187
+  },
+  "cache_entries": 30,
+  "exported_json_files_checked": {
+    "num": 32,
+    "den": 32
+  },
+  "old_cache_entries_removed": 20,
+  "public_review_sha256": "d0ffaed47eaa83a5ccc20817675e21f41fb4b9c39a05be7a2b3f83614ec7ae50",
+  "live_generation_report_sha256": "75ec877a3be918441cb3a4198044e935c643b5f9b22c661d191361ce44653a2f",
+  "published": false,
+  "stage_preparation": {
+    "status": "verified locally; not published",
+    "prepared_at": "2026-10-07T21:01:36.582654+00:00",
+    "files_hash_checked": {
+      "num": 118,
+      "den": 118
+    },
+    "preparation_sha256": "5d8f8749e908df8c620579324855c0966761660dc25d2a384a0d5349374258be",
+    "cache_entries": 30,
+    "package_modes": {
+      "cache": 15,
+      "template": 150
+    },
+    "published": false
+  },
+  "limitations": [
+    "Agent privacy/schema/validator review, not human support-validity review.",
+    "No Space publication performed; LowCrime prepares it after Lead review."
+  ]
+}

@@ -1,5 +1,8 @@
 # Precálculo después de DL-026/DL-027
 
+Registro histórico. El precálculo vigente tras DL-029 y su caché pública están
+en [DL029_PRECOMPUTE.md](DL029_PRECOMPUTE.md).
+
 Ejecución real desde main `dc1a990`, E5 activo (CPU), qwen3:8b en AMD RX 9060 XT 8 GiB,
 Ollama 0.40.0 Vulkan, 37/37 capas GPU. Caché dedicada inicialmente vacía.
 GNU Make no está instalado; se ejecutó exactamente su receta con Python:
