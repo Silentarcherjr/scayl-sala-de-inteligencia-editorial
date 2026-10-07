@@ -32,3 +32,10 @@ propuestas a etiquetas humanas sin autorización explícita.
 
 Estado: revisión en curso en `worker-b/human-inputs`; el conteo actual se obtiene de las
 filas con `confirmado=si`. Las métricas se vuelven a ejecutar al terminar todos los bloques.
+
+Temas completados el 2026-10-07: 100/100 etiquetas explícitas de `frictionspp-svg`.
+La ejecución guardada en `eval/results/b07-human-metrics.json` mide macro-F1
+baseline=0.7568136932192232 e IA=0.24645960051496715, sobre las siete clases
+oficiales (`zero_division=0`). No se ajustaron modelos, prototipos ni umbrales con
+estas respuestas. Es revisión asistida con propuestas visibles; no gold ciego.
+La agrupación sigue sin medir hasta completar la revisión de sus 32 titulares.

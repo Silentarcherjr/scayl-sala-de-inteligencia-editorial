@@ -1,8 +1,16 @@
 {
-  "run_at": "2026-10-07T05:54:53.958623Z",
+  "run_at": "2026-10-07T19:47:49.986328Z",
   "topics": {
-    "status": "no medido; revisión humana pendiente",
-    "n": 0
+    "status": "medido",
+    "baseline": {
+      "macro_f1": 0.7568136932192232,
+      "n": 100
+    },
+    "ai": {
+      "macro_f1": 0.24645960051496715,
+      "n": 100
+    },
+    "macro_scope": "all 7 official classes, zero_division=0"
   },
   "clustering": {
     "status": "no medido; revisión humana pendiente",
@@ -14,7 +22,7 @@
     "No tau/prototype/weight tuning in this evaluator; editor_top5 never read."
   ],
   "labels_sha256": {
-    "topics_human.csv": "5a2d025c1c6c831a1bbc8e7410df26a5e8fca9c77fe31e59615266f99efaee67",
+    "topics_human.csv": "79b525ad2ec5b4a14e349ee58599bbcf70f94e7c23a8041131515e524f20c2fb",
     "dev2025_groups_human.csv": "ce92e9dc98eff4ec485c34465af7082b0fec75b5b6b344c82fd21f6a7f5b95e2"
   }
 }
