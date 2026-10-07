@@ -44,3 +44,10 @@ Sus conjuntos etiquetados/evaluadores y mediciones de generación quedan pendien
 
 Trust Lab existente consume latest.json sin cambios en A-05. [Captura](screenshots/b08-evaluacion.png).
 La limitación detallada está en el JSON y este documento; la vista del Lead muestra la marca exploratoria.
+
+## Ampliación B-12 / abstención (2026-10-07)
+Usar `--redteam-report eval/results/redteam-latest.json` para adjuntar y archivar una corrida.
+El evaluador recalcula num/den desde sus observaciones; sin el argumento, abstención sigue no medido.
+Set, política estricta y límites: [eval/redteam/README.md](../eval/redteam/README.md).
+La corrida mide solo template/extractivo; no prueba calidad de LLM vivo, soporte humano ni benchmark reservado.
+P@5 en esta sesión se recalcula sobre el bundle público baseline (183 eventos), no sobre E5 (165).

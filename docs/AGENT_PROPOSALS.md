@@ -155,3 +155,16 @@
 - Esfuerzo estimado: integración UI ~1 h tras publicar las interfaces.
 - Recomendación: ACCEPT.
 - Decisión (Lead/humano + fecha): **ACEPTADA por Lead, 2026-10-07, DL-020**. `service.review(..., package=...)` y `service.receipt(review_id)` publicados en main. A-08, A-01 y A-02 reasignadas a LowCrime. A-08 implementada e integrada en A-03; se retira el adaptador JSON y el bloqueo temporal de revisión. El recibo identifica el contenido visible por id y sha256.
+
+## AP-012 · Validar la salida extractiva y revisar el prefiltro temporal de Consultas
+- Autor / fecha: LowCrime (Codex), 2026-10-07.
+- Estado: ABIERTA para el Lead; diagnóstico B-12, sin cambiar su módulo.
+- Problema: RT01–04 reproducen instrucciones de titulares en la respuesta de service.ask(template). El validador posterior sí las rechaza. RT05–06 y RT09–12 no se abstienen ante premisas numéricas o períodos ausentes/actuales; devuelven filas históricas, etiquetadas con año. No se afirma que hayan inventado esas cifras.
+- Cambio propuesto: aplicar check_sentence también en _extractive, con abstención explícita si no sobrevive contenido; revisar consultas de actualidad y condición de año pedido (el año de publicación de otra unidad puede permitir una fila histórica). Acordar política para corregir premisas frente a abstenerse.
+- Por qué mejora: respuesta extractiva y LLM comparten controles; errores y limitaciones visibles.
+- Dimensión de rúbrica: seguridad, evidencia y evaluación.
+- Archivos afectados: scayl/gen/qa.py, pruebas T06/T07 (dueño Lead).
+- Adaptador local: scayl/eval/redteam.py valida después y registra el original intacto; no altera servicio, umbrales ni prompts.
+- Riesgos: más abstenciones; medir también los cuatro controles contestables. El set es desarrollo sintético de IA, no gold humano ni prueba viva.
+- Esfuerzo estimado: un bloque de revisión + regresiones.
+- Recomendación: ACCEPT. Decisión pendiente.
