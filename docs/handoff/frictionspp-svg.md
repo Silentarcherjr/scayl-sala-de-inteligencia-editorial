@@ -1,45 +1,54 @@
-# Relevo · frictionspp-svg · 2026-10-07 02:38 UTC
+# Relevo · frictionspp-svg · 2026-10-07 04:50 UTC
 
-- **Motivo:** relevo preventivo al cerrar la corrección del historial y manifest, según AGENTS.md §2b (sin porcentaje fiable de sesión).
-- **Rama local:** worker-b/frictionspp-svg. Upstream y destino exclusivo: origin/worker-b/snapshot.
-- **Último commit de implementación:** c1f67ae, subido. Este relevo queda en un commit posterior.
-- **PR:** https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/19 (borrador hacia main; solo el Lead mergea).
+- **Motivo de la parada:** relevo preventivo al cerrar B-05 IA, AGENTS §2b; sin porcentaje fiable de sesión.
+- **Rama:** worker-b/b05-multilingual · **Último commit de implementación:** e31c66d (56632bb implementación principal). El relevo queda en commit posterior; se empuja toda esta rama.
+- **PR abierto:** https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/28 hacia main, listo para revisión. Solo el Lead mergea.
 
 ## Tarea en curso
-B-01/B-02 siguen incompletas. Snapshot NO congelado. Esta sesión reparó el historial y la portabilidad del manifest; no adquirió noticias nuevas.
+B-05 IA implementada y medida. B-13 ACP, B-14 INEC, B-07 humano y B-10 pendientes.
+El usuario cambió prioridad: B-05 primero, luego ACP/INEC, luego etiquetas/benchmark. make precompute solo cuando B-05 esté mergeado.
 
 ## Hecho en esta sesión
-- backup/wip-617d6e2 apunta a 89c48c0: SOLO LOCAL, NUNCA SUBIR. Contiene ZIP y RSS con descripciones.
-- Historial reconstruido desde a525a6f por instrucción humana; archivos recuperados en disco y retirados del índice. Exclusiones en .gitignore y merge normal 0997fb9, sin rebase ni force-push.
-- Bitácora IA conserva filas de ambos lados en una tabla ordenada.
-- Objetos a525a6f..HEAD sin ZIP ni rss.xml. Permanecen en disco 117 ZIP y RSS (195516 bytes).
-- Manifest excluye auxiliares locales, comprueba sus hashes contra el inventario antes de congelar y lee corte de data_window.v1.yaml.
-- acquisition_inventory.json: 118 hashes/tamaños verificados, anotados disponibilidad="solo local" por instrucción humana; respuestas raw intactas.
-- AP-008 ACEPTADA (DL-013, 540 filas); AP-009 SUPERADA (DL-017). Las notas del Lead siguen pendientes.
+- Fetch y merge de main: fast-forward a 2db3455. Main ya contiene snapshot C-01 (PR #19), B-03 y baseline (DL-023), top5 del editor y DL-024.
+- Borrador local antiguo de validate.py preservado en data/cache/local-drafts/validate-before-dl024.py, ignorado. Se usa la implementación del Lead.
+- Rama propia worker-b/b05-multilingual.
+- SentenceTransformerEmbedder: intfloat/multilingual-e5-base local, Unicode, query prefix, float32 L2 normalizado; imports/pesos diferidos; sin red ni nuevas dependencias. CPU por defecto, SCAYL_EMBED_DEVICE opcional.
+- topics_ai.classify: prototipos de los siete temas oficiales; confianza es coseno, no probabilidad/verdad.
+- 181 titulares DOC septiembre 2025 conservados para desarrollo. 32 anotados provisionalmente por Codex, diez grupos, 488 pares (43 positivos/445 negativos). NO gold humano; B-07 pendiente.
+- Calibración SOLO desarrollo: rejilla predefinida 0,70–0,95 paso 0,01; F1, desempate precisión y τ estricto. Seleccionado τ=0,87, TP42 FP0 FN1 TN445. DEFAULT_TAU actualizado. Calibrador rechaza C-01 y no abre editor_top5.
+- Evaluación posterior C-01 con τ fijado: 183→165 eventos; P@5 exploratorio 1/5→1/5. Cuatro casos solicitados NO se agrupan.
+- Diagnóstico: EVT-0127 17/07; EVT-0158 15/08; EVT-0088 05/09; EVT-0096 francés 15/09/2026. Todas las parejas exceden 7 días (mínimo10/máximo60). Cosenos españoles >0,87; franceses 0,839–0,861. No se cambió el guard temporal ni pesos para forzar coincidencia.
+- Medición REAL en CPU (torch 2.14.1+cpu, CUDA no disponible), no GPU. E5 pesos disponibles en models/embeddings/intfloat--multilingual-e5-base.
+- Resultados guardados eval/results/b05-dev2025-calibration.json y b05-c01-before-after.json. Matriz real y hashes de textos en data/processed/v1/embeddings.npz, ignorado.
+- Se comprobó integración SCAYL_INTEL=ai con 3 noticias: 3 etiquetas y 3 grupos.
+- Atributos específicos -text para entradas dev2025 y resultados B05: hashes guardados coinciden ahora con blobs Git, incluidos CSV/JSON con CRLF.
+- Ningún ZIP ni rss.xml con descripciones se publica. backup/wip-617d6e2 permanece EXCLUSIVAMENTE local.
 
 ## Siguiente paso concreto
-1. Sincronizar con main y revisar notas del Lead. Nunca push --all ni subir backup.
-2. Actualizar fetchers a scayl/config/data_window.v1.yaml: noticias [2025-10-02, 2026-10-01), 30 días previos al corte ampliables a 90. GDELT publicación nula; RSS publicación=pubDate y detección nula (el adaptador anterior aún usa extracción como detección: corregir con prueba).
-3. Descargar DOC diario de ventana nueva, GKG como respaldo. Conservar raw 2025 y auditar fuera_de_ventana_C-01. Escribir salidas nuevas de forma inmutable.
-4. Construir noticias deduplicadas, fuentes.json y eventos_ext.geojson (USGS ampliado separado del oficial 2024). Reconciliar inventario con nuevas respuestas sin sobrescribir bytes raw: build_manifest rechaza hashes locales ausentes/inconsistentes en inventario existente.
-5. Congelar/verificar manifest y exportar candidatos ciegos. Actualizar catálogo/diccionario (aún contiene comandos históricos), pruebas y PR. Solo entonces borrar Notas del Lead pendientes.
-6. Después B-13 ACP y B-14 INEC; luego B-03/B-04, B-11, B-05/B-07, B-06 y B-10. Sin UI (DL-020: LowCrime).
+1. Sincronizar rama con main y revisar decisiones. El PR #28 está para el Lead; no mergearlo.
+2. Continuar B-13 ACP y luego B-14 INEC según TASKS; snapshot v1 ya congelado: adición declarada v1.1/nuevo inventario y recibo, nunca sobrescribir bytes raw previos. Una rama por bloque.
+3. B-07: revisión/etiquetas humanas, pool de pares DL-016, etiquetas de temas ≥100. Las anotaciones provisionales de 2025 no reemplazan gold humano. No retocar τ/prototipos/pesos usando C-01 o editor_top5.
+4. B-10 benchmark: hardware AMD RX 9060 XT Vulkan para Ollama; PyTorch actual es CPU. No inventar métricas GPU.
+5. Cuando B-05 esté mergeado, ejecutar make precompute en máquina de demo según instrucción humana. El top5 ya existe; asistencia previa al editor declarada en DL-024.
 
 ## Estado de las pruebas
-.\.venv\Scripts\python -m pytest -q --junitxml=docs/worklog/worker-b-manifest-pytest.xml → 99 passed.
-Dos pruebas nuevas: copia sin auxiliares verifica y detecta alteración del inventario; hashes inconsistentes impiden congelar.
-No se verificó v1 congelado: aún faltan noticias.csv, fuentes.json y manifest. Python global no tiene pytest; usar .venv.
+.\.venv\Scripts\python -m pytest -q --junitxml=docs/worklog/worker-b-b05-pytest.xml → 129 passed.
+Pruebas sin pesos: Unicode, L2 float32, lotes vacíos, salida inválida, taxonomía, guard de 7 días y rechazo de C-01 en calibración. Modelos reales ejercitados en ejecuciones guardadas.
+Imports nativos fallaron inicialmente bajo política DLL Windows; ejecutar fuera del sandbox y cargar dependencias de clustering antes del modelo permitió ejecutar. No se desactivó seguridad Windows.
+Python global no tiene pytest; usar .venv.
 
 ## Archivos tocados
-.gitignore; scayl/ingest/manifest.py; tests/test_snapshot_fetchers.py; data/raw/v1/acquisition_inventory.json; docs/AGENT_PROPOSALS.md; docs/DATA_DICTIONARY.md; docs/AI_TOOLS_USED.md; docs/worklog/worker-b.md y reporte XML.
+scayl/intel/embed_st.py, topics_ai.py, cluster.py; scayl/eval/calibrate_cluster.py, compare_intel.py; tests/test_intel_ai.py.
+data/labels/dev2025_news.jsonl, dev2025_cluster_pairs.csv y .gitattributes; eval/results/b05-*.json y .gitattributes.
+docs/B05_MULTILINGUAL.md, docs/AI_TOOLS_USED.md, docs/worklog/worker-b.md, worker-b-b05-pytest.xml.
 
 ## Bloqueos, dudas y decisiones pendientes
-- Falta cobertura nueva ≥100 noticias/≥20 TVN. Las cifras antiguas (300 GDELT, 540 WB, 82 USGS) no prueban cobertura C-01.
-- No falta autorizar AP-008/AP-009.
-- Usuario exige git push -u origin HEAD:worker-b/snapshot; no crear otra rama remota.
-- tmp/ sin seguimiento: auditoría del WIP, cuerpo del PR y helper de autenticación sin secretos guardados. No añadir indiscriminadamente.
+- Cuatro titulares no pueden formar un evento con el guard vigente de 7 días. Cambiar horizonte/familias temáticas sería transversal: proponer y esperar decisión; no hacerlo silenciosamente.
+- P@5 cuenta puestos de eventos que contienen elegidos; cobertura de titulares seleccionados se registra aparte para evitar contar varias elecciones del mismo evento como varios puestos.
+- Revisión humana de etiquetas pendiente. F1 de calibración es sobre el propio desarrollo provisional, no rendimiento generalizable.
+- make precompute pendiente del merge humano de B-05.
 
 ## Contexto que no está en el código
-- El respaldo tiene archivos prohibidos para publicación; no subirlo.
-- gh portable en models/tools/gh/bin/gh.exe, sin sesión propia. PR creado con credencial Git existente solo en memoria, sin mostrarla ni persistirla.
-- Modelos/Ollama siguen locales en models/. GPU AMD RX 9060 XT 8 GiB Vulkan; benchmark no medido.
+- Modelos y herramientas en models/, ignorado. GH CLI models/tools/gh/bin/gh.exe. PR creado con credencial Git existente SOLO en memoria.
+- tmp/ ignorado: cuerpo/helper del PR actual. No añadir indiscriminadamente.
+- Rama remota de esta tarea: worker-b/b05-multilingual (nuevo pedido worker-b/*). Rama de snapshot anterior sigue separada. Nunca push --all ni subir backup.

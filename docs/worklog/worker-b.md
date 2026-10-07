@@ -32,3 +32,5 @@ Implementados SentenceTransformerEmbedder E5 local y clasificación por prototip
 Evaluación posterior: 183→165 eventos; P@5 exploratorio 1/5→1/5. Cuatro casos quedan separados: fechas 17/07, 15/08, 05/09 y 15/09/2026, mínimo 10 días; todas las parejas bloqueadas por límite de 7 días. Coseno francés menor que τ también. No se modificó horizonte ni pesos.
 Medición real E5 en CPU (torch 2.14.1+cpu, CUDA no disponible). Matrices ignoradas en processed/v1/embeddings.npz. Resultados en eval/results/b05-dev2025-calibration.json y b05-c01-before-after.json. Integración SCAYL_INTEL=ai comprobada con tres noticias: 3 etiquetas/3 grupos.
 129/129 pruebas pasan, worker-b-b05-pytest.xml. Carga nativa inicial falló en DLL sklearn después de PyTorch; verificación con orden inverso e implementación local de carga antes del modelo permitió ejecutar. No se relajó ninguna política Windows.
+
+2026-10-07 04:50 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md. B-05 PR #28; 129 pruebas pasan; 183 a 165 eventos, P@5 1/5 ambos. Siguiente B-13 ACP y B-14 INEC; precompute tras merge.
