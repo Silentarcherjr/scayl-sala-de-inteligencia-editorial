@@ -31,3 +31,7 @@
 |---|---|---|---|
 | Embeddings | _DL-006, pendiente_ | Temas, agrupación, recuperación | $0 (local) |
 | LLM | _DL-006, pendiente_ | Afirmaciones, paquete editorial, Q&A | $0 (local) |
+
+### Uso adicional · 2026-10-07 · LowCrime
+Codex: B-08 importación de mediciones existentes, trazabilidad y pruebas de métricas vacías/inválidas.
+No generó etiquetas humanas ni tiempos; conserva fuente, n, hardware y no medido. Revisión Lead pendiente.

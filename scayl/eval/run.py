@@ -5,6 +5,7 @@ import argparse
 from datetime import UTC, datetime
 import hashlib
 import json
+import math
 from pathlib import Path
 import platform
 import re
@@ -75,7 +76,7 @@ def pytest_results(path: Path | None) -> dict:
 
 
 def build_report(bundle: UIBundle, selection: dict, pytest_report: Path | None = None,
-                 redteam_report: Path | None = None) -> dict:
+                 redteam_report: Path | None = None, precompute_report: Path | None = None) -> dict:
     missing = "No hay conjunto etiquetado y ejecución de benchmark guardada para esta métrica."
     metrics = {key: unmeasured(missing) for key in (
         "citation_coverage", "support_validity", "abstention_correct", "abstention_false",
@@ -97,17 +98,41 @@ def build_report(bundle: UIBundle, selection: dict, pytest_report: Path | None =
     metrics["latency_ms"] = {key: {"status": "no medido", "median": None, "p95": None, "n": None}
                              for key in ("qa", "package")}
     metrics["api_cost_usd"] = 0.0
+    precompute = None
+    if precompute_report:
+        precompute = json.loads(precompute_report.read_text(encoding="utf-8"))
+        provenance = {"evidence": str(precompute_report), "sha256": hashlib.sha256(precompute_report.read_bytes()).hexdigest(),
+                      "run_at": precompute["run_at"], "hardware": precompute["hardware"],
+                      "models": precompute["models"], "packages": precompute["packages"],
+                      "generation_report_sha256": precompute["source_sha256"]}
+        coverage = precompute["citation_coverage"]
+        num, den = coverage["num"], coverage["den"]
+        if type(num) is not int or type(den) is not int or not 0 <= num <= den:
+            raise ValueError("Cobertura de citas inválida")
+        metrics["citation_coverage"] = {"status": "medido" if den else "no medido", "num": num if den else None,
+            "den": den if den else None, "value": num / den if den else None,
+            "scope": precompute["citation_scope"], "measurement": provenance}
+        latency = precompute["latency_ms"]
+        if type(latency["n"]) is not int or latency["n"] < 0:
+            raise ValueError("Tamaño de muestra de latencia inválido")
+        if latency["n"]:
+            if any(not isinstance(latency[k], (int, float)) or not math.isfinite(latency[k]) or latency[k] < 0
+                   for k in ("median", "p95")) or latency["p95"] < latency["median"]:
+                raise ValueError("Latencia medida inválida")
+            metrics["latency_ms"]["package"] = {**latency, "status": "medido", "measurement": provenance}
     return {"run_at": datetime.now(UTC).isoformat(),
             "snapshot": bundle.snapshot_version,
             "hardware": f"{platform.system()} {platform.machine()} · {platform.processor()} · Python {platform.python_version()}",
-            "models": sorted({p.generated_by.model for p in bundle.packages if p.generated_by.model}),
+            "models": sorted({p.generated_by.model for p in bundle.packages if p.generated_by.model}
+                             | set(precompute["models"] if precompute else [])),
             "generation_modes": sorted({p.generated_by.mode for p in bundle.packages}),
             "metrics": metrics, "tests": pytest_results(pytest_report),
             "cost_scope": "Esta evaluación lee artefactos locales, sin llamadas de API; no mide hardware/electricidad.",
             "redteam": {"evidence": str(redteam_report), "run_at": redteam["run_at"],
                         "failed_ids": redteam["failed_ids"], "scope": redteam["scope"]} if redteam else None,
             "limitations": [LIMITATION, "Solo se miden las métricas con ejecución adjunta; "
-                             "generación viva, etiquetas humanas y latencia siguen pendientes."]
+                             "las mediciones importadas pertenecen a su corrida/hardware de origen, no al equipo evaluador. "
+                             "Cobertura de citas no mide validez humana del sustento; QA y paquetes tienen latencias separadas."]
                             + (redteam["limitations"] if redteam else [])}
 
 
@@ -116,6 +141,7 @@ def main() -> None:
     parser.add_argument("--snapshot", default="v1")
     parser.add_argument("--pytest-report", type=Path)
     parser.add_argument("--redteam-report", type=Path, help="Corrida guardada por scayl.eval.redteam")
+    parser.add_argument("--precompute-report", type=Path, help="Resumen medido; por defecto b13-b14-precompute.json si existe")
     args = parser.parse_args()
     bundle_path = ROOT / "data/processed" / args.snapshot / "bundle.json"
     labels_path = ROOT / "data/labels/editor_top5.json"
@@ -133,7 +159,19 @@ def main() -> None:
     if args.redteam_report:
         redteam_report = saved.with_suffix(".redteam.json")
         shutil.copyfile(args.redteam_report, redteam_report)
-    report = build_report(bundle, selection, pytest_report, redteam_report)
+    precompute_report = args.precompute_report or ROOT / "eval/results/b13-b14-precompute.json"
+    if not precompute_report.exists() and args.precompute_report:
+        raise FileNotFoundError(precompute_report)
+    precompute_report = precompute_report if precompute_report.exists() else None
+    report = build_report(bundle, selection, pytest_report, redteam_report, precompute_report)
+    if precompute_report:
+        archive = saved.with_suffix(".precompute.json")
+        shutil.copyfile(precompute_report, archive)
+        for metric in (report["metrics"]["citation_coverage"], report["metrics"]["latency_ms"]["package"]):
+            if "measurement" in metric:
+                metric["measurement"]["evidence"] = (precompute_report.relative_to(ROOT).as_posix()
+                    if precompute_report.is_relative_to(ROOT) else precompute_report.name)
+                metric["measurement"]["archive"] = archive.relative_to(ROOT).as_posix()
     if redteam_report:
         report["redteam"]["evidence"] = redteam_report.relative_to(ROOT).as_posix()
     if pytest_report:
@@ -145,6 +183,8 @@ def main() -> None:
         paths.append(pytest_report)
     if redteam_report:
         paths.append(redteam_report)
+    if precompute_report:
+        paths.extend([precompute_report, archive])
     report["inputs"] = [{"path": str(path.relative_to(ROOT) if path.is_absolute() else path),
                          "sha256": hashlib.sha256(path.read_bytes()).hexdigest()} for path in paths]
     report["saved_run"] = str(saved.relative_to(ROOT))
