@@ -112,10 +112,16 @@ def main() -> None:
             if st.button(label):
                 st.session_state[f"{key}:question"] = question
     with st.form("question-form"):
-        question = st.text_input("Pregunta en español", key=f"{key}:question")
+        question = st.text_input("Pregunta en español", key=f"{key}:question",
+                                 placeholder="Ej.: ¿Cuál fue la inflación de Panamá en 2024?",
+                                 help="Indica el país y el período si preguntas por una cifra. La respuesta cita el corpus o explica qué falta.")
         mode = st.selectbox("Modo solicitado", ["cache"] if os.environ.get("SCAYL_HOSTED") == "1"
                             else ["cache", "template", "live"],
-                            help="Live usa Ollama local. El resultado indica el modo realmente utilizado.")
+                            help=("Esta demo usa caché; si no hay una salida guardada, utiliza una plantilla."
+                                  if os.environ.get("SCAYL_HOSTED") == "1" else
+                                  "cache: salida precalculada, con respaldo a plantilla si falta. "
+                                  "template: respuesta extractiva sin modelo. live: Ollama local. "
+                                  "El resultado muestra el modo realmente utilizado."))
         submit = st.form_submit_button("Consultar")
     if submit:
         st.session_state.pop(f"{key}:answer", None)

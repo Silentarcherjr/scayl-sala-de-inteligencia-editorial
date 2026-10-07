@@ -21,3 +21,10 @@ Bundle local regenerado tras H-08: 187 señales, 183 eventos, modo template. Sin
 Capturas: [abstención](screenshots/a04-abstencion.png), [respuesta citada](screenshots/a04-citas.png).
 No se publican el bundle ni las descripciones RSS. H-08 aceptada con la limitación de DL-024:
 el editor vio una propuesta de IA, coincidente en 1 de 5; P@5 será exploratoria sobre eventos.
+
+## Pulido final de textos (2026-10-07)
+Consultas conserva etiquetas visibles de formulario y añade ejemplo/ayuda para país y período.
+La ayuda de modos distingue cache/template/live; en hosting solo explica caché y respaldo, sin ofrecer
+Ollama como si estuviera disponible. Ficha aclara qué significa un apartado vacío y cómo preparar
+un paquete ausente; la ayuda de Generar dice explícitamente que crear borrador no aprueba ni publica.
+Sin cambios en contratos, lógica, colores ni módulos A-05/A-10. No se declara auditoría WCAG completa.

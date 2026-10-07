@@ -31,3 +31,5 @@
 |---|---|---|---|
 | Embeddings | _DL-006, pendiente_ | Temas, agrupación, recuperación | $0 (local) |
 | LLM | _DL-006, pendiente_ | Afirmaciones, paquete editorial, Q&A | $0 (local) |
+
+Codex · LowCrime · 2026-10-07 · Pulido UI: textos/ayudas en español y vacíos de Ficha, sin cambios funcionales; validación con suite existente, sin tests que dupliquen textos triviales.
