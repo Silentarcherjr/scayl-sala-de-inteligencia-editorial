@@ -170,3 +170,20 @@
 - **Precálculo medido (B-10 parcial):** qwen3:8b en AMD RX 9060 XT (Vulkan), 15/15 en vivo, 0 de respaldo. Mediana 15,1 s, p95 17,8 s (n = 15); la meta orientativa de ≤15 s se supera por 0,1 s, se reporta tal cual. Cobertura de citas 49/49 oraciones conservadas; el validador eliminó 5 (3 STATUS_MISMATCH, 2 UNCITED_FACT). Costo de API $0.
 - **Consecuencia:** cambian afirmaciones de contexto, así que el caché LLM de esos eventos debe regenerarse (`make precompute` otra vez en la GPU).
 - **Fecha:** 2026-10-07
+
+### DL-027 · Red-team B-12: fallos reales en Consultas corregidos (AP-013)
+- **Hallazgo (LowCrime, PR #32):** con 16 ataques sintéticos, la abstención correcta era **6/16**. Fallos:
+  - el modo sin modelo **citaba textualmente** titulares con inyección (RT01–04);
+  - no había abstención ante cifras falsas en la pregunta (RT05–06);
+  - devolvía filas históricas cuando se pedía un dato "actual / hoy / este año" (RT09–11);
+  - aceptaba un año porque coincidía con la fecha de un titular ajeno (RT12).
+- **Corrección (Lead, `scayl/gen/qa.py`) con reglas generales, no específicas del set:**
+  1. las fuentes marcadas como posible inyección se recuperan solo para explicar la abstención; nunca se citan ni se envían al modelo;
+  2. el modo extractivo pasa por el mismo validador (`check_sentence`) que el modelo;
+  3. guardia de premisa falsa: si una cifra de la pregunta no está en la evidencia pertinente, el sistema se abstiene (las fechas no cuentan como cifras);
+  4. guardia de actualidad: con solo datos históricos, abstención; con series recientes (ACP/INEC), se responde con la más reciente **y su período**;
+  5. el año pedido debe pertenecer a una unidad que trate el tema;
+  6. fechas en español → ISO ("28 de septiembre de 2026" → 2026-09-28), y "hoy/actual" no se usan como términos de búsqueda.
+- **Resultado medido:** abstención correcta 16/16; abstención incorrecta 0/4; controles 4/4; sondas del validador 9/9; 172 pruebas.
+- **Limitación declarada (sobreajuste):** la corrección se hizo después de ver el set, que fue escrito por un agente IA. Mitigación: reglas generales; 7 regresiones nuevas redactadas de otra forma; verificación manual con datos reales (preguntas "actual" responden con INEC 2026-08 y Gatún 2026-09-30, con su fecha). **Pendiente: un set reservado nuevo**, escrito por alguien que no haya visto el código, para medir sin sesgo.
+- **Fecha:** 2026-10-07

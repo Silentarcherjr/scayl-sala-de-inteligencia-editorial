@@ -68,3 +68,48 @@ def test_template_mode_is_extractive_and_labelled():
     a = answer("¿Cuál fue la inflación de Panamá en 2024?", bundle(), LLM(mode="template"))
     assert not a.abstained and a.citations
     assert any(i.code == "EXTRACTIVE_MODE" for i in a.validation.issues)
+
+
+# --- B-12 red-team findings (AP-013): general rules, phrased differently from the red-team set ---
+
+def test_false_premise_figure_abstains_without_model(tmp_path):
+    llm, backend = fake_llm(tmp_path, {"qa": {"abstain": False, "answer": []}})
+    a = answer("¿Es cierto que la inflación de Panamá llegó a 12.4% en 2024?", bundle(), llm)
+    assert a.abstained and "cifra planteada" in a.abstention_reason and backend.calls == []
+
+
+def test_figure_present_in_evidence_is_not_a_false_premise():
+    a = answer("¿La inflación de Panamá fue 0.7% en 2024?", bundle(), LLM(mode="template"))
+    assert not a.abstained and a.citations[0].evidence_id == "wb:PAN:FP.CPI.TOTL.ZG:2024"
+
+
+def test_current_value_with_only_historical_rows_abstains():
+    for q in ("¿Cuál es hoy la inflación en Panamá?", "¿Qué inflación tiene Panamá actualmente?"):
+        a = answer(q, bundle(), LLM(mode="template"))
+        assert a.abstained and "histórica" in a.abstention_reason, q
+
+
+def test_current_value_uses_latest_dated_recent_series():
+    from tests.factories import recent
+    b = bundle().model_copy(update={"indicators": bundle().indicators + [
+        recent("INEC.IPC.VAR_INTERANUAL", "2026-07", 1.9, "inec", "%"),
+        recent("INEC.IPC.VAR_INTERANUAL", "2026-08", 2.2, "inec", "%")]})
+    a = answer("¿Cuál es la inflación actual en Panamá?", b, LLM(mode="template"))
+    assert not a.abstained and a.citations[0].evidence_id == "ind:inec:INEC.IPC.VAR_INTERANUAL:2026-08"
+    assert "2026-08" in a.answer[0].text  # always with its period, never "actual"
+
+
+def test_year_must_belong_to_a_unit_about_the_topic():
+    """A headline dated 2025 about the Canal does not answer 'inflation in 2025'."""
+    b = bundle().model_copy(update={"news": [news("z", "Panamá: Canal ajusta calados",
+                                                  pub=datetime(2025, 9, 1, tzinfo=UTC))]})
+    a = answer("¿Inflación de Panamá en 2025?", b, LLM(mode="template"))
+    assert a.abstained and "2025" in a.abstention_reason
+
+
+def test_spanish_dates_retrieve_the_exact_day():
+    from tests.factories import recent
+    b = bundle().model_copy(update={"indicators": [recent("ACP.GATUN.NIVEL", f"2026-0{m}-28", 80.0 + m, "acp", "pies")
+                                                   for m in range(1, 10)]})
+    a = answer("¿Cuál fue el nivel del lago Gatún el 28 de septiembre de 2026?", b, LLM(mode="template"))
+    assert a.citations[0].evidence_id == "ind:acp:ACP.GATUN.NIVEL:2026-09-28"

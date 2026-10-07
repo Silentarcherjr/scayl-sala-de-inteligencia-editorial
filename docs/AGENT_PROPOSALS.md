@@ -156,9 +156,10 @@
 - Recomendación: ACCEPT.
 - Decisión (Lead/humano + fecha): **ACEPTADA por Lead, 2026-10-07, DL-020**. `service.review(..., package=...)` y `service.receipt(review_id)` publicados en main. A-08, A-01 y A-02 reasignadas a LowCrime. A-08 implementada e integrada en A-03; se retira el adaptador JSON y el bloqueo temporal de revisión. El recibo identifica el contenido visible por id y sha256.
 
-## AP-012 · Validar la salida extractiva y revisar el prefiltro temporal de Consultas
+## AP-013 · Validar la salida extractiva y revisar el prefiltro temporal de Consultas
+- Nota del Lead: llegó numerada como AP-012, número que ya usaba frictionspp-svg; se renumera a AP-013.
 - Autor / fecha: LowCrime (Codex), 2026-10-07.
-- Estado: ABIERTA para el Lead; diagnóstico B-12, sin cambiar su módulo.
+- Estado: **ACEPTADA** (DL-027).
 - Problema: RT01–04 reproducen instrucciones de titulares en la respuesta de service.ask(template). El validador posterior sí las rechaza. RT05–06 y RT09–12 no se abstienen ante premisas numéricas o períodos ausentes/actuales; devuelven filas históricas, etiquetadas con año. No se afirma que hayan inventado esas cifras.
 - Cambio propuesto: aplicar check_sentence también en _extractive, con abstención explícita si no sobrevive contenido; revisar consultas de actualidad y condición de año pedido (el año de publicación de otra unidad puede permitir una fila histórica). Acordar política para corregir premisas frente a abstenerse.
 - Por qué mejora: respuesta extractiva y LLM comparten controles; errores y limitaciones visibles.
@@ -167,4 +168,5 @@
 - Adaptador local: scayl/eval/redteam.py valida después y registra el original intacto; no altera servicio, umbrales ni prompts.
 - Riesgos: más abstenciones; medir también los cuatro controles contestables. El set es desarrollo sintético de IA, no gold humano ni prueba viva.
 - Esfuerzo estimado: un bloque de revisión + regresiones.
-- Recomendación: ACCEPT. Decisión pendiente.
+- Recomendación: ACCEPT.
+- Decisión (Lead/humano + fecha): **ACEPTADA** por el Lead, 2026-10-07 (DL-027). Política: ante una premisa con una cifra ausente, el sistema **se abstiene**; no corrige con otra cifra sin que se le pregunte por ella.
