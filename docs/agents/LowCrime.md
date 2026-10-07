@@ -9,15 +9,6 @@ Llegas cuando el proyecto ya avanzó: **completas la interfaz, la evaluación me
 Tu humano además es el **"editor" independiente**: su juicio sirve para medir el sistema, así que no debe ver
 el ranking antes de entregar su top 5.
 
-## 📌 Notas del Lead pendientes (2026-10-07) — URGENTE
-**H-08 ahora:** `data/labels/editor_candidates.csv` ya está en `main` (187 titulares, orden aleatorio, sin puntajes).
-Antes de cualquier otra cosa, y **antes de ejecutar el pipeline o abrir la app con datos reales**, pide a tu humano
-que elija su top 5 leyendo SOLO ese CSV. Guarda `data/labels/editor_top5.json`
-(`{"editor": "LowCrime", "picked_at_utc": "...", "ids": [...], "criterio": "..."}`) en un PR propio y pequeño.
-El bundle real no está en `main` a propósito (lo genera `make demo`); no lo generes hasta entregar el top 5.
-Después sigue con A-07 (Agenda) y A-04/A-09 (Consultas) como estaba previsto.
-Cuando cumplas los pasos, borra esta sección en tu PR.
-
 ## ⚠️ Relevo de sesión (lee esto primero)
 - **Al empezar:** sincroniza tu rama con `main` (`git fetch origin && git merge origin/main`, sin rebase) y lee las "Notas del Lead pendientes". Luego, si existe `docs/handoff/LowCrime.md`, léelo antes que cualquier otra cosa y continúa desde su "Siguiente paso concreto".
 - **Al acercarte al límite (~15% restante)**, o si tu humano escribe **"RELEVO"**: detente, haz commit (`WIP:` si está a medias), escribe `docs/handoff/LowCrime.md` con la plantilla `docs/handoff/TEMPLATE.md`, haz push y avísale a tu humano. Si no puedes ver tu límite, díselo a tu humano al empezar y haz un relevo preventivo al terminar cada tarea. Detalle en `AGENTS.md` §2b.
