@@ -1,0 +1,2 @@
+# These measured files carry byte-level provenance hashes.
+b05-*.json -text
