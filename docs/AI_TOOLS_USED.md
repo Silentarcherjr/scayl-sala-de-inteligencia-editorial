@@ -28,6 +28,7 @@
 | 2026-10-07 05:48 UTC | Codex / modelos locales | frictionspp-svg | Backlog 2 cache publica A-06 | Backlog final del Lead | 187 noticias sin descripcion,165eventos,30entradas auditadas,15/15cache; stage preparado sin publicar;174pytest verdes; aviso @LowCrime en PR. | Revisión del Lead pendiente |
 | 2026-10-07 05:51 UTC | Codex / modelos locales | frictionspp-svg | B-11 CI | Backlog final del Lead | 172pytest verdes,ruff tests verde; workflow Python3.12 con pytest y ruff check .;36avisos globales fuera de tests reportados,sin ocultarlos ni modificar modulos Lead. | Revisión del Lead pendiente |
 | 2026-10-07 05:56 UTC | Codex / modelos locales | frictionspp-svg | B-07 pendiente humano | Backlog final del Lead | 100temas propuestos y32titulares para488pares;0confirmados;metricas no medido;174pytest;solicitud enviada,seguirbenchmark. | Revisión del Lead pendiente |
+| 2026-10-07 18:57 UTC | Codex / modelos locales | frictionspp-svg | B-10 | Backlog final del Lead | Benchmark GPU top15: 8b 14643/17600 ms, citas49/49, fallback0/15; 4b 9050/12898.2 ms, citas25/25, EMPTY_BRIEF3/15. Recomiendo8b. 172 pruebas verdes; reportes reales guardados. | Revisión del Lead pendiente |
 
 ## Herramientas de IA dentro del producto (no son de desarrollo)
 
