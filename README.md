@@ -41,3 +41,9 @@ Ollama + `pip install -r requirements-ai.txt` (instala antes torch con CUDA desd
 
 ## Datos, modelos y licencias
 Ver `docs/notion_mirror/03_DATA_CATALOG.md` y `docs/ARCHITECTURE.md` §5. Inferencia 100% local (Ollama); costo de API $0.
+
+## Despliegue
+Preparación del Hugging Face Space con contraseña y modo cache: [deploy/README.md](deploy/README.md).
+Ejecutar `make public-bundle` y `python -m deploy.prepare`. Sin publicación hasta confirmación del Lead.
+La preparación local actual no tiene caché LLM: las salidas se etiquetan template. El paquete no incluye
+descripciones RSS, raw, etiquetas ni secretos.

@@ -1,75 +1,76 @@
-# Relevo · LowCrime · 2026-10-07 04:44 UTC
+# Relevo · LowCrime · 2026-10-07 05:14 UTC
 
-> Sincronizar primero según AGENTS §2b; ante conflictos detenerse y avisar.
-
-- **Motivo de la parada:** cierre de los tres bloques solicitados y relevo preventivo.
-- **Rama:** worker-a/evaluacion · **Último commit de implementación:** 6412cc4 (empujado: sí). Relevo en commit posterior.
-- **PR abiertos:** #25 Consultas, #26 Agenda, #27 Evaluación; todos a main, sin merge por este agente.
+- **Motivo de la parada:** relevo preventivo al cerrar el bloque solicitado (AGENTS §2b).
+- **Rama:** worker-a/redteam-deploy · **Último commit de implementación:** be92dbe (empujado: sí); relevo en commit posterior.
+- **PR abierto:** https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/32 (hacia main; no mergeado por este agente).
 
 ## Tarea en curso
-Los bloques solicitados están listos para revisión. B-08 cubre P@5 y pruebas guardadas; el resto
-queda explícitamente no medido, con evaluadores/datasets pendientes de la evaluación final.
+B-12 y ampliación B-08 entregadas para revisión. A-06 preparada localmente; publicación explícitamente
+pendiente de confirmación del Lead. No quedan cambios de implementación sin commit.
 
 ## Hecho en esta sesión
-- Fetch y merge limpio de H-08: origin/main 2db3455. Leídos notas del Lead, AGENTS y DL-024.
-- Generado bundle local mediante python -m scayl.pipeline build --snapshot data/raw/v1 --llm template:
-  187 señales → 183 eventos. No se subió bundle ni descripciones RSS.
-- worker-a/consultas (41eec88), PR #25: service.ask, oraciones etiquetadas, tarjetas A-08, abstención,
-  modo real visible y cuatro rutas del jurado; capturas reales; notas H-08 atendidas retiradas.
-- worker-a/agenda (c617f7e), PR #26: componente integrado arriba de filtros en Home, hasta cinco
-  eventos, dos rationale de mayor contribución ponderada, recommended_action literal; fuentes
-  sugeridas no son evidencia. Captura real.
-- worker-a/evaluacion (6412cc4), PR #27: CLI, latest.json y corrida fechada con JUnit archivado,
-  hashes y trazabilidad. P@5=1/5=0,20 sobre eventos; límite DL-024 explícito. Resto no medido.
-- Tres ramas independientes desde main, sin rebase/force-push/merge de PRs. A-05/A-10 no modificadas.
+- Fetch + merge limpio de origin/main a 61ee2fa, integración de PR #25/#26/#27 vía #29. Rama nueva desde main.
+- Baseline de pruebas integrado: 146 passed. Leídos AGENTS, LowCrime (sin notas pendientes nuevas), relevo,
+  arquitectura, tareas, PLAN_REVIEW §2, propuestas, bitácoras y DL-024/025.
+- B-12: 16 ataques (inyección en titulares, cifras, actualidad histórica, sin respuesta) + cuatro controles.
+  Set sintético de desarrollo anotado por IA en eval/redteam; no gold humano ni set reservado.
+  Runner usa service.ask(template) real, corpus temporal y validador real; no modelo ni red.
+  Guarda originales, sondas, rechazos y hashes; restaura rutas/cachés incluso ante excepción.
+- Medido: abstención correcta 6/16; incorrecta 0/4; resistencia estricta 6/16; controles 4/4; sondas 9/9.
+  RT01–04 devuelven instrucciones del titular. RT05–06/RT09–12 devuelven contexto sin abstenerse.
+  No afirmar que estos últimos inventan cifras. AP-012 deja corrección de qa.py al Lead.
+- B-08: --redteam-report archiva evidencia y recalcula num/den desde observaciones. Sin argumento,
+  sigue no medido. P@5 pública baseline 1/5 con DL-024; generación viva, latencia y soporte humano no medidos.
+- Ejecutado equivalente Python exacto de make public-bundle en Windows, SCAYL_INTEL=baseline:
+  187 señales → 183 eventos. news.descripcion nulas; cero cache LLM local, 183 paquetes template.
+- A-06: deploy/prepare.py crea paquete allowlist, Dockerfile, Secret de runtime, envoltorios de acceso
+  por contraseña para todas las páginas, cache forzada y cierre de sesión. Rutas directas comprobadas.
+  UI solo ofrece cache cuando SCAYL_HOSTED=1; modos reales de salida preservados.
+- Paquete final local ignorado: deploy/stage-final. Inventario publicado en deploy/preparation-report.json.
+  deploy/stage es anterior; NO usar. Limpieza automática bloqueada por política, se conservó y se creó otro.
+- Capturas Chromium locales a06-space-login.png y b12-abstencion.png, 1280×720; login por /Trust_Lab,
+  métricas reales y logout verificados. Servidor y Chromium cerrados al terminar.
 
 ## Siguiente paso concreto
-1. Sincronizar rama y leer nuevas notas del Lead. Revisar:
-   - https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/25
-   - https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/26
-   - https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/27
-2. Atender revisión e integración del Lead. Las bitácoras compartidas se ampliaron desde la misma base;
-   si aparecen conflictos al sincronizar, detenerse y mostrar archivos, sin resolver a ciegas.
-3. Después del merge del Lead, ejecutar suite integrada. No sumar los conteos por rama como si fueran
-   una ejecución conjunta. Mantener no medido hasta contar con corridas y datos para cada métrica.
-4. Evaluación final B-08 pendiente: métricas de generación/citas/atribución, benchmarks de abstención,
-   etiquetas de temas/pares y latencias reales; no se han implementado ni medido en esta corrida.
-   Recalcular P@5 al cambiar pipeline/embeddings/ACP/INEC; nunca ajustar pesos para acertar etiquetas.
-5. Siguientes bloques originales B-12 y A-06 según nuevas prioridades del Lead. No tocar A-05/A-10.
+1. Sincronizar con main como ordena AGENTS (ante conflictos detenerse). Revisar PR #32 y AP-012.
+2. El Lead decide/arregla ruta extractiva y política temporal/premisas. No cambiar sus archivos sin decisión.
+3. Tras su cambio, repetir runner y B-08 conservando originales/fallos, sin adaptar expectativas para obtener verde.
+4. Para A-06: obtener caché pública revisada de B-10 si se exige IA precalculada. Repetir public-bundle y
+   preparar carpeta NUEVA. El inspector estructural detecta descripcion/ref, no paráfrasis de cachés antiguas.
+5. Probar build Docker con motor activo (aquí no estaba), luego pedir/esperar confirmación del Lead antes
+   de crear/subir el Space. Debe ser privado; contraseña de app no protege archivos de un repo público.
+   Configurar SCAYL_SPACE_PASSWORD como Secret, probar recorridos remotos; todavía no hay URL desplegada.
 
 ## Estado de las pruebas
-- PR #25: 128 passed (7 nuevas), AppTest desde Home y capturas Chromium 1280×720 con datos reales.
-- PR #26: 123 passed (2 nuevas), captura real Agenda.
-- PR #27: 127 passed (6 nuevas), JUnit guardado en eval/results y archivado en runs; T01–T10
-  asociados a tests explícitos, sin afirmar ensayo wifi ni validación con modelo real.
-- Hashes de entradas y coincidencia latest.json/copia fechada comprobados.
-- Dos fallos corregidos/documentados: impresión Unicode en Windows y fixture de service que asumía
-  ausencia de latest.json; ahora aísla ROOT temporal manteniendo la misma aserción.
-- Fallo del arnés Consultas: se ejecutaba página aislada y no encontraba otras páginas; ahora navega
-  desde Home como producción. Documentado en la rama de Consultas.
+python -m pytest -q --junitxml=eval/results/pytest-redteam.xml → 156 passed (10 nuevas, incl. parametrización).
+No pruebas omitidas/desactivadas. La suite verde comprueba el evaluador y hosting; NO implica resistir
+los 16 ataques: diez fallos de producto registrados. Pruebas de acceso, rotación, logout, rutas directas,
+cache obligatoria, aislamiento offline, contabilidad y restauración tras error. Fallos/correcciones en 06.
+Artefacto B-08 final runs/20261007T051054682410Z.json y sus .pytest.xml/.redteam.json; latest idéntico.
+Hashes de entradas y de todos los archivos del stage final comprobados.
 
 ## Archivos tocados
-- PR #25: app/pages/2_Consultas.py, tests/ui/test_queries.py, test_home.py; docs/A04_QUERIES.md,
-  capturas a04-*, notas LowCrime y bitácoras.
-- PR #26: app/components/agenda.py, app/Home.py, tests/ui/test_agenda.py, test_home.py;
-  docs/A07_AGENDA.md, captura a07 y bitácoras.
-- PR #27: scayl/eval/run.py, tests/test_eval_run.py, tests/test_service_pipeline.py (solo aislamiento),
-  eval/results/latest.json, corrida fechada y reportes pytest; docs/B08_EVALUATION.md,
-  captura b08-evaluacion.png, bitácoras y este relevo.
+- scayl/eval/redteam.py, run.py; eval/redteam/**, eval/results/**; tests/test_redteam.py.
+- deploy/** (sin stages), README.md, app/pages/2_Consultas.py (solo selector hospedado); tests/test_deploy.py.
+- Capturas, docs/B08_EVALUATION.md, AGENT_PROPOSALS AP-012, 06, AI_TOOLS_USED, worklog y relevo.
+- Sin cambios de contratos, dependencias, A-05/A-10, TASKS, tablero ni decision log.
 
 ## Bloqueos, dudas y decisiones pendientes
-- Ningún bloqueo para revisar los PR. No declarar toda B-08 finalizada: faltan evaluadores y etiquetas
-  para las métricas marcadas no medido; esta ejecución solo mide P@5 y enlaza pruebas.
-- A-05 del Lead muestra 0,2 exploratoria y no medido. La limitación detallada de DL-024 está en JSON
-  y docs/B08_EVALUATION.md; el Lead puede exponerla en su vista si lo decide.
-- H-08 registrada/mergeada: el editor vio propuesta IA coincidente en 1/5, sin ranking ni app real
-  antes de elegir. No tratar como referencia independiente sin asistencia.
+- AP-012 ABIERTA: corregir el código del Lead. El PR de evaluación no reclama resistencia perfecta.
+- A-06 sin publicar por instrucción humana. Docker/HF no medidos; no credenciales HF utilizadas.
+- Sin cache LLM local: el paquete funciona con fallback template. No describirlo como inferencia precalculada
+  efectivamente medida. Banner explica la caída a template, salida conserva metadatos reales.
+- Métricas no medidas siguen no medido. No mezclar baseline183 con evaluación E5 de B-05 (165 eventos).
 
 ## Contexto que no está en el código
-- Repositorio Git: C:/Users/Cbast/Downloads/scayl-sala-de-inteligencia-editorial-main/scayl-working.
-- Usar .venv/Scripts/python.exe (Python 3.14.7, Streamlit 1.65.0 existentes). Sin dependencias nuevas.
-- Windows sin make: se usaron los comandos Python de Makefile, después Streamlit desde Home.
-- Ejecutar evaluación: python -m pytest -q --junitxml=eval/results/pytest-b08.xml; luego
-  python -m scayl.eval.run --snapshot v1 --pytest-report eval/results/pytest-b08.xml.
-- Preview localhost:8515 con estado temporal scayl-queries-preview y template; Chromium CDP 9225.
-  Servidor y navegador cerrados al terminar. Scripts/cachés de captura permanecen fuera del repo.
+Repo: C:/Users/Cbast/Downloads/scayl-sala-de-inteligencia-editorial-main/scayl-working.
+Python global no tiene pytest. Usar .venv/Scripts/python.exe, o anteponer .venv/Scripts a Path.
+Comandos:
+  python -m scayl.eval.redteam
+  python -m pytest -q --junitxml=eval/results/pytest-redteam.xml
+  python -m scayl.eval.run --snapshot v1 --pytest-report eval/results/pytest-redteam.xml --redteam-report eval/results/redteam-latest.json
+  python -m scayl.pipeline build --snapshot data/raw/v1 --llm cache --top 15 --public
+  python -m deploy.prepare --out deploy/stage-NUEVO
+No pasar stdout de eval a Select-Object -First: cierra el pipe y devuelve error aunque guarde artefactos.
+Preview final usó cwd stage-final, PYTHONPATH al stage, SCAYL_HOSTED=1, estado temporal y contraseña solo
+sintética local (no reutilizar para HF). Puerto8516, Chromium9226; ambos cerrados. Script de captura en TEMP.

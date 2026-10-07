@@ -1,4 +1,5 @@
 """A-04/A-09: grounded questions and a guided jury walkthrough."""
+import os
 from zoneinfo import ZoneInfo
 
 import streamlit as st
@@ -112,7 +113,8 @@ def main() -> None:
                 st.session_state[f"{key}:question"] = question
     with st.form("question-form"):
         question = st.text_input("Pregunta en español", key=f"{key}:question")
-        mode = st.selectbox("Modo solicitado", ["cache", "template", "live"],
+        mode = st.selectbox("Modo solicitado", ["cache"] if os.environ.get("SCAYL_HOSTED") == "1"
+                            else ["cache", "template", "live"],
                             help="Live usa Ollama local. El resultado indica el modo realmente utilizado.")
         submit = st.form_submit_button("Consultar")
     if submit:

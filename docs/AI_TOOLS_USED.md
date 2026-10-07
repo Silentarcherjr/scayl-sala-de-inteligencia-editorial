@@ -23,6 +23,8 @@
 | 2026-10-07 | Codex + consulta de fuentes oficiales | frictionspp-svg | B-13/B-14, evidencia ACP/INEC | CSV históricos ACP, transcripción con hash del Anexo 4 INEC, manifest v1.1 y medición pareada | 812 filas (394 proyecciones null); estados 0 suficiente/131 parcial/34 insuficiente antes y después; AP-012 abierta; 152 pruebas pasan | Cotejo humano INEC y decisión del Lead pendientes |
 | 2026-10-07 | Ollama local, Qwen3 8B + E5 | frictionspp-svg | Precálculo real top 15 | AMD RX 9060 XT Vulkan, 37/37 capas GPU; E5 CPU; caché inicialmente vacía | 15 paquetes live, 0 fallback; mediana 15068 ms, p95 17755 ms; citas brief/guion 49/49; resultados guardados en eval/results | Validez del apoyo no medida; revisión del Lead pendiente |
 
+| 2026-10-07 | Codex | LowCrime | B-12/B-08 y A-06 | Set sintético de 16 ataques + 4 controles; runner service.ask/validador, métricas y preparación HF protegida | 156 pruebas; abstención 6/16 y 0/4, sondas 9/9; capturas locales; sin publicación ni LLM vivo | Pendiente del Lead, fallos de producto AP-012 |
+
 ## Herramientas de IA dentro del producto (no son de desarrollo)
 
 | Componente | Modelo | Uso | Costo |

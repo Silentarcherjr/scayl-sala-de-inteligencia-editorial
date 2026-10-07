@@ -74,12 +74,26 @@ def pytest_results(path: Path | None) -> dict:
     return results
 
 
-def build_report(bundle: UIBundle, selection: dict, pytest_report: Path | None = None) -> dict:
+def build_report(bundle: UIBundle, selection: dict, pytest_report: Path | None = None,
+                 redteam_report: Path | None = None) -> dict:
     missing = "No hay conjunto etiquetado y ejecución de benchmark guardada para esta métrica."
     metrics = {key: unmeasured(missing) for key in (
         "citation_coverage", "support_validity", "abstention_correct", "abstention_false",
         "topics_macro_f1", "clustering", "tokens", "attribution_preservation")}
     metrics["precision_at_5"] = precision_at_5(bundle, selection)
+    redteam = None
+    if redteam_report:
+        from scayl.eval.redteam import metrics as redteam_metrics
+
+        redteam = json.loads(redteam_report.read_text(encoding="utf-8"))
+        rows = redteam["cases"]
+        if (redteam.get("schema_version") != 1 or redteam.get("mode") != "template" or not rows
+                or len({r["id"] for r in rows}) != len(rows)
+                or any(type(r["expected_abstain"]) is not bool
+                       or type(r["answer"]["abstained"]) is not bool
+                       or r["answer"]["generated_by"]["mode"] != "template" for r in rows)):
+            raise ValueError("Reporte red-team inválido o fuera del modo evaluado")
+        metrics.update(redteam_metrics(rows))  # recompute num/den from observations, not stored totals
     metrics["latency_ms"] = {key: {"status": "no medido", "median": None, "p95": None, "n": None}
                              for key in ("qa", "package")}
     metrics["api_cost_usd"] = 0.0
@@ -90,14 +104,18 @@ def build_report(bundle: UIBundle, selection: dict, pytest_report: Path | None =
             "generation_modes": sorted({p.generated_by.mode for p in bundle.packages}),
             "metrics": metrics, "tests": pytest_results(pytest_report),
             "cost_scope": "Esta evaluación lee artefactos locales, sin llamadas de API; no mide hardware/electricidad.",
-            "limitations": [LIMITATION, "Solo P@5 y las pruebas con reporte adjunto están medidas en esta ejecución. "
-                             "Métricas de generación, benchmark, etiquetas y latencia pendientes de sus ejecuciones."]}
+            "redteam": {"evidence": str(redteam_report), "run_at": redteam["run_at"],
+                        "failed_ids": redteam["failed_ids"], "scope": redteam["scope"]} if redteam else None,
+            "limitations": [LIMITATION, "Solo se miden las métricas con ejecución adjunta; "
+                             "generación viva, etiquetas humanas y latencia siguen pendientes."]
+                            + (redteam["limitations"] if redteam else [])}
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--snapshot", default="v1")
     parser.add_argument("--pytest-report", type=Path)
+    parser.add_argument("--redteam-report", type=Path, help="Corrida guardada por scayl.eval.redteam")
     args = parser.parse_args()
     bundle_path = ROOT / "data/processed" / args.snapshot / "bundle.json"
     labels_path = ROOT / "data/labels/editor_top5.json"
@@ -111,7 +129,13 @@ def main() -> None:
     if args.pytest_report:
         pytest_report = saved.with_suffix(".pytest.xml")
         shutil.copyfile(args.pytest_report, pytest_report)
-    report = build_report(bundle, selection, pytest_report)
+    redteam_report = None
+    if args.redteam_report:
+        redteam_report = saved.with_suffix(".redteam.json")
+        shutil.copyfile(args.redteam_report, redteam_report)
+    report = build_report(bundle, selection, pytest_report, redteam_report)
+    if redteam_report:
+        report["redteam"]["evidence"] = redteam_report.relative_to(ROOT).as_posix()
     if pytest_report:
         for test in report["tests"].values():
             if test.get("cases"):
@@ -119,6 +143,8 @@ def main() -> None:
     paths = [bundle_path, labels_path]
     if pytest_report:
         paths.append(pytest_report)
+    if redteam_report:
+        paths.append(redteam_report)
     report["inputs"] = [{"path": str(path.relative_to(ROOT) if path.is_absolute() else path),
                          "sha256": hashlib.sha256(path.read_bytes()).hexdigest()} for path in paths]
     report["saved_run"] = str(saved.relative_to(ROOT))
