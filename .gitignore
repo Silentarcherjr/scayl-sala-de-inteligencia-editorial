@@ -11,3 +11,5 @@ data/state/
 models/
 *.gguf
 .DS_Store
+data/raw/v1/responses/gkg/*.zip
+data/raw/v1/responses/tvn-current/rss.xml
