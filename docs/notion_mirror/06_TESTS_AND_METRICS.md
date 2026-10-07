@@ -73,3 +73,5 @@ Se pidió ejecución a LowCrime con frictionspp-svg. **No medido: n=0 pares comp
 No se afirma ahorro de tiempo. eval/results/time-study.json conserva tiempos/ratios nulos; tras recibir
 las seis duraciones y resultados, ejecutar scayl.eval.time_study y registrar aquí diferencia y n=3 como
 exploratorio. No sustituir el cronómetro humano por estimaciones del agente.
+
+Capturas finales: el primer arnés buscaba h2 Respuesta pero la UI usa h3 Resultado, dejando la abstención fuera del encuadre; corregido el selector y recapturado. Esperar ausencia de todo botón Stop también incluía nodos ocultos; ajustado el arnés sin modificar la UI ni los PNG. Evidencia: docs/screenshots/final/09-consultas-abstencion.png.

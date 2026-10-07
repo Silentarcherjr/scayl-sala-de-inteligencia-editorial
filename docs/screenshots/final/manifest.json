@@ -1,0 +1,87 @@
+{
+  "captured_at": "2026-10-07T18:09:57.006330+00:00",
+  "source_commit": "dc1a990",
+  "snapshot": "v1",
+  "bundle_sha256": "ad0f4cb79a27e0c6b2351161f24bf66235ea06c8dfaa47e295b9556bf02a5e4c",
+  "evaluation_sha256": "1cf2889a3e6162f52aff8987c01a7f29adad51d9f42ce68fd80425f562d86622",
+  "signals": 187,
+  "events": 183,
+  "intelligence": "baseline",
+  "generation": "template",
+  "ui": "main without proposed Trust Lab patch",
+  "event_id": "EVT-0111",
+  "no_rss_descriptions": true,
+  "notes": [
+    "Screenshots capture main, not unpublished PR41 metrics or AP014 UI proposal. Refresh Trust Lab after their integration.",
+    "Local browser screenshots, not HF deployment or a recorded offline video.",
+    "No human review or weight change was submitted; temporary review state."
+  ],
+  "files": [
+    {
+      "path": "01-sala.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "1e22c5f9a953821e5ceda876491bb4639643f327a7503bf8a672741b2471f226"
+    },
+    {
+      "path": "02-agenda.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "d24c7939c2d3bd74c841ce19924fc5148dfd0074fa5066be39e81eeccef3571e"
+    },
+    {
+      "path": "03-ficha-evento.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "0629a92af13afcb3ad80195ab3e13641ba87fc34c4e6a05d8606b99e07e7fa17"
+    },
+    {
+      "path": "04-ficha-fuentes.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "f0bca20320bfd1a777ed401bcd1b0640b3df3c6d9b472db39ad5ffb32bd0ca1e"
+    },
+    {
+      "path": "05-ficha-evidencia.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "b76ed7c3168a7380465812c8ed14d14c7921fc12e72b4cf560061416a1be14bb"
+    },
+    {
+      "path": "06-ficha-vacios.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "a2d3aa55d613e0bbe08e9a02cfabee91109c636a95c6b070baa9dc034b9994ec"
+    },
+    {
+      "path": "07-ficha-producir.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "939034509ecfb0342af1338475749b145da8cf7990000f6ac251f8b3bcc19a6f"
+    },
+    {
+      "path": "08-ficha-revision.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "ff64ded9d74855d1ab707839151ae9570cc2db05c6d17541f5acf92a108320be"
+    },
+    {
+      "path": "09-consultas-abstencion.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "09dce115dca99c772dc9261e5defb555777b7e47508363fbf142a07e959cd41f"
+    },
+    {
+      "path": "10-trust-lab.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "d11850c42261ef8e355820de323469b3dd32fd7789552ea7c14b53a28b3f82c2"
+    },
+    {
+      "path": "11-simulador.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "e8ab01ac81b806c6f8876d10d50e491e83899410a1180e62b6d31974019e71d9"
+    }
+  ]
+}

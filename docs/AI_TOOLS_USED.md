@@ -43,3 +43,4 @@ Codex · LowCrime · 2026-10-07 · AP-014: revisión de Trust Lab y parche propu
 Codex · LowCrime · 2026-10-07 · B-09: exportación de muestra y cálculo verificable; cero etiquetas humanas inventadas. Tres regresiones; revisión humana pendiente.
 Codex · LowCrime · 2026-10-07 · A-06: preparación actualizada y auditoría local de inclusión de archivos/descripciones; cache pública pendiente, contenedor/HF no medidos, sin publicar.
 Codex · LowCrime · 2026-10-07 · H-06: protocolo, hoja de tiempos y evaluador. No inventó duraciones ni ahorro; medición humana pendiente. Pruebas de ausencias y desaceleración.
+Codex · LowCrime · 2026-10-07 · Capturas finales: automatizó navegación/captura Chromium, inspección visual y hashes; imágenes reales sin generación ni edición, snapshot público sin RSS visible.
