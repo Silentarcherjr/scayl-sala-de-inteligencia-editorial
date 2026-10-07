@@ -27,3 +27,4 @@
 2026-10-07 05:14 UTC · relevo: ver docs/handoff/LowCrime.md. PR #32 abierto a main, be92dbe subido; HF sin publicar. Siguiente: revisión AP-012 y preparación de caché pública/build Docker antes de confirmación de publicación.
 
 2026-10-07 17:46 UTC · Backlog1 B-08 · Rama worker-a/b08-precompute desde dc1a990. Importación automática/seleccionable de precompute medido con archivo original, copia archivada, SHA, hardware y alcance por métrica. Citas49/49; paquetes n15, mediana15068ms,p9517755ms. QA/validez humana siguen no medido. Nueva corrida red-team16/16, controles4/4; bundle público local baseline183 con ACP/INEC actualizados. Sin processed en Git.
+2026-10-07 17:48 UTC · Backlog2 · AP-014 propone red-team, DL-024 y procedencia de latencia/citas en A-05; parche adjunto sin aplicar al módulo del Lead. PR #41 anterior abierto, sin esperar merge. Validación estática del parche; implementación/UI pendiente de decisión.

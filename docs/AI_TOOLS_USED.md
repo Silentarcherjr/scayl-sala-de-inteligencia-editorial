@@ -39,3 +39,4 @@
 ### Uso adicional · 2026-10-07 · LowCrime
 Codex: B-08 importación de mediciones existentes, trazabilidad y pruebas de métricas vacías/inválidas.
 No generó etiquetas humanas ni tiempos; conserva fuente, n, hardware y no medido. Revisión Lead pendiente.
+Codex · LowCrime · 2026-10-07 · AP-014: revisión de Trust Lab y parche propuesto de métricas/limitaciones; no aplicado, pendiente del Lead.
