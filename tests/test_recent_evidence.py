@@ -33,7 +33,7 @@ def test_without_matching_figure_acp_is_context_only():
     e = build_event("EVT-0101", [item], Topic.LOGISTICA_CANAL, 0.9, ACP, [], CUT)
     assert e.claims[0].status == ClaimStatus.SOLO_REPORTADA  # headline stays a media claim
     ctx = [c for c in e.claims if c.status == ClaimStatus.SUSTENTADA]
-    assert ctx and "2026-09-30" in ctx[0].statement  # latest observation, with its date
+    assert ctx and "2026-09-28" in ctx[0].statement  # latest observation AT THE EVENT DATE, with its date
     assert e.evidence_status == EvidenceStatus.PARCIAL
     assert all(not r.evidence_id.endswith("2026-10-15") or "proyección" in (r.excerpt or "")
                for r in e.official_evidence)
@@ -55,3 +55,31 @@ def test_qa_answers_recent_series_with_period():
                  indicators=ACP + INEC)
     a = answer("¿Cuál fue el nivel del lago Gatún el 2026-09-28?", b, LLM(mode="template"))
     assert not a.abstained and a.citations[0].evidence_id.startswith("ind:acp:")
+
+
+def test_context_never_comes_from_after_the_event():
+    """Real run: a July headline got the 30 Sep Gatún level as context."""
+    obs = [recent("ACP.GATUN.NIVEL", "2026-07-15", 84.1, "acp", "pies")] + ACP
+    item = news("c3", "El Canal de Panamá aplica nueva reducción del calado por El Niño",
+                pub=datetime(2026, 7, 17, 18, tzinfo=UTC))
+    e = build_event("EVT-0103", [item], Topic.LOGISTICA_CANAL, 0.9, obs, [], CUT)
+    ctx = [c for c in e.claims if c.status == ClaimStatus.SUSTENTADA]
+    assert ctx and "2026-07-15" in ctx[0].statement
+    assert not any("2026-09" in r.evidence_id for r in e.official_evidence)
+
+
+def test_real_case_generic_restriction_headline_gets_no_canal_context():
+    """AP-012: real headline about a district's night-time restrictions got Gatún context."""
+    item = news("r1", "Populoso distrito de Panamá completa una semana sin homicidios tras imponer "
+                      "restricciones nocturnas", pub=datetime(2026, 9, 29, tzinfo=UTC))
+    e = build_event("EVT-0104", [item], Topic.OTRO, None, ACP, [], CUT)
+    assert not any(r.evidence_id.startswith("ind:acp:") for r in e.official_evidence)
+
+
+def test_ship_draught_in_feet_never_confirms_lake_level():
+    """AP-012: same unit (feet), different measure. A numerically equal draught must not confirm Gatún."""
+    item = news("d1", "Canal de Panamá fija calado de 86,4 pies para buques en el lago Gatún",
+                pub=datetime(2026, 9, 29, 9, tzinfo=UTC))
+    e = build_event("EVT-0105", [item], Topic.LOGISTICA_CANAL, 0.9, ACP, [], CUT)
+    assert e.claims[0].status == ClaimStatus.SOLO_REPORTADA
+    assert e.evidence_status != EvidenceStatus.SUFICIENTE_PARA_BORRADOR

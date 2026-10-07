@@ -34,20 +34,30 @@ class Series:
     unit_pattern: str  # how the figure appears in a headline
     tolerance: float
     max_gap: timedelta  # publication must be within this gap AFTER the period ends
+    measure: str  # the headline must name THIS measure for its figure to confirm (AP-012)
+    not_before_figure: str | None = None  # words right before the figure that denote another measure
 
+
+# Generic words ("restricción", "agua", "calado") only count next to the Canal (AP-012: a real headline about
+# night-time restrictions on a district got Gatún context).
+_CANAL_CONTEXT = (r"gat[uú]n|nivel del lago|"
+                  r"(?:sequ[ií]a|restricci[oó]n|calado|agua|el ni[nñ]o)\b.{0,80}\bcanal\b|"
+                  r"\bcanal\b.{0,80}\b(?:sequ[ií]a|restricci[oó]n|calado|agua|el ni[nñ]o)")
 
 SERIES = {
-    "ACP.GATUN.NIVEL": Series("ACP.GATUN.NIVEL", "ACP", "nivel del lago Gatún (observado)",
-                              r"gat[uú]n|nivel del lago|calado|sequ[ií]a|restricci[oó]n|agua (del|para el) canal",
-                              r"(\d+(?:[.,]\d+)?)\s*(?:pies|ft)\b", 0.1, timedelta(days=3)),
+    "ACP.GATUN.NIVEL": Series("ACP.GATUN.NIVEL", "ACP", "nivel del lago Gatún (observado)", _CANAL_CONTEXT,
+                              r"(\d+(?:[.,]\d+)?)\s*(?:pies|ft)\b", 0.1, timedelta(days=3),
+                              measure=r"gat[uú]n|nivel del lago", not_before_figure=r"calado|eslora|manga"),
     "INEC.IPC.VAR_MENSUAL": Series("INEC.IPC.VAR_MENSUAL", "INEC", "variación mensual del IPC urbano nacional",
                                    r"inflaci[oó]n|\bipc\b|precios al consumidor|costo de vida",
-                                   r"(\d+(?:[.,]\d+)?)\s*%", 0.05, timedelta(days=50)),
+                                   r"(\d+(?:[.,]\d+)?)\s*%", 0.05, timedelta(days=50),
+                                   measure=r"inflaci[oó]n|\bipc\b|precios al consumidor"),
     "INEC.IPC.VAR_INTERANUAL": Series("INEC.IPC.VAR_INTERANUAL", "INEC", "variación interanual del IPC urbano nacional",
                                       r"inflaci[oó]n|\bipc\b|precios al consumidor|costo de vida",
-                                      r"(\d+(?:[.,]\d+)?)\s*%", 0.05, timedelta(days=50)),
+                                      r"(\d+(?:[.,]\d+)?)\s*%", 0.05, timedelta(days=50),
+                                      measure=r"inflaci[oó]n|\bipc\b|precios al consumidor"),
 }
-PROJECTION_KEYWORDS = r"gat[uú]n|nivel del lago|sequ[ií]a|restricci[oó]n"
+PROJECTION_KEYWORDS = _CANAL_CONTEXT
 
 
 def period_end(o: IndicatorObservation) -> datetime:
@@ -89,6 +99,8 @@ def link_recent(event_id: str, items: list[NewsItem], observations: list[Indicat
                 cutoff: datetime) -> RecentLink:
     link = RecentLink()
     text = " ".join(i.titulo for i in items)
+    dates = [d for d in (i.fecha_publicacion or i.fecha_deteccion for i in items) if d is not None]
+    as_of = min(max(dates), cutoff) if dates else cutoff  # context never comes from after the event
     for sid, s in SERIES.items():
         if not re.search(s.keywords, text, re.IGNORECASE):
             continue
@@ -100,7 +112,12 @@ def link_recent(event_id: str, items: list[NewsItem], observations: list[Indicat
             when = item.fecha_publicacion or item.fecha_deteccion
             if when is None:
                 continue
+            if not re.search(s.measure, item.titulo, re.IGNORECASE):
+                continue  # the figure may belong to another measure (e.g. ship draught in feet)
             for m in re.finditer(s.unit_pattern, item.titulo, re.IGNORECASE):
+                before = item.titulo[max(0, m.start() - 30):m.start()]
+                if s.not_before_figure and re.search(s.not_before_figure, before, re.IGNORECASE):
+                    continue
                 value = float(m.group(1).replace(",", "."))
                 candidates = [o for o in rows if timedelta(days=-1) <= when - period_end(o) <= s.max_gap
                               and abs(abs(o.valor) - value) <= s.tolerance]
@@ -116,8 +133,11 @@ def link_recent(event_id: str, items: list[NewsItem], observations: list[Indicat
                     reason=(f"La cifra del titular ({value}) coincide con {ref.evidence_id} y la publicación es "
                             f"posterior al período. Verificar que se trate de la misma medida."),
                     extracted_by="rule"))
-        # 2) context: latest observation before the event, always cited with its period
-        latest = rows[-1]
+        # 2) context: latest observation available at the time of the event, always cited with its period
+        prior = [o for o in rows if period_end(o) <= as_of]
+        if not prior:
+            continue
+        latest = prior[-1]
         ref = ref_for(latest)
         if ref.evidence_id not in {r.evidence_id for r in link.evidence}:
             link.evidence.append(ref)
@@ -134,7 +154,9 @@ def link_recent(event_id: str, items: list[NewsItem], observations: list[Indicat
     if re.search(PROJECTION_KEYWORDS, text, re.IGNORECASE):
         proj = [o for o in observations if o.fuente == "acp" and o.es_proyeccion and o.valor is not None]
         if proj:
-            nxt = min(proj, key=period_end)
+            nxt = min((o for o in proj if period_end(o) > as_of), key=period_end, default=None)
+            if nxt is None:
+                return link
             ref = ref_for(nxt)
             link.evidence.append(ref)
             link.warnings.append(TemporalWarning(

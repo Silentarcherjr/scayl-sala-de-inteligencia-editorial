@@ -39,7 +39,7 @@
 | B-07 | Etiquetas humanas: temas (≥100), pares de agrupación, top 5 ciego, benchmark dev (40) | F (etiquetas) + W (top 5 ciego) | P0 | M2 | TODO | B-03 |
 | B-08 | `eval/`: métricas, benchmark, latencia → `eval/results/latest.json` | **W** LowCrime | P0/P1 | M3 | PARCIAL (PR #27: P@5 y T01–T10; el resto no medido hasta B-05 IA, L-10/L-11 en vivo y benchmark B-10) | B-05, L-10, L-11 |
 | B-09 | Revisión humana de ≥30 afirmaciones (validez de sustento) | W (editor) | P0 | M3 | TODO | L-10 |
-| B-10 | Benchmark de modelos locales (embeddings + LLM) en hardware declarado | **F** frictionspp-svg (AMD Radeon RX 9060 XT 8 GB, Vulkan) | P0 | M1 | TODO | — |
+| B-10 | Benchmark de modelos locales (embeddings + LLM) en hardware declarado | **F** frictionspp-svg (AMD Radeon RX 9060 XT 8 GB, Vulkan) | P0 | M1 | PARCIAL (PR #31: qwen3:8b en RX 9060 XT, mediana 15,1 s, p95 17,8 s, n=15; falta comparar modelos) | — |
 | H-01 | Preparar el espacio Notion (estructura de §5) para migrar en cuanto haya licencia | H1 | P0 | M3 | TODO | — |
 | H-02 | Bitácora `docs/AI_TOOLS_USED.md` → PDF | Todos | P0 | M4 | DOING | — |
 | H-03 | Publicaciones en redes (@hackiathon @viamatica @adenbs) | H | P0 | M1–M4 | TODO | — |
@@ -58,8 +58,8 @@
 | H-06 | **Mini-estudio manual vs asistido** (3 tareas cronometradas, protocolo en 06) | F + W | P1 | M3 | TODO | M2 |
 | H-07 | Registro de **prueba fallida → corrección** (regla continua: cada fallo real se anota en 06) | Todos | P0 | M1–M4 | DOING | — |
 | H-08 | Top 5 **a ciego** del editor (Humano 2), antes de que exista ranking | W (editor) | P0 | M0–M1 | DONE (PR #23; ver DL-024) | B-01 |
-| B-13 | **ACP**: niveles del lago Gatún (CSV histórico + proyección) → `indicadores_recientes.csv` (AP-010) | **F** frictionspp-svg | P1 | M2 | TODO | B-01 |
-| B-14 | **INEC**: IPC urbano nacional mensual (variación mensual e interanual) desde los cuadros PDF → `indicadores_recientes.csv` | **F** frictionspp-svg | P1 | M2–M3 | TODO | B-13 |
+| B-13 | **ACP**: niveles del lago Gatún (CSV histórico + proyección) → `indicadores_recientes.csv` (AP-010) | **F** frictionspp-svg | P1 | M2 | DONE (PR #31; vínculo corregido por AP-012/DL-026) | B-01 |
+| B-14 | **INEC**: IPC urbano nacional mensual (variación mensual e interanual) desde los cuadros PDF → `indicadores_recientes.csv` | **F** frictionspp-svg | P1 | M2–M3 | DONE (PR #31; vínculo corregido por AP-012/DL-026) | B-13 |
 
 ---
 
