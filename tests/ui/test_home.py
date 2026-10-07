@@ -29,7 +29,7 @@ def test_rank_funnel_matrix_and_editorial_safeguards(home):
     assert matrix.loc["medio", "parcial"] == 1
     assert matrix.to_numpy().sum() == 3
     assert len(home.get("progress")) == 15
-    assert len(home.get("page_link")) == 6
+    assert len(home.get("page_link")) == 9
 
 
 def test_ties_use_urgency_then_id(home, bundle):

@@ -5,6 +5,7 @@ from zoneinfo import ZoneInfo
 import pandas as pd
 import streamlit as st
 
+from app.components.agenda import agenda
 from scayl import service
 from scayl.contracts import Event, EvidenceStatus, PriorityTier
 
@@ -36,6 +37,7 @@ def main() -> None:
         col.metric(label, value)
     st.info("P mide atención, no probabilidad de verdad ni impacto. El estado de evidencia es independiente.")
     st.caption("Prioridad alta NO habilita publicación. Aprobado como borrador NO significa publicado.")
+    agenda(bundle, service.official_weights())
     left, right = st.columns(2)
     topic = left.selectbox("Tema", ["Todos"] + sorted({e.topic.value for e in events}))
     status = right.selectbox("Estado de evidencia", ["Todos"] + [s.value for s in EvidenceStatus])

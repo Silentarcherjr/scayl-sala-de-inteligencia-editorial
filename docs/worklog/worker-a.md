@@ -13,3 +13,4 @@
 - 2026-10-07 02:36 UTC · A-01/A-02 · PR #18 abierto, listo para revisión, sin merge; relevo: ver docs/handoff/LowCrime.md · siguiente A-07 desde main con Home integrado, luego A-04/A-09; A-05/A-10 del Lead.
 
 - 2026-10-07 04:34 UTC · A-04/A-09 · Consultas sobre service.ask, tarjetas A-08, abstención y modo real visibles; cuatro rutas de jurado; 128 passed (7 nuevas). H-08 mergeada y notas atendidas retiradas; DL-024 leído. Siguiente: A-07 y B-08.
+- 2026-10-07 04:36 UTC · A-07 · agenda montada encima de filtros; top 5 y dos rationale por contribución ponderada; fuente sugerida literal, no evidencia; 123 passed en rama independiente de Consultas; captura real a 1280×720.

@@ -17,6 +17,7 @@
 | 2026-10-07 | Codex | frictionspp-svg | Cerrar snapshot C-01 B-01/B-02 | Adaptador RSS con detección nula; adquisición DOC/GKG y USGS ampliado; auditoría de exclusiones; manifest portable; candidatos ciegos | 187 noticias (50 TVN), 540 WB, 82+87 USGS; manifest verificado; 114 pruebas pasan | Top 5 ciego y revisión del Lead pendientes |
 
 | 2026-10-07 | Codex | LowCrime | A-04/A-09 | Consultas, citas y modo jurado; AppTest y capturas Chromium con snapshot real | 128 passed; abstención y respuesta extractiva verificadas | Pendiente del Lead |
+| 2026-10-07 | Codex | LowCrime | A-07 | Agenda, pruebas y captura real Chromium | 123 passed, dos pruebas nuevas | Pendiente del Lead |
 
 ## Herramientas de IA dentro del producto (no son de desarrollo)
 
