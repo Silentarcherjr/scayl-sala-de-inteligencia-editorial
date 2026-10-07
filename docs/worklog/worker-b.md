@@ -57,3 +57,6 @@ Medición real E5 en CPU (torch 2.14.1+cpu, CUDA no disponible). Matrices ignora
 2026-10-07 19:03 UTC - B-04: Seis casos sinteticos aislados T01/T02/T03/T05/T07 y SUFICIENTE ACP inventado85.1pies. Replay con reglas existentes; sin modificar corpus/contratos/LLM. Reporte con SHA guardado, 173 pytest verdes.
 
 2026-10-07 19:06 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md; B-04 https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/49. Continúa H-06 humano: protocolo existente worker-a/h06-mini-study; esperar tiempos reales. B-06 opcional aislado; al final volver a holdout y etiquetas humanas.
+2026-10-07 19:11 UTC - B-06: Recuperador experimental opt-in BM25 positivo+coseno E5, scores[0,1], sin integrar qa.py. 176pytest y Ruff propio verdes. Smoke real3/3consultas con1314unidades; precision y latenciaQA no medidas. H-06 compartido ya tienePR45 y espera humanos.
+
+2026-10-07 19:13 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md; B-06 https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/50. Continúa Volver a los bloqueos: diez preguntas humanas holdout_v2, confirmar cien temas/32 grupos B-07 y seis tiempos H-06 PR45. CI PR39 conserva36avisosfuera tests paraLead. No hay mas tareas autonomas.

@@ -29,6 +29,7 @@
 | 2026-10-07 05:56 UTC | Codex / modelos locales | frictionspp-svg | B-07 pendiente humano | Backlog final del Lead | 100temas propuestos y32titulares para488pares;0confirmados;metricas no medido;174pytest;solicitud enviada,seguirbenchmark. | Revisión del Lead pendiente |
 | 2026-10-07 18:57 UTC | Codex / modelos locales | frictionspp-svg | B-10 | Backlog final del Lead | Benchmark GPU top15: 8b 14643/17600 ms, citas49/49, fallback0/15; 4b 9050/12898.2 ms, citas25/25, EMPTY_BRIEF3/15. Recomiendo8b. 172 pruebas verdes; reportes reales guardados. | Revisión del Lead pendiente |
 | 2026-10-07 19:03 UTC | Codex / modelos locales | frictionspp-svg | B-04 | Backlog final del Lead | Seis casos sinteticos aislados T01/T02/T03/T05/T07 y SUFICIENTE ACP inventado85.1pies. Replay con reglas existentes; sin modificar corpus/contratos/LLM. Reporte con SHA guardado, 173 pytest verdes. | Revisión del Lead pendiente |
+| 2026-10-07 19:11 UTC | Codex / modelos locales | frictionspp-svg | B-06 | Backlog final del Lead | Recuperador experimental opt-in BM25 positivo+coseno E5, scores[0,1], sin integrar qa.py. 176pytest y Ruff propio verdes. Smoke real3/3consultas con1314unidades; precision y latenciaQA no medidas. H-06 compartido ya tienePR45 y espera humanos. | Revisión del Lead pendiente |
 
 ## Herramientas de IA dentro del producto (no son de desarrollo)
 

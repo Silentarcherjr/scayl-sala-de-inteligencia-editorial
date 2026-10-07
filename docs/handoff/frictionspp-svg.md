@@ -1,7 +1,7 @@
-# Relevo · frictionspp-svg · 2026-10-07 19:06 UTC
+# Relevo · frictionspp-svg · 2026-10-07 19:13 UTC
 
 - **Motivo:** checkpoint preventivo AGENTS §2b; se continúa el backlog sin esperar merges.
-- **Rama:** worker-b/synthetic-final · **Último commit de tarea:** 09295c5, empujado. Checkpoint en commit posterior.
+- **Rama:** worker-b/retrieval-final · **Último commit de tarea:** 20986b6, empujado. Checkpoint en commit posterior.
 - **PRs:** ver lista abajo; solo el Lead mergea.
 
 ## Tarea en curso
@@ -14,13 +14,14 @@ Backlog final del Lead (docs/agents/frictionspp-svg.md), tareas en ramas nuevas 
 - 5 B-07 formularios; revision humana pendiente: https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/40 (worker-b/human-labels-final, 1d9e656).
 - B-10: https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/48 (worker-b/benchmark-final, 8c1cfb2).
 - B-04: https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/49 (worker-b/synthetic-final, 09295c5).
+- B-06: https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/50 (worker-b/retrieval-final, 20986b6).
 
 ## Siguiente paso concreto
-H-06 humano: protocolo existente worker-a/h06-mini-study; esperar tiempos reales. B-06 opcional aislado; al final volver a holdout y etiquetas humanas.
+Volver a los bloqueos: diez preguntas humanas holdout_v2, confirmar cien temas/32 grupos B-07 y seis tiempos H-06 PR45. CI PR39 conserva36avisosfuera tests paraLead. No hay mas tareas autonomas.
 Antes de cada tarea: fetch y rama nueva desde origin/main; no esperar merges.
 
 ## Estado de las pruebas
-173 passed. Cada PR incluye su ejecución; no confundir métricas reales con etiquetas pendientes.
+176 passed; Ruff de archivos B-06 verde. Cada PR incluye su ejecución; no confundir métricas reales con etiquetas pendientes.
 
 ## Archivos tocados
 Ver los PRs listados y docs/worklog/worker-b.md; métricas en eval/results.

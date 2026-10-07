@@ -1,0 +1,108 @@
+{
+  "run_at": "2026-10-07T19:09:57.528606Z",
+  "model": "intfloat/multilingual-e5-base",
+  "device": "cpu",
+  "units": 1314,
+  "queries_executed": {
+    "num": 3,
+    "den": 3
+  },
+  "results": [
+    {
+      "query": "nivel del lago Gatún",
+      "bm25": [
+        {
+          "id": "ind:acp:ACP.GATUN.NIVEL:2025-09-02",
+          "score": 0.825004713036533
+        },
+        {
+          "id": "ind:acp:ACP.GATUN.NIVEL:2025-09-03",
+          "score": 0.825004713036533
+        },
+        {
+          "id": "ind:acp:ACP.GATUN.NIVEL:2025-09-04",
+          "score": 0.825004713036533
+        }
+      ],
+      "hybrid": [
+        {
+          "id": "ind:acp:ACP.GATUN.NIVEL:2025-12-01",
+          "score": 0.8713913151833782
+        },
+        {
+          "id": "ind:acp:ACP.GATUN.NIVEL:2025-12-04",
+          "score": 0.8711140701078003
+        },
+        {
+          "id": "ind:acp:ACP.GATUN.NIVEL:2025-12-02",
+          "score": 0.8711051927665534
+        }
+      ]
+    },
+    {
+      "query": "inflación Panamá 2024",
+      "bm25": [
+        {
+          "id": "usgs:us6000m2a6",
+          "score": 0.7998929693921022
+        },
+        {
+          "id": "usgs:us6000nppn",
+          "score": 0.7998929693921022
+        },
+        {
+          "id": "usgs:us6000nsuw",
+          "score": 0.7998929693921022
+        }
+      ],
+      "hybrid": [
+        {
+          "id": "usgs:us6000m2a6",
+          "score": 0.8299469382178334
+        },
+        {
+          "id": "usgs:us7000mnxc",
+          "score": 0.829479237834086
+        },
+        {
+          "id": "usgs:us7000mzyv",
+          "score": 0.8291060166947588
+        }
+      ]
+    },
+    {
+      "query": "earthquake Panama",
+      "bm25": [
+        {
+          "id": "news:gdt-249da117dc848a8336c7",
+          "score": 0.7216344353614577
+        },
+        {
+          "id": "news:tvn-d6fc56859a254ab1b91b",
+          "score": 0.712102983156902
+        },
+        {
+          "id": "news:gdt-e735cd805b7740222549",
+          "score": 0.7011887652847755
+        }
+      ],
+      "hybrid": [
+        {
+          "id": "usgs:us6000shdm",
+          "score": 0.7649137230327051
+        },
+        {
+          "id": "usgs:us7000mnxc",
+          "score": 0.764677153444653
+        },
+        {
+          "id": "usgs:us7000mzyv",
+          "score": 0.7638759523184608
+        }
+      ]
+    }
+  ],
+  "quality": "no medido",
+  "qa_latency": "no medido",
+  "scope": "Functional local-model smoke only, no gold or recall measurement; QA unchanged"
+}

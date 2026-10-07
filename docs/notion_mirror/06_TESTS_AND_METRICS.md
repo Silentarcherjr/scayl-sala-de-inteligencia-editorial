@@ -75,3 +75,5 @@ las seis duraciones y resultados, ejecutar scayl.eval.time_study y registrar aqu
 exploratorio. No sustituir el cronómetro humano por estimaciones del agente.
 
 Capturas finales: el primer arnés buscaba h2 Respuesta pero la UI usa h3 Resultado, dejando la abstención fuera del encuadre; corregido el selector y recapturado. Esperar ausencia de todo botón Stop también incluía nodos ocultos; ajustado el arnés sin modificar la UI ni los PNG. Evidencia: docs/screenshots/final/09-consultas-abstencion.png.
+| 2026-10-07 | B-06 test_evidence_fields_nulls_and_injection_filter | EvidenceRef rechaza unit como campo extra. | El adaptador experimental supuso un campo fuera del contrato. | Conservar unidad en excerpt y texto del índice; contrato intacto. | tests/test_retrieve.py; 176 passed; Ruff del módulo y pruebas verde. |
+| 2026-10-07 | B-06 smoke real | AttributeError report.total. | El script local asumió objeto donde load_snapshot devuelve dict. | Usar report["total"] en el script; no cambio del loader. | eval/results/b06-smoke.json al repetir. |
