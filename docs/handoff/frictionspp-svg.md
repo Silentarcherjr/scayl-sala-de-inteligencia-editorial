@@ -1,36 +1,52 @@
-# Relevo · frictionspp-svg · 2026-10-07T19:52:54.285943Z
+# Relevo · frictionspp-svg · 2026-10-07T20:02:05.872997Z
 
-- **Motivo de la parada:** checkpoint preventivo AGENTS §2b al cerrar los100temas; continuar interacción con agrupación.
-- **Rama:** `worker-b/human-inputs` desde origin/main5b6fd71 (PR51). No reutilizar ramas anteriores.
-- **Último commit antes de este relevo:** `26fdd68`; empujado junto con el checkpoint posterior.
-- **PR abierto:** ninguno nuevo; el humano pidió un solo PR al terminar B-07 y holdoutv2.
+- **Motivo de la parada:** checkpoint preventivo AGENTS §2b tras completar B-07; continúa la interacción para red-team v2.
+- **Rama:** `worker-b/human-inputs`, nueva desde origin/main `5b6fd71` (PR #51).
+- **Último commit antes de este relevo:** `9fcd12f`; empujado junto con el checkpoint posterior.
+- **PR abierto:** ninguno nuevo. Se abrirá un solo PR al final con B-07 y holdout v2, según el humano.
 
 ## Tarea en curso
-Entradas humanas interactivas. Temas100/100completados; iniciar agrupación32titulares en bloques10/10/10/2. Después pedir10preguntastrampa humanas y ejecutar red-teamv2 sin cambiar runner/qa.
+B-07 completo. Esperar diez preguntas trampa nuevas escritas por frictionspp-svg,
+sin mostrarle qa.py ni eval/redteam/cases.jsonl, con expected_abstain sí/no por pregunta.
+La solicitud interactiva ya está enviada. No fabricar preguntas ni expectativas humanas.
 
 ## Hecho en esta sesión
-- Todos los PR anteriores37–40/48–50 integrados porLead víaPR51. CIverde y Ruffcorregido. No cherry-pickcc327d1: sus estados de PR/CI quedaron obsoletos.
--100etiquetas de temas explícitas, revisorfrictionspp-svg,10bloques. Nunca tomar propuestas como respuesta humana.
-- CSVmantiene esquema. data/labels/human_review_log.jsonl conserva respuesta original, IDs, propuesta, etiqueta humana y UTCporbloque.
-- Macro-F1 temas sobre100,7clases,zero_division0: baseline0.7568136932192232, IA0.24645960051496715. Ejecución guardada en eval/results/b07-human-metrics.json. No ajustar tau/prototipos ni ranking con gold. Agrupaciónno medida,0/32.
+- Main integra los PR #37–#40 y #48–#50 vía #51; CI y Ruff corregidos por el Lead.
+- No se importó cc327d1 porque sus estados de PR/CI quedaron desactualizados.
+- Temas: 100/100 etiquetas humanas explícitas, en diez bloques.
+- Agrupación: 32/32 titulares, en bloques 10/10/10/2. El humano confirmó los grupos propuestos con «ok» en cada bloque.
+- Revisor frictionspp-svg, hora UTC y respuesta original por bloque en data/labels/human_review_log.jsonl.
+- CSV conserva esquema. Evaluación auditada con hashes en eval/results/b07-human-review-summary.json.
+- Macro-F1 de temas: baseline 0.7568136932192232, IA 0.24645960051496715; n=100, siete clases, zero_division=0.
+- Agrupación, 488 pares de desarrollo: baseline P=12/12, R=12/43, F1=0.43636363636363634; IA P=42/42, R=42/43, F1=0.988235294117647.
+- Revisión asistida, no gold ciego. El desarrollo de agrupación ya sirvió para calibrar τ; no es generalización a holdout. Recall relativo al pool.
+- No se ajustaron modelos, prototipos, τ ni ranking con estas respuestas; no se leyó editor_top5.
 
 ## Siguiente paso concreto
-1. Si es sesión nueva: fetch y mergeorigin/main sinrebase; detenerse anteconflictos. Leer instrucciones nuevas.
-2. Esperar respuesta humana al bloque de agrupación1–10 mostrado en conversación. Archivo data/labels/dev2025_groups_human.csv, primera10filas, grupospropuestosG01/G02/G10/G10/G02/G02/G07/G03/G04/G05. El humano confirma conok o corrige por número/grupo. Misma historia no implica mismoevento; grupos consistentes entrebloques, ventana7días. FechasdelCSV sonpublicación o deteccióncuando falta publicación.
-3. Registrar solo confirmaciones explícitas, revisorfrictionspp-svg, UTCyrespuestaliteral en bitácora. Mostrar siguientes11–20,21–30,31–32. No preparar formularios de nuevo: sobrescribe etiquetas.
-4. Tras32grupos, ejecutar python -m scayl.eval.human_labels evaluate con E5local; guardar P/R/F1 connum/den ylimitación: desarrollo2025yausadoparacalibrar tau, no heldout.
-5. Pedir humano10preguntastrampa nuevas, sinmostrar qa.pyni eval/redteam/cases.jsonl, juntoa expected_abstain sí/no. Guardar eval/redteam/holdout_v2.jsonl mismoformato. Correr runner sin cambios y reportarnum/den talcual, aunque malos. No inventar preguntas humanas ni ajustar código después.
-6. python -m pytest -q y ruff check . verdes; actualizar docs/AI_TOOLS_USED yworklog. UnsoloPRamain alfinal; Leadmergea.
+1. En sesión nueva, fetch + merge origin/main sin rebase; detenerse ante conflictos. Leer notas del Lead.
+2. Recibir las diez preguntas humanas y la expectativa de abstención sí/no. Si falta o es ambigua, preguntar; no inferir su respuesta.
+3. Guardar eval/redteam/holdout_v2.jsonl en el formato del runner, con IDs estables, category, question, synthetic=true y expected_abstain. Auditar procedencia humana y UTC. No mostrar ni copiar preguntas existentes.
+4. Ejecutar python -m scayl.eval.redteam --cases eval/redteam/holdout_v2.jsonl --output eval/results/holdout-v2.json, sin cambiar runner ni qa.py. Reportar num/den tal como salgan, aunque malos. Registrar fallos reales en 06 sin alterar código para mejorar holdout.
+5. Actualizar documentación, AI_TOOLS_USED y worklog; python -m pytest -q y ruff check . verdes; un solo PR hacia main. Solo el Lead mergea.
 
 ## Estado de las pruebas
-Al crear rama:188passed yruffcheck. verde sobremain integrado. Cambiosactuales son etiquetas/documentación/resultados, sin cambiar evaluador ni lógica. Repetirchecks finales antesdePR.
+Tras completar B-07: python -m pytest -q → 188 passed; ruff check . → All checks passed.
+Auditoría verifica todas las filas contra las respuestas del JSONL. Holdout v2 aún no medido.
 
 ## Archivos tocados
-data/labels/topics_human.csv; data/labels/human_review_log.jsonl; data/labels/.gitattributes; eval/results/b07-human-metrics.json; docs/B07_HUMAN_REVIEW.md; docs/worklog/worker-b.md; docs/AI_TOOLS_USED.md; esterelevo.
+data/labels/topics_human.csv; dev2025_groups_human.csv; human_review_log.jsonl;
+data/labels/.gitattributes; eval/results/b07-human-metrics.json;
+eval/results/b07-human-review-summary.json; eval/results/.gitattributes;
+docs/B07_HUMAN_REVIEW.md; docs/worklog/worker-b.md; docs/AI_TOOLS_USED.md; este relevo.
 
 ## Bloqueos, dudas y decisiones pendientes
-Agrupaciónesperarespuestahumana. Holdoutv2aúnno existe. No hay nuevas propuestas ni dependencia externa para estos bloques. H-06queda fueradel alcance de la última solicitud.
+Solo faltan las preguntas humanas y su ejecución para el alcance actual. H-06 queda fuera de la última solicitud.
+No hay cambios en contratos, arquitectura, dependencias ni código del evaluador/runner.
 
 ## Contexto que no está en el código
-Python .venv/Scripts/python.exe; Ruff .venv/Scripts/ruff.exe. E5localCPU, ejecutadoescaladoporDLLWindows; modelosignoredmodels/. tmp/record_human_topics.py exige labels explícitas ybloque sinreviewprevia; tmp/human-topic-response-*.txt conserva respuestas originales locales ademásdelJSONLtrackeado. Próximo bloque sonGRUPOS, no temas. ModeloAIespoorenesteconjunto: métricas reportadas sin tuning. Nunca leer editor_top5paraoptimizar.
-Antesdecadapush: git rev-list --objects origin/main..HEAD filtro zip/rss.xml vacío. No subir processed, GKGZIP,RSSdescripciones,secrets ni backup/wip-617d6e2; nunca push--all. Modelos ycache solo locales.
+Python .venv/Scripts/python.exe; Ruff .venv/Scripts/ruff.exe. E5 local CPU, modelos ignorados en models/.
+En Windows las ejecuciones reales con E5 se escalan por la política DLL. Ollama local disponible, pero red-team usa runner en modo template.
+tmp/record_human_topics.py y tmp/record_human_groups.py requieren entradas explícitas; no sobrescriben filas revisadas.
+tmp/human-*-response-*.txt y la bitácora trackeada preservan respuestas originales. No preparar formularios de nuevo: perdería etiquetas.
+Antes de cada push: git rev-list --objects origin/main..HEAD filtrado por zip/rss.xml debe estar vacío.
+Nunca subir processed, GKG ZIP, RSS con descripciones, modelos, secretos ni backup/wip-617d6e2. Nunca push --all.
