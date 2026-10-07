@@ -32,7 +32,7 @@ Las sesiones de los agentes tienen límite. Para que otro agente pueda continuar
    3. Agrega una línea en tu `docs/worklog/` ("relevo: ver docs/handoff/<usuario>.md").
    4. `git push` de tu rama.
    5. Dile a tu humano en una línea: rama, último commit y siguiente paso.
-3. **Al empezar una sesión nueva:** si existe `docs/handoff/<tu-usuario>.md` (en tu rama o en `main`), léelo **primero** y continúa desde "Siguiente paso concreto". Comprueba con `git log` y `pytest` que el estado coincide con lo que dice el relevo.
+3. **Al empezar una sesión nueva:** primero **sincroniza tu rama con `main`** (`git fetch origin && git merge origin/main`, sin rebase ni force-push; ante conflictos, detente y avisa a tu humano), porque las notas del Lead y las decisiones nuevas llegan por `main`. Luego, si existe `docs/handoff/<tu-usuario>.md` (en tu rama o en `main`), léelo **primero** y continúa desde "Siguiente paso concreto". Comprueba con `git log` y `pytest` que el estado coincide con lo que dice el relevo.
 
 ## 3. Datos
 - UTF-8, IDs estables, ISO 8601 en **UTC** en datos; la UI muestra **hora de Panamá**.

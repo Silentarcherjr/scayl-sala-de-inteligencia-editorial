@@ -86,8 +86,22 @@ def ask(question: str, mode: Mode | None = None) -> QAAnswer:
     return qa.answer(question, load_bundle(), LLM(mode=mode), retriever=_retriever())
 
 
-def review(event_id: str, to_state: ReviewState, reviewer: str, justification: str) -> ReviewRecord:
-    return _store().record(get_event(event_id), to_state, reviewer, justification, package=get_package(event_id))
+def review(event_id: str, to_state: ReviewState, reviewer: str, justification: str,
+           package: StoryPackage | None = None) -> ReviewRecord:
+    """Record a human decision about the package the reviewer is ACTUALLY looking at (AP-011).
+
+    ``package`` defaults to the snapshot package. A package generated in the session can be passed;
+    its id and sha256 go into the review receipt, so the decision is traceable to exact content.
+    """
+    if package is not None and package.event_id != event_id:
+        raise ValueError(f"El paquete {package.package_id} no pertenece al caso {event_id}")
+    return _store().record(get_event(event_id), to_state, reviewer, justification,
+                           package=package if package is not None else get_package(event_id))
+
+
+def receipt(review_id: str) -> dict:
+    """Traceability receipt of a review (JSON with its own sha256), for display or download."""
+    return _store().receipt(review_id)
 
 
 def review_history(event_id: str) -> list[ReviewRecord]:
@@ -113,6 +127,7 @@ __all__ = [
     "get_event",
     "get_package",
     "load_bundle",
+    "receipt",
     "reload",
     "review",
     "review_history",

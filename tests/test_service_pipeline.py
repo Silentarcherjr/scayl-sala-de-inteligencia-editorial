@@ -63,3 +63,15 @@ def test_default_cutoff_follows_organizer_clarification():
 
     from scayl.pipeline import data_window_cutoff
     assert data_window_cutoff() == datetime(2026, 10, 1, tzinfo=UTC)
+
+
+def test_review_records_the_package_actually_shown_and_exposes_receipt(svc):
+    e = svc.load_bundle().events[0]
+    shown = svc.generate_package(e.event_id, mode="template")
+    rec = svc.review(e.event_id, ReviewState.EN_REVISION, "editor-demo", "Reviso el borrador generado", package=shown)
+    assert rec.package_id == shown.package_id
+    r = svc.receipt(rec.review_id)
+    assert r["package_id"] == shown.package_id and len(r["package_sha256"]) == 64 and len(r["receipt_sha256"]) == 64
+    other = svc.load_bundle().events[1]
+    with pytest.raises(ValueError):
+        svc.review(other.event_id, ReviewState.EN_REVISION, "x", "y", package=shown)
