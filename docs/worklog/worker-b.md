@@ -98,3 +98,9 @@ Medición real E5 en CPU (torch 2.14.1+cpu, CUDA no disponible). Matrices ignora
 2026-10-07 20:02 UTC - B-07 grupos humanos completos: 32/32 titulares confirmados explicitamente en cuatro bloques por frictionspp-svg. 488 pares: baseline P12/12 R12/43 F1=0.4363636364; IA P42/42 R42/43 F1=0.9882352941. Auditoria132/132filas; desarrollo asistido, no holdout. 188pytest y Ruffglobal verdes. Falta red-teamv2 humano para PR unico.
 
 2026-10-07T20:02:05.872997Z - relevo preventivo: ver docs/handoff/frictionspp-svg.md. B-07 completo y medido; esperar diez preguntas humanas de holdout v2, continuar interacción.
+
+2026-10-07T20:28:02.219692Z - Holdout v2: recibidas diez preguntas originales y expectativas explícitas de frictionspp-svg (6 abstenciones esperadas,4 respuestas). Texto/expectativas sin alterar; categoría de controles solo para runner. Procedencia y UTC guardados. Ejecutar runner sin cambiar código.
+
+2026-10-07T20:32:42.410882Z - Holdout v2 ejecutado sin cambiar runner/qa/casos existentes: abstención correcta6/6, falsa relativa a expectativas4/4, controles respondidos0/4, coincidencias6/10. Fallan HV2-03/05/07/09 por abstención ante ausencia de evidencia pertinente. Scope hardcoded del runner se conserva; procedencia humana corregida solo en companion. Sin tuning ni cambio de expectativas.
+
+2026-10-07 20:32 UTC - Holdout v2 humano: Diez preguntas y expectativas originales de frictionspp-svg. Runner intacto: abstencion correcta6/6, falsa respecto a expectativas4/4, controles0/4, coincidencias6/10. Cuatro fallos preservados; conocimiento general sin soporte garantizado en fixture. Scope humano en companion, raw intacto. Un PR junto con B-07.

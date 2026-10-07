@@ -1,7 +1,8 @@
-# B-07 · Revisión humana asistida pendiente
+# B-07 · Revisión humana asistida
 
 `data/labels/topics_human.csv`: 100 titulares C-01 seleccionados sin ranking con semilla
-20261007; tema_propuesto por E5, **tema_humano/confirmado/revisor pendientes**.
+20261007; tema_propuesto por E5, con tema_humano/confirmado/revisor completados
+mediante revisión interactiva explícita de `frictionspp-svg`.
 Rellenar tema_humano con uno de los siete temas, confirmado=si y revisor. No basta con
 tema_propuesto para obtener una métrica humana.
 

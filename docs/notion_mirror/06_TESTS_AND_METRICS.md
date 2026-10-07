@@ -18,15 +18,15 @@
 | T09 | Brief editorial | Paquete de un evento real | Formato útil, citas válidas, hechos ≠ inferencias, frase de alcance | **PASA (LLM simulado)**: se elimina la cifra inventada; HECHO/DECLARACION; frase de alcance; título con cifras sin respaldo reemplazado; respaldo a plantilla. Falta: con datos reales y modelo real | `tests/test_t09_validators.py`, `tests/test_t09_studio.py` | Ver registro: cifra de fecha |
 | T10 | Sin internet | Red desactivada | Funciona con el snapshot + fallback documentado | **Parcial**: service + pipeline corren con red bloqueada en la prueba (socket deshabilitado); falta el ensayo real sin wifi | `tests/test_service_pipeline.py` + video o captura (H-05) | — |
 
-## Métricas (§9.1) — solo P@5 medida (preliminar); el resto **no medido**
+## Métricas (§9.1) — resultados de ejecuciones guardadas; ausencias como no medido
 | Métrica | Meta orientativa | Resultado | n | Método |
 |---|---|---|---|---|
 | Cobertura de citas | 100% | no medido | — | Validador automático |
 | Validez de sustento | ≥90% | no medido | — | Revisión humana de ≥30 afirmaciones (B-09) |
-| Abstención correcta | ≥80% | **16/16** tras corregir (6/16 antes, DL-027). Set de desarrollo sintético escrito por IA y visto antes de corregir; falta un set reservado | 16 | `eval/results/latest.json` (B-12, modo template/extractivo) |
-| Abstención incorrecta | reportar | **0/4** controles respondibles | 4 | `eval/results/latest.json` |
-| Temas macro-F1 (baseline vs IA) | reportar | no medido | — | ≥100 etiquetas humanas |
-| Agrupación P/R/F1 (baseline vs IA) | reportar | no medido | — | Pares etiquetados |
+| Abstención correcta | ≥80% | Desarrollo IA: **16/16** tras corregir (6/16 antes, DL-027). Holdout v2 humano: **6/6** sin cambios posteriores de código | 16 desarrollo / 6 holdout | `eval/results/latest.json`; `eval/results/holdout-v2.json` y companion humano. Template/extractivo; no LLM vivo ni set oficial del jurado |
+| Abstención incorrecta | reportar | Desarrollo IA: **0/4**. Holdout humano: **4/4** respecto a expectativas de respuesta; esos controles de conocimiento general no tienen respuesta garantizada en el fixture | 4 por set | `eval/results/latest.json`; `eval/results/holdout-v2-summary.json`; no alterar expectativas para mejorar métrica |
+| Temas macro-F1 (baseline vs IA) | reportar | **0.7568136932 / 0.2464596005**; siete clases, zero_division=0 | 100 | `eval/results/b07-human-metrics.json`; etiquetas explícitas de frictionspp-svg, propuestas visibles |
+| Agrupación P/R/F1 (baseline vs IA) | reportar | Baseline: **P12/12, R12/43, F1=0.4363636364**; IA: **P42/42, R42/43, F1=0.9882352941** | 488 pares / 32 titulares | `eval/results/b07-human-metrics.json`; desarrollo2025 ya usado para calibrar τ provisional, revisión asistida; recall relativo al pool, no holdout |
 | Precision@5 | reportar (exploratoria) | **1/5 = 0.20** (baseline TF-IDF + reglas, sin ACP/INEC; preliminar del Lead, B-08 la formaliza). Los 5 elegidos quedan en las posiciones 2, 6, 12, 22 y 26 de 183 | 5 eventos | Top 5 de LowCrime (PR #23, 2026-10-07). Limitación: vio antes una propuesta de IA (coincide en 1 de 5) y no vio el ranking del sistema (DL-024) |
 | Latencia mediana / p95 | mediana ≤15 s | **14,6 s / 17,6 s** (Story Studio en vivo, qwen3:8b, AMD RX 9060 XT 8 GB Vulkan; corrida tras DL-026). qwen3:4b: 9,1 s / 12,9 s, con 3 paquetes vacíos | 15 | `eval/results/final-precompute*.json`, `eval/results/b10-model-comparison.json` |
 | Costo de API | — | $0.00 por diseño (local); se confirma al medir | — | — |
@@ -77,3 +77,4 @@ exploratorio. No sustituir el cronómetro humano por estimaciones del agente.
 Capturas finales: el primer arnés buscaba h2 Respuesta pero la UI usa h3 Resultado, dejando la abstención fuera del encuadre; corregido el selector y recapturado. Esperar ausencia de todo botón Stop también incluía nodos ocultos; ajustado el arnés sin modificar la UI ni los PNG. Evidencia: docs/screenshots/final/09-consultas-abstencion.png.
 | 2026-10-07 | B-06 test_evidence_fields_nulls_and_injection_filter | EvidenceRef rechaza unit como campo extra. | El adaptador experimental supuso un campo fuera del contrato. | Conservar unidad en excerpt y texto del índice; contrato intacto. | tests/test_retrieve.py; 176 passed; Ruff del módulo y pruebas verde. |
 | 2026-10-07 | B-06 smoke real | AttributeError report.total. | El script local asumió objeto donde load_snapshot devuelve dict. | Usar report["total"] en el script; no cambio del loader. | eval/results/b06-smoke.json al repetir. |
+| 2026-10-07 | Holdout v2 HV2-03/05/07/09 | Abstención observada donde el humano esperaba respuesta:4/4; controles respondidos0/4. | El runner declara que su corpus no contiene evidencia pertinente; controles de conocimiento general sin soporte garantizado en el fixture. | Sin cambio de código, datos de soporte ni expectativas; conservar fallos. No mide rechazo de respuestas sustentadas. | eval/results/holdout-v2.json; companion y procedencia humana; coincidencias6/10. |
