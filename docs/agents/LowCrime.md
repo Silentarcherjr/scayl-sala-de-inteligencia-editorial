@@ -9,6 +9,22 @@ Llegas cuando el proyecto ya avanzó: **completas la interfaz, la evaluación me
 Tu humano además es el **"editor" independiente**: su juicio sirve para medir el sistema, así que no debe ver
 el ranking antes de entregar su top 5.
 
+## 📌 Notas del Lead pendientes (2026-10-07) — aplícalas antes de seguir
+Revisión del PR #13 (A-03): buen trabajo, 80/80 verificadas, reglas de producto respetadas.
+- **AP-011 ACEPTADA (DL-020).** El Lead ya publicó en `main`:
+  - `service.review(event_id, to_state, reviewer, justification, package=<paquete visible>)`: registra el paquete que el editor **está viendo** (id + sha256 en el recibo). Rechaza un paquete de otro caso. → **Quita el bloqueo** "el paquete visible difiere" y pasa el paquete visible.
+  - `service.receipt(review_id) -> dict`: recibo de trazabilidad (incluye `receipt_sha256`). → Agrega un botón de descarga (`st.download_button`, JSON) en el historial.
+- **Reasignación (DL-020):** A-01 (esqueleto + navegación), **A-08 (tarjeta de evidencia)** y A-02 (Sala de Situación) pasan a **ti**; frictionspp-svg queda solo con datos. Crea `app/components/evidence_card.py` con `evidence_card(ref: EvidenceRef)` (contrato en TASKS A-08) y úsala en `show_refs()`.
+- Detalle menor: `app/pages/1_Ficha_de_Caso.py` empieza con BOM (U+FEFF). Guárdalo como UTF-8 **sin** BOM.
+
+Orden de trabajo al retomar:
+1. `git fetch origin && git merge origin/main` en `worker-a/ficha-de-caso` (sin rebase).
+2. En AP-011 completa "Decisión": ACEPTADA, ver DL-020.
+3. A-08 (tarjeta) → integrarla en A-03 → paquete visible + descarga del recibo → capturas → marca el PR #13 como listo para revisión.
+4. A-01 + A-02 (Home = Sala de Situación sobre `scayl.service`), luego A-07 (Agenda) dentro de Home.
+5. Después, el orden original: A-04/A-09, A-10, B-08 + A-05, B-12, A-06.
+Cuando cumplas los pasos, borra esta sección en tu PR.
+
 ## ⚠️ Relevo de sesión (lee esto primero)
 - **Al empezar:** si existe `docs/handoff/LowCrime.md`, léelo antes que cualquier otra cosa y continúa desde su "Siguiente paso concreto".
 - **Al acercarte al límite (~15% restante)**, o si tu humano escribe **"RELEVO"**: detente, haz commit (`WIP:` si está a medias), escribe `docs/handoff/LowCrime.md` con la plantilla `docs/handoff/TEMPLATE.md`, haz push y avísale a tu humano. Si no puedes ver tu límite, díselo a tu humano al empezar y haz un relevo preventivo al terminar cada tarea. Detalle en `AGENTS.md` §2b.
