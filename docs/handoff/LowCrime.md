@@ -1,58 +1,50 @@
-# Relevo · LowCrime · 2026-10-07 01:05 UTC
+# Relevo · LowCrime · 2026-10-07 02:11 UTC
 
-> Leer después de AGENTS.md y docs/agents/LowCrime.md.
+> Sincronizar primero según AGENTS.md §2b, leer notas nuevas del Lead y luego este relevo.
 
-- **Motivo de la parada:** bloqueo de integración de A-03 (A-08 ausente y AP-011 abierta); relevo preventivo.
-- **Rama:** `worker-a/ficha-de-caso` · **Último commit de implementación:** `bd1a3d8` (empujado: sí). Este relevo se guarda en un commit posterior.
-- **PR abierto:** https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/13 (borrador, base main, sin merge).
+- **Motivo de la parada:** relevo preventivo al cerrar A-03/A-08, según AGENTS.md §2b (límite de sesión no visible).
+- **Rama:** `worker-a/ficha-de-caso` · **Último commit de implementación:** `ef78351` (empujado: sí). El relevo se guarda en un commit posterior.
+- **PR abierto:** https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/13 — listo para revisión, OPEN, sin merge.
 
 ## Tarea en curso
-A-03 — seis pestañas implementadas y probadas; no declararla terminada hasta integrar la tarjeta
-compartida A-08. Se documentó AP-011 para el Lead y frictionspp-svg.
+A-03 + A-08 completas para revisión del Lead. Siguiente bloque: A-01 + A-02 (esqueleto, navegación y Sala de Situación), luego A-07. Reasignación DL-020 aplicada.
 
 ## Hecho en esta sesión
-- Leídos AGENTS, LowCrime, MASTER_PLAN, worklogs, ARCHITECTURE, PLAN_REVIEW §2, contratos,
-  fixture sintético, tareas y propuestas. No había relevo previo.
-- `git pull --ff-only origin main` dejó la rama al día (base `8b05b26`).
-- Conservado y completado el archivo de ficha que ya existía sin seguimiento; se agregó a Git.
-- Revisión con justificación/revisor obligatorios y revalidación de transición; evita registrar un
-  paquete distinto del visible. Generación en sesión y vuelta al paquete guardado.
-- Nueve AppTest con fixture sintético y almacenamiento aislado; suite completa en verde.
-- Documentados comportamiento, pendientes y uso de IA. PR #13 abierto en borrador.
+- Antes de leer archivos: árbol limpio; fetch + merge normal de origin/main sin conflictos (`49378b5`); push confirmado. Sin rebase ni force-push.
+- Leídas notas nuevas del Lead, AGENTS y relevo. Base sincronizada: 81 pruebas en verde.
+- AP-011 marcada ACEPTADA por Lead (DL-020); tarjeta compartida `app/components/evidence_card.py` integrada en afirmaciones, conflictos y paquetes.
+- La revisión pasa el paquete visible al servicio; retirado bloqueo temporal. Descarga JSON de recibos con hash en historial; se conserva historial cuando falta recibo.
+- Página UTF-8 sin BOM. Pruebas ampliadas a 84 (12 UI); verificación del hash del paquete generado/revisado.
+- Chromium a 1280×720 con fixture sintético: tarjetas, conflictos, generación template y revisión con recibo. Tres capturas en docs/screenshots.
+- PR #13 actualizado y marcado listo para revisión. Notas del Lead atendidas retiradas; orden futuro preservado en LowCrime.md. No se mergeó.
 
 ## Siguiente paso concreto (lo primero que debe hacer el próximo agente)
-1. Verificar `git log`, estado del PR #13 y `python -m pytest -q` con `.venv` activado.
-2. Revisar la decisión de AP-011 y si A-08 está disponible en main. Integrar la tarjeta compartida
-   en `show_refs()` usando la ruta publicada por frictionspp-svg; no duplicarla ni inventar su interfaz.
-3. Cuando el Lead publique la API, conectar identidad/persistencia del paquete y descarga del recibo.
-   Hasta entonces mantener el bloqueo de revisión para paquetes que difieren del snapshot.
-4. Validar visualmente, añadir capturas y pasar PR #13 a revisión cuando A-03 cumpla sus dependencias.
-   No mergear. Luego seguir A-07 en otra rama/PR y coordinar su montaje en Home.
-5. Antes de datos reales, comprobar H-08: si llega editor_candidates.csv sin editor_top5.json,
-   pedir al humano su elección ciega leyendo solo ese CSV.
+1. `git status`; commit WIP si corresponde; `git fetch origin` y `git merge origin/main` normal. Ante conflictos, detenerse y avisar. Push y confirmar rama/commit.
+2. Leer notas nuevas del Lead, comprobar PR #13 y ejecutar `python -m pytest -q` con `.venv`. Atender revisión si hay observaciones.
+3. Empezar A-01 + A-02 en una rama propia `worker-a/sala-de-situacion` y PR a main. Si #13 no está mergeado, conservar su base como dependencia y documentarlo; no mergear main uno mismo ni reescribir historia.
+4. Después A-07 (agenda) en otro bloque/PR, seguida de A-04/A-09, A-10, B-08/A-05, B-12 y A-06.
+5. Comprobar H-08 antes de exponer datos reales: cuando exista editor_candidates.csv sin editor_top5.json, pedir top 5 humano a ciegas leyendo solo ese CSV.
 
 ## Estado de las pruebas
-`python -m pytest -q` → **80 passed** (71 existentes + 9 AppTest); `git diff --cached --check` limpio.
-No se hicieron capturas ni prueba visual en navegador. No se midieron métricas reales ni LLM.
-El Python global no tenía pytest; se usó el entorno `.venv` existente sin instalar dependencias.
+`python -m pytest -q` → **84 passed** (12 AppTest). `git diff --check` limpio. UTF-8 sin BOM comprobado.
+Python 3.14.7 y Streamlit 1.65.0 del entorno existente; sin instalar dependencias. Validación visual Chromium con datos sintéticos y modo template. No se midieron métricas reales ni modelo LLM.
 
 ## Archivos tocados
-- `app/pages/1_Ficha_de_Caso.py` — página y protección del paquete revisado.
-- `tests/ui/test_case_page.py` — nueve casos AppTest.
-- `docs/A03_CASE_PAGE.md` — ejecución, comportamiento, verificación y límites.
-- `docs/AGENT_PROPOSALS.md` — AP-011 abierta.
-- `docs/AI_TOOLS_USED.md` — entrada Codex/LowCrime.
-- `docs/worklog/worker-a.md` — avance y relevo (solo agregado).
-- `docs/handoff/LowCrime.md` — este relevo.
+- `app/components/evidence_card.py` — componente A-08.
+- `app/pages/1_Ficha_de_Caso.py` — integración, paquete visible, descarga de recibo y BOM.
+- `tests/ui/test_case_page.py`, `tests/ui/test_evidence_card.py` — UI y trazabilidad.
+- `docs/A03_CASE_PAGE.md`, `docs/screenshots/a03-*.png` — comportamiento y capturas.
+- `docs/AGENT_PROPOSALS.md` — decisión AP-011.
+- `docs/agents/LowCrime.md` — notas atendidas retiradas y orden futuro de DL-020 conservado.
+- `docs/AI_TOOLS_USED.md`, `docs/worklog/worker-a.md`, `docs/handoff/LowCrime.md` — registros.
 
 ## Bloqueos, dudas y decisiones pendientes
-- A-08 y el esqueleto A-01 aún no existen en main; la página se ejecuta de forma independiente.
-- AP-011 pendiente: tarjeta compartida, paquete revisado y API de recibo.
-- `data/labels/` solo tenía `.gitkeep`: H-08 todavía no disponible.
+- No quedan bloqueos de AP-011. Revisión y merge de #13 corresponden al Lead.
+- A-01/A-02 pendientes; ficha se ejecuta como página independiente hasta agregar Home.
+- `data/labels/` sigue solo con `.gitkeep`: H-08 no disponible.
 
 ## Contexto que no está en el código
-- El cwd inicial contiene dos carpetas; el repositorio Git está en `scayl-working`. La carpeta
-  `scayl-sala-de-inteligencia-editorial-main` hermana es una copia sin `.git`.
-- Python de `.venv`: 3.14.7, Streamlit 1.65.0. En PowerShell se activó para pruebas con
-  `$env:Path = "$PWD\.venv\Scripts;$env:Path"`; también funciona `.venv/Scripts/python.exe`.
-- Usuario autorizó trabajar en ramas propias y abrir PR hacia main; no mergear.
+- Git está en `C:/Users/Cbast/Downloads/scayl-sala-de-inteligencia-editorial-main/scayl-working`; carpeta hermana es copia sin Git.
+- Para pruebas: `.venv/Scripts/python.exe -m pytest -q`, o anteponer `.venv/Scripts` al PATH y usar `python -m pytest -q`.
+- Preview usó SCAYL_STATE_DIR en carpeta temporal `scayl-a03-preview-state`, SCAYL_SNAPSHOT_DIR `data/raw/a03-synthetic-preview` (fallback al fixture) y SCAYL_LLM_MODE `template`. Servidor de preview y Chromium cerrados al terminar.
+- Scripts de captura CDP y perfil Chromium quedaron en el directorio temporal del sistema, fuera del repo. Se usó Chromium ya instalado; ninguna dependencia nueva.
