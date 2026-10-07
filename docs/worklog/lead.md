@@ -15,3 +15,4 @@
 - 2026-10-07 02:00 UTC · DL-016 · muestreo de pares de agrupación por pool (B-07/B-08)
 - 2026-10-07 02:30 UTC · DL-017 · aclaración oficial C-01 de la ventana de datos; config data_window.v1; notas para frictionspp-svg
 - 2026-10-07 03:00 UTC · C-02 · DL-018 conjunto de desarrollo; AP-010 propuesta (ACP, INEC)
+- 2026-10-07 03:30 UTC · AP-010/DL-019 · evidencia reciente ACP+INEC; contrato 0.3.0; 71 pruebas

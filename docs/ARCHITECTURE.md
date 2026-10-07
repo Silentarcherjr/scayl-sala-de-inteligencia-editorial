@@ -130,6 +130,12 @@ determinarse con la evidencia disponible."*
 - Generación: el validador rechaza las palabras "actual", "hoy", "este año" y "actualmente" en una oración
   cuya única evidencia es histórica.
 
+### 4.4b Evidencia oficial reciente (AP-010, DL-019) — `scayl/evidence/recent.py`
+- Series: `ACP.GATUN.NIVEL` (diaria, observada), `ACP.GATUN.PROYECCION` (solo contexto), `INEC.IPC.VAR_MENSUAL` e `INEC.IPC.VAR_INTERANUAL` (mensuales). Ids de evidencia: `ind:<fuente>:<serie>:<periodo>`.
+- **Confirmación:** la cifra del titular coincide con una observación (ACP ±0,1 pies; INEC ±0,05 pp, en valor absoluto) **y** la publicación es posterior al período (ACP ≤3 días; INEC ≤50 días) ⇒ afirmación HECHO **SUSTENTADA**, que pasa a ser la central. Se elige la coincidencia más cercana en valor y en fecha.
+- **Contexto:** la última observación anterior al corte ⇒ afirmación SUSTENTADA de contexto, siempre con su período. No confirma el titular.
+- Nunca se usan datos posteriores al corte; las proyecciones nunca son hechos; cada dato lleva una advertencia temporal con su fecha.
+
 ### 4.5 Conflictos (T05)
 - Extracción determinista de números con unidad (`%`, magnitud, `millones`, `B/.`, `US$`) y de años y
   fechas en los titulares de un evento y en su evidencia oficial.

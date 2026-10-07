@@ -113,3 +113,10 @@
 - **Motivo:** aprovecha trabajo ya hecho y evita ajustar con los mismos datos que se evalúan y se muestran, lo cual es más defendible ante el jurado.
 - **Compromiso:** el desarrollo y la demo tienen distribuciones temporales distintas; las métricas se reportan sobre 2026.
 - **Fecha:** 2026-10-07
+
+### DL-019 · Evidencia oficial reciente: ACP e INEC (AP-010 aceptada por el equipo)
+- **Decisión:** se agregan el nivel del lago Gatún (ACP, CSV) y el IPC mensual (INEC, PDF) como evidencia oficial reciente. Contrato 0.3.0 (aditivo): `IndicatorObservation.periodo/fuente/frecuencia/es_proyeccion`. Un titular queda SUSTENTADO solo con coincidencia numérica **y** temporal; si no, el dato oficial es contexto citado con su fecha. Las proyecciones nunca son hechos.
+- **Alternativas:** solo WB 2024 (sin evidencia reciente: casi ningún evento sería "suficiente"); fuentes más amplias (sin tiempo).
+- **Motivo:** la aclaración C-02 permite fuentes adicionales y exige datos recientes en la demo; mejora Evidencias (15) y Utilidad (20).
+- **Compromiso:** la extracción del PDF del INEC puede ser frágil (mitigación: pocas filas, cuadro y página citados, verificación humana); la coincidencia numérica puede ser casual, por eso la afirmación pide "verificar que sea la misma medida".
+- **Fecha:** 2026-10-07 · Aprobada por el equipo.

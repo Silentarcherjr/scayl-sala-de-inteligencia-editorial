@@ -13,3 +13,6 @@ world_bank:                                    # PDF §6-B, unchanged: historica
 usgs:                                          # PDF §6-C, unchanged
   official: ["2024-01-01", "2024-12-31"]
   extension_news_window: true                  # AP-004 accepted (DL-017): separate file, declared as extension
+recent_official:                               # AP-010 / DL-019: recent evidence, within the news window
+  acp_gatun: "https://evtms-rpts.pancanal.com/eng/h2o/index.html"   # CSV: historical + projection
+  inec_ipc: "https://www.inec.gob.pa"                               # monthly CPI tables (PDF), cite cuadro + página

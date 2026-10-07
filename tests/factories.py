@@ -22,3 +22,12 @@ def wb(ind, year, value, country="PAN", unit="%"):
 def quake(qid, mag, when, place="10 km S of Boquete, Panama"):
     return SeismicEvent(id=qid, magnitude=mag, time=when, updated=when, longitude=-82.4, latitude=8.6, depth=10.0,
                         place=place, status="reviewed", url=f"https://earthquake.usgs.gov/earthquakes/eventpage/{qid}")
+
+
+def recent(series, periodo, value, fuente, unit, proj=False):
+    from scayl.contracts import IndicatorObservation
+    freq = "diaria" if len(periodo) == 10 else "mensual"
+    return IndicatorObservation(pais_iso3="PAN", indicador_id=series, indicador_nombre=series, anio=int(periodo[:4]),
+                                valor=value, unidad=unit, fuente_url=f"https://example.invalid/{fuente}",
+                                fecha_extraccion=CUTOFF, licencia="pública", periodo=periodo, fuente=fuente,
+                                frecuencia=freq, es_proyeccion=proj)

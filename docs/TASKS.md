@@ -58,6 +58,8 @@
 | H-06 | **Mini-estudio manual vs asistido** (3 tareas cronometradas, protocolo en 06) | F + W | P1 | M3 | TODO | M2 |
 | H-07 | Registro de **prueba fallida → corrección** (regla continua: cada fallo real se anota en 06) | Todos | P0 | M1–M4 | DOING | — |
 | H-08 | Top 5 **a ciego** del editor (Humano 2), antes de que exista ranking | W (editor) | P0 | M0–M1 | TODO | B-01 |
+| B-13 | **ACP**: niveles del lago Gatún (CSV histórico + proyección) → `indicadores_recientes.csv` (AP-010) | **F** frictionspp-svg | P1 | M2 | TODO | B-01 |
+| B-14 | **INEC**: IPC urbano nacional mensual (variación mensual e interanual) desde los cuadros PDF → `indicadores_recientes.csv` | **F** frictionspp-svg | P1 | M2–M3 | TODO | B-13 |
 
 ---
 
@@ -145,6 +147,17 @@ Cada tarea define: objetivo · archivos permitidos · entradas · salidas · int
   - Columnas: `pair_id,id_a,id_b,titulo_a,titulo_b,medio_a,medio_b,fecha_a,fecha_b,mismo_evento,etiquetador,nota`. **Sin** columna de método ni de puntaje: el orden es aleatorio con semilla fija registrada, y quien etiqueta no sabe qué sistema propuso el par.
   - El origen de cada par (baseline / IA / ambos / difícil / azar) va en un archivo separado (`cluster_pairs_origin.csv`) que el etiquetador no abre.
   - B-08 reporta, por método: precisión (sobre los pares que propuso), **recall relativo** (sobre los positivos del pool) y F1, con n y el método declarados. Nunca se llama "recall absoluto".
+
+### B-13 / B-14 · Evidencia oficial reciente (AP-010, DL-019)
+- **Archivo:** `data/raw/v1/indicadores_recientes.csv` (los raw originales, CSV de la ACP y PDF del INEC, en `responses/` con recibo SHA-256). Columnas = las de `indicadores.csv` + `periodo,fuente,frecuencia,es_proyeccion`:
+  `pais_iso3,indicador_id,indicador_nombre,anio,valor,unidad,fuente_url,fecha_extraccion,licencia,periodo,fuente,frecuencia,es_proyeccion`
+- **Series** (ids exactos, los usa `scayl/evidence/recent.py`):
+  - `ACP.GATUN.NIVEL`: nivel **observado** diario, `periodo=AAAA-MM-DD`, `unidad=pies`, `fuente=acp`, `frecuencia=diaria`, `es_proyeccion=false`. Ventana de noticias + 30 días antes.
+  - `ACP.GATUN.PROYECCION`: proyección publicada, `es_proyeccion=true`. Nunca se usa como hecho.
+  - `INEC.IPC.VAR_MENSUAL` e `INEC.IPC.VAR_INTERANUAL`: `periodo=AAAA-MM`, `unidad=%`, `fuente=inec`, `frecuencia=mensual`; de 2025-09 al último mes publicado antes del corte. `indicador_nombre` incluye el cuadro y la página de origen (cita válida según el PDF §7).
+- **Reglas:** valores tal como los publica la fuente (signo incluido); nulo si falta; nunca datos posteriores al corte (2026-10-01); registrar la advertencia de la ACP ("estimación informativa") en `fuentes.json`.
+- **Pruebas:** el CSV valida contra `IndicatorObservation` (contrato 0.3.0); una fila por (serie, período).
+- **Terminado:** filas en el CSV, recibos, catálogo actualizado; `load_snapshot` las devuelve junto a las de WB.
 
 ### B-08 · Evaluación
 - **Salida:** `eval/results/latest.json`:

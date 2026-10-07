@@ -19,12 +19,14 @@ Decisiones vigentes:
 - **DL-015:** GDELT con `fecha_publicacion` = null (el Lead ya resolvió la urgencia).
 - **AP-004 ACEPTADA (DL-017):** además de USGS 2024 (oficial), descarga `eventos_ext.geojson` con la misma caja y M≥3 para la ventana de noticias, declarado como extensión.
 
+- **AP-010 ACEPTADA (DL-019):** evidencia oficial reciente de la **ACP** (nivel del lago Gatún) y del **INEC** (IPC mensual). Tareas **B-13** y **B-14**, con el formato exacto del archivo en `docs/TASKS.md`. Hazlas **después** de cerrar B-01.
+
 Pasos al retomar:
 1. `git fetch origin && git merge origin/main` en `worker-b/snapshot` (sin rebase).
 2. Completa la línea "Decisión" de AP-008 (ACEPTADA, DL-013) y de AP-009 (SUPERADA por DL-017).
 3. **Vuelve a descargar las noticias para la ventana nueva:** GDELT DOC del 2026-09-01 al 2026-10-01 partido por día (ampliable a 90 días; GKG como respaldo). Las respuestas de septiembre de 2025 ya descargadas **no se borran** (raw inmutable): quedan fuera del corpus con motivo `fuera_de_ventana_C-01` en la auditoría.
 4. Construye `noticias.csv` (GDELT + TVN en ventana, deduplicado por URL), `fuentes.json`, `eventos_ext.geojson`; congela y verifica el manifest con `fecha_corte_UTC = 2026-10-01T00:00:00Z`; exporta `data/labels/editor_candidates.csv`.
-5. Abre el PR hacia `main` (borrador si falta algo) y sigue con A-01/A-08/A-02.
+5. Abre el PR hacia `main` (borrador si falta algo). Luego **B-13 (ACP, CSV, ~2 h)** y **B-14 (INEC, PDF, ~3–4 h)**, y después A-01/A-08/A-02.
 Cuando cumplas los pasos, borra esta sección en tu PR.
 
 ## ⚠️ Relevo de sesión (lee esto primero)
