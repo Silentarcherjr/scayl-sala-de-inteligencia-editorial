@@ -11,3 +11,9 @@
 - 2026-10-07 02:34 UTC · A-01/A-02 · rama worker-a/sala-de-situacion desde origin/main 61aba5e tras sincronización limpia; Home, navegación, tabla ordenada, filtros, matriz 3×3, componentes y enlaces a ficha; Consultas provisional; seis pruebas nuevas, suite 95 passed y capturas Chromium 1280×720 · sin tocar A-05/A-10.
 
 - 2026-10-07 02:36 UTC · A-01/A-02 · PR #18 abierto, listo para revisión, sin merge; relevo: ver docs/handoff/LowCrime.md · siguiente A-07 desde main con Home integrado, luego A-04/A-09; A-05/A-10 del Lead.
+
+- 2026-10-07 04:34 UTC · A-04/A-09 · Consultas sobre service.ask, tarjetas A-08, abstención y modo real visibles; cuatro rutas de jurado; 128 passed (7 nuevas). H-08 mergeada y notas atendidas retiradas; DL-024 leído. Siguiente: A-07 y B-08.
+- 2026-10-07 04:36 UTC · A-07 · agenda montada encima de filtros; top 5 y dos rationale por contribución ponderada; fuente sugerida literal, no evidencia; 123 passed en rama independiente de Consultas; captura real a 1280×720.
+- 2026-10-07 04:42 UTC · B-08 · evaluador P@5 por eventos, corrida guardada con hashes y JUnit; 1/5 = 0,20, 183 eventos; limitación DL-024 explícita; resto no medido; 127 passed en rama independiente; captura Trust Lab sin cambiar A-05.
+
+- 2026-10-07 04:44 UTC · relevo · PR #25 Consultas (128 passed), #26 Agenda (123), #27 evaluación P@5 1/5 (127); ramas independientes, sin merge; ver docs/handoff/LowCrime.md. Pendientes del resto de B-08 declarados no medido.
