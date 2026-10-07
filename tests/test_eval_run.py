@@ -77,3 +77,18 @@ def test_cli_writes_utf8_artifacts_with_portable_console(bundle, tmp_path, monke
     saved = json.loads((tmp_path / "eval/results/latest.json").read_text(encoding="utf-8"))
     assert "selección" in saved["metrics"]["precision_at_5"]["limitation"]
     assert (tmp_path / saved["saved_run"]).exists()
+
+
+def test_human_label_metrics_are_imported_with_provenance(tmp_path):
+    import json
+
+    from scayl.eval import run
+    path = tmp_path / "b07.json"
+    path.write_text(json.dumps({"topics": {"status": "medido", "baseline": {"macro_f1": 0.75, "n": 100},
+                                           "ai": {"macro_f1": 0.25, "n": 100}},
+                                "clustering": {"status": "medido; desarrollo asistido", "baseline": {"f1": 0.4},
+                                               "ai": {"f1": 0.9}}}), encoding="utf-8")
+    m = run.human_label_metrics(path)
+    assert m["topics_macro_f1"]["baseline"] == 0.75 and m["topics_macro_f1"]["n"] == 100
+    assert m["clustering"]["ai_f1"] == 0.9 and m["clustering"]["measurement"]["sha256"]
+    assert run.human_label_metrics(tmp_path / "missing.json") == {}

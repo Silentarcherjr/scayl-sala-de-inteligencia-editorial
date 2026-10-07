@@ -21,8 +21,8 @@
 ## Métricas (§9.1) — resultados de ejecuciones guardadas; ausencias como no medido
 | Métrica | Meta orientativa | Resultado | n | Método |
 |---|---|---|---|---|
-| Cobertura de citas | 100% | no medido | — | Validador automático |
-| Validez de sustento | ≥90% | no medido | — | Revisión humana de ≥30 afirmaciones (B-09) |
+| Cobertura de citas | 100% | **45/45** (top 15, qwen3:8b, corrida DL-029) | 45 frases | Validador automático; `eval/results/latest.json` |
+| Validez de sustento | ≥90% | **25/30 = 83%** (25 sí, 2 parcial, 3 no). Por debajo de la meta orientativa. Los 5 casos no "sí" son citas textuales de titulares atribuidos a su medio: la evidencia coincide palabra por palabra; el revisor probablemente juzgó relevancia o veracidad (DL-031). Etiquetas humanas sin modificar | 30 | Revisión humana B-09 (LowCrime), muestra de paquetes template |
 | Abstención correcta | ≥80% | Desarrollo IA: **16/16** tras corregir (6/16 antes, DL-027). Holdout v2 humano: **6/6** sin cambios posteriores de código | 16 desarrollo / 6 holdout | `eval/results/latest.json`; `eval/results/holdout-v2.json` y companion humano. Template/extractivo; no LLM vivo ni set oficial del jurado |
 | Abstención incorrecta | reportar | Desarrollo IA: **0/4**. Holdout humano: **4/4** respecto a expectativas de respuesta; esos controles de conocimiento general no tienen respuesta garantizada en el fixture | 4 por set | `eval/results/latest.json`; `eval/results/holdout-v2-summary.json`; no alterar expectativas para mejorar métrica |
 | Temas macro-F1 (baseline vs IA) | reportar | **0.7568136932 / 0.2464596005**; siete clases, zero_division=0 | 100 | `eval/results/b07-human-metrics.json`; etiquetas explícitas de frictionspp-svg, propuestas visibles |

@@ -1,0 +1,99 @@
+{
+  "run_at": "2026-10-07T21:01:16.650991Z",
+  "source": "data\\processed\\v1\\generation_report.jsonl",
+  "source_sha256": "75ec877a3be918441cb3a4198044e935c643b5f9b22c661d191361ce44653a2f",
+  "packages": 15,
+  "modes": {
+    "live": 15
+  },
+  "models": [
+    "ollama:qwen3:8b"
+  ],
+  "latency_ms": {
+    "n": 15,
+    "median": 13131.0,
+    "p95": 16997.499999999996,
+    "scope": "Story Studio live successful responses, wall clock; includes first load if any. Claims calls excluded. Cached/fallback latency excluded.",
+    "percentile_method": "linear / Hyndman-Fan type 7"
+  },
+  "citation_coverage": {
+    "num": 45,
+    "den": 45,
+    "value": 1.0
+  },
+  "live_citation_coverage": {
+    "num": 45,
+    "den": 45,
+    "value": 1.0
+  },
+  "citation_scope": "Kept brief/script sentences with claim_ids, from generation_report; includes nonfactual disclaimer sentences in denominator. Social copy excluded by existing report. Not support-validity or human fact-checking.",
+  "fallback_count": 0,
+  "sentences_generated": 67,
+  "sentences_kept": 59,
+  "removed_by_code": {
+    "STATUS_MISMATCH": 1,
+    "NUMBER_NOT_IN_EVIDENCE": 4,
+    "UNKNOWN_CLAIM": 1,
+    "UNCITED_FACT": 2
+  },
+  "hardware": {
+    "gpu": "AMD Radeon RX 9060 XT 8 GiB / Ollama Vulkan",
+    "gpu_offloaded_layers": "37/37 (local server log)",
+    "ollama_version": {
+      "version": "0.40.0"
+    },
+    "ollama_ps": {
+      "models": [
+        {
+          "name": "qwen3:8b",
+          "model": "qwen3:8b",
+          "size": 5569815510,
+          "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen3",
+            "families": [
+              "qwen3"
+            ],
+            "parameter_size": "8.2B",
+            "quantization_level": "Q4_K_M"
+          },
+          "expires_at": "2026-10-07T16:29:05.5604381-05:00",
+          "size_vram": 5569815510,
+          "context_length": 4096,
+          "runner": "llamacpp"
+        }
+      ]
+    },
+    "embedding_device": "cpu"
+  },
+  "invocation": "make unavailable on Windows; exact recipe: .venv/Scripts/python -m scayl.pipeline build --snapshot data/raw/v1 --llm live --top 15",
+  "cache": "data\\cache\\llm\\precompute-dl029-20261007T205446Z",
+  "api_cost_usd": 0.0,
+  "code_git_sha": "f951bb249fdcb5b163d15e2d8bbae91131075594",
+  "changes": "DL-029: topics baseline rules, E5 clustering; ranking recomputed. No model/tau/weight changes.",
+  "topics_method": "baseline",
+  "clustering": "st:intfloat/multilingual-e5-base",
+  "started_at_utc": "2026-10-07T20:54:46.118450Z",
+  "completed_at_utc": "2026-10-07T20:59:06.518037Z",
+  "snapshot_manifest_sha256": "6d7542a1b5e508340dde315c413d7954f4dddddd035996cfdae9c6c210f35535",
+  "source_descriptions": 0,
+  "top15_event_ids": [
+    "EVT-0101",
+    "EVT-0116",
+    "EVT-0078",
+    "EVT-0051",
+    "EVT-0083",
+    "EVT-0143",
+    "EVT-0165",
+    "EVT-0081",
+    "EVT-0108",
+    "EVT-0107",
+    "EVT-0114",
+    "EVT-0133",
+    "EVT-0141",
+    "EVT-0145",
+    "EVT-0160"
+  ]
+}
