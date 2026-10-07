@@ -31,8 +31,8 @@ respuesta original, los IDs, propuesta y etiqueta humana, y la hora UTC de cada 
 El CSV conserva su esquema; la hora se vincula por ID mediante esta bitácora. No se copian
 propuestas a etiquetas humanas sin autorización explícita.
 
-Estado: revisión en curso en `worker-b/human-inputs`; el conteo actual se obtiene de las
-filas con `confirmado=si`. Las métricas se vuelven a ejecutar al terminar todos los bloques.
+Estado: revisión completada en `worker-b/human-inputs`; 100 temas y 32 titulares de
+agrupación con `confirmado=si`. Las métricas se ejecutaron tras terminar todos los bloques.
 
 Temas completados el 2026-10-07: 100/100 etiquetas explícitas de `frictionspp-svg`.
 La ejecución guardada en `eval/results/b07-human-metrics.json` mide macro-F1

@@ -104,3 +104,5 @@ Medición real E5 en CPU (torch 2.14.1+cpu, CUDA no disponible). Matrices ignora
 2026-10-07T20:32:42.410882Z - Holdout v2 ejecutado sin cambiar runner/qa/casos existentes: abstención correcta6/6, falsa relativa a expectativas4/4, controles respondidos0/4, coincidencias6/10. Fallan HV2-03/05/07/09 por abstención ante ausencia de evidencia pertinente. Scope hardcoded del runner se conserva; procedencia humana corregida solo en companion. Sin tuning ni cambio de expectativas.
 
 2026-10-07 20:32 UTC - Holdout v2 humano: Diez preguntas y expectativas originales de frictionspp-svg. Runner intacto: abstencion correcta6/6, falsa respecto a expectativas4/4, controles0/4, coincidencias6/10. Cuatro fallos preservados; conocimiento general sin soporte garantizado en fixture. Scope humano en companion, raw intacto. Un PR junto con B-07.
+
+2026-10-07T20:43:16.928195Z - Integrado origin/main5dcac75/PR52 mediante merge limpio; solo el Lead cambió pipeline a temas por reglas (DL029). Evaluador y runner/QA intactos. Checks finales188pytest y Ruffglobal verdes;132labels y diez preguntas/hashes íntegros. Preparado único PR de entradas humanas.

@@ -149,6 +149,6 @@
     "False abstention metric is relative to the original human expectations, not proof of rejecting supported answers.",
     "Existing runner fixture, not an evaluation on the real C-01 bundle.",
     "No validator probes, live-model robustness, support validity or official jury-set performance measured.",
-    "No code or expectation changes after the holdout run."
+    "No runner/QA code or expectation changes after the holdout run. Lead PR52 changed only pipeline topic defaults independently; merged cleanly before submission."
   ]
 }
