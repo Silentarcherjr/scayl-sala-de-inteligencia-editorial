@@ -1,0 +1,33 @@
+{
+  "run_at": "2026-10-07T20:02:05.595088Z",
+  "reviewer": "frictionspp-svg",
+  "counts": {
+    "temas": {
+      "num": 100,
+      "den": 100,
+      "blocks": 10
+    },
+    "agrupacion": {
+      "num": 32,
+      "den": 32,
+      "blocks": 4
+    }
+  },
+  "first_reviewed_at_utc": "2026-10-07T19:34:26.138970Z",
+  "last_reviewed_at_utc": "2026-10-07T19:58:51.679039Z",
+  "sha256": {
+    "data\\labels\\human_review_log.jsonl": "d1d3ad249a6a1519b9b84a59a1cc1a5fd73e4e588282bbbbcc741f751c24a6ea",
+    "data/labels/topics_human.csv": "79b525ad2ec5b4a14e349ee58599bbcf70f94e7c23a8041131515e524f20c2fb",
+    "data/labels/dev2025_groups_human.csv": "2ddf1d36a2e167423e57f28fe01c32c206cfa8909644608ee8271d4d805dbdb0",
+    "eval/results/b07-human-metrics.json": "80f86d3b6a0f92fe868f69bbcea176f944eaf8f0e1769f676a6c7cc928878919",
+    "scayl/eval/human_labels.py": "0d0e9da98e0cf3a246b5bde221f3d86bc7d201adc46e17f85f655c3b067278ff",
+    "scayl/intel/topics.py": "b52dc206fca9a487848130de879fa3f7ffe988e4472787719067042ac44ecc30",
+    "scayl/intel/topics_ai.py": "781b1b6042576e501a6d135cbf5c13e9138bc38db5b2a0f125d089d8a302553a",
+    "scayl/intel/cluster.py": "2d646e4096e7a819bc572e634d3399d193312a85b8683655bd624555231a33fa"
+  },
+  "limitations": [
+    "Assisted human review; proposals visible.",
+    "Development clustering pool previously used for tau calibration; not held-out.",
+    "No model, tau, prototype or ranking adjustment using these labels."
+  ]
+}

@@ -60,3 +60,51 @@ Medición real E5 en CPU (torch 2.14.1+cpu, CUDA no disponible). Matrices ignora
 2026-10-07 19:11 UTC - B-06: Recuperador experimental opt-in BM25 positivo+coseno E5, scores[0,1], sin integrar qa.py. 176pytest y Ruff propio verdes. Smoke real3/3consultas con1314unidades; precision y latenciaQA no medidas. H-06 compartido ya tienePR45 y espera humanos.
 
 2026-10-07 19:13 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md; B-06 https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/50. Continúa Volver a los bloqueos: diez preguntas humanas holdout_v2, confirmar cien temas/32 grupos B-07 y seis tiempos H-06 PR45. CI PR39 conserva36avisosfuera tests paraLead. No hay mas tareas autonomas.
+
+2026-10-07T19:34:26.138970Z - B-07 humano: titulares 1-10 etiquetados explícitamente por frictionspp-svg; 10/100 revisados. Hora y respuesta en data/labels/human_review_log.jsonl. Un PR al finalizar todas las entradas.
+
+2026-10-07 19:34 UTC - B-07 revisión interactiva: Codex presenta propuestas guardadas por bloques de diez; frictionspp-svg aporta etiquetas humanas explícitas. Primer bloque10/100 confirmado: economia,turismo y ocho otro; horaUTC/respuesta/IDs conservados en human_review_log.jsonl. Métricas pendientes de revisión completa.
+
+2026-10-07T19:35:53.562049Z - B-07 humano: titulares 11-20 etiquetados explícitamente por frictionspp-svg; 20/100 revisados. Hora y respuesta en data/labels/human_review_log.jsonl. Un PR al finalizar todas las entradas.
+
+2026-10-07T19:36:49.318220Z - B-07 humano: titulares 21-30 etiquetados explícitamente por frictionspp-svg; 30/100 revisados. Hora y respuesta en data/labels/human_review_log.jsonl. Un PR al finalizar todas las entradas.
+
+2026-10-07T19:37:53.741744Z - B-07 humano: titulares 31-40 etiquetados explícitamente por frictionspp-svg; 40/100 revisados. Hora y respuesta en data/labels/human_review_log.jsonl. Un PR al finalizar todas las entradas.
+
+2026-10-07T19:38:54.336930Z - B-07 humano: titulares 41-50 etiquetados explícitamente por frictionspp-svg; 50/100 revisados. Hora y respuesta en data/labels/human_review_log.jsonl. Un PR al finalizar todas las entradas.
+
+2026-10-07T19:42:21.359474Z - B-07 humano: titulares 51-60 etiquetados explícitamente por frictionspp-svg; 60/100 revisados. Hora y respuesta en data/labels/human_review_log.jsonl. Un PR al finalizar todas las entradas.
+
+2026-10-07T19:43:39.703002Z - B-07 humano: titulares 61-70 etiquetados explícitamente por frictionspp-svg; 70/100 revisados. Hora y respuesta en data/labels/human_review_log.jsonl. Un PR al finalizar todas las entradas.
+
+2026-10-07T19:45:02.344616Z - B-07 humano: titulares 71-80 etiquetados explícitamente por frictionspp-svg; 80/100 revisados. Hora y respuesta en data/labels/human_review_log.jsonl. Un PR al finalizar todas las entradas.
+
+2026-10-07T19:46:00.781508Z - B-07 humano: titulares 81-90 etiquetados explícitamente por frictionspp-svg; 90/100 revisados. Hora y respuesta en data/labels/human_review_log.jsonl. Un PR al finalizar todas las entradas.
+
+2026-10-07T19:47:11.256057Z - B-07 humano: titulares 91-100 etiquetados explícitamente por frictionspp-svg; 100/100 revisados. Hora y respuesta en data/labels/human_review_log.jsonl. Un PR al finalizar todas las entradas.
+
+2026-10-07 19:52 UTC - B-07 temas humanos completos: 100/100 etiquetas explícitas de frictionspp-svg auditadas con UTC. Macro-F1 ejecutado: baseline0.7568136932192232, IA0.24645960051496715; sieteclases. Sin tuning con gold. Agrupacion0/32 pendiente; continúa interacción y un PR al final.
+
+2026-10-07T19:52:54.285943Z - relevo preventivo: ver docs/handoff/frictionspp-svg.md. Temas100/100 ymacroF1medido; siguiente agrupación1–10; continuarinteracción.
+
+2026-10-07T19:56:07.086875Z - B-07 humano: grupos de titulares 1-10 confirmados explícitamente por frictionspp-svg; 10/32 revisados. Hora y respuesta en data/labels/human_review_log.jsonl.
+
+2026-10-07T19:57:06.719717Z - B-07 humano: grupos de titulares 11-20 confirmados explícitamente por frictionspp-svg; 20/32 revisados. Hora y respuesta en data/labels/human_review_log.jsonl.
+
+2026-10-07T19:58:01.135281Z - B-07 humano: grupos de titulares 21-30 confirmados explícitamente por frictionspp-svg; 30/32 revisados. Hora y respuesta en data/labels/human_review_log.jsonl.
+
+2026-10-07T19:58:51.679039Z - B-07 humano: grupos de titulares 31-32 confirmados explícitamente por frictionspp-svg; 32/32 revisados. Hora y respuesta en data/labels/human_review_log.jsonl.
+
+2026-10-07 20:02 UTC - B-07 grupos humanos completos: 32/32 titulares confirmados explicitamente en cuatro bloques por frictionspp-svg. 488 pares: baseline P12/12 R12/43 F1=0.4363636364; IA P42/42 R42/43 F1=0.9882352941. Auditoria132/132filas; desarrollo asistido, no holdout. 188pytest y Ruffglobal verdes. Falta red-teamv2 humano para PR unico.
+
+2026-10-07T20:02:05.872997Z - relevo preventivo: ver docs/handoff/frictionspp-svg.md. B-07 completo y medido; esperar diez preguntas humanas de holdout v2, continuar interacción.
+
+2026-10-07T20:28:02.219692Z - Holdout v2: recibidas diez preguntas originales y expectativas explícitas de frictionspp-svg (6 abstenciones esperadas,4 respuestas). Texto/expectativas sin alterar; categoría de controles solo para runner. Procedencia y UTC guardados. Ejecutar runner sin cambiar código.
+
+2026-10-07T20:32:42.410882Z - Holdout v2 ejecutado sin cambiar runner/qa/casos existentes: abstención correcta6/6, falsa relativa a expectativas4/4, controles respondidos0/4, coincidencias6/10. Fallan HV2-03/05/07/09 por abstención ante ausencia de evidencia pertinente. Scope hardcoded del runner se conserva; procedencia humana corregida solo en companion. Sin tuning ni cambio de expectativas.
+
+2026-10-07 20:32 UTC - Holdout v2 humano: Diez preguntas y expectativas originales de frictionspp-svg. Runner intacto: abstencion correcta6/6, falsa respecto a expectativas4/4, controles0/4, coincidencias6/10. Cuatro fallos preservados; conocimiento general sin soporte garantizado en fixture. Scope humano en companion, raw intacto. Un PR junto con B-07.
+
+2026-10-07T20:43:16.928195Z - Integrado origin/main5dcac75/PR52 mediante merge limpio; solo el Lead cambió pipeline a temas por reglas (DL029). Evaluador y runner/QA intactos. Checks finales188pytest y Ruffglobal verdes;132labels y diez preguntas/hashes íntegros. Preparado único PR de entradas humanas.
+
+2026-10-07T20:45:22.309333Z - relevo final: ver docs/handoff/frictionspp-svg.md. Terminado el alcance humano B-07/holdoutv2; único PR53 abierto, listo para revisión. 188pytest/Ruffglobal verdes; cuatro discrepancias humanas del holdout conservadas. Solo el Lead mergea.

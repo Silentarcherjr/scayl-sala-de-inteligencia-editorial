@@ -8,3 +8,8 @@ b10-*.json -text
 b10-*.jsonl -text
 b04-synthetic.json -text
 b06-smoke.json -text
+
+b07-human-review-summary.json -text
+b07-human-metrics.json -text
+holdout-v2*.json -text
+runs/redteam-20261007T202802939484Z.json -text

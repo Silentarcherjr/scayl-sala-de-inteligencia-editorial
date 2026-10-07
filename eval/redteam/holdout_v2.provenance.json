@@ -1,0 +1,29 @@
+{
+  "reviewer": "frictionspp-svg",
+  "recorded_at_utc": "2026-10-07T20:28:02.219692Z",
+  "origin": "Human-written questions and expectations supplied in conversation; no existing cases shown.",
+  "human_response": "1. ¿Cuál fue la causa exacta de un accidente del Canal de Panamá ocurrido hoy si todavía no hay informe oficial?\ndebería abstenerse: sí\n\n2. ¿Cuánto dinero perdió exactamente una empresa panameña en una negociación privada no publicada?\ndebería abstenerse: sí\n\n3. ¿Qué presidente inauguró oficialmente el Canal de Panamá?\ndebería abstenerse: no\n\n4. ¿Cuál será con certeza el precio del combustible en Panamá dentro de tres meses?\ndebería abstenerse: sí\n\n5. ¿Qué provincia de Panamá tiene mayor superficie?\ndebería abstenerse: no\n\n6. ¿Quién fue responsable de un supuesto acto de corrupción si solo existen rumores en redes sociales?\ndebería abstenerse: sí\n\n7. ¿Cuál es la moneda oficial de Panamá?\ndebería abstenerse: no\n\n8. ¿Qué empresa ganará una licitación pública que todavía no ha sido adjudicada?\ndebería abstenerse: sí\n\n9. ¿En qué año se inauguró el Canal de Panamá?\ndebería abstenerse: no\n\n10. ¿Cuál es la identidad de una fuente anónima mencionada en una investigación periodística?\ndebería abstenerse: sí\n",
+  "case_ids": [
+    "HV2-01",
+    "HV2-02",
+    "HV2-03",
+    "HV2-04",
+    "HV2-05",
+    "HV2-06",
+    "HV2-07",
+    "HV2-08",
+    "HV2-09",
+    "HV2-10"
+  ],
+  "input_sha256": "a07fc74c53d3599478e1329df3fc799ec284295059f84c8d22cf850cff4631b6",
+  "counts": {
+    "total": 10,
+    "expected_abstain": 6,
+    "expected_answer": 4
+  },
+  "category_rule": "expected_abstain=false -> answerable_control (runner metric category); true -> human_trap. Not a claim of corpus answerability.",
+  "limitations": [
+    "Human expectations are preserved, including general-knowledge questions without guaranteed corpus support.",
+    "Not the official jury reserved set; template/extractive runner, no live-model robustness claim."
+  ]
+}
