@@ -1,0 +1,12 @@
+{
+  "created_at": "2026-10-07T17:52:12.349527+00:00",
+  "snapshot": "v1",
+  "bundle_sha256": "564c2142637436e7c3af2692672f4b4eb07c0b1f1857fc12b8fb3bc749e936bf",
+  "rows_sha256": "97a147d3e09689fcd0da700b345218cd4e2999477d8de7bea4fe19913cad8477",
+  "n": 30,
+  "generation_modes": [
+    "template"
+  ],
+  "method": "Primera oración factual por paquete en orden del bundle, rondas brief/script; textos únicos.",
+  "scope": "Muestra determinista de paquetes, no aleatoria ni gold humano hasta recibir etiquetas."
+}
