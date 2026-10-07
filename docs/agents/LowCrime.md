@@ -29,8 +29,8 @@ que elija su top 5 leyendo solo ese CSV**, sin abrir la app con datos reales ni 
 2. **A-01 + A-02 · Esqueleto, navegación y Sala de Situación**, sobre `scayl.service`, en `app/Home.py` (reasignadas a LowCrime por DL-020).
 3. **A-07 · Agenda de la mañana**: componente en `app/components/agenda.py`, montado por LowCrime en el bloque superior de Home (DL-020).
 4. **A-04 + A-09 · Consultas + Modo jurado** en `app/pages/2_Consultas.py`.
-5. **A-10 · Simulador de pesos** (usa un stub de `rescore` hasta que el Lead publique L-15).
-6. **B-08 · Evaluación** (fuentes ya disponibles del Lead: `data/processed/<snap>/generation_report.jsonl` para la cobertura de citas, las eliminaciones por código, la preservación de atribución, la latencia y los tokens; `scayl.service.ask()` para el benchmark de consultas y la abstención; `pytest` para T01–T10) (`scayl/eval/**`, salida `eval/results/latest.json` con el esquema de TASKS B-08) + **A-05 · Trust Lab** en `app/pages/3_Trust_Lab.py`.
+5. ~~A-10 · Simulador de pesos~~ **hecho por el Lead (DL-021)**: `app/pages/4_Simulador_de_pesos.py`.
+6. **B-08 · Evaluación** (fuentes ya disponibles del Lead: `data/processed/<snap>/generation_report.jsonl` para la cobertura de citas, las eliminaciones por código, la preservación de atribución, la latencia y los tokens; `scayl.service.ask()` para el benchmark de consultas y la abstención; `pytest` para T01–T10) (`scayl/eval/**`, salida `eval/results/latest.json` con el esquema de TASKS B-08) (la vista **A-05 · Trust Lab** ya la hizo el Lead en `app/pages/3_Trust_Lab.py`, DL-021: tu B-08 solo debe escribir `eval/results/latest.json` con el esquema de TASKS B-08 y la página lo muestra).
 7. **B-12 · Set de 10 ataques** (`data/labels/redteam.jsonl`, marcados como sintéticos) y su métrica de resistencia.
 8. **A-06 · Despliegue** (construye el bundle con `make public-bundle`, que reutiliza la caché y quita las descripciones del RSS; incluye `data/cache/llm/` en el Space) en un Hugging Face Space con contraseña, modo caché, solo titular + URL (AP-001; carpeta `deploy/**`).
 

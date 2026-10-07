@@ -97,6 +97,7 @@ def _report(event: Event, pkg: StoryPackage, generated: int, attribution=None, f
         "prompt_version": meta.prompt_version, "latency_ms": meta.latency_ms, "tokens_in": meta.tokens_in,
         "tokens_out": meta.tokens_out, "cost_usd": meta.cost_usd, "sentences_generated": generated,
         "sentences_kept": kept, "removed_by_code": removed, "fallback_reason": fallback,
+        "kept_brief_script": len(pkg.brief) + len(pkg.script),
         "kept_sentences_with_valid_citation": sum(1 for s in pkg.brief + pkg.script if s.claim_ids),
         "attribution": None if attribution is None else {
             "candidates": attribution.candidates, "preserved_before_validation": attribution.preserved_before,
