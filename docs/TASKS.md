@@ -16,7 +16,7 @@
 | L-04 | `evidence/provenance.py` (Source DNA) | L | P0/P1 | M1 | DONE | B-03 |
 | L-05 | `evidence/linking.py` + `temporal.py` (WB/USGS, Temporal Guard) | L | P0 | M1 | DONE | B-03 |
 | L-06 | `evidence/conflicts.py` (numéricos, fechas, unidades, períodos) | L | P0 | M2 | DONE (numérico; fechas/unidades en M2) | L-05 |
-| L-07 | `pipeline.py build` + `service.py` + `bundle.json` + `fichas.jsonl` | L | P0 | M1 | DOING (pipeline + service listos; esperan B-03/B-05) | L-03, B-03, B-05 |
+| L-07 | `pipeline.py build` + `service.py` + `bundle.json` + `fichas.jsonl` | L | P0 | M1 | DONE (pipeline corre con datos reales) | L-03, B-03, B-05 |
 | L-08 | `gen/llm.py` (Ollama + caché + meta) + `guard.py` | L | P0 | M2 | DONE | — |
 | L-09 | `gen/validators.py` + fallback `template` | L | P0 | M1 | DONE | L-01 |
 | L-10 | `gen/claims.py` + `studio.py` + prompts v1 | L | P0 | M2 | DONE | L-08, L-09 |
@@ -30,11 +30,11 @@
 | A-04 | Consultas (Q&A) | **W** LowCrime | P0 | M2 | TODO | A-01 |
 | A-05 | Trust Lab (vista) | **L** Lead (DL-021) | P1 | M3 | DONE (vista; métricas reales pendientes de B-08) | B-08 |
 | A-06 | Despliegue del enlace en modo `cache` | **W** LowCrime | P0 | M3 | TODO | AP-001, L-07 |
-| B-01 | Construir el snapshot propio según el PDF §6–7 (fetchers) → `data/raw/v1` | **F** frictionspp-svg | P0 | M0 | DOING (fetchers listos; falta noticias.csv/manifest) | — |
-| B-02 | `ingest/manifest.py` (SHA-256, conteos, transformaciones) + diccionario | **F** frictionspp-svg | P0 | M0 | DOING (fetchers listos; falta noticias.csv/manifest) | B-01 |
-| B-03 | `ingest/validate.py` + normalización → `data/processed` + `quality_report` (T01) | **F** frictionspp-svg | P0 | M1 | TODO | B-01 |
+| B-01 | Construir el snapshot propio según el PDF §6–7 (fetchers) → `data/raw/v1` | **F** frictionspp-svg | P0 | M0 | DONE (PR #19) | — |
+| B-02 | `ingest/manifest.py` (SHA-256, conteos, transformaciones) + diccionario | **F** frictionspp-svg | P0 | M0 | DONE (PR #19) | B-01 |
+| B-03 | `ingest/validate.py` + normalización → `data/processed` + `quality_report` (T01) | **L** Lead (DL-023) | P0 | M1 | DONE | B-01 |
 | B-04 | Casos sintéticos T01/T03/T05/T07 en `data/synthetic/` | **F** frictionspp-svg | P0 | M1 | TODO | L-01 |
-| B-05 | `intel/embed.py` + `topics.py` + `cluster.py` (baseline + IA) | **F** frictionspp-svg | P0 | M1–M2 | TODO | B-03 |
+| B-05 | `intel/embed.py` + `topics.py` + `cluster.py` (baseline + IA) | **L** baseline / **F** IA (DL-023) | P0 | M1–M2 | DOING (baseline listo; falta variante IA + calibración) | B-03 |
 | B-06 | `intel/retrieve.py` (BM25 + coseno) | **F** frictionspp-svg | P0 | M2 | TODO | B-05 |
 | B-07 | Etiquetas humanas: temas (≥100), pares de agrupación, top 5 ciego, benchmark dev (40) | F (etiquetas) + W (top 5 ciego) | P0 | M2 | TODO | B-03 |
 | B-08 | `eval/`: métricas, benchmark, latencia → `eval/results/latest.json` | **W** LowCrime | P0/P1 | M3 | TODO | B-05, L-10, L-11 |

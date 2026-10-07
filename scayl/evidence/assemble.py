@@ -133,9 +133,9 @@ def build_event(
     warnings = warnings + recent.warnings
     conflicts = seismic.conflicts + percent_conflicts(event_id, items, start=len(seismic.conflicts) + 1)
     official = seismic.evidence + recent.evidence + wb_refs
-    is_seismic_event = bool(seismic.claims)
+    is_seismic_event = seismic.any
     claims = build_claims(event_id, items, rep, seismic.claims, bool(conflicts), is_seismic_event,
-                          confirming=recent.confirming, context=recent.context)
+                          confirming=recent.confirming, context=seismic.context + recent.context)
 
     pubs = [i.fecha_publicacion for i in items if i.fecha_publicacion]
     dets = [i.fecha_deteccion for i in items if i.fecha_deteccion]

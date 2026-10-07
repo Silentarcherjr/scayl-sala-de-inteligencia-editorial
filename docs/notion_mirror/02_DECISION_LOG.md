@@ -137,3 +137,10 @@
 - **Decisión:** después de congelar el snapshot, frictionspp-svg hace primero B-03 (validación y carga) y luego B-13/B-14.
 - **Motivo:** sin `load_snapshot` el pipeline no corre con datos reales, y eso bloquea el hito M1, la prueba en la GPU, el top 5 a ciegas y la evaluación. ACP e INEC suman evidencia, pero no bloquean el flujo.
 - **Fecha:** 2026-10-07
+
+### DL-023 · El Lead implementa B-03 y el baseline de B-05; primera corrida con datos reales
+- **Decisión:** frictionspp-svg se quedó sin sesión con el snapshot congelado; B-03 (`load_snapshot`) y el baseline de B-05 (temas por reglas + agrupación TF-IDF) los implementa el Lead para desbloquear M1. frictionspp-svg conserva la variante IA (embeddings), la calibración con el conjunto de desarrollo, las etiquetas, el benchmark, ACP e INEC.
+- **Resultado medido (snapshot C-01):** 187 señales → 187 válidas (0 excluidas; 131 códigos de idioma normalizados) → 183 eventos; 3 alto, 59 medio, 121 bajo; 144 con evidencia insuficiente, 39 parcial, **0 suficiente**. Sin ACP/INEC no hay confirmación oficial reciente (confirma la necesidad de AP-010).
+- **Hallazgos en datos reales** (corregidos, ver 06): (1) un titular que **negaba** un sismo quedó "confirmado" por USGS; (2) una diferencia de magnitud 4.7 vs 4.5 se absorbía sin mostrarse.
+- **Salvaguarda P@5:** `data/processed/*/` no se sube a `main` hasta que exista el top 5 ciego (H-08).
+- **Fecha:** 2026-10-07

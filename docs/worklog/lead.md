@@ -23,3 +23,4 @@
 - 2026-10-07 05:40 UTC · (pendiente para AI_TOOLS_USED al consolidar) Claude Code: UI Trust Lab + simulador, 5 AppTest, capturas Chromium; telemetría Streamlit desactivada
 - 2026-10-07 06:10 UTC · merge PR #18; revisión PR #19 (historial limpio verificado)
 - 2026-10-07 06:20 UTC · DL-022 · orden de frictionspp-svg: B-03 antes de ACP/INEC
+- 2026-10-07 07:00 UTC · DL-023 · B-03 + B-05 baseline; pipeline con datos reales; 2 fallos reales corregidos

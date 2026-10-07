@@ -8,32 +8,20 @@ Tu dueño humano está contigo: pídele confirmación antes de cualquier acción
 Camino crítico del proyecto: **datos → inteligencia semántica → primera UI visible**. Otros dependen de ti
 (el snapshot desbloquea todo), así que prioriza entregar pronto y en PRs pequeños.
 
-## 📌 Notas del Lead pendientes (actualizado 2026-10-07) — aplícalas antes de seguir
-**Cambio importante: aclaración OFICIAL de la organizadora (C-01, `docs/official_clarifications.md`, DL-017).**
-La ventana de noticias ya **no** es septiembre de 2025: es **[2025-10-02, 2026-10-01)**, con corte el 2026-10-01.
-Las fechas viven en `scayl/config/data_window.v1.yaml`: léelas de ahí y no las escribas a mano.
+## 📌 Notas del Lead pendientes (actualizado 2026-10-07, tras mergear tu PR #19)
+**Tu snapshot C-01 está en `main` y verificado** (187 noticias, 50 TVN, manifest con 0 diferencias). Gracias.
+Como te quedaste sin sesión y B-03 bloqueaba el hito M1, el Lead hizo (DL-023):
+- **B-03** `scayl/ingest/validate.py::load_snapshot` (nulos preservados, fechas inválidas marcadas, exclusiones con motivo, ventana C-01, URL duplicadas, idioma normalizado a ISO 639-1; lee también `indicadores_recientes.csv` y `eventos_ext.geojson`).
+- **B-05 baseline:** `scayl/intel/embed.py` (TF-IDF de caracteres), `topics.py` (reglas por palabras clave) y `cluster.py` (aglomerativo con restricción de 7 días). **El pipeline ya corre con datos reales.**
+- Se quitó `tmp/` del repo (ahora está en `.gitignore`; tus archivos siguen en tu disco). `data/processed/*/` no se sube hasta que exista el top 5 ciego.
 
-Decisiones vigentes:
-- **AP-008 ACEPTADA (DL-013):** cuadrícula WB = 540 filas (6×6×15). WB 2010–2024 **sin cambios**.
-- **AP-009 SUPERADA (DL-017):** las 48 entradas TVN de 2024–2025 quedan **fuera** de la ventana. En su lugar, usa las entradas del RSS actual con `pubDate` dentro de [2025-10-02, 2026-10-01): `origen=tvn_rss`, `fecha_publicacion` = pubDate, `fecha_deteccion` = null, `alcance_texto=titular_metadatos`.
-- **DL-015:** GDELT con `fecha_publicacion` = null (el Lead ya resolvió la urgencia).
-- **AP-004 ACEPTADA (DL-017):** además de USGS 2024 (oficial), descarga `eventos_ext.geojson` con la misma caja y M≥3 para la ventana de noticias, declarado como extensión.
-
-- **AP-010 ACEPTADA (DL-019):** evidencia oficial reciente de la **ACP** (nivel del lago Gatún) y del **INEC** (IPC mensual). Tareas **B-13** y **B-14**, con el formato exacto del archivo en `docs/TASKS.md`. Hazlas **después** de cerrar B-01.
-
-Pasos al retomar:
-1. `git fetch origin && git merge origin/main` en `worker-b/snapshot` (sin rebase).
-2. Completa la línea "Decisión" de AP-008 (ACEPTADA, DL-013) y de AP-009 (SUPERADA por DL-017).
-3. **Primero corrige el adaptador del RSS** (tu relevo lo detectó): `fecha_deteccion` = null, no la fecha de extracción; con una prueba. **Luego vuelve a descargar las noticias para la ventana nueva:** GDELT DOC del 2026-09-01 al 2026-10-01 partido por día (ampliable a 90 días; GKG como respaldo). Las respuestas de septiembre de 2025 ya descargadas **no se borran** (raw inmutable): quedan fuera del corpus con motivo `fuera_de_ventana_C-01` en la auditoría.
-4. Construye `noticias.csv` (GDELT + TVN en ventana, deduplicado por URL), `fuentes.json`, `eventos_ext.geojson`; congela y verifica el manifest con `fecha_corte_UTC = 2026-10-01T00:00:00Z`; exporta `data/labels/editor_candidates.csv`.
-5. Marca el PR #19 como **listo para revisión** cuando el snapshot esté congelado y verificado. Luego, **en este orden** (DL-022):
-   1. **B-03 · `scayl.ingest.validate.load_snapshot(dir)`** (T01). Es lo que bloquea el hito M1: el Lead corre `python -m scayl.pipeline build` apenas exista. Interfaz exacta en `scayl/pipeline.py::_load_worker_b` y en TASKS B-03; incluye `indicadores_recientes.csv` cuando exista.
-   2. **B-13 (ACP, CSV, ~2 h)** y **B-14 (INEC, PDF, ~3–4 h)**.
-   3. **B-05 + B-07** (temas, agrupación y etiquetas, con el muestreo de pares de DL-016), **B-04**, **B-11**, **B-06** y **B-10** (benchmark en tu GPU: `make ping`).
-   **Ya no haces UI** (DL-020: A-01/A-02/A-08 pasan a LowCrime).
+**Tu orden ahora:**
+1. **B-13 ACP** y **B-14 INEC** → `data/raw/v1/indicadores_recientes.csv` (formato exacto en TASKS B-13/B-14). Snapshot v1 ya congelado: agrega estos archivos como **adición declarada** (nuevo inventario + manifest recongelado como v1.1 o con su recibo; no alteres bytes existentes).
+2. **B-05 variante IA** (tu GPU): crea `scayl/intel/embed_st.py` con `class SentenceTransformerEmbedder` (atributo `name`, `encode(texts) -> np.ndarray` L2-normalizado) y `scayl/intel/topics_ai.py` con `classify(items) -> list[(Topic, conf)]`. El pipeline los usa solo (`SCAYL_INTEL=ai`). Agrega `DEFAULT_TAU[<name>]` en `cluster.py` (eso es local a tu tarea).
+3. **Calibra** τ y las reglas con el **conjunto de desarrollo de 2025** (DL-018), nunca con la ventana C-01.
+4. **B-07** etiquetas (≥100 temas + pares por pool DL-016) y **B-10** benchmark de modelos (`make ping`, latencia real en tu AMD).
+5. **Cuando LowCrime haya entregado `data/labels/editor_top5.json`**: `make precompute` en tu máquina (LLM real sobre el top 15) y guarda `data/processed/v1/generation_report.jsonl` para el Trust Lab.
 Cuando cumplas los pasos, borra esta sección en tu PR.
-
-> **DL-020 (2026-10-07):** LowCrime ya está activo y toma A-01, A-02 y A-08. Tu foco es solo datos y evaluación semántica.
 
 ## ⚠️ Relevo de sesión (lee esto primero)
 - **Al empezar:** sincroniza tu rama con `main` (`git fetch origin && git merge origin/main`, sin rebase) y lee las "Notas del Lead pendientes". Luego, si existe `docs/handoff/frictionspp-svg.md`, léelo antes que cualquier otra cosa y continúa desde su "Siguiente paso concreto".

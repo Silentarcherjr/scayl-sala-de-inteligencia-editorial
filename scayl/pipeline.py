@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import json
 import logging
+import os
 from collections.abc import Callable
 from datetime import datetime
 from pathlib import Path
@@ -148,19 +149,36 @@ def _load_worker_b(snapshot: Path):
     except ImportError as exc:  # pragma: no cover - depends on Worker B progress
         raise SystemExit(f"Ingestion (B-03: scayl.ingest.validate.load_snapshot) not available yet: {exc}")
     news, indicators, quakes, report = load_snapshot(snapshot)
-    classify, cluster = fallback_classify, fallback_cluster
-    try:
-        from scayl.intel import cluster as cluster_mod  # B-05
-        from scayl.intel import topics as topics_mod
-        from scayl.intel.embed import get_embedder
+    from scayl.intel import cluster as cluster_mod
+    from scayl.intel import topics as topics_mod
+    from scayl.intel.embed import get_embedder
 
-        embedder = get_embedder("st") if _ai_available() else get_embedder("tfidf", None)
-        classify = lambda items: topics_mod.classify(items, method="ai" if _ai_available() else "baseline")
-        cluster = lambda items: cluster_mod.cluster(items, embedder)
-    except ImportError:
-        pass
+    method = os.environ.get("SCAYL_INTEL", "ai" if _ai_available() else "baseline")
+    try:
+        embedder = get_embedder("st") if method == "ai" else get_embedder("tfidf")
+    except ImportError as exc:  # AI variant (B-05, Worker B) not there yet -> labelled baseline
+        log.warning("Embeddings IA no disponibles (%s); se usa el baseline TF-IDF", exc)
+        embedder, method = get_embedder("tfidf"), "baseline"
+    log.info("Inteligencia semántica: temas=%s, agrupación=%s", method, embedder.name)
+
+    def classify(items):
+        return topics_mod.classify(items, method=method)
+
+    def cluster(items):
+        return cluster_mod.cluster(items, embedder)
+
+    write_quality_report(snapshot, report)
     total = getattr(report, "total", None) or (report.get("total") if isinstance(report, dict) else len(news))
     return news, indicators, quakes, classify, cluster, total
+
+
+def write_quality_report(snapshot: Path, report) -> None:
+    """T01 evidence: data/processed/<snap>/quality_report.json (counts, exclusions with reasons, nulls)."""
+    out = Path("data/processed") / snapshot.name
+    out.mkdir(parents=True, exist_ok=True)
+    data = report if isinstance(report, dict) else getattr(report, "to_dict", lambda: {})()
+    (out / "quality_report.json").write_text(json.dumps(data, ensure_ascii=False, indent=1, default=str),
+                                             encoding="utf-8")
 
 
 def _ai_available() -> bool:

@@ -7,7 +7,7 @@ a headline and never "current". USGS confirms a seismic headline only when time 
 from __future__ import annotations
 
 import re
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import timedelta
 
 from scayl.contracts import (
@@ -72,16 +72,31 @@ def is_seismic(items: list[NewsItem]) -> bool:
 @dataclass
 class SeismicLink:
     evidence: list[EvidenceRef]
-    claims: list[Claim]
+    claims: list[Claim]  # confirming claims (headline magnitude matches USGS): may become central
     conflicts: list[Conflict]
+    context: list[Claim] = field(default_factory=list)  # nearby USGS event that does NOT confirm the headline
+
+    @property
+    def any(self) -> bool:
+        return bool(self.claims or self.context)
+
+
+def _usgs_refs(q: SeismicEvent) -> tuple[EvidenceRef, EvidenceRef]:
+    mag = EvidenceRef(evidence_id=f"usgs:{q.id}", kind=EvidenceKind.SEISMIC, field="magnitude", value=q.magnitude,
+                      period=q.time.isoformat().replace("+00:00", "Z") if q.time else None, url=q.url, excerpt=q.place)
+    return mag, mag.model_copy(update={"field": "place", "value": q.place})
 
 
 def link_seismic(event_id: str, items: list[NewsItem], quakes: list[SeismicEvent]) -> SeismicLink:
-    """Match seismic headlines with USGS events by time (±48 h) and magnitude (±0.3)."""
+    """USGS confirms a seismic headline ONLY if the headline states a magnitude that matches (±0.3) an event
+    within ±48 h. Without a headline magnitude, the nearest USGS event is context, never confirmation
+    (real case: "IGUP descarta que se haya registrado algún temblor"). A magnitude difference > 0.1 between
+    headline and USGS is surfaced as a conflict instead of being silently absorbed."""
     link = SeismicLink([], [], [])
     if not is_seismic(items):
         return link
-    candidates = []
+    eid = event_id.removeprefix("EVT-")
+    matched, nearby = [], []
     for it in items:
         when = it.fecha_publicacion or it.fecha_deteccion
         if when is None:
@@ -90,36 +105,50 @@ def link_seismic(event_id: str, items: list[NewsItem], quakes: list[SeismicEvent
         for q in quakes:
             if q.time is None or abs(q.time - when) > SEISMIC_WINDOW:
                 continue
-            if mag is not None and q.magnitude is not None and abs(q.magnitude - mag) > MAGNITUDE_TOLERANCE:
-                continue
-            candidates.append((abs((q.time - when).total_seconds()), q, it, mag))
-    if not candidates:
-        return link
+            gap = abs((q.time - when).total_seconds())
+            if mag is not None and q.magnitude is not None and abs(q.magnitude - mag) <= MAGNITUDE_TOLERANCE:
+                matched.append((abs(q.magnitude - mag), gap, q, it, mag))
+            elif mag is None:
+                nearby.append((gap, q))
 
-    _, q, _item, _mag = min(candidates, key=lambda c: c[0])
-    usgs_mag = EvidenceRef(evidence_id=f"usgs:{q.id}", kind=EvidenceKind.SEISMIC, field="magnitude",
-                           value=q.magnitude, period=q.time.isoformat().replace("+00:00", "Z") if q.time else None,
-                           url=q.url, excerpt=q.place)
-    usgs_place = usgs_mag.model_copy(update={"field": "place", "value": q.place})
-    link.evidence += [usgs_mag, usgs_place]
-    n = 1
-    if q.magnitude is not None:
+    if matched:
+        _, _, q, item, mag = min(matched, key=lambda c: (c[0], c[1]))
+        usgs_mag, usgs_place = _usgs_refs(q)
+        link.evidence += [usgs_mag, usgs_place]
         link.claims.append(Claim(
-            claim_id=f"CLM-{event_id.removeprefix('EVT-')}-{n:03d}", event_id=event_id,
+            claim_id=f"CLM-{eid}-001", event_id=event_id,
             statement=f"USGS registró un sismo de magnitud {q.magnitude} ({q.place or 'lugar no indicado'})",
             type=ClaimType.HECHO, status=ClaimStatus.SUSTENTADA, evidence=[usgs_mag, usgs_place],
-            reason=f"USGS:{q.id} → magnitude = {q.magnitude}", extracted_by="rule"))
+            reason=f"USGS:{q.id} → magnitude = {q.magnitude}; el titular indica {mag}", extracted_by="rule"))
+        if q.magnitude is not None and abs(q.magnitude - mag) > MAGNITUDE_CONFLICT:
+            link.conflicts.append(Conflict(
+                conflict_id=f"CNF-{eid}-001", event_id=event_id, kind=ConflictKind.NUMERIC, field="magnitud",
+                version_a=ConflictVersion(value=str(mag), evidence=[news_ref(item)]),
+                version_b=ConflictVersion(value=str(q.magnitude), evidence=[usgs_mag]),
+                verification_needed=("Magnitud distinta entre el titular y USGS. Distintas agencias (IGUP, USGS) "
+                                     "pueden reportar valores diferentes: citar la fuente de cada cifra.")))
+    elif nearby:
+        _, q = min(nearby, key=lambda c: c[0])
+        usgs_mag, usgs_place = _usgs_refs(q)
+        link.evidence += [usgs_mag, usgs_place]
+        link.context.append(Claim(
+            claim_id=f"CLM-{eid}-ctx", event_id=event_id,
+            statement=f"USGS registró un sismo de magnitud {q.magnitude} ({q.place or 'lugar no indicado'}) "
+                      f"en las 48 h cercanas a la publicación",
+            type=ClaimType.HECHO, status=ClaimStatus.SUSTENTADA, evidence=[usgs_mag, usgs_place],
+            reason="Contexto: el titular no indica magnitud, así que este registro NO confirma el titular.",
+            extracted_by="rule"))
+
     # Different magnitudes among headlines of the same event -> conflict, never pick one.
-    mags = {(headline_magnitude(i), i.id_noticia) for i in items if headline_magnitude(i) is not None}
-    values = sorted({m for m, _ in mags})
+    values = sorted({m for m in (headline_magnitude(i) for i in items) if m is not None})
     if len(values) >= 2 and values[-1] - values[0] > MAGNITUDE_CONFLICT:
         a = next(i for i in items if headline_magnitude(i) == values[0])
         b = next(i for i in items if headline_magnitude(i) == values[-1])
         link.conflicts.append(Conflict(
-            conflict_id=f"CNF-{event_id.removeprefix('EVT-')}-001", event_id=event_id, kind=ConflictKind.NUMERIC,
+            conflict_id=f"CNF-{eid}-{len(link.conflicts) + 1:03d}", event_id=event_id, kind=ConflictKind.NUMERIC,
             field="magnitud", version_a=ConflictVersion(value=str(values[0]), evidence=[news_ref(a)]),
             version_b=ConflictVersion(value=str(values[-1]), evidence=[news_ref(b)]),
-            verification_needed=f"Contrastar con USGS:{q.id} (magnitud {q.magnitude}) y con el Instituto de Geociencias."))
+            verification_needed="Contrastar con USGS y con el Instituto de Geociencias (IGUP)."))
     return link
 
 
