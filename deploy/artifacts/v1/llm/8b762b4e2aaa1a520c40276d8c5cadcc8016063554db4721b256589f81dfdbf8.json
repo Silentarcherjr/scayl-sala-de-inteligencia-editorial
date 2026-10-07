@@ -1,0 +1,74 @@
+{
+ "data": {
+  "proposed_title": "Sismo en Panamá: IGUP descarta temblores hoy, pero se registró un sismo de magnitud 3.6 en septiembre",
+  "public_interest_angle": "Según telemetro.com, la IGUP informó que no se registraron temblores hoy, pero se confirmó un sismo de magnitud 3.6 en septiembre.",
+  "brief": [
+   {
+    "text": "Según telemetro.com, la IGUP informó que no se registraron temblores en Panamá el lunes 31 de agosto. Sin embargo, se confirmó un sismo de magnitud 3.6 en la zona de Caldera, Panamá, el 1 de septiembre de 2026, según datos del USGS.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0165-001",
+     "CLM-0165-003"
+    ]
+   },
+   {
+    "text": "No se ha proporcionado evidencia de daños o personas afectadas por el sismo de magnitud 3.6.",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0165-002"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Cuál fue la ubicación exacta del sismo de magnitud 3.6 y cuál fue su profundidad?",
+   "¿La IGUP ha emitido declaraciones oficiales sobre la ausencia de temblores el 31 de agosto?",
+   "¿Existen registros de daños o afectaciones en la zona de Caldera tras el sismo de septiembre?"
+  ],
+  "script": [
+   {
+    "text": "Según telemetro.com, la IGUP informó que no se registraron temblores en Panamá el lunes 31 de agosto. Sin embargo, se confirmó un sismo de magnitud 3.6 en la zona de Caldera, Panamá, el 1 de septiembre de 2026, según datos del USGS.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0165-001",
+     "CLM-0165-003"
+    ]
+   },
+   {
+    "text": "No se ha proporcionado evidencia de daños o personas afectadas por el sismo de magnitud 3.6.",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0165-002"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "La IGUP informó que no hubo temblores el 31 de agosto, pero se registró un sismo de magnitud 3.6 en septiembre. ¿Hubo daños?",
+   "tag": "HECHO",
+   "claim_ids": [
+    "CLM-0165-001",
+    "CLM-0165-002",
+    "CLM-0165-003"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar si la IGUP emitió declaraciones oficiales sobre la ausencia de temblores el 31 de agosto.",
+   "Verificar si el sismo de magnitud 3.6 causó daños o afectaciones en la zona de Caldera.",
+   "Revisar el contenido completo de los artículos mencionados en telemetro.com."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 15288,
+  "tokens_in": 1519,
+  "tokens_out": 780,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-07T20:57:27.562094Z"
+ }
+}

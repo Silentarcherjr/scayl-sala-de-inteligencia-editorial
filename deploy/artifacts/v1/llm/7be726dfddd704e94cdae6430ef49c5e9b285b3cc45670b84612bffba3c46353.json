@@ -1,0 +1,58 @@
+{
+ "data": {
+  "proposed_title": "Aumento de tarifas del Canal de Panamá: ¿Es cierto que subieron 16 veces en comparación a 2025?",
+  "public_interest_angle": "El titular de un medio venezolano menciona un aumento significativo en las tarifas del Canal de Panamá, pero no se dispone de información suficiente para confirmar la noticia.",
+  "brief": [
+   {
+    "text": "Según avn.info.ve, el titular de un medio venezolano afirma que las tarifas del Canal de Panamá aumentaron 16 veces en comparación a las del 2025. Sin embargo, no se dispone de información suficiente para confirmar la noticia.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0141-001",
+     "CLM-0141-002"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Qué información detalla el artículo completo de avn.info.ve sobre el aumento de tarifas del Canal de Panamá?",
+   "¿Cuál es el contexto del aumento de tarifas mencionado en el titular?",
+   "¿Qué fuentes oficiales confirman o refutan el aumento de tarifas del Canal de Panamá?"
+  ],
+  "script": [
+   {
+    "text": "Un medio venezolano reporta que las tarifas del Canal de Panamá aumentaron 16 veces en comparación a las del 2025. Sin embargo, no se dispone de información suficiente para confirmar la noticia. ¿Qué información detalla el artículo completo de avn.info.ve sobre el aumento de tarifas del Canal de Panamá?",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0141-001",
+     "CLM-0141-002"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "Un medio venezolano reporta que las tarifas del Canal de Panamá aumentaron 16 veces en comparación a las del 2025. ¿Qué información detalla el artículo completo?",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0141-001",
+    "CLM-0141-002"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar el contenido completo del artículo de avn.info.ve sobre el aumento de tarifas del Canal de Panamá.",
+   "Verificar si el aumento de tarifas mencionado en el titular es real o se trata de una mala interpretación de los datos."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 11992,
+  "tokens_in": 1225,
+  "tokens_out": 615,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-07T20:58:44.671568Z"
+ }
+}

@@ -1,0 +1,67 @@
+{
+ "data": {
+  "proposed_title": "Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño",
+  "public_interest_angle": "El Niño afecta operaciones del Canal de Panamá",
+  "brief": [
+   {
+    "text": "Según telemetro.com, Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño. La información se basa en un titular de un artículo de noticias.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0116-001",
+     "CLM-0116-003",
+     "CLM-0116-004"
+    ]
+   },
+   {
+    "text": "El nivel del lago Gatún fue de 84.69 pies el 16 de julio de 2026, según datos del ACP.",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0116-002"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Qué medidas específicas está tomando el Canal de Panamá para adaptarse al impacto de El Niño?",
+   "¿Cómo afecta el nivel del lago Gatún a la operación del canal y cuál es su relación con El Niño?",
+   "¿Qué fuentes confiables confirman que el Canal de Panamá mantiene tránsitos bajo condiciones climáticas adversas?"
+  ],
+  "script": [
+   {
+    "text": "Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño, según reporte de telemetro.com. El nivel del lago Gatún fue de 84.69 pies el 16 de julio de 2026, según datos del ACP.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0116-001",
+     "CLM-0116-002"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "Canal de Panamá mantiene tránsitos y ajusta calado por El Niño. Nivel del lago Gatún: 84.69 pies el 16 de julio de 2026.",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0116-001",
+    "CLM-0116-002"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar si el Canal de Panamá efectivamente mantiene tránsitos bajo condiciones de El Niño.",
+   "Verificar si los ajustes de calado son parte de una estrategia oficial del canal.",
+   "Validar la relación entre el nivel del lago Gatún y la operación del canal durante El Niño."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 13131,
+  "tokens_in": 1529,
+  "tokens_out": 663,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-07T20:56:16.494629Z"
+ }
+}

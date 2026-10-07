@@ -1,54 +1,52 @@
-# Relevo · frictionspp-svg · 2026-10-07T20:45:22.309333Z
+# Relevo · frictionspp-svg · 2026-10-07 21:05 UTC
 
-- **Motivo de la parada:** tareas de la última solicitud completas; revisión y merge quedan al Lead.
-- **Rama:** `worker-b/human-inputs`, nueva desde origin/main PR #51; merge limpio del PR #52, main `5dcac75`.
-- **Último commit antes de este relevo:** `eb5444a`, empujado. Este relevo se guarda en un commit posterior de la misma rama.
-- **PR único abierto:** https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/53 (listo para revisión, no mergeado por el worker).
+> Relevo preventivo al cerrar la tarea; el siguiente agente debe sincronizar primero.
+
+- **Motivo de la parada:** tarea DL-029 terminada; relevo preventivo AGENTS §2b.
+- **Rama:** `worker-b/precompute-dl029`.
+- **Último commit de artefactos:** `e383d78` (empujado: sí). Este relevo queda en el commit posterior; consultar `git log -1`.
+- **PR abierto:** https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/55
 
 ## Tarea en curso
-Terminadas las entradas humanas interactivas B-07 y red-team v2, su evaluación y documentación.
-El Lead revisa PR #53. No queda ninguna etiqueta, pregunta ni medición solicitada pendiente.
+Precálculo top 15 qwen3:8b y caché pública actualizados tras DL-029. Completado;
+PR listo para revisión del Lead. @LowCrime mencionado en el PR para preparar el Space.
 
 ## Hecho en esta sesión
-- Revisión de 100 titulares de temas en diez bloques, con etiquetas explícitas de frictionspp-svg.
-- Revisión de 32 titulares de agrupación en bloques 10/10/10/2. El humano confirmó las propuestas de cada bloque con «ok».
-- Revisor frictionspp-svg, respuestas originales, IDs, propuestas y hora UTC por bloque en data/labels/human_review_log.jsonl; CSV sin cambiar esquema. Auditoría 132/132 filas.
-- Temas macro-F1, n=100 y siete clases: baseline 0.7568136932192232, IA 0.24645960051496715. No tuning con estas etiquetas.
-- Agrupación, 488 pares: baseline P12/12, R12/43, F1=0.43636363636363634; IA P42/42, R42/43, F1=0.988235294117647.
-- Desarrollo 2025 previamente usado para calibrar τ provisional; revisión asistida con propuestas visibles, no gold ciego ni holdout de clustering. Recall relativo al pool.
-- Diez preguntas trampa nuevas y expectativas originales del humano en eval/redteam/holdout_v2.jsonl; revisor/UTC/texto original/hash en holdout_v2.provenance.json.
-- Runner sin cambiar código ni expectativas: abstenciones esperadas6/6; abstenciones en controles con expectativa de respuesta4/4; controles respondidos0/4; coincidencias6/10. Fallan HV2-03/05/07/09, conservados en reporte y registro de fallos06.
-- Los controles de conocimiento general no tienen soporte garantizado en el fixture. El runner señala falta de evidencia; el resultado de abstención falsa es relativo a la expectativa humana, no prueba de rechazo de respuestas sustentadas.
-- Fixture sintético template/extractivo; no LLM vivo, bundle C-01 ni set reservado oficial. Scope fijo «IA/sin gold humano» preservado en raw; companion corrige procedencia y conserva números originales.
-- No cambios propios en scayl, runner, qa.py, prototipos, τ, ranking ni casos existentes. PR #52 del Lead cambió independientemente pipeline a temas por reglas/E5 agrupación; incorporado mediante merge limpio.
-- PR #53 agrupa todo; ningún otro PR nuevo en esta sesión. No se reutilizaron ramas anteriores ni se importó cc327d1 obsoleto.
+- Rama nueva desde origin/main f951bb2; sin reutilizar ramas anteriores, rebase ni force-push.
+- Temas baseline, agrupación E5; 187 noticias → 165 eventos. Nuevo top 15 comparte 5/15 con el anterior.
+- Live 15/15, fallback 0/15, citas 45/45; mediana 13131 ms y p95 16997,5 ms, n=15.
+- GPU AMD RX 9060 XT 8 GiB, Ollama Vulkan 0.40.0, 37/37 capas; E5 CPU.
+- Caché pública: 30 entradas usadas, 15 paquetes cache y 150 template; 20 claves obsoletas retiradas.
+- Descripciones de fuentes 0/187 antes de los prompts; 32/32 JSON públicos verificados; hashes del commit también comprobados.
+- Stage local preparado, 118/118 hashes verificados, sin ZIP ni rss.xml; no publicado.
+- Manifest raw verificado e intacto. Ningún data/processed, ZIP ni RSS se subió.
 
 ## Siguiente paso concreto
-1. Lead: revisar PR #53 y actualizar estados de TASKS/tablero/decision log si procede. Solo el Lead mergea.
-2. Si llega otra solicitud, comenzar con fetch + merge origin/main sin rebase; detenerse ante conflictos. Leer notas nuevas. No volver a preparar ni sobrescribir formularios revisados.
-3. No cambiar las expectativas ni afinar QA con este holdout para mejorar los números. Para otra evaluación, definir datos/expectativas y nuevo conjunto aparte antes de ajustar código.
+1. Lead: revisar e integrar PR #55; el agente no mergea.
+2. LowCrime: preparar un destino nuevo con deploy.prepare desde deploy/artifacts/v1; comando en el PR y docs/PUBLIC_REVIEWED_CACHE.md. Publicación externa requiere confirmación del Lead.
+3. Nueva sesión: fetch origin y merge origin/main sin rebase; ante conflictos detenerse. No iniciar otras tareas de backlog ya integradas sin nueva instrucción.
 
 ## Estado de las pruebas
-Tras el merge de main actualizado: python -m pytest -q →188 passed; ruff check . →All checks passed.
-Integridad de 132 etiquetas, diez preguntas, hashes de fuentes/reportes y código propio intacto: verificada.
-Los cuatro fallos del holdout son discrepancias de expectativas y se reportan aunque pytest esté verde.
-Checks remotos del PR: consultar su ejecución sobre el último commit; no confundirlos con pruebas locales.
+`python -m pytest -q`: 188 passed. `ruff check .`: verde.
+Guardia de objetos origin/main..HEAD vacía para ZIP/rss.xml antes del push.
+CI de #55: consultar GitHub; este relevo no inventa su resultado.
 
 ## Archivos tocados
-data/labels/topics_human.csv, dev2025_groups_human.csv, human_review_log.jsonl y .gitattributes;
-eval/redteam/holdout_v2.jsonl, holdout_v2.provenance.json y .gitattributes;
-eval/results/b07-human-metrics.json, b07-human-review-summary.json, holdout-v2.json,
-holdout-v2-summary.json y copia archivada runs/redteam-20261007T202802939484Z.json, con .gitattributes;
-docs/B07_HUMAN_REVIEW.md, HUMAN_HOLDOUT_V2.md, AI_TOOLS_USED.md, notion_mirror/06_TESTS_AND_METRICS.md,
-worklog/worker-b.md y este relevo. Ver diff del PR para los detalles completos.
+- deploy/artifacts/v1/: bundle, 30 entradas LLM y auditoría pública.
+- eval/results/dl029-*: resumen, JSONL original y auditoría antes/después/stage; .gitattributes conserva bytes.
+- docs/DL029_PRECOMPUTE.md, PUBLIC_REVIEWED_CACHE.md, FINAL_PRECOMPUTE.md: resultados y reproducción.
+- docs/notion_mirror/06_TESTS_AND_METRICS.md: fallo inicial Ollama y recuperación.
+- docs/AI_TOOLS_USED.md, docs/worklog/worker-b.md: bitácoras solo agregar.
+- Este relevo.
 
 ## Bloqueos, dudas y decisiones pendientes
-No hay bloqueos de implementación del alcance solicitado. Revisión/merge pendientes del Lead.
-H-06 quedó fuera de esta última solicitud; no se inventaron tiempos humanos.
+- Ninguno para el precálculo. Pendiente revisión/merge del Lead y preparación/publicación del Space por LowCrime.
+- Validez humana del apoyo y calidad factual: no medidas; cobertura de citas no es exactitud.
+- H-06 humano sigue pendiente del trabajo previo; no se fabricaron cronómetros ni respuestas.
 
 ## Contexto que no está en el código
-Python .venv/Scripts/python.exe; Ruff .venv/Scripts/ruff.exe. Modelo E5 local CPU; ejecutado escalado en Windows por política DLL.
-tmp contiene helpers y copias de respuestas; los originales importantes están también en la bitácora/provenance trackeadas.
-Reportes guardados sin normalizar saltos de línea para preservar hashes. No se subieron data/processed, modelos,
-GKG ZIP, RSS con descripciones, secretos ni backup/wip-617d6e2. Todos los pushes pasaron el guard de objetos ZIP/rss.xml.
-Un push demoró por la conexión; luego confirmó subida. No rebase, force-push ni push --all.
+- Make ausente en Windows: se ejecutó su receta Python exacta; variables y comandos en docs/DL029_PRECOMPUTE.md.
+- Caché local nueva: data/cache/llm/precompute-dl029-20261007T205446Z.
+- Ollama arrancado oculto en localhost:11434, modelos locales models/ollama; log models/ollama-dl029-serve.err.log, ignorado.
+- Stage y respaldo anterior locales: tmp/dl029-space-stage y tmp/dl029-previous-public-artifacts, ignorados.
+- backup/wip-617d6e2 permanece solo local: nunca subirlo ni usar push --all.

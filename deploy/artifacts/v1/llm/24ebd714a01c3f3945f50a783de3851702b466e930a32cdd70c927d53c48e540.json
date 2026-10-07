@@ -1,0 +1,27 @@
+{
+ "data": {
+  "claims": [
+   {
+    "source_id": "gdt-ecf179e17da0e9ef76c8",
+    "statement": "IGUP descarta que hoy lunes 31 de agosto no se ha registrado algún temblor",
+    "type": "DECLARACION",
+    "attributed_to": "IGUP"
+   }
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "claims-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 1714,
+  "tokens_in": 465,
+  "tokens_out": 87,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-07T20:55:33.648782Z"
+ }
+}

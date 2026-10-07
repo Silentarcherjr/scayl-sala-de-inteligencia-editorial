@@ -1,0 +1,56 @@
+{
+ "data": {
+  "proposed_title": "México vs Panamá: Horario y canales para ver EN VIVO a la Selección Mexicana, HOY, miércoles 5 de agosto",
+  "public_interest_angle": "El partido entre México y Panamá se disputará hoy, miércoles 5 de agosto, y se podrá seguir en vivo a través de canales de televisión.",
+  "brief": [
+   {
+    "text": "Según eluniversal.com.mx, se informó sobre el horario y canales para ver EN VIVO el partido entre México y Panamá, programado para hoy, miércoles 5 de agosto.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0133-001"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Cuál es el horario exacto del partido entre México y Panamá?",
+   "¿Qué canales de televisión transmitirán el partido en vivo?",
+   "¿Hay información adicional sobre la programación del evento?"
+  ],
+  "script": [
+   {
+    "text": "El partido entre México y Panamá se disputará hoy, miércoles 5 de agosto. Se podrá seguir en vivo a través de canales de televisión. Según eluniversal.com.mx, se informó sobre el horario y los canales disponibles para la transmisión.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0133-001"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "El partido entre México y Panamá se jugará hoy, miércoles 5 de agosto. ¡No te lo pierdas en vivo!",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0133-001"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar el horario exacto del partido.",
+   "Verificar los canales de televisión que transmitirán el partido en vivo.",
+   "Comprobar si hay más información sobre la programación del evento."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 9210,
+  "tokens_in": 1038,
+  "tokens_out": 469,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-07T20:58:32.676758Z"
+ }
+}
