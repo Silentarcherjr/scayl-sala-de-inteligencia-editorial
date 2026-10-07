@@ -2,3 +2,5 @@
 b05-*.json -text
 b13-b14-*.json -text
 b13-b14-*.jsonl -text
+final-precompute*.json -text
+final-precompute*.jsonl -text
