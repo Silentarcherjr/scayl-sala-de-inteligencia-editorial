@@ -1,5 +1,7 @@
 # B-05 · Agrupación y temas multilingües
 
+> **Actualización DL-029:** con 100 temas etiquetados por humanos, las reglas superan al clasificador por prototipos (macro-F1 0,76 frente a 0,25). Desde entonces `SCAYL_INTEL=ai` activa solo los embeddings E5 para agrupar; los temas usan reglas salvo `SCAYL_TOPICS=ai`.
+
 `SCAYL_INTEL=ai` activa `SentenceTransformerEmbedder` y el clasificador por prototipos de la
 taxonomía oficial. Modelo inicial: `intfloat/multilingual-e5-base`, ya aprobado en ARCHITECTURE §5.1.
 Se carga desde `models/embeddings/intfloat--multilingual-e5-base` o la caché local; no se descarga

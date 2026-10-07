@@ -195,3 +195,10 @@
 - **Limpieza de lint (Lead):** 44 avisos de estilo de ruff en `scayl/` resueltos sin cambiar comportamiento (orden de imports, `datetime.UTC`, literales). Dos excepciones justificadas con `noqa`.
 - **Pendiente humano (no se inventa):** B-07 (100 temas + 32 titulares), B-09 (30 afirmaciones), H-06 (tiempos) y set reservado de red-team v2. Mientras falten, sus métricas siguen "no medido".
 - **Fecha:** 2026-10-07
+
+### DL-029 · Temas por reglas, agrupación por E5: decisión por medición humana
+- **Medición (B-07):** 100 titulares C-01 etiquetados por un humano del equipo (después de ver la propuesta de la IA). Macro-F1 de temas: **reglas 0,76 frente a prototipos E5 0,25**. Que el humano viera antes la propuesta IA no la favoreció.
+- **Decisión:** el pipeline separa temas y agrupación. Temas por **reglas** por defecto (`SCAYL_TOPICS=baseline`); agrupación con **E5** cuando el modelo local carga (`SCAYL_INTEL=ai`, 183 → 165 eventos). No se reentrena ni se ajusta nada con estas 100 etiquetas.
+- **Para el pitch:** usamos IA donde mide mejor y reglas donde la IA perdió. Es una decisión por evidencia, no por moda.
+- **Consecuencia:** al cambiar los temas cambia el componente I de la prioridad y con él el ranking. La caché LLM del top 15 y la caché pública deben regenerarse (frictionspp-svg: `make precompute` + caché pública). P@5 y B-08 se recalculan después.
+- **Fecha:** 2026-10-07
