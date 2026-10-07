@@ -6,3 +6,4 @@ final-precompute*.json -text
 final-precompute*.jsonl -text
 b10-*.json -text
 b10-*.jsonl -text
+b04-synthetic.json -text

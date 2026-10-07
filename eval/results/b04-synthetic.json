@@ -1,0 +1,165 @@
+{
+  "run_at": "2026-10-07T19:02:28.826934Z",
+  "synthetic": true,
+  "input_sha256": "935ca2a6388a4fae180af7ade5f195c7a5126c6d77582d76d1f028be73cf255b",
+  "cases": [
+    {
+      "id": "T01",
+      "synthetic": true,
+      "quality": {
+        "total": 1,
+        "valid": 1,
+        "excluded_by_reason": {},
+        "excluded": [],
+        "flags": {
+          "fecha_invalida": 1
+        },
+        "nulls_by_field": {
+          "tema": 1,
+          "descripcion": 1
+        },
+        "indicators": 0,
+        "indicators_null_values": 0,
+        "seismic_official": 0,
+        "seismic_extension": 0
+      },
+      "evidence_status": "insuficiente",
+      "recirculated": false,
+      "conflicts": 0,
+      "security_flags": [],
+      "publications": 1,
+      "confirmed_independent": 0
+    },
+    {
+      "id": "T02",
+      "synthetic": true,
+      "quality": {
+        "total": 3,
+        "valid": 3,
+        "excluded_by_reason": {},
+        "excluded": [],
+        "flags": {},
+        "nulls_by_field": {
+          "fecha_deteccion": 3,
+          "tema": 3,
+          "descripcion": 3
+        },
+        "indicators": 0,
+        "indicators_null_values": 0,
+        "seismic_official": 0,
+        "seismic_extension": 0
+      },
+      "evidence_status": "parcial",
+      "recirculated": false,
+      "conflicts": 0,
+      "security_flags": [],
+      "publications": 3,
+      "confirmed_independent": 0
+    },
+    {
+      "id": "T03",
+      "synthetic": true,
+      "quality": {
+        "total": 1,
+        "valid": 1,
+        "excluded_by_reason": {},
+        "excluded": [],
+        "flags": {},
+        "nulls_by_field": {
+          "tema": 1,
+          "descripcion": 1
+        },
+        "indicators": 0,
+        "indicators_null_values": 0,
+        "seismic_official": 0,
+        "seismic_extension": 0
+      },
+      "evidence_status": "insuficiente",
+      "recirculated": true,
+      "conflicts": 0,
+      "security_flags": [],
+      "publications": 1,
+      "confirmed_independent": 0
+    },
+    {
+      "id": "T05",
+      "synthetic": true,
+      "quality": {
+        "total": 2,
+        "valid": 2,
+        "excluded_by_reason": {},
+        "excluded": [],
+        "flags": {},
+        "nulls_by_field": {
+          "fecha_deteccion": 2,
+          "tema": 2,
+          "descripcion": 2
+        },
+        "indicators": 0,
+        "indicators_null_values": 0,
+        "seismic_official": 0,
+        "seismic_extension": 0
+      },
+      "evidence_status": "parcial",
+      "recirculated": false,
+      "conflicts": 1,
+      "security_flags": [],
+      "publications": 2,
+      "confirmed_independent": 0
+    },
+    {
+      "id": "T07",
+      "synthetic": true,
+      "quality": {
+        "total": 1,
+        "valid": 1,
+        "excluded_by_reason": {},
+        "excluded": [],
+        "flags": {},
+        "nulls_by_field": {
+          "fecha_deteccion": 1,
+          "tema": 1
+        },
+        "indicators": 0,
+        "indicators_null_values": 0,
+        "seismic_official": 0,
+        "seismic_extension": 0
+      },
+      "evidence_status": "insuficiente",
+      "recirculated": false,
+      "conflicts": 0,
+      "security_flags": [
+        "posible_inyeccion:news:SYN-T07"
+      ],
+      "publications": 1,
+      "confirmed_independent": 0
+    },
+    {
+      "id": "SUFICIENTE",
+      "synthetic": true,
+      "quality": {
+        "total": 1,
+        "valid": 1,
+        "excluded_by_reason": {},
+        "excluded": [],
+        "flags": {},
+        "nulls_by_field": {
+          "fecha_deteccion": 1,
+          "tema": 1,
+          "descripcion": 1
+        },
+        "indicators": 0,
+        "indicators_null_values": 0,
+        "seismic_official": 0,
+        "seismic_extension": 0
+      },
+      "evidence_status": "suficiente_para_borrador",
+      "recirculated": false,
+      "conflicts": 0,
+      "security_flags": [],
+      "publications": 1,
+      "confirmed_independent": 0
+    }
+  ],
+  "scope": "Controlled demonstrations, not real-corpus metrics or human gold"
+}

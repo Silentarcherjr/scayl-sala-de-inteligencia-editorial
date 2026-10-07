@@ -1,7 +1,7 @@
-# Relevo · frictionspp-svg · 2026-10-07 19:00 UTC
+# Relevo · frictionspp-svg · 2026-10-07 19:06 UTC
 
 - **Motivo:** checkpoint preventivo AGENTS §2b; se continúa el backlog sin esperar merges.
-- **Rama:** worker-b/benchmark-final · **Último commit de tarea:** 8c1cfb2, empujado. Checkpoint en commit posterior.
+- **Rama:** worker-b/synthetic-final · **Último commit de tarea:** 09295c5, empujado. Checkpoint en commit posterior.
 - **PRs:** ver lista abajo; solo el Lead mergea.
 
 ## Tarea en curso
@@ -13,13 +13,14 @@ Backlog final del Lead (docs/agents/frictionspp-svg.md), tareas en ramas nuevas 
 - 3 B-11 workflow y lint tests: https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/39 (worker-b/ci-final, 5039d1b).
 - 5 B-07 formularios; revision humana pendiente: https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/40 (worker-b/human-labels-final, 1d9e656).
 - B-10: https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/48 (worker-b/benchmark-final, 8c1cfb2).
+- B-04: https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/49 (worker-b/synthetic-final, 09295c5).
 
 ## Siguiente paso concreto
-B-04: casos sinteticos aislados, incluido suficiente con ACP coincidente; luego H-06 y volver a bloqueos humanos.
+H-06 humano: protocolo existente worker-a/h06-mini-study; esperar tiempos reales. B-06 opcional aislado; al final volver a holdout y etiquetas humanas.
 Antes de cada tarea: fetch y rama nueva desde origin/main; no esperar merges.
 
 ## Estado de las pruebas
-172 passed. Cada PR incluye su ejecución; no confundir métricas reales con etiquetas pendientes.
+173 passed. Cada PR incluye su ejecución; no confundir métricas reales con etiquetas pendientes.
 
 ## Archivos tocados
 Ver los PRs listados y docs/worklog/worker-b.md; métricas en eval/results.

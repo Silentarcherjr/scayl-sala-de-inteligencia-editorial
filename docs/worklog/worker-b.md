@@ -54,3 +54,6 @@ Medición real E5 en CPU (torch 2.14.1+cpu, CUDA no disponible). Matrices ignora
 2026-10-07 18:57 UTC - B-10: Benchmark GPU top15: 8b 14643/17600 ms, citas49/49, fallback0/15; 4b 9050/12898.2 ms, citas25/25, EMPTY_BRIEF3/15. Recomiendo8b. 172 pruebas verdes; reportes reales guardados.
 
 2026-10-07 19:00 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md; B-10 https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/48. Continúa B-04: casos sinteticos aislados, incluido suficiente con ACP coincidente; luego H-06 y volver a bloqueos humanos.
+2026-10-07 19:03 UTC - B-04: Seis casos sinteticos aislados T01/T02/T03/T05/T07 y SUFICIENTE ACP inventado85.1pies. Replay con reglas existentes; sin modificar corpus/contratos/LLM. Reporte con SHA guardado, 173 pytest verdes.
+
+2026-10-07 19:06 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md; B-04 https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/49. Continúa H-06 humano: protocolo existente worker-a/h06-mini-study; esperar tiempos reales. B-06 opcional aislado; al final volver a holdout y etiquetas humanas.
