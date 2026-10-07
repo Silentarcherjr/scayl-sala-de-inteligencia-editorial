@@ -6,16 +6,24 @@ Run as a separate process, not inside a serving Streamlit process (service cache
 from __future__ import annotations
 
 import argparse
-from datetime import UTC, datetime
 import hashlib
 import json
-from pathlib import Path
 import platform
+from datetime import UTC, datetime
+from pathlib import Path
 from tempfile import TemporaryDirectory
 from unittest.mock import patch
 
 from scayl import service
-from scayl.contracts import Claim, ClaimStatus, ClaimType, IndicatorObservation, NewsItem, TaggedSentence, UIBundle
+from scayl.contracts import (
+    Claim,
+    ClaimStatus,
+    ClaimType,
+    IndicatorObservation,
+    NewsItem,
+    TaggedSentence,
+    UIBundle,
+)
 from scayl.gen.qa import build_units
 from scayl.gen.validators import _Ctx, check_sentence
 

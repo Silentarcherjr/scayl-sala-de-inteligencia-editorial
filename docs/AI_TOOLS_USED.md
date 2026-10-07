@@ -22,8 +22,14 @@
 | 2026-10-07 | Codex | frictionspp-svg | B-05 IA y calibración sin top 5 | E5 multilingüe local; prototipos; 488 pares de 2025 anotados provisionalmente por IA; medición posterior C-01 | τ=0,87; 183→165 eventos; P@5 1/5→1/5; cuatro casos separados por guard temporal; 129 pruebas pasan; inferencia CPU | Revisión humana de etiquetas B-07 y revisión del Lead pendientes |
 | 2026-10-07 | Codex + consulta de fuentes oficiales | frictionspp-svg | B-13/B-14, evidencia ACP/INEC | CSV históricos ACP, transcripción con hash del Anexo 4 INEC, manifest v1.1 y medición pareada | 812 filas (394 proyecciones null); estados 0 suficiente/131 parcial/34 insuficiente antes y después; AP-012 abierta; 152 pruebas pasan | Cotejo humano INEC y decisión del Lead pendientes |
 | 2026-10-07 | Ollama local, Qwen3 8B + E5 | frictionspp-svg | Precálculo real top 15 | AMD RX 9060 XT Vulkan, 37/37 capas GPU; E5 CPU; caché inicialmente vacía | 15 paquetes live, 0 fallback; mediana 15068 ms, p95 17755 ms; citas brief/guion 49/49; resultados guardados en eval/results | Validez del apoyo no medida; revisión del Lead pendiente |
-
 | 2026-10-07 | Codex | LowCrime | B-12/B-08 y A-06 | Set sintético de 16 ataques + 4 controles; runner service.ask/validador, métricas y preparación HF protegida | 156 pruebas; abstención 6/16 y 0/4, sondas 9/9; capturas locales; sin publicación ni LLM vivo | Pendiente del Lead, fallos de producto AP-012 |
+| 2026-10-07 05:43 UTC | Codex / modelos locales | frictionspp-svg | Backlog 1 precompute DL-026 | Backlog final del Lead | 172 pytest verdes; 15 paquetes medidos, E5 activo, qwen3:8b Vulkan RX9060XT; resultados final-precompute en eval/results; procesados locales. | Revisión del Lead pendiente |
+| 2026-10-07 05:48 UTC | Codex / modelos locales | frictionspp-svg | Backlog 2 cache publica A-06 | Backlog final del Lead | 187 noticias sin descripcion,165eventos,30entradas auditadas,15/15cache; stage preparado sin publicar;174pytest verdes; aviso @LowCrime en PR. | Revisión del Lead pendiente |
+| 2026-10-07 05:51 UTC | Codex / modelos locales | frictionspp-svg | B-11 CI | Backlog final del Lead | 172pytest verdes,ruff tests verde; workflow Python3.12 con pytest y ruff check .;36avisos globales fuera de tests reportados,sin ocultarlos ni modificar modulos Lead. | Revisión del Lead pendiente |
+| 2026-10-07 05:56 UTC | Codex / modelos locales | frictionspp-svg | B-07 pendiente humano | Backlog final del Lead | 100temas propuestos y32titulares para488pares;0confirmados;metricas no medido;174pytest;solicitud enviada,seguirbenchmark. | Revisión del Lead pendiente |
+| 2026-10-07 18:57 UTC | Codex / modelos locales | frictionspp-svg | B-10 | Backlog final del Lead | Benchmark GPU top15: 8b 14643/17600 ms, citas49/49, fallback0/15; 4b 9050/12898.2 ms, citas25/25, EMPTY_BRIEF3/15. Recomiendo8b. 172 pruebas verdes; reportes reales guardados. | Revisión del Lead pendiente |
+| 2026-10-07 19:03 UTC | Codex / modelos locales | frictionspp-svg | B-04 | Backlog final del Lead | Seis casos sinteticos aislados T01/T02/T03/T05/T07 y SUFICIENTE ACP inventado85.1pies. Replay con reglas existentes; sin modificar corpus/contratos/LLM. Reporte con SHA guardado, 173 pytest verdes. | Revisión del Lead pendiente |
+| 2026-10-07 19:11 UTC | Codex / modelos locales | frictionspp-svg | B-06 | Backlog final del Lead | Recuperador experimental opt-in BM25 positivo+coseno E5, scores[0,1], sin integrar qa.py. 176pytest y Ruff propio verdes. Smoke real3/3consultas con1314unidades; precision y latenciaQA no medidas. H-06 compartido ya tienePR45 y espera humanos. | Revisión del Lead pendiente |
 
 ## Herramientas de IA dentro del producto (no son de desarrollo)
 
@@ -31,3 +37,13 @@
 |---|---|---|---|
 | Embeddings | _DL-006, pendiente_ | Temas, agrupación, recuperación | $0 (local) |
 | LLM | _DL-006, pendiente_ | Afirmaciones, paquete editorial, Q&A | $0 (local) |
+
+### Uso adicional · 2026-10-07 · LowCrime
+Codex: B-08 importación de mediciones existentes, trazabilidad y pruebas de métricas vacías/inválidas.
+No generó etiquetas humanas ni tiempos; conserva fuente, n, hardware y no medido. Revisión Lead pendiente.
+Codex · LowCrime · 2026-10-07 · AP-014: revisión de Trust Lab y parche propuesto de métricas/limitaciones; no aplicado, pendiente del Lead.
+Codex · LowCrime · 2026-10-07 · B-09: exportación de muestra y cálculo verificable; cero etiquetas humanas inventadas. Tres regresiones; revisión humana pendiente.
+Codex · LowCrime · 2026-10-07 · A-06: preparación actualizada y auditoría local de inclusión de archivos/descripciones; cache pública pendiente, contenedor/HF no medidos, sin publicar.
+Codex · LowCrime · 2026-10-07 · H-06: protocolo, hoja de tiempos y evaluador. No inventó duraciones ni ahorro; medición humana pendiente. Pruebas de ausencias y desaceleración.
+Codex · LowCrime · 2026-10-07 · Capturas finales: automatizó navegación/captura Chromium, inspección visual y hashes; imágenes reales sin generación ni edición, snapshot público sin RSS visible.
+Codex · LowCrime · 2026-10-07 · Pulido UI: textos/ayudas en español y vacíos de Ficha, sin cambios funcionales; validación con suite existente, sin tests que dupliquen textos triviales.

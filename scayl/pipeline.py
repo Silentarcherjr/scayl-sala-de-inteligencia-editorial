@@ -186,7 +186,7 @@ def write_quality_report(snapshot: Path, report) -> None:
     """T01 evidence: data/processed/<snap>/quality_report.json (counts, exclusions with reasons, nulls)."""
     out = Path("data/processed") / snapshot.name
     out.mkdir(parents=True, exist_ok=True)
-    data = report if isinstance(report, dict) else getattr(report, "to_dict", lambda: {})()
+    data = report if isinstance(report, dict) else getattr(report, "to_dict", dict)()
     (out / "quality_report.json").write_text(json.dumps(data, ensure_ascii=False, indent=1, default=str),
                                              encoding="utf-8")
 

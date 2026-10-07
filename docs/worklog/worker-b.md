@@ -38,3 +38,25 @@ Medición real E5 en CPU (torch 2.14.1+cpu, CUDA no disponible). Matrices ignora
 2026-10-07 05:07 UTC - B-13/B-14: merge limpio b6f5e08 desde main 61ee2fa; rama worker-b/recent-official-evidence. Adicion v1.1 con raw previos intactos: 394 niveles Gatun, 394 proyecciones null (fuera de corte), 24 INEC. Manifest verify []. Medicion E5: 165 eventos, antes/despues 0 suficiente,131 parcial,34 insuficiente. AP-012 contexto ACP irrelevante abierta. Precálculo equivalente a make (no instalado): 15 live qwen3:8b, Vulkan AMD RX9060XT 37/37 capas; mediana15068ms p9517755ms, citas49/49,0fallback. 152 pytest verdes. Resultados eval/results/b13-b14-*. No processed ni ZIP/RSS a Git.
 
 2026-10-07 05:12 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md. PR31; implementacion536e6c0;152passed;15live. Siguiente Lead AP-012,cotejoINEC y proyeccionhistorica.
+
+2026-10-07 05:43 UTC - Backlog 1 precompute DL-026: 172 pytest verdes; 15 paquetes medidos, E5 activo, qwen3:8b Vulkan RX9060XT; resultados final-precompute en eval/results; procesados locales.
+
+2026-10-07 05:44 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md; 1 precalculo actualizado https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/37. Continúa 2 cache publica para A-06
+2026-10-07 05:48 UTC - Backlog 2 cache publica A-06: 187 noticias sin descripcion,165eventos,30entradas auditadas,15/15cache; stage preparado sin publicar;174pytest verdes; aviso @LowCrime en PR.
+
+2026-10-07 05:49 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md; 2 cache publica revisada https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/38. Continúa 3 B-11 CI
+2026-10-07 05:51 UTC - B-11 CI: 172pytest verdes,ruff tests verde; workflow Python3.12 con pytest y ruff check .;36avisos globales fuera de tests reportados,sin ocultarlos ni modificar modulos Lead.
+
+2026-10-07 05:52 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md; 3 B-11 workflow y lint tests https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/39. Continúa 4 holdout humano pendiente; continuar 5 B-07 etiquetas
+2026-10-07 05:56 UTC - B-07 pendiente humano: 100temas propuestos y32titulares para488pares;0confirmados;metricas no medido;174pytest;solicitud enviada,seguirbenchmark.
+
+2026-10-07 05:58 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md; 5 B-07 formularios; revision humana pendiente https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/40. Continúa 6 B-10 benchmark; 4 holdout pendiente; no medido B-07 hasta revision
+2026-10-07 18:57 UTC - B-10: Benchmark GPU top15: 8b 14643/17600 ms, citas49/49, fallback0/15; 4b 9050/12898.2 ms, citas25/25, EMPTY_BRIEF3/15. Recomiendo8b. 172 pruebas verdes; reportes reales guardados.
+
+2026-10-07 19:00 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md; B-10 https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/48. Continúa B-04: casos sinteticos aislados, incluido suficiente con ACP coincidente; luego H-06 y volver a bloqueos humanos.
+2026-10-07 19:03 UTC - B-04: Seis casos sinteticos aislados T01/T02/T03/T05/T07 y SUFICIENTE ACP inventado85.1pies. Replay con reglas existentes; sin modificar corpus/contratos/LLM. Reporte con SHA guardado, 173 pytest verdes.
+
+2026-10-07 19:06 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md; B-04 https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/49. Continúa H-06 humano: protocolo existente worker-a/h06-mini-study; esperar tiempos reales. B-06 opcional aislado; al final volver a holdout y etiquetas humanas.
+2026-10-07 19:11 UTC - B-06: Recuperador experimental opt-in BM25 positivo+coseno E5, scores[0,1], sin integrar qa.py. 176pytest y Ruff propio verdes. Smoke real3/3consultas con1314unidades; precision y latenciaQA no medidas. H-06 compartido ya tienePR45 y espera humanos.
+
+2026-10-07 19:13 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md; B-06 https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/50. Continúa Volver a los bloqueos: diez preguntas humanas holdout_v2, confirmar cien temas/32 grupos B-07 y seis tiempos H-06 PR45. CI PR39 conserva36avisosfuera tests paraLead. No hay mas tareas autonomas.

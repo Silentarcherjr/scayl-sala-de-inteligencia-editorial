@@ -4,7 +4,7 @@ from __future__ import annotations
 import hashlib
 import json
 import time
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 import numpy as np
@@ -88,7 +88,7 @@ def compare(snapshot: Path = Path("data/raw/v1")) -> dict:
         matches = [event.event_id for event in after.events if set(members).intersection(event.member_ids)]
         group_ids.update(matches)
         diagnostic[old_id] = {"member_ids": members, "after_event_ids": matches}
-    result = {"at": datetime.now(timezone.utc).isoformat(), "snapshot": snapshot.name,
+    result = {"at": datetime.now(UTC).isoformat(), "snapshot": snapshot.name,
               "manifest_sha256": hashlib.sha256((snapshot / "manifest.json").read_bytes()).hexdigest(),
               "calibration_sha256": hashlib.sha256(calibration_path.read_bytes()).hexdigest(),
               "model": ai.name, "tau": DEFAULT_TAU[ai.name], "device": ai.device,

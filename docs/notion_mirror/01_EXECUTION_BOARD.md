@@ -42,3 +42,4 @@
 - **2026-10-07 09:45 UTC** — Backlog final con reglas de autonomía publicado en `docs/agents/*.md`: cada worker avanza tarea por tarea con un PR independiente, sin esperar merges, hasta "TERMINADO".
 
 - **2026-10-07 09:50 UTC** — H-05 (video de la demo) pasa a Humano 1 + Lead: el Lead escribe el guion y el Humano 1 graba en local. Se retira del backlog de LowCrime.
+- **2026-10-07 19:20 UTC** — Integrados los 13 PRs del backlog final (#37–#49): CI con pytest + ruff en verde, caché pública lista para el Space, benchmark (qwen3:8b para la demo), casos sintéticos, capturas finales y Trust Lab con red-team (AP-014). 184 pruebas. **Faltan entradas humanas:** B-07 (Friction), B-09 (Low), H-06 (ambos) y red-team v2 (Friction). Siguiente: confirmación del Space (A-06) y video (H-05).

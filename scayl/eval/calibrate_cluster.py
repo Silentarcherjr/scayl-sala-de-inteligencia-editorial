@@ -5,7 +5,7 @@ import argparse
 import csv
 import hashlib
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 import numpy as np
@@ -24,7 +24,7 @@ def calibrate(news_path: Path, pairs_path: Path, output: Path) -> dict:
     items = [all_items[key] for key in ids]
     for item in items:
         when = item.fecha_publicacion or item.fecha_deteccion
-        if when is None or when.year != 2025 or when >= datetime(2025, 10, 2, tzinfo=timezone.utc):
+        if when is None or when.year != 2025 or when >= datetime(2025, 10, 2, tzinfo=UTC):
             raise ValueError("Calibration accepts only pre-C-01 2025 development news")
     embedder = SentenceTransformerEmbedder()
     texts = [" ".join(filter(None, (item.titulo, item.descripcion))) for item in items]
@@ -57,7 +57,7 @@ def calibrate(news_path: Path, pairs_path: Path, output: Path) -> dict:
         grid.append({"tau": tau, "tp": tp, "fp": fp, "fn": fn, "tn": tn,
                      "precision": precision, "recall_on_labelled_dev_pairs": recall, "f1": f1})
     best = max(grid, key=lambda row: (row["f1"], row["precision"], row["tau"]))
-    result = {"at": datetime.now(timezone.utc).isoformat(), "model": embedder.name,
+    result = {"at": datetime.now(UTC).isoformat(), "model": embedder.name,
               "device": embedder.device, "news_count": len(items), "pair_count": len(pairs),
               "labelers": sorted({p["labeler"] for p in pairs}),
               "limitations": "Provisional agent annotations; not human gold or held-out evaluation. B-07 human review pending.",

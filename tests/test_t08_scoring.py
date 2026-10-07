@@ -11,9 +11,9 @@ CUTOFF = datetime(2025, 10, 1, tzinfo=UTC)
 
 
 def _inp(**kw):
-    base = dict(mentions_panama=True, is_tvn=False, topic=Topic.LOGISTICA_CANAL, topic_confidence=0.9,
-                has_official_evidence=False, latest_original_publication=CUTOFF - timedelta(hours=2),
-                cutoff=CUTOFF, max_prior_similarity=None, max_possible_independent=1, confirmed_independent=0)
+    base = {"mentions_panama": True, "is_tvn": False, "topic": Topic.LOGISTICA_CANAL, "topic_confidence": 0.9,
+            "has_official_evidence": False, "latest_original_publication": CUTOFF - timedelta(hours=2),
+            "cutoff": CUTOFF, "max_prior_similarity": None, "max_possible_independent": 1, "confirmed_independent": 0}
     base.update(kw)
     return ScoringInput(**base)
 

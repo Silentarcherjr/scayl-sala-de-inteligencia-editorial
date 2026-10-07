@@ -2,3 +2,9 @@
 b05-*.json -text
 b13-b14-*.json -text
 b13-b14-*.jsonl -text
+final-precompute*.json -text
+final-precompute*.jsonl -text
+b10-*.json -text
+b10-*.jsonl -text
+b04-synthetic.json -text
+b06-smoke.json -text

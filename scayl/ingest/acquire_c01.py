@@ -29,7 +29,7 @@ def acquire(directory: Path, *, extended: bool = False) -> dict:
                                          "https://api.gdeltproject.org/api/v2/doc/doc", params)
                 payload = json.loads(content)
                 if not isinstance(payload, dict) or not isinstance(payload.get("articles", []), list):
-                    raise ValueError("Unexpected DOC payload")
+                    raise ValueError("Unexpected DOC payload")  # noqa: TRY004 - callers handle ValueError
                 if payload and "articles" not in payload:
                     raise ValueError("DOC response has no articles field")
                 selected = [article_row(a, meta["fecha_extraccion"]) for a in payload.get("articles", [])]

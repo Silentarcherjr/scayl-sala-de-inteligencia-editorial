@@ -1,0 +1,75 @@
+{
+ "data": {
+  "proposed_title": "Canal de Panamá reduce el tránsito de buques por El Niño: ¿qué significa para el país?",
+  "public_interest_angle": "El Niño afecta el tránsito marítimo en el Canal de Panamá, lo que podría impactar la logística y la economía del país.",
+  "brief": [
+   {
+    "text": "Según telemetro.com y otros medios, el Canal de Panamá está reduciendo el tránsito de buques debido al fenómeno climático El Niño. Esta situación podría afectar la logística y la economía del país.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0078-001",
+     "CLM-0078-004"
+    ]
+   },
+   {
+    "text": "El nivel del lago Gatún, un factor clave en el funcionamiento del canal, fue de 84.0 pies el 4 de septiembre de 2026, según datos del ACP.",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0078-002"
+    ]
+   },
+   {
+    "text": "Revistaeyn.com reporta que el Canal de Panamá flexibilizó el sistema de reservas para buques en medio de la restricción al tránsito.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0078-003"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Cuál es el impacto exacto del El Niño en el tránsito marítimo del Canal de Panamá?",
+   "¿Cómo está afectando la reducción del tránsito a la economía y logística del país?",
+   "¿Qué medidas específicas ha tomado el Canal de Panamá para adaptarse a la situación actual?"
+  ],
+  "script": [
+   {
+    "text": "El Canal de Panamá está reduciendo el tránsito de buques debido al fenómeno El Niño, según medios como telemetro.com. Esta situación podría afectar la logística y la economía del país. El nivel del lago Gatún, un factor clave en el funcionamiento del canal, fue de 84.0 pies el 4 de septiembre de 2026, según datos del ACP. Además, se reporta que el canal flexibilizó el sistema de reservas para buques en medio de la restricción al tránsito.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0078-001",
+     "CLM-0078-002",
+     "CLM-0078-003",
+     "CLM-0078-004"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "El Canal de Panamá reduce el tránsito de buques por El Niño. ¿Qué significa para el país? #CanalPanama #ElNino #Logistica",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0078-001",
+    "CLM-0078-004"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar el impacto real del El Niño en el tránsito marítimo del Canal de Panamá.",
+   "Verificar cómo la reducción del tránsito afecta la economía y la logística del país.",
+   "Revisar las medidas específicas tomadas por el Canal de Panamá para adaptarse a la situación."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 18139,
+  "tokens_in": 1567,
+  "tokens_out": 825,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-07T05:40:54.635838Z"
+ }
+}

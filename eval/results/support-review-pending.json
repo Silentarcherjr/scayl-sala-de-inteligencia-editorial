@@ -1,0 +1,19 @@
+{
+  "status": "no medido",
+  "num": null,
+  "den": null,
+  "value": null,
+  "reviewer": [],
+  "reviewed": 0,
+  "required": 30,
+  "partial": 0,
+  "failures": [],
+  "scope": "Muestra determinista de paquetes, no aleatoria ni gold humano hasta recibir etiquetas.",
+  "generation_modes": [
+    "template"
+  ],
+  "method": "sí / todas las filas revisadas; parcial no suma al numerador. Requiere toda la muestra (>=30).",
+  "evidence": "data\\labels\\support_review.csv",
+  "sha256": "a1fa45090f692e31f6f44b4c03223884012cacf28d46887bfe989f3726e7cb12",
+  "bundle_sha256": "564c2142637436e7c3af2692672f4b4eb07c0b1f1857fc12b8fb3bc749e936bf"
+}

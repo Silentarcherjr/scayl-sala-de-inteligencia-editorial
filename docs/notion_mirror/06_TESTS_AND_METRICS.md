@@ -28,7 +28,7 @@
 | Temas macro-F1 (baseline vs IA) | reportar | no medido | — | ≥100 etiquetas humanas |
 | Agrupación P/R/F1 (baseline vs IA) | reportar | no medido | — | Pares etiquetados |
 | Precision@5 | reportar (exploratoria) | **1/5 = 0.20** (baseline TF-IDF + reglas, sin ACP/INEC; preliminar del Lead, B-08 la formaliza). Los 5 elegidos quedan en las posiciones 2, 6, 12, 22 y 26 de 183 | 5 eventos | Top 5 de LowCrime (PR #23, 2026-10-07). Limitación: vio antes una propuesta de IA (coincide en 1 de 5) y no vio el ranking del sistema (DL-024) |
-| Latencia mediana / p95 | mediana ≤15 s | **15,1 s / 17,8 s** (Story Studio en vivo, qwen3:8b, AMD RX 9060 XT 8 GB Vulkan) | 15 | `eval/results/b13-b14-precompute.json` |
+| Latencia mediana / p95 | mediana ≤15 s | **14,6 s / 17,6 s** (Story Studio en vivo, qwen3:8b, AMD RX 9060 XT 8 GB Vulkan; corrida tras DL-026). qwen3:4b: 9,1 s / 12,9 s, con 3 paquetes vacíos | 15 | `eval/results/final-precompute*.json`, `eval/results/b10-model-comparison.json` |
 | Costo de API | — | $0.00 por diseño (local); se confirma al medir | — | — |
 
 ## Registro de pruebas fallidas y correcciones
@@ -63,3 +63,17 @@ _(el jurado pedirá "una prueba fallida y su corrección": registrarlas aquí en
 | 2026-10-07 | Arnés A-06 | Fixture sin news y secuencia input.run antes del submit de formulario daban fallos del test. | Suposición de news[0] y envío del formulario en dos corridas. | Añadir titular sintético explícito y enviar input/click en una misma corrida; controles originales conservados. | tests/test_deploy.py. |
 | 2026-10-07 | A-06 captura Chromium tras login por URL directa | No aparecía Cerrar sesión ni el aviso de snapshot en la página directa. | El control de acceso estaba en cada envoltorio, pero el marco visual solo en la entrada. | hosted_frame compartido en todas las rutas; regresión AppTest exige aviso y logout, además de bloqueo tras logout. | tests/test_deploy.py y capturas A-06. |
 | 2026-10-07 | B-12 RT01–RT12 (`test_flagged_headline_is_never_quoted_in_extractive_answer`, `test_false_premise_figure_abstains_without_model`, `test_current_value_*`, `test_year_must_belong_to_a_unit_about_the_topic`, `test_spanish_dates_retrieve_the_exact_day`) | 10/16 ataques sin abstención; inyección citada textualmente en modo extractivo. | El modo extractivo no validaba ni excluía fuentes marcadas; no había guardias de premisa ni de actualidad; el año coincidía con fechas de titulares ajenos. | Exclusión de fuentes marcadas, validador en el extractivo, guardias de premisa, actualidad y período temático, fechas en español. 16/16; controles 4/4. | `scayl/gen/qa.py` (DL-027) |
+| 2026-10-07 | test_description_in_cached_output_is_rejected | Fixture GenerationMeta rechazado antes del control de privacidad; 1 fallo/173 verdes. | Omitia tres campos nullable obligatorios. | Fijar latency_ms,tokens_in,tokens_out=None; control de privacidad intacto;174 verdes. | tests/test_public_cache_export.py |
+| 2026-10-07 | B-11 ruff check . | 51 avisos iniciales,15 en tests; control global sigue rojo con36 fuera de tests. | Imports, nombres y estilo heredados. | Tests corregidos sin alterar aserciones: ruff tests verde y172pytest;33 scayl,2app,1deploy reportados al Lead, sin ignores ni continue-on-error. | eval/results/b11-ruff.json |
+
+## H-06 · Mini-estudio exploratorio (preparación 2026-10-07)
+Protocolo: docs/H06_MINI_STUDY.md; hoja: data/labels/time_study.csv. Tres pares previstos (tema y vacíos,
+cifra/fuente/período, procedencia), mismo operador y evidencia por par; alternar orden y declarar aprendizaje.
+Se pidió ejecución a LowCrime con frictionspp-svg. **No medido: n=0 pares completos; n previsto=3.**
+No se afirma ahorro de tiempo. eval/results/time-study.json conserva tiempos/ratios nulos; tras recibir
+las seis duraciones y resultados, ejecutar scayl.eval.time_study y registrar aquí diferencia y n=3 como
+exploratorio. No sustituir el cronómetro humano por estimaciones del agente.
+
+Capturas finales: el primer arnés buscaba h2 Respuesta pero la UI usa h3 Resultado, dejando la abstención fuera del encuadre; corregido el selector y recapturado. Esperar ausencia de todo botón Stop también incluía nodos ocultos; ajustado el arnés sin modificar la UI ni los PNG. Evidencia: docs/screenshots/final/09-consultas-abstencion.png.
+| 2026-10-07 | B-06 test_evidence_fields_nulls_and_injection_filter | EvidenceRef rechaza unit como campo extra. | El adaptador experimental supuso un campo fuera del contrato. | Conservar unidad en excerpt y texto del índice; contrato intacto. | tests/test_retrieve.py; 176 passed; Ruff del módulo y pruebas verde. |
+| 2026-10-07 | B-06 smoke real | AttributeError report.total. | El script local asumió objeto donde load_snapshot devuelve dict. | Usar report["total"] en el script; no cambio del loader. | eval/results/b06-smoke.json al repetir. |

@@ -28,18 +28,18 @@
 | A-02 | Sala de Situación | **W** LowCrime (DL-020) | P0 | M1 | DONE (PR #18) | A-01 |
 | A-03 | Ficha de Caso (6 pestañas) | **W** LowCrime | P0 | M1–M2 | DONE (PR #13) | A-01 |
 | A-04 | Consultas (Q&A) | **W** LowCrime | P0 | M2 | DONE (PR #25) | A-01 |
-| A-05 | Trust Lab (vista) | **L** Lead (DL-021) | P1 | M3 | DONE (vista; métricas reales pendientes de B-08) | B-08 |
-| A-06 | Despliegue del enlace en modo `cache` | **W** LowCrime | P0 | M3 | PREPARADA (PR #32: Space Docker con contraseña, modo cache; falta publicar con caché revisada y confirmación del Lead) | AP-001, L-07 |
+| A-05 | Trust Lab (vista) | **L** Lead (DL-021) | P1 | M3 | DONE (AP-014 aplicada: red-team, procedencia y limitaciones visibles) | B-08 |
+| A-06 | Despliegue del enlace en modo `cache` | **W** LowCrime | P0 | M3 | PREPARADA (caché pública en main, PR #38; falta prueba del contenedor y confirmación del Lead para publicar) | AP-001, L-07 |
 | B-01 | Construir el snapshot propio según el PDF §6–7 (fetchers) → `data/raw/v1` | **F** frictionspp-svg | P0 | M0 | DONE (PR #19) | — |
 | B-02 | `ingest/manifest.py` (SHA-256, conteos, transformaciones) + diccionario | **F** frictionspp-svg | P0 | M0 | DONE (PR #19) | B-01 |
 | B-03 | `ingest/validate.py` + normalización → `data/processed` + `quality_report` (T01) | **L** Lead (DL-023) | P0 | M1 | DONE | B-01 |
-| B-04 | Casos sintéticos T01/T03/T05/T07 en `data/synthetic/` | **F** frictionspp-svg | P0 | M1 | TODO | L-01 |
+| B-04 | Casos sintéticos T01/T03/T05/T07 en `data/synthetic/` | **F** frictionspp-svg | P0 | M1 | DONE (PR #49: 6 casos SINTÉTICOS aislados, incluye uno "suficiente") | L-01 |
 | B-05 | `intel/embed.py` + `topics.py` + `cluster.py` (baseline + IA) | **L** baseline / **F** IA (DL-023) | P0 | M1–M2 | DONE (PR #28: E5 multilingüe, τ=0,87 calibrado en desarrollo 2025; validación humana en B-07) | B-03 |
-| B-06 | `intel/retrieve.py` (BM25 + coseno) | **F** frictionspp-svg | P0 | M2 | TODO | B-05 |
-| B-07 | Etiquetas humanas: temas (≥100), pares de agrupación, top 5 ciego, benchmark dev (40) | F (etiquetas) + W (top 5 ciego) | P0 | M2 | TODO | B-03 |
-| B-08 | `eval/`: métricas, benchmark, latencia → `eval/results/latest.json` | **W** LowCrime | P0/P1 | M3 | PARCIAL (PR #27: P@5 y T01–T10; el resto no medido hasta B-05 IA, L-10/L-11 en vivo y benchmark B-10) | B-05, L-10, L-11 |
-| B-09 | Revisión humana de ≥30 afirmaciones (validez de sustento) | W (editor) | P0 | M3 | TODO | L-10 |
-| B-10 | Benchmark de modelos locales (embeddings + LLM) en hardware declarado | **F** frictionspp-svg (AMD Radeon RX 9060 XT 8 GB, Vulkan) | P0 | M1 | PARCIAL (PR #31: qwen3:8b en RX 9060 XT, mediana 15,1 s, p95 17,8 s, n=15; falta comparar modelos) | — |
+| B-06 | `intel/retrieve.py` (BM25 + coseno) | **F** frictionspp-svg | P0 | M2 | DONE (PR #50: opcional, desactivado por defecto; no reemplaza el recuperador de Consultas) | B-05 |
+| B-07 | Etiquetas humanas: temas (≥100), pares de agrupación, top 5 ciego, benchmark dev (40) | F (etiquetas) + W (top 5 ciego) | P0 | M2 | PREPARADA (PR #40: 100 temas + 32 titulares listos; falta revisión humana) | B-03 |
+| B-08 | `eval/`: métricas, benchmark, latencia → `eval/results/latest.json` | **W** LowCrime | P0/P1 | M3 | DONE (PR #27/#41: P@5, red-team, precompute importado; se recalcula al llegar B-07/B-09) | B-05, L-10, L-11 |
+| B-09 | Revisión humana de ≥30 afirmaciones (validez de sustento) | W (editor) | P0 | M3 | PREPARADA (PR #43: 30 afirmaciones listas; falta marcar sí/no/parcial) | L-10 |
+| B-10 | Benchmark de modelos locales (embeddings + LLM) en hardware declarado | **F** frictionspp-svg (AMD Radeon RX 9060 XT 8 GB, Vulkan) | P0 | M1 | DONE (PR #48: qwen3:8b recomendado frente a 4b) | — |
 | H-01 | Preparar el espacio Notion (estructura de §5) para migrar en cuanto haya licencia | H1 | P0 | M3 | TODO | — |
 | H-02 | Bitácora `docs/AI_TOOLS_USED.md` → PDF | Todos | P0 | M4 | DOING | — |
 | H-03 | Publicaciones en redes (@hackiathon @viamatica @adenbs) | H | P0 | M1–M4 | TODO | — |
@@ -52,10 +52,10 @@
 | A-08 | **Clic en número → tarjeta de evidencia**, componente reutilizable en todas las pantallas | **W** LowCrime (DL-020) | P0 | M1 | DONE (PR #13) | A-01 |
 | A-09 | **Modo jurado** en Consultas (las 4 preguntas del PDF precargadas) | **W** LowCrime | P1 | M2 | DONE (PR #25) | A-04 |
 | A-10 | Vista del simulador de pesos (sliders → ranking nuevo vs v1, justificación obligatoria) | **L** Lead (DL-021) | P1 | M2 | DONE | L-15 |
-| B-11 | **GitHub Actions**: pytest (T01–T10) en cada PR + badge en el README | **F** frictionspp-svg | P0 | M1 | TODO | — |
+| B-11 | **GitHub Actions**: pytest (T01–T10) en cada PR + badge en el README | **F** frictionspp-svg | P0 | M1 | DONE (PR #39: CI pytest + ruff; ruff en verde tras limpieza del Lead) | — |
 | B-12 | **Set de 10 ataques** (inyección, preguntas trampa, pedir secretos, acusaciones) + tasa de resistencia | **W** LowCrime | P1 | M3 | DONE (PR #32: 16 ataques + 4 controles; fallos corregidos en qa.py, DL-027) | L-10, L-11 |
 | H-05 | **Video de la demo con internet apagado** → Notion | H1 + L (guion del Lead, grabación local del Humano 1) | P0 | M4 | TODO | M3 |
-| H-06 | **Mini-estudio manual vs asistido** (3 tareas cronometradas, protocolo en 06) | F + W | P1 | M3 | TODO | M2 |
+| H-06 | **Mini-estudio manual vs asistido** (3 tareas cronometradas, protocolo en 06) | F + W | P1 | M3 | PREPARADA (PR #45: protocolo y hoja; faltan los tiempos humanos) | M2 |
 | H-07 | Registro de **prueba fallida → corrección** (regla continua: cada fallo real se anota en 06) | Todos | P0 | M1–M4 | DOING | — |
 | H-08 | Top 5 **a ciego** del editor (Humano 2), antes de que exista ranking | W (editor) | P0 | M0–M1 | DONE (PR #23; ver DL-024) | B-01 |
 | B-13 | **ACP**: niveles del lago Gatún (CSV histórico + proyección) → `indicadores_recientes.csv` (AP-010) | **F** frictionspp-svg | P1 | M2 | DONE (PR #31; vínculo corregido por AP-012/DL-026) | B-01 |

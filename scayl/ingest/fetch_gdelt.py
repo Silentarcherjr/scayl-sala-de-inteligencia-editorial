@@ -5,7 +5,7 @@ import argparse
 import hashlib
 import json
 import time
-from datetime import date, datetime, timedelta, timezone
+from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 from urllib.parse import urlsplit, urlunsplit
 
@@ -32,7 +32,7 @@ def normalize_url(url: str) -> str:
 
 def article_row(article: dict, extracted: str) -> dict:
     url = normalize_url(article["url"])
-    seen = datetime.strptime(article["seendate"], "%Y%m%dT%H%M%SZ").replace(tzinfo=timezone.utc)
+    seen = datetime.strptime(article["seendate"], "%Y%m%dT%H%M%SZ").replace(tzinfo=UTC)
     domain = urlsplit(url).hostname or ""
     return {"id_noticia": "gdt-" + hashlib.sha256(url.encode()).hexdigest()[:20],
             "titulo": article["title"], "url": url,

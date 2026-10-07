@@ -1,0 +1,73 @@
+{
+ "data": {
+  "proposed_title": "Proyecto Panamá: Anthropic destruye millones de libros en secreto",
+  "public_interest_angle": "El proyecto de Anthropic en Panamá ha generado preocupación por la destrucción de libros para alimentar la inteligencia artificial.",
+  "brief": [
+   {
+    "text": "Según euronews.com y otros medios, se reportó un proyecto en Panamá donde Anthropic destruye millones de libros en secreto. La noticia ha generado preocupación por la posible destrucción de libros para alimentar la inteligencia artificial.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0134-001",
+     "CLM-0134-002"
+    ]
+   },
+   {
+    "text": "El periódico Zócalo también mencionó el proyecto de Anthropic en Panamá, destacando la preocupación por la destrucción de libros para alimentar la inteligencia artificial.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0134-002"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Qué información específica ofrecen los medios sobre el proyecto de Anthropic en Panamá?",
+   "¿Cuál es el propósito exacto del proyecto y cómo se relaciona con la destrucción de libros?",
+   "¿Qué medidas se han tomado para investigar o regular este proyecto?"
+  ],
+  "script": [
+   {
+    "text": "Según euronews.com y otros medios, se reportó un proyecto en Panamá donde Anthropic destruye millones de libros en secreto. La noticia ha generado preocupación por la posible destrucción de libros para alimentar la inteligencia artificial.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0134-001",
+     "CLM-0134-002"
+    ]
+   },
+   {
+    "text": "El periódico Zócalo también mencionó el proyecto de Anthropic en Panamá, destacando la preocupación por la destrucción de libros para alimentar la inteligencia artificial.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0134-002"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "Según medios, Anthropic destruye millones de libros en secreto en Panamá. ¿Qué sabemos de este proyecto?",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0134-001",
+    "CLM-0134-002"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar el contenido completo de los artículos mencionados.",
+   "Verificar si el proyecto de Anthropic en Panamá realmente implica la destrucción de libros.",
+   "Investigar si hay regulaciones o respuestas oficiales sobre el proyecto."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 14886,
+  "tokens_in": 1206,
+  "tokens_out": 666,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-07T05:43:07.583118Z"
+ }
+}

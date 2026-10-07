@@ -1,25 +1,24 @@
 import csv
+import hashlib
+import io
 import json
+import shutil
+import zipfile
+from datetime import UTC, datetime
+from pathlib import Path
+from urllib.error import HTTPError
 
 import pytest
-
-from scayl.ingest.common import write_once, write_csv
-from scayl.ingest import common
-from urllib.error import HTTPError
-from scayl.ingest.fetch_gdelt import article_row, normalize_url
-from scayl.ingest.fetch_worldbank import complete_grid, INDICATORS
-from scayl.ingest.manifest import build_manifest, verify_manifest
-from scayl.ingest.editor_candidates import export
-from scayl.ingest.fetch_gkg import extract
-from scayl.ingest import fetch_usgs, fetch_worldbank
-from scayl.ingest.fetch_tvn import historical_rows
-from datetime import datetime, timezone
-import io
-import zipfile
-import hashlib
-import shutil
-from pathlib import Path
 import yaml
+
+from scayl.ingest import common, fetch_usgs, fetch_worldbank
+from scayl.ingest.common import write_csv, write_once
+from scayl.ingest.editor_candidates import export
+from scayl.ingest.fetch_gdelt import article_row, normalize_url
+from scayl.ingest.fetch_gkg import extract
+from scayl.ingest.fetch_tvn import historical_rows
+from scayl.ingest.fetch_worldbank import INDICATORS, complete_grid
+from scayl.ingest.manifest import build_manifest, verify_manifest
 
 
 def test_immutable_bytes(tmp_path):
@@ -229,8 +228,8 @@ def test_rss_historical_adapter_preserves_publication_and_excludes_cutoff():
              for index, published in enumerate(["Mon, 01 Sep 2025 07:00:00 -0500",
                                                 "Wed, 01 Oct 2025 00:00:00 +0000",
                                                 "Tue, 06 Oct 2026 12:00:00 +0000"])]
-    rows = historical_rows(items + [items[0]], datetime(2024, 1, 1, tzinfo=timezone.utc),
-                           datetime(2025, 10, 1, tzinfo=timezone.utc))
+    rows = historical_rows(items + [items[0]], datetime(2024, 1, 1, tzinfo=UTC),
+                           datetime(2025, 10, 1, tzinfo=UTC))
     assert len(rows) == 1
     assert rows[0]["fecha_publicacion"] == "2025-09-01T12:00:00Z"
     assert rows[0]["fecha_deteccion"] is None
@@ -241,7 +240,9 @@ def test_rss_historical_adapter_preserves_publication_and_excludes_cutoff():
 def test_download_caches_bytes_and_rejects_changed_request(tmp_path, monkeypatch):
     class Response:
         status = 200
-        headers = {"Content-Type": "application/json"}
+        @property
+        def headers(self):
+            return {"Content-Type": "application/json"}
         def __enter__(self):
             return self
         def __exit__(self, *args):

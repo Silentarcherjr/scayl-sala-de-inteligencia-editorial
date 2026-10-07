@@ -187,3 +187,11 @@
 - **Resultado medido:** abstención correcta 16/16; abstención incorrecta 0/4; controles 4/4; sondas del validador 9/9; 172 pruebas.
 - **Limitación declarada (sobreajuste):** la corrección se hizo después de ver el set, que fue escrito por un agente IA. Mitigación: reglas generales; 7 regresiones nuevas redactadas de otra forma; verificación manual con datos reales (preguntas "actual" responden con INEC 2026-08 y Gatún 2026-09-30, con su fecha). **Pendiente: un set reservado nuevo**, escrito por alguien que no haya visto el código, para medir sin sesgo.
 - **Fecha:** 2026-10-07
+
+### DL-028 · Integración del backlog final (PR #37–#49); modelo de demo: qwen3:8b
+- **Integrado:** precompute repetido (#37), caché pública revisada (#38), CI (#39), preparación de B-07 (#40), B-08 con métricas importadas (#41), AP-014 (#42), preparación de B-09 (#43), Space preparado (#44), protocolo H-06 (#45), capturas finales (#46), pulido de UI (#47), benchmark B-10 (#48) y casos sintéticos B-04 (#49). 184 pruebas; `ruff check .` en verde.
+- **Modelo para la demo: qwen3:8b.** Medido en el top 15 (n = 15, una corrida por modelo, AMD RX 9060 XT Vulkan): 8b, mediana 14,6 s, p95 17,6 s, citas 49/49, 0 respaldos; 4b, mediana 9,1 s, p95 12,9 s, citas 25/25, pero 3 paquetes vacíos (EMPTY_BRIEF) tras validar. Se prefiere calidad estable a velocidad.
+- **AP-014 aceptada:** el Trust Lab muestra red-team (num/den, fallos, alcance sintético), la limitación de P@5 (DL-024) y el hardware y el archivo de origen de cada métrica importada.
+- **Limpieza de lint (Lead):** 44 avisos de estilo de ruff en `scayl/` resueltos sin cambiar comportamiento (orden de imports, `datetime.UTC`, literales). Dos excepciones justificadas con `noqa`.
+- **Pendiente humano (no se inventa):** B-07 (100 temas + 32 titulares), B-09 (30 afirmaciones), H-06 (tiempos) y set reservado de red-team v2. Mientras falten, sus métricas siguen "no medido".
+- **Fecha:** 2026-10-07

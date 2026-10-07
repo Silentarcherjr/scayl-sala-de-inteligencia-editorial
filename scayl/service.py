@@ -185,7 +185,7 @@ def generation_summary() -> dict:
                         "preserved_before": sum(a["preserved_before_validation"] for a in attr),
                         "preserved_after": sum(a["preserved_after_validation"] for a in attr)},
         "latency_ms": {"n": len(lat), "median": statistics.median(lat) if lat else None,
-                       "p95": lat[min(len(lat) - 1, int(round(0.95 * (len(lat) - 1))))] if lat else None},
+                       "p95": lat[min(len(lat) - 1, round(0.95 * (len(lat) - 1)))] if lat else None},
         "tokens_out": sum(r.get("tokens_out") or 0 for r in llm_rows),
         "cost_usd": sum(r.get("cost_usd") or 0.0 for r in rows),
     }
@@ -203,8 +203,8 @@ __all__ = [
     "bundle_path",
     "current_state",
     "generate_package",
-    "get_event",
     "generation_summary",
+    "get_event",
     "get_package",
     "load_bundle",
     "official_weights",

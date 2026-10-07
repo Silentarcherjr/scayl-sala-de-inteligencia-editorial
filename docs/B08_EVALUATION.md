@@ -51,3 +51,12 @@ El evaluador recalcula num/den desde sus observaciones; sin el argumento, absten
 Set, política estricta y límites: [eval/redteam/README.md](../eval/redteam/README.md).
 La corrida mide solo template/extractivo; no prueba calidad de LLM vivo, soporte humano ni benchmark reservado.
 P@5 en esta sesión se recalcula sobre el bundle público baseline (183 eventos), no sobre E5 (165).
+
+## B-08 · Importación de precálculo medido (2026-10-07)
+`python -m scayl.eval.run` incorpora automáticamente `eval/results/b13-b14-precompute.json` si existe;
+`--precompute-report` selecciona un resumen nuevo de B-10/precompute. Archiva una copia y SHA-256.
+Citas 49/49 y latencia Story Studio: n=15, mediana15068ms, p9517755ms, percentil lineal tipo7.
+Hardware dentro de measurement: AMD RX9060XT8GiB/Vulkan, Ollama qwen3:8b. `hardware` de raíz sigue
+identificando al equipo evaluador; no se mezclan las dos máquinas/corridas. Latencia QA permanece no medido.
+La cobertura incluye brief/script conservados, no social copy; no equivale a validez de sustento humana.
+Volver a ejecutar al recibir nuevos resultados; ninguna métrica B-07/B-10 se estima por anticipado.
