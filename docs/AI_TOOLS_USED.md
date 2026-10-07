@@ -42,3 +42,4 @@ No generó etiquetas humanas ni tiempos; conserva fuente, n, hardware y no medid
 Codex · LowCrime · 2026-10-07 · AP-014: revisión de Trust Lab y parche propuesto de métricas/limitaciones; no aplicado, pendiente del Lead.
 Codex · LowCrime · 2026-10-07 · B-09: exportación de muestra y cálculo verificable; cero etiquetas humanas inventadas. Tres regresiones; revisión humana pendiente.
 Codex · LowCrime · 2026-10-07 · A-06: preparación actualizada y auditoría local de inclusión de archivos/descripciones; cache pública pendiente, contenedor/HF no medidos, sin publicar.
+Codex · LowCrime · 2026-10-07 · H-06: protocolo, hoja de tiempos y evaluador. No inventó duraciones ni ahorro; medición humana pendiente. Pruebas de ausencias y desaceleración.

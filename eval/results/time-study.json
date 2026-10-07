@@ -1,0 +1,24 @@
+{
+  "run_at": "2026-10-07T18:04:31.720386+00:00",
+  "status": "no medido",
+  "n": 0,
+  "planned_n": 3,
+  "exploratory": true,
+  "evidence": "data\\labels\\time_study.csv",
+  "sha256": "4a84795182e6cf1d165193eb0e437cb23db557d0b868abbc31b7d50fb0a2bd15",
+  "pairs": [],
+  "manual_seconds_total": null,
+  "assisted_seconds_total": null,
+  "difference_seconds": null,
+  "relative_difference": {
+    "num": null,
+    "den": null,
+    "value": null
+  },
+  "median_pair_difference_seconds": null,
+  "limitations": [
+    "Tres pares exploratorios, no evidencia causal ni generalizable de ahorro.",
+    "Tiempos humanos autorreportados; comparar resultados y condiciones, registrar familiaridad/orden.",
+    "No afirmar ahorro si faltan tiempos/resultados o si la calidad de las tareas no es comparable."
+  ]
+}

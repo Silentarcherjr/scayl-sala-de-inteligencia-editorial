@@ -65,3 +65,11 @@ _(el jurado pedirá "una prueba fallida y su corrección": registrarlas aquí en
 | 2026-10-07 | B-12 RT01–RT12 (`test_flagged_headline_is_never_quoted_in_extractive_answer`, `test_false_premise_figure_abstains_without_model`, `test_current_value_*`, `test_year_must_belong_to_a_unit_about_the_topic`, `test_spanish_dates_retrieve_the_exact_day`) | 10/16 ataques sin abstención; inyección citada textualmente en modo extractivo. | El modo extractivo no validaba ni excluía fuentes marcadas; no había guardias de premisa ni de actualidad; el año coincidía con fechas de titulares ajenos. | Exclusión de fuentes marcadas, validador en el extractivo, guardias de premisa, actualidad y período temático, fechas en español. 16/16; controles 4/4. | `scayl/gen/qa.py` (DL-027) |
 | 2026-10-07 | test_description_in_cached_output_is_rejected | Fixture GenerationMeta rechazado antes del control de privacidad; 1 fallo/173 verdes. | Omitia tres campos nullable obligatorios. | Fijar latency_ms,tokens_in,tokens_out=None; control de privacidad intacto;174 verdes. | tests/test_public_cache_export.py |
 | 2026-10-07 | B-11 ruff check . | 51 avisos iniciales,15 en tests; control global sigue rojo con36 fuera de tests. | Imports, nombres y estilo heredados. | Tests corregidos sin alterar aserciones: ruff tests verde y172pytest;33 scayl,2app,1deploy reportados al Lead, sin ignores ni continue-on-error. | eval/results/b11-ruff.json |
+
+## H-06 · Mini-estudio exploratorio (preparación 2026-10-07)
+Protocolo: docs/H06_MINI_STUDY.md; hoja: data/labels/time_study.csv. Tres pares previstos (tema y vacíos,
+cifra/fuente/período, procedencia), mismo operador y evidencia por par; alternar orden y declarar aprendizaje.
+Se pidió ejecución a LowCrime con frictionspp-svg. **No medido: n=0 pares completos; n previsto=3.**
+No se afirma ahorro de tiempo. eval/results/time-study.json conserva tiempos/ratios nulos; tras recibir
+las seis duraciones y resultados, ejecutar scayl.eval.time_study y registrar aquí diferencia y n=3 como
+exploratorio. No sustituir el cronómetro humano por estimaciones del agente.

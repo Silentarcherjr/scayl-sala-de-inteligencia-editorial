@@ -1,0 +1,4 @@
+task_id,task,participant,order,manual_seconds,assisted_seconds,completed_at_utc,manual_output,assisted_output,notes
+H06-1,Elige el tema del día y escribe tres vacíos de verificación,,manual-asistido,,,,,,
+H06-2,Identifica la fuente y el período de una cifra de inflación de Panamá,,asistido-manual,,,,,,
+H06-3,Determina si las publicaciones del caso Canal ofrecen corroboración independiente,,manual-asistido,,,,,,
