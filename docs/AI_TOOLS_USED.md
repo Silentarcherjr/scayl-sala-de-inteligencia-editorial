@@ -12,7 +12,6 @@
 
 | 2026-10-07 | Codex | LowCrime | A-03: ficha de caso | Revisión y continuación de la página local, validación de revisiones, 9 pruebas AppTest y propuesta AP-011 para dependencias pendientes | 80 pruebas en verde; seis pestañas con fixture sintético; tarjeta A-08 y API de recibo pendientes | Pendiente de revisión del Lead en PR borrador |
 | 2026-10-07 | Codex | LowCrime | Completar A-03/A-08 tras DL-020 | Tarjeta compartida, revisión del paquete visible, recibo descargable, AppTest y validación visual en Chromium con fixture sintético | 84 pruebas en verde; capturas a 1280×720; AP-011 aplicada | Pendiente de revisión final del Lead en PR #13 |
-| 2026-10-07 | Claude Code (cloud), Lead | H1 + Claude | UI: Trust Lab y simulador de pesos | Páginas Streamlit, funciones de servicio, 5 AppTest y capturas con Chromium headless | 89 pruebas en verde; detectada y desactivada la telemetría de Streamlit | Capturas en docs/screenshots/a05, a10 |
 
 ## Herramientas de IA dentro del producto (no son de desarrollo)
 | Componente | Modelo | Uso | Costo |
