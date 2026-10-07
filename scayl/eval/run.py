@@ -114,6 +114,7 @@ def build_report(bundle: UIBundle, selection: dict, pytest_report: Path | None =
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--snapshot", default="v1")
+    parser.add_argument("--support-review", type=Path, help="CSV revisado por humano y su .meta.json")
     parser.add_argument("--pytest-report", type=Path)
     parser.add_argument("--redteam-report", type=Path, help="Corrida guardada por scayl.eval.redteam")
     args = parser.parse_args()
@@ -141,6 +142,20 @@ def main() -> None:
             if test.get("cases"):
                 test["evidence"] = str(pytest_report.relative_to(ROOT))
     paths = [bundle_path, labels_path]
+    support_path = args.support_review or ROOT / "data/labels/support_review.csv"
+    if support_path.exists():
+        from scayl.eval.support_review import measure
+
+        support = measure(support_path)
+        archived = saved.with_suffix(".support.csv")
+        shutil.copyfile(support_path, archived)
+        shutil.copyfile(support_path.with_suffix(".meta.json"), archived.with_suffix(".meta.json"))
+        support["archive"] = archived.relative_to(ROOT).as_posix()
+        support["evidence"] = support_path.relative_to(ROOT).as_posix() if support_path.is_relative_to(ROOT) else support_path.name
+        report["metrics"]["support_validity"] = support
+        paths.extend([archived, archived.with_suffix(".meta.json")])
+    elif args.support_review:
+        raise FileNotFoundError(support_path)
     if pytest_report:
         paths.append(pytest_report)
     if redteam_report:
