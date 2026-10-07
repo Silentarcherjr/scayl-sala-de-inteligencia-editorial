@@ -24,9 +24,13 @@ Decisiones vigentes:
 Pasos al retomar:
 1. `git fetch origin && git merge origin/main` en `worker-b/snapshot` (sin rebase).
 2. Completa la línea "Decisión" de AP-008 (ACEPTADA, DL-013) y de AP-009 (SUPERADA por DL-017).
-3. **Vuelve a descargar las noticias para la ventana nueva:** GDELT DOC del 2026-09-01 al 2026-10-01 partido por día (ampliable a 90 días; GKG como respaldo). Las respuestas de septiembre de 2025 ya descargadas **no se borran** (raw inmutable): quedan fuera del corpus con motivo `fuera_de_ventana_C-01` en la auditoría.
+3. **Primero corrige el adaptador del RSS** (tu relevo lo detectó): `fecha_deteccion` = null, no la fecha de extracción; con una prueba. **Luego vuelve a descargar las noticias para la ventana nueva:** GDELT DOC del 2026-09-01 al 2026-10-01 partido por día (ampliable a 90 días; GKG como respaldo). Las respuestas de septiembre de 2025 ya descargadas **no se borran** (raw inmutable): quedan fuera del corpus con motivo `fuera_de_ventana_C-01` en la auditoría.
 4. Construye `noticias.csv` (GDELT + TVN en ventana, deduplicado por URL), `fuentes.json`, `eventos_ext.geojson`; congela y verifica el manifest con `fecha_corte_UTC = 2026-10-01T00:00:00Z`; exporta `data/labels/editor_candidates.csv`.
-5. Abre el PR hacia `main` (borrador si falta algo). Luego **B-13 (ACP, CSV, ~2 h)** y **B-14 (INEC, PDF, ~3–4 h)**. **Ya no haces UI** (DL-020: A-01/A-02/A-08 pasan a LowCrime); sigue con B-03/B-04, B-11, B-05/B-07, B-06 y B-10.
+5. Marca el PR #19 como **listo para revisión** cuando el snapshot esté congelado y verificado. Luego, **en este orden** (DL-022):
+   1. **B-03 · `scayl.ingest.validate.load_snapshot(dir)`** (T01). Es lo que bloquea el hito M1: el Lead corre `python -m scayl.pipeline build` apenas exista. Interfaz exacta en `scayl/pipeline.py::_load_worker_b` y en TASKS B-03; incluye `indicadores_recientes.csv` cuando exista.
+   2. **B-13 (ACP, CSV, ~2 h)** y **B-14 (INEC, PDF, ~3–4 h)**.
+   3. **B-05 + B-07** (temas, agrupación y etiquetas, con el muestreo de pares de DL-016), **B-04**, **B-11**, **B-06** y **B-10** (benchmark en tu GPU: `make ping`).
+   **Ya no haces UI** (DL-020: A-01/A-02/A-08 pasan a LowCrime).
 Cuando cumplas los pasos, borra esta sección en tu PR.
 
 > **DL-020 (2026-10-07):** LowCrime ya está activo y toma A-01, A-02 y A-08. Tu foco es solo datos y evaluación semántica.
