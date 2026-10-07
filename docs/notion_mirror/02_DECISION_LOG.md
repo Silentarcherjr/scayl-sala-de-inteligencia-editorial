@@ -120,3 +120,9 @@
 - **Motivo:** la aclaración C-02 permite fuentes adicionales y exige datos recientes en la demo; mejora Evidencias (15) y Utilidad (20).
 - **Compromiso:** la extracción del PDF del INEC puede ser frágil (mitigación: pocas filas, cuadro y página citados, verificación humana); la coincidencia numérica puede ser casual, por eso la afirmación pide "verificar que sea la misma medida".
 - **Fecha:** 2026-10-07 · Aprobada por el equipo.
+
+### DL-020 · AP-011 aceptada y reasignación de la UI a LowCrime
+- **Decisión:** (1) `service.review(..., package=...)` registra el paquete que el revisor está viendo (id + sha256 en el recibo) y `service.receipt(review_id)` expone el recibo. (2) LowCrime, ya activo, toma A-01, A-02 y A-08; frictionspp-svg queda con datos (B-01, B-13, B-14, B-03..B-07, B-10, B-11).
+- **Alternativas:** mantener la UI inicial en frictionspp-svg (que además tiene el snapshot y dos fuentes nuevas); dejar la revisión atada solo al paquete del snapshot.
+- **Motivo:** el cuello de botella era frictionspp-svg; la tarjeta A-08 bloqueaba A-03. Revisar contenido distinto del mostrado rompería la trazabilidad (hallazgo de LowCrime).
+- **Fecha:** 2026-10-07
