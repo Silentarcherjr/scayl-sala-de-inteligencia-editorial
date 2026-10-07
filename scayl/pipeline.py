@@ -154,11 +154,7 @@ def _load_worker_b(snapshot: Path):
     from scayl.intel.embed import get_embedder
 
     method = os.environ.get("SCAYL_INTEL", "ai" if _ai_available() else "baseline")
-    try:
-        embedder = get_embedder("st") if method == "ai" else get_embedder("tfidf")
-    except ImportError as exc:  # AI variant (B-05, Worker B) not there yet -> labelled baseline
-        log.warning("Embeddings IA no disponibles (%s); se usa el baseline TF-IDF", exc)
-        embedder, method = get_embedder("tfidf"), "baseline"
+    embedder, method = select_embedder(method, get_embedder)
     log.info("Inteligencia semántica: temas=%s, agrupación=%s", method, embedder.name)
 
     def classify(items):
@@ -170,6 +166,20 @@ def _load_worker_b(snapshot: Path):
     write_quality_report(snapshot, report)
     total = getattr(report, "total", None) or (report.get("total") if isinstance(report, dict) else len(news))
     return news, indicators, quakes, classify, cluster, total
+
+
+def select_embedder(method: str, get_embedder) -> tuple[object, str]:
+    """AI embeddings only if the local model actually loads (weights are never downloaded here);
+    otherwise the labelled TF-IDF baseline. Missing package -> ImportError; missing weights -> OSError."""
+    if method != "ai":
+        return get_embedder("tfidf"), "baseline"
+    try:
+        embedder = get_embedder("st")
+        embedder.encode(["prueba de carga del modelo local"])  # loads once; the instance keeps the model
+    except Exception as exc:  # noqa: BLE001 - any load failure must degrade, never break the demo
+        log.warning("Embeddings IA no disponibles (%s: %s); se usa el baseline TF-IDF", type(exc).__name__, exc)
+        return get_embedder("tfidf"), "baseline"
+    return embedder, "ai"
 
 
 def write_quality_report(snapshot: Path, report) -> None:

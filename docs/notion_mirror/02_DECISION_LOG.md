@@ -151,3 +151,11 @@
 - **Lectura:** 3 de los 5 elegidos tratan El Niño en el Canal, pero quedan como eventos separados (EVT-0088, EVT-0096, EVT-0158, y además EVT-0127, que no fue elegido). La agrupación TF-IDF no une titulares con redacción distinta ni en otro idioma. La variante con embeddings (B-05 IA) es la mejora prevista y se mide contra este baseline. **No se ajustan pesos para "acertar" el top 5** (sería sobreajuste a 5 etiquetas).
 - **`data/processed/`:** sigue fuera de git. El bundle completo incluye descripciones de RSS (derechos), así que cada máquina lo regenera con `make demo`; la versión pública solo se genera con `--public`.
 - **Fecha:** 2026-10-07
+
+### DL-025 · B-05 IA aceptada (E5 multilingüe); se corrige la lectura de DL-024
+- **Decisión:** se mergea PR #28 (frictionspp-svg): embeddings `intfloat/multilingual-e5-base` locales (sin descargas en tiempo de ejecución) y temas por prototipos de la taxonomía oficial. τ = 0,87 elegido **solo** con 488 pares de desarrollo 2025; el calibrador rechaza datos C-01 y no lee el top 5.
+- **Resultado medido (C-01):** 183 eventos (TF-IDF) → 165 (E5). P@5 exploratoria 1/5 → 1/5, reportada sin ajustar nada.
+- **Corrección a DL-024:** los 4 titulares de El Niño en el Canal tienen fechas 17/07, 15/08, 05/09 y 15/09/2026. Son **desarrollos distintos de una misma historia**, no duplicados: la regla de 7 días los separa correctamente. La lectura "fallo de agrupación" de DL-024 era incorrecta. Además, el par en francés tiene coseno menor que τ.
+- **Limitación declarada:** los pares de desarrollo fueron anotados por un agente (Codex), no son gold humano. La revisión humana queda en B-07; hasta entonces F1 de agrupación se reporta como "calibración sobre etiquetas provisionales", no como métrica de evaluación.
+- **Robustez (Lead):** el pipeline solo usa IA si el modelo local carga de verdad. Si falta el paquete o los pesos, cae al baseline TF-IDF con aviso (`select_embedder`, 2 pruebas nuevas).
+- **Fecha:** 2026-10-07

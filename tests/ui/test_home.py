@@ -29,7 +29,7 @@ def test_rank_funnel_matrix_and_editorial_safeguards(home):
     assert matrix.loc["medio", "parcial"] == 1
     assert matrix.to_numpy().sum() == 3
     assert len(home.get("progress")) == 15
-    assert len(home.get("page_link")) == 6
+    assert len(home.get("page_link")) == 9
 
 
 def test_ties_use_urgency_then_id(home, bundle):
@@ -67,7 +67,7 @@ def test_empty_snapshot_and_null_dates(home, bundle):
     assert home.metric[2].value == "0"
 
 
-def test_consultas_placeholder_is_explicit():
+def test_consultas_navigation_page_loads():
     page = AppTest.from_file(str(ROOT / "app/pages/2_Consultas.py")).run()
     assert not page.exception
-    assert "preparación" in page.info[0].value
+    assert page.text_input[0].label == "Pregunta en español"
