@@ -1,14 +1,14 @@
 id_noticia,titulo,fecha,grupo_propuesto,grupo_humano,confirmado,revisor
-gdt-00cf21e9478faf7c5609,"Infraestructura y comercio , foco de Mulino en Japón",2025-09-02T07:15:00Z,G01,null,null,null
-gdt-0ee41b75366d444ccd35,Panamá vs . Guatemala : la bicolor empata 1 - 1 y deja ir ventaja,2025-09-09T04:45:00Z,G02,null,null,null
-gdt-14b96242170414798fec,Canal de Panamá alcanza meta presupuestaria de 2025 en medio de volatilidad mundial,2025-09-09T20:45:00Z,G10,null,null,null
-gdt-24fb41fb14a1a3b78294,El Canal de Panamá alcanza meta presupuestaria de 2025 en medio de volatilidad mundial,2025-09-09T21:30:00Z,G10,null,null,null
-gdt-3cbda851d692ccedda79,Guatemala lucha y suma un punto de visita ante Panamá en eliminatorias,2025-09-09T04:00:00Z,G02,null,null,null
-gdt-3d61e4cdf525275dfc9d,Panamá cede empate a Guatemala y se rezaga en la tabla ; Surinam gana a El Salvador,2025-09-09T10:30:00Z,G02,null,null,null
-gdt-431e06ebc064e21c7848,Contraloría inicia auditoría a concesión del ferrocarril,2025-09-02T12:15:00Z,G07,null,null,null
-gdt-477780ffc278c7922c17,Mulino oficializa en Japón el inicio del proyecto de gasoducto,2025-09-03T06:45:00Z,G03,null,null,null
-gdt-4e3a5faf429ec4f955ed,Haití apoya transformación de misión en fuerza antipandillas,2025-09-09T22:30:00Z,G04,null,null,null
-gdt-53361d23a94a7c06b898,Ministra de MITRADEL explica condiciones sobre retorno de Chiquita a Bocas del Toro,2025-09-02T13:30:00Z,G05,null,null,null
+gdt-00cf21e9478faf7c5609,"Infraestructura y comercio , foco de Mulino en Japón",2025-09-02T07:15:00Z,G01,G01,si,frictionspp-svg
+gdt-0ee41b75366d444ccd35,Panamá vs . Guatemala : la bicolor empata 1 - 1 y deja ir ventaja,2025-09-09T04:45:00Z,G02,G02,si,frictionspp-svg
+gdt-14b96242170414798fec,Canal de Panamá alcanza meta presupuestaria de 2025 en medio de volatilidad mundial,2025-09-09T20:45:00Z,G10,G10,si,frictionspp-svg
+gdt-24fb41fb14a1a3b78294,El Canal de Panamá alcanza meta presupuestaria de 2025 en medio de volatilidad mundial,2025-09-09T21:30:00Z,G10,G10,si,frictionspp-svg
+gdt-3cbda851d692ccedda79,Guatemala lucha y suma un punto de visita ante Panamá en eliminatorias,2025-09-09T04:00:00Z,G02,G02,si,frictionspp-svg
+gdt-3d61e4cdf525275dfc9d,Panamá cede empate a Guatemala y se rezaga en la tabla ; Surinam gana a El Salvador,2025-09-09T10:30:00Z,G02,G02,si,frictionspp-svg
+gdt-431e06ebc064e21c7848,Contraloría inicia auditoría a concesión del ferrocarril,2025-09-02T12:15:00Z,G07,G07,si,frictionspp-svg
+gdt-477780ffc278c7922c17,Mulino oficializa en Japón el inicio del proyecto de gasoducto,2025-09-03T06:45:00Z,G03,G03,si,frictionspp-svg
+gdt-4e3a5faf429ec4f955ed,Haití apoya transformación de misión en fuerza antipandillas,2025-09-09T22:30:00Z,G04,G04,si,frictionspp-svg
+gdt-53361d23a94a7c06b898,Ministra de MITRADEL explica condiciones sobre retorno de Chiquita a Bocas del Toro,2025-09-02T13:30:00Z,G05,G05,si,frictionspp-svg
 gdt-5951085c00148d3c344d,Presidente Mulino anuncia en Japón la construcción de un gasoducto por el Canal de Panamá,2025-09-03T14:00:00Z,G03,null,null,null
 gdt-5c79671d32842efb938f,Carnival Adds Two New Cruise Ships in Galveston,2025-09-10T00:00:00Z,G06,null,null,null
 gdt-6a0196ddbb9abd26e5f4,Contraloría inicia auditoría al contrato de concesión del Ferrocarril de Panamá,2025-09-02T01:45:00Z,G07,null,null,null
