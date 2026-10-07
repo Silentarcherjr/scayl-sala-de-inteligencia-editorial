@@ -1,0 +1,8 @@
+{
+  "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%28Panama+OR+Panam%C3%A1%29+%28canal+OR+logistics+OR+log%C3%ADstica%29&mode=ArtList&format=json&maxrecords=250&STARTDATETIME=20260901000000&ENDDATETIME=20260901235959",
+  "fecha_extraccion": "2026-10-07T02:49:18.937411Z",
+  "status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "sha256": "38f4a7e141675afabe6b38c7c48cb3b58a30a2ec098f76816bdaf602f6636a66",
+  "previous_failures": []
+}

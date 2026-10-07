@@ -1,9 +1,25 @@
 # 03 · Catálogo de datos
 
 > Campos oficiales: fuente, URL, fecha de extracción, cobertura, campos, licencia/condiciones, transformaciones, hash del snapshot.
-> Estado: **extracción parcial disponible, snapshot sin congelar** (B-01, 2026-10-06 21:38 UTC).
-> WB y USGS descargados; 300 titulares únicos DOC/GKG auditados; RSS actual separado.
-> AP-008 y AP-009 pendientes; no hay todavía `noticias.csv`, `manifest.json` final ni candidatos ciegos.
+> Estado: **v1 congelado y verificado, C-01** (2026-10-07). 187 noticias (50 TVN), 540 WB,
+> 82 sismos oficiales 2024 y 87 de extensión. Candidatos ciegos exportados, sin ranking real.
+> Evidencia y hash: `docs/worklog/worker-b-c01-verification.json`; auditoría `data/raw/v1/assembly-c01.json`.
+> Las tablas de extracción de 2025 debajo son históricas; quedan fuera del corpus C-01.
+
+## Snapshot C-01 · 2026-10-07
+
+- Corte: 2026-10-01T00:00:00Z. Ventana oficial [2025-10-02, 2026-10-01).
+- Últimos 30 días: 67 noticias, 2 TVN; se amplió a 90 días: 159 noticias, 22 TVN.
+- Corpus total: 187 URL únicas, 50 TVN; RSS admitido en toda C-01 según DL-017.
+- DOC parcial: 28 registros; respuestas y fallos 429 en `doc-c01-partial.json`.
+- Respaldo GKG: 109 URL únicas, muestreo diario a las 18:00 UTC de 2026-07-03 a 2026-10-01;
+  no es cobertura exhaustiva ni implica representatividad. Recibos y reportes GKG conservados.
+- RSS: fecha de publicación original, detección nula, extracción separada; sin descripciones en noticias.csv.
+- Fuentes, condiciones y limitaciones: `data/raw/v1/fuentes.json`. WB sigue como contexto histórico.
+- USGS: oficial 2024 intacto; `eventos_ext.geojson` separado para C-01, misma caja y M≥3 (AP-004).
+- Raw antiguo intacto: excluido con `fuera_de_ventana_C-01` en la auditoría. ZIP/RSS solo locales;
+  hashes en inventario original y adendas inmutables. Manifest portable verificado sin esos auxiliares.
+- `data/labels/editor_candidates.csv`: 187 candidatos sin puntajes, barajados una sola vez; no regenerar.
 
 | Fuente | Archivo | URL | Extracción | Cobertura | Campos | Licencia / condiciones | Transformaciones | SHA-256 |
 |---|---|---|---|---|---|---|---|---|

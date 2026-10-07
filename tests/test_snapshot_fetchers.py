@@ -125,6 +125,22 @@ def test_manifest_refuses_inconsistent_local_hashes(tmp_path):
     assert not (tmp_path / "manifest.json").exists()
 
 
+def test_manifest_accepts_immutable_inventory_addendum(tmp_path):
+    make_snapshot(tmp_path)
+    write_once(tmp_path / "acquisition_inventory.json", b'{"files":{}}')
+    content = b"new local response"
+    name = "responses/gkg/new.zip"
+    write_once(tmp_path / name, content)
+    write_once(tmp_path / "acquisition_inventory.c01.json", json.dumps({"files": {name: {
+        "sha256": hashlib.sha256(content).hexdigest(), "bytes": len(content),
+        "disponibilidad": "solo local"}}}).encode())
+    manifest = build_manifest(tmp_path)
+    assert name not in manifest["archivos"]
+    assert "acquisition_inventory.c01.json" in manifest["archivos"]
+    assert (tmp_path / "acquisition_inventory.json").read_bytes() == b'{"files":{}}'
+    assert verify_manifest(tmp_path) == []
+
+
 def test_editor_handoff_has_no_scores_and_keeps_dates(tmp_path):
     make_snapshot(tmp_path)
     output = tmp_path / "editor.csv"
@@ -172,6 +188,25 @@ def test_usgs_pagination_and_exclusive_end(tmp_path, monkeypatch):
     assert [feature["id"] for feature in result["features"]] == ["in"]
 
 
+def test_usgs_extension_uses_config_and_keeps_official_file(tmp_path, monkeypatch):
+    from scayl.ingest.window import news_window
+    start, end = news_window()
+    write_once(tmp_path / "eventos.geojson", b"official unchanged")
+    def fake_download(directory, name, url, params):
+        assert directory == tmp_path / "responses/usgs-ext"
+        assert datetime.fromisoformat(params["starttime"]) == start
+        assert datetime.fromisoformat(params["endtime"]) == end
+        assert params["minmagnitude"] == 3
+        return json.dumps({"type": "FeatureCollection", "features": [
+            {"id": "in", "properties": {"time": int(start.timestamp() * 1000)}},
+            {"id": "out", "properties": {"time": int(end.timestamp() * 1000)}}]}).encode(), {}
+    monkeypatch.setattr(fetch_usgs, "download", fake_download)
+    result = fetch_usgs.fetch(tmp_path, extension=True)
+    assert [feature["id"] for feature in result["features"]] == ["in"]
+    assert (tmp_path / "eventos.geojson").read_bytes() == b"official unchanged"
+    assert json.loads((tmp_path / "eventos_ext.geojson").read_bytes()) == result
+
+
 def test_worldbank_pagination(tmp_path, monkeypatch):
     calls = []
     def fake_download(directory, name, url, params):
@@ -198,7 +233,8 @@ def test_rss_historical_adapter_preserves_publication_and_excludes_cutoff():
                            datetime(2025, 10, 1, tzinfo=timezone.utc))
     assert len(rows) == 1
     assert rows[0]["fecha_publicacion"] == "2025-09-01T12:00:00Z"
-    assert rows[0]["fecha_deteccion"] == "2026-10-06T21:00:00Z"
+    assert rows[0]["fecha_deteccion"] is None
+    assert rows[0]["fecha_extraccion"] == "2026-10-06T21:00:00Z"
     assert rows[0]["origen"] == "tvn_rss"
 
 

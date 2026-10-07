@@ -13,7 +13,7 @@ from .fetch_gdelt import normalize_url
 
 
 def historical_rows(items: list[dict], start: datetime, end: datetime) -> list[dict]:
-    """Local adapter for AP-009; caller must approve its use before corpus assembly."""
+    """Select RSS publication dates in the C-01 window (DL-017/DL-022)."""
     rows = {}
     for item in items:
         published = parsedate_to_datetime(item["fecha_publicacion_original"])
@@ -26,7 +26,7 @@ def historical_rows(items: list[dict], start: datetime, end: datetime) -> list[d
         rows.setdefault(url, {"id_noticia": "tvn-" + hashlib.sha256(url.encode()).hexdigest()[:20],
                              "titulo": item["titulo"], "url": url, "medio": "TVN", "idioma": "es",
                              "fecha_publicacion": published.isoformat().replace("+00:00", "Z"),
-                             "fecha_deteccion": item["fecha_extraccion"],
+                             "fecha_deteccion": None,
                              "fecha_extraccion": item["fecha_extraccion"], "tema": None,
                              "origen": "tvn_rss", "alcance_texto": "titular_metadatos",
                              "licencia": "Titulares y enlaces TVN; sin licencia abierta sobre artículos o imágenes"})

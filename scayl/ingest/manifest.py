@@ -57,6 +57,12 @@ def _ensure_acquisition_inventory(directory: Path) -> None:
              if _is_local_only(Path(name))}
     if target.exists():
         recorded = json.loads(target.read_text(encoding="utf-8"))["files"]
+        # Addenda preserve the original acquisition inventory and raw immutability.
+        for addendum in sorted(directory.glob("acquisition_inventory.*.json")):
+            for name, entry in json.loads(addendum.read_text(encoding="utf-8"))["files"].items():
+                if name in recorded and recorded[name] != entry:
+                    raise ValueError(f"Conflicting acquisition inventory entry: {name}")
+                recorded[name] = entry
         for name, meta in local.items():
             entry = recorded.get(name, {})
             if (entry.get("sha256") != meta["sha256"] or entry.get("bytes") != meta["bytes"]
@@ -92,7 +98,14 @@ def build_manifest(directory: str | Path) -> dict:
                   "GDELT: URL normalizada y deduplicada; ID SHA-256 de URL; seendate es detección, publicación nula.",
                   "WB: producto de seis países, seis indicadores y 2010–2024; valores ausentes son null explícito.",
                   "USGS: unir páginas; excluir el instante 2025-01-01T00:00:00Z del límite inclusivo de API.",
-                  "RSS TVN actual separado del corpus histórico; solo metadatos."]}
+                  "RSS TVN: pubDate dentro de C-01; detección nula; sin descripciones en el corpus.",
+                  "USGS extensión AP-004 separada de los eventos oficiales de 2024.",
+                  "Raw 2025 conservado; exclusiones fuera_de_ventana_C-01 en assembly-c01.json."]}
+    if (directory / "assembly-c01.json").exists():
+        audit = json.loads((directory / "assembly-c01.json").read_text(encoding="utf-8"))
+        result["cobertura_efectiva"] = {key: audit[key] for key in
+                                      ("window", "news", "tvn", "effective_start", "effective_end",
+                                       "target_30_days", "extended_90_days")}
     write_once(directory / "manifest.json", json_bytes(result))
     return result
 

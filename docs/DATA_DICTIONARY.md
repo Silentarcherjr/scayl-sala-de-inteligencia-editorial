@@ -1,7 +1,8 @@
 # Diccionario del snapshot · B-01 / B-02
 
-Estado: extracción en curso; no considerar `data/raw/v1` congelado hasta que exista y se verifique
-`manifest.json`. AP-008 aceptada (540 filas, DL-013); AP-009 superada por la ventana C-01 (DL-017).
+Estado: `data/raw/v1` congelado para C-01, corte 2026-10-01T00:00:00Z, con manifest verificado.
+AP-008 aceptada (540 filas, DL-013); AP-009 superada por la ventana C-01 (DL-017).
+Ejecución guardada: `docs/worklog/worker-b-c01-verification.json`.
 
 ## Convenciones
 
@@ -10,7 +11,7 @@ Estado: extracción en curso; no considerar `data/raw/v1` congelado hasta que ex
   nunca a `0` ni a una cadena vacía. JSON usa `null`. Un cero observado se conserva como cero.
 - Las fechas normalizadas son ISO 8601 UTC con `Z`. Los formatos originales permanecen en respuestas crudas.
 - `fecha_publicacion` es la fecha declarada por el medio; `fecha_deteccion` es la observación del agregador
-  o la captura RSS; `fecha_extraccion` es la descarga por el equipo. No son intercambiables.
+  (nula para RSS); `fecha_extraccion` es la descarga por el equipo. No son intercambiables.
 - No se descargan artículos ni archivos de imagen. El RSS contiene descripciones breves y URLs de imágenes
   como parte de su respuesta original; no se incorporan a `noticias.csv` ni a candidatos del editor.
 - Los archivos se escriben una sola vez. Repetir una descarga usa sus bytes y recibo existentes,
@@ -35,7 +36,7 @@ Estado: extracción en curso; no considerar `data/raw/v1` congelado hasta que ex
 | alcance_texto | enum | `titular_metadatos`. |
 | licencia | texto, nullable | Condiciones de reutilización; GDELT no concede derechos sobre los artículos de terceros. |
 
-El extractor DOC consulta cada día de septiembre de 2025: TVN, Canal/logística, turismo, economía y
+El extractor DOC usa los días definidos por `data_window.v1.yaml`: TVN, Canal/logística, turismo, economía y
 eventos naturales, con máximo 250 por consulta. No se declara exhaustividad. El respaldo GKG de DL-008
 muestrea lotes de quince minutos en horas declaradas, conserva `PAGE_TITLE` y selecciona TVN o titulares
 que mencionan Panamá con localización GKG de país `PM`. Ese muestreo no representa el universo de noticias.
@@ -102,7 +103,8 @@ Si hay más de 20.000 eventos, itera `offset` y detecta IDs duplicados entre pá
   `acquisition_inventory.json`, con `disponibilidad: "solo local"`. El inventario sí está cubierto
   por el manifest; una copia sin los auxiliares verifica igual que la máquina de adquisición.
   Antes de congelar se comprueban los hashes locales contra el inventario existente; nunca se
-  reescribe automáticamente un inventario o manifest previo. El corte se lee de `data_window.v1.yaml`.
+  reescribe automáticamente un inventario o manifest previo. Nuevas adquisiciones añaden
+  `acquisition_inventory.c01-<UTC>.json`; los hashes repetidos deben coincidir. El corte se lee de `data_window.v1.yaml`.
 - `tvn_rss_actual.json`: proyección de metadatos del feed obtenido en 2026; separado del corpus.
 - `data/labels/editor_candidates.csv`: orden aleatorio sin puntajes ni temas predichos; conserva columnas
   separadas para publicación y detección. No sustituir la selección humana del top 5.
@@ -113,9 +115,11 @@ Si hay más de 20.000 eventos, itera `offset` y detecta IDs duplicados entre pá
 python -m scayl.ingest.fetch_worldbank --output data/raw/v1
 python -m scayl.ingest.fetch_usgs --output data/raw/v1
 python -m scayl.ingest.fetch_tvn --url https://www.tvn-2.com/rss/ --output data/raw/v1
-python -m scayl.ingest.fetch_gdelt --start 2025-09-01 --end 2025-10-01 --output data/raw/v1
+python -m scayl.ingest.acquire_c01 --output data/raw/v1
 # Solo como respaldo documentado de DL-008:
-python -m scayl.ingest.fetch_gkg --start 2025-09-01 --end 2025-10-01 --output data/raw/v1
+python -m scayl.ingest.acquire_gkg_c01 --output data/raw/v1 --extended
+python -m scayl.ingest.fetch_usgs --output data/raw/v1 --extension
+python -m scayl.ingest.assemble_c01 data/raw/v1
 # Tras resolver cobertura, registrar fuentes y congelar:
 python -m scayl.ingest.manifest data/raw/v1
 python -m scayl.ingest.manifest data/raw/v1 --verify

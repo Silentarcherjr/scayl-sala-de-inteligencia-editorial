@@ -1,0 +1,5666 @@
+{
+  "created_at": "2026-10-07T02:57:20.457799Z",
+  "window": [
+    "2025-10-02T00:00:00+00:00",
+    "2026-10-01T00:00:00+00:00"
+  ],
+  "news": 187,
+  "tvn": 50,
+  "sources": [
+    {
+      "file": "tvn_rss_actual.json",
+      "selected": 50,
+      "excluded": 102
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "records": 44
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.naturales.json",
+      "records": 5
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.tvn.json",
+      "records": 0
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "records": 43
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.turismo.json",
+      "records": 5
+    },
+    {
+      "file": "responses/gdelt/2025-09-05.tvn.json",
+      "records": 0
+    },
+    {
+      "file": "responses/gdelt/2025-09-07.naturales.json",
+      "records": 2
+    },
+    {
+      "file": "responses/gdelt/2025-09-08.tvn.json",
+      "records": 0
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "records": 44
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.tvn.json",
+      "records": 0
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "records": 35
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.turismo.json",
+      "records": 12
+    },
+    {
+      "file": "responses/gdelt/2026-09-01.canal.json",
+      "records": 28
+    },
+    {
+      "file": "responses/gdelt/2026-09-01.tvn.json",
+      "records": 0
+    },
+    {
+      "file": "responses/gkg/20260703180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260704180000.translation.gkg.csv.zip",
+      "records": 2,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260705180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260706180000.translation.gkg.csv.zip",
+      "records": 1,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260707180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260708180000.translation.gkg.csv.zip",
+      "records": 1,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260709180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260710180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260711180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260712180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260713180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260714180000.translation.gkg.csv.zip",
+      "records": 1,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260715180000.translation.gkg.csv.zip",
+      "records": 4,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260716180000.translation.gkg.csv.zip",
+      "records": 4,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260717180000.translation.gkg.csv.zip",
+      "records": 5,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260718180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260719180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260720180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260721180000.translation.gkg.csv.zip",
+      "records": 1,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260722180000.translation.gkg.csv.zip",
+      "records": 1,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260723180000.translation.gkg.csv.zip",
+      "records": 2,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260724180000.translation.gkg.csv.zip",
+      "records": 1,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260726180000.translation.gkg.csv.zip",
+      "records": 2,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260727180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260728180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260729180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260730180000.translation.gkg.csv.zip",
+      "records": 2,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260731180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260801180000.translation.gkg.csv.zip",
+      "records": 6,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260802180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260803180000.translation.gkg.csv.zip",
+      "records": 1,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260805180000.translation.gkg.csv.zip",
+      "records": 2,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260806180000.translation.gkg.csv.zip",
+      "records": 2,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260807180000.translation.gkg.csv.zip",
+      "records": 1,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260808180000.translation.gkg.csv.zip",
+      "records": 2,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260809180000.translation.gkg.csv.zip",
+      "records": 1,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260810180000.translation.gkg.csv.zip",
+      "records": 1,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260811180000.translation.gkg.csv.zip",
+      "records": 1,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260812180000.translation.gkg.csv.zip",
+      "records": 1,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260813180000.translation.gkg.csv.zip",
+      "records": 1,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260814180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260815180000.translation.gkg.csv.zip",
+      "records": 3,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260816180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260817180000.translation.gkg.csv.zip",
+      "records": 2,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260818180000.translation.gkg.csv.zip",
+      "records": 1,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260819180000.translation.gkg.csv.zip",
+      "records": 4,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260820180000.translation.gkg.csv.zip",
+      "records": 2,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260821180000.translation.gkg.csv.zip",
+      "records": 1,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260822180000.translation.gkg.csv.zip",
+      "records": 1,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260823180000.translation.gkg.csv.zip",
+      "records": 3,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260825180000.translation.gkg.csv.zip",
+      "records": 3,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260826180000.translation.gkg.csv.zip",
+      "records": 1,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260827180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260828180000.translation.gkg.csv.zip",
+      "records": 1,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260830180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260831180000.translation.gkg.csv.zip",
+      "records": 4,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260901180000.translation.gkg.csv.zip",
+      "records": 6,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260902180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260903180000.translation.gkg.csv.zip",
+      "records": 2,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260904180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260905180000.translation.gkg.csv.zip",
+      "records": 4,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260906180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260907180000.translation.gkg.csv.zip",
+      "records": 3,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260908180000.translation.gkg.csv.zip",
+      "records": 1,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260909180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260910180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260911180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260912180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260913180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260914180000.translation.gkg.csv.zip",
+      "records": 3,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260915180000.translation.gkg.csv.zip",
+      "records": 6,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260916180000.translation.gkg.csv.zip",
+      "records": 2,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260917180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260918180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260919180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260920180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "records": 1,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260922180000.translation.gkg.csv.zip",
+      "records": 3,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260923180000.translation.gkg.csv.zip",
+      "records": 1,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260924180000.translation.gkg.csv.zip",
+      "records": 1,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260925180000.translation.gkg.csv.zip",
+      "records": 1,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260926180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260927180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260928180000.translation.gkg.csv.zip",
+      "records": 0,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260929180000.translation.gkg.csv.zip",
+      "records": 1,
+      "method": "GKG sample, not exhaustive"
+    },
+    {
+      "file": "responses/gkg/20260930180000.translation.gkg.csv.zip",
+      "records": 2,
+      "method": "GKG sample, not exhaustive"
+    }
+  ],
+  "excluded": [
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/judicial/aprehenden-enrique-lau-exdirector-css_1_2264560.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/mop-solicita-43-1-millones-comision-presupuesto-obras-en-ejecucion_1_2264626.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/judicial/suspenden-audiencia-genaro-lopez-miembros_1_2264607.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/paseu-compras-billetera-caja-ahorros_1_2264590.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/tvmax/futbol-internacional/lionel-messi-despedida-argentina-vs-benin-previa-partido_1_2264530.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/provincias/stefany-penalba-residentes-protesta-frente-municipio-de-arraijan-piden-auditoria_1_2264603.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/entretenimiento/nerys-perez-responde-humor-comentarios-vestido-baile-vladimir-atencio_1_2264599.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/contenido-exclusivo/contenido-exclusivo-metro-tumba-muerto-transporte-panama_1_2264473.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/tvmax/beisbol/mlb/yankees-vs-rays-en-vivo-mlb-playoffs-2026-resultado-partido-divisional-series-beisbol-grandes-ligas_1_2264504.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tres-hombres-asaltan-casino-despojan_1_2264464.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/entretenimiento/principe-william-kate-middleton-nombres-usan-colegio-hijos_1_2264534.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/panama-mantiene-vigilancia-minsa-peste-neumonica-en-rusia-caso-rusia_1_2264648.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/atencion-canal-panama-anuncia-suspension_1_2264649.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/sinaproc-extiende-vigilancia-lluvias-tormentas_1_2264646.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/agroferias-ima-conozca-realizaran-miercoles_1_2264647.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/provincias/chiriqui-taxista-asesinado-punaladas-remedios_1_2264612.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/mundo/africa/kenia-anuncia-primera-muerte-ebola_1_2264549.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/30-mujeres-han-muerto-forma_1_2264499.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/tvmax/futbol-internacional/lionel-messi-despedida-estadio-monumental-buenos-aires-argentina-vs-benin_1_2264548.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/entretenimiento/mafe-achurra-comparte-tierno-momento-canta-antologia-shakira-bebe-embarazo_1_2264579.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/contenido-exclusivo/contenido-exclusivo-cocle-seca-campo-fenomeno-de-el-nino-clima-agua-produccion-sequia_1_2263614.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/conciliaciones-consumidores-comercios-superan-12-millones-informe-acodeco_1_2264595.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/arranca-semana-responsabilidad-social-empresarial-sumarse-juventud-retos-futuro_1_2264570.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/colegios-particulares-estudiantes-aumento-matricula-mayores-gastos-informe-acodeco_1_2264562.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/mujer-aprehendida-santiago-hallazgo-162-paquetes-droga_1_2264577.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/autoridad-nacional-descentralizacion-explica-incluye-proyecto-junta-comunales_1_2264582.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/reformas-electorales-blandon-defiende-3_1_2264565.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/panama-reforzara-presencia-maritima-vietnam-autoridad-maritima-de-panama-registro-de-buques_1_2264552.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/arzobispo-participa-roma-encuentro-papa-leon-xiv-jose-domingo-ulloa-mendieta_1_2264583.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/asesinan-taxista-remedios-hallado-vehiculo-varias-heridas_1_2264601.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/pase-u-pago-de-becas-ifarhu-largas-filas-changuinola_1_2264609.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/la-chorrera-proyecta-renovar-parque-tomas-martin-feuillet-inversion-620-mil_1_2264420.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/gente-tvn/gente-tvn-sumo-carrera-caminata_1_2264281.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-alcanza-primer-lugar-medios-comunicacion-merco-panama_1_2263883.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-senacyt-firman-alianza_1_2208344.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/multitudinario-desfile-carretas-guarare-tvn-media-hecho-en-panama-festival-nacional-de-la-mejorana_1_2208163.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-dijo-presente-relevos_1_2205996.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/alianza-conocimiento-ciudad-del-saber-tvn-media_1_2203982.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvnmedia-sumarse-firman-convenio_1_2201601.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-sabores-colon-gastronomia-cultura-colonense_1_2201366.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-recibe-reconocimiento-compromiso-ambiental-reduce-tu-huella_1_2200815.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-presenta-documental-competencia-intercolegial-reciclaje_1_2202782.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-mac-panama-unen_1_2199530.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-presenta-informe-sostenibilidad_1_2199363.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-quality-leadership-university-acuerdo-educacion-desarrollo_1_2198338.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/videos/noticias/video-ext-tvn-media-fsu-panama-firmaron_7_2197723.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-consolida-ranking-merco-talento_1_2195639.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/escuela-gana-competencia-intercolegial-gente-tvn-media-reciclaje_1_2195259.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-fundacion-florida-state-university-panama-apuestan-industria-audiovisual_1_2190375.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/periodistas-tvn-noticias-premios-forum-de-periodistas_1_2189759.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-noticias-trafico-panama-firman-alianza-estrategia-medios_1_2187423.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-nombra-gerente-informacion-digital-magda-maxwell_1_2186722.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/videos/noticias/video-ext-tvn-celebra-63-anos_7_2186633.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-la-chorrera-celebra-cultura-mural_1_2186471.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-impulsa-reality-jump-emprendimientos-jovenes_1_2185537.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-une-dias-de-las-buenas-acciones-instituto-oncologico_1_2184947.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-unicef-despacho-primera-crianza-amoroza-raices-fuertes_1_2183004.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-alianza-estrategica-apede-conferencia-anual-de-ejecutivos-2025_1_2182741.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/dia-de-las-buenas-acciones-fundacion-jupa-tvn-media_1_2182521.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/entretenimiento/cine-y-tv/tvn-media-iff-panama-firman-convenio-festival-de-cine-de-panama_1_2181612.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-destaca-ranking-merco-responsabilidad-social-empresarial_1_2174203.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/macrofest-2025-presenta-cartel-oficial-reconocimiento-tvnmedia_1_2173050.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-municipio-la-villa-de-los-santos-firman-alianza-carnaval-2025_1_2172852.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-recibe-reconocimiento-cobertura_1_2172034.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-loma-brigida-la-chorrera-dia-de-reyes_1_2171661.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-firma-alianza-panama-jazz-festival-princess-orelia-benskia_1_2171990.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/suenos-diciembre-familia-tvn-noticias-ninos-cerro-cabra-navidad_1_2170326.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-dice-presente-teleton-20-30_1_2169266.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-recibe-reconocimiento-simposio-innovacion-sostenibilidad-en-ambiente_1_2169077.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/ranking-de-los-lideres-luis-mouynes-gerente-tvn-media_1_2168690.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-gana-categoria-mejor-merco-empresas-panama-2024-premio-ranking_1_2167542.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/claudya-morales-tvn-media-premio-de-periodismo-ninez-y-adolescencia-unicef-celap_1_2166205.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/premios-excelencia-2024-universidad-de-panama-tvn-noticias-facultad-de-comunicacion-social_1_2166104.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/periodistas-tvn-media-participan-conversatorio-desinformacion-fake-news-universidad-latina_1_2165356.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-realiza-homenaje-luz-maria-noli-dia-del-periodista-heroes-por-panama_1_2165138.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/municipio-de-panama-pergamino-llaves-ciudad-hecho-panama_1_2163410.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-tres-galardones-premios-victoria-usma_1_2160381.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/mundo-verde-reportaje-tvn-gana-premio-nacional-periodismo-cientifico-senacyt_1_2157388.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/mundo-verde-ballenas-jorobadas-premio-concurso-comunicadores-sociales-carla-uliantzeff_1_2158333.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/nacionales/presentan-ganadoras-documental-panama-documentales-cine-fundacion-alberto-motta-noticias-en-panama-hoy_1_2163165.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/videos/noticias/video-ext-tvn-media-firma-alianza-concurso_7_2163037.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/videos/noticias/video-ext-tvn-media-reafirma-alianza-teleton_7_2163364.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/tvmax/beisbol/mlb/brewers-vs-padres-mlb-playoffs-2026-previa-juego-3-divisional-series-beisbol-grandes-ligas_1_2264543.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/tvmax/somos-la-sele/liga-de-naciones-concacaf-seleccion-de-panama-guatemala-curazao-mexico-canada-estados-unidos_1_2264553.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/tvmax/somos-la-sele/panama-seleccion-liga-de-naciones-resultados-curazao-guatemala-jamaica_1_2264545.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/tvmax/lpf/sporting-san-miguelito-vs-union-cocle-lpf-resultado-partido-jornada-11-cierre-futbol-panama_1_2264541.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/tvmax/beisbol/mlb/white-sox-vs-guardians-mlb-playoffs-2026-resultado-juego-2-divisional-series-grandes-ligas-beisbol_1_2264521.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/tvmax/futbol-internacional/liga-de-naciones-uefa-resultados-francia-italia-belgica-turquia-futbol_1_2264492.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/entretenimiento/inesperado-momento-saco-risas-reportero-tvn-noticias-jorge-quiros_1_2264634.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/entretenimiento/caleb-flynn-american-ido-condenado-cadena-perpetua-asesinato-esposa_1_2264537.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/entretenimiento/cine-y-tv/tom-cruise-defiende-digger-fracaso-taquilla-responde-criticas_1_2264580.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/entretenimiento/cine-y-tv/lindsay-lohan-revive-cady-cady-heron-escena-chicas-pesadas_1_2264311.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/entretenimiento/pedro-pascal-convierte-violonchelista-nuevo-papel-pelicula-behemoth_1_2264390.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/tvmax/futbol-internacional/lionel-messi-despedida-argentina-vs-benin-honrar-alegrias_1_2264463.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/mundo/mexico-detiene-lider-regional-cartel-jalisco-nueva-generacion-ivan-cazarin-molina-alias-el-tanque_1_2264592.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/mundo/estudiante-muerta-siete-heridas-ataque-cuchillo-escuela-estambul_1_2264575.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/mundo/francis-halzen-gana-nobel-fisica_1_2264558.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/mundo/finlandia-frena-construccion-centros-datos-google-impacto-ambiental_1_2264594.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/mundo/rusia-niega-haber-ordenado-restricciones-supuesto-caso-peste-neumonica_1_2264573.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/mundo/navios-golpeados-drones-mar-negro_1_2264554.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/mundo/europa/ultraderechista-le-pen-promete-recortes_1_2264559.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "tvn_rss_actual.json",
+      "url": "https://www.tvn-2.com/mundo/cop31-perfila-ambiciones-modestas-pese_1_2264551.html",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-4ea262d3d2808811a9d0",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-00cf21e9478faf7c5609",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-81e88c1111b61f41b807",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-add37527a9491a37f9a4",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-00911623b37cec91f87a",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-6a0196ddbb9abd26e5f4",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-bf2a1ac4fd3f45ea1e73",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-c3c2635c7d4ba146dbe3",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-53361d23a94a7c06b898",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-431e06ebc064e21c7848",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-75dd2bb0a2b7dfc5c70e",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-545fe10af115fe99ecf8",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-8c65d993fa9c95d149ba",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-fc0ccfef997f652b60af",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-fd97bab72cbadf090d8a",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-5c7ef3200faa64550666",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-7462d99bf464308a35fc",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-16793e0050f22d8dc72a",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-85a07c53ad9ecc238889",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-55249331dc1203da1b64",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-385b78063321389bf624",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-5c584092caa5d812c322",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-518939e5e191934ab374",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-9f6a8daace8204f9a222",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-d11d70096058f3c1984e",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-579acbaaaf82d93bae55",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-bdb5ce8b72cb0621bfa3",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-6aede7b7bc258d6701a8",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-bca7966183b21a12c535",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-b370849ec5735df095d4",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-96ebade27cb197681160",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-d8f2da6a27c4028184ac",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-b3c2b650a68575f04c5b",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-c8b2325af011644e22ac",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-fb5ec18cf9f2895e2d91",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-a124c256806391f9c606",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-6d81586e71168beee18c",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-b7f923785600de512672",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-6f947d969a1084d9727a",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-67b82a7c85f07eade179",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-ae5868111d6513622fc2",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-e21a17f67112e9c3cdd2",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-2c7692bc6b17ef8ffdcb",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.economia.json",
+      "id_noticia": "gdt-88cbc034a7a639359cfd",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.naturales.json",
+      "id_noticia": "gdt-8b5dca0540d1f8dda492",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.naturales.json",
+      "id_noticia": "gdt-f7b0bde568e508f7d81d",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.naturales.json",
+      "id_noticia": "gdt-89e3f77d1467f8a5c14e",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.naturales.json",
+      "id_noticia": "gdt-94b83e9083d355bbbb0d",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-02.naturales.json",
+      "id_noticia": "gdt-276b7f00c395e1183365",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-477780ffc278c7922c17",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-5951085c00148d3c344d",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-75d3210c64a23b36d69e",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-be9e488043dbfabf44ac",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-7ac4e8241c30fbac1f93",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-5eb7bf2a186f01674af8",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-5c606f949c605d351127",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-6a66cbf0890180cec356",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-eb7118df0927060dd1e3",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-ffe96836b711ecf4ebd2",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-91a66c00690de7bc26f7",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-2d68977eccb116c2d75b",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-bddfa35ab324e8feb585",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-af028ef08b786e2da059",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-adc2ea6aa7e34aa7eeb1",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-9dce4f31e494059ebf60",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-06d112eb1714b1280b0d",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-26ce3816d7c53eec63d9",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-1aff60c8043854c27456",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-43876f5db66256b53463",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-d6b8a93ab7383427ddc6",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-fb6adb1d31a9ea4b07a9",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-2ef676e837b17ecbf7dd",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-dddedd7d8d1864c4fe67",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-627f5d20cb0245c14fc0",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-a056be5565aa9e9956e7",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-f6c7e4ef197e84ec6ded",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-aa88e4e7c4c431dbc9f9",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-6b75ed9304ced3a36748",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-d791784584b80ba14c5e",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-48cf9c0887e19c0e14d6",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-c9590549b5fc9dd62f06",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-7e87dbd1cb2b2d56644c",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-035a02d887b833c7c8ad",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-cdb49e99b40ce2a6345b",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-7bbf4ce731eefdafae43",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-c7ac146cffd690da9109",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-82b2ac7666f48e859137",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-36658a32a23a4eab2253",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-1aafcf45524dc1ed64b5",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-2c4b07834f5af8f53a22",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-1826ae9fa5a91f17a958",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.canal.json",
+      "id_noticia": "gdt-4d8ebfb270131764f5d3",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.turismo.json",
+      "id_noticia": "gdt-fab1fc43e653c445fbd6",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.turismo.json",
+      "id_noticia": "gdt-ea77bdd996d4ec8a93c6",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.turismo.json",
+      "id_noticia": "gdt-3b23880ae03964469aa7",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.turismo.json",
+      "id_noticia": "gdt-f31918767a90b72dc942",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-03.turismo.json",
+      "id_noticia": "gdt-43876f5db66256b53463",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-07.naturales.json",
+      "id_noticia": "gdt-59dbf7709d6f7f91cc09",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-07.naturales.json",
+      "id_noticia": "gdt-596ceaee5ad1024b5b6d",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-26cb480ebc3410aed56d",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-ec33add589ec9f97e91b",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-24fb41fb14a1a3b78294",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-14b96242170414798fec",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-8761afb1baefced92058",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-ebf7b8c93adab49cd5a4",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-c73707405b3fede7e7e6",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-88b9784eaabb45679a88",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-638a579f7764578c693b",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-6e7f72ec919b60c66745",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-03364643b41aaa6140bf",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-3d61e4cdf525275dfc9d",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-d5d88e9d91fc59a8c908",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-e832d5f8640a648533dc",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-86fa02369f315c8639d7",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-0ee41b75366d444ccd35",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-6216e9a451b670fb48a9",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-926c2606155d793058ba",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-ed70c18b390ad751f0b4",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-5c79671d32842efb938f",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-19a5922097f6e294be44",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-7ee815ea49b109aec41a",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-4f28a2b66fb5a720ec7c",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-97ac9c771e0cadc95b7a",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-098e15d122fddcd4be4e",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-3cbda851d692ccedda79",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-9394bcbb27ef2c77cf71",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-4e3a5faf429ec4f955ed",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-5a3c8d0f76f875740acf",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-bc7b6aa774077184adc2",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-a4d1b2c7e1308ac8ddd8",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-f600a24cfc8ed31f4956",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-b20504bb2e8b3c3f5edf",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-e84771d3e7fec8f9a476",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-88dc73bb7eb1dc773d19",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-0d6d148bdc497875b5ea",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-b4392093754b1251d7cc",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-10bfba2164adc1243eee",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-e912d1afdc93167a4f36",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-5f8637d47bd707fe8bcb",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-fc2be46f9c8a2cfcf3a3",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-6814d8aeecaed16182eb",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-946ed8aea8783927cf1b",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-09.canal.json",
+      "id_noticia": "gdt-83e92e16d7cd957a177a",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-788f6f3c6f8974fd8d49",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-6fa6b4d0b6605be7d281",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-d5d88e9d91fc59a8c908",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-ede1c1211dafa51e3522",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-f927206cb2e0d9fdf683",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-85c76a05790cda8233fa",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-98a76ad0f4d86ff65712",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-8787e1330d791c5f08f4",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-3b18b65435b751254f6c",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-4f32271608ab3c0a501f",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-96568b8d909e437a08fd",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-926fd4699b97cf20ab1b",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-8c4c20c8e89250d0647e",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-958d53b9c65637666ef1",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-9a91de1a53b7aa765b4c",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-629abce0e142d0fbcc50",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-ef0d6eceb702c7e66750",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-33c783ff54b54457fb70",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-0225eb4672bb14c4b9bb",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-520bfcac5b4bc24ef0ab",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-4cb49be417bd96b03853",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-e1f13ef9f1c6fb2d14ca",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-d1894ce88878c875cf3e",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-1d7ba6b2ab2c8b696d6b",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-3c2679cf6f9c5f250bbb",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-675341472024d91eef34",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-3a18ebd3b4717ec07aff",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-23cbdbbf444234afbb20",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-607f0b0ea4e6de897013",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-e8da640e6a3b39a32ee6",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-4d7cc9f2ba36f496d35d",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-d8567c183a83ee27a35b",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-2f63360b7d83d6830413",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-bac52e7c0282dec895f2",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.economia.json",
+      "id_noticia": "gdt-00cde4a8b8468f82b70b",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.turismo.json",
+      "id_noticia": "gdt-31aa7cb5309040f246dc",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.turismo.json",
+      "id_noticia": "gdt-152ec4fac1d0e0a28914",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.turismo.json",
+      "id_noticia": "gdt-377973ecb351004d675e",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.turismo.json",
+      "id_noticia": "gdt-54f1aa53e69a64e2b599",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.turismo.json",
+      "id_noticia": "gdt-a5191e87c8bf3d64d870",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.turismo.json",
+      "id_noticia": "gdt-3a18ebd3b4717ec07aff",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.turismo.json",
+      "id_noticia": "gdt-23cbdbbf444234afbb20",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.turismo.json",
+      "id_noticia": "gdt-607f0b0ea4e6de897013",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.turismo.json",
+      "id_noticia": "gdt-e8da640e6a3b39a32ee6",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.turismo.json",
+      "id_noticia": "gdt-675341472024d91eef34",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.turismo.json",
+      "id_noticia": "gdt-bac52e7c0282dec895f2",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gdelt/2025-09-10.turismo.json",
+      "id_noticia": "gdt-00cde4a8b8468f82b70b",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250901000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250901120000.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250901150000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250901180000.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250901180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250901210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250902000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250902150000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250902180000.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250902180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250902210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250903000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250903150000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250903180000.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250903180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250903210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250904000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250904150000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250904180000.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250904180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250904210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250905000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250905150000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250905180000.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250905180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250905210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250906000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250906150000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250906180000.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250906180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250906210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250907000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250907150000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250907180000.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250907180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250907210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250908000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250908150000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250908180000.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250908180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250908210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250909000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250909150000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250909180000.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250909180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250909210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250910000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250910150000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250910180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250910210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250911000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250911150000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250911180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250911210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250912000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250912150000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250912180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250912210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250913000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250913150000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250913180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250913210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250914000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250914150000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250914180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250914210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250915000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250915150000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250915180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250915210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250916000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250916150000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250916180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250916210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250917000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250917150000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250917180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250917210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250918000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250918180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250918210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250919000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250919180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250919210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250920000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250920180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250920210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250921000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250921180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250921210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250922000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250922180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250922210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250923000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250923180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250923210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250924000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250924180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250924210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250925000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250925180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250925210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250926000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250926180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250926210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250927000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250927180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250927210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250928000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250928180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250928210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250929000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250929180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250929210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250930000000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250930180000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20250930210000.translation.gkg.csv.zip",
+      "reason": "fuera_de_ventana_C-01"
+    },
+    {
+      "file": "responses/gkg/20260705180000.translation.gkg.csv.zip",
+      "member": "20260705180000.translation.gkg.csv",
+      "line": 367,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260705180000.translation.gkg.csv.zip",
+      "member": "20260705180000.translation.gkg.csv",
+      "line": 368,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260706180000.translation.gkg.csv.zip",
+      "member": "20260706180000.translation.gkg.csv",
+      "line": 536,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260706180000.translation.gkg.csv.zip",
+      "member": "20260706180000.translation.gkg.csv",
+      "line": 537,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260706180000.translation.gkg.csv.zip",
+      "member": "20260706180000.translation.gkg.csv",
+      "line": 538,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260706180000.translation.gkg.csv.zip",
+      "member": "20260706180000.translation.gkg.csv",
+      "line": 539,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260706180000.translation.gkg.csv.zip",
+      "member": "20260706180000.translation.gkg.csv",
+      "line": 546,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260706180000.translation.gkg.csv.zip",
+      "member": "20260706180000.translation.gkg.csv",
+      "line": 547,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260706180000.translation.gkg.csv.zip",
+      "member": "20260706180000.translation.gkg.csv",
+      "line": 548,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260706180000.translation.gkg.csv.zip",
+      "member": "20260706180000.translation.gkg.csv",
+      "line": 549,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260706180000.translation.gkg.csv.zip",
+      "member": "20260706180000.translation.gkg.csv",
+      "line": 552,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260706180000.translation.gkg.csv.zip",
+      "member": "20260706180000.translation.gkg.csv",
+      "line": 553,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260706180000.translation.gkg.csv.zip",
+      "member": "20260706180000.translation.gkg.csv",
+      "line": 554,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260706180000.translation.gkg.csv.zip",
+      "member": "20260706180000.translation.gkg.csv",
+      "line": 555,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260707180000.translation.gkg.csv.zip",
+      "member": "20260707180000.translation.gkg.csv",
+      "line": 390,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260707180000.translation.gkg.csv.zip",
+      "member": "20260707180000.translation.gkg.csv",
+      "line": 1034,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260707180000.translation.gkg.csv.zip",
+      "member": "20260707180000.translation.gkg.csv",
+      "line": 1035,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260707180000.translation.gkg.csv.zip",
+      "member": "20260707180000.translation.gkg.csv",
+      "line": 1036,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260707180000.translation.gkg.csv.zip",
+      "member": "20260707180000.translation.gkg.csv",
+      "line": 1037,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260707180000.translation.gkg.csv.zip",
+      "member": "20260707180000.translation.gkg.csv",
+      "line": 1039,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260707180000.translation.gkg.csv.zip",
+      "member": "20260707180000.translation.gkg.csv",
+      "line": 1040,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260707180000.translation.gkg.csv.zip",
+      "member": "20260707180000.translation.gkg.csv",
+      "line": 1041,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260707180000.translation.gkg.csv.zip",
+      "member": "20260707180000.translation.gkg.csv",
+      "line": 1042,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260707180000.translation.gkg.csv.zip",
+      "member": "20260707180000.translation.gkg.csv",
+      "line": 1059,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260707180000.translation.gkg.csv.zip",
+      "member": "20260707180000.translation.gkg.csv",
+      "line": 1060,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260707180000.translation.gkg.csv.zip",
+      "member": "20260707180000.translation.gkg.csv",
+      "line": 1061,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260707180000.translation.gkg.csv.zip",
+      "member": "20260707180000.translation.gkg.csv",
+      "line": 1062,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260708180000.translation.gkg.csv.zip",
+      "member": "20260708180000.translation.gkg.csv",
+      "line": 494,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260708180000.translation.gkg.csv.zip",
+      "member": "20260708180000.translation.gkg.csv",
+      "line": 495,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260708180000.translation.gkg.csv.zip",
+      "member": "20260708180000.translation.gkg.csv",
+      "line": 496,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260708180000.translation.gkg.csv.zip",
+      "member": "20260708180000.translation.gkg.csv",
+      "line": 497,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260708180000.translation.gkg.csv.zip",
+      "member": "20260708180000.translation.gkg.csv",
+      "line": 516,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260708180000.translation.gkg.csv.zip",
+      "member": "20260708180000.translation.gkg.csv",
+      "line": 517,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260708180000.translation.gkg.csv.zip",
+      "member": "20260708180000.translation.gkg.csv",
+      "line": 518,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260708180000.translation.gkg.csv.zip",
+      "member": "20260708180000.translation.gkg.csv",
+      "line": 519,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260709180000.translation.gkg.csv.zip",
+      "member": "20260709180000.translation.gkg.csv",
+      "line": 944,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260709180000.translation.gkg.csv.zip",
+      "member": "20260709180000.translation.gkg.csv",
+      "line": 1047,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260709180000.translation.gkg.csv.zip",
+      "member": "20260709180000.translation.gkg.csv",
+      "line": 1197,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260710180000.translation.gkg.csv.zip",
+      "member": "20260710180000.translation.gkg.csv",
+      "line": 1653,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260715180000.translation.gkg.csv.zip",
+      "member": "20260715180000.translation.gkg.csv",
+      "line": 386,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260715180000.translation.gkg.csv.zip",
+      "member": "20260715180000.translation.gkg.csv",
+      "line": 603,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260715180000.translation.gkg.csv.zip",
+      "member": "20260715180000.translation.gkg.csv",
+      "line": 1454,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260716180000.translation.gkg.csv.zip",
+      "member": "20260716180000.translation.gkg.csv",
+      "line": 1919,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260719180000.translation.gkg.csv.zip",
+      "member": "20260719180000.translation.gkg.csv",
+      "line": 718,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260719180000.translation.gkg.csv.zip",
+      "member": "20260719180000.translation.gkg.csv",
+      "line": 742,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260719180000.translation.gkg.csv.zip",
+      "member": "20260719180000.translation.gkg.csv",
+      "line": 1130,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260719180000.translation.gkg.csv.zip",
+      "member": "20260719180000.translation.gkg.csv",
+      "line": 1216,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260721180000.translation.gkg.csv.zip",
+      "member": "20260721180000.translation.gkg.csv",
+      "line": 1092,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260721180000.translation.gkg.csv.zip",
+      "member": "20260721180000.translation.gkg.csv",
+      "line": 1267,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 719,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 722,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 723,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 724,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 725,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 726,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 735,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 736,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 737,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 738,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 739,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 744,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 745,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 746,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 747,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 748,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 753,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 754,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 755,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 756,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 757,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 770,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 771,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 772,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 773,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 774,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 778,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 805,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 806,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 807,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 808,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 809,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 816,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 817,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 818,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 819,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 820,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 826,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 827,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 828,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 829,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260725180000.translation.gkg.csv.zip",
+      "member": "20260725180000.translation.gkg.csv",
+      "line": 830,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260726180000.translation.gkg.csv.zip",
+      "member": "20260726180000.translation.gkg.csv",
+      "line": 530,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260726180000.translation.gkg.csv.zip",
+      "member": "20260726180000.translation.gkg.csv",
+      "line": 554,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260730180000.translation.gkg.csv.zip",
+      "member": "20260730180000.translation.gkg.csv",
+      "line": 1192,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260802180000.translation.gkg.csv.zip",
+      "member": "20260802180000.translation.gkg.csv",
+      "line": 533,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260803180000.translation.gkg.csv.zip",
+      "member": "20260803180000.translation.gkg.csv",
+      "line": 469,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260803180000.translation.gkg.csv.zip",
+      "member": "20260803180000.translation.gkg.csv",
+      "line": 1499,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 317,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 366,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 478,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 505,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1462,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1475,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1476,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1477,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1478,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1479,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1485,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1486,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1487,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1488,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1489,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1503,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1504,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1505,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1506,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1507,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1527,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1528,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1529,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1530,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1531,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1551,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1552,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1553,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1554,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1555,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1562,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1563,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1564,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1565,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1566,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1571,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1572,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1573,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1574,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1575,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1578,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1579,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1580,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1581,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1582,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1584,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1585,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1586,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1587,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1588,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1609,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1610,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1611,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1612,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1613,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1633,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1634,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1635,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1636,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1637,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1643,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1644,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1645,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1646,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1647,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1657,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1658,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1659,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1660,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1661,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1668,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1669,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1670,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1671,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1672,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1675,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1676,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1677,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1678,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1679,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1685,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1686,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1687,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1688,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260804180000.translation.gkg.csv.zip",
+      "member": "20260804180000.translation.gkg.csv",
+      "line": 1689,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260805180000.translation.gkg.csv.zip",
+      "member": "20260805180000.translation.gkg.csv",
+      "line": 1193,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260806180000.translation.gkg.csv.zip",
+      "member": "20260806180000.translation.gkg.csv",
+      "line": 1803,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260806180000.translation.gkg.csv.zip",
+      "member": "20260806180000.translation.gkg.csv",
+      "line": 1970,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260806180000.translation.gkg.csv.zip",
+      "member": "20260806180000.translation.gkg.csv",
+      "line": 2116,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260806180000.translation.gkg.csv.zip",
+      "member": "20260806180000.translation.gkg.csv",
+      "line": 2129,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260810180000.translation.gkg.csv.zip",
+      "member": "20260810180000.translation.gkg.csv",
+      "line": 1788,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260812180000.translation.gkg.csv.zip",
+      "member": "20260812180000.translation.gkg.csv",
+      "line": 2109,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260813180000.translation.gkg.csv.zip",
+      "member": "20260813180000.translation.gkg.csv",
+      "line": 329,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260813180000.translation.gkg.csv.zip",
+      "member": "20260813180000.translation.gkg.csv",
+      "line": 486,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260813180000.translation.gkg.csv.zip",
+      "member": "20260813180000.translation.gkg.csv",
+      "line": 544,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260813180000.translation.gkg.csv.zip",
+      "member": "20260813180000.translation.gkg.csv",
+      "line": 751,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260813180000.translation.gkg.csv.zip",
+      "member": "20260813180000.translation.gkg.csv",
+      "line": 1498,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260814180000.translation.gkg.csv.zip",
+      "member": "20260814180000.translation.gkg.csv",
+      "line": 1021,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260814180000.translation.gkg.csv.zip",
+      "member": "20260814180000.translation.gkg.csv",
+      "line": 1094,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260814180000.translation.gkg.csv.zip",
+      "member": "20260814180000.translation.gkg.csv",
+      "line": 1112,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260817180000.translation.gkg.csv.zip",
+      "member": "20260817180000.translation.gkg.csv",
+      "line": 43,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260817180000.translation.gkg.csv.zip",
+      "member": "20260817180000.translation.gkg.csv",
+      "line": 1599,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260818180000.translation.gkg.csv.zip",
+      "member": "20260818180000.translation.gkg.csv",
+      "line": 1608,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260818180000.translation.gkg.csv.zip",
+      "member": "20260818180000.translation.gkg.csv",
+      "line": 2009,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 780,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1522,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1523,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1524,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1525,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1526,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1537,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1538,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1539,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1540,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1541,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1570,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1571,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1572,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1573,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1574,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1579,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1580,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1581,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1582,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1583,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1589,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1590,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1591,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1592,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1593,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1613,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1614,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1615,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1616,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1617,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1620,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1621,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1622,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1623,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1624,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1628,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1629,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1630,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1631,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1632,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1649,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1650,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1651,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1652,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1653,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1665,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1666,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1667,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1668,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1669,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1674,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1675,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1676,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1677,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1678,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1705,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1706,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1707,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1708,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1709,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1713,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1714,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1715,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1716,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1717,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1745,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1746,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1747,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1748,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1749,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1753,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1754,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1755,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1756,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1757,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1759,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1760,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1761,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1762,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1763,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1782,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1783,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1784,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1785,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1786,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1791,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1792,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1793,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1794,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1795,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1805,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1806,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1807,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1808,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260824180000.translation.gkg.csv.zip",
+      "member": "20260824180000.translation.gkg.csv",
+      "line": 1809,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260826180000.translation.gkg.csv.zip",
+      "member": "20260826180000.translation.gkg.csv",
+      "line": 1928,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 557,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 558,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 559,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 560,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 561,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 568,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 569,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 570,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 571,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 572,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 586,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 587,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 588,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 589,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 590,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 607,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 608,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 609,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 610,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 611,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 621,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 622,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 623,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 624,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 625,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 631,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 632,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 633,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 634,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 635,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 647,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 648,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 649,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 650,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260829180000.translation.gkg.csv.zip",
+      "member": "20260829180000.translation.gkg.csv",
+      "line": 651,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260830180000.translation.gkg.csv.zip",
+      "member": "20260830180000.translation.gkg.csv",
+      "line": 140,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260830180000.translation.gkg.csv.zip",
+      "member": "20260830180000.translation.gkg.csv",
+      "line": 141,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260830180000.translation.gkg.csv.zip",
+      "member": "20260830180000.translation.gkg.csv",
+      "line": 142,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260830180000.translation.gkg.csv.zip",
+      "member": "20260830180000.translation.gkg.csv",
+      "line": 143,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260830180000.translation.gkg.csv.zip",
+      "member": "20260830180000.translation.gkg.csv",
+      "line": 146,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260830180000.translation.gkg.csv.zip",
+      "member": "20260830180000.translation.gkg.csv",
+      "line": 147,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260830180000.translation.gkg.csv.zip",
+      "member": "20260830180000.translation.gkg.csv",
+      "line": 148,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260830180000.translation.gkg.csv.zip",
+      "member": "20260830180000.translation.gkg.csv",
+      "line": 149,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260830180000.translation.gkg.csv.zip",
+      "member": "20260830180000.translation.gkg.csv",
+      "line": 151,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260830180000.translation.gkg.csv.zip",
+      "member": "20260830180000.translation.gkg.csv",
+      "line": 152,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260830180000.translation.gkg.csv.zip",
+      "member": "20260830180000.translation.gkg.csv",
+      "line": 153,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260830180000.translation.gkg.csv.zip",
+      "member": "20260830180000.translation.gkg.csv",
+      "line": 154,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260830180000.translation.gkg.csv.zip",
+      "member": "20260830180000.translation.gkg.csv",
+      "line": 158,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260830180000.translation.gkg.csv.zip",
+      "member": "20260830180000.translation.gkg.csv",
+      "line": 159,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260830180000.translation.gkg.csv.zip",
+      "member": "20260830180000.translation.gkg.csv",
+      "line": 160,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260830180000.translation.gkg.csv.zip",
+      "member": "20260830180000.translation.gkg.csv",
+      "line": 161,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260902180000.translation.gkg.csv.zip",
+      "member": "20260902180000.translation.gkg.csv",
+      "line": 626,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260903180000.translation.gkg.csv.zip",
+      "member": "20260903180000.translation.gkg.csv",
+      "line": 1001,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260906180000.translation.gkg.csv.zip",
+      "member": "20260906180000.translation.gkg.csv",
+      "line": 498,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260906180000.translation.gkg.csv.zip",
+      "member": "20260906180000.translation.gkg.csv",
+      "line": 499,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260906180000.translation.gkg.csv.zip",
+      "member": "20260906180000.translation.gkg.csv",
+      "line": 500,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260906180000.translation.gkg.csv.zip",
+      "member": "20260906180000.translation.gkg.csv",
+      "line": 501,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260906180000.translation.gkg.csv.zip",
+      "member": "20260906180000.translation.gkg.csv",
+      "line": 505,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260906180000.translation.gkg.csv.zip",
+      "member": "20260906180000.translation.gkg.csv",
+      "line": 506,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260906180000.translation.gkg.csv.zip",
+      "member": "20260906180000.translation.gkg.csv",
+      "line": 507,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260906180000.translation.gkg.csv.zip",
+      "member": "20260906180000.translation.gkg.csv",
+      "line": 508,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260906180000.translation.gkg.csv.zip",
+      "member": "20260906180000.translation.gkg.csv",
+      "line": 513,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260906180000.translation.gkg.csv.zip",
+      "member": "20260906180000.translation.gkg.csv",
+      "line": 514,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260906180000.translation.gkg.csv.zip",
+      "member": "20260906180000.translation.gkg.csv",
+      "line": 515,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260906180000.translation.gkg.csv.zip",
+      "member": "20260906180000.translation.gkg.csv",
+      "line": 516,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260906180000.translation.gkg.csv.zip",
+      "member": "20260906180000.translation.gkg.csv",
+      "line": 528,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260906180000.translation.gkg.csv.zip",
+      "member": "20260906180000.translation.gkg.csv",
+      "line": 529,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260906180000.translation.gkg.csv.zip",
+      "member": "20260906180000.translation.gkg.csv",
+      "line": 530,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260906180000.translation.gkg.csv.zip",
+      "member": "20260906180000.translation.gkg.csv",
+      "line": 531,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260906180000.translation.gkg.csv.zip",
+      "member": "20260906180000.translation.gkg.csv",
+      "line": 534,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260906180000.translation.gkg.csv.zip",
+      "member": "20260906180000.translation.gkg.csv",
+      "line": 535,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260906180000.translation.gkg.csv.zip",
+      "member": "20260906180000.translation.gkg.csv",
+      "line": 536,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260906180000.translation.gkg.csv.zip",
+      "member": "20260906180000.translation.gkg.csv",
+      "line": 537,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260908180000.translation.gkg.csv.zip",
+      "member": "20260908180000.translation.gkg.csv",
+      "line": 2078,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260908180000.translation.gkg.csv.zip",
+      "member": "20260908180000.translation.gkg.csv",
+      "line": 2116,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260908180000.translation.gkg.csv.zip",
+      "member": "20260908180000.translation.gkg.csv",
+      "line": 2135,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260910180000.translation.gkg.csv.zip",
+      "member": "20260910180000.translation.gkg.csv",
+      "line": 1866,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260910180000.translation.gkg.csv.zip",
+      "member": "20260910180000.translation.gkg.csv",
+      "line": 2021,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260910180000.translation.gkg.csv.zip",
+      "member": "20260910180000.translation.gkg.csv",
+      "line": 2102,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260910180000.translation.gkg.csv.zip",
+      "member": "20260910180000.translation.gkg.csv",
+      "line": 2256,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260912180000.translation.gkg.csv.zip",
+      "member": "20260912180000.translation.gkg.csv",
+      "line": 1522,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260912180000.translation.gkg.csv.zip",
+      "member": "20260912180000.translation.gkg.csv",
+      "line": 1549,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260914180000.translation.gkg.csv.zip",
+      "member": "20260914180000.translation.gkg.csv",
+      "line": 262,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260914180000.translation.gkg.csv.zip",
+      "member": "20260914180000.translation.gkg.csv",
+      "line": 496,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260914180000.translation.gkg.csv.zip",
+      "member": "20260914180000.translation.gkg.csv",
+      "line": 1152,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260914180000.translation.gkg.csv.zip",
+      "member": "20260914180000.translation.gkg.csv",
+      "line": 1156,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260914180000.translation.gkg.csv.zip",
+      "member": "20260914180000.translation.gkg.csv",
+      "line": 1236,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260915180000.translation.gkg.csv.zip",
+      "member": "20260915180000.translation.gkg.csv",
+      "line": 287,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260915180000.translation.gkg.csv.zip",
+      "member": "20260915180000.translation.gkg.csv",
+      "line": 485,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260919180000.translation.gkg.csv.zip",
+      "member": "20260919180000.translation.gkg.csv",
+      "line": 1134,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260919180000.translation.gkg.csv.zip",
+      "member": "20260919180000.translation.gkg.csv",
+      "line": 1142,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260919180000.translation.gkg.csv.zip",
+      "member": "20260919180000.translation.gkg.csv",
+      "line": 1176,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260920180000.translation.gkg.csv.zip",
+      "member": "20260920180000.translation.gkg.csv",
+      "line": 972,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260920180000.translation.gkg.csv.zip",
+      "member": "20260920180000.translation.gkg.csv",
+      "line": 1071,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260920180000.translation.gkg.csv.zip",
+      "member": "20260920180000.translation.gkg.csv",
+      "line": 1152,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 1989,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 1990,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 1991,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 1992,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 1993,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 1995,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 1996,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 1997,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 1998,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 1999,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2006,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2008,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2009,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2010,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2011,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2012,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2038,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2039,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2040,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2041,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2042,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2055,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2056,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2057,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2058,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2059,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2063,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2064,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2065,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2066,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2067,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2075,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2076,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2077,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2078,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2079,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2098,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2099,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2100,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2101,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2102,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2114,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2115,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2116,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2117,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2118,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2127,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2128,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2129,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2130,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2131,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2145,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2146,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2147,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2148,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2149,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2151,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2152,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2153,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2154,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2155,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2168,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2169,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2170,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2171,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2172,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2182,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2183,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2184,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2185,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2186,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2188,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2189,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2190,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2191,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2192,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2209,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2210,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2211,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2212,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2213,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2234,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2235,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2236,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2237,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2238,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2241,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2242,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2243,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2244,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2245,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2249,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2250,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2251,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2252,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2253,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2263,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2264,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2265,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2266,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2267,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2277,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2278,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2279,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2280,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2281,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2287,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2288,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2289,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2290,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260921180000.translation.gkg.csv.zip",
+      "member": "20260921180000.translation.gkg.csv",
+      "line": 2291,
+      "reason": "fewer_than_27_fields"
+    },
+    {
+      "file": "responses/gkg/20260922180000.translation.gkg.csv.zip",
+      "member": "20260922180000.translation.gkg.csv",
+      "line": 1677,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260922180000.translation.gkg.csv.zip",
+      "member": "20260922180000.translation.gkg.csv",
+      "line": 1779,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260922180000.translation.gkg.csv.zip",
+      "member": "20260922180000.translation.gkg.csv",
+      "line": 2132,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260922180000.translation.gkg.csv.zip",
+      "member": "20260922180000.translation.gkg.csv",
+      "line": 2193,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260922180000.translation.gkg.csv.zip",
+      "member": "20260922180000.translation.gkg.csv",
+      "line": 2248,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260922180000.translation.gkg.csv.zip",
+      "member": "20260922180000.translation.gkg.csv",
+      "line": 2265,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260922180000.translation.gkg.csv.zip",
+      "member": "20260922180000.translation.gkg.csv",
+      "line": 2318,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260922180000.translation.gkg.csv.zip",
+      "member": "20260922180000.translation.gkg.csv",
+      "line": 2325,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260922180000.translation.gkg.csv.zip",
+      "member": "20260922180000.translation.gkg.csv",
+      "line": 2412,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260922180000.translation.gkg.csv.zip",
+      "member": "20260922180000.translation.gkg.csv",
+      "line": 2497,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260922180000.translation.gkg.csv.zip",
+      "member": "20260922180000.translation.gkg.csv",
+      "line": 2594,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260922180000.translation.gkg.csv.zip",
+      "member": "20260922180000.translation.gkg.csv",
+      "line": 2595,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260923180000.translation.gkg.csv.zip",
+      "member": "20260923180000.translation.gkg.csv",
+      "line": 396,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260924180000.translation.gkg.csv.zip",
+      "member": "20260924180000.translation.gkg.csv",
+      "line": 2400,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260925180000.translation.gkg.csv.zip",
+      "member": "20260925180000.translation.gkg.csv",
+      "line": 135,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260925180000.translation.gkg.csv.zip",
+      "member": "20260925180000.translation.gkg.csv",
+      "line": 677,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260929180000.translation.gkg.csv.zip",
+      "member": "20260929180000.translation.gkg.csv",
+      "line": 2022,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260929180000.translation.gkg.csv.zip",
+      "member": "20260929180000.translation.gkg.csv",
+      "line": 2064,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260929180000.translation.gkg.csv.zip",
+      "member": "20260929180000.translation.gkg.csv",
+      "line": 2283,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260929180000.translation.gkg.csv.zip",
+      "member": "20260929180000.translation.gkg.csv",
+      "line": 2356,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260929180000.translation.gkg.csv.zip",
+      "member": "20260929180000.translation.gkg.csv",
+      "line": 2381,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260929180000.translation.gkg.csv.zip",
+      "member": "20260929180000.translation.gkg.csv",
+      "line": 2433,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260930180000.translation.gkg.csv.zip",
+      "member": "20260930180000.translation.gkg.csv",
+      "line": 1429,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260930180000.translation.gkg.csv.zip",
+      "member": "20260930180000.translation.gkg.csv",
+      "line": 1483,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260930180000.translation.gkg.csv.zip",
+      "member": "20260930180000.translation.gkg.csv",
+      "line": 1603,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260930180000.translation.gkg.csv.zip",
+      "member": "20260930180000.translation.gkg.csv",
+      "line": 1643,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260930180000.translation.gkg.csv.zip",
+      "member": "20260930180000.translation.gkg.csv",
+      "line": 1802,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260930180000.translation.gkg.csv.zip",
+      "member": "20260930180000.translation.gkg.csv",
+      "line": 1843,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260930180000.translation.gkg.csv.zip",
+      "member": "20260930180000.translation.gkg.csv",
+      "line": 1945,
+      "reason": "invalid_utf8"
+    },
+    {
+      "file": "responses/gkg/20260930180000.translation.gkg.csv.zip",
+      "member": "20260930180000.translation.gkg.csv",
+      "line": 2002,
+      "reason": "invalid_utf8"
+    }
+  ],
+  "effective_start": "2025-10-17T02:44:03Z",
+  "effective_end": "2026-09-30T18:00:00Z",
+  "target_30_days": {
+    "news": 67,
+    "tvn": 2
+  },
+  "extended_90_days": {
+    "news": 159,
+    "tvn": 22
+  }
+}

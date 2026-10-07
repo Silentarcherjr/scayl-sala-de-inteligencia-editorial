@@ -11,6 +11,7 @@ from pathlib import Path
 
 from .common import download, json_bytes, write_csv, write_once
 from .fetch_gdelt import FIELDS, article_row
+from .window import news_window
 
 
 def extract(content: bytes, extracted: str, excluded: list[dict] | None = None) -> list[dict]:
@@ -85,7 +86,8 @@ def fetch(directory: Path, start: date, end: date) -> list[dict]:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, default=Path("data/raw/v1"))
-    parser.add_argument("--start", type=date.fromisoformat, default=date(2025, 9, 1))
-    parser.add_argument("--end", type=date.fromisoformat, default=date(2025, 10, 1))
+    start, end = news_window(target=True)
+    parser.add_argument("--start", type=date.fromisoformat, default=start.date())
+    parser.add_argument("--end", type=date.fromisoformat, default=end.date())
     args = parser.parse_args()
     fetch(args.output, args.start, args.end)

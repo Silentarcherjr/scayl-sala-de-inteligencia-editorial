@@ -32,6 +32,13 @@
 | Costo de API | — | $0.00 por diseño (local); se confirma al medir | — | — |
 
 ## Registro de pruebas fallidas y correcciones
+
+Ejecución C-01 (worker B, 2026-10-07): primera suite 113/114 con timeout de 15 s en
+`tests/ui/test_home.py::test_rank_funnel_matrix_and_editorial_safeguards` durante adquisición.
+La prueba aislada pasó sin cambios; la suite completa repetida pasó 114/114 en 5,21 s.
+No se modificó ni se omitió la prueba; causa exacta del timeout no determinada.
+Evidencia: `docs/worklog/worker-b-c01-pytest.xml` (fallo) y
+`docs/worklog/worker-b-c01-final-pytest.xml` (repetición).
 _(el jurado pedirá "una prueba fallida y su corrección": registrarlas aquí en cuanto ocurran)_
 
 | Fecha (UTC) | Prueba | Qué falló | Causa raíz | Corrección | Evidencia |

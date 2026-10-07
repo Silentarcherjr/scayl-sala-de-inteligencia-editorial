@@ -1,0 +1,8 @@
+{
+  "url": "https://data.gdeltproject.org/gdeltv2/20260705180000.translation.gkg.csv.zip",
+  "fecha_extraccion": "2026-10-07T02:51:52.906961Z",
+  "status": 200,
+  "content_type": "application/zip",
+  "sha256": "96a23fd20dab0464ec5c60faf8886490492a37b76eeb90adc0c97572ed308a18",
+  "previous_failures": []
+}

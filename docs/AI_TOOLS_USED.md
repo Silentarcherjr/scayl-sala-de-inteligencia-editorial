@@ -13,8 +13,8 @@
 | 2026-10-07 | Codex | LowCrime | A-03: ficha de caso | Revisión y continuación de la página local, validación de revisiones, 9 pruebas AppTest y propuesta AP-011 para dependencias pendientes | 80 pruebas en verde; seis pestañas con fixture sintético; tarjeta A-08 y API de recibo pendientes | Pendiente de revisión del Lead en PR borrador |
 | 2026-10-07 | Codex | LowCrime | Completar A-03/A-08 tras DL-020 | Tarjeta compartida, revisión del paquete visible, recibo descargable, AppTest y validación visual en Chromium con fixture sintético | 84 pruebas en verde; capturas a 1280×720; AP-011 aplicada | Pendiente de revisión final del Lead en PR #13 |
 | 2026-10-07 | Codex | frictionspp-svg | Recuperar historial y garantizar manifest portable | Respaldo local, exclusión de ZIP/RSS, merge normal, separación de hashes locales, corte desde YAML y pruebas de copia sin auxiliares | 99 pruebas pasan; 118 hashes/tamaños locales verificados; B-01/B-02 aún incompletas | Pendiente de revisión del Lead |
-
 | 2026-10-07 | Codex | LowCrime | A-01/A-02 | Home, navegación, filtros, matriz de evidencia y pruebas de UI; validación visual Chromium | 95 pruebas pasando; capturas y navegación a EVT-0003 verificadas | Pendiente del Lead en PR |
+| 2026-10-07 | Codex | frictionspp-svg | Cerrar snapshot C-01 B-01/B-02 | Adaptador RSS con detección nula; adquisición DOC/GKG y USGS ampliado; auditoría de exclusiones; manifest portable; candidatos ciegos | 187 noticias (50 TVN), 540 WB, 82+87 USGS; manifest verificado; 114 pruebas pasan | Top 5 ciego y revisión del Lead pendientes |
 
 ## Herramientas de IA dentro del producto (no son de desarrollo)
 

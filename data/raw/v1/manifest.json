@@ -1,0 +1,3130 @@
+{
+  "version": "v1",
+  "fecha_corte_UTC": "2026-10-01T00:00:00Z",
+  "fecha_congelacion_UTC": "2026-10-07T02:57:22.205347Z",
+  "consultas": [
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%28Panama+OR+Panam%C3%A1%29+%28economy+OR+econom%C3%ADa%29&mode=ArtList&format=json&maxrecords=250&STARTDATETIME=20250902000000&ENDDATETIME=20250902235959",
+      "fecha_extraccion": "2026-10-06T21:22:29.540255Z",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "0332a6d3803495c6657997cc6433e8cfa39dac159f04817a9ed8417bcb2e7d01"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%28Panama+OR+Panam%C3%A1%29+%28earthquake+OR+sismo+OR+inundaciones+OR+flood%29&mode=ArtList&format=json&maxrecords=250&STARTDATETIME=20250902000000&ENDDATETIME=20250902235959",
+      "fecha_extraccion": "2026-10-06T21:22:49.131596Z",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "8ac01c53989703748ba302ff36cd8f1ac66b2e5795e2a7cd8be5999aabf52df4"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=domain%3Atvn-2.com&mode=ArtList&format=json&maxrecords=250&STARTDATETIME=20250902000000&ENDDATETIME=20250902235959",
+      "fecha_extraccion": "2026-10-06T21:21:35.999098Z",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%28Panama+OR+Panam%C3%A1%29+%28canal+OR+logistics+OR+log%C3%ADstica%29&mode=ArtList&format=json&maxrecords=250&STARTDATETIME=20250903000000&ENDDATETIME=20250903235959",
+      "fecha_extraccion": "2026-10-06T21:23:25.551802Z",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "ff8c4d5c12082d125e17dd21ef906af5d3bac7a5d2ebc74624f0126708e0f833"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%28Panama+OR+Panam%C3%A1%29+%28tourism+OR+turismo%29&mode=ArtList&format=json&maxrecords=250&STARTDATETIME=20250903000000&ENDDATETIME=20250903235959",
+      "fecha_extraccion": "2026-10-06T21:23:46.651562Z",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "5d3467bb8bc24a82a60e2ab1c3f2e61033c45f74573ab5541d1e3d59dacac53e"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=domain%3Atvn-2.com&mode=ArtList&format=json&maxrecords=250&STARTDATETIME=20250905000000&ENDDATETIME=20250905235959",
+      "fecha_extraccion": "2026-10-06T21:26:08.369003Z",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%28Panama+OR+Panam%C3%A1%29+%28earthquake+OR+sismo+OR+inundaciones+OR+flood%29&mode=ArtList&format=json&maxrecords=250&STARTDATETIME=20250907000000&ENDDATETIME=20250907235959",
+      "fecha_extraccion": "2026-10-06T21:29:57.232280Z",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "d6fca9d465b1beae3015fbc1af971e2e25c2df7ef73c8532e283deb8a156124e"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=domain%3Atvn-2.com&mode=ArtList&format=json&maxrecords=250&STARTDATETIME=20250908000000&ENDDATETIME=20250908235959",
+      "fecha_extraccion": "2026-10-06T21:30:22.527791Z",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%28Panama+OR+Panam%C3%A1%29+%28canal+OR+logistics+OR+log%C3%ADstica%29&mode=ArtList&format=json&maxrecords=250&STARTDATETIME=20250909000000&ENDDATETIME=20250909235959",
+      "fecha_extraccion": "2026-10-06T21:32:38.863984Z",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "a89b3b4d75b19e28136ab86a8ddb2aed235235b3257bc96cb7aca52575b4ed29"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=domain%3Atvn-2.com&mode=ArtList&format=json&maxrecords=250&STARTDATETIME=20250909000000&ENDDATETIME=20250909235959",
+      "fecha_extraccion": "2026-10-06T21:32:18.509977Z",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%28Panama+OR+Panam%C3%A1%29+%28economy+OR+econom%C3%ADa%29&mode=ArtList&format=json&maxrecords=250&STARTDATETIME=20250910000000&ENDDATETIME=20250910235959",
+      "fecha_extraccion": "2026-10-06T21:35:01.370594Z",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "3a234d5ce93998ed4cbc708625e57a7ed96cb32d44f2209e21bc0b5af269b166"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%28Panama+OR+Panam%C3%A1%29+%28tourism+OR+turismo%29&mode=ArtList&format=json&maxrecords=250&STARTDATETIME=20250910000000&ENDDATETIME=20250910235959",
+      "fecha_extraccion": "2026-10-06T21:34:34.216031Z",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "3a511c76899b85e45770d8bbdbf61d0701591fc58a6ed315356f228e8e4cdf8d"
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=%28Panama+OR+Panam%C3%A1%29+%28canal+OR+logistics+OR+log%C3%ADstica%29&mode=ArtList&format=json&maxrecords=250&STARTDATETIME=20260901000000&ENDDATETIME=20260901235959",
+      "fecha_extraccion": "2026-10-07T02:49:18.937411Z",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "38f4a7e141675afabe6b38c7c48cb3b58a30a2ec098f76816bdaf602f6636a66",
+      "previous_failures": []
+    },
+    {
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc?query=domain%3Atvn-2.com&mode=ArtList&format=json&maxrecords=250&STARTDATETIME=20260901000000&ENDDATETIME=20260901235959",
+      "fecha_extraccion": "2026-10-07T02:48:54.244453Z",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "previous_failures": [
+        {
+          "at": "2026-10-07T02:47:42.801835Z",
+          "error": "HTTP Error 429: Too Many Requests"
+        },
+        {
+          "at": "2026-10-07T02:48:08.688734Z",
+          "error": "HTTP Error 429: Too Many Requests"
+        }
+      ]
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250901000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:52.627718Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "ae6b5d6647e3383656a7d1a1aceb806f6c3fd790e375277b037c4352cbe2ce1e"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250901120000.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:22:02.062463Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "26ea91f3c51079c02b2e6d3886fbecc4a7011b4416eec88e3d7744e59bf83a88"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250901150000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:31.191269Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "9dea55803fb9d26b1a31014d7de4dd154c3577013da3579d505d2ceff77b70f4"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250901180000.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:22:56.509973Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "5eadd223cb9bc5fb04cce8b84506bd5b445c029a9296e2ffbf3bf7e8f06b07da"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250901180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:08.209395Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "649c262bd714e82799296c92cf67df43af7c50217c494ef290cae68d53f855f5"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250901210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:26.336764Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "13dfa6a564c25044da833425bb033583e4ba001f6a84f023235d9ae55432c01f"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250902000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:53.454298Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "7ac7869a3d8e60555fa9c93c11885b4840f1ffcada135a8ed4415d594ee0ed94"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250902150000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:32.442105Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "1a82f01645421b66970b74410d57dd12b94a4a4d29049e8fb75472916468bfc0"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250902180000.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:22:57.553260Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "010541127c56b07a66a8da021d0c263225751e6305366205d50e729d122a0cd5"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250902180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:09.455453Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "0ac11b3ebdb06ee7c47923b8a79ec30325fa367a77184c9bb2647a4bec98a934"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250902210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:27.330382Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "ab37330450bd911b892a1f11a54a89360d3c1606b8f6afd7e66558ad9213089e"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250903000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:54.315281Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "f5da7f97a157257914ea90c9562475d64967bc80ff32091884d1e86d876f81b0"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250903150000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:33.795287Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "9f6e07e6ca4b74bbe03fb88ce8398b473309d0930320e84913939192b8394213"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250903180000.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:22:58.879020Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "993351bf5beec1d058c1e392a553224f2661f28be344a94c2673229c53535b93"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250903180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:10.684332Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "14a6285156bd6b7c96a8a315b379c70064df8a3099639c218574dd72df9b479f"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250903210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:28.417242Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "1f864a7fac7d1f1e278e89cfe5a37d2e11ac50c499d827e1f853b953a76c0c05"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250904000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:55.350471Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "ff7820e9742aaab5f40da7b943b6cae18f0db5366c0bc4230216cbffa2c834c2"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250904150000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:35.135090Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "61ee323d1719ee73b6774f1d43d9f18cd450cb801a4dd9f736c58617b5bdfe65"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250904180000.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:23:20.919684Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "d2c920c521e9352db71e154b7f8b73a0fea6241467a26597edd4e98eef114dda"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250904180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:11.961776Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "714fda9fc54dae1a82dda2984f8c0e1539ed32986bd18e44d7876322ccae9191"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250904210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:29.468159Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "19b16a4ba10aded72eb5a1cf406ad4995024436b268bcc4518167be07057f7bc"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250905000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:56.333735Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "e56068c61b302d7525b63f2b15e9a84851383c9c08d8cd97c9503167a2de6937"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250905150000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:36.484510Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "68a2a2981bf7f0ff49cb526a41eb9d87c5e89853870aff6c3dbde0bcba67bd41"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250905180000.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:23:21.977773Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "f285506bb6b25ed5c9b6df73544e8cf74400a1d9745cd62bd42912433abd5df9"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250905180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:13.077156Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "b55249c534f98e85f3eb868018c1e3483c7aab48555726a692c30c37d0d3113f"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250905210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:31.127579Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "cad3938982c228de9dcce4285c8a58fcf522753f192ecb0ee23f5f5d1b71d602"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250906000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:57.333801Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "ee9a3dc8a0c723091102f7cd93c270367a4cd6d3d525b717be49ed9b06ec5011"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250906150000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:37.653068Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "3a4abe86be06fd9ae32e9856d17d1b76ae480ec6473edef9d34227ff82e45d07"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250906180000.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:23:22.927994Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "414a938f4431d8c0962c4511e63f92c2410a2dc20a2d4b50d29ac3af9f5b646d"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250906180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:14.107686Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "a520b30a247c7c0672efa9abfad631280161cd824b2adcf926d9c0531b23cec4"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250906210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:32.016748Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "9a02011391e6b41ffc6fdb7c766d11a180a272239e61df1751786514a3b19715"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250907000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:58.148656Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "c7822355848d71b05b3ff27cd342e98a99e9de8100b4a9474633e53fd0bc49c6"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250907150000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:38.774083Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "405fdc556657f7030151b80ebe4f97281f79223337c0054b52e0d282d74978cb"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250907180000.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:23:23.737357Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "566def10cf5157e39cf18f19f015ae650a7a309f2408dd8789092f4a67882419"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250907180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:15.153943Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "b59660a389d3a6863e73c58573f32a1921102fee6016e6d57a19fd9e2c6fbfc2"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250907210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:32.903866Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "02e4beb0bd9fdb102ce6684990b7d6fc2d5efd935f4003eff7a69af993a6a03e"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250908000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:59.052001Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "e2874e6d8f39f97ebe618b656d48954d7c621a11dc7b90e25a2e8ec6c85af40d"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250908150000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:39.962751Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "07fb301af3b875cf6f3def4c9a0ba8ae65839a40ac33833e20561d05b958ffe0"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250908180000.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:23:24.578586Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "94b056a8c3db1ea345bf21a39634685f495988d5001633300f08e9a2a71b76ec"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250908180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:16.335396Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "222077493536479733ed15421835d4869a7339e9df67f8ff5bfbdc3d1fcbd43b"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250908210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:33.844683Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "acd50eee18aa7e3d480724421a28a4152b5e358ef6aa085ac9b7bfa3648a964f"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250909000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:59.965700Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "bad58b7a382c8f00584b69c3243ea3303571e0b41f25244cbf95d49115250110"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250909150000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:41.327560Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "a2864958caf404877f37c55116809e160580fc6cb4f3d589e7c426c0bf2b082f"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250909180000.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:23:26.110470Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "b56eaf897ecef463166fd849ee6a520836772290e6903cfdf773d0cca474cd91"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250909180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:17.446856Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "b234ccf8f3565a796b324c70f5b3ecdc405900c9a0d8965924e16814ed45ca41"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250909210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:34.886771Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "c9bbffa74a686cdef99c9db732281c640a1053865807d2fdb85c00c93d51a8c3"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250910000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:00.820704Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "cbd4659dc368392bebc94f6528cb5b3012744806556797f8a02288fe33619910"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250910150000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:42.726620Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "a1148f84a9e9fea8f0b25c4fdfab243db7054357b5952b7f67bc3b742adc06a9"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250910180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:18.537996Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "4473d6c839a0f855bc91bac185d07c2e1c916685cbe3dbd1c8d0e53222b3f648"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250910210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:35.984693Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "816efec9e42e54fe046c52d18b3bc36ad3fa6ebd76e587e781f55293ed110bf0"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250911000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:01.704118Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "87f692f9308e44d215ce8b2d4b0010d151fa04cc9bfc68b24987460efe8b171c"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250911150000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:43.994976Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "6193ab1003a38b8cf4f8f956893640b7f77f4c53d57c940959a38398536aa01d"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250911180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:19.765181Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "6c97d282a5fa6def51c43993dc105f896fa807a06d02ac684b15a667179725b0"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250911210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:37.761002Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "526d91be2c3852b47c245da1b7cc2f769ab3e5f71e5a6cdbb76855ee66c42c6e"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250912000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:02.630144Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "21fcdcf9fd2d9f806c10bd931f4858af36258fc826f2a42dad1b1b9beb02a260"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250912150000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:45.254089Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "3f83650198883fca6aab4e83845d018c119188efceb83fef78a3d42af5867dee"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250912180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:20.909326Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "05806a5e6500c9431bc253ddef17c2b90af77547fede3b2ab264a452e27fef5a"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250912210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:38.678250Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "f85d79acd564cebe53a64b2c384497273276a3dbd7481bc91a52325af0ca0231"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250913000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:03.507188Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "438cfc705f3508c79127103469296e39aa80c9084dd8c57df7b5d8b46b040a0c"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250913150000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:46.452957Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "c4cf60c0f9c311c92cde9138a94208d613c8cfe19518928a8fcb7ecdd5c748e3"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250913180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:30.397109Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "ebe991164ab897962b23df2e03655828695bbde6c13a9af88350d94616b54d6b"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250913210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:39.638341Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "5cb222edeffff74de4bedb1e84cbc3d6cab92e0264ffd24542631fa673043ad8"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250914000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:04.388377Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "7c8bfbef5eeaaa0d9af107ec760cfec946a6287289fb280d0e19a6b0885acef9"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250914150000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:47.523205Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "1a593d3591a4ac08a78ee9fe29858cd4191c216b722ec74b6acb062fa44535db"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250914180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:32.063250Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "2838024b53b2fa93dc6f1532b88b4949dc05ad551f4ece90409d96d26b336bfa"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250914210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:40.974685Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "072346260e7b63c146bce84dc562b3226feafc9ac3b1f4e4d8543142607bd396"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250915000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:05.237616Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "da3318c5fdd5e9789a6c52be140214cc57bf50d0d37729903bf9c55e98b4d68f"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250915150000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:48.749502Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "fb95e612bd277b8b9d2a4295a1d4ad925a267f413aa1bc119a4bc7f535b8f90c"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250915180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:33.235000Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "b7b3de8cd23e31878fcc2f4b7a609ef75e3856b11606e2745c49498c6804d062"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250915210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:42.690038Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "d1612853958fcfb568fc6a5e47134e6dc4d85aa2f1878df3b69cbaf5e41903b4"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250916000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:06.071286Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "02e7db99ba20ed069f51a371def77db6c690b0068b431648a8a2ee5acdcd5c2e"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250916150000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:50.007369Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "21d299bcf213085466b6a33707556168d6d24d9d6a6d29921d642f4bacbc8349"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250916180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:34.443091Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "4585615e47e221b7ba868332c7327d1c7f0fcef7243f71f5c6cd0d8b76f0f811"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250916210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:13.224282Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "cd9c428b110e2773af017c255a2b0add51d252ed2c91fcafa4be270f3e7e54ae"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250917000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:07.005529Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "1c0532b338ba5a0ff47667d4c039005f2ecf2fcd5a1c6569dbd9143a53b33a03"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250917150000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:51.335482Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "a3ee32263e10443d43c618f176263695f0e7af034cb33f9089858c48bbf47dd6"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250917180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:35.616205Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "6048bc108040a8c60938aeb307ac057cf1e85ff1f224a4cdc99b6532c9449750"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250917210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:14.333203Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "de927cf6672e1188871335b871b87c8ac1b1f49da2a70c0cf50430f0a51d160d"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250918000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:07.987203Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "1d974e59d05e9199d73c74a18737c30fdad0c6810d76e9ac69b1b88ff46c8f67"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250918180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:36.811469Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "f817a182bec2529b2ab3deb187dac02ef664fb9ca5b44d6248b046286f81467d"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250918210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:15.928587Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "254623b477707f7379711a01ea570e164a373fcbb01734aa73250f885685ed1b"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250919000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:08.997280Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "8481046e168ce6aecd2fa49b6e9260f107f0036d6bc9acd66c171b64da0d7830"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250919180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:38.349345Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "2d76712d7f7e43ce513bd65bc6a4401eabe3e1a260625dea705beb9f1fd2fa65"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250919210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:16.914049Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "4e611f7ea4446eb74068155444b263bcfc46c420b9ba901ccab613ff6c227603"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250920000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:09.839630Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "aff6ce5633b37a4c8673f6191b240f2f65505138ed395b3b1a12fdcb06b2282e"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250920180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:39.345828Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "bb1d4ccfcf97761993278fca633c6172c0875b38c7e047b7e41b0eeb902651f8"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250920210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:17.956591Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "93d9fb93995c352e47ee91aeac01a2a783c0524c9e9a0e8a70407661dc364f1d"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250921000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:16.680409Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "93e99ef28317d79647ccf56a7cd355189f3fbf08f5d3c960c81445d06b9e92e3"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250921180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:40.453191Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "95569b9f6a0f28fbde32cf84af7741dd21291f7ba6356614bff0b6373c7a3a4c"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250921210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:18.830797Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "0270914bb43d12bbecf9dacfc6c7511301b3e41625987ece6dace76b389ea76b"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250922000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:17.535144Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "64dd5059a6ff989e41738cbf9fe9e5599803415b40055d3634fec61733447ee2"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250922180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:41.590809Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "9089045b00c16da065e48b3848efc27cd0019ef9709b956da3e594c0a84d5544"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250922210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:19.761814Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "72f1cb3f581a1fa2d346f8827fb814b89d6c14720afb1bbe585eb930002eb8b2"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250923000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:18.418879Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "7687fa8175d237d63a3b694133b2f82d3122ad7849875b1b37358401d7c2c668"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250923180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:42.772550Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "97fa3c6aea41698593bd24af785a772f63761e7a03097fd78863f745e4e7089c"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250923210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:21.681875Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "adecd40ea8f53f475273ae80c4719b604403905cff7aef0e80a75813162f063e"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250924000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:19.916436Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "df89031e0e5041fb56f2c7986741ad6071e0cd32f517ae153c0c5317892d0673"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250924180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:44.022222Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "9d6127e16be1e5d60bea1a593f09a7eff75077ec26968cdb384719b8d2d7d5fa"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250924210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:22.689312Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "ad8468fe56cf765a24ee2eecbd568d5a3bcf67ca4adb90aaf02b6625be2a85a2"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250925000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:20.918638Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "9a21265e96b61f97ebcc1d567fee004c86479cb5ec2e06e0611181ab56c307c5"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250925180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:45.254156Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "47da4d52673391ed57125863daf2c677929af12d59987bbfe7fea0836a0329fb"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250925210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:23.715497Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "8b2bf63ca0ddc11781a6c46b372ef20871779a753a17639db82aef76737f4e7b"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250926000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:21.820684Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "fe9515aeb0c45825624be359bc321aeae76b1e8d349d2d8b7619d3737fbc39c4"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250926180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:46.445728Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "cd2560e38f60d9f9152481cf0a1c0237a58f018bdee23175bae6f80b67983071"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250926210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:25.453810Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "a092f83dd3d788488b638091fdf49c6b8dbd53a89417bd12fd3190582981fedd"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250927000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:22.784818Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "4ee5be8d69a6bf32aa9b84bbed6fedc29a3e2d7f904083b074c8267eea67839a"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250927180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:47.568270Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "2bf248329a500c6894221d98d738eb513a6dc1de126247e5722c386bd1cc4910"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250927210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:26.440785Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "20d24571d8c3cfa2171f957b759034d046c923e894039a83b39a31e01f1b1ac5"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250928000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:23.664753Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "ab552f94a1b8b6ba21d37ad513a916678b56d68d05e1e98c79552e4640685f06"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250928180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:49.244864Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "23d6d5a07e33d059c44b7c898ce31ef1f895cb238d8bdb17bbbd44cdf2ebc5d7"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250928210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:27.337882Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "a08b7d27dc3a04e00ae8fbf6e5e9d9172dbbfe8518e6ea5f275820aca60a5fef"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250929000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:24.520687Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "df148b80ae4eb3606d26fd162aeb52a2e935e985c1e13838718c51e1dd4c6169"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250929180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:50.432701Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "f59b77122818446c989141f27b583280d9e8afb45cb4ab43a70be0ffeb6f774d"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250929210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:28.946047Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "12b73767458a79cf5526f2b88614ac49d250357ac52688d362eddff2c3ad608e"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250930000000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:25:25.414938Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "f7e7d06a60e2fb46c1626539c5c8f7fb124a135565b384c3ff2624305fec7daa"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250930180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:24:51.629413Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "7384f7ff9d8583a612ef6ae1080421a807eaf8620c149578991583e6f1a97069"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20250930210000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-06T21:26:30.048953Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "37a5c0afd66903254474f79d82fa579c2d0d7bd62b88000e09b40d851d33137d"
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260703180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:51:50.848074Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "1287fb650fd95b108e3a6d6568b75c756552902c9b414923e0cb830afaac3ff6",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260704180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:51:51.949335Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "c114e887d07bbb72157cb3d071d62ddc0105b367935a714ecf4fff01f9be7cc2",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260705180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:51:52.906961Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "96a23fd20dab0464ec5c60faf8886490492a37b76eeb90adc0c97572ed308a18",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260706180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:51:54.004024Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "6faff2ca5a6c73235cc91ff68e9f31c4ccac868586e4a97c807c15f3e03f1097",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260707180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:51:55.230765Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "891b180cbc060b67bbae8a3bdd14a50a9d7b45ca71e548ffdbe0e5657dbb9ff8",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260708180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:51:56.461247Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "182862d1c924a9b57dd95270cbe11709fa8cc0a4b7d5435112bb8b64ccca27fc",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260709180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:51:57.686331Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "ac31a0d63765a6c6329d9907a2f37b7aa31f545a7f4d1e57fc2edef20b73686e",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260710180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:51:58.931056Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "d0b7932d1a17140dca5a363936e1b91bbb9f7d1ea3f765a3c66a51fc5278f224",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260711180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:52:00.011363Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "526f8098d6bd3884f82c3feaf8c125ed82e6af3519418ce98b55429163c7bb7f",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260712180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:52:01.067490Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "790dc66c329c617bf2a43710575acaa8766307134f8e3db3ca545b8174f7a49b",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260713180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:52:02.151957Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "ce73ee0c3c6e0b3f20e1953ff18343d70d7c512a95e1c64e5563aac5d3af7ad0",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260714180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:52:03.644457Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "17f12043da2cdb1f90f6ed4723fd6867265f9123a5f112e6feb216fa9d4aebee",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260715180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:52:04.904447Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "ad349cde3412a95e0ceb63898f2aa73744d04e1dfe0432b2d4a2555b6ff641b7",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260716180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:52:06.013502Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "ce5cd041632df4f576498ad96bd5950952110e16fee39467531a6386e933af8a",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260717180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:52:07.137210Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "a0277b32d868fe11a9279498e6834b75384b3a636d490de6cef5c5b616eff1e1",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260718180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:52:08.214438Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "2d2d66112a80b01484c27b55dda02eec06a4f745b0d84a92dc29c33475b8e602",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260719180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:53:17.438296Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "da46a63e9bb2e1ee832c598a2abc918ba8aa584af21505267fa51785d4357236",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260720180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:53:18.593304Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "3e826f7da57c6c7ccebdd1f5764c26cadf5280b62367d6d35f89f16e867c7a16",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260721180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:53:19.766302Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "2d9af4059e78f58bdce7eb8cb697b3ba4f16e3f98a4f91e1e498af33aa211532",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260722180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:53:21.060249Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "b22cc0f4d7ea4d9b770b53afbd1aa338ddfcd5a7e6813b95c49d39e42c2b9c10",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260723180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:53:22.280728Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "1cf6894c895de4162ea878004cc18829b4ab7a47010a40cc8d63c9e0f6d72684",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260724180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:53:23.510743Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "71b8f0651878089079b2ae7b01a57748084d9dd10395fbefbbd8a8cc5ff48593",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260725180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:53:24.565413Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "e34484ed5ea70aabda0e7948a81719c85928e2555a2c6b01f191b464fa833381",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260726180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:53:25.665536Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "c80d792c3cc282fa743653dd84280bc8685b79d1884ec6e495e55198a668f09d",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260727180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:53:26.692163Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "22b4ee7559de901e52615edb902903467f9c975af76b1424d0e3582c7884f405",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260728180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:53:27.813521Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "3e3625d0343c2baa6b2180ec62fe4d42d40140382bbba48a474539ab12fbd383",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260729180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:53:28.975791Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "bdfba3796a2becb048ee52d454c19e3dfb5a1bc79fede726054b13287fbc2bcd",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260730180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:53:30.170033Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "f84de2fb8d2947d91f9a4c4d83f0eaaabdd761b97eca1efa59653925a60620b5",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260731180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:53:31.290673Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "39bf0f3bef6e52b915d49f78390dd0ae607af1ce70ddfe4d82e6ec01325f8cad",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260801180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:53:32.433399Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "83fb881bce1188f4ce1670e24add7da6fd9affd1639a10b54dc8ee3e4dac1016",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260802180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:53:33.495477Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "7c9d3beea698b606faf1257d9f5d0dbbf8c45d877cea1bad38cf5a060791f565",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260803180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:53:46.582279Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "037bc6eeab4584dea3113109b54faa658d08655bf29660124a4931fdc3353f39",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260804180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:53:47.782893Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "f3f45b44b7963540eb60130212065e7efa145d293259650e30395685a3b699fe",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260805180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:53:48.916154Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "bf1a16038d04ddb3fefff19f52c420902c9114f9cf1a4b5a726faa220184bb2d",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260806180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:53:50.060579Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "440ee0b2a15955067808ae5c6a4cd1679279d7612a5eac539d4c221c38d4e4ee",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260807180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:53:51.251450Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "42957c24dbbb5c3bf459c6eee176fb5c621e8818eb7cf6a9c73e04a2ac16d71e",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260808180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:53:52.326178Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "259f1236df88d23bd831e32a501b64910ecd6fa9ba08b54a0b0d5b1becce163e",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260809180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:55:16.259548Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "a06807a94f648f87c6833b27e810e30b09ee13d0cfc874dd7b699d61ab566a91",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260810180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:55:17.409366Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "b610ac3318edfbbf1e74256357685ebc409c46452209f2600a0204bce2a55803",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260811180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:55:18.661254Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "f0d2a2aeb3998afa74db73aa646ceb985924aeb3aa7ab322a285e390f348cf68",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260812180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:55:19.755810Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "da4dfc7703336e711b62d2fb5df864e1e4b97e9d6dcde0fe5a5396c496d935fc",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260813180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:55:21.010920Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "562fe814a5e678803d2af5fa714304fba2af7a30adc55a9ee9dfd07d28a89724",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260814180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:55:22.197306Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "f6ed84858ba4b548283e67bc4ea6cb1bc454bbf0b4054d50cafb1a5526c0e937",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260815180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:55:23.159644Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "ea6c1a4a4d6906dd427ea0bbb65496a5a0ccc314bec390d811a42e31f8b7bdcd",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260816180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:55:24.094538Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "fbddd6c821b37e2a186ac8df9aa2b4097208711bf9628c8ee80ab4612ac59fed",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260817180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:55:44.015660Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "40905ecd72028de310e824786fa1b5c1f567ab35a0832c857e6f3568c8332b06",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260818180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:55:45.135920Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "b36dbfa8f9b3e8938abef4acb7e8980a0fbd39f57f4d8f6699b1419ba7899b98",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260819180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:56:16.103292Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "04cafe67a565b22e1d5ba04d812e264ed319055d599123e997605887125d9e11",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260820180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:56:17.201752Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "c0c3f713d84baeae51b5088dc7d82d0ae29ed358bc02bbc076733fad70d4ea28",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260821180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:56:18.310507Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "6ebc9989937a5840721c3963e8b7752967a50101abc60804d209999927fb1b38",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260822180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:56:19.502615Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "c4073f9a714d27fa55c53f319448738fb53d93c873b1f1533efb2bcea4428fb7",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260823180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:56:20.509280Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "e91eedc03630a2a886970864992aaa5f665a06c300b7b820de75499d7104579d",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260824180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:56:21.563532Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "b48aca4fcccd68cc54d40a5e7bed469e3dcc839c1a315f24b4011de6fd98724b",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260825180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:56:22.692769Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "7b40a497b0b115b399e0d5beb9da66a47bc62ced08b1e2a9a6ff034f8ffcb339",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260826180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:56:23.931443Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "f62703aeac684d233e4a5e665136f52a0fdda72133ee24d86104c0f70e696b74",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260827180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:56:25.072826Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "e4dbfb9bbb2961330cf500a9474ee0312809270f949f6123c1854fbd5a9f2a26",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260828180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:56:26.319579Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "b66c90723be79cd6e39e5e29435cf657d5e1da4d7956d11d61bdc5e055645cd6",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260829180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:56:27.324162Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "c900ef0e22a899b2091f2a9c02faba70af9995011b284d899f9277a20649f156",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260830180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:56:28.271072Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "e2f87b68c8795187c8e0e5469633f3a72bee983f7f89d71ec6949c8c0eedf82e",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260831180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:56:29.271989Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "53abf1bebfb2e0901fba924ad4258baed79577932741f1d44ac7d27b7600704a",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260901180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:49:56.212517Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "867cb2af9bb57fa221caa9969802009da06331c82eed588624c9c98688cb1edd",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260902180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:49:57.366817Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "e1ae7f693ca25300bfdee1c0a6228bdaed89d65a8bf43eb80cbf5232bc2e414b",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260903180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:49:58.447025Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "0f3f40b2a381dc1b1588a150d189da8e6e1ae7c2db9cb8b9fc8f9ae12283d7dd",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260904180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:49:59.613146Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "3a6dc1320fc447148a1647df1e9be69bf69ebc98feba11682cfcdeff25b179ba",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260905180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:50:00.700726Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "ded5f876cab41c4636a8b5efa22c45117f73a1f97a5b4588eb1f5f547e681dc4",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260906180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:50:01.712579Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "2685b6cd582e2eacba662f6ef2960316aa48f5059429e3109ad145dfd799c43d",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260907180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:50:02.834969Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "ca1d5af319ef9b520eb4c649909161010db0ecdf9239beb4788658d57f201e0f",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260908180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:50:04.053917Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "1948aeee7c98d4acb6130675364f33d31fa36ff282b45798ea3e5f948eebc00c",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260909180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:50:05.216074Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "02f319ea5b177919e493211a5c39016fad6fdc075b79b1127ca6e3dbe78ebe37",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260910180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:50:06.421244Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "311315d105910eee4f98c82f64f9de70747f2ede6763a890b6c96cd48968bb4a",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260911180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:50:07.542551Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "eaf518ca104bd41f39cd737c9952d4b7ac01067e729fe72bba05b76584e57786",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260912180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:50:08.778662Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "d4bee186c6d656f19b82eae63d75e97adc55ccd5b6391c74c6261d0ea9df0f30",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260913180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:50:09.733404Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "670c88483a880f9b2494e9cea4b8aee0ebbfb097d70c7b6403af2ae0a91e7166",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260914180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:50:10.760047Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "af19843bbc4e061783f76788bef480d04d7c0e0aea5cce92d150bce39c588e35",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260915180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:50:12.006476Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "495d13c815435ec2b86f61d84fe4bf3cf604a497c25ceb3dcb75d8861c43c4b6",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260916180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:50:47.285220Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "00dd81d8d174f6c82a000a001d36748a8457d53807fd070b43e13392b8b6632e",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260917180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:50:48.513413Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "1c62b751646af0321a8460e8b8bcba230f2e96f12675c835771fc0eff568a621",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260918180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:50:49.685095Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "f540cf791a164635c0515407b3107fefd8849c486e76a198ae2a55948fa0c795",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260919180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:50:50.741673Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "16b8201eecbcdc999b8e083242ed38cbc04b85e23dd05f75d4d1a8d6cafcdbac",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260920180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:50:51.664811Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "6cb5d6f45c7ea1e6f079ee615f98a5aa1603c4422b00b7b0137a2902f8d09cea",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260921180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:50:52.805140Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "a6433f409185f24b351cd0ab9135c069c99ce0b4558e2221b89476d1c67b2a23",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260922180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:50:53.932782Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "50809b42890594ebafa7e239dfa220d6905515c72a4f9e1e432e8d8c18d2afee",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260923180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:50:55.103744Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "7cc98cd618bdd0e85d7ad0b79aa49e0508eb02d938fcf6b77c950b18e43b579b",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260924180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:50:56.303826Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "d578060adedc966a820e3554d21c420e2a146996a6a6b68ba30f7fef8ba0352d",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260925180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:50:57.523055Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "609b06411806b8f6d8fa5b39faaa6c704fa3c589fcc286bde6cc44aef3c7518c",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260926180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:50:58.550001Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "28883d412983556e59b865308eb8662a0c4c0004c4a681ebaa9130fef280bb3c",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260927180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:50:59.451743Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "2507a3b201834cc2cdbd9c2c66fb099285aa7cd3d34428f9eb2ad95ac243026b",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260928180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:51:00.554275Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "47cde2f75caf53d92c35c485f95067c59b2c22759f6d7f5bc408b5a2cf7d9e25",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260929180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:51:01.626696Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "f387e3b256e7a27adbbe46ddb4a809a4e78b0c2152aaa0def1defeefe4205a5b",
+      "previous_failures": []
+    },
+    {
+      "url": "https://data.gdeltproject.org/gdeltv2/20260930180000.translation.gkg.csv.zip",
+      "fecha_extraccion": "2026-10-07T02:51:02.810207Z",
+      "status": 200,
+      "content_type": "application/zip",
+      "sha256": "fa68eecef156adabd2bfb8507e3ba0bc0e325ca813e586c655dbbb4c317d276a",
+      "previous_failures": []
+    },
+    {
+      "url": "https://www.tvn-2.com/rss/",
+      "fecha_extraccion": "2026-10-06T21:21:58.100143Z",
+      "status": 200,
+      "content_type": "text/xml; charset=UTF-8",
+      "sha256": "dd00d2248880108847e27471cc95b53658b5d5ede0f8c76504a53f0e92527855"
+    },
+    {
+      "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2024-01-01T00%3A00%3A00&endtime=2025-01-01T00%3A00%3A00&minlatitude=5&maxlatitude=12&minlongitude=-86&maxlongitude=-76&minmagnitude=3&orderby=time-asc&limit=20000&offset=1",
+      "fecha_extraccion": "2026-10-06T21:19:27.277126Z",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "147863f91d3b040943b76eec8120439c722a8f11e71b423f7eb5e68dd061b9b9"
+    },
+    {
+      "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2025-10-02T00%3A00%3A00%2B00%3A00&endtime=2026-10-01T00%3A00%3A00%2B00%3A00&minlatitude=5&maxlatitude=12&minlongitude=-86&maxlongitude=-76&minmagnitude=3&orderby=time-asc&limit=20000&offset=1",
+      "fecha_extraccion": "2026-10-07T02:47:29.647440Z",
+      "status": 200,
+      "content_type": "application/json; charset=utf-8",
+      "sha256": "58ab900c1d380dc784702ee9d95a8393c1a69577e7199f3c8ab642c0cab7a573",
+      "previous_failures": []
+    },
+    {
+      "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/FP.CPI.TOTL.ZG?format=json&date=2010%3A2024&per_page=1000&page=1&source=2",
+      "fecha_extraccion": "2026-10-06T21:19:26.031223Z",
+      "status": 200,
+      "content_type": "application/json;charset=utf-8",
+      "sha256": "05c1ad3e128b655a3540eabbded275d336f4b11a4aa826dbd4f0e1a5b24e077c"
+    },
+    {
+      "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/IT.NET.USER.ZS?format=json&date=2010%3A2024&per_page=1000&page=1&source=2",
+      "fecha_extraccion": "2026-10-06T21:19:32.078596Z",
+      "status": 200,
+      "content_type": "application/json;charset=utf-8",
+      "sha256": "e0d043c22432a247b3ac3046b7de6c20310be79952ac4e2b9ae395f56943dcf6"
+    },
+    {
+      "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NE.EXP.GNFS.ZS?format=json&date=2010%3A2024&per_page=1000&page=1&source=2",
+      "fecha_extraccion": "2026-10-06T21:21:22.468695Z",
+      "status": 200,
+      "content_type": "application/json;charset=utf-8",
+      "sha256": "e76574bb0b65dbdd4ac248aaaeb968ac910878afc16f2fdf74516ff22259b428"
+    },
+    {
+      "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NY.GDP.MKTP.KD.ZG?format=json&date=2010%3A2024&per_page=1000&page=1&source=2",
+      "fecha_extraccion": "2026-10-06T21:19:24.551363Z",
+      "status": 200,
+      "content_type": "application/json;charset=utf-8",
+      "sha256": "c86460294554efe74cbfa8904d3cb3ea3e8ad7227f692ba8673d29a1c7802efb"
+    },
+    {
+      "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/SL.UEM.TOTL.ZS?format=json&date=2010%3A2024&per_page=1000&page=1&source=2",
+      "fecha_extraccion": "2026-10-06T21:19:27.557320Z",
+      "status": 200,
+      "content_type": "application/json;charset=utf-8",
+      "sha256": "1181f8e669628663be0601eef7910fcada5188aac722284c463c1a28ac2dc1fd"
+    },
+    {
+      "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/SP.POP.TOTL?format=json&date=2010%3A2024&per_page=1000&page=1&source=2",
+      "fecha_extraccion": "2026-10-06T21:19:29.420060Z",
+      "status": 200,
+      "content_type": "application/json;charset=utf-8",
+      "sha256": "e06e40801774c234af8de85ee9f42b0c25c547a8e2d5f454751ba60753939c0f"
+    }
+  ],
+  "fuentes": [
+    {
+      "origen": "gdelt",
+      "url": "https://api.gdeltproject.org/api/v2/doc/doc",
+      "licencia": "Metadatos; derechos de titulares de cada medio",
+      "alcance": "titular_metadatos",
+      "limitaciones": "Muestreo DOC/GKG no exhaustivo; publicación desconocida, detección no es publicación.",
+      "cobertura": [
+        "2025-10-02T00:00:00+00:00",
+        "2026-10-01T00:00:00+00:00"
+      ]
+    },
+    {
+      "origen": "tvn_rss",
+      "url": "https://www.tvn-2.com/rss/",
+      "licencia": "Sin licencia abierta de artículos; solo titulares y enlaces",
+      "limitaciones": "Publicación declarada por pubDate; detección nula; feed parcial, cobertura C-01 completa admitida por DL-017."
+    },
+    {
+      "origen": "wb",
+      "url": "https://api.worldbank.org/v2",
+      "licencia": "CC BY 4.0 salvo excepciones por indicador",
+      "cobertura": "2010-2024, seis países, seis indicadores, 540 filas",
+      "limitaciones": "Contexto histórico, no condiciones actuales."
+    },
+    {
+      "origen": "usgs",
+      "url": "https://earthquake.usgs.gov/fdsnws/event/1/query",
+      "licencia": "Dominio público USGS, salvo contenido de terceros",
+      "cobertura": "2024 oficial + extensión ventana C-01 (AP-004)",
+      "limitaciones": "Caja lat 5..12, lon -86..-76; M>=3; la caja no equivale al territorio de Panamá."
+    }
+  ],
+  "archivos": {
+    "acquisition-20261006T2136.json": {
+      "sha256": "99bc6d88eeb791c8265694da19da3741d84c18997300b6dce59ad79ac4d7a9bb",
+      "bytes": 28924,
+      "cantidad": null
+    },
+    "acquisition-20261006T2140.json": {
+      "sha256": "ecd8f378a2288269924ecb9211b5d08c5ac8ae2d34dd8cccc94abcf9b77a60f1",
+      "bytes": 29023,
+      "cantidad": null
+    },
+    "acquisition_inventory.c01-20261007T025103.082535Z.json": {
+      "sha256": "0ab8eadde6b765d4082d708dbb40be4863d6193ae17ed04bf8ed4cd0eec0a6dc",
+      "bytes": 6542,
+      "cantidad": null
+    },
+    "acquisition_inventory.c01-20261007T025635.922837Z.json": {
+      "sha256": "cee301f21b89dee2416616681fd42dc12eab8189de5babd6d064df5d2eaa0157",
+      "bytes": 19388,
+      "cantidad": null
+    },
+    "acquisition_inventory.json": {
+      "sha256": "d7d5c4a9e9c1b6c8b1f8594869168db2a47337c2f2710177a6146d6f9ad93040",
+      "bytes": 54050,
+      "cantidad": null
+    },
+    "assembly-c01.json": {
+      "sha256": "ceab836e53f5f552dab4776375511822b7f41a163e9793ae7fe5a1cbcda6a182",
+      "bytes": 185134,
+      "cantidad": null
+    },
+    "doc-c01-partial.json": {
+      "sha256": "1b6c5cdd57d1559685aeae3f312ea92f74e4b85cfb24e8e9365d137839dd9189",
+      "bytes": 1704,
+      "cantidad": null
+    },
+    "eventos.geojson": {
+      "sha256": "8cef9ddb521a01e50e08ac8b85dfe400c52a267d3abbdee31d99cfb9be5b6d52",
+      "bytes": 89615,
+      "cantidad": 82
+    },
+    "eventos_ext.geojson": {
+      "sha256": "ea395e939f0e0917dfc143e0467a20b222579dca3633f0573b4a08c1271c3039",
+      "bytes": 94751,
+      "cantidad": 87
+    },
+    "fuentes.json": {
+      "sha256": "84736d66043b7c45027352527bcec881f55807982d9b40f7d7ad52b76c0bb591",
+      "bytes": 1300,
+      "cantidad": 4
+    },
+    "gkg-c01-20261007T025103.082535Z.json": {
+      "sha256": "e823377d1d81878a1177ac00137dd8031fdd5662ccffd3308ad1e2c4353829bd",
+      "bytes": 30289,
+      "cantidad": null
+    },
+    "gkg-c01-20261007T025635.922837Z.json": {
+      "sha256": "c3eef812997825a5b911455ed0dbe12a3a1fae29329fbf392610b9d1b3d1a588",
+      "bytes": 87528,
+      "cantidad": null
+    },
+    "indicadores.csv": {
+      "sha256": "ddf9c81e78e46828697442193cfc75947f5d8f371e44402f04d18e3b80aa1e8a",
+      "bytes": 148683,
+      "cantidad": 540
+    },
+    "noticias.csv": {
+      "sha256": "cd2d4bb9910aaa89e7b353e04416cc280d9e17385782d928809c2c1e7189ce73",
+      "bytes": 75279,
+      "cantidad": 187
+    },
+    "responses/gdelt/2025-09-02.economia.json": {
+      "sha256": "0332a6d3803495c6657997cc6433e8cfa39dac159f04817a9ed8417bcb2e7d01",
+      "bytes": 22722,
+      "cantidad": 44
+    },
+    "responses/gdelt/2025-09-02.economia.json.request.json": {
+      "sha256": "4457f179c5becc1c989474c97cce68243fad3380944d08cfadf743043ee2ef97",
+      "bytes": 423,
+      "cantidad": null
+    },
+    "responses/gdelt/2025-09-02.naturales.json": {
+      "sha256": "8ac01c53989703748ba302ff36cd8f1ac66b2e5795e2a7cd8be5999aabf52df4",
+      "bytes": 2461,
+      "cantidad": 5
+    },
+    "responses/gdelt/2025-09-02.naturales.json.request.json": {
+      "sha256": "d6c893f7e3d5e252d3e00cdfce9b5b031145290b1ce0a08be4ff72568fb6547a",
+      "bytes": 443,
+      "cantidad": null
+    },
+    "responses/gdelt/2025-09-02.tvn.json": {
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "bytes": 2,
+      "cantidad": null
+    },
+    "responses/gdelt/2025-09-02.tvn.json.request.json": {
+      "sha256": "beebfbe94f66362a6b0dfc43e95f4d56d58e26104f9cb65140e4352437809f29",
+      "bytes": 383,
+      "cantidad": null
+    },
+    "responses/gdelt/2025-09-03.canal.json": {
+      "sha256": "ff8c4d5c12082d125e17dd21ef906af5d3bac7a5d2ebc74624f0126708e0f833",
+      "bytes": 23170,
+      "cantidad": 43
+    },
+    "responses/gdelt/2025-09-03.canal.json.request.json": {
+      "sha256": "c9ed9b9c7a2a0f8ccab81b7d5a2b373602d7140976ca6805c46e9b43c240987e",
+      "bytes": 435,
+      "cantidad": null
+    },
+    "responses/gdelt/2025-09-03.turismo.json": {
+      "sha256": "5d3467bb8bc24a82a60e2ab1c3f2e61033c45f74573ab5541d1e3d59dacac53e",
+      "bytes": 3258,
+      "cantidad": 5
+    },
+    "responses/gdelt/2025-09-03.turismo.json.request.json": {
+      "sha256": "6431d6846da2fc5cd5ace70c9a576a38c64788522a29a111181d1859198dd07f",
+      "bytes": 417,
+      "cantidad": null
+    },
+    "responses/gdelt/2025-09-05.tvn.json": {
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "bytes": 2,
+      "cantidad": null
+    },
+    "responses/gdelt/2025-09-05.tvn.json.request.json": {
+      "sha256": "4c5ec274e9a9c45fa90308c108c011fd02b66396b5c6240b40c750c0f9c7d3ec",
+      "bytes": 383,
+      "cantidad": null
+    },
+    "responses/gdelt/2025-09-07.naturales.json": {
+      "sha256": "d6fca9d465b1beae3015fbc1af971e2e25c2df7ef73c8532e283deb8a156124e",
+      "bytes": 900,
+      "cantidad": 2
+    },
+    "responses/gdelt/2025-09-07.naturales.json.request.json": {
+      "sha256": "65cb0fc023059657b074d1db3c820e0636435184b3d1e0cc73f78cdf3f0bc99c",
+      "bytes": 443,
+      "cantidad": null
+    },
+    "responses/gdelt/2025-09-08.tvn.json": {
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "bytes": 2,
+      "cantidad": null
+    },
+    "responses/gdelt/2025-09-08.tvn.json.request.json": {
+      "sha256": "acb7be53651e04c06e68a7419a4f2a31c575af3d2409d1e0a6b34611b0f9cddc",
+      "bytes": 383,
+      "cantidad": null
+    },
+    "responses/gdelt/2025-09-09.canal.json": {
+      "sha256": "a89b3b4d75b19e28136ab86a8ddb2aed235235b3257bc96cb7aca52575b4ed29",
+      "bytes": 21159,
+      "cantidad": 44
+    },
+    "responses/gdelt/2025-09-09.canal.json.request.json": {
+      "sha256": "bd8e079df8953dde9651aff8ef656a6481b9e69cc07140126fc4d2ba34e580d0",
+      "bytes": 435,
+      "cantidad": null
+    },
+    "responses/gdelt/2025-09-09.tvn.json": {
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "bytes": 2,
+      "cantidad": null
+    },
+    "responses/gdelt/2025-09-09.tvn.json.request.json": {
+      "sha256": "24253bfa55475f5eae959104c8939ff2e903d274550c2ffeff87e0c270ecff76",
+      "bytes": 383,
+      "cantidad": null
+    },
+    "responses/gdelt/2025-09-10.economia.json": {
+      "sha256": "3a234d5ce93998ed4cbc708625e57a7ed96cb32d44f2209e21bc0b5af269b166",
+      "bytes": 16978,
+      "cantidad": 35
+    },
+    "responses/gdelt/2025-09-10.economia.json.request.json": {
+      "sha256": "bd4a99f854c94623421708c213b8d8a43d1a0196906fbe6bfa1c08cb5a55ca37",
+      "bytes": 423,
+      "cantidad": null
+    },
+    "responses/gdelt/2025-09-10.turismo.json": {
+      "sha256": "3a511c76899b85e45770d8bbdbf61d0701591fc58a6ed315356f228e8e4cdf8d",
+      "bytes": 4609,
+      "cantidad": 12
+    },
+    "responses/gdelt/2025-09-10.turismo.json.request.json": {
+      "sha256": "07b5d470cde3e7e3229c870bf570929709359a8989f8f2af3d70862cc8a1e462",
+      "bytes": 417,
+      "cantidad": null
+    },
+    "responses/gdelt/2026-09-01.canal.json": {
+      "sha256": "38f4a7e141675afabe6b38c7c48cb3b58a30a2ec098f76816bdaf602f6636a66",
+      "bytes": 14610,
+      "cantidad": 28
+    },
+    "responses/gdelt/2026-09-01.canal.json.request.json": {
+      "sha256": "60e5528c8e16c170a4b32c59626d720c86451c9a99a1026b709f5f16d9ad7f41",
+      "bytes": 462,
+      "cantidad": null
+    },
+    "responses/gdelt/2026-09-01.tvn.json": {
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "bytes": 2,
+      "cantidad": null
+    },
+    "responses/gdelt/2026-09-01.tvn.json.request.json": {
+      "sha256": "6701c028b4ecd0e5e95c0fc673b1c270ed230a9a966ec19fc267734274c80053",
+      "bytes": 626,
+      "cantidad": null
+    },
+    "responses/gdelt/failures/2026-09-01.turismo.json.20261007T025045127947Z.json": {
+      "sha256": "249fc5b106d094d23ee1c1cf4fa3c7bfaeac208193e14c11889b135815f78835",
+      "bytes": 575,
+      "cantidad": null
+    },
+    "responses/gdelt/failures/2026-09-01.tvn.json.20261007T024707051518Z.json": {
+      "sha256": "73e9203e7c63010093736ed64b41742819d1219ba6830c375e461a68c996747e",
+      "bytes": 748,
+      "cantidad": null
+    },
+    "responses/gkg/20250901000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "76945ddf378e1bb1118bcd329b626e514bd04e768fff07e2ee4196376b9fb3f9",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250901120000.gkg.csv.zip.request.json": {
+      "sha256": "07a03b35ac0d3298c09102c62886415d3187ce518f2226b71e9932773e255473",
+      "bytes": 267,
+      "cantidad": null
+    },
+    "responses/gkg/20250901150000.translation.gkg.csv.zip.request.json": {
+      "sha256": "6425bdbf2b2282a30ef87df12d05ff2267af4d1bd2fb4789c926f41473094f74",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250901180000.gkg.csv.zip.request.json": {
+      "sha256": "13bcebedaf2f5493f40323c74baecf4a8499f822b139d389e83f60b973dd98c2",
+      "bytes": 267,
+      "cantidad": null
+    },
+    "responses/gkg/20250901180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "0548743171520bdf5649b0fb7c4d4c375a2d4d45afb77754c4ed963bac307a46",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250901210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "485cdb84a34404cbdd03e85fc24a5e789b02e69981a766668a3a1a1ed36e3735",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250902000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "629ef2b130b9c3d421643ef6a7860e8c7dabb8e5acdef8b4154a0af25f8a3658",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250902150000.translation.gkg.csv.zip.request.json": {
+      "sha256": "af2c4e33de2883a415011cd99020c8a93740bad26bac6818a8ee920a6a695599",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250902180000.gkg.csv.zip.request.json": {
+      "sha256": "70c0e1da95729063bb1efba05ab610396d4e3c733fbe530c636bd23d09c87736",
+      "bytes": 267,
+      "cantidad": null
+    },
+    "responses/gkg/20250902180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "94cafcf964b4809f297506b8f620bdaa149b4ac583cc4a95b858dfec1258959a",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250902210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "ec94e11654c6f140407e17081dd877e914da8257ae434c3a917934c5f069b219",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250903000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "052293d27b346f50dbae218b22a663d60405f06a912b1374ed66b1ca9c5a5b20",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250903150000.translation.gkg.csv.zip.request.json": {
+      "sha256": "fa96809227e38dca2ebc9fdae793b38a9ec3cb7dc06401da3d8b703afe9f8f65",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250903180000.gkg.csv.zip.request.json": {
+      "sha256": "cd9fc25f2087f3087e3ea16eb001f063001ee92c01664cf93740b071f3250ad0",
+      "bytes": 267,
+      "cantidad": null
+    },
+    "responses/gkg/20250903180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "ab5e4195a1e1ed069a396638a164e8569cfa13e406026d7a1d8b1f0110f67ade",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250903210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "7457392873c54dd9834c51ee18712927d495b75de0b9ff748528a8776d17b4c3",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250904000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "c73fcd7e40b55d9d92c740fa5f9524d0fa9ed995988c18ae4523c4a855f0bf4d",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250904150000.translation.gkg.csv.zip.request.json": {
+      "sha256": "bd79f03709a32ddda3070945a4904dac62f7107da0a019b325d922a46109ab00",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250904180000.gkg.csv.zip.request.json": {
+      "sha256": "dc3222e588c44662cb231148108846e9760e339f92829b6f95a79c82d8aef61c",
+      "bytes": 267,
+      "cantidad": null
+    },
+    "responses/gkg/20250904180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "cca29d20d0b1f9a476345a99aad7050461eb0d1f9f576c8db78d709f908829b9",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250904210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "b29a4828e419c546440d2209847529b20662b17a1202717befc4022d57eddd43",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250905000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "616e5c18cd993581fa8ba40b82adb913aa34cd5e4a76c95cd1767551f2b45c9b",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250905150000.translation.gkg.csv.zip.request.json": {
+      "sha256": "3d20464aeb41fb68b9b6e37f8ddbdf27449b1314748f50e79c232d62b8094ca3",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250905180000.gkg.csv.zip.request.json": {
+      "sha256": "d953b3c0f0833864f99814662945a6e10fa289c21799f53b64f61a20e67ae6ed",
+      "bytes": 267,
+      "cantidad": null
+    },
+    "responses/gkg/20250905180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "1527d0acd8abce7ce6d4ff847ba74c41dd3925db356dfe09124ce811550d4211",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250905210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "bae53e063144e9e5fe151d050e919f086fabb478bc59194b55ba7c832af066d5",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250906000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "0ff2bf29f4f873cb4a3ec6f6316e8a004c9b288e98c4d8dfe19ec4655bd7c640",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250906150000.translation.gkg.csv.zip.request.json": {
+      "sha256": "5bce693a54ed40b44963f6e7f8ca94cdf9a3bea1df342b0a112073f3c8663730",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250906180000.gkg.csv.zip.request.json": {
+      "sha256": "c2f3dab74b021c3c7152d698704f1520610f27e22d056f496069fcc79bbf357e",
+      "bytes": 267,
+      "cantidad": null
+    },
+    "responses/gkg/20250906180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "ddd28959ed7cae89d0d59be077ebf13a6df3b8f72f81bb9a763bb19c15b7cf7f",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250906210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "86c8edf6581d6641f75817bbc26bed91f9cea51e02adcae4225a238c5aaf0c79",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250907000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "a263b3d6cca6df0b74651901e5656faff21ceb7da990c2d565cd15758acf1c2b",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250907150000.translation.gkg.csv.zip.request.json": {
+      "sha256": "d24dbc9738827433e0f433f4bd1beed13670e53d4ed1f30f6e29a43d6ea9f8d1",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250907180000.gkg.csv.zip.request.json": {
+      "sha256": "66a10806e1f9e3440ebf34bb1819e8ab9bf2ec6cac983e32dabf9ae4fced2e2c",
+      "bytes": 267,
+      "cantidad": null
+    },
+    "responses/gkg/20250907180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "a4bfb73e72cc655842b8f65fe307e71f73ecde2bdaf6e82027808e5c3831ec6a",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250907210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "dea3eeb989a401ebd196a5f5473d0e4357eb66644667b6b8e800f1aebea180c8",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250908000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "f2cca2c7b999e118d9cba9faf7cadf649075cbb08b884f51508791ffadfbe2f2",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250908150000.translation.gkg.csv.zip.request.json": {
+      "sha256": "0f731704928707d4681d5a79278d1031c5f8d426ffd9e102038b8b009cd94ae4",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250908180000.gkg.csv.zip.request.json": {
+      "sha256": "932b99d7cb8c576c1a793441a14791a3692a7afe81567ff36b4eb53b38940663",
+      "bytes": 267,
+      "cantidad": null
+    },
+    "responses/gkg/20250908180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "2622b9ff73b811b9b74da7c07728192c9cdad52d6c785359d89ba28d11b128df",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250908210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "beaf81c705a3f1d660982b393a6e1d85cef5dac00bbbfaa43943bdd73dae5e23",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250909000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "1a7111eee794218d56baa21daf97697cc9e0f3ae91e27c1c02c5d48598180291",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250909150000.translation.gkg.csv.zip.request.json": {
+      "sha256": "ee22c9c1e09d6a84aa5f917b18f3ac1c25103b91285a70ce4a658cebeb8c9dc8",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250909180000.gkg.csv.zip.request.json": {
+      "sha256": "f7af45741c91cf29f063630c8e25a08435dfeb8317f6f4febfaca538ab129927",
+      "bytes": 267,
+      "cantidad": null
+    },
+    "responses/gkg/20250909180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "8cdac1dc39ff990a092105c54667df3df60736ae4b10b68845ea03e740de68a7",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250909210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "8c7d5e74da854a3ebf11b7734e1f85abd33a1f466d5a6fd1debd97aa7a9672fd",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250910000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "3060402987d88cc060a1d30e64a9555b44bedf7676a1d6383ba81f4a2ccb66c5",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250910150000.translation.gkg.csv.zip.request.json": {
+      "sha256": "678461eeb228cc001ad7bf225cea8fc5789c88945583af32e5af12c267b3c38e",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250910180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "f93224c53be4af7be688b9cb8d5a0d25e795d63682ab2451ffec8bbe4b8b7843",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250910210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "9182a919571472697afbe60f91441c949dc30a0f363e24b4d13464bffd2fd55d",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250911000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "e1a07196aac3fff39fa575ddc14e4695398e4e3ae54f9568fe32dda99fb20aff",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250911150000.translation.gkg.csv.zip.request.json": {
+      "sha256": "5d7c623c000997743219ff963e0ea0d0d41678fcf19ac3378ccaaced326e0e60",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250911180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "87164e0342097aec06f297fd4ec9fe3b9f80b34175ec7ae016e486b7e0553de3",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250911210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "dc064ba66723a6ff5cecae34f3a2ac0dd41e0ebedbbe692187754494c7ffdede",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250912000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "53911208da2c774a6718965dd1ea99c7bde8b49937ef36607d580a8c2e92be69",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250912150000.translation.gkg.csv.zip.request.json": {
+      "sha256": "7377641241f91d0be6de0d724ffee1c6fc79ab2fe729fd28db2801e3d14d7902",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250912180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "97564f52eb451cc827598fd6f8bb3aee58db5ae4a26283ae9665b19b97678e19",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250912210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "c9484dffb7b43f61f947548f354f92df1ce184529cbc7b2f11082902b1d4309a",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250913000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "40f46cb07223005190d9d88aa733cb61b3b3fed81809f037644889869d1acb08",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250913150000.translation.gkg.csv.zip.request.json": {
+      "sha256": "ae2de306edeaf7a2884a7b19a79ec0eb9f402406f8342c9591d600baa1ddfe0e",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250913180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "a08ba8ebbe6bd3b96d3fc5b3b378a98ff0b4dc0deaeff2f76382bec1cd63f3e4",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250913210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "20aca6a713354734955d2b742b38c2b38a1cce58c525700d38cddd18d53c122d",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250914000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "6904ac78775185f05ec365c03b17edb0fddacc54d01a51e232fe580ebe4d715e",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250914150000.translation.gkg.csv.zip.request.json": {
+      "sha256": "76eed754024b320e437a74b1688ed805dc93f69480ee9eefa38b09407faf3ab1",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250914180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "28a908ecf48cb1062904143bf0f659541473aa7be0390d01a401e25f3a4b26ab",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250914210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "93cbae0df1783288dc5669fe0ad7a6dcc904c5aa7c512191b7ffdb40c09368a0",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250915000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "a1e68a58195e60bbaf434193b3e98c21e00cf60ef28cadc32e42ad2f569b884b",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250915150000.translation.gkg.csv.zip.request.json": {
+      "sha256": "acd779ba969c20348fe9e689cac539e95504c25adf496f591d8a95f7b76e87cc",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250915180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "d3f889b207bf13db2c4b3460329509da8d75d4df644dd4cc89af532df2d167dd",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250915210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "3f8348374c4b6c5a856f52b26235cd57e46d9e4c5c4881a5d6edc3417f79470b",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250916000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "c3c88810bc89c9b6705c5abe4911e12f55b8189fecbe992f71f626a55fb4b18c",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250916150000.translation.gkg.csv.zip.request.json": {
+      "sha256": "40680ac1989db550f748c7daa2d5e8e648b52cde2abe69de687b837ae27cbed8",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250916180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "631d94b3bcf31f5f09742986e70eb5d5789fddb31c302555f3e06774a66c4afc",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250916210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "f474c0118be9008f9323cf8a066e7dbffa90ed9f748f44921aa4c6cf035bbb1c",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250917000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "e4f785ed07535a4d0739d60adae02d62913135f30885d2682a23cac5028ec848",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250917150000.translation.gkg.csv.zip.request.json": {
+      "sha256": "60e20a480057aad0f057f52e834f1069b33b1435b50ac1837b2ab80fb79edce5",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250917180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "03b54dffee2ee3f150ece510b8f2f68f8f9a4f3e1e1946c5dfa9662567452302",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250917210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "5131d823807ae7ef3cb3dd24939b4c01b2b797f3e1fac641e7b3c353b81697e4",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250918000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "0a3e191356ca39c56061dee8191c7560ec171dc379e643cb01d09331a15d7ab7",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250918180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "5d7e3bb4a3fc44d748a1d9911c39251753bb829ea17ecef5ef6e5465f7e3c7c0",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250918210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "f4f15693f1966d25744d403161415b5497b0efa74a37ba32df376f39dfcb0ef2",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250919000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "619fd0ba05edac36f9c6e6f1ac255bc398d7a72129bf8a9f570c59ef505a6311",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250919180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "3653103bc0a880bb212a9976f50f839c91d1a7d2da231e510500139a6efe3dcc",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250919210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "e1fbf0781d91c3e6cb7c9f5e655253790f392e7de56a592086b024ff6b96aa16",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250920000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "2ffc4f324efb7d9842e7e66b2defb7ec607dd8546cb50ca3b03c63399737f91a",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250920180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "1cc51d80ede18a74a728b9f4b433690eaba1b1b3f34b630f596ac91b6b09c1c8",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250920210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "b76105f8fe31bd4212e6cd7198ee50e26f6a3805f954dda5bf98c185ad077eb2",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250921000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "3485a60dc7614b5920a6203f4cf948d33666cdfc28c399424d3e4a3875db7228",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250921180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "8b761904e95e271c3d1d2d49987dc1f2c32904c8f94e8e83458c5afe4b7f89a4",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250921210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "257d7b81394351767f5e65bd3843518b558291a40d8e20823e8bb0dda611a844",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250922000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "0806991b99b43016c4539ea30df87717584e412dab2d1fb9b5c2fb56aafe937f",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250922180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "521b5401a83d9a366c5274559f88d3f9e213371c9a7a1ec86b799d5190ae27ee",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250922210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "0ecc95cbf89393c2afecda5b9e3eeaf22155af5d153eb30f080766fe725533d0",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250923000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "e89e4fd4fa791f34dcb0d642fe0f79b2816518e190e67e483cbf642ff0824372",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250923180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "405410633e5c17f0850c756696f0e83c1ea41e037499607777803fda55f05143",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250923210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "187528fd6da67c2e473fccdaf0ac8e2db89473e2cb2bc81165550c77c22c3db6",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250924000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "2f55954830828008eb471985e04669e2dff78e79e9157488dc163225cf1baccb",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250924180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "ed8824206348635eed9d83d040e28f1d2038fa9040ec37473e68a0f6a8c143d9",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250924210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "8ad4d51f1e715f165ed33b122154e7bdfc0e95d87f515be08a939ed0977a9be3",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250925000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "32ce494031a5b968f99195cee5fedddbf5ade93edd1de51d4db90ea51dd8b4c9",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250925180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "2a60588acc9924b82a7f24d192795ca0047f47e606e77b1f1306418e5737478f",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250925210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "132898d203f1807073603139cac576bce0add5c4f156ce45d02acd4e40ebdaa8",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250926000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "a4d475e5176ad187e4979ab9442a2df5cf90e3f83d92c688ff594b7b796c990f",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250926180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "1dd69f4707968ff60f3b67ccc17812fb46534ec6497cf6a40866c5d60d9a23df",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250926210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "69d6291d11c4a5993b4a2261afe9f0673d86f424697ad7e8e029a571f8cc16e5",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250927000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "e5a144b29333c12f5e57687d4f3f1f59ea3830f7b45098fa85212cd59d45d368",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250927180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "6ce267c99b9eaa683c00cc168ca1bc5efbf8a14a377c98f64c0b0c2748bff9cf",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250927210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "b871ec6421fd1a36328aa88c191e965e9a66f5ad65ef6fe65af48d176f634cfe",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250928000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "6a620f1aa953254171a1ac268e399dfc9d51d3bb2a08dfedddd9e31d2d979afa",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250928180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "765b832d5c9997ca66afbc0061f97b5cf9b764c3c23158b6d9eb331bfab176fc",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250928210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "68d6be8ac01ebc1a225663cca36234223df8bd939feb132c91e5d7ca79eabd17",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250929000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "47b9e0973beb29b4696c34f3bafce8f79d8cf8a0779786a04bc397894dfb7488",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250929180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "ec7715282a9cd1dba47769d23af10756594cd2b7419aa525b94f0a3978810a25",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250929210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "c2522fa4bbbe2b20b7fc9b7878f7b1b8da50e61b1176c5c9800ece7eb276b131",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250930000000.translation.gkg.csv.zip.request.json": {
+      "sha256": "efd9280b2c43ea81fe75f700d6d44d80d19e3d6101bc111397319f494be02c76",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250930180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "3d5a4daed03938cc6e1b28d82efc3b7d549ce5dfddd4997a9866c6855c28512a",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20250930210000.translation.gkg.csv.zip.request.json": {
+      "sha256": "85774e13ec9780bac4e460cc99bfbb34ceaaf290572f74efa30e24f2082ef6b4",
+      "bytes": 279,
+      "cantidad": null
+    },
+    "responses/gkg/20260703180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "207bd8c5f50ceea7a6f921c195b7a69d6e02bcbf9521bcd3375a926b21ea15b3",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260704180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "3491c41fcb8576c684ad7c3331315cc665ffd08a7cd2c978af98ad7041a9c258",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260705180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "11ee3781fe37bf139f9bddf80b4caebb745c61d365fa024342303a2d5a26cfcd",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260706180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "52f6886690c14e4665859101f0aa947e12d66e540ec2afee3003b03dae770b35",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260707180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "0f9eaeddcaca426ac8247d541dd694c61e9884aae0a81036b9bb719973083e6c",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260708180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "9ec135c3e474e13d0c2d46a66ef278471e18b1b519f45723081b6f54cf1d8cff",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260709180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "a5165bfc0fafa2767215a35cbf5ed4f2d7c17cde458992e8a64751677386b22a",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260710180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "1953ef1aa966a0fb8e9b30e9e882291d53989bcf990f99a86c1905d6c0de71ab",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260711180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "76e83bf9e68acf84d25e77ae0b61f078d2d5ec5daa0be69ded0ba1d16e34b244",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260712180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "e8a3541a715b48ae80be2b3fb2d202172e9e7d4a3c34b45ad32bbc0072e0563f",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260713180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "004848a4e8a2d2056b492e15d81b98079de45f95a3213f8ef342c452a2ecd48a",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260714180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "68cafbbdd53252752716e4484ded755f5b6f46890a1f7c6e50582a73e36b3e97",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260715180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "7ab646b076c31d4245da9fc734442ea878c0ad14f009bc4bf8961ae5e015b6c3",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260716180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "5cc589117e266f8cbd1ac87b4f2058bdce1f04a22cc98ad92554d218c6d31759",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260717180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "1ef200825226ce8e72d8c5220a1feade4aadd227d89b6162dd521439cd0d86c3",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260718180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "4d5b4c2bb8fdfeed9f39ddda88637791477adc5cb842d903038b8a56e8f3f9eb",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260719180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "36335dd15d52bea42ed48ec4e66c7a138de0839320c59c1248ed6d37e51a165a",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260720180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "5894cfc4a26f324ac68afecaac50b063b61a5f10701b93c20d1bf95ff5c5ae6b",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260721180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "7f2c0c9bd2d8c0b097a1d0e821fab80b5782c1bef1b63ea1c4eaa0d6f7fdd5fb",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260722180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "81bc047d4c6f8a6e33f85c9dd17101543eaa6bbf6c2d75da269d710bbcfdc5e9",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260723180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "4e2ece3fc3d16846a11e3718d6a62a21c0e1326e1082cf818023dd9742d94a15",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260724180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "5b0a31195d3e1badb562eab318d4dbbcb7cac64a946d78741ae581dc92fa676d",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260725180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "2e145b615ff7e2495ec00adfeba723117bc8c9c551e71e0087d97da7a2fe121e",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260726180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "66f4ba5d4c5b1bd2a09aeac18be3b1eb0bca686a74543dba75e95f172e0b3c10",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260727180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "117a373a726913522a16d8a10834040765ab71eab88bb73c8a1bd197fe7f8519",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260728180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "82b9ae4123ec44773c35b2348720630da54d8305d95c64b7f91268b962233b46",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260729180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "dcc4a96d59dadaa1dd35653a136ba1458ee8216d5682c292f5932211e5a4504b",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260730180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "b6a71850118a85c95ddf601493edce9b2c4aa7d3537a9bf0e25725bc4e0670de",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260731180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "cb33439532784d3e92d404477f9de33ed4fbdbebb06f552b16b017b7e4ae3f79",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260801180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "31ef7f681f035bc568f47cba2f085c6a26e7096274d82582ab160790c75cf367",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260802180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "43bf8d2b021b052afc027d4ade62046b8c6e2a8d4fb9d00c6e7fac32380d6696",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260803180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "afa32823d12cb3400ca5b64c6f93f29e59c82cc2916caac3b26fb120adbe9681",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260804180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "293d146ae193e7cb6d9633c46007f885aa18172d34cc8b044b1e652bbcf0b505",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260805180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "e397dd0c2e163ec0c5afd9000497edf127946f65fe305e070f88c5735422c706",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260806180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "6c937ac11750fa23a8632f8b5a0b4c60bf603e3fbaa10f94cd72e19ceda6bec9",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260807180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "67d4f9a3d93e539599443d7ec35db21fdb26039f2e3ae3bb15c42797537b1a2b",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260808180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "32ba78eac6771849f0ad5035c1a65c580841acbab5480c3bbf48cc9c28e280fa",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260809180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "658b79cabbf1f2817757e81a23ddbcdc249306e479de1c126465e725941543b9",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260810180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "170cb459c6e3f2f1fa28017368015c22633f24a8a3cd763ca1485b70a9e91bcc",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260811180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "a7fb5b0c752d7a04ee3fbd89f0f008f864b508be3dce041f5ca60dd6e32081ff",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260812180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "d286d55e3a72dc9f8218e32555a66f322dd413d318389c367c9435b17aa4304c",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260813180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "ba08c725b238bebd544edc0bf2a3d7bee6e1c8c55e6ace5dd0b600422e585a88",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260814180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "9d80693105eac639e3519bf98840eab26e288b066d9d6bc416723aa67c1526c4",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260815180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "37c4eafa808e0730b5a818f078bf3279f1a9776ca89297e8e667d06c50556f6f",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260816180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "875b3765e83a688ac57ce185ff2f5b68213c6cf651e260bfa2a4a61cc544573f",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260817180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "92eba8112f33a61b14dcbc356108b18fb2e390dcb11117ec56648f32a399c17b",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260818180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "3a48518693c84abddd273bfa2c1b1dfbe77c7363713033af83aef4b36f21d2c5",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260819180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "889ad3bd78a76cb136b28f6b51adc6fabf687d7213d132d31b4478bce795f73e",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260820180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "476c2ef71d647f476dc696ecb4929ecbc6c439dec89380d60b075707e0ee0338",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260821180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "b5f37d44615d0e1d72f07bf0d0ea616ef2ff5876b13dde79264d1b0b29a52420",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260822180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "864436eaa32d61c0021d45b86af607038150133f74711a222f2929ea411c90fa",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260823180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "a832e3c1b95b4b25d0b83b1990690b83eab4cd21ab32d59d9c583a19e7ccc9bc",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260824180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "2ba3e0541fbd81948d517a8e43836e42c7369bd7f66eabbace331f947345efab",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260825180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "5019b1864c16037bb321ae90df98b51b4397dcec483e81a9bcafbf2e33aefe87",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260826180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "b3c5c2733bdfca87687e65ef4c1bf71f62481d250c4a24b01e521c41c7bc6e5e",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260827180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "002c81068ee4f75ee5d0cd06348d8ba8fb171ed6e2ab327fe931370777438fd9",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260828180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "7a596136e79d3570f1a9e7d76bec577fced405170f0610913c3c858d0680e728",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260829180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "bfd49f4d5ebb0da678c57199e820adc1c00108132a012b85aac7977bf5b77397",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260830180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "fa03704aa2b5ec4015546603b42c725f7a24ff8b8a95b9a071a707fc70b2ff60",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260831180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "cbf90dc2c5d72aa31f95b5d953ed18ce1dae8a580bda50289f06b23281897cfa",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260901180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "071bd13e50292a88fb422739b70714ed6723adada86551c803658a1f8121f24e",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260902180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "8e905f355f8c9559a29555a6a64d4b6d4729350eaee007a935eb486f41e10198",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260903180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "e4054309ffdbe2309a23918d866c01819d16d6425d21c75769aae0a8a7328f11",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260904180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "b84bd3a3fe65a04eed6874e59d21a0afc1bef76a4108d60c7cc18034597f12ac",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260905180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "f3bb2da21f4590f9cfe28344e3f14b114efdc0760adb5c28ac9df71ce5168cfd",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260906180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "3dedbd084e865f573597a62a12fbf71c73a66e507f8ca04258a90efa28c1155f",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260907180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "ab046379ada15c55bc8a462832460ee856b139479d457f6ca570cf7208611e2e",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260908180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "49ae5c11bbdb8f8ebaf72a613a90f1a4f958add5832103315b3100fa9c235d94",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260909180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "e9de16561784057ac926c037ac05c4392357c489bc6d1d60dfd33d370573d50f",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260910180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "0ef3ecb30ccee21cab42a08a92d45ce2a20151705363867603ac6876692102e1",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260911180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "979328ad984b1f64c0e5afdaf1334f37fbfa397bc2e0db9a29fa6bd0a10b2c15",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260912180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "0e96a68172b9a91f8919e5ea71ee77c0345ee094af778da2052ddf23198b5f93",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260913180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "5c0447c7d561b68f07ab60aad8a58d64122168bdb4f4fa0c591224694c9bae5a",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260914180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "473e31aeb9ce00b9814eb3da5b7d9f39cc1448657eb321cb3f94b3ebe469f008",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260915180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "0a39a9a38a0e4e25fb2c8bce50b754012d2ef0c6ed9846ff425f96a2d7748b10",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260916180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "e08753dbe5a2f909ae9ffabece79798fb2bbb3c8ccaec4d67bfb1625d419da89",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260917180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "33d95545b7eecaa1618c27507dd4441ef1421afa65ba1b930c74e1180f4107c9",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260918180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "8ed559eaecd096755021f68cc8e120e9f7f30192178086e2def3e75242b8c6df",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260919180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "347df0fa7aed688a438df9846d072a652e087a26a86a8039f0572aba58487e22",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260920180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "23ca7c1672294d535dee689eebecdc5ff723d20b6296242e1006a4ab1dcc6fe0",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260921180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "c2e20cfdc301ac3c66eec15d18671a30e31dff0b94314ba54272c7894288f1eb",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260922180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "ff2a615ae97a8af03bbbbcb61fddedec58c95154f5b30ce0053e112112d9e221",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260923180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "f2a2a196aa22aea88bdf9934f69f2779a917a8c4643aa3e1c85e2c448f3a66e3",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260924180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "f96cb75f63b58bddba7a93d24f701f131c34b7b7c8447451851f6a403ad481f0",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260925180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "9d2ac17d7368f33317277ea354408bd6661d256ab56bb1dad1e82090557d885b",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260926180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "8df05d5f64e75a02e798d5f8630a79af1e2de6dba6ca8cf67dbaef106561ecd8",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260927180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "5b520e2155403e353f66ed0f7b8585aa4ae9f7a50cfdb526c8a12b39b5321f38",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260928180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "43448e4cf128ed2c017682985c6cd4918d3b6c71ae05e3421c0232945ce7c112",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260929180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "b48347417e188ba9e94540523d0f5212d8821b5f8b5b802eed52a2f64b07b4d9",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/gkg/20260930180000.translation.gkg.csv.zip.request.json": {
+      "sha256": "8bb899443b371cd03f8f84855d2541984a612424b7a148c35b2ba59b7fb1ce0f",
+      "bytes": 306,
+      "cantidad": null
+    },
+    "responses/tvn-current/rss.xml.request.json": {
+      "sha256": "1b692dee0fb7a0113a1117abeb72ee1c4c11f0686a234878b49d7c7d368935f8",
+      "bytes": 237,
+      "cantidad": null
+    },
+    "responses/usgs/events.1.json": {
+      "sha256": "147863f91d3b040943b76eec8120439c722a8f11e71b423f7eb5e68dd061b9b9",
+      "bytes": 59111,
+      "cantidad": 82
+    },
+    "responses/usgs/events.1.json.request.json": {
+      "sha256": "97d82a084693a28c8f5c82661c74b43c3c17b339aae6b49aeb00a9773345897e",
+      "bytes": 464,
+      "cantidad": null
+    },
+    "responses/usgs-ext/events.1.json": {
+      "sha256": "58ab900c1d380dc784702ee9d95a8393c1a69577e7199f3c8ab642c0cab7a573",
+      "bytes": 62385,
+      "cantidad": 87
+    },
+    "responses/usgs-ext/events.1.json.request.json": {
+      "sha256": "7636af6aacbb09d4097b084f8a12150753f783d00ba29fbdccbcf22a6370f149",
+      "bytes": 511,
+      "cantidad": null
+    },
+    "responses/usgs-ext/failures/events.1.json.20261007T024649356730Z.json": {
+      "sha256": "e4aa14bed58e9cfbcb78ccb3e7f848c8e88b2ceeb30c7137571d5c87cbe58a15",
+      "bytes": 849,
+      "cantidad": null
+    },
+    "responses/worldbank/FP.CPI.TOTL.ZG.1.json": {
+      "sha256": "05c1ad3e128b655a3540eabbded275d336f4b11a4aa826dbd4f0e1a5b24e077c",
+      "bytes": 20752,
+      "cantidad": 2
+    },
+    "responses/worldbank/FP.CPI.TOTL.ZG.1.json.request.json": {
+      "sha256": "74adca10fb35fc433e254e7da63e50c2f04f83f20cf3108d9a06877ef4afbf8c",
+      "bytes": 362,
+      "cantidad": null
+    },
+    "responses/worldbank/IT.NET.USER.ZS.1.json": {
+      "sha256": "e0d043c22432a247b3ac3046b7de6c20310be79952ac4e2b9ae395f56943dcf6",
+      "bytes": 21298,
+      "cantidad": 2
+    },
+    "responses/worldbank/IT.NET.USER.ZS.1.json.request.json": {
+      "sha256": "985fd0109d23c614529cfa1bff07b1a4ce63adf4044d19d84463f98dd28b46dd",
+      "bytes": 362,
+      "cantidad": null
+    },
+    "responses/worldbank/NE.EXP.GNFS.ZS.1.json": {
+      "sha256": "e76574bb0b65dbdd4ac248aaaeb968ac910878afc16f2fdf74516ff22259b428",
+      "bytes": 21010,
+      "cantidad": 2
+    },
+    "responses/worldbank/NE.EXP.GNFS.ZS.1.json.request.json": {
+      "sha256": "6667608dfbc41447ba40743668aa5a1cf50a20730549a5764a2cbd2d1ca3b352",
+      "bytes": 362,
+      "cantidad": null
+    },
+    "responses/worldbank/NY.GDP.MKTP.KD.ZG.1.json": {
+      "sha256": "c86460294554efe74cbfa8904d3cb3ea3e8ad7227f692ba8673d29a1c7802efb",
+      "bytes": 19581,
+      "cantidad": 2
+    },
+    "responses/worldbank/NY.GDP.MKTP.KD.ZG.1.json.request.json": {
+      "sha256": "ec84cc0dda0ab3f82640049f987bdb613bd3f6eeaaa6ad850335155d5d46cf53",
+      "bytes": 365,
+      "cantidad": null
+    },
+    "responses/worldbank/SL.UEM.TOTL.ZS.1.json": {
+      "sha256": "1181f8e669628663be0601eef7910fcada5188aac722284c463c1a28ac2dc1fd",
+      "bytes": 22464,
+      "cantidad": 2
+    },
+    "responses/worldbank/SL.UEM.TOTL.ZS.1.json.request.json": {
+      "sha256": "05a4becdc40ce0b44c1bd7847f9af9bda817a1b9ec07196aa9461a08633f31d0",
+      "bytes": 362,
+      "cantidad": null
+    },
+    "responses/worldbank/SP.POP.TOTL.1.json": {
+      "sha256": "e06e40801774c234af8de85ee9f42b0c25c547a8e2d5f454751ba60753939c0f",
+      "bytes": 17941,
+      "cantidad": 2
+    },
+    "responses/worldbank/SP.POP.TOTL.1.json.request.json": {
+      "sha256": "fd4c544ca0299cdafab97d17d5fb7d83b4731bddeb4a50078d29a6c193b04222",
+      "bytes": 359,
+      "cantidad": null
+    },
+    "tvn_rss_actual.json": {
+      "sha256": "872c7ee7aa794e1c454c63f26d6a7f64a579931d314036e73e4141e9325ca3b6",
+      "bytes": 56517,
+      "cantidad": 152
+    }
+  },
+  "transformaciones": [
+    "GDELT: URL normalizada y deduplicada; ID SHA-256 de URL; seendate es detección, publicación nula.",
+    "WB: producto de seis países, seis indicadores y 2010–2024; valores ausentes son null explícito.",
+    "USGS: unir páginas; excluir el instante 2025-01-01T00:00:00Z del límite inclusivo de API.",
+    "RSS TVN: pubDate dentro de C-01; detección nula; sin descripciones en el corpus.",
+    "USGS extensión AP-004 separada de los eventos oficiales de 2024.",
+    "Raw 2025 conservado; exclusiones fuera_de_ventana_C-01 en assembly-c01.json."
+  ],
+  "cobertura_efectiva": {
+    "window": [
+      "2025-10-02T00:00:00+00:00",
+      "2026-10-01T00:00:00+00:00"
+    ],
+    "news": 187,
+    "tvn": 50,
+    "effective_start": "2025-10-17T02:44:03Z",
+    "effective_end": "2026-09-30T18:00:00Z",
+    "target_30_days": {
+      "news": 67,
+      "tvn": 2
+    },
+    "extended_90_days": {
+      "news": 159,
+      "tvn": 22
+    }
+  }
+}

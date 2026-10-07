@@ -22,3 +22,6 @@
 Respaldo backup/wip-617d6e2 exclusivamente local; reconstruido historial sin ZIP/RSS y push normal 0997fb9 a origin/worker-b/snapshot. Los 117 ZIP y RSS permanecen en disco; 118 hashes y tamanos verificados. Manifest excluye auxiliares locales, valida inventario y lee corte YAML. Solo se anota disponibilidad del inventario previo por instruccion humana; hashes y respuestas intactos. AP-008/AP-009 actualizadas segun Lead. Pruebas: 99/99, docs/worklog/worker-b-manifest-pytest.xml; Python global sin pytest, usar .venv. Snapshot todavia no congelado.
 
 2026-10-07 02:38 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md. c1f67ae subido a origin/worker-b/snapshot; PR borrador #19. Siguiente: adquisicion C-01; B-01/B-02 incompletas.
+
+## 2026-10-07T02:58:25.658387Z - B-01/B-02 C-01
+Snapshot congelado: 187 noticias, 50 TVN; 159/22 en 90 dias. 540 WB, 82 USGS oficiales y 87 ampliados. RSS deteccion nula; GKG muestreo 18 UTC diario, DOC parcial por 429. Raw anteriores conservados y excluidos. Manifest y copia sin auxiliares verifican. 187 candidatos ciegos exportados y aviso dado al humano; no ranking real. Suite 114/114 (timeout UI inicial, repeticion pasa sin cambios). Ver worker-b-c01-verification.json y worker-b-c01-final-pytest.xml.
