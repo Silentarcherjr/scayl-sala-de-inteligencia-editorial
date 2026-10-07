@@ -15,6 +15,7 @@
 | 2026-10-07 | Codex | frictionspp-svg | Recuperar historial y garantizar manifest portable | Respaldo local, exclusión de ZIP/RSS, merge normal, separación de hashes locales, corte desde YAML y pruebas de copia sin auxiliares | 99 pruebas pasan; 118 hashes/tamaños locales verificados; B-01/B-02 aún incompletas | Pendiente de revisión del Lead |
 | 2026-10-07 | Codex | LowCrime | A-01/A-02 | Home, navegación, filtros, matriz de evidencia y pruebas de UI; validación visual Chromium | 95 pruebas pasando; capturas y navegación a EVT-0003 verificadas | Pendiente del Lead en PR |
 | 2026-10-07 | Codex | frictionspp-svg | Cerrar snapshot C-01 B-01/B-02 | Adaptador RSS con detección nula; adquisición DOC/GKG y USGS ampliado; auditoría de exclusiones; manifest portable; candidatos ciegos | 187 noticias (50 TVN), 540 WB, 82+87 USGS; manifest verificado; 114 pruebas pasan | Top 5 ciego y revisión del Lead pendientes |
+| 2026-10-07 | Codex | frictionspp-svg | B-05 IA y calibración sin top 5 | E5 multilingüe local; prototipos; 488 pares de 2025 anotados provisionalmente por IA; medición posterior C-01 | τ=0,87; 183→165 eventos; P@5 1/5→1/5; cuatro casos separados por guard temporal; 129 pruebas pasan; inferencia CPU | Revisión humana de etiquetas B-07 y revisión del Lead pendientes |
 
 ## Herramientas de IA dentro del producto (no son de desarrollo)
 

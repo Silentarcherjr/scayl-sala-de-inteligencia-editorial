@@ -14,7 +14,7 @@ import numpy as np
 from scayl.contracts import NewsItem
 from scayl.intel.embed import Embedder
 
-DEFAULT_TAU = {"tfidf-char-3-5": 0.55}
+DEFAULT_TAU = {"tfidf-char-3-5": 0.55, "st:intfloat/multilingual-e5-base": 0.87}
 MAX_GAP = timedelta(days=7)
 
 
