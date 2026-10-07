@@ -1,2 +1,4 @@
 # These measured files carry byte-level provenance hashes.
 b05-*.json -text
+b13-b14-*.json -text
+b13-b14-*.jsonl -text

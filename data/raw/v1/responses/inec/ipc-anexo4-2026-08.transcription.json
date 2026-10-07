@@ -1,0 +1,21 @@
+{
+  "pdf_sha256": "ca9b07ecf265b912be45b7450f88f3d322e8f3fef56bbb3b5e5372b74020bb6e",
+  "published_at": "2026-09-14T00:00:00-05:00",
+  "publication_date_source": "https://www.inec.gob.pa/avance/Default2.aspx?ID_CATEGORIA=2&ID_CIFRAS=10&ID_IDIOMA=1",
+  "method": "Transcripción por Codex de columnas mensual e interanual, Anexo 4, página PDF 1; cotejo con extracción de texto del PDF oficial mediante web. No recalculado desde índices redondeados. Revisión humana pendiente.",
+  "base": "2024=100",
+  "rows": [
+    {"periodo": "2025-09", "mensual": -0.04, "interanual": 0.3},
+    {"periodo": "2025-10", "mensual": -0.02, "interanual": 0.5},
+    {"periodo": "2025-11", "mensual": 0.02, "interanual": 0.5},
+    {"periodo": "2025-12", "mensual": 0.1, "interanual": 0.4},
+    {"periodo": "2026-01", "mensual": 0.2, "interanual": 0.3},
+    {"periodo": "2026-02", "mensual": 0.1, "interanual": 0.02},
+    {"periodo": "2026-03", "mensual": 0.9, "interanual": 0.8},
+    {"periodo": "2026-04", "mensual": 1.1, "interanual": 2.1},
+    {"periodo": "2026-05", "mensual": 0.3, "interanual": 2.5},
+    {"periodo": "2026-06", "mensual": -0.3, "interanual": 2.3},
+    {"periodo": "2026-07", "mensual": -0.3, "interanual": 2.0},
+    {"periodo": "2026-08", "mensual": 0.2, "interanual": 2.2}
+  ]
+}

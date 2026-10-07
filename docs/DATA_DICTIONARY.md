@@ -4,6 +4,17 @@ Estado: `data/raw/v1` congelado para C-01, corte 2026-10-01T00:00:00Z, con manif
 AP-008 aceptada (540 filas, DL-013); AP-009 superada por la ventana C-01 (DL-017).
 Ejecución guardada: `docs/worklog/worker-b-c01-verification.json`.
 
+## Adición oficial reciente B-13/B-14 · v1.1
+
+`indicadores_recientes.csv`: `pais_iso3,indicador_id,indicador_nombre,anio,valor,unidad,fuente_url,fecha_extraccion,licencia,periodo,fuente,frecuencia,es_proyeccion`.
+812 filas: ACP nivel observado 394 diarias (2025-09-02..2026-09-30), proyección 394 nulas
+(edición pre-corte no disponible), INEC mensual/interanual 12 cada una (2025-09..2026-08).
+Nulos literales `null`, pies y porcentajes originales, signos conservados. Proyección siempre
+`es_proyeccion=true`, nunca confirma. INEC cita Anexo 4 página PDF 1 en el nombre.
+Fuentes adicionales en `fuentes.recientes.json` y manifest recongelado v1.1; fuentes previas
+intactas. Recibos y transcripción identificada por hash en `responses/`.
+Detalle y reproducción: [B13_B14_RECENT_OFFICIAL.md](B13_B14_RECENT_OFFICIAL.md).
+
 ## Convenciones
 
 - UTF-8; CSV con encabezado, coma y comillas según CSV estándar.

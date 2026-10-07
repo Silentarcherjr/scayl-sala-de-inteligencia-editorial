@@ -1,0 +1,45 @@
+{
+  "created_at": "2026-10-07T04:57:36.147926Z",
+  "authorization": "Instrucción humana B-13/B-14 y Notas del Lead: adición declarada sin modificar bytes existentes; recongelar manifest v1.1.",
+  "window": {
+    "start": "2025-09-02",
+    "end_exclusive": "2026-10-01"
+  },
+  "rows": 812,
+  "observed_non_null": 394,
+  "projections_non_null": 0,
+  "inec_rows": 24,
+  "sources": [
+    {
+      "origen": "acp",
+      "url": "https://evtms-rpts.pancanal.com/eng/h2o/Download_Gatun_Lake_Water_Level_History.csv",
+      "licencia": "Sin licencia abierta declarada; datos numéricos para uso informativo",
+      "cobertura": [
+        "2025-09-02",
+        "2026-10-01"
+      ],
+      "limitaciones": "Estimación informativa. Niveles históricos descargados después del corte; no son niveles en tiempo real. No se reproduce el dashboard ni gráficos.",
+      "proyecciones": {
+        "url": "https://evtms-rpts.pancanal.com/eng/h2o/Gatun_Water_Level_Projection.csv",
+        "disponibles_al_corte": false,
+        "motivo": "CSV obtenido el 7 de octubre; fechas proyectadas 2026-10-07..2026-12-06, sin fecha de emisión anterior al corte. Filas solicitadas son null; no se reconstruye el pronóstico."
+      }
+    },
+    {
+      "origen": "inec",
+      "url": "https://www.inec.gob.pa/archivos/A0705547520260914092740Anexo%204.pdf",
+      "licencia": "CC BY 4.0",
+      "publicado": "2026-09-14",
+      "cobertura": [
+        "2025-09",
+        "2026-08"
+      ],
+      "limitaciones": "IPC nacional urbano, base 2024=100, Anexo 4 página PDF 1; transcripción de variaciones publicadas (signo incluido), revisión humana pendiente. No recalculadas desde índices redondeados. Septiembre 2026 aún no publicado antes del corte."
+    }
+  ],
+  "transformations": [
+    "ACP: parsear CSV; filtrar fechas; cuadrícula diaria, faltantes null, sin interpolación.",
+    "ACP proyección: no admitir CSV sin fecha de emisión anterior al corte; null explícito por período solicitado.",
+    "INEC: transcripción auditada por hash del PDF, Anexo 4 página 1; mantener signos y decimales originales."
+  ]
+}

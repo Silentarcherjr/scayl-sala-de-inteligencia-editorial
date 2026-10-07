@@ -1,5 +1,18 @@
 # AGENT_PROPOSALS — propuestas transversales
 
+## AP-012 · Exigir compatibilidad semántica de la medida para vincular ACP
+- Autor / fecha: frictionspp-svg + Codex · 2026-10-07 05:04 UTC.
+- Estado: **ABIERTA**.
+- Problema u oportunidad: la ejecución B-13/B-14 vincula contexto de Gatún con EVT-0161, «Populoso distrito de Panamá completa una semana sin homicidios tras imponer restricciones nocturnas», porque `recent.py` acepta la palabra genérica «restricción». No confirma la noticia, pero el contexto es irrelevante. Además «calado» y «nivel de Gatún» son medidas distintas: compartir pies no permite confirmar una con la otra.
+- Cambio propuesto: el Lead acota palabras genéricas con entidades del Canal/agua; separa pertinencia contextual de compatibilidad exacta de medida para confirmación (nivel del lago observado, no calado de buques). Añadir regresiones con el titular real y un calado en pies numéricamente coincidente.
+- Por qué mejora el proyecto: evita contexto irrelevante y futuras confirmaciones por coincidencia numérica entre medidas diferentes, sin flexibilizar evidencia para obtener suficientes.
+- Dimensión de rúbrica: trazabilidad, evidencia oficial pertinente y precisión.
+- Archivos/módulos afectados: scayl/evidence/recent.py (Lead), tests/test_recent.py (Lead).
+- Riesgos: menos vínculos si los titulares omiten la entidad; mantener abstención conservadora.
+- Esfuerzo estimado: ajuste local del Lead y dos regresiones.
+- Recomendación: ACCEPT.
+- Decisión (Lead/humano + fecha): pendiente. No se modificó el módulo del Lead ni se recalibró con el top 5.
+
 ## AP-009 · Usar entradas históricas que el RSS actual de TVN sí conserva
 - Autor / fecha: frictionspp-svg + Codex · 2026-10-06.
 - Estado: **SUPERADA por DL-017**.
