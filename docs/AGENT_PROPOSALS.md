@@ -92,7 +92,7 @@
 - Recomendación: **CONSIDER**. Local como camino principal; Sonnet como comparación y como respaldo de calidad si B-10 muestra borradores locales débiles.
 
 ## AP-010 · Evidencia oficial reciente: ACP (nivel del lago Gatún) e INEC (IPC mensual)
-- Autor / fecha: Lead · 2026-10-07 · Estado: **ABIERTA — requiere aprobación humana** (agrega alcance)
+- Autor / fecha: Lead · 2026-10-07 · Estado: **ACEPTADA por el equipo (ACP + INEC), DL-019**
 - Problema u oportunidad: con WB hasta 2024 (solo contexto) y noticias de 2026, casi ningún evento puede quedar "suficiente para el borrador". La aclaración C-02 permite fuentes adicionales y exige datos recientes en la demo.
 - Cambio propuesto: (1) **ACP**, CSV de niveles históricos y proyectados del lago Gatún (evtms-rpts.pancanal.com/eng/h2o/), con la advertencia de la ACP de que es una estimación informativa; (2) **INEC**, IPC urbano nacional mensual 2025–2026 desde los cuadros PDF, citando cuadro y página. Contrato 0.3.0 aditivo: `IndicatorObservation.periodo` (p. ej. "2026-07" o "2026-09-28") y `fuente`; ids `ind:<fuente>:<serie>:<periodo>`. Vinculación: noticias del Canal → ACP; inflación → INEC. Coincidencia numérica ⇒ SUSTENTADA; discrepancia ⇒ conflicto.
 - Por qué mejora el proyecto: permite afirmaciones recientes realmente sustentadas en la demo y muestra el Temporal Guard con datos reales (WB 2024 histórico frente a INEC 2026 reciente).

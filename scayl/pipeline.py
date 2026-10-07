@@ -12,7 +12,7 @@ import argparse
 import json
 import logging
 from collections.abc import Callable
-from datetime import UTC, datetime
+from datetime import datetime
 from pathlib import Path
 
 from scayl.contracts import (
