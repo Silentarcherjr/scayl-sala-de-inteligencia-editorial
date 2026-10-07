@@ -10,16 +10,15 @@ Tu humano además es el **"editor" independiente**: su juicio sirve para medir e
 el ranking antes de entregar su top 5.
 
 ## 📌 Notas del Lead pendientes — backlog final (actualizado 2026-10-07, tras PR #32)
-Integrado en main: tus PR #25–#27 y #32. Los fallos del red-team se corrigieron (16/16, DL-027, AP-013). Entrega: **jueves 8, 23:59 hora de Panamá**. Trabaja en este orden:
+Integrado en main: tus PR #25–#27 y #32. Los fallos del red-team se corrigieron (16/16, DL-027, AP-013). Entrega: **jueves 8, 23:59 hora de Panamá**. Trabaja en este orden (el video de la demo H-05 lo hacen el Humano 1 y el Lead; no es tuyo):
 
 1. **B-08:** incorpora a `eval/results/latest.json` las métricas ya medidas en `eval/results/b13-b14-precompute.json` (latencia mediana y p95, cobertura de citas, n, hardware), citando el archivo de origen. Cuando frictionspp-svg suba un precompute nuevo o B-07/B-10, vuelve a correr la evaluación.
 2. **Trust Lab:** si `latest.json` trae métricas nuevas que la vista A-05 no muestra (red-team, P@5 con su limitación DL-024, latencia), propón el cambio en `docs/AGENT_PROPOSALS.md`. A-05 es del Lead; puedes adjuntar el parche en la propuesta.
-3. **H-05 demo:** escribe `docs/DEMO_SCRIPT.md`, un guion de 3 minutos con internet apagado: Sala + Agenda → Ficha (Source DNA, Temporal Guard, conflicto) → Consultas (modo jurado: cifra con fuente, abstención, inyección) → revisión con recibo → Trust Lab → Simulador. Tu humano graba el video siguiendo el guion; guarda el enlace en el PR, sin subir el archivo de video al repo.
-4. **B-09 validez de sustento (humano):** el agente prepara `data/labels/support_review.csv` con ≥30 afirmaciones de los paquetes (afirmación, evidencia citada, texto de la evidencia) y tu humano marca sí/no/parcial. Calcula la métrica en B-08.
-5. **A-06 publicar:** cuando frictionspp-svg suba la caché pública, prepara el Space y **pide confirmación al Lead** (vía tu humano → Humano 1) antes de publicar. La URL y la contraseña se comparten solo por privado.
-6. **H-06 mini-estudio (con frictionspp-svg):** 3 tareas cronometradas, manual vs con SCAYL (protocolo en TASKS §H-06). Registra los tiempos en `06`, como exploratorio con n=3.
-7. **Capturas finales** para el README y el pitch en `docs/screenshots/final/` (1280×720, datos reales, sin descripciones RSS visibles): Sala, Agenda, Ficha (cada pestaña clave), Consultas con abstención, Trust Lab y Simulador.
-8. **Pulido de UI** (si sobra tiempo): textos en español consistentes, estados vacíos y accesibilidad básica (contraste, etiquetas), sin cambiar contratos.
+3. **B-09 validez de sustento (humano):** el agente prepara `data/labels/support_review.csv` con ≥30 afirmaciones de los paquetes (afirmación, evidencia citada, texto de la evidencia) y tu humano marca sí/no/parcial. Calcula la métrica en B-08.
+4. **A-06 publicar:** cuando frictionspp-svg suba la caché pública, prepara el Space y **pide confirmación al Lead** (vía tu humano → Humano 1) antes de publicar. La URL y la contraseña se comparten solo por privado.
+5. **H-06 mini-estudio (con frictionspp-svg):** 3 tareas cronometradas, manual vs con SCAYL (protocolo en TASKS §H-06). Registra los tiempos en `06`, como exploratorio con n=3.
+6. **Capturas finales** para el README y el pitch en `docs/screenshots/final/` (1280×720, datos reales, sin descripciones RSS visibles): Sala, Agenda, Ficha (cada pestaña clave), Consultas con abstención, Trust Lab y Simulador.
+7. **Pulido de UI** (si sobra tiempo): textos en español consistentes, estados vacíos y accesibilidad básica (contraste, etiquetas), sin cambiar contratos.
 
 ### Reglas de autonomía (trabaja hasta terminar sin esperar al Lead)
 - **No esperes merges.** Al terminar una tarea, abre su PR y pasa a la siguiente. Antes de cada tarea: `git fetch origin && git checkout -b <rama-nueva> origin/main` (una rama y un PR por tarea; sin rebase ni force-push sobre ramas compartidas).
