@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-10-07T05:10:55.321085+00:00",
+  "run_at": "2026-10-07T05:07:44.852514+00:00",
   "snapshot": "v1",
   "hardware": "Windows AMD64 · AMD64 Family 25 Model 116 Stepping 1, AuthenticAMD · Python 3.14.7",
   "models": [],
@@ -165,7 +165,7 @@
       "status": "passed",
       "num": 2,
       "den": 2,
-      "evidence": "eval\\results\\runs\\20261007T051054682410Z.pytest.xml",
+      "evidence": "eval\\results\\runs\\20261007T050744143863Z.pytest.xml",
       "cases": [
         {
           "test": "tests.test_t01_validation.test_invalid_dates_nulls_duplicates_and_window",
@@ -183,7 +183,7 @@
       "status": "passed",
       "num": 1,
       "den": 1,
-      "evidence": "eval\\results\\runs\\20261007T051054682410Z.pytest.xml",
+      "evidence": "eval\\results\\runs\\20261007T050744143863Z.pytest.xml",
       "cases": [
         {
           "test": "tests.test_assemble.test_t02_three_records_same_event_do_not_triple_importance",
@@ -197,7 +197,7 @@
       "status": "passed",
       "num": 1,
       "den": 1,
-      "evidence": "eval\\results\\runs\\20261007T051054682410Z.pytest.xml",
+      "evidence": "eval\\results\\runs\\20261007T050744143863Z.pytest.xml",
       "cases": [
         {
           "test": "tests.test_assemble.test_t03_recirculated_story_keeps_original_date",
@@ -211,7 +211,7 @@
       "status": "passed",
       "num": 1,
       "den": 1,
-      "evidence": "eval\\results\\runs\\20261007T051054682410Z.pytest.xml",
+      "evidence": "eval\\results\\runs\\20261007T050744143863Z.pytest.xml",
       "cases": [
         {
           "test": "tests.test_assemble.test_t04_world_bank_is_historical_context_with_warning",
@@ -225,7 +225,7 @@
       "status": "passed",
       "num": 1,
       "den": 1,
-      "evidence": "eval\\results\\runs\\20261007T051054682410Z.pytest.xml",
+      "evidence": "eval\\results\\runs\\20261007T050744143863Z.pytest.xml",
       "cases": [
         {
           "test": "tests.test_assemble.test_t05_incompatible_figures_are_both_shown_and_unresolved",
@@ -239,7 +239,7 @@
       "status": "passed",
       "num": 7,
       "den": 7,
-      "evidence": "eval\\results\\runs\\20261007T051054682410Z.pytest.xml",
+      "evidence": "eval\\results\\runs\\20261007T050744143863Z.pytest.xml",
       "cases": [
         {
           "test": "tests.test_t06_qa_abstention.test_unanswerable_question_abstains_before_calling_llm",
@@ -277,7 +277,7 @@
       "status": "passed",
       "num": 3,
       "den": 3,
-      "evidence": "eval\\results\\runs\\20261007T051054682410Z.pytest.xml",
+      "evidence": "eval\\results\\runs\\20261007T050744143863Z.pytest.xml",
       "cases": [
         {
           "test": "tests.test_t07_injection.test_injection_is_detected_and_flagged_on_the_event",
@@ -299,7 +299,7 @@
       "status": "passed",
       "num": 16,
       "den": 16,
-      "evidence": "eval\\results\\runs\\20261007T051054682410Z.pytest.xml",
+      "evidence": "eval\\results\\runs\\20261007T050744143863Z.pytest.xml",
       "cases": [
         {
           "test": "tests.test_assemble.test_t08_high_priority_insufficient_evidence_recommends_investigation",
@@ -373,7 +373,7 @@
       "status": "passed",
       "num": 19,
       "den": 19,
-      "evidence": "eval\\results\\runs\\20261007T051054682410Z.pytest.xml",
+      "evidence": "eval\\results\\runs\\20261007T050744143863Z.pytest.xml",
       "cases": [
         {
           "test": "tests.test_t09_studio.test_llm_package_is_validated_and_hallucination_removed",
@@ -459,7 +459,7 @@
       "status": "passed",
       "num": 1,
       "den": 1,
-      "evidence": "eval\\results\\runs\\20261007T051054682410Z.pytest.xml",
+      "evidence": "eval\\results\\runs\\20261007T050744143863Z.pytest.xml",
       "cases": [
         {
           "test": "tests.test_service_pipeline.test_pipeline_builds_bundle_and_fichas_offline",
@@ -472,7 +472,7 @@
   },
   "cost_scope": "Esta evaluación lee artefactos locales, sin llamadas de API; no mide hardware/electricidad.",
   "redteam": {
-    "evidence": "eval/results/runs/20261007T051054682410Z.redteam.json",
+    "evidence": "eval/results/runs/20261007T050744143863Z.redteam.json",
     "run_at": "2026-10-07T05:00:05.354563+00:00",
     "failed_ids": [
       "RT01",
@@ -506,13 +506,13 @@
       "sha256": "49b463d2cbf976a605bba3ddd52353f83da18a92b3baa0354ae286b49ce34f7c"
     },
     {
-      "path": "eval\\results\\runs\\20261007T051054682410Z.pytest.xml",
-      "sha256": "a25aa8d4724e50fcb3808ee1a4393527eb216efabf8a4f03f2ea92aa0183bac0"
+      "path": "eval\\results\\runs\\20261007T050744143863Z.pytest.xml",
+      "sha256": "0cd1fb0e79c44c9fb194452cb2ca242ac1b61ee219b44fcf0bc963017e3ecd53"
     },
     {
-      "path": "eval\\results\\runs\\20261007T051054682410Z.redteam.json",
+      "path": "eval\\results\\runs\\20261007T050744143863Z.redteam.json",
       "sha256": "ff9d59593c4ca4bf449687063e3763beaa1455959cffa660eb781cd90c93fdf6"
     }
   ],
-  "saved_run": "eval\\results\\runs\\20261007T051054682410Z.json"
+  "saved_run": "eval\\results\\runs\\20261007T050744143863Z.json"
 }

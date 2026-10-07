@@ -21,6 +21,8 @@
 | 2026-10-07 | Claude Code | Lead (Silentarcherjr) | A-05/A-10, B-03, baseline B-05, revisión H-08 y PR #25–#27 | Trust Lab y simulador; `load_snapshot`; temas por reglas + agrupación TF-IDF; correcciones USGS con datos reales; integración de UI y evaluación | 136 pruebas; P@5 = 1/5 reproducida por B-08 | Revisado y mergeado por el Lead |
 | 2026-10-07 | Codex | frictionspp-svg | B-05 IA y calibración sin top 5 | E5 multilingüe local; prototipos; 488 pares de 2025 anotados provisionalmente por IA; medición posterior C-01 | τ=0,87; 183→165 eventos; P@5 1/5→1/5; cuatro casos separados por guard temporal; 129 pruebas pasan; inferencia CPU | Revisión humana de etiquetas B-07 y revisión del Lead pendientes |
 
+| 2026-10-07 | Codex | LowCrime | B-12/B-08 y A-06 | Set sintético de 16 ataques + 4 controles; runner service.ask/validador, métricas y preparación HF protegida | 156 pruebas; abstención 6/16 y 0/4, sondas 9/9; capturas locales; sin publicación ni LLM vivo | Pendiente del Lead, fallos de producto AP-012 |
+
 ## Herramientas de IA dentro del producto (no son de desarrollo)
 
 | Componente | Modelo | Uso | Costo |
