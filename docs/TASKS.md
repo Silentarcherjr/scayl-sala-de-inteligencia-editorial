@@ -34,7 +34,7 @@
 | B-02 | `ingest/manifest.py` (SHA-256, conteos, transformaciones) + diccionario | **F** frictionspp-svg | P0 | M0 | DONE (PR #19) | B-01 |
 | B-03 | `ingest/validate.py` + normalización → `data/processed` + `quality_report` (T01) | **L** Lead (DL-023) | P0 | M1 | DONE | B-01 |
 | B-04 | Casos sintéticos T01/T03/T05/T07 en `data/synthetic/` | **F** frictionspp-svg | P0 | M1 | TODO | L-01 |
-| B-05 | `intel/embed.py` + `topics.py` + `cluster.py` (baseline + IA) | **L** baseline / **F** IA (DL-023) | P0 | M1–M2 | DOING (baseline listo; falta variante IA + calibración) | B-03 |
+| B-05 | `intel/embed.py` + `topics.py` + `cluster.py` (baseline + IA) | **L** baseline / **F** IA (DL-023) | P0 | M1–M2 | DONE (PR #28: E5 multilingüe, τ=0,87 calibrado en desarrollo 2025; validación humana en B-07) | B-03 |
 | B-06 | `intel/retrieve.py` (BM25 + coseno) | **F** frictionspp-svg | P0 | M2 | TODO | B-05 |
 | B-07 | Etiquetas humanas: temas (≥100), pares de agrupación, top 5 ciego, benchmark dev (40) | F (etiquetas) + W (top 5 ciego) | P0 | M2 | TODO | B-03 |
 | B-08 | `eval/`: métricas, benchmark, latencia → `eval/results/latest.json` | **W** LowCrime | P0/P1 | M3 | PARCIAL (PR #27: P@5 y T01–T10; el resto no medido hasta B-05 IA, L-10/L-11 en vivo y benchmark B-10) | B-05, L-10, L-11 |

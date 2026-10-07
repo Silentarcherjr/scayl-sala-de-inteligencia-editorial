@@ -33,3 +33,36 @@ def test_time_constraint_prevents_merging_identical_headlines_far_apart():
     items = [news("a", "Canal de Panamá reduce el calado por la sequía", pub=CUTOFF - timedelta(days=40)),
              news("b", "Canal de Panamá reduce el calado por la sequía", medio="b.com", pub=CUTOFF - timedelta(days=1))]
     assert cluster(items, get_embedder("tfidf")) == [["a"], ["b"]]
+
+
+def test_pipeline_degrades_to_baseline_when_ai_weights_are_missing():
+    """sentence-transformers installed but the model not cached raises OSError, not ImportError."""
+    from scayl.intel.embed import TfidfEmbedder
+    from scayl.pipeline import select_embedder
+
+    class Broken:
+        name = "st:missing"
+
+        def encode(self, texts):
+            raise OSError("model not found in local cache")
+
+    def factory(kind):
+        return Broken() if kind == "st" else TfidfEmbedder()
+
+    embedder, method = select_embedder("ai", factory)
+    assert method == "baseline" and embedder.name == "tfidf-char-3-5"
+
+
+def test_pipeline_keeps_ai_when_model_loads():
+    import numpy as np
+
+    from scayl.pipeline import select_embedder
+
+    class Fine:
+        name = "st:fake"
+
+        def encode(self, texts):
+            return np.ones((len(texts), 3), dtype=np.float32) / np.sqrt(3)
+
+    embedder, method = select_embedder("ai", lambda kind: Fine())
+    assert method == "ai" and embedder.name == "st:fake"
