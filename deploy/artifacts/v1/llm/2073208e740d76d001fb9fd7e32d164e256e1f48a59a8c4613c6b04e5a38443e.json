@@ -1,0 +1,71 @@
+{
+ "data": {
+  "proposed_title": "Enrique Riquelme traslada su fortuna a Panamá: ¿por qué?",
+  "public_interest_angle": "Movimientos de patrimonio y políticas fiscales internacionales",
+  "brief": [
+   {
+    "text": "Según mundodeportivo.com y otros medios, Enrique Riquelme trasladó su fortuna a Panamá tras la presión fiscal del gobierno español. La afirmación no ha sido verificada por fuentes oficiales.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0093-001"
+    ]
+   },
+   {
+    "text": "Riquelme explicó que el traslado de su holding de España a Panamá no implica ninguna carga fiscal, según laestrella.com.pa.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0093-002"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Qué políticas fiscales específicas del gobierno español se mencionan en los medios como motivación del traslado?",
+   "¿Cuál es la naturaleza exacta del holding trasladado y cuál es su valor?",
+   "¿Qué declaraciones oficiales o legales ha hecho el gobierno español sobre este caso?"
+  ],
+  "script": [
+   {
+    "text": "Según medios como mundodeportivo.com, Enrique Riquelme trasladó su fortuna a Panamá tras la presión fiscal del gobierno español. Sin embargo, esta afirmación aún no ha sido verificada por fuentes oficiales.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0093-001"
+    ]
+   },
+   {
+    "text": "Riquelme explicó que el traslado de su holding de España a Panamá no implica ninguna carga fiscal, según laestrella.com.pa.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0093-002"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "Enrique Riquelme trasladó su fortuna a Panamá tras la presión fiscal del gobierno español, según medios. ¿Qué dice él sobre el tema?",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0093-001",
+    "CLM-0093-002"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar si el gobierno español mencionó específicamente la presión fiscal como motivación del traslado de Riquelme.",
+   "Verificar el contenido completo de los artículos de mundodeportivo.com y laestrella.com.pa para detalles adicionales.",
+   "Investigar si Riquelme ha hecho declaraciones oficiales sobre el traslado de su patrimonio."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 14604,
+  "tokens_in": 1205,
+  "tokens_out": 653,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-07T05:41:52.770393Z"
+ }
+}

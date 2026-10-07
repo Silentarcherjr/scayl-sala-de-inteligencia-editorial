@@ -1,0 +1,56 @@
+{
+ "data": {
+  "proposed_title": "Cooperativas del mundo ponen sus ojos en Panamá",
+  "public_interest_angle": "Panamá podría convertirse en un punto clave para el desarrollo logístico global, según medios internacionales.",
+  "brief": [
+   {
+    "text": "Según critica.com.pa, cooperativas del mundo han puesto sus ojos en Panamá, lo que sugiere interés en su potencial logístico.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0102-001"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Qué aspectos específicos de Panamá están atrayendo la atención de las cooperativas globales?",
+   "¿Qué instituciones o empresas están involucradas en este interés?",
+   "¿Cuál es el impacto potencial de esta atención en la economía panameña?"
+  ],
+  "script": [
+   {
+    "text": "Según critica.com.pa, cooperativas del mundo han puesto sus ojos en Panamá, lo que sugiere interés en su potencial logístico. Aunque no se dispone de información detallada, el titular indica que el país podría estar en el radar de actores internacionales.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0102-001"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "Cooperativas del mundo han puesto sus ojos en Panamá, según critica.com.pa. ¿Qué implica este interés? #Panamá #Logística #Noticias",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0102-001"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar el contenido completo del artículo de critica.com.pa para entender el contexto del interés en Panamá.",
+   "Identificar las cooperativas específicas que menciona el titular.",
+   "Verificar si hay otros medios o fuentes que respalden esta noticia."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 10953,
+  "tokens_in": 975,
+  "tokens_out": 460,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-07T05:40:07.077209Z"
+ }
+}

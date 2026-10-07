@@ -1,0 +1,73 @@
+{
+ "data": {
+  "proposed_title": "Canal de Panamá podría aumentar cupos diarios de tránsito",
+  "public_interest_angle": "El Canal de Panamá podría ajustar sus operaciones para mejorar la logística marítima.",
+  "brief": [
+   {
+    "text": "Según mundomaritimo.cl, el Canal de Panamá podría aumentar a 33 los cupos diarios de tránsito y fijar el calado Neopanamax en 14,94 metros. Esta información se basa en un titular publicado en el sitio web de la fuente.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0101-001",
+     "CLM-0101-004"
+    ]
+   },
+   {
+    "text": "El nivel del lago Gatún fue de 84.88 pies el 29 de septiembre de 2026, según datos del ACP.",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0101-002"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Cuál es el criterio exacto que se utiliza para fijar el calado Neopanamax en el Canal de Panamá?",
+   "¿Qué impacto podría tener el aumento de cupos diarios en la operación del Canal de Panamá?",
+   "¿Qué medidas se tomarán para garantizar que el nivel del lago Gatún se mantenga dentro de los parámetros establecidos?"
+  ],
+  "script": [
+   {
+    "text": "Según mundomaritimo.cl, el Canal de Panamá podría aumentar a 33 los cupos diarios de tránsito y fijar el calado Neopanamax en 14,94 metros. Esta información se basa en un titular publicado en el sitio web de la fuente.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0101-001",
+     "CLM-0101-004"
+    ]
+   },
+   {
+    "text": "El nivel del lago Gatún fue de 84.88 pies el 29 de septiembre de 2026, según datos del ACP.",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0101-002"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "El Canal de Panamá podría aumentar a 33 los cupos diarios de tránsito y fijar el calado Neopanamax en 14,94 metros, según un titular publicado en mundomaritimo.cl.",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0101-001",
+    "CLM-0101-004"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar si el titular de mundomaritimo.cl representa una decisión oficial del Canal de Panamá.",
+   "Verificar si el calado Neopanamax de 14,94 metros es una medida establecida o provisional.",
+   "Confirmar si el aumento de cupos diarios de tránsito está sujeto a condiciones específicas."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 17330,
+  "tokens_in": 1635,
+  "tokens_out": 757,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-07T05:39:56.118986Z"
+ }
+}

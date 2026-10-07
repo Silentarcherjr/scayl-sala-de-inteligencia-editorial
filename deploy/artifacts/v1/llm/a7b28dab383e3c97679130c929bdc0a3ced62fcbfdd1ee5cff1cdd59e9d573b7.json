@@ -1,0 +1,71 @@
+{
+ "data": {
+  "proposed_title": "Panamá y Ecuador avanzan en relación comercial",
+  "public_interest_angle": "Relación bilateral y potencial acuerdos comerciales entre Panamá y Ecuador",
+  "brief": [
+   {
+    "text": "Panamá incorporó oficialmente a Ecuador a su lista de países amigos, según reportes de medios como eluniverso.com y otros medios no especificados.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0059-001"
+    ]
+   },
+   {
+    "text": "Según revistaeyn.com, Panamá y Ecuador establecen las bases para negociar un acuerdo comercial.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0059-002"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Qué condiciones específicas se discutieron durante las conversaciones entre Panamá y Ecuador?",
+   "¿Cuál es el alcance exacto del acuerdo comercial que se busca negociar?",
+   "¿Qué instituciones o autoridades panameñas participaron en la incorporación de Ecuador a la lista de países amigos?"
+  ],
+  "script": [
+   {
+    "text": "Panamá incorporó oficialmente a Ecuador a su lista de países amigos, según reportes de medios como eluniverso.com y otros medios no especificados.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0059-001"
+    ]
+   },
+   {
+    "text": "Además, se reporta que ambos países establecen las bases para negociar un acuerdo comercial, según la revistaeyn.com.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0059-002"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "Panamá incorporó a Ecuador a su lista de países amigos y avanza en un acuerdo comercial. ¿Qué más se discutió?",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0059-001",
+    "CLM-0059-002"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar la participación de instituciones panameñas en la incorporación de Ecuador a la lista de países amigos.",
+   "Verificar el contenido completo de los artículos para confirmar los términos del acuerdo comercial.",
+   "Identificar los medios adicionales que reportaron la incorporación de Ecuador a la lista de países amigos."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 13112,
+  "tokens_in": 1140,
+  "tokens_out": 569,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-07T05:42:05.885781Z"
+ }
+}

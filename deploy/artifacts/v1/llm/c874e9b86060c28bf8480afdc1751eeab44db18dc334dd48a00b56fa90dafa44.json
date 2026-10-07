@@ -1,0 +1,33 @@
+{
+ "data": {
+  "claims": [
+   {
+    "source_id": "gdt-588a9a4f397c2d21afc9",
+    "statement": "Ilya Espino, primera mujer que asume la administración",
+    "type": "DECLARACION",
+    "attributed_to": "elvocero.com"
+   },
+   {
+    "source_id": "gdt-ab999357fdd7116f32d2",
+    "statement": "Ilya Espino de Marotta asume como administradora del Canal de Panamá para el período 2026-2033",
+    "type": "DECLARACION",
+    "attributed_to": "mundomaritimo.cl"
+   }
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "claims-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 5299,
+  "tokens_in": 551,
+  "tokens_out": 174,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-07T05:38:59.561066Z"
+ }
+}

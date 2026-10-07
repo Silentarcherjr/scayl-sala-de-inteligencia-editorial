@@ -38,3 +38,5 @@ Medición real E5 en CPU (torch 2.14.1+cpu, CUDA no disponible). Matrices ignora
 2026-10-07 05:07 UTC - B-13/B-14: merge limpio b6f5e08 desde main 61ee2fa; rama worker-b/recent-official-evidence. Adicion v1.1 con raw previos intactos: 394 niveles Gatun, 394 proyecciones null (fuera de corte), 24 INEC. Manifest verify []. Medicion E5: 165 eventos, antes/despues 0 suficiente,131 parcial,34 insuficiente. AP-012 contexto ACP irrelevante abierta. Precálculo equivalente a make (no instalado): 15 live qwen3:8b, Vulkan AMD RX9060XT 37/37 capas; mediana15068ms p9517755ms, citas49/49,0fallback. 152 pytest verdes. Resultados eval/results/b13-b14-*. No processed ni ZIP/RSS a Git.
 
 2026-10-07 05:12 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md. PR31; implementacion536e6c0;152passed;15live. Siguiente Lead AP-012,cotejoINEC y proyeccionhistorica.
+
+2026-10-07 05:48 UTC - Backlog 2 cache publica A-06: 187 noticias sin descripcion,165eventos,30entradas auditadas,15/15cache; stage preparado sin publicar;174pytest verdes; aviso @LowCrime en PR.
