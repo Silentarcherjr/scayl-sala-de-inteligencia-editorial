@@ -1,0 +1,65 @@
+{
+  "run_at": "2026-10-07T06:05:41.353884Z",
+  "source": "data\\processed\\b10-qwen3-4b\\generation_report.jsonl",
+  "source_sha256": "4b7dd2231289b3c1a0a90a46f8f8e359cc50bfc421396f81d2b19d17e06147a7",
+  "packages": 15,
+  "modes": {
+    "live": 15
+  },
+  "models": [
+    "ollama:qwen3:4b"
+  ],
+  "latency_ms": {
+    "n": 15,
+    "median": 9050.0,
+    "p95": 12898.199999999997,
+    "scope": "Story Studio live successful responses, wall clock; includes first load if any. Claims calls excluded. Cached/fallback latency excluded.",
+    "percentile_method": "linear / Hyndman-Fan type 7"
+  },
+  "citation_coverage": {
+    "num": 25,
+    "den": 25,
+    "value": 1.0
+  },
+  "live_citation_coverage": {
+    "num": 25,
+    "den": 25,
+    "value": 1.0
+  },
+  "citation_scope": "Kept brief/script sentences with claim_ids, from generation_report; includes nonfactual disclaimer sentences in denominator. Social copy excluded by existing report. Not support-validity or human fact-checking.",
+  "fallback_count": 3,
+  "sentences_generated": 49,
+  "sentences_kept": 35,
+  "removed_by_code": {
+    "NUMBER_NOT_IN_EVIDENCE": 7,
+    "EMPTY_BRIEF": 3,
+    "STATUS_MISMATCH": 7
+  },
+  "hardware": {
+    "models": [
+      {
+        "name": "qwen3:4b",
+        "model": "qwen3:4b",
+        "size": 3178149969,
+        "digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-07T01:35:41.2825135-05:00",
+        "size_vram": 3178149969,
+        "context_length": 4096,
+        "runner": "llamacpp"
+      }
+    ]
+  },
+  "invocation": "B-10 live full claims+Studio pipeline; same fixed E5 top15, model qwen3:4b",
+  "cache": "data\\cache\\llm\\benchmark-qwen3-4b-20261007",
+  "api_cost_usd": 0.0
+}

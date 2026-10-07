@@ -1,0 +1,145 @@
+{
+  "run_at": "2026-10-07T06:05:41.381995Z",
+  "snapshot_manifest_sha256": "6d7542a1b5e508340dde315c413d7954f4dddddd035996cfdae9c6c210f35535",
+  "models": {
+    "qwen3:8b": {
+      "run_at": "2026-10-07T05:43:24.408019Z",
+      "source": "data\\processed\\v1\\generation_report.jsonl",
+      "source_sha256": "19ec23eafb634400bf3e77d3682e7a86bb087ae4bf1cdeeee01005d4db4615b1",
+      "packages": 15,
+      "modes": {
+        "live": 15
+      },
+      "models": [
+        "ollama:qwen3:8b"
+      ],
+      "latency_ms": {
+        "n": 15,
+        "median": 14643.0,
+        "p95": 17600.0,
+        "scope": "Story Studio live successful responses, wall clock; includes first load if any. Claims calls excluded. Cached/fallback latency excluded.",
+        "percentile_method": "linear / Hyndman-Fan type 7"
+      },
+      "citation_coverage": {
+        "num": 49,
+        "den": 49,
+        "value": 1.0
+      },
+      "live_citation_coverage": {
+        "num": 49,
+        "den": 49,
+        "value": 1.0
+      },
+      "citation_scope": "Kept brief/script sentences with claim_ids, from generation_report; includes nonfactual disclaimer sentences in denominator. Social copy excluded by existing report. Not support-validity or human fact-checking.",
+      "fallback_count": 0,
+      "sentences_generated": 68,
+      "sentences_kept": 64,
+      "removed_by_code": {
+        "UNCITED_FACT": 2,
+        "STATUS_MISMATCH": 2
+      },
+      "hardware": "AMD Radeon RX 9060 XT 8 GiB / Ollama Vulkan; E5 embeddings CPU",
+      "invocation": "python -m scayl.pipeline build --snapshot data/raw/v1 --llm live --top 15 (make precompute recipe; make unavailable)",
+      "cache": "data/cache/llm/final-precompute-20261007",
+      "api_cost_usd": 0.0,
+      "code_git_sha": "dc1a9906749880b381dec27aabd1ba6955e6c6f0",
+      "changes": "DL-026 recent evidence context and DL-027 Q&A guards; no changes to model, tau or ranking weights."
+    },
+    "qwen3:4b": {
+      "run_at": "2026-10-07T06:05:41.353884Z",
+      "source": "data\\processed\\b10-qwen3-4b\\generation_report.jsonl",
+      "source_sha256": "4b7dd2231289b3c1a0a90a46f8f8e359cc50bfc421396f81d2b19d17e06147a7",
+      "packages": 15,
+      "modes": {
+        "live": 15
+      },
+      "models": [
+        "ollama:qwen3:4b"
+      ],
+      "latency_ms": {
+        "n": 15,
+        "median": 9050.0,
+        "p95": 12898.199999999997,
+        "scope": "Story Studio live successful responses, wall clock; includes first load if any. Claims calls excluded. Cached/fallback latency excluded.",
+        "percentile_method": "linear / Hyndman-Fan type 7"
+      },
+      "citation_coverage": {
+        "num": 25,
+        "den": 25,
+        "value": 1.0
+      },
+      "live_citation_coverage": {
+        "num": 25,
+        "den": 25,
+        "value": 1.0
+      },
+      "citation_scope": "Kept brief/script sentences with claim_ids, from generation_report; includes nonfactual disclaimer sentences in denominator. Social copy excluded by existing report. Not support-validity or human fact-checking.",
+      "fallback_count": 3,
+      "sentences_generated": 49,
+      "sentences_kept": 35,
+      "removed_by_code": {
+        "NUMBER_NOT_IN_EVIDENCE": 7,
+        "EMPTY_BRIEF": 3,
+        "STATUS_MISMATCH": 7
+      },
+      "hardware": {
+        "models": [
+          {
+            "name": "qwen3:4b",
+            "model": "qwen3:4b",
+            "size": 3178149969,
+            "digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "qwen3",
+              "families": [
+                "qwen3"
+              ],
+              "parameter_size": "4.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-10-07T01:35:41.2825135-05:00",
+            "size_vram": 3178149969,
+            "context_length": 4096,
+            "runner": "llamacpp"
+          }
+        ]
+      },
+      "invocation": "B-10 live full claims+Studio pipeline; same fixed E5 top15, model qwen3:4b",
+      "cache": "data\\cache\\llm\\benchmark-qwen3-4b-20261007",
+      "api_cost_usd": 0.0
+    }
+  },
+  "recommended_model": "qwen3:8b",
+  "selection_rule": "Among models with 15 live samples, zero fallback and citation coverage >=95%, choose lower median Studio latency. Not a truth/quality claim.",
+  "baseline_reused": "Actual final-precompute run from dc1a990; same core/snapshot and exact same ordered top15 event IDs verified.",
+  "top15_event_ids": [
+    "EVT-0101",
+    "EVT-0102",
+    "EVT-0100",
+    "EVT-0051",
+    "EVT-0078",
+    "EVT-0099",
+    "EVT-0081",
+    "EVT-0095",
+    "EVT-0093",
+    "EVT-0059",
+    "EVT-0153",
+    "EVT-0098",
+    "EVT-0111",
+    "EVT-0134",
+    "EVT-0107"
+  ],
+  "unmeasured": [
+    "QA latency",
+    "human support validity",
+    "human editorial quality",
+    "topics gold"
+  ],
+  "limitations": [
+    "n=15, one run per model; no repeated benchmark/confidence intervals.",
+    "Whole pipeline includes model-dependent claim extraction, so Studio claim inputs can differ.",
+    "Only validator removals and post-validation citations, not independent fact verification."
+  ]
+}

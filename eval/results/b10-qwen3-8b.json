@@ -1,0 +1,43 @@
+{
+  "run_at": "2026-10-07T05:43:24.408019Z",
+  "source": "data\\processed\\v1\\generation_report.jsonl",
+  "source_sha256": "19ec23eafb634400bf3e77d3682e7a86bb087ae4bf1cdeeee01005d4db4615b1",
+  "packages": 15,
+  "modes": {
+    "live": 15
+  },
+  "models": [
+    "ollama:qwen3:8b"
+  ],
+  "latency_ms": {
+    "n": 15,
+    "median": 14643.0,
+    "p95": 17600.0,
+    "scope": "Story Studio live successful responses, wall clock; includes first load if any. Claims calls excluded. Cached/fallback latency excluded.",
+    "percentile_method": "linear / Hyndman-Fan type 7"
+  },
+  "citation_coverage": {
+    "num": 49,
+    "den": 49,
+    "value": 1.0
+  },
+  "live_citation_coverage": {
+    "num": 49,
+    "den": 49,
+    "value": 1.0
+  },
+  "citation_scope": "Kept brief/script sentences with claim_ids, from generation_report; includes nonfactual disclaimer sentences in denominator. Social copy excluded by existing report. Not support-validity or human fact-checking.",
+  "fallback_count": 0,
+  "sentences_generated": 68,
+  "sentences_kept": 64,
+  "removed_by_code": {
+    "UNCITED_FACT": 2,
+    "STATUS_MISMATCH": 2
+  },
+  "hardware": "AMD Radeon RX 9060 XT 8 GiB / Ollama Vulkan; E5 embeddings CPU",
+  "invocation": "python -m scayl.pipeline build --snapshot data/raw/v1 --llm live --top 15 (make precompute recipe; make unavailable)",
+  "cache": "data/cache/llm/final-precompute-20261007",
+  "api_cost_usd": 0.0,
+  "code_git_sha": "dc1a9906749880b381dec27aabd1ba6955e6c6f0",
+  "changes": "DL-026 recent evidence context and DL-027 Q&A guards; no changes to model, tau or ranking weights."
+}
