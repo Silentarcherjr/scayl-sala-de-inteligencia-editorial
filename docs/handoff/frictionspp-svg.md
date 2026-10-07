@@ -1,7 +1,7 @@
-# Relevo · frictionspp-svg · 2026-10-07 05:44 UTC
+# Relevo · frictionspp-svg · 2026-10-07 05:49 UTC
 
 - **Motivo:** checkpoint preventivo AGENTS §2b; se continúa el backlog sin esperar merges.
-- **Rama:** worker-b/final-precompute · **Último commit de tarea:** 8fd8e69, empujado. Checkpoint en commit posterior.
+- **Rama:** worker-b/public-reviewed-cache · **Último commit de tarea:** faef4d4, empujado. Checkpoint en commit posterior.
 - **PRs:** ver lista abajo; solo el Lead mergea.
 
 ## Tarea en curso
@@ -9,13 +9,14 @@ Backlog final del Lead (docs/agents/frictionspp-svg.md), tareas en ramas nuevas 
 
 ## Hecho en esta sesión
 - 1 precalculo actualizado: https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/37 (worker-b/final-precompute, 8fd8e69).
+- 2 cache publica revisada: https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/38 (worker-b/public-reviewed-cache, faef4d4).
 
 ## Siguiente paso concreto
-2 cache publica para A-06
+3 B-11 CI
 Antes de cada tarea: fetch y rama nueva desde origin/main; no esperar merges.
 
 ## Estado de las pruebas
-172 passed. Cada PR incluye su ejecución; no confundir métricas reales con etiquetas pendientes.
+174 passed. Cada PR incluye su ejecución; no confundir métricas reales con etiquetas pendientes.
 
 ## Archivos tocados
 Ver los PRs listados y docs/worklog/worker-b.md; métricas en eval/results.

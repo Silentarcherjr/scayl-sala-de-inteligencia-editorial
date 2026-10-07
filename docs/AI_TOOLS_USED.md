@@ -25,6 +25,7 @@
 
 | 2026-10-07 | Codex | LowCrime | B-12/B-08 y A-06 | Set sintético de 16 ataques + 4 controles; runner service.ask/validador, métricas y preparación HF protegida | 156 pruebas; abstención 6/16 y 0/4, sondas 9/9; capturas locales; sin publicación ni LLM vivo | Pendiente del Lead, fallos de producto AP-012 |
 | 2026-10-07 05:43 UTC | Codex / modelos locales | frictionspp-svg | Backlog 1 precompute DL-026 | Backlog final del Lead | 172 pytest verdes; 15 paquetes medidos, E5 activo, qwen3:8b Vulkan RX9060XT; resultados final-precompute en eval/results; procesados locales. | Revisión del Lead pendiente |
+| 2026-10-07 05:48 UTC | Codex / modelos locales | frictionspp-svg | Backlog 2 cache publica A-06 | Backlog final del Lead | 187 noticias sin descripcion,165eventos,30entradas auditadas,15/15cache; stage preparado sin publicar;174pytest verdes; aviso @LowCrime en PR. | Revisión del Lead pendiente |
 
 ## Herramientas de IA dentro del producto (no son de desarrollo)
 

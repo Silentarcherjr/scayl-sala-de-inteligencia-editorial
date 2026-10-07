@@ -42,3 +42,6 @@ Medición real E5 en CPU (torch 2.14.1+cpu, CUDA no disponible). Matrices ignora
 2026-10-07 05:43 UTC - Backlog 1 precompute DL-026: 172 pytest verdes; 15 paquetes medidos, E5 activo, qwen3:8b Vulkan RX9060XT; resultados final-precompute en eval/results; procesados locales.
 
 2026-10-07 05:44 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md; 1 precalculo actualizado https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/37. Continúa 2 cache publica para A-06
+2026-10-07 05:48 UTC - Backlog 2 cache publica A-06: 187 noticias sin descripcion,165eventos,30entradas auditadas,15/15cache; stage preparado sin publicar;174pytest verdes; aviso @LowCrime en PR.
+
+2026-10-07 05:49 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md; 2 cache publica revisada https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/38. Continúa 3 B-11 CI

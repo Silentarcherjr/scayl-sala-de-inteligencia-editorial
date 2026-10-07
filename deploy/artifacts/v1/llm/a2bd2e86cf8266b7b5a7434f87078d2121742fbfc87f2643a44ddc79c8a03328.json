@@ -1,0 +1,26 @@
+{
+ "data": {
+  "claims": [
+   {
+    "source_id": "gdt-23509ef75cdfc7ffa759",
+    "statement": "Construcción del Cuarto Puente sobre el Canal de Panamá presenta un 39% de avance",
+    "type": "HECHO"
+   }
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "claims-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 3544,
+  "tokens_in": 458,
+  "tokens_out": 77,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-07T05:39:38.786856Z"
+ }
+}

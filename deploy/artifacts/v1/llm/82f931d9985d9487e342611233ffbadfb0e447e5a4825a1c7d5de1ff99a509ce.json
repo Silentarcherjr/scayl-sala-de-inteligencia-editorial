@@ -1,0 +1,70 @@
+{
+ "data": {
+  "proposed_title": "Buque gasífero surcoreano cruza el Canal de Panamá",
+  "public_interest_angle": "Movimiento logístico y tarifas del Canal de Panamá",
+  "brief": [
+   {
+    "text": "Según elcaribe.com.do y otros medios, un buque gasífero surcoreano cruzó el Canal de Panamá. La noticia se basa únicamente en titulares y metadatos, sin información detallada sobre el buque o su trayectoria.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0051-001"
+    ]
+   },
+   {
+    "text": "Laestrella.com.pa reportó que el buque pagó $5.3 millones por cruzar el Canal de Panamá, lo que se considera una cifra récord. Sin embargo, no se proporciona evidencia adicional para confirmar este costo.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0051-002"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Cuál es el nombre del buque y su destino final?",
+   "¿Qué información detallada se tiene sobre el costo de $5.3 millones?",
+   "¿Existen registros oficiales del Canal de Panamá que confirman el pago y la fecha del tránsito?"
+  ],
+  "script": [
+   {
+    "text": "Un buque gasífero surcoreano cruzó el Canal de Panamá, según reportes de medios como elcaribe.com.do y otros medios. La noticia se basa únicamente en titulares y metadatos, sin información detallada sobre el buque o su trayectoria.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0051-001"
+    ]
+   },
+   {
+    "text": "Laestrella.com.pa informó que el buque pagó $5.3 millones por cruzar el Canal, lo que se considera una cifra récord. Sin embargo, no se proporciona evidencia adicional para confirmar este costo.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0051-002"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "Un buque gasífero surcoreano cruzó el Canal de Panamá, según medios como elcaribe.com.do. La noticia se basa únicamente en titulares y metadatos. ¿Qué más sabemos sobre este tránsito?",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0051-001"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar si el buque gasífero surcoreano cruzó efectivamente el Canal de Panamá.",
+   "Verificar si el costo de $5.3 millones es realmente un récord y si se tiene evidencia oficial.",
+   "Revisar los artículos completos de los medios para obtener más detalles sobre el buque y el tránsito."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 15650,
+  "tokens_in": 1173,
+  "tokens_out": 711,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-07T05:40:36.494277Z"
+ }
+}
