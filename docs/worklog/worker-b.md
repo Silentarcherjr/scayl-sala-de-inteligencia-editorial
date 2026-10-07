@@ -66,3 +66,5 @@ Medición real E5 en CPU (torch 2.14.1+cpu, CUDA no disponible). Matrices ignora
 2026-10-07 19:34 UTC - B-07 revisión interactiva: Codex presenta propuestas guardadas por bloques de diez; frictionspp-svg aporta etiquetas humanas explícitas. Primer bloque10/100 confirmado: economia,turismo y ocho otro; horaUTC/respuesta/IDs conservados en human_review_log.jsonl. Métricas pendientes de revisión completa.
 
 2026-10-07T19:35:53.562049Z - B-07 humano: titulares 11-20 etiquetados explícitamente por frictionspp-svg; 20/100 revisados. Hora y respuesta en data/labels/human_review_log.jsonl. Un PR al finalizar todas las entradas.
+
+2026-10-07T19:36:49.318220Z - B-07 humano: titulares 21-30 etiquetados explícitamente por frictionspp-svg; 30/100 revisados. Hora y respuesta en data/labels/human_review_log.jsonl. Un PR al finalizar todas las entradas.
