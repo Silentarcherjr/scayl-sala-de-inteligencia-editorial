@@ -40,3 +40,5 @@ Medición real E5 en CPU (torch 2.14.1+cpu, CUDA no disponible). Matrices ignora
 2026-10-07 05:12 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md. PR31; implementacion536e6c0;152passed;15live. Siguiente Lead AP-012,cotejoINEC y proyeccionhistorica.
 
 2026-10-07 05:43 UTC - Backlog 1 precompute DL-026: 172 pytest verdes; 15 paquetes medidos, E5 activo, qwen3:8b Vulkan RX9060XT; resultados final-precompute en eval/results; procesados locales.
+
+2026-10-07 05:44 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md; 1 precalculo actualizado https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/37. Continúa 2 cache publica para A-06
