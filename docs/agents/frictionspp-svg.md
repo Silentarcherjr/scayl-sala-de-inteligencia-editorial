@@ -32,7 +32,7 @@ Cuando cumplas los pasos, borra esta sección en tu PR.
 > **DL-020 (2026-10-07):** LowCrime ya está activo y toma A-01, A-02 y A-08. Tu foco es solo datos y evaluación semántica.
 
 ## ⚠️ Relevo de sesión (lee esto primero)
-- **Al empezar:** si existe `docs/handoff/frictionspp-svg.md`, léelo antes que cualquier otra cosa y continúa desde su "Siguiente paso concreto".
+- **Al empezar:** sincroniza tu rama con `main` (`git fetch origin && git merge origin/main`, sin rebase) y lee las "Notas del Lead pendientes". Luego, si existe `docs/handoff/frictionspp-svg.md`, léelo antes que cualquier otra cosa y continúa desde su "Siguiente paso concreto".
 - **Al acercarte al límite (~15% restante)**, o si tu humano escribe **"RELEVO"**: detente, haz commit (`WIP:` si está a medias), escribe `docs/handoff/frictionspp-svg.md` con la plantilla `docs/handoff/TEMPLATE.md`, haz push y avísale a tu humano. Si no puedes ver tu límite, díselo a tu humano al empezar y haz un relevo preventivo al terminar cada tarea. Detalle en `AGENTS.md` §2b.
 
 ## Lee antes de escribir código (en este orden)

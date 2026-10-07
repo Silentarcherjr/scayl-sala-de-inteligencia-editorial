@@ -46,13 +46,21 @@ Cada persona le pega a su agente (Codex/Astra) el mensaje corto de abajo; las in
 - **frictionspp-svg** → `docs/agents/frictionspp-svg.md` (empieza ya: datos, semántica y primera UI).
 - **LowCrime** → `docs/agents/LowCrime.md` (llega más tarde: resto de la UI, evaluación, Trust Lab y despliegue; es el editor independiente).
 
-Mensaje para pegar (cambia el nombre de usuario):
+Mensaje estándar para **cada sesión nueva** del agente (cambia `<usuario>`). Incluye la sincronización con `main`,
+así el humano no tiene que ejecutar nada a mano:
 ```
-Estás en el repo SCAYL. Lee y sigue al pie de la letra docs/agents/<usuario>.md, que contiene tu rol, el orden
-de tareas y las reglas (AGENTS.md es obligatorio). Si existe docs/handoff/<usuario>.md, léelo primero y continúa
-desde ahí. Trabaja en ramas propias y abre PR hacia main; no mergees tú. Cuando te quede ~15% de sesión, o si
-escribo RELEVO, detente y deja el relevo según AGENTS.md §2b.
+Estás en el repo SCAYL. Antes de leer cualquier archivo, sincroniza tu rama de trabajo:
+  a. git status; si hay cambios sin commit, haz commit en tu rama con prefijo "WIP:".
+  b. git fetch origin && git merge origin/main   (merge normal: NO rebase, NO force-push).
+  c. Si hay conflictos, detente sin resolverlos a ciegas y muéstrame qué archivos chocan.
+  d. git push y confirma: rama, último commit y que el merge fue limpio.
+Después, lee y sigue al pie de la letra docs/agents/<usuario>.md (rol, orden de tareas y reglas; AGENTS.md es
+obligatorio), empezando por la sección "📌 Notas del Lead pendientes" si existe. Si existe
+docs/handoff/<usuario>.md, léelo también y continúa desde ahí. Trabaja en ramas propias y abre PR hacia main;
+no mergees tú. Cuando te quede ~15% de sesión, o si escribo RELEVO, detente y deja el relevo según AGENTS.md §2b.
 ```
+Si el agente todavía no tiene rama propia (primera sesión), en el paso b crea la rama desde `main`
+(`git switch -c worker-a/<tema>` o `worker-b/<tema>`) en lugar de hacer merge.
 
 ## 6. Tareas humanas (sin Codex)
 - **LowCrime (editor):** H-08 top 5 a ciegas a partir de `data/labels/editor_candidates.csv` → `data/labels/editor_top5.json` con hora; luego, en M3, revisar ≥30 afirmaciones (B-09). No mires el ranking antes de entregar tu top 5.
