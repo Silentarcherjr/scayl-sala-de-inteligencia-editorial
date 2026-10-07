@@ -40,3 +40,5 @@ Medición real E5 en CPU (torch 2.14.1+cpu, CUDA no disponible). Matrices ignora
 2026-10-07 05:12 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md. PR31; implementacion536e6c0;152passed;15live. Siguiente Lead AP-012,cotejoINEC y proyeccionhistorica.
 
 2026-10-07 05:48 UTC - Backlog 2 cache publica A-06: 187 noticias sin descripcion,165eventos,30entradas auditadas,15/15cache; stage preparado sin publicar;174pytest verdes; aviso @LowCrime en PR.
+
+2026-10-07 05:49 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md; 2 cache publica revisada https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/38. Continúa 3 B-11 CI
