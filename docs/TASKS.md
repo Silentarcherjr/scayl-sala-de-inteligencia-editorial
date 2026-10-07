@@ -24,8 +24,8 @@
 | L-12 | `review/store.py` + `outbox.py` | L | P0 | M1 | DONE | L-01 |
 | L-13 | `evidence/gaps.py` (Investigation Gap) | L | P1 | M2 | DOING (determinista listo; inferencias vía Story Studio) | L-05 |
 | L-14 | Integración, merges, README final, pitch | L | P0 | M3–M4 | TODO | todo |
-| A-01 | App Streamlit: esqueleto + `FixtureService` + navegación | **W** LowCrime (DL-020) | P0 | M1 | TODO | L-01 |
-| A-02 | Sala de Situación | **W** LowCrime (DL-020) | P0 | M1 | TODO | A-01 |
+| A-01 | App Streamlit: esqueleto + `FixtureService` + navegación | **W** LowCrime (DL-020) | P0 | M1 | DONE (PR #18) | L-01 |
+| A-02 | Sala de Situación | **W** LowCrime (DL-020) | P0 | M1 | DONE (PR #18) | A-01 |
 | A-03 | Ficha de Caso (6 pestañas) | **W** LowCrime | P0 | M1–M2 | DONE (PR #13) | A-01 |
 | A-04 | Consultas (Q&A) | **W** LowCrime | P0 | M2 | TODO | A-01 |
 | A-05 | Trust Lab (vista) | **L** Lead (DL-021) | P1 | M3 | DONE (vista; métricas reales pendientes de B-08) | B-08 |
