@@ -88,3 +88,5 @@ Medición real E5 en CPU (torch 2.14.1+cpu, CUDA no disponible). Matrices ignora
 2026-10-07T19:52:54.285943Z - relevo preventivo: ver docs/handoff/frictionspp-svg.md. Temas100/100 ymacroF1medido; siguiente agrupación1–10; continuarinteracción.
 
 2026-10-07T19:56:07.086875Z - B-07 humano: grupos de titulares 1-10 confirmados explícitamente por frictionspp-svg; 10/32 revisados. Hora y respuesta en data/labels/human_review_log.jsonl.
+
+2026-10-07T19:57:06.719717Z - B-07 humano: grupos de titulares 11-20 confirmados explícitamente por frictionspp-svg; 20/32 revisados. Hora y respuesta en data/labels/human_review_log.jsonl.
