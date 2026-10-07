@@ -144,3 +144,10 @@
 - **Hallazgos en datos reales** (corregidos, ver 06): (1) un titular que **negaba** un sismo quedó "confirmado" por USGS; (2) una diferencia de magnitud 4.7 vs 4.5 se absorbía sin mostrarse.
 - **Salvaguarda P@5:** `data/processed/*/` no se sube a `main` hasta que exista el top 5 ciego (H-08).
 - **Fecha:** 2026-10-07
+
+### DL-024 · Top 5 del editor aceptado con limitación declarada; P@5 preliminar
+- **Decisión:** se acepta la selección de LowCrime (PR #23) como referencia de P@5, que sigue siendo **exploratoria**. En la entrega se declara que el editor vio antes una propuesta generada por IA (coincide con su elección en 1 de 5) y que **no** vio el ranking del sistema ni la app con datos reales. No se presenta como selección independiente sin asistencia.
+- **Resultado preliminar (baseline TF-IDF + reglas, sin ACP/INEC):** P@5 = 1/5. Posiciones de los elegidos: 2, 6, 12, 22 y 26 de 183 eventos. B-08 (LowCrime) la recalcula con el pipeline final.
+- **Lectura:** 3 de los 5 elegidos tratan El Niño en el Canal, pero quedan como eventos separados (EVT-0088, EVT-0096, EVT-0158, y además EVT-0127, que no fue elegido). La agrupación TF-IDF no une titulares con redacción distinta ni en otro idioma. La variante con embeddings (B-05 IA) es la mejora prevista y se mide contra este baseline. **No se ajustan pesos para "acertar" el top 5** (sería sobreajuste a 5 etiquetas).
+- **`data/processed/`:** sigue fuera de git. El bundle completo incluye descripciones de RSS (derechos), así que cada máquina lo regenera con `make demo`; la versión pública solo se genera con `--public`.
+- **Fecha:** 2026-10-07

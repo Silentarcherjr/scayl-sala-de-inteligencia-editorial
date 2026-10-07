@@ -57,7 +57,7 @@
 | H-05 | **Video de la demo con internet apagado** → Notion | W | P0 | M4 | TODO | M3 |
 | H-06 | **Mini-estudio manual vs asistido** (3 tareas cronometradas, protocolo en 06) | F + W | P1 | M3 | TODO | M2 |
 | H-07 | Registro de **prueba fallida → corrección** (regla continua: cada fallo real se anota en 06) | Todos | P0 | M1–M4 | DOING | — |
-| H-08 | Top 5 **a ciego** del editor (Humano 2), antes de que exista ranking | W (editor) | P0 | M0–M1 | TODO | B-01 |
+| H-08 | Top 5 **a ciego** del editor (Humano 2), antes de que exista ranking | W (editor) | P0 | M0–M1 | DONE (PR #23; ver DL-024) | B-01 |
 | B-13 | **ACP**: niveles del lago Gatún (CSV histórico + proyección) → `indicadores_recientes.csv` (AP-010) | **F** frictionspp-svg | P1 | M2 | TODO | B-01 |
 | B-14 | **INEC**: IPC urbano nacional mensual (variación mensual e interanual) desde los cuadros PDF → `indicadores_recientes.csv` | **F** frictionspp-svg | P1 | M2–M3 | TODO | B-13 |
 

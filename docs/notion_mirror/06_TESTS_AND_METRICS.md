@@ -18,7 +18,7 @@
 | T09 | Brief editorial | Paquete de un evento real | Formato útil, citas válidas, hechos ≠ inferencias, frase de alcance | **PASA (LLM simulado)**: se elimina la cifra inventada; HECHO/DECLARACION; frase de alcance; título con cifras sin respaldo reemplazado; respaldo a plantilla. Falta: con datos reales y modelo real | `tests/test_t09_validators.py`, `tests/test_t09_studio.py` | Ver registro: cifra de fecha |
 | T10 | Sin internet | Red desactivada | Funciona con el snapshot + fallback documentado | **Parcial**: service + pipeline corren con red bloqueada en la prueba (socket deshabilitado); falta el ensayo real sin wifi | `tests/test_service_pipeline.py` + video o captura (H-05) | — |
 
-## Métricas (§9.1) — todas **no medidas** aún
+## Métricas (§9.1) — solo P@5 medida (preliminar); el resto **no medido**
 | Métrica | Meta orientativa | Resultado | n | Método |
 |---|---|---|---|---|
 | Cobertura de citas | 100% | no medido | — | Validador automático |
@@ -27,7 +27,7 @@
 | Abstención incorrecta | reportar | no medido | — | Benchmark dev, preguntas respondibles |
 | Temas macro-F1 (baseline vs IA) | reportar | no medido | — | ≥100 etiquetas humanas |
 | Agrupación P/R/F1 (baseline vs IA) | reportar | no medido | — | Pares etiquetados |
-| Precision@5 | reportar (exploratoria) | no medido | — | Top 5 ciego de un integrante |
+| Precision@5 | reportar (exploratoria) | **1/5 = 0.20** (baseline TF-IDF + reglas, sin ACP/INEC; preliminar del Lead, B-08 la formaliza). Los 5 elegidos quedan en las posiciones 2, 6, 12, 22 y 26 de 183 | 5 eventos | Top 5 de LowCrime (PR #23, 2026-10-07). Limitación: vio antes una propuesta de IA (coincide en 1 de 5) y no vio el ranking del sistema (DL-024) |
 | Latencia mediana / p95 | mediana ≤15 s | no medido | — | Hardware declarado |
 | Costo de API | — | $0.00 por diseño (local); se confirma al medir | — | — |
 
