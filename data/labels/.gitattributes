@@ -1,3 +1,5 @@
 # Preserve exact bytes used by the saved development calibration.
 dev2025_news.jsonl -text
 dev2025_cluster_pairs.csv -text
+topics_human.csv -text
+dev2025_groups_human.csv -text
