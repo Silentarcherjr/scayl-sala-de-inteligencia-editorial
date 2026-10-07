@@ -202,3 +202,13 @@
 - **Para el pitch:** usamos IA donde mide mejor y reglas donde la IA perdió. Es una decisión por evidencia, no por moda.
 - **Consecuencia:** al cambiar los temas cambia el componente I de la prioridad y con él el ranking. La caché LLM del top 15 y la caché pública deben regenerarse (frictionspp-svg: `make precompute` + caché pública). P@5 y B-08 se recalculan después.
 - **Fecha:** 2026-10-07
+
+### DL-030 · B-07 y set reservado humano (red-team v2) integrados
+- **B-07 (frictionspp-svg, humano):**
+  - temas, macro-F1 con n = 100: reglas 0,757 frente a E5 0,246;
+  - agrupación, pares de desarrollo revisados por humano: TF-IDF F1 0,44 (P 12/12, R 12/43) frente a E5 F1 0,99 (P 42/42, R 42/43).
+  - Confirma DL-029: reglas para temas, E5 para agrupar.
+  - **Limitación:** los pares de agrupación son el conjunto de desarrollo usado para calibrar τ, así que el F1 es optimista y no es una evaluación ciega.
+- **Set reservado v2 (10 preguntas escritas por un humano sin ver el código):** 6/6 trampas con abstención correcta. Las 4 preguntas esperadas como "respondibles" eran de cultura general (moneda, año de inauguración del Canal, provincia más grande, presidente que inauguró el Canal) y **no están en el corpus** (verificado: 0 coincidencias). SCAYL responde solo con evidencia citada, no de memoria, así que la abstención es el comportamiento diseñado. Se reportan ambas lecturas sin reescribir las expectativas humanas: 6/10 según las expectativas del autor; 10/10 con el criterio "solo con evidencia del corpus".
+- **Para el pitch:** "no responde de memoria" es una garantía, no una carencia; se muestra con HV2-07 ("¿Cuál es la moneda oficial de Panamá?" → abstención con la información que faltaría).
+- **Fecha:** 2026-10-07

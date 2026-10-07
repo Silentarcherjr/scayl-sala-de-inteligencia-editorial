@@ -36,7 +36,7 @@
 | B-04 | Casos sintéticos T01/T03/T05/T07 en `data/synthetic/` | **F** frictionspp-svg | P0 | M1 | DONE (PR #49: 6 casos SINTÉTICOS aislados, incluye uno "suficiente") | L-01 |
 | B-05 | `intel/embed.py` + `topics.py` + `cluster.py` (baseline + IA) | **L** baseline / **F** IA (DL-023) | P0 | M1–M2 | DONE (PR #28: E5 multilingüe, τ=0,87 calibrado en desarrollo 2025; validación humana en B-07) | B-03 |
 | B-06 | `intel/retrieve.py` (BM25 + coseno) | **F** frictionspp-svg | P0 | M2 | DONE (PR #50: opcional, desactivado por defecto; no reemplaza el recuperador de Consultas) | B-05 |
-| B-07 | Etiquetas humanas: temas (≥100), pares de agrupación, top 5 ciego, benchmark dev (40) | F (etiquetas) + W (top 5 ciego) | P0 | M2 | PREPARADA (PR #40: 100 temas + 32 titulares listos; falta revisión humana) | B-03 |
+| B-07 | Etiquetas humanas: temas (≥100), pares de agrupación, top 5 ciego, benchmark dev (40) | F (etiquetas) + W (top 5 ciego) | P0 | M2 | DONE (PR #53: 100 temas + 32 titulares por humano; DL-029/DL-030) | B-03 |
 | B-08 | `eval/`: métricas, benchmark, latencia → `eval/results/latest.json` | **W** LowCrime | P0/P1 | M3 | DONE (PR #27/#41: P@5, red-team, precompute importado; se recalcula al llegar B-07/B-09) | B-05, L-10, L-11 |
 | B-09 | Revisión humana de ≥30 afirmaciones (validez de sustento) | W (editor) | P0 | M3 | PREPARADA (PR #43: 30 afirmaciones listas; falta marcar sí/no/parcial) | L-10 |
 | B-10 | Benchmark de modelos locales (embeddings + LLM) en hardware declarado | **F** frictionspp-svg (AMD Radeon RX 9060 XT 8 GB, Vulkan) | P0 | M1 | DONE (PR #48: qwen3:8b recomendado frente a 4b) | — |
