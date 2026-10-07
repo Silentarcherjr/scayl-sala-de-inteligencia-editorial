@@ -41,3 +41,4 @@
 - **2026-10-07 09:30 UTC** — PR #32 (LowCrime: red-team B-12, B-08 y Space A-06 preparado) integrado. El red-team destapó fallos reales en Consultas (6/16); el Lead los corrige con reglas generales: 16/16, 0/4 falsas abstenciones (DL-027, AP-013). 172 pruebas. A-06 listo para publicar en cuanto haya caché LLM revisada.
 - **2026-10-07 09:45 UTC** — Backlog final con reglas de autonomía publicado en `docs/agents/*.md`: cada worker avanza tarea por tarea con un PR independiente, sin esperar merges, hasta "TERMINADO".
 
+- **2026-10-07 09:50 UTC** — H-05 (video de la demo) pasa a Humano 1 + Lead: el Lead escribe el guion y el Humano 1 graba en local. Se retira del backlog de LowCrime.
