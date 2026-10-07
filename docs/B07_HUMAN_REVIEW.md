@@ -24,6 +24,11 @@ y todos los titulares de los pares antes de medir cada componente. Sin revisión
 El desarrollo ya se usó para calibrar τ provisional: los resultados no son generalización
 a un conjunto reservado. No se recalibra ni se lee editor_top5.
 
-Estado actual: formularios preparados y solicitud enviada al humano; 0 etiquetas confirmadas.
-La tarea está bloqueada en esa revisión. Se continúa el benchmark en un worktree para
-mantener estos CSV disponibles y preservar ediciones humanas durante otras tareas.
+La revisión interactiva registra únicamente confirmaciones o correcciones explícitas del
+humano, con revisor `frictionspp-svg`. `data/labels/human_review_log.jsonl` conserva la
+respuesta original, los IDs, propuesta y etiqueta humana, y la hora UTC de cada bloque.
+El CSV conserva su esquema; la hora se vincula por ID mediante esta bitácora. No se copian
+propuestas a etiquetas humanas sin autorización explícita.
+
+Estado: revisión en curso en `worker-b/human-inputs`; el conteo actual se obtiene de las
+filas con `confirmado=si`. Las métricas se vuelven a ejecutar al terminar todos los bloques.

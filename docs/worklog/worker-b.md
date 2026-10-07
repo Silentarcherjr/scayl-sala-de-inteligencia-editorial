@@ -60,3 +60,7 @@ Medición real E5 en CPU (torch 2.14.1+cpu, CUDA no disponible). Matrices ignora
 2026-10-07 19:11 UTC - B-06: Recuperador experimental opt-in BM25 positivo+coseno E5, scores[0,1], sin integrar qa.py. 176pytest y Ruff propio verdes. Smoke real3/3consultas con1314unidades; precision y latenciaQA no medidas. H-06 compartido ya tienePR45 y espera humanos.
 
 2026-10-07 19:13 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md; B-06 https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/50. Continúa Volver a los bloqueos: diez preguntas humanas holdout_v2, confirmar cien temas/32 grupos B-07 y seis tiempos H-06 PR45. CI PR39 conserva36avisosfuera tests paraLead. No hay mas tareas autonomas.
+
+2026-10-07T19:34:26.138970Z - B-07 humano: titulares 1-10 etiquetados explícitamente por frictionspp-svg; 10/100 revisados. Hora y respuesta en data/labels/human_review_log.jsonl. Un PR al finalizar todas las entradas.
+
+2026-10-07 19:34 UTC - B-07 revisión interactiva: Codex presenta propuestas guardadas por bloques de diez; frictionspp-svg aporta etiquetas humanas explícitas. Primer bloque10/100 confirmado: economia,turismo y ocho otro; horaUTC/respuesta/IDs conservados en human_review_log.jsonl. Métricas pendientes de revisión completa.

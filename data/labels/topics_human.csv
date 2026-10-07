@@ -1,14 +1,14 @@
 id_noticia,titulo,tema_propuesto,tema_humano,confirmado,revisor
-gdt-6d81d100f4164a825bf7,¿Por qué el Canal de Panamá listó su bono en el mercado secundario de Latinex?,logistica_canal,null,null,null
-gdt-a9df80079a17b6149b71,Copa Airlines reactiva segunda ruta Caracas-Panamá a partir del 15 de septiembre,logistica_canal,null,null,null
-gdt-27df9ec19283832330a4,Canciller de Panamá pide una nueva arquitectura de gobernanza mundial ante los desafíos del siglo XXI,logistica_canal,null,null,null
-gdt-89b728c8476e1f8bcc9f,La Selección Peruana Sub-19 venció a Panamá y avanzó a las semifinales de los Juegos Suramericano,logistica_canal,null,null,null
-tvn-55c1f718c3ee5176afc0,"Líderes 360: Pedro Heilbron, el hombre que vio despegar a Copa y convertirse en el Hub de las Américas",logistica_canal,null,null,null
-tvn-7453e3d3e05227c8412f,Colaboradores de TVN Media participan en voluntariado en beneficio de la Fundación Latidos,otro,null,null,null
-tvn-e308b9fd03c9c5cf9f39,TVN Media oficializa patrocinio para el World of Coffee Panamá 2026,otro,null,null,null
-tvn-187c0effb4ad09778d30,Mario Castrellón protagoniza Líderes 360 este viernes en Noticias AM,otro,null,null,null
-gdt-2b7c4c312842dfba43b7,Panamá descartó restablecer lazos con Delcy Rodríguez hasta nuevas elecciones en Venezuela,logistica_canal,null,null,null
-gdt-8387e9200c3bb046b9fa,Hegseth lanza desde Panamá fuerte mensaje contra los cárteles de América Latina,logistica_canal,null,null,null
+gdt-6d81d100f4164a825bf7,¿Por qué el Canal de Panamá listó su bono en el mercado secundario de Latinex?,logistica_canal,economia,si,frictionspp-svg
+gdt-a9df80079a17b6149b71,Copa Airlines reactiva segunda ruta Caracas-Panamá a partir del 15 de septiembre,logistica_canal,turismo,si,frictionspp-svg
+gdt-27df9ec19283832330a4,Canciller de Panamá pide una nueva arquitectura de gobernanza mundial ante los desafíos del siglo XXI,logistica_canal,otro,si,frictionspp-svg
+gdt-89b728c8476e1f8bcc9f,La Selección Peruana Sub-19 venció a Panamá y avanzó a las semifinales de los Juegos Suramericano,logistica_canal,otro,si,frictionspp-svg
+tvn-55c1f718c3ee5176afc0,"Líderes 360: Pedro Heilbron, el hombre que vio despegar a Copa y convertirse en el Hub de las Américas",logistica_canal,otro,si,frictionspp-svg
+tvn-7453e3d3e05227c8412f,Colaboradores de TVN Media participan en voluntariado en beneficio de la Fundación Latidos,otro,otro,si,frictionspp-svg
+tvn-e308b9fd03c9c5cf9f39,TVN Media oficializa patrocinio para el World of Coffee Panamá 2026,otro,otro,si,frictionspp-svg
+tvn-187c0effb4ad09778d30,Mario Castrellón protagoniza Líderes 360 este viernes en Noticias AM,otro,otro,si,frictionspp-svg
+gdt-2b7c4c312842dfba43b7,Panamá descartó restablecer lazos con Delcy Rodríguez hasta nuevas elecciones en Venezuela,logistica_canal,otro,si,frictionspp-svg
+gdt-8387e9200c3bb046b9fa,Hegseth lanza desde Panamá fuerte mensaje contra los cárteles de América Latina,logistica_canal,otro,si,frictionspp-svg
 gdt-36214199063c7f076411,Construction of new deep - sea port in Georgia accelerates | Hellenic Shipping News Worldwide,logistica_canal,null,null,null
 gdt-f2de2663846e8161f91f,Habilitan ruta rápida por tranque infiernal a Davis y la Costa Abajo de Colón,logistica_canal,null,null,null
 tvn-167313d4f4b5b5183a4f,TVN Media y la Feria de La Chorrera firman alianza estratégica,otro,null,null,null
