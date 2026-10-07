@@ -40,3 +40,5 @@ Medición real E5 en CPU (torch 2.14.1+cpu, CUDA no disponible). Matrices ignora
 2026-10-07 05:12 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md. PR31; implementacion536e6c0;152passed;15live. Siguiente Lead AP-012,cotejoINEC y proyeccionhistorica.
 
 2026-10-07 05:51 UTC - B-11 CI: 172pytest verdes,ruff tests verde; workflow Python3.12 con pytest y ruff check .;36avisos globales fuera de tests reportados,sin ocultarlos ni modificar modulos Lead.
+
+2026-10-07 05:52 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md; 3 B-11 workflow y lint tests https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/39. Continúa 4 holdout humano pendiente; continuar 5 B-07 etiquetas
