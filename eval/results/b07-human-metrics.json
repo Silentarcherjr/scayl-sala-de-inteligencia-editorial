@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-10-07T19:47:49.986328Z",
+  "run_at": "2026-10-07T19:58:55.337144Z",
   "topics": {
     "status": "medido",
     "baseline": {
@@ -13,8 +13,43 @@
     "macro_scope": "all 7 official classes, zero_division=0"
   },
   "clustering": {
-    "status": "no medido; revisión humana pendiente",
-    "n_reviewed_headlines": 0
+    "status": "medido; desarrollo asistido",
+    "baseline": {
+      "tp": 12,
+      "fp": 0,
+      "fn": 31,
+      "tn": 445,
+      "n_pairs": 488,
+      "precision": {
+        "num": 12,
+        "den": 12,
+        "value": 1.0
+      },
+      "recall": {
+        "num": 12,
+        "den": 43,
+        "value": 0.27906976744186046
+      },
+      "f1": 0.43636363636363634
+    },
+    "ai": {
+      "tp": 42,
+      "fp": 0,
+      "fn": 1,
+      "tn": 445,
+      "n_pairs": 488,
+      "precision": {
+        "num": 42,
+        "den": 42,
+        "value": 1.0
+      },
+      "recall": {
+        "num": 42,
+        "den": 43,
+        "value": 0.9767441860465116
+      },
+      "f1": 0.988235294117647
+    }
   },
   "limitations": [
     "Human annotations assisted by model/agent proposals; not blind gold.",
@@ -23,6 +58,6 @@
   ],
   "labels_sha256": {
     "topics_human.csv": "79b525ad2ec5b4a14e349ee58599bbcf70f94e7c23a8041131515e524f20c2fb",
-    "dev2025_groups_human.csv": "ce92e9dc98eff4ec485c34465af7082b0fec75b5b6b344c82fd21f6a7f5b95e2"
+    "dev2025_groups_human.csv": "2ddf1d36a2e167423e57f28fe01c32c206cfa8909644608ee8271d4d805dbdb0"
   }
 }

@@ -38,4 +38,21 @@ La ejecución guardada en `eval/results/b07-human-metrics.json` mide macro-F1
 baseline=0.7568136932192232 e IA=0.24645960051496715, sobre las siete clases
 oficiales (`zero_division=0`). No se ajustaron modelos, prototipos ni umbrales con
 estas respuestas. Es revisión asistida con propuestas visibles; no gold ciego.
-La agrupación sigue sin medir hasta completar la revisión de sus 32 titulares.
+Agrupación completada el 2026-10-07: 32/32 titulares revisados explícitamente por
+`frictionspp-svg`, en cuatro bloques (10/10/10/2); confirmó las propuestas mostradas.
+La equivalencia de esos grupos deriva las etiquetas de los 488 pares de desarrollo.
+
+| Método | Precisión | Recall relativo al pool | F1 | TP/FP/FN/TN |
+| --- | --- | --- | --- | --- |
+| baseline | 12/12 = 1.0 | 12/43 = 0.2790697674 | 0.4363636364 | 12/0/31/445 |
+| IA | 42/42 = 1.0 | 42/43 = 0.9767441860 | 0.9882352941 | 42/0/1/445 |
+
+Estos pares de desarrollo de 2025 ya se usaron para calibrar τ con etiquetas
+provisionales. La revisión asistida no transforma el conjunto en un holdout ni
+estima recall absoluto sobre todos los eventos posibles. Los modelos, τ y los
+prototipos permanecen sin ajustar con esta revisión. En temas, IA tiene menor
+macro-F1 que el baseline en este conjunto; no se oculta ese resultado.
+
+La auditoría en `eval/results/b07-human-review-summary.json` comprueba 100/100 temas
+y 32/32 grupos contra la bitácora y conserva sus hashes y los del evaluador.
+Validación tras completar B-07: 188 pruebas y `ruff check .` verdes.
