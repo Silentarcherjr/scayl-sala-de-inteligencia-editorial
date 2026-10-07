@@ -170,3 +170,13 @@
 - Esfuerzo estimado: un bloque de revisión + regresiones.
 - Recomendación: ACCEPT.
 - Decisión (Lead/humano + fecha): **ACEPTADA** por el Lead, 2026-10-07 (DL-027). Política: ante una premisa con una cifra ausente, el sistema **se abstiene**; no corrige con otra cifra sin que se le pregunte por ella.
+
+## AP-014 · Mostrar red-team y procedencia de métricas en Trust Lab
+- Autor/fecha: LowCrime, 2026-10-07. Estado: ABIERTA, revisión del Lead.
+- Problema: A-05 ya muestra latencia y n, pero omite red-team, limitación DL-024 de P@5 y hardware/archivo de las mediciones importadas. El visitante puede confundir cobertura de citas con sustento o el hardware evaluador con el de inferencia.
+- Cambio propuesto: parche adjunto `docs/proposals/AP-014-trust-lab.patch`, NO aplicado al módulo del Lead. Añade ratios resistidos/total, controles, sondas, fallos, alcance sintético y archivo de corrida; limitación P@5 literal; procedencia/hardware del precompute de PR #41.
+- Archivos afectados si se acepta: app/pages/3_Trust_Lab.py. Sin contratos/dependencias nuevos.
+- Validación propuesta: fixture con metrics ausentes conserva no medido; fixture con mediciones muestra num/den, n, fuente y limitación; los fallos del red-team no desaparecen tras pasar pytest.
+- Validación del adjunto: `git apply --check` y compilación del texto propuesto. La suite base se ejecuta, pero no prueba comportamiento del parche no aplicado.
+- Riesgo: más texto en pantalla. Se agrupan origen/limitaciones junto a las métricas, sin cambiar cálculos.
+- Recomendación: ACCEPT. Decisión pendiente; no bloquea las demás tareas.

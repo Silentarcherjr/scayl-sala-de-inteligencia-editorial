@@ -25,3 +25,5 @@
 2026-10-07 05:12 UTC · Calidad · python -m pytest -q --junitxml=eval/results/pytest-redteam.xml: 156 passed. Pruebas significativas de contabilidad, aislamiento offline, restauración ante excepción, gating de todas las páginas, rotación de contraseña y cache obligatoria. Fallos y correcciones en 06. Resultados red-team fallidos no se ocultan tras la suite verde.
 
 2026-10-07 05:14 UTC · relevo: ver docs/handoff/LowCrime.md. PR #32 abierto a main, be92dbe subido; HF sin publicar. Siguiente: revisión AP-012 y preparación de caché pública/build Docker antes de confirmación de publicación.
+
+2026-10-07 17:48 UTC · Backlog2 · AP-014 propone red-team, DL-024 y procedencia de latencia/citas en A-05; parche adjunto sin aplicar al módulo del Lead. PR #41 anterior abierto, sin esperar merge. Validación estática del parche; implementación/UI pendiente de decisión.

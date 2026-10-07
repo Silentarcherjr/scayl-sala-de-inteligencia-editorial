@@ -31,3 +31,5 @@
 |---|---|---|---|
 | Embeddings | _DL-006, pendiente_ | Temas, agrupación, recuperación | $0 (local) |
 | LLM | _DL-006, pendiente_ | Afirmaciones, paquete editorial, Q&A | $0 (local) |
+
+Codex · LowCrime · 2026-10-07 · AP-014: revisión de Trust Lab y parche propuesto de métricas/limitaciones; no aplicado, pendiente del Lead.
