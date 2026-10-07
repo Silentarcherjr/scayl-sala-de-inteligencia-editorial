@@ -15,7 +15,7 @@ cp .env.example .env # nunca subas .env
 Sin `make` (Windows): `python scripts/make_ui_fixture.py` y `python -m pytest -q`.
 
 ### IA local (solo para la máquina con GPU; necesario para B-10 y la demo)
-1. Instala Ollama (https://ollama.com) y descarga los candidatos: `ollama pull qwen3.5:9b`, `ollama pull qwen3:8b` (4060) o `ollama pull qwen3:4b` (3050). Si un tag no existe, anota el que uses.
+1. Instala Ollama (https://ollama.com) y descarga los candidatos: `ollama pull qwen3.5:9b`, `ollama pull qwen3:8b` (GPU de 8 GB) o `ollama pull qwen3:4b` (3050). Si un tag no existe, anota el que uses.
 2. Instala torch con CUDA según https://pytorch.org (elige tu versión de CUDA) y luego `pip install -r requirements-ai.txt`.
 
 ## 2. Reglas en 60 segundos (detalle en `AGENTS.md`)
@@ -25,6 +25,7 @@ Sin `make` (Windows): `python scripts/make_ui_fixture.py` y `python -m pytest -q
 - Las dependencias de `requirements*.txt` ya están aprobadas. Una nueva requiere propuesta.
 - `pytest` en verde antes de cada PR. Sin secretos. Sin métricas inventadas.
 - Usaste IA (Codex/Astra) → agrega una fila en `docs/AI_TOOLS_USED.md` (entregable oficial).
+- **Relevo:** cuando el agente se acerque al límite de su sesión (~15%) o cuando le escribas **"RELEVO"**, se detiene y deja `docs/handoff/<usuario>.md` para que otro agente continúe (AGENTS.md §2b). Si cambias de agente o de sesión, el nuevo empieza leyendo ese archivo.
 - Cada vez que una prueba falle de verdad y la corrijas, anótalo en `docs/notion_mirror/06_TESTS_AND_METRICS.md` → "Registro de pruebas fallidas" (el jurado lo pedirá).
 
 ## 3. Ritmo y puntos de sincronización
@@ -45,12 +46,21 @@ Cada persona le pega a su agente (Codex/Astra) el mensaje corto de abajo; las in
 - **frictionspp-svg** → `docs/agents/frictionspp-svg.md` (empieza ya: datos, semántica y primera UI).
 - **LowCrime** → `docs/agents/LowCrime.md` (llega más tarde: resto de la UI, evaluación, Trust Lab y despliegue; es el editor independiente).
 
-Mensaje para pegar (cambia el nombre de usuario):
+Mensaje estándar para **cada sesión nueva** del agente (cambia `<usuario>`). Incluye la sincronización con `main`,
+así el humano no tiene que ejecutar nada a mano:
 ```
-Estás en el repo SCAYL. Lee y sigue al pie de la letra docs/agents/<usuario>.md, que contiene tu rol, el orden
-de tareas y las reglas (AGENTS.md es obligatorio). Empieza por la sección "Lee antes de escribir código"
-y luego por la primera tarea de tu lista. Trabaja en ramas propias y abre PR hacia main; no mergees tú.
+Estás en el repo SCAYL. Antes de leer cualquier archivo, sincroniza tu rama de trabajo:
+  a. git status; si hay cambios sin commit, haz commit en tu rama con prefijo "WIP:".
+  b. git fetch origin && git merge origin/main   (merge normal: NO rebase, NO force-push).
+  c. Si hay conflictos, detente sin resolverlos a ciegas y muéstrame qué archivos chocan.
+  d. git push y confirma: rama, último commit y que el merge fue limpio.
+Después, lee y sigue al pie de la letra docs/agents/<usuario>.md (rol, orden de tareas y reglas; AGENTS.md es
+obligatorio), empezando por la sección "📌 Notas del Lead pendientes" si existe. Si existe
+docs/handoff/<usuario>.md, léelo también y continúa desde ahí. Trabaja en ramas propias y abre PR hacia main;
+no mergees tú. Cuando te quede ~15% de sesión, o si escribo RELEVO, detente y deja el relevo según AGENTS.md §2b.
 ```
+Si el agente todavía no tiene rama propia (primera sesión), en el paso b crea la rama desde `main`
+(`git switch -c worker-a/<tema>` o `worker-b/<tema>`) en lugar de hacer merge.
 
 ## 6. Tareas humanas (sin Codex)
 - **LowCrime (editor):** H-08 top 5 a ciegas a partir de `data/labels/editor_candidates.csv` → `data/labels/editor_top5.json` con hora; luego, en M3, revisar ≥30 afirmaciones (B-09). No mires el ranking antes de entregar tu top 5.

@@ -91,7 +91,7 @@
 - Riesgos: bajos. Esfuerzo: 2–3 h. Recomendación: **ACCEPT**.
 
 ## AP-004 · Ampliar USGS a la ventana de las noticias
-- Autor / fecha: Lead · 2026-10-06 · Estado: **DIFERIDA (P2)**
+- Autor / fecha: Lead · 2026-10-06 · Estado: **ACEPTADA (DL-017, 2026-10-07)**: con la ventana oficial de 2026, sin esta extensión ningún sismo de 2024 coincide con las noticias
 - Problema u oportunidad: USGS oficial cubre 2024 y las noticias rondan septiembre de 2025; puede que no haya vínculos sismo–noticia.
 - Cambio propuesto: descarga adicional de USGS con la misma caja y M≥3 para la ventana de las noticias, en un archivo separado (`eventos_ext.geojson`) declarado como extensión.
 - Por qué mejora el proyecto: permite demostrar un HECHO sustentado real.
@@ -117,3 +117,28 @@
 - Riesgos: costo (estimado de unos US$3–6 por 200 llamadas); dependencia de red (mitigada con fallback local y caché); solo se envían titulares públicos.
 - Esfuerzo estimado: 1–2 h.
 - Recomendación: **CONSIDER**. Local como camino principal; Sonnet como comparación y como respaldo de calidad si B-10 muestra borradores locales débiles.
+
+## AP-010 · Evidencia oficial reciente: ACP (nivel del lago Gatún) e INEC (IPC mensual)
+- Autor / fecha: Lead · 2026-10-07 · Estado: **ACEPTADA por el equipo (ACP + INEC), DL-019**
+- Problema u oportunidad: con WB hasta 2024 (solo contexto) y noticias de 2026, casi ningún evento puede quedar "suficiente para el borrador". La aclaración C-02 permite fuentes adicionales y exige datos recientes en la demo.
+- Cambio propuesto: (1) **ACP**, CSV de niveles históricos y proyectados del lago Gatún (evtms-rpts.pancanal.com/eng/h2o/), con la advertencia de la ACP de que es una estimación informativa; (2) **INEC**, IPC urbano nacional mensual 2025–2026 desde los cuadros PDF, citando cuadro y página. Contrato 0.3.0 aditivo: `IndicatorObservation.periodo` (p. ej. "2026-07" o "2026-09-28") y `fuente`; ids `ind:<fuente>:<serie>:<periodo>`. Vinculación: noticias del Canal → ACP; inflación → INEC. Coincidencia numérica ⇒ SUSTENTADA; discrepancia ⇒ conflicto.
+- Por qué mejora el proyecto: permite afirmaciones recientes realmente sustentadas en la demo y muestra el Temporal Guard con datos reales (WB 2024 histórico frente a INEC 2026 reciente).
+- Dimensión de rúbrica: Evidencias (15), Utilidad (20), cumplimiento de C-02.
+- Archivos/módulos afectados: `scayl/contracts.py`, `scayl/evidence/linking.py` (Lead); fetchers en `scayl/ingest/` (worker con acceso a internet); catálogo.
+- Riesgos: la extracción del PDF del INEC puede ser frágil (mitigación: pocas filas, verificación humana, cita de cuadro y página); tiempo.
+- Esfuerzo estimado: ACP ~2 h; INEC ~3–4 h.
+- Recomendación: **ACCEPT para ACP; CONSIDER para INEC** (solo si B-01 cierra a tiempo).
+
+## AP-011 · Integración de A-03 con la tarjeta A-08 y la revisión del paquete
+- Autor / fecha: LowCrime (Codex) · 2026-10-07
+- Estado: **ACEPTADA (DL-020, 2026-10-07)**
+- Problema u oportunidad: en main no existen `app/components/` ni A-08. Además, `service.generate_package()` devuelve un paquete sin persistirlo y `service.review()` vincula siempre el paquete del snapshot; la API pública tampoco expone la descarga del recibo.
+- Cambio propuesto: frictionspp-svg publica la ruta de importación de `evidence_card(ref)` (A-08); LowCrime conecta allí el adaptador local de A-03. El Lead define persistencia/identidad del paquete revisado y acceso al recibo desde `service`, sin lecturas directas de SQLite desde la UI.
+- Por qué mejora el proyecto: evita duplicar la tarjeta y aprobar un paquete distinto del visible; permite completar la trazabilidad requerida por L-16.
+- Dimensión de rúbrica: Evidencias, control humano y trazabilidad.
+- Archivos/módulos afectados: `app/pages/1_Ficha_de_Caso.py` (LowCrime), `app/components/` (frictionspp-svg), `scayl/service.py` y eventualmente `scayl/review/` (Lead).
+- Adaptador local mientras se decide: referencias completas en JSON desplegable; identificación explícita del paquete del snapshot en Revisión; se bloquea guardar si el paquete visible difiere, con opción de volver al snapshot. No se implementa otra tarjeta ni se cambia el servicio. PR de A-03 en borrador hasta integrar A-08.
+- Riesgos: A-03 no se declara cerrada mientras falte la tarjeta compartida; descarga del recibo pendiente de API.
+- Esfuerzo estimado: integración UI ~1 h tras publicar las interfaces.
+- Recomendación: ACCEPT.
+- Decisión (Lead/humano + fecha): **ACEPTADA por Lead, 2026-10-07, DL-020**. `service.review(..., package=...)` y `service.receipt(review_id)` publicados en main. A-08, A-01 y A-02 reasignadas a LowCrime. A-08 implementada e integrada en A-03; se retira el adaptador JSON y el bloqueo temporal de revisión. El recibo identifica el contenido visible por id y sha256.

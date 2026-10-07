@@ -91,7 +91,7 @@ Fixture para desarrollo de UI: `tests/fixtures/ui_bundle.example.json` (generado
 - Fechas: parseo ISO 8601; si falla → `None` + `quality_flags += ["fecha_invalida:<campo>"]`. **No** se descarta la fila.
 - Campos obligatorios (`id_noticia`, `titulo`) ausentes → fila a `excluded.jsonl` con motivo.
 - URL inválida → `url=None` + flag.
-- Fuera de [2024-01-01, 2025-10-01) por `fecha_publicacion` → excluida con motivo `fuera_de_intervalo`.
+- Fuera de la ventana de noticias **[2025-10-02, 2026-10-01)** (`scayl/config/data_window.v1.yaml`, aclaración oficial C-01) por `fecha_publicacion` → excluida con motivo `fuera_de_intervalo`. El corte del snapshot es 2026-10-01.
   Si `fecha_publicacion` es nula, se usa `fecha_deteccion` y se marca.
 - Duplicado exacto por URL normalizada → se conserva el primero y se registra.
 - `quality_report.json`: totales, válidos, excluidos por motivo y nulos por campo.
@@ -129,6 +129,12 @@ determinarse con la evidencia disponible."*
   existe, difiere ≤0,3 **y** el lugar es compatible. Si no se cumple, no hay vínculo.
 - Generación: el validador rechaza las palabras "actual", "hoy", "este año" y "actualmente" en una oración
   cuya única evidencia es histórica.
+
+### 4.4b Evidencia oficial reciente (AP-010, DL-019) — `scayl/evidence/recent.py`
+- Series: `ACP.GATUN.NIVEL` (diaria, observada), `ACP.GATUN.PROYECCION` (solo contexto), `INEC.IPC.VAR_MENSUAL` e `INEC.IPC.VAR_INTERANUAL` (mensuales). Ids de evidencia: `ind:<fuente>:<serie>:<periodo>`.
+- **Confirmación:** la cifra del titular coincide con una observación (ACP ±0,1 pies; INEC ±0,05 pp, en valor absoluto) **y** la publicación es posterior al período (ACP ≤3 días; INEC ≤50 días) ⇒ afirmación HECHO **SUSTENTADA**, que pasa a ser la central. Se elige la coincidencia más cercana en valor y en fecha.
+- **Contexto:** la última observación anterior al corte ⇒ afirmación SUSTENTADA de contexto, siempre con su período. No confirma el titular.
+- Nunca se usan datos posteriores al corte; las proyecciones nunca son hechos; cada dato lleva una advertencia temporal con su fecha.
 
 ### 4.5 Conflictos (T05)
 - Extracción determinista de números con unidad (`%`, magnitud, `millones`, `B/.`, `US$`) y de años y
@@ -181,7 +187,7 @@ def get_embedder(kind: Literal["tfidf", "st"], model: str | None) -> Embedder
 - Recuperación (Q&A): híbrida BM25 + coseno sobre unidades de evidencia (titulares, filas WB, eventos USGS).
 
 ### 5.2 Inteligencia generativa (Lead)
-- Proveedor: **Ollama local**. Candidatos (DL-006, decide B-10): RTX 4060 → `qwen3.5:9b` o `qwen3:8b`
+- Proveedor: **Ollama local**. Candidatos (DL-006, decide B-10): máquina de demo (AMD Radeon RX 9060 XT 8 GB, Vulkan) → `qwen3.5:9b` o `qwen3:8b`
   (Q4_K_M, `num_ctx=4096`); RTX 3050 → `qwen3:4b` o Gemma 4 E4B. Thinking desactivado, `temperature=0`,
   `seed=42` y `format=<JSON schema del contrato>`. Sin GPU → modo `cache`/`template`.
 - Tres llamadas, nunca libres:
@@ -259,7 +265,7 @@ abstiene honestamente hasta L-11; `generate_package(mode="live"|"cache")` cae a 
 - **Preservación de atribución:** métrica derivada del validador `STATUS_MISMATCH` (motivación: arXiv 2509.25498).
 
 ## 8. Despliegue
-- **Local (demo principal):** `make demo` en la RTX 4060, con Ollama.
+- **Local (demo principal):** `make demo` en la máquina de frictionspp-svg (AMD Radeon RX 9060 XT 8 GB, Vulkan), con Ollama.
 - **Enlace "en ejecución" (AP-001 aceptada):** la misma app en un Hugging Face Space en modo `cache`, sin
   Ollama ni torch, con `bundle.json` y caché LLM incluidos. Protegido con contraseña (Streamlit secrets) que
   se comparte en el correo de entrega. Solo titular + URL.

@@ -45,6 +45,9 @@ class ScoringInput:
     max_prior_similarity: float | None  # None = no earlier event to compare with
     max_possible_independent: int
     confirmed_independent: int
+    # GDELT gives detection (seendate) but no publication date. Used ONLY as a labelled proxy for U
+    # when no publication date exists; never stored or shown as a publication date.
+    latest_detection: datetime | None = None
 
 
 def _clamp(x: float) -> float:
@@ -74,11 +77,15 @@ def impact(inp: ScoringInput, rules: dict) -> tuple[float, str]:
 
 
 def urgency(inp: ScoringInput, rules: dict) -> tuple[float, str]:
-    if inp.latest_original_publication is None:
-        return 0.0, "Sin fecha de publicación válida: urgencia no calculable (0)"
-    hours = max(0.0, (inp.cutoff - inp.latest_original_publication).total_seconds() / 3600)
+    reference, label = inp.latest_original_publication, "Publicación original más reciente"
+    if reference is None and inp.latest_detection is not None:
+        reference = inp.latest_detection
+        label = "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente"
+    if reference is None:
+        return 0.0, "Sin fecha de publicación ni de detección válidas: urgencia no calculable (0)"
+    hours = max(0.0, (inp.cutoff - reference).total_seconds() / 3600)
     value = math.exp(-hours / rules["urgency"]["half_life_hours"])
-    return _clamp(value), f"Publicación original más reciente: hace {hours:.0f} h respecto al corte"
+    return _clamp(value), f"{label}: hace {hours:.0f} h respecto al corte"
 
 
 def novelty(inp: ScoringInput, rules: dict) -> tuple[float, str]:

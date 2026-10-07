@@ -30,9 +30,9 @@
 - **Compromiso:** borradores más sobrios. · **Fecha:** 2026-10-06
 
 ### DL-006 · Modelos locales (PROVISIONAL, pendiente de B-10)
-- **Hardware del equipo:** RTX 4060 (8 GB, **frictionspp-svg**) = máquina de demo y de precálculo; RTX 3050 = desarrollo.
+- **Hardware del equipo:** **AMD Radeon RX 9060 XT 8 GB, Vulkan** (frictionspp-svg; detectada por Ollama el 2026-10-06, se creía RTX 4060) = máquina de demo y de precálculo; RTX 3050 = desarrollo.
 - **Candidatos:** embeddings `BAAI/bge-m3`, `intfloat/multilingual-e5-base` y `Qwen/Qwen3-Embedding-0.6B`. LLM en la 4060: `qwen3.5:9b` (Apache 2.0, unos 6,6 GB en Q4 según fuentes externas) frente a `qwen3:8b`. En la 3050: `qwen3:4b` frente a Gemma 4 E4B. Fallback sin GPU: caché/plantilla.
-- **Referencia externa (no medida por nosotros):** unos 25–45 tokens/s en una 4060 para modelos de 7–9B en Q4.
+- **Referencia externa (no medida por nosotros):** unos 25–45 tokens/s en una RTX 4060 para modelos de 7–9B en Q4. **No aplica directamente**: la máquina real es AMD con Vulkan, cuyo rendimiento hay que medir (B-10).
 - **Motivo:** multilingüe con buen español, licencia abierta, disponibles en Ollama/HF.
 - **Evidencia:** _pendiente de medición en el hardware del equipo. No hay cifras todavía._ · **Fecha:** 2026-10-06
 
@@ -73,3 +73,56 @@
 - **Motivo:** la abstención determinista es verificable y no depende del modelo; menos dependencias; los mismos validadores en todos los textos generados.
 - **Compromiso:** el umbral 0,6 es heurístico. B-08 debe medir la tasa de abstención correcta e incorrecta y ajustarlo con el benchmark de desarrollo, nunca con el reservado.
 - **Fecha:** 2026-10-06
+
+### DL-013 · Cuadrícula del Banco Mundial: 540 filas (resuelve AP-008)
+- **Decisión:** ACEPTADA. Se usan exactamente los 6 países, 6 indicadores y 15 años (2010–2024) que enumera el PDF, es decir 540 combinaciones con nulos explícitos.
+- **Alternativas:** inventar dimensiones para llegar a 1.350.
+- **Motivo:** el PDF es internamente inconsistente (6×6×15 = 540); entre un total y una enumeración explícita gana la enumeración, y no se inventan datos. Discrepancia D18 en PLAN_REVIEW.
+- **Fecha:** 2026-10-07 · Propuesta por frictionspp-svg.
+
+### DL-014 · Usar las 48 entradas históricas del RSS de TVN (resuelve AP-009), con condiciones
+- **Decisión:** ACEPTADA con condiciones: (1) solo entradas con `pubDate` dentro de [2024-01-01, 2025-10-01); (2) `origen=tvn_rss`, `fecha_publicacion` = pubDate original; (3) **`fecha_deteccion` = null**: el RSS no aporta una señal de detección y la descarga de 2026 queda en `fecha_extraccion`; así no se marcan falsamente como "recirculadas"; (4) `alcance_texto=titular_metadatos` (las descripciones no entran al corpus publicado); (5) el catálogo declara la cobertura real de TVN (2024-01 a 2025-09, solo 3 en septiembre de 2025) y que la fecha proviene del RSS, sin verificar contra el artículo.
+- **Alternativas:** solo septiembre de 2025 (3 registros, por debajo del mínimo oficial de 20); ventana reciente de 2026 (fuera del intervalo oficial).
+- **Motivo:** son datos reales del patrocinador, con fecha original y dentro del intervalo oficial; cumplen el mínimo de ≥20 registros de TVN sin fabricar fechas.
+- **Compromiso:** la mayoría de las noticias de TVN son antiguas respecto al corte, por lo que tendrán urgencia baja. Es lo correcto: el puntaje lo refleja con honestidad.
+- **Fecha:** 2026-10-07 · Propuesta por frictionspp-svg.
+
+### DL-015 · Urgencia de noticias GDELT sin fecha de publicación
+- **Decisión:** GDELT solo aporta la detección (seendate); la publicación queda **nula**, como manda el contrato. Para la urgencia (U), y solo si no existe ninguna fecha de publicación en el evento, se usa la detección más reciente como **aproximación explícita** ("Fecha de publicación desconocida; aproximación por detección") en la justificación del componente. Nunca se muestra ni se guarda como fecha de publicación.
+- **Motivo:** sin esto, todos los eventos solo-GDELT tenían U=0 y el ranking quedaba distorsionado (hallazgo al revisar el snapshot de frictionspp-svg).
+- **Fecha:** 2026-10-07
+
+### DL-016 · Evaluación de la agrupación por pool de pares candidatos
+- **Decisión:** las etiquetas de agrupación (B-07) se toman sobre un pool de pares: todos los pares que proponen el baseline o la IA, más pares difíciles (mismo día y palabra clave, no agrupados) y un control al azar. El etiquetado es ciego al método. Se reportan precisión, **recall relativo** al pool y F1 por método.
+- **Alternativas:** muestra aleatoria de noticias (casi no produce pares del mismo evento: métrica vacía); etiquetar todos los pares (O(n²), inviable).
+- **Motivo:** es la práctica estándar de evaluación por *pooling*. Da una comparación baseline frente a IA con datos reales y declara sus límites con honestidad.
+- **Compromiso:** el recall es relativo, no absoluto; se declara así en el Trust Lab.
+- **Fecha:** 2026-10-07
+
+### DL-017 · Ventana de noticias según aclaración oficial C-01 (supera DL-007, DL-008 y DL-014)
+- **Decisión:** las noticias van en **[2025-10-02, 2026-10-01)**, con corte del snapshot el **2026-10-01T00:00:00Z** (objetivo: 30 días previos al corte, ampliable a 90). World Bank 2010–2024 y USGS 2024 se mantienen como contexto histórico. **AP-004 aceptada:** USGS ampliado a la ventana de noticias en un archivo separado. Las 48 entradas históricas de TVN (DL-014) quedan fuera; se usan las entradas del RSS dentro de la ventana nueva. Las fechas se centralizan en `scayl/config/data_window.v1.yaml`.
+- **Origen:** aclaración de la organizadora en el grupo oficial (2026-10-07), registrada en `docs/official_clarifications.md` (C-01) con captura como evidencia.
+- **Alternativas:** mantener el intervalo del §7 (contradice a la organización y al §6-A, "30 días previos a la extracción").
+- **Motivo:** jerarquía de autoridad: una aclaración oficial posterior prevalece sobre el PDF. Además, resuelve la contradicción §6-A/§7 que marcamos el día 1 (PLAN_REVIEW D14/D19).
+- **Compromiso:** hay que volver a descargar las noticias. Los fetchers, el manifest y las pruebas de frictionspp-svg se reutilizan sin cambios; las respuestas de 2025 ya descargadas se conservan (raw inmutable) y quedan fuera del corpus con motivo registrado. La distancia temporal entre noticias de 2026 y datos WB de 2024 refuerza la demostración del Temporal Guard (T04).
+- **Fecha:** 2026-10-07
+
+### DL-018 · Conjunto de desarrollo con datos de 2025; demo solo con datos recientes (aclaración C-02)
+- **Decisión:** las descargas fuera de la ventana C-01 (GDELT de septiembre de 2025 y las 48 entradas históricas del RSS de TVN) se conservan como **conjunto de desarrollo**: ajuste de umbrales (agrupación τ, abstención θ), pruebas de etiquetado y del benchmark de desarrollo. La **evaluación reportada** y la **demo** usan solo el corpus de la ventana [2025-10-02, 2026-10-01).
+- **Alternativas:** descartar esos datos; o mezclarlos con el corpus de la demo (lo prohíbe C-02 para la demo).
+- **Motivo:** aprovecha trabajo ya hecho y evita ajustar con los mismos datos que se evalúan y se muestran, lo cual es más defendible ante el jurado.
+- **Compromiso:** el desarrollo y la demo tienen distribuciones temporales distintas; las métricas se reportan sobre 2026.
+- **Fecha:** 2026-10-07
+
+### DL-019 · Evidencia oficial reciente: ACP e INEC (AP-010 aceptada por el equipo)
+- **Decisión:** se agregan el nivel del lago Gatún (ACP, CSV) y el IPC mensual (INEC, PDF) como evidencia oficial reciente. Contrato 0.3.0 (aditivo): `IndicatorObservation.periodo/fuente/frecuencia/es_proyeccion`. Un titular queda SUSTENTADO solo con coincidencia numérica **y** temporal; si no, el dato oficial es contexto citado con su fecha. Las proyecciones nunca son hechos.
+- **Alternativas:** solo WB 2024 (sin evidencia reciente: casi ningún evento sería "suficiente"); fuentes más amplias (sin tiempo).
+- **Motivo:** la aclaración C-02 permite fuentes adicionales y exige datos recientes en la demo; mejora Evidencias (15) y Utilidad (20).
+- **Compromiso:** la extracción del PDF del INEC puede ser frágil (mitigación: pocas filas, cuadro y página citados, verificación humana); la coincidencia numérica puede ser casual, por eso la afirmación pide "verificar que sea la misma medida".
+- **Fecha:** 2026-10-07 · Aprobada por el equipo.
+
+### DL-020 · AP-011 aceptada y reasignación de la UI a LowCrime
+- **Decisión:** (1) `service.review(..., package=...)` registra el paquete que el revisor está viendo (id + sha256 en el recibo) y `service.receipt(review_id)` expone el recibo. (2) LowCrime, ya activo, toma A-01, A-02 y A-08; frictionspp-svg queda con datos (B-01, B-13, B-14, B-03..B-07, B-10, B-11).
+- **Alternativas:** mantener la UI inicial en frictionspp-svg (que además tiene el snapshot y dos fuentes nuevas); dejar la revisión atada solo al paquete del snapshot.
+- **Motivo:** el cuello de botella era frictionspp-svg; la tarjeta A-08 bloqueaba A-03. Revisar contenido distinto del mostrado rompería la trazabilidad (hallazgo de LowCrime).
+- **Fecha:** 2026-10-07

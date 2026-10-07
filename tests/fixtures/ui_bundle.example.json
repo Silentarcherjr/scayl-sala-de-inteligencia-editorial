@@ -1,5 +1,5 @@
 {
-  "contract_version": "0.2.0",
+  "contract_version": "0.3.0",
   "snapshot_version": "fixture-synthetic-0",
   "snapshot_cutoff_utc": "2025-10-01T00:00:00Z",
   "signals_total": 6,

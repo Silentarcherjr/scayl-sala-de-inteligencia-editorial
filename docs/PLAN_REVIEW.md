@@ -51,10 +51,14 @@ pruebas de contrato, el esqueleto de directorios y toda la documentación de pla
 | D11 | Benchmark | Etiquetas humanas genéricas | **[OFICIAL §7]** `benchmark.jsonl` de 60 consultas (30 sustentadas / 10 contradicción / 10 sin respuesta / 10 adversariales); 40 dev + 20 reservadas para el jurado | Lo construimos nosotros: 60 con la proporción oficial, 40 de desarrollo + 20 "reservadas" que no se usan para ajustar nada. **Nunca** mezclamos el set reservado con el corpus. |
 | D12 | Archivos | 5 archivos | **[OFICIAL §6–7]** También `fuentes.json`, diccionario de datos y separación raw/processed | Añadidos al catálogo. |
 | D13 | Hora | ISO 8601 | **[OFICIAL §7]** Almacenar en UTC y **mostrar hora de Panamá** en la interfaz | Regla de UI en AGENTS.md. |
-| D14 | Intervalo de datos | No mencionado | **[OFICIAL §7]** Excluir registros fuera de [2024-01-01, 2025-10-01) | Filtro con registro de excluidos (T01). Ver R2. |
+| D14 | Intervalo de datos | No mencionado | **[OFICIAL §7, SUPERADO por C-01]** Excluir registros fuera de [2024-01-01, 2025-10-01). **Aclaración oficial C-01:** noticias entre 2025-10-02 y septiembre de 2026 | Filtro con registro de excluidos (T01). Ver R2. |
 | D15 | Validez de sustento | "Evidence support validity" | **[OFICIAL §9.1]** Revisión humana de ≥30 afirmaciones; reportar numerador, denominador y fallos | Tarea humana explícita (B-09). |
 | D16 | Ahorro de tiempo | Implícito en el pitch | **[OFICIAL §9.1]** Solo con una tarea equivalente manual vs asistida y N declarado | Mini-estudio opcional (P1); si no se hace, **no se afirma** ahorro. |
 | D17 | Publicación en redes | — | **[OFICIAL Bases]** Repostear y etiquetar @hackiathon @viamatica @adenbs | Tarea no técnica H-03. |
+
+| D18 | Cuadrícula World Bank | 1.350 filas | **[OFICIAL §6]** "6 países × 6 indicadores × 2010–2024 = 1.350 combinaciones", pero 6×6×15 = **540** (inconsistencia interna del PDF) | Se respetan las enumeraciones explícitas (países, indicadores y años): 540 filas con nulos explícitos (DL-013). |
+
+| D19 | Ventana de noticias | DL-008: septiembre de 2025 | **[OFICIAL, aclaración C-01, 2026-10-07]** "desde 2025-10-02 hasta el último mes completo (septiembre)"; resuelve la contradicción §6-A/§7 | Ventana [2025-10-02, 2026-10-01), corte 2026-10-01; WB y USGS sin cambios (contexto histórico); USGS ampliado a la ventana (DL-017). Ver `docs/official_clarifications.md`. |
 
 **Sobre las fechas:** el documento TVN es el más reciente y manda. Fija el intervalo de datos y deja la
 fecha del evento "por confirmar". Las Bases indican recepción el 6 de octubre, entrega el 8 de octubre a
@@ -253,9 +257,9 @@ Motivo: el reto pide literalmente "abrir una ficha"; el jurado navega menos y el
 
 | # | Tema | Decisión |
 |---|---|---|
-| 1 | Intervalo de datos | DL-008: snapshot propio. Noticias de septiembre de 2025 vía GDELT DOC con `STARTDATETIME`/`ENDDATETIME`; TVN vía `domain:tvn-2.com`. |
+| 1 | Intervalo de datos | **Superado por DL-017 (aclaración oficial C-01): noticias [2025-10-02, 2026-10-01).** Antes: DL-008, snapshot propio. Noticias de septiembre de 2025 vía GDELT DOC con `STARTDATETIME`/`ENDDATETIME`; TVN vía `domain:tvn-2.com`. |
 | 2 | Benchmark | Propio: 60 consultas con la proporción oficial (40 dev + 20 reservadas). |
-| 3 | Hardware | RTX 4060 (8 GB) = máquina de demo y de precálculo; RTX 3050 = desarrollo con modelo pequeño; CPU = modo caché/plantilla (DL-006). |
+| 3 | Hardware | GPU de frictionspp-svg (AMD Radeon RX 9060 XT 8 GB, Vulkan; se creía RTX 4060) = máquina de demo y de precálculo; RTX 3050 = desarrollo con modelo pequeño; CPU = modo caché/plantilla (DL-006). |
 | 4 | "Editor" independiente | **Humano 2**: elige el top 5 a ciegas apenas se congela el snapshot (antes de que exista ranking) y revisa ≥30 afirmaciones. Humano 3 etiqueta temas y agrupación. Humano 1 + Lead ajustan pesos. Nadie evalúa lo que ajustó (DL-010). |
 | 5 | Enlace desplegado | AP-001 aceptada: Hugging Face Space con contraseña compartida en el correo de entrega; solo titular + URL. |
 | 6 | Descripciones RSS | Solo en local; en el enlace público solo titular + URL. |

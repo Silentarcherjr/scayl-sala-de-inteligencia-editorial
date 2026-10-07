@@ -25,6 +25,7 @@ from scayl.contracts import (
 )
 from scayl.evidence.linking import link_indicators, link_seismic, news_ref, percent_conflicts
 from scayl.evidence.provenance import outlet_key, source_dna
+from scayl.evidence.recent import link_recent
 from scayl.evidence.scoring import ScoringInput, score
 from scayl.evidence.status import evidence_status, recommended_action, verification_sources
 from scayl.gen.guard import FLAG as INJECTION_FLAG
@@ -66,8 +67,10 @@ def _claim_id(event_id: str, n: int) -> str:
 
 
 def build_claims(event_id: str, items: list[NewsItem], rep: NewsItem, seismic_claims: list[Claim],
-                 has_conflict: bool, seismic: bool) -> list[Claim]:
-    claims = list(seismic_claims)
+                 has_conflict: bool, seismic: bool, confirming: list[Claim] | None = None,
+                 context: list[Claim] | None = None) -> list[Claim]:
+    """Order matters: the first claim is the central one for the evidence status."""
+    claims = list(seismic_claims) + list(confirming or [])
     others = len({outlet_key(i) for i in items}) - 1
     who = f"{rep.medio or outlet_key(rep)}" + (f" y {others} medio(s) más" if others > 0 else "")
     claims.append(Claim(
@@ -85,7 +88,8 @@ def build_claims(event_id: str, items: list[NewsItem], rep: NewsItem, seismic_cl
             status=ClaimStatus.SIN_SUSTENTO,
             reason="La evidencia disponible confirma el evento sísmico pero no contiene datos verificados de daños.",
             extracted_by="rule"))
-    return claims
+    claims[len(claims):] = context or []
+    return [c.model_copy(update={"claim_id": _claim_id(event_id, n)}) for n, c in enumerate(claims, start=1)]
 
 
 def build_gap(topic: Topic, claims: list[Claim], has_official: bool, headline_only: bool) -> InvestigationGap:
@@ -125,10 +129,13 @@ def build_event(
 
     seismic = link_seismic(event_id, items, quakes)
     wb_refs, warnings = link_indicators(topic, items, observations)
+    recent = link_recent(event_id, items, observations, cutoff)
+    warnings = warnings + recent.warnings
     conflicts = seismic.conflicts + percent_conflicts(event_id, items, start=len(seismic.conflicts) + 1)
-    official = seismic.evidence + wb_refs
+    official = seismic.evidence + recent.evidence + wb_refs
     is_seismic_event = bool(seismic.claims)
-    claims = build_claims(event_id, items, rep, seismic.claims, bool(conflicts), is_seismic_event)
+    claims = build_claims(event_id, items, rep, seismic.claims, bool(conflicts), is_seismic_event,
+                          confirming=recent.confirming, context=recent.context)
 
     pubs = [i.fecha_publicacion for i in items if i.fecha_publicacion]
     dets = [i.fecha_deteccion for i in items if i.fecha_deteccion]
@@ -139,6 +146,7 @@ def build_event(
         mentions_panama=mentions_panama(items), is_tvn=any(is_tvn(i) for i in items), topic=topic,
         topic_confidence=topic_confidence, has_official_evidence=bool(official),
         latest_original_publication=max(pubs) if pubs else None, cutoff=cutoff,
+        latest_detection=max(dets) if dets else None,
         max_prior_similarity=max_prior_similarity, max_possible_independent=dna.max_possible_independent,
         confirmed_independent=dna.confirmed_independent))
     status, reason = evidence_status(claims, conflicts, official, dna)

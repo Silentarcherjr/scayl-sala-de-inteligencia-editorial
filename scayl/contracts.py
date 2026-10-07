@@ -18,7 +18,7 @@ from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
-CONTRACT_VERSION = "0.2.0"  # 0.2.0: Event.security_flags; UIBundle.news/indicators/seismic (additive)
+CONTRACT_VERSION = "0.3.0"  # 0.3.0: IndicatorObservation periodo/fuente/frecuencia/es_proyeccion (additive)
 
 
 class _Model(BaseModel):
@@ -161,7 +161,11 @@ class NewsItem(_Model):
 
 
 class IndicatorObservation(_Model):
-    """One row of indicadores.csv. ``valor`` stays None when missing."""
+    """One row of indicadores.csv (WB, annual) or indicadores_recientes.csv (ACP/INEC, AP-010).
+
+    ``valor`` stays None when missing. Annual WB rows keep the defaults below. Recent series set
+    ``periodo`` ("2026-07" monthly, "2026-09-28" daily) and ``anio`` = year of the period.
+    """
 
     pais_iso3: str
     indicador_id: str
@@ -172,6 +176,10 @@ class IndicatorObservation(_Model):
     fuente_url: str
     fecha_extraccion: datetime
     licencia: str | None
+    periodo: str | None = None
+    fuente: str = "wb"  # wb | acp | inec
+    frecuencia: Literal["anual", "mensual", "diaria"] = "anual"
+    es_proyeccion: bool = False  # ACP projections are estimates, never measurements
 
 
 class SeismicEvent(_Model):

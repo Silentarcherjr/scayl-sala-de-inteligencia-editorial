@@ -152,7 +152,8 @@ def link_indicators(topic: Topic, items: list[NewsItem], observations: list[Indi
     wanted |= {ind for ind, kw in INDICATOR_KEYWORDS.items() if re.search(kw, text, re.IGNORECASE)}
     refs, warnings = [], []
     for ind in sorted(wanted):
-        rows = [o for o in observations if o.pais_iso3 == country and o.indicador_id == ind and o.valor is not None]
+        rows = [o for o in observations if o.fuente == "wb" and o.pais_iso3 == country and o.indicador_id == ind
+                and o.valor is not None]
         if not rows:
             continue
         latest = max(rows, key=lambda o: o.anio)

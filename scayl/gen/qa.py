@@ -31,6 +31,7 @@ from scayl.contracts import (
     ValidationIssue,
     ValidationReport,
 )
+from scayl.evidence.recent import ref_for as recent_ref
 from scayl.gen.guard import SYSTEM_DATA_RULE, data_block
 from scayl.gen.llm import LLM, LLMError, load_prompt
 from scayl.gen.validators import _Ctx, check_sentence
@@ -88,6 +89,13 @@ def build_units(bundle: UIBundle) -> list[Unit]:
         units.append(Unit(ref.evidence_id, f"{n.titulo} — {n.medio or 'medio desconocido'}, {date}", ref, False,
                           n.medio))
     for o in bundle.indicators:
+        if o.fuente != "wb":  # recent official series (ACP, INEC): cited with their period
+            ref = recent_ref(o)
+            value = "sin dato disponible" if o.valor is None else f"{o.valor} {o.unidad or ''}".strip()
+            units.append(Unit(ref.evidence_id, f"{ref.excerpt.split(':')[0]}: {ref.excerpt.split(': ', 1)[1].rsplit(':', 1)[0]}"
+                              f", período {o.periodo}: {value}" + (" (proyección, no medición)" if o.es_proyeccion else ""),
+                              ref, not o.es_proyeccion, o.fuente.upper()))
+            continue
         name = INDICATOR_ES.get(o.indicador_id, o.indicador_nombre or o.indicador_id)
         country = COUNTRY_ES.get(o.pais_iso3, o.pais_iso3)
         value = "sin dato disponible" if o.valor is None else f"{o.valor} {o.unidad or ''}".strip()
