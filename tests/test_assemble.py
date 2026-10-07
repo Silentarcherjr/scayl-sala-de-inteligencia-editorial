@@ -82,3 +82,23 @@ def test_gdelt_items_without_publication_date_still_rank_by_detection():
                     Topic.LOGISTICA_CANAL, 0.9, [], [], CUTOFF)
     assert e.first_published is None and e.first_detected == det  # publication stays unknown
     assert e.priority.components.U > 0.8 and not e.is_recirculated
+
+
+def test_real_case_headline_denying_a_quake_is_not_confirmed_by_usgs():
+    """Real snapshot case (EVT-0183): 'IGUP descarta ... algún temblor' must not become SUSTENTADA."""
+    items = [news("n", "Sismo en Panamá hoy: IGUP descarta que se haya registrado algún temblor", pub=T)]
+    e = build_event("EVT-0030", items, Topic.EVENTOS_NATURALES, 0.9, [], [quake("us3", 3.6, T - timedelta(hours=5))],
+                    CUTOFF)
+    assert e.claims[0].status == ClaimStatus.SOLO_REPORTADA  # central claim = the headline, unconfirmed
+    ctx = [c for c in e.claims if "NO confirma" in c.reason]
+    assert ctx and ctx[0].status == ClaimStatus.SUSTENTADA
+    assert e.evidence_status != EvidenceStatus.SUFICIENTE_PARA_BORRADOR
+
+
+def test_real_case_magnitude_mismatch_with_usgs_is_a_visible_conflict():
+    """Real snapshot case (EVT-0125): headline 4.7 vs USGS 4.5 -> linked, but conflict shown."""
+    items = [news("m", "Sismo de magnitud 4.7 sacude la frontera entre Panamá y Costa Rica", pub=T)]
+    e = build_event("EVT-0031", items, Topic.EVENTOS_NATURALES, 0.9, [], [quake("us4", 4.5, T)], CUTOFF)
+    assert e.claims[0].status == ClaimStatus.SUSTENTADA and "4.5" in e.claims[0].statement
+    assert len(e.conflicts) == 1 and {e.conflicts[0].version_a.value, e.conflicts[0].version_b.value} == {"4.7", "4.5"}
+    assert e.evidence_status == EvidenceStatus.PARCIAL

@@ -13,3 +13,8 @@ models/
 .DS_Store
 data/raw/v1/responses/gkg/*.zip
 data/raw/v1/responses/tvn-current/rss.xml
+# Pipeline outputs are reproducible from the frozen snapshot (make demo). Not committed until the
+# blind editor top-5 (H-08) exists, so the real ranking cannot contaminate P@5.
+data/processed/*/
+!data/processed/.gitkeep
+tmp/

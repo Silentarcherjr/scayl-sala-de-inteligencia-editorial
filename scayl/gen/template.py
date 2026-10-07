@@ -32,8 +32,8 @@ def _sentence(claim: Claim) -> TaggedSentence | None:
                               claim_ids=[claim.claim_id])
     if claim.status in (ClaimStatus.SOLO_REPORTADA, ClaimStatus.EN_CONFLICTO):
         who = claim.attributed_to or "publicaciones del corpus"
-        lowered = statement[:1].lower() + statement[1:]
-        return TaggedSentence(text=f"Según {who}, {lowered}.", tag=ClaimType.DECLARACION,
+        # Headlines start with proper nouns too often ("Canal de Panamá"): keep their capitalization.
+        return TaggedSentence(text=f"Según {who}: {statement}.", tag=ClaimType.DECLARACION,
                               claim_ids=[claim.claim_id])
     if claim.status == ClaimStatus.SIN_SUSTENTO:
         lowered = statement[:1].lower() + statement[1:]
