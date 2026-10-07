@@ -1,0 +1,6 @@
+# Offline demo + privacy: no usage telemetry to external servers (T10, PLAN_REVIEW §3.6).
+[browser]
+gatherUsageStats = false
+
+[server]
+headless = true

@@ -28,7 +28,7 @@
 | A-02 | Sala de Situación | **W** LowCrime (DL-020) | P0 | M1 | TODO | A-01 |
 | A-03 | Ficha de Caso (6 pestañas) | **W** LowCrime | P0 | M1–M2 | DONE (PR #13) | A-01 |
 | A-04 | Consultas (Q&A) | **W** LowCrime | P0 | M2 | TODO | A-01 |
-| A-05 | Trust Lab (vista) | **W** LowCrime | P1 | M3 | TODO | B-08 |
+| A-05 | Trust Lab (vista) | **L** Lead (DL-021) | P1 | M3 | DONE (vista; métricas reales pendientes de B-08) | B-08 |
 | A-06 | Despliegue del enlace en modo `cache` | **W** LowCrime | P0 | M3 | TODO | AP-001, L-07 |
 | B-01 | Construir el snapshot propio según el PDF §6–7 (fetchers) → `data/raw/v1` | **F** frictionspp-svg | P0 | M0 | DOING (fetchers listos; falta noticias.csv/manifest) | — |
 | B-02 | `ingest/manifest.py` (SHA-256, conteos, transformaciones) + diccionario | **F** frictionspp-svg | P0 | M0 | DOING (fetchers listos; falta noticias.csv/manifest) | B-01 |
@@ -51,7 +51,7 @@
 | A-07 | **Agenda de la mañana** (top 5 + por qué + a quién verificar) en la Sala de Situación | **W** LowCrime | P0 | M2 | TODO | A-02, L-17 |
 | A-08 | **Clic en número → tarjeta de evidencia**, componente reutilizable en todas las pantallas | **W** LowCrime (DL-020) | P0 | M1 | DONE (PR #13) | A-01 |
 | A-09 | **Modo jurado** en Consultas (las 4 preguntas del PDF precargadas) | **W** LowCrime | P1 | M2 | TODO | A-04 |
-| A-10 | Vista del simulador de pesos (sliders → ranking nuevo vs v1, justificación obligatoria) | **W** LowCrime | P1 | M2 | TODO | L-15 |
+| A-10 | Vista del simulador de pesos (sliders → ranking nuevo vs v1, justificación obligatoria) | **L** Lead (DL-021) | P1 | M2 | DONE | L-15 |
 | B-11 | **GitHub Actions**: pytest (T01–T10) en cada PR + badge en el README | **F** frictionspp-svg | P0 | M1 | TODO | — |
 | B-12 | **Set de 10 ataques** (inyección, preguntas trampa, pedir secretos, acusaciones) + tasa de resistencia | **W** LowCrime | P1 | M3 | TODO | L-10, L-11 |
 | H-05 | **Video de la demo con internet apagado** → Notion | W | P0 | M4 | TODO | M3 |
