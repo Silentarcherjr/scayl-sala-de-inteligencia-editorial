@@ -52,8 +52,8 @@ def test_staging_allowlist_and_all_page_routes_are_gated(bundle, tmp_path, monke
     bundle.reviews = []
     from tests.factories import news
     bundle.news = [news("demo", "[SINTÉTICO] Titular de demostración")]
-    for news in bundle.news:
-        news.descripcion = None
+    for item in bundle.news:
+        item.descripcion = None
     source = tmp_path / "bundle.json"
     source.write_text(bundle.model_dump_json(), encoding="utf-8")
     destination = tmp_path / "stage"

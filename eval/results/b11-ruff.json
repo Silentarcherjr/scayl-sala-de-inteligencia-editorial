@@ -1,0 +1,225 @@
+{
+  "tool": "ruff==0.16.10",
+  "before": 51,
+  "after": 36,
+  "tests_warnings": 0,
+  "global_status": "failed; Lead modules unchanged",
+  "issues": [
+    {
+      "file": "app/service_client.py",
+      "row": 2,
+      "code": "I001",
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "app/service_client.py",
+      "row": 4,
+      "code": "RUF022",
+      "message": "`__all__` is not sorted"
+    },
+    {
+      "file": "deploy/prepare.py",
+      "row": 2,
+      "code": "I001",
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "scayl/eval/calibrate_cluster.py",
+      "row": 27,
+      "code": "UP017",
+      "message": "Use `datetime.UTC` alias"
+    },
+    {
+      "file": "scayl/eval/calibrate_cluster.py",
+      "row": 60,
+      "code": "UP017",
+      "message": "Use `datetime.UTC` alias"
+    },
+    {
+      "file": "scayl/eval/compare_intel.py",
+      "row": 91,
+      "code": "UP017",
+      "message": "Use `datetime.UTC` alias"
+    },
+    {
+      "file": "scayl/eval/generation_summary.py",
+      "row": 22,
+      "code": "C408",
+      "message": "Unnecessary `dict()` call (rewrite as a literal)"
+    },
+    {
+      "file": "scayl/eval/generation_summary.py",
+      "row": 23,
+      "code": "C408",
+      "message": "Unnecessary `dict()` call (rewrite as a literal)"
+    },
+    {
+      "file": "scayl/eval/generation_summary.py",
+      "row": 26,
+      "code": "C408",
+      "message": "Unnecessary `dict()` call (rewrite as a literal)"
+    },
+    {
+      "file": "scayl/eval/recent_official.py",
+      "row": 26,
+      "code": "C408",
+      "message": "Unnecessary `dict()` call (rewrite as a literal)"
+    },
+    {
+      "file": "scayl/eval/recent_official.py",
+      "row": 44,
+      "code": "C408",
+      "message": "Unnecessary `dict()` call (rewrite as a literal)"
+    },
+    {
+      "file": "scayl/eval/redteam.py",
+      "row": 6,
+      "code": "I001",
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "scayl/eval/run.py",
+      "row": 2,
+      "code": "I001",
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "scayl/eval/run.py",
+      "row": 109,
+      "code": "ISC004",
+      "message": "Unparenthesized implicit string concatenation in collection"
+    },
+    {
+      "file": "scayl/ingest/acquire_c01.py",
+      "row": 32,
+      "code": "TRY004",
+      "message": "Prefer `TypeError` exception for invalid type"
+    },
+    {
+      "file": "scayl/ingest/acquire_gkg_c01.py",
+      "row": 6,
+      "code": "F401",
+      "message": "`json` imported but unused"
+    },
+    {
+      "file": "scayl/ingest/acquisition_report.py",
+      "row": 38,
+      "code": "UP017",
+      "message": "Use `datetime.UTC` alias"
+    },
+    {
+      "file": "scayl/ingest/acquisition_report.py",
+      "row": 38,
+      "code": "UP017",
+      "message": "Use `datetime.UTC` alias"
+    },
+    {
+      "file": "scayl/ingest/common.py",
+      "row": 2,
+      "code": "I001",
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "scayl/ingest/common.py",
+      "row": 20,
+      "code": "UP017",
+      "message": "Use `datetime.UTC` alias"
+    },
+    {
+      "file": "scayl/ingest/common.py",
+      "row": 71,
+      "code": "UP017",
+      "message": "Use `datetime.UTC` alias"
+    },
+    {
+      "file": "scayl/ingest/fetch_gdelt.py",
+      "row": 35,
+      "code": "UP017",
+      "message": "Use `datetime.UTC` alias"
+    },
+    {
+      "file": "scayl/ingest/fetch_gkg.py",
+      "row": 41,
+      "code": "FURB167",
+      "message": "Use of regular expression alias `re.I`"
+    },
+    {
+      "file": "scayl/ingest/fetch_tvn.py",
+      "row": 22,
+      "code": "UP017",
+      "message": "Use `datetime.UTC` alias"
+    },
+    {
+      "file": "scayl/ingest/fetch_usgs.py",
+      "row": 24,
+      "code": "UP017",
+      "message": "Use `datetime.UTC` alias"
+    },
+    {
+      "file": "scayl/ingest/fetch_usgs.py",
+      "row": 25,
+      "code": "UP017",
+      "message": "Use `datetime.UTC` alias"
+    },
+    {
+      "file": "scayl/ingest/manifest.py",
+      "row": 161,
+      "code": "ISC004",
+      "message": "Unparenthesized implicit string concatenation in collection"
+    },
+    {
+      "file": "scayl/ingest/recent_official.py",
+      "row": 41,
+      "code": "DTZ007",
+      "message": "Naive datetime constructed using `datetime.datetime.strptime()` without %z"
+    },
+    {
+      "file": "scayl/ingest/recent_official.py",
+      "row": 57,
+      "code": "C408",
+      "message": "Unnecessary `dict()` call (rewrite as a literal)"
+    },
+    {
+      "file": "scayl/ingest/recent_official.py",
+      "row": 84,
+      "code": "C408",
+      "message": "Unnecessary `dict()` call (rewrite as a literal)"
+    },
+    {
+      "file": "scayl/ingest/validate.py",
+      "row": 70,
+      "code": "FURB162",
+      "message": "Unnecessary timezone replacement with zero offset"
+    },
+    {
+      "file": "scayl/intel/topics.py",
+      "row": 41,
+      "code": "FURB192",
+      "message": "Prefer `min` over `sorted()` to compute the minimum value in a sequence"
+    },
+    {
+      "file": "scayl/intel/topics_ai.py",
+      "row": 2,
+      "code": "I001",
+      "message": "Import block is un-sorted or un-formatted"
+    },
+    {
+      "file": "scayl/pipeline.py",
+      "row": 189,
+      "code": "PIE807",
+      "message": "Prefer `dict` over useless lambda"
+    },
+    {
+      "file": "scayl/service.py",
+      "row": 188,
+      "code": "RUF046",
+      "message": "Value being cast to `int` is already an integer"
+    },
+    {
+      "file": "scayl/service.py",
+      "row": 201,
+      "code": "RUF022",
+      "message": "`__all__` is not sorted"
+    }
+  ]
+}

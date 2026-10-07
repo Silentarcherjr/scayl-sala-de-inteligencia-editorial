@@ -45,3 +45,6 @@ Medición real E5 en CPU (torch 2.14.1+cpu, CUDA no disponible). Matrices ignora
 2026-10-07 05:48 UTC - Backlog 2 cache publica A-06: 187 noticias sin descripcion,165eventos,30entradas auditadas,15/15cache; stage preparado sin publicar;174pytest verdes; aviso @LowCrime en PR.
 
 2026-10-07 05:49 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md; 2 cache publica revisada https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/38. Continúa 3 B-11 CI
+2026-10-07 05:51 UTC - B-11 CI: 172pytest verdes,ruff tests verde; workflow Python3.12 con pytest y ruff check .;36avisos globales fuera de tests reportados,sin ocultarlos ni modificar modulos Lead.
+
+2026-10-07 05:52 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md; 3 B-11 workflow y lint tests https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/39. Continúa 4 holdout humano pendiente; continuar 5 B-07 etiquetas

@@ -46,6 +46,7 @@ def test_transcription_rejects_wrong_pdf_and_future_publication():
 def test_declared_addition_archives_parent_and_rejects_mutation(tmp_path):
     import hashlib
     import json
+
     from scayl.ingest.manifest import _inventory, declare_addition, verify_manifest
     raw = tmp_path / "noticias.csv"
     raw.write_text("id_noticia,titulo\na,Headline\n", encoding="utf-8")
@@ -69,8 +70,9 @@ def test_declared_addition_archives_parent_and_rejects_mutation(tmp_path):
 def test_frozen_recent_csv_contract_uniqueness_and_coverage():
     from collections import Counter
     from pathlib import Path
-    from scayl.ingest.validate import load_snapshot
+
     from scayl.ingest.manifest import verify_manifest
+    from scayl.ingest.validate import load_snapshot
     root = Path("data/raw/v1")
     _, indicators, _, _ = load_snapshot(root)
     recent = [o for o in indicators if o.fuente in ("acp", "inec")]

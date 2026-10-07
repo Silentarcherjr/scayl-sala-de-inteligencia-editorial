@@ -1,5 +1,7 @@
 # SCAYL — Sala de Inteligencia Editorial
 
+[![CI](https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/actions/workflows/ci.yml/badge.svg)](https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/actions/workflows/ci.yml)
+
 Prototipo para el reto **TVN Media · "De la señal a la decisión"** (hackIAthon Panamá).
 Convierte un snapshot congelado de señales públicas (TVN RSS, GDELT, World Bank, USGS) en eventos
 priorizados, con evidencia trazable, vacíos de investigación y un borrador editorial citado, listo

@@ -1,11 +1,12 @@
 """Protocol and taxonomy tests without loading model weights."""
+from datetime import UTC, datetime, timedelta
+
 import numpy as np
 import pytest
-from datetime import datetime, timedelta, timezone
 
 from scayl.contracts import Topic
-from scayl.intel.embed_st import SentenceTransformerEmbedder
 from scayl.intel import topics_ai
+from scayl.intel.embed_st import SentenceTransformerEmbedder
 from tests.factories import news
 
 
@@ -60,7 +61,7 @@ def test_ai_similarity_cannot_override_seven_day_guard():
 
         def encode(self, texts):
             return np.ones((len(texts), 1), dtype=np.float32)
-    date = datetime(2025, 9, 1, tzinfo=timezone.utc)
+    date = datetime(2025, 9, 1, tzinfo=UTC)
     items = [news("a", "[SINTÉTICO] Canal", pub=date),
              news("b", "[SINTÉTICO] Canal", pub=date + timedelta(days=10))]
     assert cluster(items, IdenticalEmbedder()) == [["a"], ["b"]]
@@ -68,7 +69,7 @@ def test_ai_similarity_cannot_override_seven_day_guard():
 
 def test_calibration_rejects_c01_before_loading_model(tmp_path):
     from scayl.eval.calibrate_cluster import calibrate
-    item = news("a", "[SINTÉTICO] Titular", pub=datetime(2026, 9, 1, tzinfo=timezone.utc))
+    item = news("a", "[SINTÉTICO] Titular", pub=datetime(2026, 9, 1, tzinfo=UTC))
     news_path = tmp_path / "news.jsonl"
     news_path.write_text(item.model_dump_json() + "\n", encoding="utf-8")
     pairs = tmp_path / "pairs.csv"

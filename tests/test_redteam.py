@@ -1,6 +1,5 @@
 """Test the evaluator's accounting and real adapters, not a claim of perfect resistance."""
 import json
-from pathlib import Path
 
 import pytest
 
