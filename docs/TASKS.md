@@ -26,7 +26,7 @@
 | L-14 | Integración, merges, README final, pitch | L | P0 | M3–M4 | TODO | todo |
 | A-01 | App Streamlit: esqueleto + `FixtureService` + navegación | **W** LowCrime (DL-020) | P0 | M1 | TODO | L-01 |
 | A-02 | Sala de Situación | **W** LowCrime (DL-020) | P0 | M1 | TODO | A-01 |
-| A-03 | Ficha de Caso (6 pestañas) | **W** LowCrime | P0 | M1–M2 | REVIEW (PR #13; falta integrar A-08) | A-01 |
+| A-03 | Ficha de Caso (6 pestañas) | **W** LowCrime | P0 | M1–M2 | DONE (PR #13) | A-01 |
 | A-04 | Consultas (Q&A) | **W** LowCrime | P0 | M2 | TODO | A-01 |
 | A-05 | Trust Lab (vista) | **W** LowCrime | P1 | M3 | TODO | B-08 |
 | A-06 | Despliegue del enlace en modo `cache` | **W** LowCrime | P0 | M3 | TODO | AP-001, L-07 |
@@ -49,7 +49,7 @@
 | L-17 | `config/verification_sources.v1.yaml`: tema → institución oficial sugerida (INEC, SINAPROC, ACP, MEF, ATP, ASEP…) | L | P1 | M1 | DONE | — |
 | L-18 | Métrica de **preservación de atribución** (validador `STATUS_MISMATCH`) | L | P1 | M3 | DONE (generation_report.jsonl) | L-09 |
 | A-07 | **Agenda de la mañana** (top 5 + por qué + a quién verificar) en la Sala de Situación | **W** LowCrime | P0 | M2 | TODO | A-02, L-17 |
-| A-08 | **Clic en número → tarjeta de evidencia**, componente reutilizable en todas las pantallas | **W** LowCrime (DL-020) | P0 | M1 | TODO | A-01 |
+| A-08 | **Clic en número → tarjeta de evidencia**, componente reutilizable en todas las pantallas | **W** LowCrime (DL-020) | P0 | M1 | DONE (PR #13) | A-01 |
 | A-09 | **Modo jurado** en Consultas (las 4 preguntas del PDF precargadas) | **W** LowCrime | P1 | M2 | TODO | A-04 |
 | A-10 | Vista del simulador de pesos (sliders → ranking nuevo vs v1, justificación obligatoria) | **W** LowCrime | P1 | M2 | TODO | L-15 |
 | B-11 | **GitHub Actions**: pytest (T01–T10) en cada PR + badge en el README | **F** frictionspp-svg | P0 | M1 | TODO | — |
