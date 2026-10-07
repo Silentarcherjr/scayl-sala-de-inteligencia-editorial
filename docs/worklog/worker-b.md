@@ -110,3 +110,5 @@ Medición real E5 en CPU (torch 2.14.1+cpu, CUDA no disponible). Matrices ignora
 2026-10-07T20:45:22.309333Z - relevo final: ver docs/handoff/frictionspp-svg.md. Terminado el alcance humano B-07/holdoutv2; único PR53 abierto, listo para revisión. 188pytest/Ruffglobal verdes; cuatro discrepancias humanas del holdout conservadas. Solo el Lead mergea.
 
 2026-10-07 21:03 UTC - DL-029: Temas por reglas y E5 para agrupar; nuevo top15 qwen3:8b live15/15, fallback0/15, citas45/45, mediana13131ms p9516997.5ms. Cache publica30 entradas sin descripciones; hashes32/32, stage118/118. pytest188 y Ruff verde. Space pendiente de LowCrime y Lead.
+
+2026-10-07 21:05 UTC - relevo DL-029: PR #55 abierto, @LowCrime mencionado; ver docs/handoff/frictionspp-svg.md.
