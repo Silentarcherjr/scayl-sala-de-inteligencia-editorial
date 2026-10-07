@@ -31,3 +31,5 @@
 |---|---|---|---|
 | Embeddings | _DL-006, pendiente_ | Temas, agrupación, recuperación | $0 (local) |
 | LLM | _DL-006, pendiente_ | Afirmaciones, paquete editorial, Q&A | $0 (local) |
+
+Codex · LowCrime · 2026-10-07 · H-06: protocolo, hoja de tiempos y evaluador. No inventó duraciones ni ahorro; medición humana pendiente. Pruebas de ausencias y desaceleración.
