@@ -40,3 +40,5 @@ Medición real E5 en CPU (torch 2.14.1+cpu, CUDA no disponible). Matrices ignora
 2026-10-07 05:12 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md. PR31; implementacion536e6c0;152passed;15live. Siguiente Lead AP-012,cotejoINEC y proyeccionhistorica.
 
 2026-10-07 18:57 UTC - B-10: Benchmark GPU top15: 8b 14643/17600 ms, citas49/49, fallback0/15; 4b 9050/12898.2 ms, citas25/25, EMPTY_BRIEF3/15. Recomiendo8b. 172 pruebas verdes; reportes reales guardados.
+
+2026-10-07 19:00 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md; B-10 https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/48. Continúa B-04: casos sinteticos aislados, incluido suficiente con ACP coincidente; luego H-06 y volver a bloqueos humanos.
