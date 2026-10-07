@@ -77,3 +77,11 @@ exploratorio. No sustituir el cronómetro humano por estimaciones del agente.
 Capturas finales: el primer arnés buscaba h2 Respuesta pero la UI usa h3 Resultado, dejando la abstención fuera del encuadre; corregido el selector y recapturado. Esperar ausencia de todo botón Stop también incluía nodos ocultos; ajustado el arnés sin modificar la UI ni los PNG. Evidencia: docs/screenshots/final/09-consultas-abstencion.png.
 | 2026-10-07 | B-06 test_evidence_fields_nulls_and_injection_filter | EvidenceRef rechaza unit como campo extra. | El adaptador experimental supuso un campo fuera del contrato. | Conservar unidad en excerpt y texto del índice; contrato intacto. | tests/test_retrieve.py; 176 passed; Ruff del módulo y pruebas verde. |
 | 2026-10-07 | B-06 smoke real | AttributeError report.total. | El script local asumió objeto donde load_snapshot devuelve dict. | Usar report["total"] en el script; no cambio del loader. | eval/results/b06-smoke.json al repetir. |
+
+### B-09 y A-06 ? 2026-10-07 22:18 UTC
+
+Revision humana LowCrime completa: 25 si, 3 no (SR05, SR10, SR19), 2 parcial (SR04, SR25). Validez estricta 25/30 = 83,3%; parcial no suma. Muestra determinista template, no generalizable a salidas LLM cache. CSV/meta inmutables verificados; etiquetas y UTC archivadas en la corrida 20261007T221213303534Z. P@5 exploratoria 1/5 sobre 165 eventos del bundle publico, con DL-024. Red-team y precompute importados con su procedencia original.
+
+188 pruebas pasaron y ruff check . limpio. Stage probado en Streamlit local: 31 hashes coinciden, cero descripciones/citas RSS, cache forzada y 15/15 paquetes precalculados recuperados sin llamar al backend. Autenticacion y rutas verificadas con AppTest y Chromium. Docker y HF: no medido; sin publicar. Evidencia: deploy/readiness-human-inputs.json y capturas finales 10/12/13.
+
+Incidencia de verificacion: el script temporal de captura tuvo un error de separacion de texto PowerShell y tiempos de espera al reintentar el login en navegador. Se corrigio el script y se comprobo entrada en sesion nueva; AppTest sobre stage tambien comprobo incorrecta seguida de correcta. No se modifico ni desactivo el control de acceso.

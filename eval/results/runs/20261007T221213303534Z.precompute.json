@@ -1,0 +1,41 @@
+{
+  "run_at": "2026-10-07T05:05:47.367393Z",
+  "source": "data\\processed\\v1\\generation_report.jsonl",
+  "source_sha256": "0f9fb7e8b9d801b3667784b6ee69fe2da148a09a00f9f624163a57f358cfab4d",
+  "packages": 15,
+  "modes": {
+    "live": 15
+  },
+  "models": [
+    "ollama:qwen3:8b"
+  ],
+  "latency_ms": {
+    "n": 15,
+    "median": 15068.0,
+    "p95": 17755.0,
+    "scope": "Story Studio live successful responses, wall clock; includes first load if any. Claims calls excluded. Cached/fallback latency excluded.",
+    "percentile_method": "linear / Hyndman-Fan type 7"
+  },
+  "citation_coverage": {
+    "num": 49,
+    "den": 49,
+    "value": 1.0
+  },
+  "live_citation_coverage": {
+    "num": 49,
+    "den": 49,
+    "value": 1.0
+  },
+  "citation_scope": "Kept brief/script sentences with claim_ids, from generation_report; includes nonfactual disclaimer sentences in denominator. Social copy excluded by existing report. Not support-validity or human fact-checking.",
+  "fallback_count": 0,
+  "sentences_generated": 68,
+  "sentences_kept": 63,
+  "removed_by_code": {
+    "STATUS_MISMATCH": 3,
+    "UNCITED_FACT": 2
+  },
+  "hardware": "AMD Radeon RX 9060 XT, 8 GiB; Ollama 0.40.0 Vulkan; qwen3:8b 37/37 layers offloaded (server log). Embeddings E5 on CPU.",
+  "invocation": "make unavailable on Windows; exact recipe: .venv/Scripts/python -m scayl.pipeline build --snapshot data/raw/v1 --llm live --top 15",
+  "cache": "Dedicated initially empty data/cache/llm/recent-official-20261007; all calls are local.",
+  "api_cost_usd": 0.0
+}

@@ -1,0 +1,54 @@
+{
+  "checked_at": "2026-10-07T22:16:58.754403+00:00",
+  "published": false,
+  "stage_local": "deploy/stage-human-reviewed",
+  "source_commit": "5b6fd71",
+  "artifact_review": "deploy/artifacts/v1/PUBLIC_CACHE_REVIEW.json",
+  "bundle_sha256": "45cd5d7524bb295565bd00476357f1b9fc2bfa8329af71d4f549eecb5d08ce2c",
+  "evaluation_sha256": "bccf10fcba83e6755ae64b225a80be88c2bf90d7914f7f74e391aa46fe889ffd",
+  "manifest_sha256": "1e17ee651837111204c16e4e8f2aa791d912046236a18f99362e8fd6023b3af2",
+  "signals": 187,
+  "events": 165,
+  "cache_entries": 30,
+  "reviewed_file_hashes_verified": 31,
+  "news_with_rss_description": 0,
+  "rss_references": 0,
+  "package_modes": {
+    "cache": 15,
+    "template": 150
+  },
+  "forced_live_request_result": {
+    "cache": 15
+  },
+  "live_backend_calls": 0,
+  "docker_build": {
+    "status": "no medido",
+    "reason": "Docker Desktop Linux engine pipe unavailable"
+  },
+  "hf_deployment": {
+    "status": "no medido",
+    "published": false
+  },
+  "local_streamlit": {
+    "status": "passed",
+    "health": "ok",
+    "browser": "Chromium headless, 1280x720",
+    "direct_trust_lab_gate": true,
+    "wrong_password_rejected": true,
+    "correct_password_accepted": true,
+    "logout_revokes_access": true,
+    "support_metric_visible": "25/30",
+    "redteam_and_provenance_visible": true
+  },
+  "staged_app_test": {
+    "status": "passed",
+    "missing_secret_fails_closed": true,
+    "direct_routes_gated": 4,
+    "wrong_then_correct_password": true,
+    "queries_mode_options": [
+      "cache"
+    ],
+    "secret_rotation_revokes_access": true,
+    "secret_removal_revokes_access": true
+  }
+}
