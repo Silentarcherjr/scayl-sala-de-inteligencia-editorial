@@ -1,7 +1,7 @@
 # A-03 · Ficha de Caso
 
-Estado: implementada y probada con datos sintéticos; **integración pendiente de A-08 / AP-011**.
-No cerrar A-03 todavía. La página conserva y completa el archivo local que existía sin seguimiento.
+Estado: A-03 y A-08 implementadas; listas para revisión del Lead en PR #13.
+AP-011 aceptada y aplicada (DL-020). La navegación desde Home sigue en A-01/A-02.
 
 Ejecutar desde la raíz del repositorio, con el entorno de dependencias activado:
 
@@ -26,17 +26,24 @@ antes de que entregue H-08. En esta ejecución aún no existe `editor_candidates
 - **Revisión:** estados permitidos, revisor y justificación obligatorios, historial y hash de evidencia.
   Se revalida la transición al enviar y se presentan los errores del servicio.
 
-El paquete generado queda en la sesión por snapshot/caso. Como el servicio actual registra solo
-el paquete del snapshot, guardar una revisión queda deshabilitado si difiere del visible. El botón
-**Volver al paquete del snapshot** permite revisar el paquete identificado en Revisión. Aprobar
-como borrador no publica contenido.
+El paquete generado queda en la sesión por snapshot/caso. Revisión pasa ese paquete visible a
+`service.review(..., package=...)`; el recibo registra su id y sha256. El botón
+**Volver al paquete del snapshot** permite volver al paquete original. Cada registro del historial
+incluye el hash del recibo y su descarga JSON mediante `service.receipt()`. Un recibo ausente se
+señala sin ocultar el historial. Aprobar como borrador no publica contenido.
 
-La tarjeta compartida A-08 no existe todavía en main. `show_refs()` es un adaptador temporal que
-expone `EvidenceRef` completo en JSON; no es una implementación alternativa de la tarjeta.
-AP-011 pide su ruta de importación, la persistencia del paquete revisado y una API para descargar
-el recibo. No se modificaron contratos, servicio, dependencias ni archivos de frictionspp-svg.
+La tarjeta compartida `app.components.evidence_card.evidence_card(ref)` se abre pulsando el valor
+citado. Muestra id, tipo, campo, valor, período, URL y extracto, preservando nulos y el cero.
+Los datos World Bank llevan advertencia histórica; otros períodos se muestran sin atribuirles
+vigencia actual. La usan las afirmaciones, los conflictos y el paquete; está disponible para Consultas.
+No se modificaron contratos, servicio, dependencias ni archivos de frictionspp-svg.
 
-Validación: `python -m pytest -q` → **80 passed**, incluidos 9 casos AppTest de
-`tests/ui/test_case_page.py`. Ejecución local: Python 3.14.7, Streamlit 1.65.0, entorno `.venv` ya
-existente (no se cambiaron versiones fijadas). No se verificó visualmente en navegador ni se midió
-con datos reales/modelo local. No hay capturas de navegador; los AppTest verifican el árbol de UI.
+Validación: `python -m pytest -q` → **84 passed**, incluidos 12 casos AppTest en `tests/ui/`.
+Se verifica el hash del paquete generado y revisado, la descarga disponible y los nulos de la tarjeta.
+Entorno local existente: Python 3.14.7, Streamlit 1.65.0; no se cambiaron versiones fijadas.
+Comprobación visual en Chromium a 1280×720 con fixture sintético, modo template y estado temporal
+aislado: generación, revisión e historial. No se midieron datos reales ni modelo local.
+
+Capturas: [tarjeta histórica](screenshots/a03-evidencia.png),
+[conflictos lado a lado](screenshots/a03-conflictos.png),
+[revisión del paquete generado y recibo](screenshots/a03-revision.png).

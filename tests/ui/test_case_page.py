@@ -1,4 +1,5 @@
 """A-03 integration tests: synthetic inputs and isolated review storage."""
+import hashlib
 import json
 from pathlib import Path
 from unittest.mock import Mock
@@ -54,10 +55,11 @@ def test_conflict_preserves_both_versions_and_historical_evidence(page):
     assert "1.2%" in values(evidence.text) and "2.1%" in values(evidence.text)
     assert "Verificación pendiente" in values(evidence.warning)
     assert "Dato histórico — 2024" in values(evidence.warning)
-    refs = [json.loads(item.value) for item in evidence.json]
-    assert any(ref["evidence_id"] == "wb:PAN:FP.CPI.TOTL.ZG:2024"
-               and ref["field"] == "valor" and ref["value"] == 0.7
-               and ref["period"] == "2024" and ref["url"] for ref in refs)
+    card = next(item for item in evidence.expander if "wb:PAN:FP.CPI.TOTL.ZG:2024" in item.label)
+    assert "Campo: valor" in values(card.text)
+    assert "Valor: 0.7" in values(card.text)
+    assert "Período: 2024" in values(card.text)
+    assert "URL: https://data.worldbank.org/" in values(card.text)
 
 
 def test_member_headlines_null_dates_and_security_notice(page, bundle):
@@ -114,10 +116,31 @@ def test_generated_package_citations_and_review_identity(page):
     assert not page.exception
     assert "Modo: template" in values(page.caption)
     assert any("Afirmación CLM-0001-001" == item.label for item in page.expander)
-    assert "usgs:syn0001" in values(page.json)
-    assert button(page, "Guardar revisión").disabled
+    assert "ID de evidencia: usgs:syn0001" in values(page.text)
+    assert not button(page, "Guardar revisión").disabled
+    shown = page.session_state["case-package:fixture-synthetic-0:EVT-0001"]
+    page.text_input[0].set_value("LowCrime")
+    page.text_area[0].set_value("Reviso el paquete generado visible")
+    button(page, "Guardar revisión").click().run()
+    assert not page.exception
+    record = service.review_history("EVT-0001")[0]
+    receipt = service.receipt(record.review_id)
+    payload = json.dumps(shown.model_dump(mode="json"), sort_keys=True, ensure_ascii=False, separators=(",", ":"))
+    assert receipt["package_id"] == shown.package_id
+    assert receipt["package_sha256"] == hashlib.sha256(payload.encode()).hexdigest()
+    assert receipt["receipt_sha256"] in values(page.caption)
+    assert page.get("download_button")[0].label == "Descargar recibo JSON"
     button(page, "Volver al paquete del snapshot").click().run()
     assert not button(page, "Guardar revisión").disabled
+
+
+def test_missing_receipt_keeps_review_history_visible(page, monkeypatch):
+    service.review("EVT-0001", ReviewState.EN_REVISION, "LowCrime", "Verificar fuentes")
+    monkeypatch.setattr(service, "receipt", Mock(side_effect=FileNotFoundError))
+    page.run()
+    assert not page.exception
+    assert "Verificar fuentes" in values(page.text)
+    assert "Recibo no disponible" in values(page.warning)
 
 
 def test_empty_bundle(page, bundle):

@@ -1,9 +1,11 @@
-﻿"""A-03: case detail. Shared evidence-card integration awaits A-08 (AP-011)."""
+"""A-03: case detail with shared A-08 evidence cards and traceable review."""
+import json
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
 import streamlit as st
 
+from app.components.evidence_card import evidence_card
 from scayl import service
 from scayl.contracts import REVIEW_TRANSITIONS, Claim, Event, EvidenceRef, StoryPackage
 
@@ -15,10 +17,8 @@ def local_time(value: datetime | None) -> str:
 
 
 def show_refs(refs: list[EvidenceRef]) -> None:
-    # Temporary local adapter: preserve the full contract without implementing A-08.
     for ref in refs:
-        with st.expander(f"{ref.evidence_id} · {ref.field}"):
-            st.json(ref.model_dump(mode="json"))
+        evidence_card(ref)
 
 
 def show_claim(claim: Claim) -> None:
@@ -75,22 +75,15 @@ def show_review(event: Event, visible_package: StoryPackage | None) -> None:
     state = service.current_state(event.event_id)
     st.subheader(f"Estado actual: {state.value}")
     st.info("Aprobado como borrador NO significa publicado.")
-    saved_package = service.get_package(event.event_id)
-    package_matches = visible_package == saved_package
-    st.caption(f"Paquete registrado para revisión: {saved_package.package_id if saved_package else 'ninguno'}")
-    if not package_matches:
-        st.warning("El paquete visible fue generado en esta sesión y no está guardado en el snapshot. "
-                   "Vuelve al paquete del snapshot en Producir antes de registrar una revisión.")
+    st.caption(f"Paquete visible para revisión: {visible_package.package_id if visible_package else 'ninguno'}")
     allowed = sorted(REVIEW_TRANSITIONS[state], key=lambda item: item.value)
     with st.form(f"review-{event.event_id}"):
         target = st.selectbox("Nuevo estado", allowed, format_func=lambda item: item.value)
         reviewer = st.text_input("Revisor")
         justification = st.text_area("Justificación obligatoria")
-        submitted = st.form_submit_button("Guardar revisión", disabled=not package_matches)
+        submitted = st.form_submit_button("Guardar revisión")
     if submitted:
-        if not package_matches:
-            st.error("El paquete visible no coincide con el paquete guardado para revisión.")
-        elif not reviewer.strip():
+        if not reviewer.strip():
             st.error("El revisor es obligatorio.")
         elif not justification.strip():
             st.error("La justificación es obligatoria.")
@@ -98,7 +91,8 @@ def show_review(event: Event, visible_package: StoryPackage | None) -> None:
             st.error("Transición no permitida: el estado cambió. Recarga la ficha.")
         else:
             try:
-                service.review(event.event_id, target, reviewer.strip(), justification.strip())
+                service.review(event.event_id, target, reviewer.strip(), justification.strip(),
+                               package=visible_package)
             except ValueError as exc:
                 st.error(str(exc))
             else:
@@ -113,6 +107,15 @@ def show_review(event: Event, visible_package: StoryPackage | None) -> None:
         st.text(record.justification)
         st.caption(f"Revisión {record.review_id} · Hash de evidencia: {record.evidence_snapshot_sha256}")
         st.caption(f"Paquete: {record.package_id if record.package_id is not None else 'ninguno'}")
+        try:
+            receipt = service.receipt(record.review_id)
+        except (OSError, ValueError):
+            st.warning("Recibo no disponible. El historial de la revisión se conserva.")
+        else:
+            st.caption(f"Recibo #{record.review_id} · hash {receipt['receipt_sha256']}")
+            st.download_button("Descargar recibo JSON", json.dumps(receipt, ensure_ascii=False, indent=2),
+                               file_name=f"{record.review_id}.json", mime="application/json",
+                               key=f"receipt-{record.review_id}")
 
 
 def main() -> None:
