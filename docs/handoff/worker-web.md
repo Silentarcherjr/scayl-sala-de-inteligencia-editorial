@@ -1,26 +1,26 @@
-# Relevo · worker-web · 2026-10-08 03:58 UTC
+# Relevo · worker-web · 2026-10-08 04:28 UTC
 
-- **Motivo de la parada:** relevo preventivo al completar Tarea A.
-- **Rama:** `worker-web/flujo-completo` · **Último commit:** el que incluye esta nota; consultar `git log -1` (push al cerrar).
-- **PR abierto:** PR de esta rama hacia main; se abre después del push, consultar `gh pr view worker-web/flujo-completo`.
+- **Motivo de la parada:** relevo preventivo al cerrar etapa.
+- **Rama:** `worker-web/bank-bulletin` · **Último commit:** el commit de etapa incluye esta nota; consultar `git log -1` (push al cerrar).
+- **PR abierto:** pendiente hasta completar §8; buscar PR de worker-web/bank-bulletin al cierre.
 
 ## Tarea en curso
-Tarea A completada: dejar visible dónde funciona el flujo completo para el jurado.
+DL-035 / docs/BANK_BULLETIN_PLAN.md. Etapa 1. Cambios aditivos; no alterar Story Studio, Q&A, ranking, app/, deploy/ ni pruebas existentes.
 
 ## Hecho en esta sesión
-Aviso exacto con enlace a https://scayl-demo.streamlit.app/ en pestaña Revisión de todas las fichas, paso de revisión del recorrido y pie global. Componente compartido sin tooltips. Corregidas dos frases del recorrido para reflejar C-03: Notion opcional.
+Contrato SectorBulletin 0.4.0, plantilla determinista, validador de términos/citas/cifras/tags/tiempo y nueva función sector_bulletin. Pruebas nuevas; funciones existentes intactas.
 
 ## Siguiente paso concreto
-El Lead revisa y mergea el PR de worker-web/flujo-completo. Vercel despliega main por integración Git; no mergear desde el worker.
+Exportar únicamente boletins.json y construir la pantalla con selector, citas e impresión.
 
 ## Estado de las pruebas
-197 pytest passed; npm run lint y npm run build OK (172 rutas); navegador verificó aviso visible y enlace correcto en las tres ubicaciones, escritorio y móvil, sin desbordamiento horizontal.
+216 pytest passed; ruff check . OK
 
 ## Archivos tocados
-web/components/shared.tsx, web/components/case-view.tsx, web/app/recorrido/page.tsx, web/app/layout.tsx, web/README.md y documentación de bitácora/relevo.
+Ver commit de etapa. Permitidos por DL-035: contrato nuevo, scayl/gen/bulletin.py y prompt nuevo, función nueva de servicio, export, web/ y tests/test_bulletin.py.
 
 ## Bloqueos, dudas y decisiones pendientes
-Ninguno técnico. Merge reservado al Lead. Datos, scayl/, app/, deploy/ y tests/ intactos.
+Precálculo con GPU opcional requiere humano y revisión; no tocar deploy/artifacts ni afirmar inferencia real sin ejecución. Corte duro: 8 de octubre, 18:00 Panamá; si etapa 3 no pasa §8, entregar última estable. Mergea el Lead.
 
 ## Contexto que no está en el código
-Build requiere escalación para puertos de Turbopack; Node bundled runtime. Verificación temporal /tmp/scayl-notice-check.cjs. No se desplegó producción explícitamente en esta tarea: el encargo termina con PR.
+Python .venv/bin/python; ruff .venv/bin/ruff. Node bundled runtime; compilar Next requiere escalación de sandbox. Exportar a /tmp y copiar solo bulletins.json para no cambiar los JSON existentes. Contrato 0.4.0 es aditivo.

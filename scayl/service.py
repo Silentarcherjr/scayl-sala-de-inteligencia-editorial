@@ -17,6 +17,7 @@ from scayl.contracts import (
     QAAnswer,
     ReviewRecord,
     ReviewState,
+    SectorBulletin,
     StoryPackage,
     UIBundle,
 )
@@ -216,3 +217,11 @@ __all__ = [
     "simulate_weights",
     "trust_lab",
 ]
+
+
+def sector_bulletin(sector: str) -> SectorBulletin:
+    """DL-035 additive extension; existing editorial functions are unchanged."""
+    from scayl.gen.bulletin import build_template_bulletin
+
+    bundle = load_bundle()
+    return build_template_bulletin(bundle.events, sector, bundle.snapshot_cutoff_utc)
