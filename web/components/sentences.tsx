@@ -1,0 +1,5 @@
+import type { Sentence, Claim, Evidence } from "@/lib/types";
+import { Badge, Citation } from "./shared";
+export default function Sentences({sentences, claims = [], citations = []}: {sentences: Sentence[]; claims?: Claim[]; citations?: Evidence[]}) {
+  return sentences.length ? sentences.map((s, i) => <div className="sentence" key={i}><Badge value={s.tag}/><p>{s.text}</p>{s.claim_ids.map(id => <details className="citation" key={id}><summary>Ver sustento · {id}</summary>{claims.filter(c => c.claim_id === id).map(c => <div key={c.claim_id}><p><strong>{c.type} · {c.status}</strong></p><p>{c.statement}</p><p>{c.reason}</p>{c.evidence.map((ref,j) => <Citation key={j} refData={ref}/>)}</div>)}{citations.filter(c => c.evidence_id === id).map((ref,j) => <Citation key={j} refData={ref}/>)}{!claims.some(c=>c.claim_id===id) && !citations.some(c=>c.evidence_id===id) ? <p>Referencia no disponible en esta salida.</p> : null}</details>)}</div>) : <p className="empty">No hay oraciones disponibles en esta salida.</p>;
+}
