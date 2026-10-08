@@ -72,3 +72,8 @@ muestras, corridas y limitaciones permanecen en los desplegables. No se combinan
 infiere una mejora general de IA. Ver `docs/screenshots/web/jury-verification.json`: seis pantallas,
 escritorio/móvil, recorrido completo, enlaces profundos, teclado y cero peticiones externas con Wi-Fi
 apagado y restaurado. La comprensión con una persona nueva aún no se ha medido.
+
+El aviso visible «La revisión humana con registro y la consulta libre funcionan en la versión de
+trabajo: https://scayl-demo.streamlit.app/» aparece junto al modo de solo lectura de cada ficha, en
+el paso de revisión del recorrido y en el pie de todas las páginas. La demo pública permite
+inspeccionar; Streamlit ofrece las acciones con registro. Notion es opcional según C-03.

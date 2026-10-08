@@ -58,3 +58,5 @@ Codex ? LowCrime ? 2026-10-07 22:18 UTC ? B-09: transcripcion de 30 decisiones h
 | Codex (GPT-6) | DL-034: exportador público y web Next.js estática | Implementación bajo WEB_NEXT_PLAN: 197 pruebas, ruff, lint y build; cinco pantallas verificadas con Wi-Fi apagado; paridad con Streamlit en tres casos y con Python en 165 filas del simulador. Capturas y resultados en docs/screenshots/web/. |
 
 | Codex (GPT-6) | 2026-10-08 03:11 UTC · UX del jurado | Recorrido guiado, resumen de fichas y explicación de métricas sobre datos existentes; sin etiquetas ni cifras inventadas. 197 pytest, ruff, build/lint y seis pantallas en escritorio/móvil offline; comprensión humana aún no medida. |
+
+| Codex (GPT-6) | 2026-10-08 03:58 UTC · Tarea A, flujo completo | Aviso visible en tres ubicaciones y texto del recorrido alineado con C-03. Sin cambiar datos ni lógica Python. 197 pytest; lint/build; verificación del aviso y enlaces en escritorio/móvil. |
