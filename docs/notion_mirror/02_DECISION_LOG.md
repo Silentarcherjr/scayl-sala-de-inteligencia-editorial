@@ -219,3 +219,9 @@
 - **No se re-etiqueta** después de ver el resultado (sería sesgo). En la entrega se reporta 25/30 con esta lectura.
 - **Evaluación final consolidada:** `eval/results/latest.json` integra citas 45/45, validez 25/30, red-team 16/16, temas (0,76 / 0,25), agrupación (0,44 / 0,99), P@5 1/5 y latencia 13,1 / 17,0 s. Siguen "no medido": tokens, preservación de atribución y latencia de Consultas.
 - **Fecha:** 2026-10-07
+
+### DL-032 · Publicación en Streamlit Community Cloud (HF Docker exige pago)
+- **Hecho:** al crear el Space, Hugging Face respondió `402 Payment Required`: los Spaces Docker o Gradio en CPU gratuita requieren PRO. No se creó nada.
+- **Decisión:** no pagar (regla: sin costos sin aprobación) y publicar en **Streamlit Community Cloud** (gratis), con el mismo stage auditado, desde un repositorio GitHub dedicado que contiene solo el stage. La contraseña va en *Secrets*, que la plataforma expone como variable de entorno: el mismo control de acceso de A-06.
+- **Cambio técnico:** `deploy/space.py` se autoconfigura (stage en `sys.path`, modo cache y rutas por defecto) porque esa plataforma no usa el Dockerfile. Con Docker no cambia nada: los valores del entorno tienen prioridad. Verificado en local sin `PYTHONPATH` y con solo la contraseña.
+- **Fecha:** 2026-10-08
