@@ -3,12 +3,29 @@
   "wifi_initial": "Wi-Fi Power (en0): On",
   "checks": [
     "desktop logistica_canal",
-    "desktop economia",
-    "mobile logistica_canal",
-    "mobile economia"
+    "mobile logistica_canal"
   ],
   "errors": [],
   "external": [],
   "print": "beforeprint abre citas; afterprint restaura; PDFs A4 generados",
-  "editorial": "brief original y consulta con fuente conservados"
+  "editorial": "brief original y consulta con fuente conservados",
+  "verified_at_utc": "2026-10-08 05:11 UTC",
+  "scope": "Solo logistica_canal, CU-05 literal, sin selector de sectores",
+  "summary_words": 112,
+  "summary_items": 4,
+  "events": 5,
+  "media_domains": 6,
+  "hypotheses": 3,
+  "extra_checks": [
+    "Resumen distinto de observaciones y determinista",
+    "Tres hipótesis citadas sin cifras",
+    "Etiqueta titular en idioma original (maratí)",
+    "44.36 en texto y 44.3578422661429 en tarjeta",
+    "Preguntas ACP vigentes, comparación interanual y medios independientes"
+  ],
+  "print_pdf_pages": 5,
+  "print_visual_review": "Cinco páginas A4 inspeccionadas, sin recortes ni páginas vacías; fuentes y método de conteos incluidos",
+  "python_tests_passed": 242,
+  "ruff": "passed",
+  "npm_ci_lint_build": "passed"
 }

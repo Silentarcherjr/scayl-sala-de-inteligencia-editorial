@@ -63,3 +63,6 @@ Codex ? LowCrime ? 2026-10-07 22:18 UTC ? B-09: transcripcion de 30 decisiones h
 
 
 | Codex (GPT-6) | 2026-10-08 04:44 UTC · DL-035, extensión bancaria | Implementó contrato aditivo, plantilla determinista, validadores, prompt local/caché con fallback, export público y página imprimible. 230 pytest, Ruff, npm ci/lint/build; ambos sectores verificados offline en escritorio/móvil. Backend LLM simulado solo en pruebas: no acredita inferencia real ni aporta textos a la demo. Boletines exportados en modo plantilla; precálculo GPU opcional omitido sin revisión humana. No modificó ranking, Story Studio, Q&A, app/, deploy/, datos ni pruebas anteriores. Textos y capturas para revisión del Lead. |
+
+
+| Codex (GPT-6) | 2026-10-08 05:11 UTC · Correcciones del Lead sobre PR #71 / DL-035 | Redujo la entrega pública a CU-05 logístico por ruido de pertinencia del clasificador, sin modificarlo. Síntesis determinista de 112 palabras, conteos medidos (5 eventos/6 dominios), tendencia ACP y exportaciones históricas, redondeo decimal local con valores originales conservados, tres hipótesis citadas, preguntas verificables y etiqueta de idioma original. 242 pytest, Ruff, npm ci/lint/build, escritorio/móvil y PDF offline inspeccionado. Sin inferencia real ni etiquetas humanas inventadas; plantilla y límites visibles. |

@@ -48,7 +48,7 @@ Next.js estático en Vercel: los mismos 165 eventos, componentes, evidencia y pa
 Las consultas guiadas usan resultados precalculados; la pregunta libre enlaza a Streamlit.
 La revisión de la demo web es de solo lectura.
 
-**Extensión bancaria:** abre `/boletin/`, elige Logística y Canal o Economía y usa «Imprimir / guardar PDF». Los dos boletines incluidos son plantillas, sin IA generativa; no evalúan personas ni recomiendan operaciones.
+**Extensión bancaria:** abre `/boletin/` para leer el boletín de Logística y Canal (CU-05) y usa «Imprimir / guardar PDF». El boletín incluido es una plantilla, sin IA generativa; no evalúan personas ni recomiendan operaciones.
 
 **Web local (una vez construido el export, funciona sin internet):**
 ```bash

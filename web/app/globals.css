@@ -19,3 +19,10 @@
 @media print{.bank-page .sentence .citation>:not(summary){display:none}.bank-page .citation dl{display:block;margin:6px 0}.bank-page .citation dt,.bank-page .citation dd:not(:nth-of-type(4)):not(:nth-of-type(6)){display:none}.bank-page .citation dd:nth-of-type(4):before{content:"Período: "}.bank-page .citation dd:nth-of-type(6):before{content:"URL: "}.bank-page .citation summary{list-style:none}.bank-page .citation:not(.sentence .citation){break-inside:avoid}}
 @media print{.bank-page .sentence{break-inside:avoid;margin:5px 0;padding:6px 10px}.bank-page .citation{padding:8px 10px;margin:6px 0}}
 @media print{.bank-page .card{border-radius:0;box-decoration-break:clone;-webkit-box-decoration-break:clone}.bank-page .bank-hypotheses{break-inside:avoid}}
+.bank-original-language{font-size:12px;font-style:italic;margin-top:10px}.bank-cited-sentence:has(.bank-original-language){border-left:3px solid var(--yellow);padding-left:10px}
+@media print{.bank-page .bank-cited-sentence{break-inside:avoid}.bank-page .bank-original-language{font-size:10px}}
+
+@media print{.bank-page .bank-derived-count .citation dd:nth-of-type(5){display:block}.bank-page .bank-derived-count .citation dd:nth-of-type(5):before{content:"Entradas y método: "}}
+@media print{.bank-page>section{margin-bottom:0}.bank-page .sentence .citation{display:inline-block;border:0;padding:0;margin:2px 8px 0 0}.bank-page .sentence .citation summary{font-size:9px}.bank-page>section>.citation:last-child{margin-bottom:0}}
+@media print{.bank-page .bank-cited-sentence{display:flow-root}.bank-page li{break-inside:avoid}}
+@media print{.bank-page .card{border:0;padding:0;background:transparent}.bank-page .bank-hypotheses{border-left:3px solid #FEC526;padding:12px;background:#fffbec}.bank-page .sentence>.badge{display:block;width:fit-content}}

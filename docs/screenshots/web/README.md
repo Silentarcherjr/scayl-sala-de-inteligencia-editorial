@@ -46,21 +46,26 @@ Resultado: [jury-public-verification.json](jury-public-verification.json). Produ
 `dpl_CWXktnUR4TqmMGyTp5F2hE3XziTw`, código `957ecf08568f2f79fb8209d1ea5d6830e5691e71`.
 
 
-## Extensión bancaria · DL-035 · 2026-10-08
+## Extensión bancaria logística · revisión del Lead del PR #71
 
-`bank-{logistica_canal,economia}-{desktop,mobile}.png`: capturas reales completas del selector y los
-dos boletines, con citas desplegadas de ejemplo. `bank-*-print.png`: primera página renderizada de
-cada PDF A4, sin edición. Se inspeccionaron las 6 páginas de logística y 5 de economía: texto legible,
-oraciones y secciones sin recortes, etiquetas, hipótesis, períodos y URLs visibles.
+`bank-logistica_canal-{desktop,mobile}.png`: capturas reales del único boletín entregado, con citas
+desplegadas de ejemplo. `bank-logistica_canal-print.png`: primera página renderizada del PDF A4, sin
+edición. El boletín del segundo sector y sus capturas se retiraron por el clasificador de temas
+ruidoso: sus titulares eran poco pertinentes para un analista sectorial. No cambia la web editorial.
 
-[bank-verification.json](bank-verification.json) registra Wi-Fi apagado/restaurado y bloqueo de otros
-orígenes, cero solicitudes externas y errores de navegador. Ambos sectores funcionan en escritorio
-y móvil, con dos/una columnas y sin desbordamiento. Se verificó el botón de impresión, apertura y
-restauración de citas, y se contrastaron brief editorial y consulta guardada con sus datos originales.
-La prueba acredita el export local; producción depende del merge del Lead y del despliegue Git.
+[bank-verification.json](bank-verification.json) documenta Wi-Fi apagado/restaurado y bloqueo de otros
+orígenes, cero solicitudes externas y errores, escritorio/móvil sin desbordamiento y dos/una columnas.
+Se verifican CU-05, resumen de síntesis distinto de las observaciones, tres hipótesis citadas, preguntas
+verificables, etiqueta del titular en maratí, valor redondeado en texto y valor íntegro en la tarjeta,
+botón de impresión/restauración de citas y brief/consulta editorial conservados. El PDF incluye
+fuentes, períodos, URLs y trazabilidad de los conteos. La evidencia corresponde al export local;
+producción depende del merge del Lead y del despliegue Git.
 
-§8: 230 pytest; Ruff; npm ci, lint y build aprobados. Lectura manual: resúmenes 179/171 palabras,
-ningún consejo financiero, hipótesis condicionales separadas, Banco Mundial con período 2024 y aviso
-histórico. El titular con cifras cuyo período no consta conserva el nulo y añade una advertencia
-explícita; no se inventa una fecha. Las preguntas se derivan de los vacíos de evidencia existentes.
-No se ha medido utilidad ni comprensión con analistas. El PR incluye ambos textos completos.
+§8: 242 pytest; Ruff; npm ci, lint y build aprobados. Lectura manual del boletín completo: sin consejo
+financiero, hipótesis condicionales distintas de las observaciones, secuencia fechada del Gatún,
+exportaciones 2024 con aviso histórico y períodos ausentes explícitos. No se ha medido utilidad ni
+comprensión con analistas. El PR incluye el boletín final completo y las limitaciones de pertinencia.
+
+Resumen medido: **112 palabras** en cuatro elementos de síntesis, cinco eventos y seis dominios de
+medios. PDF A4 de **cinco páginas**, todas inspeccionadas: etiquetas completas, texto y URLs legibles,
+bloque de hipótesis diferenciado y sin páginas vacías. Las tarjetas de conteo imprimen entradas y método.

@@ -79,38 +79,47 @@ el paso de revisión del recorrido y en el pie de todas las páginas. La demo p�
 inspeccionar; Streamlit ofrece las acciones con registro. Notion es opcional según C-03.
 
 
-## Boletín de entorno sectorial · DL-035
+## Boletín de entorno logístico · DL-035 / revisión del PR #71
 
 El brief oficial *hackIAthon — reto TVN Media*, modalidad bancaria, CU-05/T09, admite una extensión
-del mismo núcleo editorial. El alcance aprobado está en [BANK_BULLETIN_PLAN.md](../docs/BANK_BULLETIN_PLAN.md).
-`/boletin/` permite elegir Logística y Canal o Economía: pregunta, horizonte en Panamá, modo/modelo,
-límites visibles, resumen de hasta 250 palabras, observaciones citadas, hipótesis condicionales separadas,
-sectores potencialmente relacionados, tres preguntas y enlaces a los cinco eventos priorizados.
-No modifica ranking, Story Studio, Q&A ni revisión editorial. No incorpora SBP ni información de entidades.
+del núcleo editorial. `/boletin/` entrega únicamente **Logística y Canal**, con la pregunta CU-05 literal:
+«¿Qué señales públicas del entorno logístico debo revisar?». Se retiró el segundo sector por el ruido
+del clasificador de temas: agrupaba titulares judiciales, deportivos y de promoción institucional
+poco pertinentes para un analista. No se modifica ese clasificador ni el ranking editorial. Esta
+reducción de alcance fue solicitada por el Lead en la revisión del PR #71 y prevalece sobre la
+entrega dual originalmente descrita en [BANK_BULLETIN_PLAN.md](../docs/BANK_BULLETIN_PLAN.md).
 
-`scripts/export_web.py` agrega únicamente `bulletins.json` a sus salidas. La función nueva
-`service.sector_bulletin` usa el LLM existente en modo local/caché, prompt `bulletin.v1.md`, JSON con esquema
-y validación Pydantic. El control determinista elimina términos financieros prohibidos, cifras ajenas
-a la evidencia, citas desconocidas, instrucciones de fuentes y datos históricos sin período/advertencia.
-Un fallo, caché ausente o salida sin resumen, observaciones e hipótesis válidos activa la plantilla y
-registra `LLM_FALLBACK`. El aviso fijo de alcance es la única excepción al vocabulario prohibido.
+La página muestra usuario, horizonte en Panamá, modo/modelo, límites visibles, síntesis y observaciones
+con citas, tres hipótesis condicionales con sustento, sectores relacionados, tres preguntas verificables,
+eventos usados y fuentes. El resumen se construye por código y no repite las observaciones: mide eventos
+y dominios de medios, advierte que repetición no es corroboración, compara observaciones fechadas del
+Gatún y presenta exportaciones como contexto histórico. Los conteos son mediciones locales del snapshot
+con entradas y método en su tarjeta; no son indicadores externos ni medidas de independencia.
 
-Los boletines versionados son **Plantilla (sin IA generativa)**, no salidas del modelo simulado. El
-precálculo con GPU (etapa 4 opcional) se omite: no hay ejecución ni caché aprobada para esta extensión.
-Las pruebas usan un backend simulado aislado; sus resultados no se exportan. La revisión humana del
-sustento sectorial y la comprensión de analistas aún no están medidas. Los titulares se conservan
-en su idioma original; pueden ser poco pertinentes para el usuario sectorial. Los indicadores
-son contexto, no corroboran esos titulares. Un período ausente queda nulo y se declara en pantalla;
-no se confunde la fecha del snapshot con la fecha del hecho.
+El texto numérico utiliza como máximo dos decimales; cada valor completo permanece en su tarjeta de
+fuente. El adaptador de redondeo, exclusivamente en `scayl/gen/bulletin.py`, usa decimal y
+`ROUND_HALF_UP` a dos decimales, sobre el valor exacto de la fila citada. No usa una tolerancia genérica
+ni admite redondeos a un decimal. `check_sentence`, `numbers_in` y los validadores compartidos
+permanecen intactos; nuevas pruebas rechazan cifras incorrectas, exceso de precisión y magnitudes
+infladas por la ambigüedad de separadores decimales. Nulos nunca se transforman en cero.
 
-«Imprimir / guardar PDF» abre las citas durante la impresión y restaura su estado al terminar. La
-hoja de impresión es exclusiva del boletín: conserva identificadores de sustento, períodos y URLs
-en la sección de fuentes, evitando repetir los desplegables completos en cada oración.
+El LLM existente puede generar observaciones/hipótesis en modo local/caché mediante JSON con esquema,
+Pydantic y el prompt nuevo `bulletin.v2.md`. El resumen logístico se conserva determinista. Se
+registran los descartes y se aplica fallback ante salida incompleta, duplicación del resumen,
+hipótesis sin observación citada, cifras inventadas, inyección o términos financieros prohibidos.
+El aviso fijo de alcance sigue siendo la única excepción al vocabulario prohibido.
 
-Verificación de §8: 230 pruebas Python, Ruff, `npm ci`, lint y build (173 rutas), lectura completa de
-ambos boletines y navegación con Wi-Fi apagado/restaurado. Resúmenes medidos: 179/171 palabras.
-Escritorio 1440 × 1000, móvil 390 × 844; cero solicitudes externas, errores y desbordamientos. PDF
-A4 de 6/5 páginas revisados visualmente, incluidos fuentes e hipótesis. Evidencia en
-[bank-verification.json](../docs/screenshots/web/bank-verification.json) y capturas `bank-*.png`.
-Los avisos de dependencias de desarrollo ya documentados en la web siguen vigentes; no se añadieron
-dependencias ni se alteró el lockfile. El Lead revisa los dos textos completos en el PR antes de mergear.
+La entrega es **Plantilla (sin IA generativa)**: sin GPU ni caché revisada para esta extensión. El
+backend simulado se usa exclusivamente en pruebas y no aporta textos a la demo. Los titulares no
+se traducen; se rotulan «titular en idioma original (idioma)» según sus metadatos. Los indicadores
+son contexto y no corroboran los titulares; un período ausente sigue nulo y se declara sin
+inventar fecha de publicación ni confundirla con detección/corte. La pertinencia del titular en
+maratí y la utilidad/comprensión de analistas no están medidas.
+
+«Imprimir / guardar PDF» abre citas y restaura su estado al terminar. El estilo se limita al boletín:
+conserva identificadores, valores completos, períodos, URLs y método de conteos, evitando repetir
+los desplegables enteros en cada oración. §8 se verificó de nuevo: 242 pytest, Ruff, npm ci/lint/build
+y prueba con Wi-Fi apagado/restaurado, escritorio/móvil, impresión y flujo editorial existente.
+Capturas y resultado: [bank-verification.json](../docs/screenshots/web/bank-verification.json).
+El texto final íntegro está en el PR #71 para revisión y merge del Lead. Los avisos de desarrollo
+ya documentados siguen vigentes; no se añadieron dependencias ni se modificó el lockfile.

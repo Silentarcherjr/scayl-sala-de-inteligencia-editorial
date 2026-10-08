@@ -107,14 +107,14 @@ def test_selection_matches_official_order_top_five_and_service_is_additive(monke
         select_events(bundle.events, "clientes")
 
 
-def test_export_adds_two_public_bulletins_without_rss(tmp_path):
+def test_export_delivers_only_logistics_without_rss(tmp_path):
     from deploy.prepare import check_public
     from scripts.export_web import export
 
     export(tmp_path)
     bulletins = json.loads((tmp_path / "bulletins.json").read_text())
-    assert len(bulletins) == 2
-    assert [b["sector"] for b in bulletins] == ["logistica_canal", "economia"]
+    assert len(bulletins) == 1
+    assert [b["sector"] for b in bulletins] == ["logistica_canal"]
     assert all(b["validation"]["passed"] for b in bulletins)
     assert not any("descripcion" in json.dumps(b) for b in bulletins)
     check_public(bulletins)
@@ -245,3 +245,147 @@ def test_missing_news_period_is_explicit_without_inventing_a_date():
         update={"text": lead.text.replace(warning, "")})]}), [event])
     assert not cleaned.summary
     assert "BANKING_PERIOD_MISSING" in {i.code for i in cleaned.validation.issues}
+
+
+def logistics_bundle():
+    from pathlib import Path
+
+    return UIBundle.model_validate_json(Path("deploy/artifacts/v1/bundle.public.json").read_text())
+
+
+def test_logistics_summary_is_synthesis_and_measured_counts_deduplicate_media():
+    from urllib.parse import urlparse
+
+    bundle = logistics_bundle()
+    b = build_template_bulletin(bundle.events, "logistica_canal", bundle.snapshot_cutoff_utc)
+    assert b.validation.passed and not b.validation.issues
+    assert len(b.summary) == 4 and sum(words(s.text) for s in b.summary) <= 250
+    assert not {s.text for s in b.summary} & {s.text for s in b.observations}
+    selected = select_events(bundle.events, "logistica_canal")
+    assert len(selected) == 5 and len({n for e in selected for n in e.member_ids}) == 7
+    domains = {urlparse(r.url).hostname.removeprefix("www.") for r in b.sources
+               if r.kind.value == "noticia" and r.url}
+    assert len(domains) == 6  # Telemetro appears in different events, still one domain.
+    refs = {r.evidence_id: r for r in b.sources}
+    assert refs["bulletin:logistica_canal:eventos"].value == len(selected)
+    assert refs["bulletin:logistica_canal:medios"].value == len(domains)
+    assert "5 eventos" in b.summary[0].text and "6 medios" in b.summary[0].text
+    assert "repetición no es corroboración" in b.summary[1].text
+    assert "La procedencia independiente no puede determinarse" in b.summary[1].text
+    trend = b.summary[2]
+    assert all(f"{value} pies ({period})" in trend.text for value, period in
+               [("84.69", "2026-07-16"), ("84.0", "2026-09-04"), ("84.88", "2026-09-29")])
+    assert trend.text.index("2026-07-16") < trend.text.index("2026-09-04") < trend.text.index("2026-09-29")
+    assert "descenso y posterior recuperación" in trend.text and len(trend.claim_ids) == 3
+    assert "44.36 % del PIB en 2024" in b.summary[3].text
+    assert "Dato histórico — 2024. No presentarlo como medición actual." in b.summary[3].text
+    assert refs["wb:PAN:NE.EXP.GNFS.ZS:2024"].value == 44.3578422661429
+    assert b == build_template_bulletin(bundle.events, "logistica_canal", bundle.snapshot_cutoff_utc)
+
+
+def test_three_conditional_hypotheses_are_cited_to_displayed_observations_without_numbers():
+    from scayl.gen.validators import numbers_in
+
+    bundle = logistics_bundle()
+    b = build_template_bulletin(bundle.events, "logistica_canal", bundle.snapshot_cutoff_utc)
+    obs_ids = {cid for s in b.observations for cid in s.claim_ids}
+    assert len(b.impact_hypotheses) == 3
+    for s in b.impact_hypotheses:
+        assert s.tag == ClaimType.HIPOTESIS and s.text.startswith("Si ")
+        assert "requiere verificación" in s.text and not numbers_in(s.text)
+        assert s.claim_ids and set(s.claim_ids) <= obs_ids
+    assert any("Gatún" in s.text and "calado" in s.text for s in b.impact_hypotheses)
+    assert any("El Niño" in s.text and "tránsitos" in s.text for s in b.impact_hypotheses)
+    assert any("exportaciones" in s.text and "comercio exterior" in s.text for s in b.impact_hypotheses)
+    assert "avisos vigentes" in b.analyst_questions[0]
+    assert "mismo mes del año anterior" in b.analyst_questions[1]
+    assert "independientes, no replicadas" in b.analyst_questions[2]
+    missing = b.model_copy(update={"impact_hypotheses": [b.impact_hypotheses[0].model_copy(
+        update={"claim_ids": []}), *b.impact_hypotheses[1:]]})
+    cleaned = validate_bulletin(missing, bundle.events)
+    assert not cleaned.validation.passed
+    assert "BANKING_UNCITED_HYPOTHESIS" in {i.code for i in cleaned.validation.issues}
+
+
+@pytest.mark.parametrize("value,accepted", [("44.36", True), ("44,36", True), ("44.35", False),
+                                             ("4436", False), ("44.3578422661429", False), ("44.4", False)])
+def test_bulletin_rounding_is_exact_to_two_decimals_and_local(value, accepted):
+    from scayl.gen.validators import _Ctx, check_sentence
+
+    event = economic_event()
+    event.official_evidence[0].value = 44.3578422661429
+    b = build_template_bulletin([event], "economia", CUTOFF)
+    cid = event.official_evidence[0].evidence_id
+    s = TaggedSentence(text=f"Indicador: {value} % en 2024. "
+                            "Dato histórico — 2024. No presentarlo como medición actual.",
+                       tag=ClaimType.HECHO, claim_ids=[cid])
+    original = json.dumps(event.model_dump(mode="json"), sort_keys=True)
+    cleaned = validate_bulletin(b.model_copy(update={"summary": [s]}), [event])
+    assert bool(cleaned.summary) == accepted
+    assert json.dumps(event.model_dump(mode="json"), sort_keys=True) == original
+    # Shared validators retain the exact-number policy for Story Studio and Q&A.
+    claim = event.claims[-1].model_copy(update={"claim_id": cid, "evidence": event.official_evidence})
+    plain = s.model_copy(update={"text": f"Indicador: {value} % en 2024."})
+    if accepted:
+        assert check_sentence(plain, _Ctx(claims={cid: claim}), "test") is None
+
+
+def test_count_evidence_is_rebuilt_and_duplicate_summary_is_invalid():
+    bundle = logistics_bundle()
+    b = build_template_bulletin(bundle.events, "logistica_canal", bundle.snapshot_cutoff_utc)
+    bad = b.summary[0].model_copy(update={"text": "El snapshot reúne 999 eventos y 999 medios."})
+    b.sources[-1].value = 999  # Model-supplied evidence cannot authorize fabricated counts.
+    cleaned = validate_bulletin(b.model_copy(update={"summary": [bad, *b.summary[1:]]}), bundle.events)
+    assert "NUMBER_NOT_IN_EVIDENCE" in {i.code for i in cleaned.validation.issues}
+    assert all("999" not in s.text for s in cleaned.summary)
+    duplicate = validate_bulletin(b.model_copy(update={"summary": b.observations[:4]}), bundle.events)
+    assert not duplicate.validation.passed
+    assert "BANKING_SYNTHESIS_REQUIRED" in {i.code for i in duplicate.validation.issues}
+
+
+def test_logistics_llm_falls_back_when_it_repeats_observations_or_has_uncited_hypothesis(tmp_path):
+    from scayl.gen.bulletin import generate_bulletin
+    from scayl.gen.llm import LLM
+
+    bundle = logistics_bundle()
+    template = build_template_bulletin(bundle.events, "logistica_canal", bundle.snapshot_cutoff_utc)
+    for index, key in enumerate(("summary", "impact_hypotheses")):
+        data = {k: template.model_dump(mode="json")[k] for k in
+                ("summary", "observations", "impact_hypotheses", "analyst_questions")}
+        if key == "summary":
+            data[key] = data["observations"][:4]
+        else:
+            data[key][0]["claim_ids"] = []
+        llm = LLM(mode="live", backend=BulletinBackend(data), cache_dir=tmp_path / str(index))
+        b = generate_bulletin("logistica_canal", llm, events=bundle.events, cutoff=bundle.snapshot_cutoff_utc)
+        assert b.generated_by.mode == "template" and b.validation.passed
+        assert b.validation.issues[0].code == "LLM_FALLBACK"
+        assert b.summary == template.summary and b.impact_hypotheses == template.impact_hypotheses
+
+
+def test_synthesis_rejects_values_reassigned_to_wrong_dates_even_if_all_numbers_are_cited():
+    bundle = logistics_bundle()
+    b = build_template_bulletin(bundle.events, "logistica_canal", bundle.snapshot_cutoff_utc)
+    wrong = b.summary[2].model_copy(update={"text": b.summary[2].text.replace("84.69", "TEMP_VALUE")
+                                         .replace("84.88", "84.69").replace("TEMP_VALUE", "84.88")})
+    cleaned = validate_bulletin(b.model_copy(update={"summary": [*b.summary[:2], wrong, b.summary[3]]}), bundle.events)
+    assert not cleaned.validation.passed
+    assert "BANKING_SYNTHESIS_REQUIRED" in {i.code for i in cleaned.validation.issues}
+    assert "NUMBER_NOT_IN_EVIDENCE" not in {i.code for i in cleaned.validation.issues}
+
+
+def test_valid_logistics_llm_preserves_deterministic_summary_and_local_cache(tmp_path):
+    from scayl.gen.bulletin import generate_bulletin
+    from scayl.gen.llm import LLM
+
+    bundle = logistics_bundle()
+    template = build_template_bulletin(bundle.events, "logistica_canal", bundle.snapshot_cutoff_utc)
+    data = {k: template.model_dump(mode="json")[k] for k in
+            ("summary", "observations", "impact_hypotheses", "analyst_questions")}
+    llm = LLM(mode="live", backend=BulletinBackend(data), cache_dir=tmp_path)
+    b = generate_bulletin("logistica_canal", llm, events=bundle.events, cutoff=bundle.snapshot_cutoff_utc)
+    assert b.generated_by.mode == "live" and b.validation.passed
+    assert b.summary == template.summary and len(b.impact_hypotheses) == 3
+    llm.mode = "cache"
+    cached = generate_bulletin("logistica_canal", llm, events=bundle.events, cutoff=bundle.snapshot_cutoff_utc)
+    assert cached.generated_by.mode == "cache" and cached.summary == template.summary
