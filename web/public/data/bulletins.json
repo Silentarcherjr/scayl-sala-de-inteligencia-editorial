@@ -24,7 +24,7 @@
       "tokens_in": null,
       "tokens_out": null
     },
-    "horizon": "Snapshot con corte 2026-10-01T00:00:00+00:00 (UTC); cada dato conserva su período de referencia.",
+    "horizon": "Snapshot con corte 30/09/2026 19:00 (hora de Panamá); cada dato conserva su período de referencia.",
     "impact_hypotheses": [
       {
         "claim_ids": [],
@@ -39,7 +39,7 @@
           "CLM-0101-001"
         ],
         "tag": "DECLARACION",
-        "text": "Se reporta, según mundomaritimo.cl: Canal de Panamá aumentará a 33 los cupos diarios de tránsito y fija calado Neopanamax en 14,94 metros."
+        "text": "Se reporta, según mundomaritimo.cl: Canal de Panamá aumentará a 33 los cupos diarios de tránsito y fija calado Neopanamax en 14,94 metros. Período del hecho: no disponible en la evidencia citada; no asumir condiciones actuales."
       },
       {
         "claim_ids": [
@@ -213,7 +213,7 @@
           "CLM-0101-001"
         ],
         "tag": "DECLARACION",
-        "text": "Se reporta, según mundomaritimo.cl: Canal de Panamá aumentará a 33 los cupos diarios de tránsito y fija calado Neopanamax en 14,94 metros."
+        "text": "Se reporta, según mundomaritimo.cl: Canal de Panamá aumentará a 33 los cupos diarios de tránsito y fija calado Neopanamax en 14,94 metros. Período del hecho: no disponible en la evidencia citada; no asumir condiciones actuales."
       },
       {
         "claim_ids": [
@@ -273,7 +273,14 @@
       }
     ],
     "validation": {
-      "issues": [],
+      "issues": [
+        {
+          "code": "LLM_FALLBACK",
+          "detail": "Se usó la plantilla determinista: Salida no disponible o inválida (CacheMiss).",
+          "location": null,
+          "severity": "warning"
+        }
+      ],
       "passed": true
     }
   },
@@ -302,7 +309,7 @@
       "tokens_in": null,
       "tokens_out": null
     },
-    "horizon": "Snapshot con corte 2026-10-01T00:00:00+00:00 (UTC); cada dato conserva su período de referencia.",
+    "horizon": "Snapshot con corte 30/09/2026 19:00 (hora de Panamá); cada dato conserva su período de referencia.",
     "impact_hypotheses": [
       {
         "claim_ids": [],
@@ -510,7 +517,14 @@
       }
     ],
     "validation": {
-      "issues": [],
+      "issues": [
+        {
+          "code": "LLM_FALLBACK",
+          "detail": "Se usó la plantilla determinista: Salida no disponible o inválida (CacheMiss).",
+          "location": null,
+          "severity": "warning"
+        }
+      ],
       "passed": true
     }
   }

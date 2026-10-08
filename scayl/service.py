@@ -214,6 +214,7 @@ __all__ = [
     "reload",
     "review",
     "review_history",
+    "sector_bulletin",
     "simulate_weights",
     "trust_lab",
 ]
@@ -221,7 +222,7 @@ __all__ = [
 
 def sector_bulletin(sector: str) -> SectorBulletin:
     """DL-035 additive extension; existing editorial functions are unchanged."""
-    from scayl.gen.bulletin import build_template_bulletin
+    from scayl.gen.bulletin import generate_bulletin
 
     bundle = load_bundle()
-    return build_template_bulletin(bundle.events, sector, bundle.snapshot_cutoff_utc)
+    return generate_bulletin(sector, LLM(), events=bundle.events, cutoff=bundle.snapshot_cutoff_utc)

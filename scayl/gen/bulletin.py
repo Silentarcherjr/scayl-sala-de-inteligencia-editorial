@@ -8,6 +8,9 @@ from __future__ import annotations
 import re
 import unicodedata
 from datetime import datetime
+from zoneinfo import ZoneInfo
+
+from pydantic import BaseModel, ConfigDict, Field, ValidationError
 
 from scayl.contracts import (
     Claim,
@@ -18,9 +21,11 @@ from scayl.contracts import (
     GenerationMeta,
     SectorBulletin,
     TaggedSentence,
+    ValidationIssue,
     ValidationReport,
 )
-from scayl.gen.guard import scan
+from scayl.gen.guard import SYSTEM_DATA_RULE, data_block, scan
+from scayl.gen.llm import LLM, LLMError, load_prompt
 from scayl.gen.validators import SCOPE_PHRASE, _Ctx, check_sentence, evidence_numbers, numbers_in, words
 
 LIMITS_NOTICE = (
@@ -153,6 +158,22 @@ def _validate_sentence(s: TaggedSentence, ctx: _Ctx, location: str, section: str
     ):
         _issue(ctx, "BANKING_ATTRIBUTION", "Declaración sin atribución explícita.", location)
         return None
+    for c in cited:
+        if numbers_in(c.statement) and not any(r.period for r in c.evidence) and (
+            "Período del hecho: no disponible en la evidencia citada; no asumir condiciones actuales."
+            not in checked.text
+        ):
+            _issue(ctx, "BANKING_PERIOD_MISSING", "Cifra sin período ni advertencia de su ausencia.", location)
+            return None
+        for ref in c.evidence:
+            if ref.period and ref.period not in checked.text:
+                _issue(ctx, "BANKING_PERIOD_MISSING", "Dato citado sin su período explícito.", location)
+                return None
+            if ref.evidence_id.startswith("wb:") and ref.period and (
+                f"Dato histórico — {ref.period}. No presentarlo como medición actual." not in checked.text
+            ):
+                _issue(ctx, "BANKING_HISTORY_WARNING", "Indicador histórico sin advertencia temporal.", location)
+                return None
     # Unlike a claim's statement, only the cited evidence rows may support numbers here.
     refs_only = [c.model_copy(update={"statement": "", "attributed_to": None}) for c in cited]
     allowed = evidence_numbers(refs_only)
@@ -192,7 +213,9 @@ def validate_bulletin(b: SectorBulletin, events: list[Event]) -> SectorBulletin:
         **sections, "sources": _refs(ctx.claims), "event_ids": [e.event_id for e in selected],
         "related_sectors": RELATED[b.sector].copy(), "analyst_questions": safe_questions,
         "limits_notice": LIMITS_NOTICE, "question": QUESTIONS[b.sector],
-        "validation": ValidationReport(passed=bool(sections["summary"] and sections["observations"]), issues=ctx.issues),
+        "validation": ValidationReport(
+            passed=bool(sections["summary"] and sections["observations"] and sections["impact_hypotheses"]),
+            issues=ctx.issues),
     })
 
 
@@ -219,6 +242,8 @@ def build_template_bulletin(events: list[Event], sector: str, cutoff: datetime) 
             text = c.statement.rstrip('.') + "."
             tag = ClaimType.HECHO
         periods = list(dict.fromkeys(r.period for r in c.evidence if r.period))
+        if not periods and numbers_in(c.statement):
+            text += " Período del hecho: no disponible en la evidencia citada; no asumir condiciones actuales."
         if periods:
             text += " Período de la evidencia: " + ", ".join(periods) + "."
         for ref in c.evidence:
@@ -230,7 +255,8 @@ def build_template_bulletin(events: list[Event], sector: str, cutoff: datetime) 
     questions = list(dict.fromkeys(questions + ANALYST_QUESTIONS[sector]))[:3]
     bulletin = SectorBulletin(
         bulletin_id=f"BUL-{sector}-v1", sector=sector, question=QUESTIONS[sector],
-        horizon=f"Snapshot con corte {cutoff.isoformat()} (UTC); cada dato conserva su período de referencia.",
+        horizon=(f"Snapshot con corte {cutoff.astimezone(ZoneInfo('America/Panama')).strftime('%d/%m/%Y %H:%M')} "
+                 "(hora de Panamá); cada dato conserva su período de referencia."),
         summary=observations.copy(), observations=observations,
         impact_hypotheses=[TaggedSentence(text=HYPOTHESES[sector], tag=ClaimType.HIPOTESIS)],
         related_sectors=RELATED[sector].copy(), analyst_questions=questions,
@@ -241,3 +267,59 @@ def build_template_bulletin(events: list[Event], sector: str, cutoff: datetime) 
                                     latency_ms=0, tokens_in=None, tokens_out=None, created_at=cutoff),
     )
     return validate_bulletin(bulletin, selected)
+
+
+class _BulletinText(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    summary: list[TaggedSentence]
+    observations: list[TaggedSentence]
+    impact_hypotheses: list[TaggedSentence]
+    analyst_questions: list[str] = Field(min_length=3, max_length=3)
+
+
+def generate_bulletin(sector: str, llm: LLM, *, events: list[Event] | None = None,
+                      cutoff: datetime | None = None) -> SectorBulletin:
+    """Generate using the existing local/cache LLM; never return unvalidated model text."""
+    if events is None or cutoff is None:
+        from scayl.service import load_bundle
+
+        bundle = load_bundle()
+        events, cutoff = bundle.events, bundle.snapshot_cutoff_utc
+    template = build_template_bulletin(events, sector, cutoff)
+    if llm.mode == "template":
+        return template
+    claims = _claims(select_events(events, sector))
+    payload = {
+        "sector": sector, "pregunta": QUESTIONS[sector], "horizonte": template.horizon,
+        "afirmaciones": [
+            {"numero": i, "claim_id": c.claim_id, "afirmacion": c.statement,
+             "estado": c.status.value, "atribuida_a": c.attributed_to,
+             "evidencia": [r.model_dump(mode="json") for r in c.evidence]}
+            for i, c in enumerate(claims.values(), 1)
+        ],
+        "plantilla_validada": {k: template.model_dump(mode="json")[k] for k in
+                              ("summary", "observations", "impact_hypotheses", "analyst_questions")},
+    }
+    issues = []
+    try:
+        data, meta = llm.generate(
+            "bulletin-v1", load_prompt("bulletin", "v1").replace("REGLA_DE_SEGURIDAD", SYSTEM_DATA_RULE),
+            "Prepara el boletín con estos datos.\n" + data_block(payload), _BulletinText.model_json_schema(),
+        )
+        parsed = _BulletinText.model_validate(data)
+        candidate = validate_bulletin(template.model_copy(update={
+            **{k: getattr(parsed, k) for k in _BulletinText.model_fields}, "generated_by": meta,
+        }), events)
+        if candidate.validation.passed:
+            return candidate
+        issues = candidate.validation.issues
+        reason = "La salida no conservó resumen, observaciones e hipótesis válidos."
+    except (LLMError, ValidationError, ValueError, TypeError, KeyError) as exc:
+        # Record the failure class, never raw model output or transport messages.
+        reason = f"Salida no disponible o inválida ({type(exc).__name__})."
+    template.validation.issues = [
+        ValidationIssue(code="LLM_FALLBACK", severity="warning",
+                        detail=f"Se usó la plantilla determinista: {reason}"),
+        *issues, *template.validation.issues,
+    ]
+    return template

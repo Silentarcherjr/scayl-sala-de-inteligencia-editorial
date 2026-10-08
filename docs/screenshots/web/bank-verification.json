@@ -1,0 +1,14 @@
+{
+  "offline": true,
+  "wifi_initial": "Wi-Fi Power (en0): On",
+  "checks": [
+    "desktop logistica_canal",
+    "desktop economia",
+    "mobile logistica_canal",
+    "mobile economia"
+  ],
+  "errors": [],
+  "external": [],
+  "print": "beforeprint abre citas; afterprint restaura; PDFs A4 generados",
+  "editorial": "brief original y consulta con fuente conservados"
+}
