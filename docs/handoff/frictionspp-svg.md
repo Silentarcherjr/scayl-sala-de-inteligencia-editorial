@@ -1,43 +1,38 @@
-# Relevo · frictionspp-svg · 2026-10-08 05:36 UTC
+# Relevo · frictionspp-svg · 2026-10-08 05:47 UTC
 
-- **Motivo de la parada:** relevo preventivo; espera de revisión humana obligatoria.
-- **Rama:** worker-b/bulletin-qwen; main a117cae incorporado, limpio.
-- **Último commit:** consultar git log -1; este relevo y corrección se empujan juntos.
-- **PR abierto:** ninguno todavía; uno al finalizar tras aprobación humana.
+- **Motivo de la parada:** tarea cerrada por decisión del Lead, opción A; relevo preventivo.
+- **Rama:** worker-b/bulletin-qwen.
+- **Último commit:** consultar git log -1; revert de código bab6ba8 y commit documental posterior.
+- **PR abierto:** solo documentación; URL comunicada al humano al crear el PR.
 
 ## Tarea en curso
-DL-035 etapa 4. Lead autorizó corregir esquema, bulletin-v3 y un único intento adicional.
-Corrección probada; segundo intento live válido. No se ha aprobado el texto.
+DL-035 precálculo Qwen: no se publica como salida de IA; el boletín sigue plantilla.
 
 ## Hecho en esta sesión
-- Schema de summary/observations/impact_hypotheses exige text/tag/claim_ids, additionalProperties=false, minItems1 y enum permitido del payload.
-- Prompt v3 idéntico byte a byte a v2. Prueba nueva inspecciona el esquema realmente enviado al backend y los IDs del payload.
-- Un intento nuevo: live, ollama:qwen3:8b, bulletin-v3, latencia33625ms, tokens2050/1771, validación true sin issues.
-- Texto completo mostrado al humano y pregunta de aprobación enviada. Advertida falta de período del titular con33cupos/14,94metros.
-- Cache pública intacta; no export ni nuevas inferencias.
+- Revert de 6cc5001 con git revert, sin reescribir historia; bab6ba8 restaura bulletin.py y su prueba, retira prompt v3.
+- Se conservó documentación y texto completo del boletín pese al conflicto modify/delete documental del revert.
+- Conclusión del Lead registrada: intento1 falla esquema; intento2 válido pero anclado a plantilla_validada.
+- Igualdad exacta comprobada: observaciones9/9, hipótesis3/3, preguntas3/3 frente a la plantilla.
+- No se copió caché, no se exportó ni se hizo nueva inferencia. Web y deploy intactos.
 
 ## Siguiente paso concreto
-1. Esperar aprobación explícita de frictionspp-svg del boletín mostrado. Nunca suponer aprobación. No volver a llamar live.
-2. Si aprueba, copiar SOLO tmp/bulletin-cache/8246efd0d0b94854f631a9e0f0a72bd4eb115af62e9302927297bc59dc010588.json, añadir auditoría/hash/revisor/hora a PUBLIC_CACHE_REVIEW.json sin perder entradas existentes; ejecutar scripts/export_web.py y comprobar boletín cache/ollama:qwen3:8b.
-3. Repetir checks requeridos con export nuevo; deploy.prepare a carpeta nueva y auditar. Completar docs, commit/push y un PR a main con texto completo; mergea Lead.
-4. Si rechaza, conservar plantilla. Corte18:00Panamá del8oct (23:00Z); no entregar después.
+1. Lead: revisar el PR exclusivamente documental; integración a cargo del Lead.
+2. Mantener el rótulo Plantilla (sin IA generativa). No reutilizar la caché temporal como IA publicada.
+3. Posible mejora futura: quitar plantilla del payload; no hecha ni autorizada en esta conclusión.
 
 ## Estado de las pruebas
-243 passed con PYTHONUTF8=1; Ruff verde. npm.cmd ci/lint/build pasan antes del export.
-Cinco avisos de vulnerabilidades altas existentes informados por npm; sin cambios de dependencias.
-Deploy.prepare de la caché nueva aún pendiente de aprobación y copia.
+Pytest con PYTHONUTF8=1: 242 passed. Ruff check .: verde.
+git diff origin/main -- scayl/ tests/ web/ deploy/ vacío tras revert.
 
 ## Archivos tocados
-scayl/gen/bulletin.py; scayl/gen/prompts/bulletin.v3.md; tests/test_bulletin.py.
-docs/BULLETIN_QWEN_PRECOMPUTE.md; AI_TOOLS_USED.md; worklog/worker-b.md; este relevo.
+Solo diferencias documentales: docs/BULLETIN_QWEN_PRECOMPUTE.md (texto conservado y conclusión),
+docs/AI_TOOLS_USED.md, docs/worklog/worker-b.md, docs/notion_mirror/06_TESTS_AND_METRICS.md y este relevo.
 
 ## Bloqueos, dudas y decisiones pendientes
-Revisión humana del texto completo pendiente. Ningún otro bloqueo para esta ejecución.
-No atribuir el resumen determinista a generación libre del LLM; se conserva por código existente.
+Ninguno para la decisión: no publicar Qwen por anclaje a plantilla. Mejora futura fuera de esta tarea.
 
 ## Contexto que no está en el código
-tmp/bulletin-live.json: objeto validado completo; tmp/bulletin-run-context.json: metadatos/hashes/modelo.
-tmp/bulletin-cache-v2-rejected: primer intento rechazado, jamás copiarlo a caché pública.
-Ollama local localhost11434, RX9060XT8GiB Vulkan, sin APIs pagas.
-PYTHONUTF8=1 necesario por lecturas de tests sin encoding en Windows.
-Nunca push --all ni subir backup/wip-617d6e2, ZIP, RSS, data/processed o pesos.
+Intentos preservados localmente en tmp/bulletin-cache-v2-rejected y tmp/bulletin-cache, ignorados.
+Texto íntegro válido en docs/BULLETIN_QWEN_PRECOMPUTE.md; metadata live no implica originalidad del contenido.
+PYTHONUTF8=1 necesario en Windows para pruebas con read_text sin encoding.
+Nunca subir backup/wip-617d6e2, ZIP, RSS, pesos ni data/processed; nunca push --all.

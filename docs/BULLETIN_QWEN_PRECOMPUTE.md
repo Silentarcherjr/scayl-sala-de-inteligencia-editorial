@@ -1,4 +1,8 @@
-# DL-035 · boletín Qwen: revisión humana pendiente
+# DL-035 · precálculo Qwen no publicado
+
+Estado final: decisión del Lead, opción A. El boletín público conserva la plantilla;
+estos intentos y el texto íntegro se mantienen únicamente como evidencia documental.
+Las referencias a revisión pendiente que siguen describen el estado anterior a esa decisión.
 
 El Lead atribuyó el primer fallback al esquema: claim_ids tenía un valor por
 defecto y no era obligatorio para Ollama. Se autorizó únicamente el esquema
@@ -305,3 +309,28 @@ Contenido íntegro de `tmp/bulletin-live.json`, presentado sin cambiar sus valor
   "created_at": "2026-10-08T05:34:00.932743Z"
 }
 ```
+
+## Conclusión del Lead
+
+- **Intento 1:** fallback por defecto del esquema; `claim_ids` no era obligatorio
+  debido a su valor por defecto. Ollama pudo omitirlo y los validadores rechazaron
+  las oraciones sin citas. No se atribuye este fallo al modelo.
+- **Intento 2:** válido tras exigir citas en el esquema, pero observaciones,
+  hipótesis y preguntas son idénticas a la plantilla por anclaje al campo
+  `plantilla_validada` incluido en el payload. Se comprobó igualdad exacta con
+  la plantilla: 9/9 observaciones, 3/3 hipótesis y 3/3 preguntas. El resumen final
+  lo conserva el código, según el comportamiento existente.
+- **Decisión, opción A:** no publicar ni presentar este resultado como salida de
+  IA. El boletín publicado sigue en modo plantilla, rotulado
+  **"Plantilla (sin IA generativa)"**. Ninguna entrada del intento fue copiada a
+  `deploy/artifacts/v1/llm`; no se ejecutó `export_web`.
+- **Posible mejora futura, no hecha:** quitar la plantilla del payload para
+  evitar ese anclaje. No se implementó ni se realizó otro intento.
+
+La corrección de esquema, el prompt `bulletin.v3.md` y su prueba se retiraron
+mediante `git revert`, commit `bab6ba8`, sin reescribir historia. Código, pruebas,
+web y deploy coinciden con origin/main; el texto completo anterior queda como
+evidencia histórica, no como artefacto publicado ni como aprobación de salida IA.
+
+Verificación tras el revert: `python -m pytest -q` con `PYTHONUTF8=1`: 242 passed;
+`ruff check .`: verde. `git diff origin/main -- scayl/ tests/ web/ deploy/`: vacío.
