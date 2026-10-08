@@ -389,3 +389,35 @@ def test_valid_logistics_llm_preserves_deterministic_summary_and_local_cache(tmp
     llm.mode = "cache"
     cached = generate_bulletin("logistica_canal", llm, events=bundle.events, cutoff=bundle.snapshot_cutoff_utc)
     assert cached.generated_by.mode == "cache" and cached.summary == template.summary
+
+
+def test_sent_schema_requires_nonempty_citations_limited_to_payload_ids(tmp_path):
+    from scayl.gen.bulletin import generate_bulletin
+    from scayl.gen.llm import LLM
+
+    bundle = logistics_bundle()
+    template = build_template_bulletin(bundle.events, "logistica_canal", bundle.snapshot_cutoff_utc)
+    data = {k: template.model_dump(mode="json")[k] for k in
+            ("summary", "observations", "impact_hypotheses", "analyst_questions")}
+
+    class SchemaCheckingBackend(BulletinBackend):
+        def chat_json(self, system, user, schema):
+            payload = json.loads(user.split("<<<DATOS_NO_CONFIABLES>>>\n", 1)[1]
+                                 .split("\n<<<FIN_DATOS_NO_CONFIABLES>>>", 1)[0])
+            allowed = [c["claim_id"] for c in payload["afirmaciones"]]
+            assert allowed
+            for section in ("summary", "observations", "impact_hypotheses"):
+                sentence = schema["properties"][section]["items"]
+                assert sentence["required"] == ["text", "tag", "claim_ids"]
+                assert sentence["additionalProperties"] is False
+                citations = sentence["properties"]["claim_ids"]
+                assert citations["type"] == "array" and citations["minItems"] == 1
+                assert citations["items"] == {"type": "string", "enum": allowed}
+                assert all(cid in allowed for s in data[section] for cid in s["claim_ids"])
+            return super().chat_json(system, user, schema)
+
+    backend = SchemaCheckingBackend(data)
+    bulletin = generate_bulletin("logistica_canal", LLM(mode="live", backend=backend, cache_dir=tmp_path),
+                                 events=bundle.events, cutoff=bundle.snapshot_cutoff_utc)
+    assert bulletin.generated_by.mode == "live"
+    assert bulletin.generated_by.prompt_version == "bulletin-v3"

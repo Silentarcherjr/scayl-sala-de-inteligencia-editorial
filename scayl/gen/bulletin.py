@@ -455,10 +455,24 @@ def generate_bulletin(sector: str, llm: LLM, *, events: list[Event] | None = Non
                               ("summary", "observations", "impact_hypotheses", "analyst_questions")},
     }
     issues = []
+    sentence_schema = {
+        "type": "object",
+        "properties": {
+            "text": {"type": "string"},
+            "tag": {"type": "string", "enum": [tag.value for tag in ClaimType]},
+            "claim_ids": {"type": "array", "minItems": 1,
+                          "items": {"type": "string", "enum": list(claims)}},
+        },
+        "required": ["text", "tag", "claim_ids"],
+        "additionalProperties": False,
+    }
+    schema = _BulletinText.model_json_schema()
+    for section in ("summary", "observations", "impact_hypotheses"):
+        schema["properties"][section]["items"] = sentence_schema
     try:
         data, meta = llm.generate(
-            "bulletin-v2", load_prompt("bulletin", "v2").replace("REGLA_DE_SEGURIDAD", SYSTEM_DATA_RULE),
-            "Prepara el boletín con estos datos.\n" + data_block(payload), _BulletinText.model_json_schema(),
+            "bulletin-v3", load_prompt("bulletin", "v3").replace("REGLA_DE_SEGURIDAD", SYSTEM_DATA_RULE),
+            "Prepara el boletín con estos datos.\n" + data_block(payload), schema,
         )
         parsed = _BulletinText.model_validate(data)
         candidate = validate_bulletin(template.model_copy(update={
