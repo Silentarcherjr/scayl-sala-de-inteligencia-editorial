@@ -244,3 +244,10 @@
 - **Alcance y reglas:** `docs/WEB_NEXT_PLAN.md`. No se modifica el núcleo ni la app Streamlit. Las dependencias npm de `web/` quedan aprobadas por esta decisión.
 - **Alternativas:** Next.js + función Python en Vercel (numpy, scikit-learn y pandas rozan el límite de tamaño; riesgoso con el plazo) o portar la búsqueda a TypeScript (duplica la lógica y puede dar resultados distintos a los medidos).
 - **Fecha:** 2026-10-08 · **Ejecuta:** Codex (cuenta del Humano 1) · **Reversible:** la URL de Streamlit sigue vigente.
+
+### DL-035 · Extensión bancaria acotada: boletín de entorno
+- **Contexto:** el PDF TVN admite la modalidad bancaria "como alternativa o extensión, sin exigir dos productos completos" y la rúbrica evalúa "Utilidad para TVN o banca". Antes estaba fuera de alcance (PLAN_REVIEW). Mostrar que el mismo núcleo sirve a un analista sectorial demuestra que la arquitectura es reutilizable sin cambiar la modalidad principal, que sigue siendo editorial.
+- **Decisión (Lead, Humano 1):** agregar un boletín de entorno para 2 sectores (`logistica_canal` con la pregunta literal de CU-05, y `economia`), con un contrato aditivo `SectorBulletin`, generación con el patrón de Story Studio (plantilla determinista, LLM opcional validado y fallback), un validador de términos bancarios prohibidos y una página `/boletin/` en la web. Plan y límites en `docs/BANK_BULLETIN_PLAN.md`.
+- **Fuera de alcance:** datos de la SBP, evaluación de clientes, recomendaciones de inversión, inferencia de pérdidas, impagos o cartera, y alertas regulatorias.
+- **Riesgo y control:** si no pasa la verificación completa antes de las 18:00 de Panamá del 8 de octubre, no se fusiona.
+- **Fecha:** 2026-10-08 · **Ejecuta:** Codex · **Reversible:** es aditivo; revertir el PR no afecta lo existente.
