@@ -1,6 +1,8 @@
 # A-06 · Publicación
 
-> **Estado: DESPLEGADA** en https://scayl-demo.streamlit.app/ (Streamlit Community Cloud, modo cache). **Acceso abierto desde DL-033**: `SCAYL_PUBLIC_ACCESS = "1"` en los Secrets de Streamlit; sin ese interruptor la app vuelve a exigir `SCAYL_SPACE_PASSWORD` y se cierra si falta. Verificación remota más abajo.
+> **Actualización 2026-10-08 (cierre):** la URL de Streamlit Community Cloud redirige a inicio de sesión y se retiró de los enlaces de entrega; la demo pública es https://scayl-editorial.vercel.app/ y el respaldo es la app Streamlit local (`scripts/demo_offline.py`).
+>
+> **Estado anterior: DESPLEGADA** en https://scayl-demo.streamlit.app/ (Streamlit Community Cloud, modo cache). **Acceso abierto desde DL-033**: `SCAYL_PUBLIC_ACCESS = "1"` en los Secrets de Streamlit; sin ese interruptor la app vuelve a exigir `SCAYL_SPACE_PASSWORD` y se cierra si falta. Verificación remota más abajo.
 
 ## Ruta vigente: Streamlit Community Cloud (DL-032)
 Hugging Face exige PRO (pago) para Spaces Docker o Gradio, así que se publica gratis en Streamlit Community Cloud.

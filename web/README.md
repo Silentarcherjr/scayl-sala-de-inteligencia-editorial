@@ -1,7 +1,7 @@
 # SCAYL · Web pública estática (DL-034)
 
 Demo principal: https://scayl-editorial.vercel.app/
-Versión de respaldo: https://scayl-demo.streamlit.app/
+Versión de respaldo: Streamlit local sin internet (`python scripts/demo_offline.py`).
 
 Next.js App Router + TypeScript + Tailwind, export estático con 165 rutas de caso. Las fuentes Inter
 se autoalojan durante el build; para compilar por primera vez se necesita internet. El resultado

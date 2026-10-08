@@ -14,6 +14,5 @@ SCAYL convierte señales públicas de Panamá en **eventos priorizados**, cada u
 
 - **Demo pública:** https://scayl-editorial.vercel.app/ (empezar por **Empieza aquí**, recorrido de unos 3 minutos)
 - **Repositorio:** https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial
-- **Versión de respaldo (Streamlit):** https://scayl-demo.streamlit.app/
 
 **Equipo:** Silentarcherjr, frictionspp-svg y LowCrime, con agentes de código (Claude Code y Codex) bajo revisión humana.

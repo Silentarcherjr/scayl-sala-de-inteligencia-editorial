@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>SCAYL · Herramientas de IA utilizadas</title>
+<style>
+@page { size: A4; margin: 16mm 14mm; }
+body { font: 10.5pt/1.45 -apple-system, "Helvetica Neue", Arial, sans-serif; color:#1a1a1a; }
+h1 { font-size: 19pt; margin: 0 0 2pt; } h2 { font-size: 13pt; margin: 16pt 0 6pt; border-bottom: 1px solid #ccc; padding-bottom: 2pt; }
+.sub { color:#555; margin-bottom: 10pt; }
+table { border-collapse: collapse; width: 100%; font-size: 9pt; page-break-inside: auto; }
+th, td { border: 1px solid #bbb; padding: 4pt 5pt; vertical-align: top; text-align: left; }
+th { background: #eef1f4; } tr { page-break-inside: avoid; }
+.note { background:#f6f6f2; border-left: 3px solid #999; padding: 6pt 8pt; font-size: 9.5pt; }
+code { font-size: 8.5pt; }
+</style></head><body>
+<h1>SCAYL — Herramientas de IA utilizadas</h1>
+<div class="sub">hackIAthon Panamá 2026 · Reto TVN Media «De la señal a la decisión» · Equipo: Silentarcherjr, frictionspp-svg y LowCrime<br>
+Fuente: bitácora versionada <code>docs/AI_TOOLS_USED.md</code> (registro continuo con fecha UTC) · Documento generado el 2026-10-08.</div>
+
+<div class="note"><b>Principio de uso.</b> Las herramientas de IA aceleraron el trabajo, pero no decidieron. Cada cambio de código asistido entró por pull request revisado y mergeado por una persona del equipo; las etiquetas de evaluación humanas las escribieron personas (la IA solo propuso o transcribió); ninguna métrica se inventó: lo que no se midió figura como «no medido».</div>
+
+<h2>1. Herramientas de desarrollo</h2>
+<table>
+<tr><th style="width:15%">Herramienta</th><th style="width:22%">Propósito</th><th style="width:30%">Aplicación concreta</th><th style="width:18%">Resultado</th><th>Intervención humana</th></tr>
+<tr><td>Claude Code (Anthropic), rol de Lead técnico</td><td>Análisis del reto, arquitectura, núcleo de evidencia y generación, revisión e integración</td><td>Lectura de los PDF oficiales y aclaraciones; contratos Pydantic; puntaje, estado de evidencia, Source DNA, Temporal Guard, conflictos, validadores, plantilla, Story Studio, consultas con abstención, defensa contra inyección; revisión de PR de los demás agentes; páginas de documentación</td><td><code>scayl/</code> (contratos, evidencia, generación, revisión, pipeline); suite de pruebas en verde en cada merge</td><td>Silentarcherjr dirigió, revisó y aprobó cada PR; decisiones registradas en el decision log</td></tr>
+<tr><td>Claude Code + búsqueda web</td><td>Estado del arte y verificación técnica</td><td>Revisión de herramientas y artículos de verificación, límites de la API GDELT y modelos locales para 8 GB de VRAM</td><td>Sección de revisión del plan y decisiones DL-006/008/009</td><td>Fuentes enlazadas y decisión del equipo</td></tr>
+<tr><td>Codex (OpenAI)</td><td>Adquisición de datos, interfaz, evaluación, web Next.js</td><td>Fetchers GDELT DOC/GKG, RSS TVN, World Bank y USGS con manifest SHA-256; Streamlit (Sala, Ficha, Consultas, Agenda, Trust Lab); exportador público y web Next.js estática; runner de red-team; preparación de muestras para revisión humana</td><td>Snapshot de 187 noticias (50 TVN), 540 observaciones WB y eventos USGS; web publicada en Vercel</td><td>frictionspp-svg y LowCrime operaron sus agentes; el Lead revisó y mergeó; Codex no generó etiquetas humanas ni tiempos</td></tr>
+<tr><td>Claude Code (subagentes coordinados)</td><td>Mejoras finales y auditoría de cierre (2026-10-08)</td><td>Subagentes aislados para validadores de generación, recuperación de consultas, contradicciones/evidencia, experiencia de usuario y auditoría de QA/seguridad</td><td>Solo se integró lo que pasó pruebas y revisión del Lead</td><td>Aprobación humana de push, PR y acciones externas</td></tr>
+<tr><td>Playwright + Chromium (automatización, no IA generativa)</td><td>Capturas reproducibles y video</td><td>Capturas de pantalla reales de la aplicación y grabación del recorrido del anuncio</td><td>Imágenes de documentación sin edición generativa</td><td>Inspección visual por el equipo</td></tr>
+<tr><td>Síntesis y transcripción de voz (pipeline <code>tools/ad/</code>)</td><td>Narración del anuncio en video</td><td>Voz generada con el motor TTS configurado en <code>tools/ad/voice.py</code> (edge-tts o Kokoro); transcripción opcional con faster-whisper para revisar que la voz se entienda; música generada por código</td><td>Video del recorrido de la demo</td><td>Guion escrito y revisado por el equipo; cada cifra narrada proviene de <code>eval/results/</code></td></tr>
+</table>
+
+<h2>2. IA dentro del producto</h2>
+<table>
+<tr><th style="width:15%">Componente</th><th style="width:20%">Modelo</th><th style="width:35%">Uso</th><th>Resultado medido y límites</th></tr>
+<tr><td>LLM local</td><td>Qwen3 8B (Q4_K_M) vía Ollama, ejecución local</td><td>Extracción de afirmaciones y paquete editorial (Story Studio) con citas obligatorias por oración; validadores deterministas descartan oraciones sin respaldo y vuelven a la plantilla</td><td>Precálculo top 15: 15/15 generados en vivo, 0 fallback, 45/45 oraciones con cita (cobertura, no validez); mediana 13,1 s por paquete en GPU AMD RX 9060 XT. La web pública sirve esas salidas desde caché, no inferencia en vivo</td></tr>
+<tr><td>Embeddings</td><td>E5 multilingüe (local, CPU)</td><td>Agrupación de noticias en eventos; recuperación híbrida experimental</td><td>F1 de agrupación 0,99 en pares de desarrollo usados para calibrar (optimista, no independiente)</td></tr>
+<tr><td>Modo plantilla</td><td>Sin modelo (determinista)</td><td>Respaldo seguro cuando el modelo falla o no está disponible</td><td>Sustento revisado por una persona: 25/30 afirmaciones (modo plantilla)</td></tr>
+<tr><td>Consultas</td><td>BM25 (sin LLM en la ruta principal)</td><td>Respuesta extractiva citada o abstención explícita</td><td>Abstención correcta 6/6 en un conjunto escrito por una persona; 16/16 en un set sintético de desarrollo</td></tr>
+</table>
+<p style="font-size:9.5pt"><b>Costo:</b> US$0 en APIs de pago (todo el modelo se ejecuta localmente). No incluye electricidad, hardware ni mantenimiento.</p>
+
+<h2>3. Limitaciones declaradas</h2>
+<ul style="font-size:9.5pt">
+<li>La validez de sustento revisada por una persona corresponde al modo plantilla; las salidas reales de Qwen3 8B no tienen todavía una revisión humana completa.</li>
+<li>El ahorro de tiempo no se midió (estudio manual vs asistido preparado, n = 0).</li>
+<li>Precision@5 del ranking (1/5) se midió contra una única selección exploratoria de un integrante, no un panel editorial de TVN.</li>
+<li>Los agentes de código pueden equivocarse: por eso cada fallo real detectado por las pruebas quedó registrado junto con su corrección.</li>
+</ul>
+<p style="font-size:9pt;color:#555">El registro detallado, entrada por entrada, está en <code>docs/AI_TOOLS_USED.md</code> del repositorio.</p>
+</body></html>

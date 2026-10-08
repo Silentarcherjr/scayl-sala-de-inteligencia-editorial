@@ -78,7 +78,7 @@ python -m scayl.pipeline build --snapshot data/raw/v1 --llm live  # requiere Oll
 python -m pytest -q && ruff check .
 ```
 
-**Versión de respaldo (Streamlit):** https://scayl-demo.streamlit.app/ (Streamlit Community Cloud, modo cache, acceso abierto sin contraseña). Recomendado: empezar por **Consultas → Modo jurado**, cuyas preguntas tienen respuestas de IA precalculadas. Despliegue en `deploy/README.md`.
+**Versión de respaldo:** la app Streamlit se ejecuta en local y sin internet (`python scripts/demo_offline.py`, ver arriba). La copia en Streamlit Community Cloud ya no forma parte de la entrega: exige inicio de sesión y no es pública.
 
 ## Datos (snapshot `data/raw/v1`, manifest con SHA-256)
 - **Noticias:** GDELT (metadatos) y RSS de TVN, del 2025-10-02 al 2026-09-30 (aclaración oficial C-01). Solo titulares y metadatos.
