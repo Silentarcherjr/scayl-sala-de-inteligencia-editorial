@@ -237,3 +237,10 @@
 - **Cambio técnico:** interruptor explícito `SCAYL_PUBLIC_ACCESS = "1"` en los Secrets. Solo el valor exacto `"1"` abre la app; sin él, el comportamiento previo se mantiene: pide la contraseña y se cierra si falta. Sin el interruptor tampoco se muestra "Cerrar sesión". Pruebas nuevas en `tests/test_deploy.py`.
 - **Alternativas:** mantener la contraseña (fricción para un jurado sin acompañamiento) o borrar el código de acceso (pierde la opción de volver a cerrarla).
 - **Fecha:** 2026-10-08 · **Reversible:** quitar el interruptor de los Secrets y volver a poner la contraseña.
+
+### DL-034 · Web Next.js estática para el jurado (Streamlit queda de respaldo)
+- **Contexto:** el jurado evalúa solo, del 9 al 12 de octubre, con una URL. La demo pública ya no ejecuta IA en vivo (modo cache), así que el motivo de DL-002 (un servidor Python para la IA local) no aplica a la versión pública. El diseño de Streamlit no convence pese al tema de DL-033.
+- **Decisión (Lead, Humano 1):** construir un sitio **Next.js estático** en `web/`, desplegado en Vercel, que muestra los mismos datos exportados por `scripts/export_web.py` desde `scayl.service`. Streamlit se mantiene como demo offline (T10) y para la pregunta libre de Consultas, que necesita cómputo Python (BM25 + validadores).
+- **Alcance y reglas:** `docs/WEB_NEXT_PLAN.md`. No se modifica el núcleo ni la app Streamlit. Las dependencias npm de `web/` quedan aprobadas por esta decisión.
+- **Alternativas:** Next.js + función Python en Vercel (numpy, scikit-learn y pandas rozan el límite de tamaño; riesgoso con el plazo) o portar la búsqueda a TypeScript (duplica la lógica y puede dar resultados distintos a los medidos).
+- **Fecha:** 2026-10-08 · **Ejecuta:** Codex (cuenta del Humano 1) · **Reversible:** la URL de Streamlit sigue vigente.
