@@ -24,14 +24,25 @@ for _key, _value in {"SCAYL_HOSTED": "1", "SCAYL_LLM_MODE": "cache", "SCAYL_SNAP
     os.environ.setdefault(_key, _value)
 
 
+def _setting(name: str) -> str:
+    """Environment first, then st.secrets: hosts may not re-export secrets edited while the app runs."""
+    if os.environ.get(name):
+        return os.environ[name]
+    try:
+        value = st.secrets.get(name, "")
+    except FileNotFoundError:  # StreamlitSecretNotFoundError: no secrets file (local runs, tests)
+        return ""
+    return value if isinstance(value, str) else ""
+
+
 def public_access() -> bool:
-    return os.environ.get("SCAYL_PUBLIC_ACCESS", "") == "1"
+    return _setting("SCAYL_PUBLIC_ACCESS") == "1"
 
 
 def require_password() -> None:
     if public_access():
         return
-    secret = os.environ.get("SCAYL_SPACE_PASSWORD", "")
+    secret = _setting("SCAYL_SPACE_PASSWORD")
     if not secret:
         st.error("Acceso deshabilitado: falta configurar la contraseña del Space.")
         st.stop()

@@ -109,3 +109,19 @@ def test_public_access_opens_without_password_or_logout(monkeypatch):
     at = AppTest.from_string(code).run()
     assert at.success[0].value == "OPEN" and not at.text_input and not at.error
     assert not [b for b in at.button if b.label == "Cerrar sesión"]
+
+
+def test_public_access_read_from_streamlit_secrets(monkeypatch):
+    """Streamlit Cloud may not re-export secrets edited at runtime; st.secrets is the fallback."""
+    import streamlit as st
+
+    from deploy import space
+
+    monkeypatch.delenv("SCAYL_SPACE_PASSWORD", raising=False)
+    monkeypatch.delenv("SCAYL_PUBLIC_ACCESS", raising=False)
+    monkeypatch.setattr(st, "secrets", {"SCAYL_PUBLIC_ACCESS": "1"})
+    assert space.public_access()
+    monkeypatch.setattr(st, "secrets", {"SCAYL_PUBLIC_ACCESS": 1})  # TOML integer, not the exact string "1"
+    assert not space.public_access()
+    monkeypatch.setattr(st, "secrets", {"SCAYL_SPACE_PASSWORD": "from-secrets"})
+    assert space._setting("SCAYL_SPACE_PASSWORD") == "from-secrets"
