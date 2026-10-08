@@ -65,3 +65,10 @@ Las fichas muestran primero un resumen derivado de `gap`, `claims`, `evidence_st
 `recommended_action`; no generan afirmaciones nuevas. Sus botones seleccionan y enfocan la pestaña
 correspondiente. Las fechas muestran día, mes y año en hora de Panamá. Los modos `cache` y `template`
 conservan sus valores técnicos y añaden una explicación comprensible.
+
+Pruebas y métricas añade una lectura rápida y definiciones por tarea: agrupar noticias, clasificar temas
+y comprobar sustento humano. Los F1 se formatean con hasta tres decimales; los valores completos,
+muestras, corridas y limitaciones permanecen en los desplegables. No se combinan conjuntos ni se
+infiere una mejora general de IA. Ver `docs/screenshots/web/jury-verification.json`: seis pantallas,
+escritorio/móvil, recorrido completo, enlaces profundos, teclado y cero peticiones externas con Wi-Fi
+apagado y restaurado. La comprensión con una persona nueva aún no se ha medido.

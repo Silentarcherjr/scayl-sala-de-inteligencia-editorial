@@ -27,3 +27,16 @@ al instalar, pero lint y build no tienen warnings de tipos. El lockfile conserva
 
 Las capturas y `verification.json` documentan el recorrido local; no acreditan por sí mismas el
 acceso público de un despliegue Vercel. Ese acceso se verifica separadamente al publicar.
+
+## Mejora para evaluación autónoma · 2026-10-08
+
+Capturas `jury-*-desktop.png` (1440 × 1000) y `jury-*-mobile.png` (390 × 844) muestran las seis
+pantallas, incluido el nuevo recorrido. Son capturas reales del export servido en localhost, sin edición.
+Resultado: [jury-verification.json](jury-verification.json). Wi-Fi en `en0` apagado durante el recorrido
+y restaurado a su estado original (On). El navegador también bloqueó cualquier origen externo.
+
+Se verificaron los cinco pasos de inicio a fin, pestañas enlazadas y recarga, navegación de teclado,
+citas desplegables, paquetes guardados, abstención, métricas originales y ausencia de desbordamiento
+horizontal. Tres fichas (EVT-0101, EVT-0139, EVT-0027) conservan P, motivos, advertencias, brief y modo.
+Los datos exportados no cambiaron respecto a la entrega contrastada con Streamlit. Cero errores de
+navegador y cero peticiones externas. No es una prueba de comprensión con usuarios; esa aún no se midió.
