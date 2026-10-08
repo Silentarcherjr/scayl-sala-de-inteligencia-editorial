@@ -154,6 +154,7 @@ async def main():
 
         # 1 · Sala de Situación
         await goto(page, "/")
+        await scroll_by(page, 300, 1.0)  # keep the metric cards above the caption
         await cap(page, "Sala de Situación", "187 señales públicas → 165 eventos priorizados, listos para la reunión editorial.", 3.6, voice="sala1")
         await page.get_by_text("Cinco casos para empezar").evaluate("e => e.scrollIntoView({behavior:'smooth',block:'start'})")
         await page.wait_for_timeout(1600)
@@ -203,7 +204,7 @@ async def main():
         await cap(page, "Consultas con evidencia", "Responde con la última medición oficial — y su fecha, citada.", 3.6, voice="consulta1")
         await scroll_to(page, "textarea", "center", 1.0)
         await move_click(page, box)
-        await page.keyboard.press("Control+A"); await page.keyboard.press("Delete")
+        await box.fill("")  # platform-independent clear (Control+A does not select all on macOS)
         await page.keyboard.type("¿Cuál es la moneda oficial de Panamá?", delay=38)
         await move_click(page, page.get_by_role("button", name="Consultar"))
         await page.wait_for_timeout(1300)
@@ -241,7 +242,7 @@ async def main():
 
         # 8 · Banking extension
         await goto(page, "/boletin/")
-        await cap(page, "Extensión bancaria", "El mismo núcleo de evidencia, como boletín sectorial para un analista de riesgo.", 3.6, voice="boletin")
+        await cap(page, "Extensión bancaria", "El mismo núcleo de evidencia, como boletín de entorno para un analista de estudios económicos.", 3.6, voice="boletin")
         await scroll_by(page, 520, 1.6)
         await page.wait_for_timeout(1200)
 
@@ -249,7 +250,7 @@ async def main():
         await card(page,
             '<div class="bar"></div><div class="line" style="font-size:60px">Medido, no prometido.</div><div class="grid">'
             '<div class="stat" style="animation-delay:.3s"><b>45/45</b><span>frases del borrador con cita verificable</span></div>'
-            '<div class="stat" style="animation-delay:.55s"><b>16/16</b><span>ataques resistidos en el red-team</span></div>'
+            '<div class="stat" style="animation-delay:.55s"><b>6/6</b><span>abstenciones correctas en un set humano independiente</span></div>'
             '<div class="stat" style="animation-delay:.8s"><b>13 s</b><span>por borrador, con IA local en GPU</span></div>'
             '<div class="stat" style="animation-delay:1.05s"><b>$0</b><span>en APIs: todo corre local</span></div></div>', 5.2, voice="stats")
         await card(page,
