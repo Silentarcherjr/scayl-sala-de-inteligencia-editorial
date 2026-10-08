@@ -1,6 +1,7 @@
 """A-10: weight simulator. Shows how the ranking changes; official scoring-v1 stays until a recorded decision."""
 import streamlit as st
 
+from app.components.theme import apply_theme
 from scayl import service
 
 COMPONENTS = {"R": "Relevancia", "I": "Impacto potencial", "U": "Urgencia", "N": "Novedad", "E": "Evidencia disponible"}
@@ -8,6 +9,7 @@ COMPONENTS = {"R": "Relevancia", "I": "Impacto potencial", "U": "Urgencia", "N":
 
 def main() -> None:
     st.set_page_config(page_title="Simulador de pesos · SCAYL", layout="wide")
+    apply_theme()
     st.title("Simulador de pesos")
     st.caption("P = wR·R + wI·I + wU·U + wN·N + wE·E. Es un puntaje de atención, no de verdad ni de impacto. "
                "Simular no cambia el ranking oficial (scoring-v1).")

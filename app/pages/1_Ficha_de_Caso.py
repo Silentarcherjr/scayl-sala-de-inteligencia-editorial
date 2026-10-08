@@ -6,6 +6,7 @@ from zoneinfo import ZoneInfo
 import streamlit as st
 
 from app.components.evidence_card import evidence_card
+from app.components.theme import apply_theme
 from scayl import service
 from scayl.contracts import REVIEW_TRANSITIONS, Claim, Event, EvidenceRef, StoryPackage
 
@@ -120,6 +121,7 @@ def show_review(event: Event, visible_package: StoryPackage | None) -> None:
 
 def main() -> None:
     st.set_page_config(page_title="Ficha de Caso · SCAYL", layout="wide")
+    apply_theme()
     st.title("Ficha de Caso")
     bundle = service.load_bundle()
     if not bundle.events:
