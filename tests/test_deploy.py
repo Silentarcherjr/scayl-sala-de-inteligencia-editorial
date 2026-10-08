@@ -91,3 +91,21 @@ def test_staging_allowlist_and_all_page_routes_are_gated(bundle, tmp_path, monke
         assert not at.selectbox and not at.metric  # closing the deployment revokes existing sessions
     finally:
         service.reload()
+
+
+@pytest.mark.parametrize("flag", ["", "0", "true", "yes"])
+def test_public_access_needs_exact_opt_in(monkeypatch, flag):
+    code = "from deploy.space import require_password\nrequire_password()\nimport streamlit as st\nst.success('OPEN')"
+    monkeypatch.delenv("SCAYL_SPACE_PASSWORD", raising=False)
+    monkeypatch.setenv("SCAYL_PUBLIC_ACCESS", flag)
+    at = AppTest.from_string(code).run()
+    assert not at.success and "deshabilitado" in at.error[0].value
+
+
+def test_public_access_opens_without_password_or_logout(monkeypatch):
+    code = ("from deploy.space import hosted_frame\nhosted_frame()\nimport streamlit as st\nst.success('OPEN')")
+    monkeypatch.delenv("SCAYL_SPACE_PASSWORD", raising=False)
+    monkeypatch.setenv("SCAYL_PUBLIC_ACCESS", "1")
+    at = AppTest.from_string(code).run()
+    assert at.success[0].value == "OPEN" and not at.text_input and not at.error
+    assert not [b for b in at.button if b.label == "Cerrar sesión"]
