@@ -87,3 +87,13 @@ Revision humana LowCrime completa: 25 si, 3 no (SR05, SR10, SR19), 2 parcial (SR
 188 pruebas pasaron y ruff check . limpio. Stage probado en Streamlit local: 31 hashes coinciden, cero descripciones/citas RSS, cache forzada y 15/15 paquetes precalculados recuperados sin llamar al backend. Autenticacion y rutas verificadas con AppTest y Chromium. Docker y HF: no medido; sin publicar. Evidencia: deploy/readiness-human-inputs.json y capturas finales 10/12/13.
 
 Incidencia de verificacion: el script temporal de captura tuvo un error de separacion de texto PowerShell y tiempos de espera al reintentar el login en navegador. Se corrigio el script y se comprobo entrada en sesion nueva; AppTest sobre stage tambien comprobo incorrecta seguida de correcta. No se modifico ni desactivo el control de acceso.
+
+
+## DL-035 · intento live detenido (2026-10-08)
+
+- Suite inicial: 10 fallos y 232 pruebas pasan. UnicodeDecodeError por read_text sin encoding en Windows CP1252. Sin modificar pruebas/código; PYTHONUTF8=1: 242 passed. Ruff verde.
+- Un único intento Ollama qwen3:8b: `Se usó la plantilla determinista: La salida no conservó resumen, observaciones e hipótesis válidos.`. Códigos: {'LLM_FALLBACK': 1, 'UNCITED_FACT': 13, 'BANKING_UNCITED_HYPOTHESIS': 3, 'BANKING_HYPOTHESES_INCOMPLETE': 1, 'BANKING_SYNTHESIS_REQUIRED': 1, 'EMPTY_BULLETIN': 1}.
+- La salida cruda omite claim_ids en 4 frases de resumen, 9 observaciones y 3 hipótesis. Los validadores la descartan; generado final template, model=null. No se arregló el JSON ni se reintentó.
+- Metadatos del intento crudo: live, ollama:qwen3:8b, bulletin-v2, 40262ms, tokens_in=2050, tokens_out=1253. Estos no son los metadatos de la plantilla retornada (latencia0 y tokens nulos). GPU RX9060XT8GiB Vulkan, Ollama0.40.0, contexto4096, temperatura0 y seed42.
+- Evidencia local ignorada: tmp/bulletin-live.json, tmp/bulletin-run-context.json y tmp/bulletin-cache/82c1828a70e19bab6e748f0a6cf2a410e55009feb67dd8d074742557418fe301.json. No se copió nada a deploy/artifacts ni se ejecutó export_web. Revisión humana no iniciada; detenerse ante fallback era condición explícita.
+- PowerShell bloqueó npm.ps1; npm.cmd ci falló con EACCES al descargar zod-validation-error desde registry.npmjs.org. No se reintentó tras detener la tarea por fallback. npm lint/build y deploy.prepare no ejecutados. No se entrega un PR de caché fallida.

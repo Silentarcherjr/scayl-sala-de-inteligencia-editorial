@@ -1,52 +1,42 @@
-# Relevo · frictionspp-svg · 2026-10-07 21:05 UTC
+# Relevo · frictionspp-svg · 2026-10-08 05:27 UTC
 
-> Relevo preventivo al cerrar la tarea; el siguiente agente debe sincronizar primero.
-
-- **Motivo de la parada:** tarea DL-029 terminada; relevo preventivo AGENTS §2b.
-- **Rama:** `worker-b/precompute-dl029`.
-- **Último commit de artefactos:** `e383d78` (empujado: sí). Este relevo queda en el commit posterior; consultar `git log -1`.
-- **PR abierto:** https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/55
+- **Motivo de la parada:** bloqueo de DL-035 etapa 4: fallback; el usuario ordenó detenerse sin reintentos.
+- **Rama:** worker-b/bulletin-qwen, desde main a117cae.
+- **Último commit:** consultar git log -1; este relevo se guarda y se empuja en esa rama.
+- **PR abierto:** ninguno para DL-035; no cumple la condición live sin fallback.
 
 ## Tarea en curso
-Precálculo top 15 qwen3:8b y caché pública actualizados tras DL-029. Completado;
-PR listo para revisión del Lead. @LowCrime mencionado en el PR para preparar el Space.
+Precálculo del boletín logistica_canal con Qwen real. Detenido tras el único intento.
 
 ## Hecho en esta sesión
-- Rama nueva desde origin/main f951bb2; sin reutilizar ramas anteriores, rebase ni force-push.
-- Temas baseline, agrupación E5; 187 noticias → 165 eventos. Nuevo top 15 comparte 5/15 con el anterior.
-- Live 15/15, fallback 0/15, citas 45/45; mediana 13131 ms y p95 16997,5 ms, n=15.
-- GPU AMD RX 9060 XT 8 GiB, Ollama Vulkan 0.40.0, 37/37 capas; E5 CPU.
-- Caché pública: 30 entradas usadas, 15 paquetes cache y 150 template; 20 claves obsoletas retiradas.
-- Descripciones de fuentes 0/187 antes de los prompts; 32/32 JSON públicos verificados; hashes del commit también comprobados.
-- Stage local preparado, 118/118 hashes verificados, sin ZIP ni rss.xml; no publicado.
-- Manifest raw verificado e intacto. Ningún data/processed, ZIP ni RSS se subió.
+- Fetch, checkout main y pull --no-rebase: avance limpio a a117cae; rama propia creada.
+- prepare() de demo_offline; bundle público sin descripciones en 187/187 noticias.
+- Ollama0.40.0, qwen3:8b Q4_K_M, GPU AMD RX9060XT8GiB/Vulkan, misma configuración DL-029.
+- Respuesta cruda live: latencia40262ms, tokens_in2050, tokens_out1253; esquema sin claim_ids.
+- Resultado del servicio: mode=template, model=null. Motivo exacto: Se usó la plantilla determinista: La salida no conservó resumen, observaciones e hipótesis válidos.
+- Códigos: {'LLM_FALLBACK': 1, 'UNCITED_FACT': 13, 'BANKING_UNCITED_HYPOTHESIS': 3, 'BANKING_HYPOTHESES_INCOMPLETE': 1, 'BANKING_SYNTHESIS_REQUIRED': 1, 'EMPTY_BULLETIN': 1}. No se alteró la respuesta, no hubo segundo intento.
+- Caché pública intacta (comparación de todos los hashes antes/después), sin export ni código modificado.
 
 ## Siguiente paso concreto
-1. Lead: revisar e integrar PR #55; el agente no mergea.
-2. LowCrime: preparar un destino nuevo con deploy.prepare desde deploy/artifacts/v1; comando en el PR y docs/PUBLIC_REVIEWED_CACHE.md. Publicación externa requiere confirmación del Lead.
-3. Nueva sesión: fetch origin y merge origin/main sin rebase; ante conflictos detenerse. No iniciar otras tareas de backlog ya integradas sin nueva instrucción.
+1. Informar al Lead del fallback y de claim_ids omitidos. No reintentar ni reparar la caché cruda sin nuevas instrucciones.
+2. El Lead decide corrección del camino LLM/prompt, fuera del alcance de esta tarea de datos. Corte duro: PR estable antes de 2026-10-08 18:00 America/Panama (23:00Z); de lo contrario no se entrega.
+3. Solo tras nueva autorización y una ejecución válida: mostrar texto completo al humano frictionspp-svg; nunca asumir aprobación ni copiar caché antes.
 
 ## Estado de las pruebas
-`python -m pytest -q`: 188 passed. `ruff check .`: verde.
-Guardia de objetos origin/main..HEAD vacía para ZIP/rss.xml antes del push.
-CI de #55: consultar GitHub; este relevo no inventa su resultado.
+Inicial:10 failed/232 passed por CP1252; PYTHONUTF8=1:242 passed. Ruff check . verde.
+npm.cmd ci falló con EACCES al descargar zod-validation-error desde registry.npmjs.org; lint/build y deploy.prepare no ejecutados. No se reintentó tras la orden de parada por fallback.
 
 ## Archivos tocados
-- deploy/artifacts/v1/: bundle, 30 entradas LLM y auditoría pública.
-- eval/results/dl029-*: resumen, JSONL original y auditoría antes/después/stage; .gitattributes conserva bytes.
-- docs/DL029_PRECOMPUTE.md, PUBLIC_REVIEWED_CACHE.md, FINAL_PRECOMPUTE.md: resultados y reproducción.
-- docs/notion_mirror/06_TESTS_AND_METRICS.md: fallo inicial Ollama y recuperación.
-- docs/AI_TOOLS_USED.md, docs/worklog/worker-b.md: bitácoras solo agregar.
-- Este relevo.
+Solo docs/AI_TOOLS_USED.md, docs/worklog/worker-b.md, docs/notion_mirror/06_TESTS_AND_METRICS.md y este relevo.
+scayl/, app/, web/ y deploy/artifacts/ intactos.
 
 ## Bloqueos, dudas y decisiones pendientes
-- Ninguno para el precálculo. Pendiente revisión/merge del Lead y preparación/publicación del Space por LowCrime.
-- Validez humana del apoyo y calidad factual: no medidas; cobertura de citas no es exactitud.
-- H-06 humano sigue pendiente del trabajo previo; no se fabricaron cronómetros ni respuestas.
+Salida real sin claim_ids: falla validación y provoca plantilla. Revisión humana no iniciada.
+No hay PR de caché ni boletín IA válido para entrega; no se modificó el código para conseguir verde.
 
 ## Contexto que no está en el código
-- Make ausente en Windows: se ejecutó su receta Python exacta; variables y comandos en docs/DL029_PRECOMPUTE.md.
-- Caché local nueva: data/cache/llm/precompute-dl029-20261007T205446Z.
-- Ollama arrancado oculto en localhost:11434, modelos locales models/ollama; log models/ollama-dl029-serve.err.log, ignorado.
-- Stage y respaldo anterior locales: tmp/dl029-space-stage y tmp/dl029-previous-public-artifacts, ignorados.
-- backup/wip-617d6e2 permanece solo local: nunca subirlo ni usar push --all.
+Resultado local: tmp/bulletin-live.json; contexto/hashes/modelo: tmp/bulletin-run-context.json.
+Único archivo crudo rechazado: tmp/bulletin-cache/82c1828a70e19bab6e748f0a6cf2a410e55009feb67dd8d074742557418fe301.json; nunca copiarlo a caché pública.
+La plantilla final tiene generated_by.latency_ms=0 y tokens nulos; cifras40262/2050/1253 solo del intento crudo.
+PYTHONUTF8=1 permite ejecutar la suite en Windows. Ollama sigue en localhost:11434.
+backup/wip-617d6e2 solo local, nunca push --all. Sin secretos, ZIP, RSS ni data/processed en commits.
