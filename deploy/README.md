@@ -11,6 +11,8 @@ Hugging Face exige PRO (pago) para Spaces Docker o Gradio, así que se publica g
 3. En share.streamlit.io: *Create app* → repo dedicado, rama `main`, archivo principal **`app/space.py`**. En *Advanced settings*: **Python 3.12**. En *Secrets*: `SCAYL_PUBLIC_ACCESS = "1"` para acceso abierto (DL-033), o `SCAYL_SPACE_PASSWORD = "<contraseña>"` para exigir contraseña. La contraseña la escribe un humano; nunca va a Git.
 4. `app/space.py` se configura solo: agrega la raíz del stage a `sys.path` y fija por defecto modo cache, `SCAYL_HOSTED=1` y las rutas de datos del stage. No hace falta ninguna otra variable.
 5. Verifica en remoto: sin contraseña no entra, una contraseña incorrecta se rechaza, y con la correcta cargan Sala, Ficha, Consultas y Trust Lab.
+6. **Tras publicar cambios en `deploy/space.py` o `deploy/runtime.py`, haz *Reboot app* en share.streamlit.io.** Streamlit solo recarga lo que está bajo `app/`; los módulos de `deploy/` quedan en caché y la app mezcla versiones (visto en DL-033: sidebar visible pero páginas bloqueadas).
+7. Al sincronizar `scayl-demo`, conserva los archivos que no vienen del stage (p. ej. `.devcontainer/`, que crea Streamlit).
 
 Probado en local (DL-032): stage sin `PYTHONPATH` ni otras variables, solo la contraseña → acceso pedido, autenticación correcta, Sala en modo cache.
 
