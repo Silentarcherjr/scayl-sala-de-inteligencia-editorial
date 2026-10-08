@@ -1,17 +1,17 @@
 # Relevo · worker-web · 2026-10-08 02:49 UTC
 
-- **Motivo:** relevo preventivo al cerrar etapa; trabajo continúa.
+- **Motivo:** entrega completada y relevo preventivo de cierre.
 - **Rama:** `worker-web/next-static` · **Commit anterior:** `86ffd19`; el commit de esta etapa incluye esta nota y se sube a origin.
-- **PR abierto:** ninguno
+- **PR abierto:** https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/67
 
 ## Tarea en curso
-DL-034 — web Next.js estática. Etapa 7 completada.
+DL-034 — web Next.js estática. Etapas 1–7 completadas, cada una con commit y push. Se agrega un commit de cierre para registrar el PR y la verificación pública final.
 
 ## Hecho en esta sesión
 README con URL pública https://scayl-editorial.vercel.app/, diez capturas, verificación offline y contraste Streamlit; Vercel en cuenta silentarcherjr conectado al repo
 
 ## Siguiente paso concreto
-Crear PR hacia main para revisión del Lead y desplegar el commit final
+El Lead debe revisar el PR #67 y mergearlo a main. Verificar que la integración Git conserve el acceso público de https://scayl-editorial.vercel.app/. No mergear desde worker-web.
 
 ## Estado de las pruebas
 197 passed; ruff OK; npm ci/lint/build OK; Wi-Fi apagado y restaurado; cero red externa y errores; tres casos y 165 filas de simulador coinciden; cinco pantallas públicas verificadas

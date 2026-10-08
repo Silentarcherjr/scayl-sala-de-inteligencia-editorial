@@ -79,5 +79,12 @@
   "wifi": "Wi-Fi en0 Off verificado; recorrido Chromium de cinco pantallas e interacciones OK. Restaurado al estado inicial.",
   "pytest": "197 passed",
   "ruff": "passed",
-  "build": "171 static routes"
+  "build": "171 static routes",
+  "public_deployment": {
+    "url": "https://scayl-editorial.vercel.app/",
+    "screens": 5,
+    "authenticated": false,
+    "external": [],
+    "errors": []
+  }
 }
