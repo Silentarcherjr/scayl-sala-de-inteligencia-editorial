@@ -69,3 +69,22 @@ comprensión con analistas. El PR incluye el boletín final completo y las limit
 Resumen medido: **112 palabras** en cuatro elementos de síntesis, cinco eventos y seis dominios de
 medios. PDF A4 de **cinco páginas**, todas inspeccionadas: etiquetas completas, texto y URLs legibles,
 bloque de hipótesis diferenciado y sin páginas vacías. Las tarjetas de conteo imprimen entradas y método.
+
+## DL-036 · API Python y revisión en navegador
+
+Preview probado de `b697606`: https://scayl-editorial-5ljnkhvsk-hacks10.vercel.app/ (protección
+normal de previews de Vercel; pruebas con credencial temporal del proyecto, nunca guardada aquí).
+Dos funciones nativas `api/ask` y `api/review`, 31.07 MB cada una, Python 3.13. Las páginas siguen
+siendo export estático. `python-api-verification.json` contiene las cinco respuestas reales,
+paridad semántica con `service.ask`, verificación del hash del recibo, diez errores 4xx remotos,
+prueba de estado no persistente, historial/recarga/descarga y fallos de red sin inventar decisiones.
+287 pytest, Ruff, npm ci/lint/build (173 rutas); datos, motor, pruebas anteriores y lockfile intactos.
+
+`python-api-*-static.png` muestra Sala, ficha, Consultas, Trust Lab y simulador en `npx serve out`;
+`python-api-review-desktop.png` muestra decisiones reales del preview; las capturas móviles `*-preview`/`*-offline` prueban
+la lectura y el aviso de error. El recibo conserva el JSON exacto y su SHA-256 verifica incluso
+después de recargar localStorage. Wi-Fi apagado/restaurado: cinco pantallas y tres casos
+comparados, cero peticiones externas, cero errores JavaScript. La consulta libre usa una respuesta
+guardada solo si coincide la pregunta; los ejemplos alternativos se identifican como tales. Una
+revisión nueva exige la API; los recibos existentes siguen accesibles offline en ese navegador.
+Avisos transitivos npm/ESLint preexistentes sin cambios ni omisión de checks.

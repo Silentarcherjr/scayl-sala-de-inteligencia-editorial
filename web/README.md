@@ -1,7 +1,7 @@
 # SCAYL · Web pública estática (DL-034)
 
 Demo principal: https://scayl-editorial.vercel.app/
-Respaldo y consultas libres: https://scayl-demo.streamlit.app/
+Versión de respaldo: https://scayl-demo.streamlit.app/
 
 Next.js App Router + TypeScript + Tailwind, export estático con 165 rutas de caso. Las fuentes Inter
 se autoalojan durante el build; para compilar por primera vez se necesita internet. El resultado
@@ -30,7 +30,7 @@ Lee las constantes de Consultas y Trust Lab mediante AST, sin ejecutar sus pági
 Los aportes ponderados y las razones de la agenda se exportan desde Python; TypeScript no recalcula
 el ranking oficial. Solo el simulador aplica la fórmula autorizada, con enteros cuya suma sigue siendo
 100 y redondeo a una decimal compatible con Python. Las simulaciones son locales y no guardan decisiones.
-El estado de evidencia es independiente del puntaje. La revisión pública es de solo lectura.
+El estado de evidencia es independiente del puntaje. DL-036 añade revisión validada por la API y registro en el navegador; no existe una acción de publicación.
 
 Los recorridos del jurado son recorridos de evidencia/procedencia, no respuestas de IA inventadas.
 Si no existe el caso demostrativo en el snapshot, se informa y se enlaza a Trust Lab. En la respuesta
@@ -45,11 +45,14 @@ Verificación completa y capturas: [docs/screenshots/web](../docs/screenshots/we
 junto a las capturas; no se ocultan ni se omiten los checks.
 
 Vercel: proyecto `hacks10/scayl-editorial`, repositorio
-`Silentarcherjr/scayl-sala-de-inteligencia-editorial`, Root Directory `web`, preset Next.js,
-`npm ci`, `npm run build`, Output Directory automático (sin override), sin variables de entorno.
-Next.js publica el export `out/`; el adaptador Vercel necesita conservar su directorio interno `.next/`. La rama de producción Git sigue siendo
-`main`; el despliegue inicial se realiza explícitamente desde `worker-web/next-static` sin mergear.
-El Lead revisa y mergea el PR. Los siguientes pushes a `main` se despliegan mediante la integración Git.
+`Silentarcherjr/scayl-sala-de-inteligencia-editorial`, Root Directory `web`. La configuración
+versionada de DL-036 usa preset `framework: null`, `npm ci && node scripts/prepare-python.mjs`,
+`npm run build` y Output Directory `out`; páginas estáticas y funciones Python independientes.
+No se necesita configurar secretos ni variables de entorno del producto. La rama de producción
+Git sigue siendo `main`; el Lead revisa y mergea, y la integración Git despliega los siguientes pushes.
+Desplegar por Git (o enviar la raíz del repositorio con el CLI), para disponer de los archivos que
+`prepare-python.mjs` copia desde `scayl/` y los artefactos públicos. Enviar únicamente `web/` falla
+porque el proyecto tiene Root Directory `web` y necesita sus archivos hermanos en el build.
 
 No se modifica `deploy/README.md` porque el encargo prohíbe editar `deploy/`; esta página y el README
 principal registran la URL y el procedimiento de la nueva web.
@@ -73,10 +76,8 @@ infiere una mejora general de IA. Ver `docs/screenshots/web/jury-verification.js
 escritorio/móvil, recorrido completo, enlaces profundos, teclado y cero peticiones externas con Wi-Fi
 apagado y restaurado. La comprensión con una persona nueva aún no se ha medido.
 
-El aviso visible «La revisión humana con registro y la consulta libre funcionan en la versión de
-trabajo: https://scayl-demo.streamlit.app/» aparece junto al modo de solo lectura de cada ficha, en
-el paso de revisión del recorrido y en el pie de todas las páginas. La demo pública permite
-inspeccionar; Streamlit ofrece las acciones con registro. Notion es opcional según C-03.
+DL-036 reemplaza los avisos que derivaban consulta/revisión a Streamlit: ambos formularios están
+en esta web. Streamlit permanece como versión de respaldo en el pie. Notion es opcional según C-03.
 
 
 ## Boletín de entorno logístico · DL-035 / revisión del PR #71
@@ -148,7 +149,7 @@ los campos inválidos. Preguntas y nombres no se registran en logs de aplicació
 Genera los mismos campos/hashes de evidencia y paquete que `ReviewStore`, sin llamarlo ni escribir
 SQLite/archivos/outbox. Añade el hash SHA-256 del bundle público (no un manifest de raw) y declara
 que el estado previo lo aporta el navegador. No es un estado compartido ni una identidad autenticada.
-Cada recibo lleva hash canónico propio, fecha UTC y aviso de no publicación; la UI muestra Panamá,
+El navegador conserva también el JSON exacto de la respuesta para descargarlo sin alterar la representación numérica (10.0 frente a 10) usada por el hash canónico. Cada recibo lleva hash propio, fecha UTC y aviso de no publicación; la UI muestra Panamá,
 guarda historial por caso en `localStorage` versionado y permite descargar el JSON. No incluye datos
 personales del corpus; solo el nombre que ingresa la persona revisora para esta demo.
 
@@ -162,3 +163,9 @@ Pruebas: `node scripts/prepare-python.mjs` desde `web/` y `python -m pytest -q` 
 `tests/test_python_api.py` comprueba paridad semántica de cinco preguntas (timestamps de invocación
 excluidos), bloqueo de live, matriz completa de transiciones, límites/JSON/errores, ausencia de
 persistencia y paridad de hashes con la revisión existente. Ninguna prueba anterior se modifica.
+
+Preview verificado del código `b697606`: https://scayl-editorial-5ljnkhvsk-hacks10.vercel.app/.
+Resultado: 287 pytest, Ruff, npm ci/lint/build (173 rutas), cinco respuestas reales con paridad
+semántica, diez errores 4xx remotos, dos decisiones encadenadas con recarga/descarga, fallos de red,
+móvil y offline con Wi-Fi apagado/restaurado. Evidencia en
+[python-api-verification.json](../docs/screenshots/web/python-api-verification.json).

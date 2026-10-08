@@ -37,3 +37,9 @@
 
 ## 2026-10-08 15:52 UTC · DL-036
 Autorizado por el Lead vía usuario: API Python nativa en web, cache forzado, revisión sin persistencia, consulta libre y registro en navegador. Rama worker-web/python-api. Corte 18:00 Panamá; el Lead registra la decisión, este worker no modifica decision log.
+
+## 2026-10-08 16:03 UTC · DL-036 verificado
+API nativa con caché forzada y bundle público; revisión stateless con reglas/transiciones/hashes del núcleo. Consulta libre y formulario real en Next, historial local y recibo descargable, fallback honesto a qa.json. Retiradas derivaciones a Streamlit (solo respaldo en pie). 287 pytest, Ruff, npm ci/lint/build 173 rutas. Preview 08bd84b READY: https://scayl-editorial-1c1cyweiz-hacks10.vercel.app/; 5 respuestas idénticas semánticamente a service.ask, 10 errores 4xx remotos, revisión encadenada y recarga/descarga, móvil sin overflow/errores, fallo de red sin registrar. npx serve out con Wi-Fi apagado/restaurado; 5 pantallas/3 casos, cero peticiones externas. Sin cambios en núcleo, app, deploy, datos, pruebas anteriores o lockfile. Primer intento CLI enviando web/ falló por Root Directory; preview Git completo correcto. Producción y merge quedan al Lead; entrega estable antes del corte 18:00 Panamá.
+2026-10-08 16:03 UTC · relevo: ver docs/handoff/worker-web.md.
+
+2026-10-08 16:07 UTC · DL-036 cierre: detectada y corregida la normalización JSON del navegador (10.0 → 10 alteraba la verificación canónica). localStorage conserva el JSON original del recibo; la descarga verifica SHA-256 antes y después de recargar. Preview final de código b697606 READY: https://scayl-editorial-5ljnkhvsk-hacks10.vercel.app/. Repetidos E2E, paridad de 5 respuestas y 10 errores remotos; evidencia JSON y 10 capturas guardadas. Solo documentación/evidencia después de este código probado.
