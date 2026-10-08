@@ -11,3 +11,5 @@
 
 .welcome{display:flex;align-items:center;justify-content:space-between;gap:24px}.welcome .button{flex-shrink:0}.welcome .muted{margin-top:10px;font-size:12px}.tour-steps{list-style:none;padding:0;display:grid;gap:18px;margin:28px 0}.tour-steps li{display:flex;gap:24px}.step-number{color:var(--blue);font-size:28px;font-weight:800;font-variant-numeric:tabular-nums}.tour-steps h2{margin-bottom:8px}
 @media(max-width:640px){.welcome{align-items:flex-start;flex-direction:column;gap:6px}nav{flex-wrap:wrap;justify-content:flex-start;column-gap:14px;row-gap:6px}.tour-steps li{gap:14px}.scroll-top{scroll-margin-top:150px}}
+
+.case-summary h3{font-size:15px;margin-bottom:8px}.case-summary .text-list{font-size:13px;margin:6px 0}.case-summary .muted{font-size:12px;margin-top:8px}.case-actions{display:flex;gap:10px;flex-wrap:wrap}.text-button{padding:6px 0;border:0;background:none;color:var(--blue);font-size:12px;font-weight:700;text-align:left}.text-button:hover{text-decoration:underline}

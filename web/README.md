@@ -60,3 +60,8 @@ principal registran la URL y el procedimiento de la nueva web.
 Los enlaces `#evidencia`, `#producir`, `#revision` y `#conflictos` seleccionan la pestaña correspondiente
 sin backend. `/consultas/#sin-respuesta` abre el ejemplo guardado de abstención. La duración sugerida
 no es una medición de usabilidad. Los datos y salidas originales se conservan.
+
+Las fichas muestran primero un resumen derivado de `gap`, `claims`, `evidence_status_reason` y
+`recommended_action`; no generan afirmaciones nuevas. Sus botones seleccionan y enfocan la pestaña
+correspondiente. Las fechas muestran día, mes y año en hora de Panamá. Los modos `cache` y `template`
+conservan sus valores técnicos y añaden una explicación comprensible.

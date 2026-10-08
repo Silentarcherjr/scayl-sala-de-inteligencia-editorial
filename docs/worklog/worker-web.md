@@ -16,3 +16,5 @@
 - 2026-10-08 02:52 UTC · Entrega: PR #67 hacia main, sin merge; proyecto hacks10/scayl-editorial, URL pública https://scayl-editorial.vercel.app/. Cinco pantallas 200 sin sesión, cero solicitudes externas y errores; ejemplos QA conservan template y paquete EVT-0101 cache/qwen3:8b. Se corrige contraste del enlace a pregunta libre y se registra relevo: ver docs/handoff/worker-web.md.
 
 - 2026-10-08 03:04 UTC · UX jurado 1: Portada con entrada clara, recorrido estático de cinco pasos, enlaces directos a pestañas y abstención; explicación de datos congelados y preguntas libres. Validación: 197 pytest OK; lint y build OK (172 rutas); verificación del navegador al cierre. Relevo: ver docs/handoff/worker-web.md. Siguiente: Resumen de decisión al inicio de fichas y acciones claras..
+
+- 2026-10-08 03:06 UTC · UX jurado 2: Fichas con resumen de afirmaciones, sustento, vacíos y siguiente acción; accesos a evidencia/borrador/revisión, modo de generación explicado y fechas legibles en Panamá. Validación: 197 pytest OK; lint y build OK. Relevo: ver docs/handoff/worker-web.md. Siguiente: Explicar las métricas y verificar el recorrido completo en escritorio/móvil y offline..
