@@ -77,3 +77,40 @@ El aviso visible «La revisión humana con registro y la consulta libre funciona
 trabajo: https://scayl-demo.streamlit.app/» aparece junto al modo de solo lectura de cada ficha, en
 el paso de revisión del recorrido y en el pie de todas las páginas. La demo pública permite
 inspeccionar; Streamlit ofrece las acciones con registro. Notion es opcional según C-03.
+
+
+## Boletín de entorno sectorial · DL-035
+
+El brief oficial *hackIAthon — reto TVN Media*, modalidad bancaria, CU-05/T09, admite una extensión
+del mismo núcleo editorial. El alcance aprobado está en [BANK_BULLETIN_PLAN.md](../docs/BANK_BULLETIN_PLAN.md).
+`/boletin/` permite elegir Logística y Canal o Economía: pregunta, horizonte en Panamá, modo/modelo,
+límites visibles, resumen de hasta 250 palabras, observaciones citadas, hipótesis condicionales separadas,
+sectores potencialmente relacionados, tres preguntas y enlaces a los cinco eventos priorizados.
+No modifica ranking, Story Studio, Q&A ni revisión editorial. No incorpora SBP ni información de entidades.
+
+`scripts/export_web.py` agrega únicamente `bulletins.json` a sus salidas. La función nueva
+`service.sector_bulletin` usa el LLM existente en modo local/caché, prompt `bulletin.v1.md`, JSON con esquema
+y validación Pydantic. El control determinista elimina términos financieros prohibidos, cifras ajenas
+a la evidencia, citas desconocidas, instrucciones de fuentes y datos históricos sin período/advertencia.
+Un fallo, caché ausente o salida sin resumen, observaciones e hipótesis válidos activa la plantilla y
+registra `LLM_FALLBACK`. El aviso fijo de alcance es la única excepción al vocabulario prohibido.
+
+Los boletines versionados son **Plantilla (sin IA generativa)**, no salidas del modelo simulado. El
+precálculo con GPU (etapa 4 opcional) se omite: no hay ejecución ni caché aprobada para esta extensión.
+Las pruebas usan un backend simulado aislado; sus resultados no se exportan. La revisión humana del
+sustento sectorial y la comprensión de analistas aún no están medidas. Los titulares se conservan
+en su idioma original; pueden ser poco pertinentes para el usuario sectorial. Los indicadores
+son contexto, no corroboran esos titulares. Un período ausente queda nulo y se declara en pantalla;
+no se confunde la fecha del snapshot con la fecha del hecho.
+
+«Imprimir / guardar PDF» abre las citas durante la impresión y restaura su estado al terminar. La
+hoja de impresión es exclusiva del boletín: conserva identificadores de sustento, períodos y URLs
+en la sección de fuentes, evitando repetir los desplegables completos en cada oración.
+
+Verificación de §8: 230 pruebas Python, Ruff, `npm ci`, lint y build (173 rutas), lectura completa de
+ambos boletines y navegación con Wi-Fi apagado/restaurado. Resúmenes medidos: 179/171 palabras.
+Escritorio 1440 × 1000, móvil 390 × 844; cero solicitudes externas, errores y desbordamientos. PDF
+A4 de 6/5 páginas revisados visualmente, incluidos fuentes e hipótesis. Evidencia en
+[bank-verification.json](../docs/screenshots/web/bank-verification.json) y capturas `bank-*.png`.
+Los avisos de dependencias de desarrollo ya documentados en la web siguen vigentes; no se añadieron
+dependencias ni se alteró el lockfile. El Lead revisa los dos textos completos en el PR antes de mergear.

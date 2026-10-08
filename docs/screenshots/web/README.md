@@ -44,3 +44,23 @@ navegador y cero peticiones externas. No es una prueba de comprensión con usuar
 La misma verificación pasó sin autenticación en https://scayl-editorial.vercel.app/ (escritorio/móvil).
 Resultado: [jury-public-verification.json](jury-public-verification.json). Producción READY, despliegue
 `dpl_CWXktnUR4TqmMGyTp5F2hE3XziTw`, código `957ecf08568f2f79fb8209d1ea5d6830e5691e71`.
+
+
+## Extensión bancaria · DL-035 · 2026-10-08
+
+`bank-{logistica_canal,economia}-{desktop,mobile}.png`: capturas reales completas del selector y los
+dos boletines, con citas desplegadas de ejemplo. `bank-*-print.png`: primera página renderizada de
+cada PDF A4, sin edición. Se inspeccionaron las 6 páginas de logística y 5 de economía: texto legible,
+oraciones y secciones sin recortes, etiquetas, hipótesis, períodos y URLs visibles.
+
+[bank-verification.json](bank-verification.json) registra Wi-Fi apagado/restaurado y bloqueo de otros
+orígenes, cero solicitudes externas y errores de navegador. Ambos sectores funcionan en escritorio
+y móvil, con dos/una columnas y sin desbordamiento. Se verificó el botón de impresión, apertura y
+restauración de citas, y se contrastaron brief editorial y consulta guardada con sus datos originales.
+La prueba acredita el export local; producción depende del merge del Lead y del despliegue Git.
+
+§8: 230 pytest; Ruff; npm ci, lint y build aprobados. Lectura manual: resúmenes 179/171 palabras,
+ningún consejo financiero, hipótesis condicionales separadas, Banco Mundial con período 2024 y aviso
+histórico. El titular con cifras cuyo período no consta conserva el nulo y añade una advertencia
+explícita; no se inventa una fecha. Las preguntas se derivan de los vacíos de evidencia existentes.
+No se ha medido utilidad ni comprensión con analistas. El PR incluye ambos textos completos.

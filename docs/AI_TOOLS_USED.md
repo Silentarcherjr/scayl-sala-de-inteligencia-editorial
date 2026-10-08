@@ -60,3 +60,6 @@ Codex ? LowCrime ? 2026-10-07 22:18 UTC ? B-09: transcripcion de 30 decisiones h
 | Codex (GPT-6) | 2026-10-08 03:11 UTC · UX del jurado | Recorrido guiado, resumen de fichas y explicación de métricas sobre datos existentes; sin etiquetas ni cifras inventadas. 197 pytest, ruff, build/lint y seis pantallas en escritorio/móvil offline; comprensión humana aún no medida. |
 
 | Codex (GPT-6) | 2026-10-08 03:58 UTC · Tarea A, flujo completo | Aviso visible en tres ubicaciones y texto del recorrido alineado con C-03. Sin cambiar datos ni lógica Python. 197 pytest; lint/build; verificación del aviso y enlaces en escritorio/móvil. |
+
+
+| Codex (GPT-6) | 2026-10-08 04:44 UTC · DL-035, extensión bancaria | Implementó contrato aditivo, plantilla determinista, validadores, prompt local/caché con fallback, export público y página imprimible. 230 pytest, Ruff, npm ci/lint/build; ambos sectores verificados offline en escritorio/móvil. Backend LLM simulado solo en pruebas: no acredita inferencia real ni aporta textos a la demo. Boletines exportados en modo plantilla; precálculo GPU opcional omitido sin revisión humana. No modificó ranking, Story Studio, Q&A, app/, deploy/, datos ni pruebas anteriores. Textos y capturas para revisión del Lead. |
