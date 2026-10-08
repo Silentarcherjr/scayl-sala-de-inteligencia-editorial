@@ -23,3 +23,10 @@
   2. Datos fuera de la ventana de C-01 pueden usarse para **desarrollo, ajuste y entrenamiento**, nunca como corpus de la demo. Las descargas de septiembre de 2025 pasan a ser el **conjunto de desarrollo**.
   3. La demo presencial usa el corpus reciente (ventana C-01). Opción P2: snapshot v2 con datos hasta días antes del Pitch Day.
 - **Evidencia:** `docs/evidence/C-02_fuentes_y_fechas.png` (pendiente de agregar por el equipo).
+
+## C-03 · Notion no es obligatorio (2026-10-08)
+- **Fuente:** organizadora del hackIAthon, mensaje en el grupo oficial de participantes (reitera lo dicho el día anterior).
+- **Texto literal:** "Hola equipos qué tal, buenas noches. Les pido disculpas con el tema de Notion, como les dije el día de ayer, avancen sin esa parte, no hay problema si no lo utilizan".
+- **Contexto:** el PDF TVN (§5 y §10) exige un espacio Notion como condición de admisión, con la dimensión "Notion: ejecución y pitch" (15 puntos) en la rúbrica.
+- **Interpretación aplicada:** la entrega no incluye Notion. El contenido equivalente está versionado en el repositorio, en `docs/notion_mirror/` (las 8 páginas: inicio del reto, plan y decisiones, catálogo de datos, diseño, casos y evidencias, pruebas y métricas, riesgos y ética, presentación al jurado), con el registro de decisiones y las bitácoras con hora UTC como trazabilidad durante el evento.
+- **Evidencia:** `docs/evidence/C-03_notion_opcional.png` (pendiente de agregar por el equipo).

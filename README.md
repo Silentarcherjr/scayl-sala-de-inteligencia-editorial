@@ -94,7 +94,7 @@ Licencias y procedencia en `docs/notion_mirror/03_DATA_CATALOG.md`.
 |---|---|
 | `docs/DEMO_SCRIPT.md` | Guion del video de demo |
 | `docs/ARCHITECTURE.md` | Arquitectura y contratos |
-| `docs/notion_mirror/` | Espejo de las páginas de Notion: decisiones (02), métricas y fallos corregidos (06), pitch (08) |
+| `docs/notion_mirror/` | Equivalente en el repo de las páginas de Notion (Notion no es obligatorio según la aclaración oficial [C-03](docs/official_clarifications.md)): decisiones (02), métricas y fallos corregidos (06), pitch (08) |
 | `docs/PLAN_REVIEW.md` | Revisión del reto, matriz de rúbrica y riesgos |
 | `docs/AI_TOOLS_USED.md` | Bitácora de herramientas de IA usadas en el desarrollo |
 | `AGENTS.md`, `CLAUDE.md`, `docs/TASKS.md` | Cómo trabajó el equipo humano + agentes |
