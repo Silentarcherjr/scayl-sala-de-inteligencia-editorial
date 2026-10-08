@@ -38,7 +38,7 @@ revisión humana. **La IA no decide qué es verdad ni qué se publica**: "aproba
 | Precision@5 frente al top 5 del editor | 1/5 (exploratoria) | El editor vio antes una propuesta de IA (DL-024) |
 | Latencia del borrador | Mediana **13,1 s**, p95 17,0 s (n = 15) | AMD RX 9060 XT 8 GB, Ollama Vulkan |
 | Costo de API | **$0** | Inferencia 100% local |
-| Pruebas | T01–T10 y 188 pruebas en CI | `python -m pytest -q` |
+| Pruebas | T01–T10 y 287 pruebas en CI | `python -m pytest -q` |
 
 Lo que no medimos queda escrito como **"no medido"**: no afirmamos ahorro de tiempo sin el mini-estudio.
 
