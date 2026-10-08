@@ -225,3 +225,8 @@
 - **Decisión:** no pagar (regla: sin costos sin aprobación) y publicar en **Streamlit Community Cloud** (gratis), con el mismo stage auditado, desde un repositorio GitHub dedicado que contiene solo el stage. La contraseña va en *Secrets*, que la plataforma expone como variable de entorno: el mismo control de acceso de A-06.
 - **Cambio técnico:** `deploy/space.py` se autoconfigura (stage en `sys.path`, modo cache y rutas por defecto) porque esa plataforma no usa el Dockerfile. Con Docker no cambia nada: los valores del entorno tienen prioridad. Verificado en local sin `PYTHONPATH` y con solo la contraseña.
 - **Fecha:** 2026-10-08
+- **Actualización 2026-10-08 · A-06 DESPLEGADA:** https://scayl-demo.streamlit.app/ (Streamlit Community Cloud, Python 3.12, modo cache, contraseña solo en Secrets y entregada por canal privado).
+  - **Código:** repo público `Silentarcherjr/scayl-demo` (`main` = `f4c7de1`), que contiene solo el stage `deploy/stage-cloud` generado desde `ff3a7c2`: los 118 archivos inventariados en `PREPARATION.json` más ese archivo, con hashes verificados.
+  - **Verificación:** en local, sin contraseña no entra, la incorrecta se rechaza y con la correcta cargan Sala, Ficha, Consultas y Trust Lab. En remoto, `/` y `/Trust_Lab` piden contraseña y la incorrecta se rechaza; el Humano 1 confirmó el recorrido autenticado. URL registrada por el PR #61.
+  - **Lección:** las pruebas locales dejan `__pycache__/` y `data/state/reviews.sqlite` dentro del stage, así que para publicar se copia solo lo inventariado.
+  - **Regla:** `scayl-demo` no se edita a mano. Si cambian código o datos de la demo, se regenera el stage en una carpeta nueva, se prueba y se republica desde la sesión local del Humano 1.

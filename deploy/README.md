@@ -1,5 +1,7 @@
 # A-06 · Publicación
 
+> **Estado: DESPLEGADA** en https://scayl-demo.streamlit.app/ (Streamlit Community Cloud, modo cache, acceso con contraseña). Verificación remota más abajo. La contraseña solo vive en los Secrets de Streamlit y se entrega por canal privado.
+
 ## Ruta vigente: Streamlit Community Cloud (DL-032)
 Hugging Face exige PRO (pago) para Spaces Docker o Gradio, así que se publica gratis en Streamlit Community Cloud.
 
@@ -13,14 +15,16 @@ Hugging Face exige PRO (pago) para Spaces Docker o Gradio, así que se publica g
 Probado en local (DL-032): stage sin `PYTHONPATH` ni otras variables, solo la contraseña → acceso pedido, autenticación correcta, Sala en modo cache.
 
 **Publicado:** https://scayl-demo.streamlit.app/ desde el repo público [`Silentarcherjr/scayl-demo`](https://github.com/Silentarcherjr/scayl-demo) (`main` = `f4c7de1`), stage `deploy/stage-cloud` generado desde `ff3a7c2`; solo los 118 archivos inventariados en `PREPARATION.json`, con hashes verificados. Python 3.12; contraseña solo en Secrets de Streamlit.
-Verificación remota (2026-10-07): `/` y `/Trust_Lab` piden contraseña; una contraseña incorrecta se rechaza. El recorrido autenticado remoto no se midió desde esta sesión (la contraseña no se comparte con el agente); en local, con la correcta cargaron Sala, Ficha, Consultas y Trust Lab sin excepciones.
+Verificación remota (2026-10-07): `/` y `/Trust_Lab` piden contraseña; una contraseña incorrecta se rechaza. El recorrido autenticado remoto lo confirmó el Humano 1 en la URL pública: con la contraseña correcta cargan las vistas. El agente no conoce la contraseña. En local, con la correcta, cargaron Sala, Ficha, Consultas y Trust Lab sin excepciones.
+
+**Para republicar** (si cambian código o datos de la demo): regenera el stage en una carpeta **nueva** y pruébalo. Después sube a `scayl-demo` **solo** los archivos inventariados en `PREPARATION.json` más ese archivo: las pruebas locales dejan `__pycache__/` y `data/state/reviews.sqlite` dentro del stage, y no deben publicarse. Nunca se edita `scayl-demo` a mano.
 
 ## Preparación original para HF Space Docker (requiere PRO; no se usa)
 
 
 **Estado vigente tras PR #51:** [stage con caché pública probado localmente](HUMAN_INPUTS_READINESS.md).
 `deploy/stage-human-reviewed/` contiene 30 entradas revisadas y la evaluación B-09 completa.
-No publicado; pendiente confirmación del Lead. Las preparaciones sin caché descritas abajo
+(Histórico: este stage no se publicó; la entrega usa Streamlit Cloud, ver arriba.) Las preparaciones sin caché descritas abajo
 son históricas y no deben usarse para la entrega actual.
 
 AP-001 aceptada; publicación pendiente de confirmación del Lead. No se creó Space ni se usaron
@@ -87,4 +91,4 @@ cache y183 paquetes template. Es preparación funcional con fallbacks, no prueba
 No existe data/cache/llm en este checkout. Se pidió al humano solo la ruta/PR de la caché pública revisada.
 Motor Docker aún inactivo; build y HF no medidos. Volver al final del backlog; si sigue sin caché, mantener
 bloqueado. No pedir confirmación de publicación antes de recibir/auditar caché y probar el contenedor.
-La contraseña y URL se entregarán por canal privado después de confirmación del Lead, nunca en el PR.
+(Histórico.) La contraseña se entrega por canal privado, nunca en un PR; la URL vigente está arriba.

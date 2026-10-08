@@ -1,5 +1,7 @@
 # A-06 · Stage probado con caché pública revisada
 
+> **Superado (DL-032):** la demo está publicada en https://scayl-demo.streamlit.app/ con un stage regenerado (`deploy/stage-cloud`, desde `ff3a7c2`). Este documento queda como registro de la prueba local previa. Las menciones a "sin publicar" y "Space" se refieren al plan anterior en Hugging Face, que exigía PRO.
+
 Preparado desde main `5b6fd71`, sin publicar. El stage local vigente es
 `deploy/stage-human-reviewed/` (ignorado). Sustituye, para esta entrega, los stages anteriores
 sin caché; no borrarlos ni usarlos para publicar. Inventario: `preparation-human-inputs.json`;
@@ -32,7 +34,7 @@ sintética efímera en el entorno. No se usaron credenciales de HF.
 Capturas reales: `docs/screenshots/final/10-trust-lab.png`, `12-space-acceso.png` y
 `13-trust-lab-procedencia.png`, con hashes y procedencia por archivo.
 
-El stage está listo para revisión del Lead. **No está publicado**: falta su confirmación antes
+(Histórico) El stage quedó listo para revisión del Lead; en ese momento no estaba publicado y faltaba su confirmación antes
 de crear/subir el Space. Docker y HF remoto no están validados; la prueba local es la alternativa
 solicitada. Después de la confirmación, usar un Space privado y configurar la contraseña como
 Secret de runtime. No incluirla en Git ni en el PR. URL y contraseña se comparten por privado.
