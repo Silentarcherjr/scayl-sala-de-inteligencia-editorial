@@ -230,3 +230,10 @@
   - **Verificación:** en local, sin contraseña no entra, la incorrecta se rechaza y con la correcta cargan Sala, Ficha, Consultas y Trust Lab. En remoto, `/` y `/Trust_Lab` piden contraseña y la incorrecta se rechaza; el Humano 1 confirmó el recorrido autenticado. URL registrada por el PR #61.
   - **Lección:** las pruebas locales dejan `__pycache__/` y `data/state/reviews.sqlite` dentro del stage, así que para publicar se copia solo lo inventariado.
   - **Regla:** `scayl-demo` no se edita a mano. Si cambian código o datos de la demo, se regenera el stage en una carpeta nueva, se prueba y se republica desde la sesión local del Humano 1.
+
+### DL-033 · Demo pública sin contraseña
+- **Contexto:** el jurado evalúa por su cuenta del 9 al 12 de octubre, con la URL y el repositorio. El repo `scayl-demo` es público, así que la contraseña no protegía datos ni código; solo añadía un paso donde podía fallar el acceso. No hay API ni costo que proteger (modo cache).
+- **Decisión (Lead, Humano 1):** abrir la demo pública. El reto no exige contraseña.
+- **Cambio técnico:** interruptor explícito `SCAYL_PUBLIC_ACCESS = "1"` en los Secrets. Solo el valor exacto `"1"` abre la app; sin él, el comportamiento previo se mantiene: pide la contraseña y se cierra si falta. Sin el interruptor tampoco se muestra "Cerrar sesión". Pruebas nuevas en `tests/test_deploy.py`.
+- **Alternativas:** mantener la contraseña (fricción para un jurado sin acompañamiento) o borrar el código de acceso (pierde la opción de volver a cerrarla).
+- **Fecha:** 2026-10-08 · **Reversible:** quitar el interruptor de los Secrets y volver a poner la contraseña.

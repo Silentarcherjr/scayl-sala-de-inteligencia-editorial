@@ -3,6 +3,9 @@
 Self-configuring for hosts that ignore the Dockerfile (Streamlit Community Cloud, DL-032): puts the stage
 root on ``sys.path`` and defaults the hosted settings (cache only, stage-relative data). Values already in
 the environment (Docker ENV, host secrets) win. The password is never defaulted.
+
+Public access (jury evaluates unattended, DL-033) is an explicit opt-in: ``SCAYL_PUBLIC_ACCESS = "1"`` in the
+host secrets skips the password. Without it the gate keeps failing closed when the password is missing.
 """
 import hashlib
 import hmac
@@ -21,7 +24,13 @@ for _key, _value in {"SCAYL_HOSTED": "1", "SCAYL_LLM_MODE": "cache", "SCAYL_SNAP
     os.environ.setdefault(_key, _value)
 
 
+def public_access() -> bool:
+    return os.environ.get("SCAYL_PUBLIC_ACCESS", "") == "1"
+
+
 def require_password() -> None:
+    if public_access():
+        return
     secret = os.environ.get("SCAYL_SPACE_PASSWORD", "")
     if not secret:
         st.error("Acceso deshabilitado: falta configurar la contraseña del Space.")
@@ -56,7 +65,7 @@ def hosted_frame() -> None:
     enforce_cache()
     st.caption("Demo snapshot · salidas IA precalculadas · Modo cache; sin salida guardada se usa template.")
     st.caption("Las decisiones de esta demo son temporales y se pierden al reiniciar el Space.")
-    if st.sidebar.button("Cerrar sesión"):
+    if not public_access() and st.sidebar.button("Cerrar sesión"):
         st.session_state.clear()
         st.rerun()
 
@@ -70,7 +79,7 @@ def main() -> None:
         st.Page("pages/2_Consultas.py", title="Consultas"),
         st.Page("pages/3_Trust_Lab.py", title="Trust Lab"),
         st.Page("pages/4_Simulador_de_pesos.py", title="Simulador de pesos"),
-    ], position="sidebar" if st.session_state.get("_space_authenticated") else "hidden")
+    ], position="sidebar" if public_access() or st.session_state.get("_space_authenticated") else "hidden")
     page.run()
 
 

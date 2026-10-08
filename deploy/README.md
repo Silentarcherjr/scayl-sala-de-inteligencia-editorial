@@ -1,6 +1,6 @@
 # A-06 · Publicación
 
-> **Estado: DESPLEGADA** en https://scayl-demo.streamlit.app/ (Streamlit Community Cloud, modo cache, acceso con contraseña). Verificación remota más abajo. La contraseña solo vive en los Secrets de Streamlit y se entrega por canal privado.
+> **Estado: DESPLEGADA** en https://scayl-demo.streamlit.app/ (Streamlit Community Cloud, modo cache). **Acceso abierto desde DL-033**: `SCAYL_PUBLIC_ACCESS = "1"` en los Secrets de Streamlit; sin ese interruptor la app vuelve a exigir `SCAYL_SPACE_PASSWORD` y se cierra si falta. Verificación remota más abajo.
 
 ## Ruta vigente: Streamlit Community Cloud (DL-032)
 Hugging Face exige PRO (pago) para Spaces Docker o Gradio, así que se publica gratis en Streamlit Community Cloud.
@@ -8,7 +8,7 @@ Hugging Face exige PRO (pago) para Spaces Docker o Gradio, así que se publica g
 1. Genera el stage auditado en una carpeta nueva:
    `python -m deploy.prepare --bundle deploy/artifacts/v1/bundle.public.json --cache deploy/artifacts/v1/llm --out deploy/stage-cloud`
 2. Sube **solo el contenido del stage** a un repositorio GitHub dedicado (p. ej. `scayl-demo`). No subas el repo de trabajo: el stage no tiene `.env`, raw, etiquetas ni estado.
-3. En share.streamlit.io: *Create app* → repo dedicado, rama `main`, archivo principal **`app/space.py`**. En *Advanced settings*: **Python 3.12**. En *Secrets* pega una sola línea: `SCAYL_SPACE_PASSWORD = "<contraseña>"`. La escribe un humano; nunca va a Git.
+3. En share.streamlit.io: *Create app* → repo dedicado, rama `main`, archivo principal **`app/space.py`**. En *Advanced settings*: **Python 3.12**. En *Secrets*: `SCAYL_PUBLIC_ACCESS = "1"` para acceso abierto (DL-033), o `SCAYL_SPACE_PASSWORD = "<contraseña>"` para exigir contraseña. La contraseña la escribe un humano; nunca va a Git.
 4. `app/space.py` se configura solo: agrega la raíz del stage a `sys.path` y fija por defecto modo cache, `SCAYL_HOSTED=1` y las rutas de datos del stage. No hace falta ninguna otra variable.
 5. Verifica en remoto: sin contraseña no entra, una contraseña incorrecta se rechaza, y con la correcta cargan Sala, Ficha, Consultas y Trust Lab.
 
