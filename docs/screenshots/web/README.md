@@ -40,3 +40,7 @@ citas desplegables, paquetes guardados, abstención, métricas originales y ause
 horizontal. Tres fichas (EVT-0101, EVT-0139, EVT-0027) conservan P, motivos, advertencias, brief y modo.
 Los datos exportados no cambiaron respecto a la entrega contrastada con Streamlit. Cero errores de
 navegador y cero peticiones externas. No es una prueba de comprensión con usuarios; esa aún no se midió.
+
+La misma verificación pasó sin autenticación en https://scayl-editorial.vercel.app/ (escritorio/móvil).
+Resultado: [jury-public-verification.json](jury-public-verification.json). Producción READY, despliegue
+`dpl_CWXktnUR4TqmMGyTp5F2hE3XziTw`, código `957ecf08568f2f79fb8209d1ea5d6830e5691e71`.
