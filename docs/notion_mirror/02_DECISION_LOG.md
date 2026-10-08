@@ -251,3 +251,14 @@
 - **Fuera de alcance:** datos de la SBP, evaluación de clientes, recomendaciones de inversión, inferencia de pérdidas, impagos o cartera, y alertas regulatorias.
 - **Riesgo y control:** si no pasa la verificación completa antes de las 18:00 de Panamá del 8 de octubre, no se fusiona.
 - **Fecha:** 2026-10-08 · **Ejecuta:** Codex · **Reversible:** es aditivo; revertir el PR no afecta lo existente.
+
+### DL-036 · Consulta libre y revisión humana dentro de la web Next.js
+- **Contexto:** la web enviaba a Streamlit para la consulta libre y la revisión. El camino de Consultas solo necesita numpy, pydantic, rank-bm25 y PyYAML (unos 35 MB), así que cabe en una función Python de Vercel.
+- **Decisión (Lead, Humano 1):** funciones Python nativas `/api/ask` y `/api/review` que ejecutan `scayl.service` en modo caché forzado, nunca en vivo. La revisión valida transiciones y devuelve un recibo con hash; el historial se guarda en el navegador. Streamlit queda como respaldo y demo offline.
+- **Verificación:** paridad con `service.ask`, entradas limitadas, errores sin filtrar información, sin registros de preguntas ni de nombres; 287 pruebas (PR #73).
+- **Fecha:** 2026-10-08 · **Ejecuta:** Codex · **Reversible:** las páginas estáticas no dependen de las funciones y caen a respuestas precalculadas.
+
+### DL-037 · Notion vuelve a ser entregable (C-04)
+- **Contexto:** la organización habilitó Notion el día del cierre y pidió una página con tres enlaces: documentación técnica, documentación funcional y presentación del Pitch Day, esta última en Notion (sin Canva ni PPT).
+- **Decisión:** generar las páginas desde el repositorio (`docs/notion/`, importables como Markdown) con las mismas cifras medidas. Deja sin efecto la interpretación de C-03.
+- **Fecha:** 2026-10-08

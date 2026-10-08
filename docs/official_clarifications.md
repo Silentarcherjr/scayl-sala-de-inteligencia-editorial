@@ -30,3 +30,9 @@
 - **Contexto:** el PDF TVN (§5 y §10) exige un espacio Notion como condición de admisión, con la dimensión "Notion: ejecución y pitch" (15 puntos) en la rúbrica.
 - **Interpretación aplicada:** la entrega no incluye Notion. El contenido equivalente está versionado en el repositorio, en `docs/notion_mirror/` (las 8 páginas: inicio del reto, plan y decisiones, catálogo de datos, diseño, casos y evidencias, pruebas y métricas, riesgos y ética, presentación al jurado), con el registro de decisiones y las bitácoras con hora UTC como trazabilidad durante el evento.
 - **Evidencia:** `docs/evidence/C-03_notion_opcional.png` (pendiente de agregar por el equipo).
+
+## C-04 · Notion habilitado: página con 3 enlaces (2026-10-08)
+- **Fuente:** organizadora del hackIAthon, mensaje en el grupo oficial el día del cierre.
+- **Texto literal:** "Notion se encuentra habilitado para que lo trabajen, tengan en cuenta lo que deben hacer: 1. Un espacio de trabajo para su grupo 2. Deben crear una página con 3 enlaces: Documentación técnica, Documentación funcional, Presentación para el pitch Day (no se aceptará otros medio como Canva, PPT, etc). En el correo que van a enviar con su entregable, deben dirigirlo a hackiathon@viamatica.com y añadir: 1. Enlace público del reto desarrollado con una breve explicación 2. Los 3 enlaces de Notion del punto 2 detallado".
+- **Interpretación aplicada (DL-037):** **deja sin efecto C-03.** Las tres páginas se generan desde el repositorio en `docs/notion/` y se importan a Notion; el correo incluye la URL pública de la demo, una breve explicación y los tres enlaces.
+- **Evidencia:** `docs/evidence/C-04_notion_habilitado.png` (pendiente de agregar por el equipo).
