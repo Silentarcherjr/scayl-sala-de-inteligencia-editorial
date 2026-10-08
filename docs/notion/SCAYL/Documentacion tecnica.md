@@ -47,9 +47,9 @@ Rangos: bajo [0, 40), medio [40, 70), alto [70, 100]. Desempate: U y luego ID. *
 
 | Uso | Modelo | Por qué |
 |---|---|---|
-| Agrupación de titulares en eventos | E5 multilingüe (local) | F1 **0,99** frente a 0,44 de TF-IDF |
+| Agrupación de titulares en eventos | E5 multilingüe (local) | F1 **0,99** frente a 0,44 de TF-IDF (pares de desarrollo usados para calibrar τ: resultado optimista) |
 | Temas | **Reglas** (no IA) | Macro-F1 **0,76** frente a 0,25 de E5: usamos IA solo donde ganó |
-| Borradores editoriales | Qwen3 8B en Ollama (local, GPU AMD RX 9060 XT) | Mediana **13,1 s**, p95 17,0 s (n = 15); costo de API **$0** |
+| Borradores editoriales | Qwen3 8B en Ollama (local, GPU AMD RX 9060 XT) | Mediana **13,1 s**, p95 17,0 s (n = 15); costo de API **$0** (sin incluir hardware ni electricidad, no medidos) |
 | Consultas | BM25 + plantilla extractiva; salidas de Qwen precalculadas | Respuestas reproducibles, sin red |
 
 Parámetros del LLM: temperatura 0, semilla 42, salida JSON con esquema. Prompts versionados en `scayl/gen/prompts/*.vN.md`.
@@ -67,11 +67,11 @@ Parámetros del LLM: temperatura 0, semilla 42, salida JSON con esquema. Prompts
 
 | Métrica | Resultado | Alcance |
 |---|---|---|
-| Pruebas del reto T01–T10 | **10/10 aprobadas** | `eval/results/latest.json` |
+| Pruebas del reto T01–T10 | **10/10 aprobadas** (pruebas automatizadas) | `eval/results/latest.json`; T10 se verifica con la red bloqueada en pytest, no equivale a un ensayo real sin wifi |
 | Pruebas automatizadas | **287** (pytest) + lint, en CI | GitHub Actions |
-| Cobertura de citas del borrador | **45/45** | Top 15 con Qwen3 8B |
-| Validez de sustento (revisión humana) | **25/30 = 83 %** | Por debajo de la meta orientativa del 90 %; se explica en DL-031 |
-| Abstención en set humano independiente | **6/6** | Escrito por un humano sin ver el código |
+| Cobertura de citas del borrador | **45/45** | Top 15 con Qwen3 8B; mide presencia de cita, no validez del sustento |
+| Validez de sustento (revisión humana) | **25/30 = 83 %** | Muestra de paquetes en modo plantilla (no de borradores de Qwen). Por debajo de la meta orientativa del 90 %; se explica en DL-031 |
+| Abstención en set reservado escrito por un humano | **6/6** trampas | Escrito por un integrante del equipo sin ver los casos existentes; también se abstuvo en 4/4 controles de cultura general (6/10 frente a sus expectativas, DL-030) |
 | Abstención en red-team de desarrollo | 16/16 (antes 6/16) | Set sintético; corregido sobre ese mismo set (DL-027) |
 | Precision@5 frente al top 5 del editor | 1/5 | Exploratoria (DL-024) |
 | Ahorro de tiempo | **No medido** | No lo afirmamos |
@@ -82,7 +82,7 @@ Parámetros del LLM: temperatura 0, semilla 42, salida JSON con esquema. Prompts
 |---|---|---|
 | Demo principal | Next.js estático en Vercel + funciones Python | Consulta libre y revisión en modo caché; sin claves ni costo |
 | Respaldo | Streamlit Community Cloud | Mismo stage auditado |
-| Offline | `python scripts/demo_offline.py` o `npx serve out` | Funciona con el wifi apagado (T10) |
+| Offline | `python scripts/demo_offline.py` o `npx serve out` | Sin descargas ni llamadas externas; T10 verificado en pytest con la red bloqueada |
 
 Solo se publican el bundle público (sin descripciones RSS) y la caché revisada; cada archivo del stage tiene un hash verificado.
 
@@ -90,7 +90,7 @@ Solo se publican el bundle público (sin descripciones RSS) y la caché revisada
 
 - Solo titulares, URL y metadatos: no se redistribuyen artículos, imágenes ni videos.
 - Sin datos personales ni perfiles; las acusaciones se etiquetan como DECLARACIÓN con atribución.
-- Sin secretos en el repositorio (`.env` ignorado, `.env.example` vacío).
+- Sin secretos en el repositorio (`.env` ignorado; `.env.example` sin valores secretos).
 - Inferencia 100 % local: ningún dato de la redacción sale a un tercero.
 
 ## 9. Decisiones técnicas clave

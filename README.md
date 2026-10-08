@@ -29,15 +29,15 @@ revisión humana. **La IA no decide qué es verdad ni qué se publica**: "aproba
 ## Resultados medidos (detalle en `eval/results/` y `docs/notion_mirror/06_TESTS_AND_METRICS.md`)
 | Métrica | Resultado | Alcance |
 |---|---|---|
-| Cobertura de citas del borrador | **45/45** | Top 15 con qwen3:8b; las frases sin cita las elimina el validador |
-| Validez de sustento (revisión humana) | **25/30 = 83%** | Los 5 casos fallidos son titulares citados textualmente pero poco relevantes o en otro idioma (DL-031) |
+| Cobertura de citas del borrador | **45/45** | Top 15 con qwen3:8b; las frases sin cita las elimina el validador. Mide presencia de cita, no validez del sustento |
+| Validez de sustento (revisión humana) | **25/30 = 83%** | Muestra de paquetes en modo plantilla (no de borradores de qwen3:8b). Los 5 casos fallidos son titulares citados textualmente pero poco relevantes o en otro idioma (DL-031) |
 | Abstención correcta (red-team de desarrollo) | **16/16**; abstención incorrecta 0/4 | Set sintético; antes de las correcciones era 6/16 (DL-027) |
-| Set reservado escrito por un humano | 6/6 trampas con abstención | Los 4 "controles" de cultura general no están en el corpus: SCAYL no responde de memoria (DL-030) |
+| Set reservado escrito por un humano | 6/6 trampas con abstención; también se abstuvo en 4/4 controles (6/10 frente a las expectativas del autor) | Los 4 "controles" de cultura general no están en el corpus: SCAYL no responde de memoria (DL-030) |
 | Temas (macro-F1, 100 etiquetas humanas) | Reglas **0,76** · E5 0,25 | Por eso los temas usan reglas (DL-029) |
 | Agrupación (F1, pares revisados por humano) | E5 **0,99** · TF-IDF 0,44 | Pares de desarrollo usados para calibrar: resultado optimista |
 | Precision@5 frente al top 5 del editor | 1/5 (exploratoria) | El editor vio antes una propuesta de IA (DL-024) |
 | Latencia del borrador | Mediana **13,1 s**, p95 17,0 s (n = 15) | AMD RX 9060 XT 8 GB, Ollama Vulkan |
-| Costo de API | **$0** | Inferencia 100% local |
+| Costo de API | **$0** | Inferencia 100% local; no incluye hardware ni electricidad (no medidos) |
 | Pruebas | T01–T10 y 287 pruebas en CI | `python -m pytest -q` |
 
 Lo que no medimos queda escrito como **"no medido"**: no afirmamos ahorro de tiempo sin el mini-estudio.

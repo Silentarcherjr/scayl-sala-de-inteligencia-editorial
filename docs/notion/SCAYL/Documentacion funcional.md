@@ -22,7 +22,7 @@ Un equipo editorial recibe cientos de señales al día. **Que varios medios repi
 3. **Contextualizar:** se vinculan datos oficiales (ACP, INEC, Banco Mundial, USGS) con su fecha.
 4. **Explicar:** qué se reporta, qué está respaldado, qué falta verificar y a quién preguntar.
 5. **Producir:** un borrador donde cada frase está etiquetada (HECHO, DECLARACIÓN…) y citada.
-6. **Revisar:** una persona cambia el estado con justificación obligatoria y recibe un recibo verificable.
+6. **Revisar:** una persona cambia el estado con justificación obligatoria y recibe un recibo con hash SHA-256 (integridad del contenido; no es una firma).
 
 ## 4. Pantallas
 

@@ -57,20 +57,20 @@ Datos públicos: noticias (GDELT y RSS de TVN), ACP, INEC, Banco Mundial y USGS,
 
 | Tarea | IA | Reglas | Usamos |
 |---|---|---|---|
-| Agrupar titulares | **E5: F1 0,99** | TF-IDF: 0,44 | IA |
+| Agrupar titulares | **E5: F1 0,99** (pares de calibración: optimista) | TF-IDF: 0,44 | IA |
 | Clasificar temas | E5: 0,25 | **Reglas: 0,76** | Reglas |
 
-**El borrador lo escribe un LLM local** (Qwen3 8B): mediana de 13 s, **$0** de API, ningún dato sale de la redacción.
+**El borrador lo escribe un LLM local** (Qwen3 8B): mediana de 13 s, **$0** de API (sin contar hardware ni electricidad), ningún dato sale de la redacción.
 
-**Y lo vigila el código:** **45/45** frases con cita; lo que no tiene respaldo se elimina antes de llegar al editor.
+**Y lo vigila el código:** **45/45** frases conservadas con cita (cobertura, no validez del sustento); las frases sin cita o con cifras sin respaldo se eliminan antes de llegar al editor.
 
 ---
 
 # 5 · Confianza: medido, no prometido · 1 min
 
-- **T01–T10:** las 10 pruebas del reto, aprobadas.
-- **6/6** abstenciones correctas en un set escrito por un humano que no vio el código.
-- **25/30 = 83 %** de validez de sustento en revisión humana: por debajo de la meta del 90 %, y lo decimos.
+- **T01–T10:** las 10 pruebas automatizadas del reto, aprobadas (T10 con la red bloqueada en pytest).
+- **6/6** trampas con abstención correcta en un set escrito por un humano sin ver los casos existentes; también se abstuvo en las 4 preguntas de cultura general fuera del corpus (6/10 frente a sus expectativas).
+- **25/30 = 83 %** de validez de sustento en revisión humana (muestra de paquetes plantilla): por debajo de la meta del 90 %, y lo decimos.
 - Nuestro propio red-team nos encontró fallos (6/16); los corregimos y quedaron registrados.
 - **Ahorro de tiempo: no medido.** No lo afirmamos.
 
@@ -114,5 +114,5 @@ Demo: https://scayl-editorial.vercel.app/ · Código: https://github.com/Silenta
 - **Si cinco medios replican una agencia, ¿cuántas fuentes independientes hay?** → Una procedencia.
 - **¿Qué pasa si no hay evidencia?** → Se abstiene y dice qué fuente faltaría.
 - **¿Y si una fuente trae instrucciones maliciosas?** → Se marca como sospechosa; nunca se cita ni se envía al modelo.
-- **¿Cuánto cuesta?** → $0 de API: todo corre local.
+- **¿Cuánto cuesta?** → $0 de API: todo corre local. El hardware (RX 9060 XT 8 GB) y la electricidad no están incluidos ni medidos.
 - **¿Cuánto tiempo ahorra?** → No medido; no lo afirmamos.
