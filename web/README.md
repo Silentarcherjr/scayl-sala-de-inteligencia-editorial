@@ -77,3 +77,49 @@ El aviso visible «La revisión humana con registro y la consulta libre funciona
 trabajo: https://scayl-demo.streamlit.app/» aparece junto al modo de solo lectura de cada ficha, en
 el paso de revisión del recorrido y en el pie de todas las páginas. La demo pública permite
 inspeccionar; Streamlit ofrece las acciones con registro. Notion es opcional según C-03.
+
+
+## Boletín de entorno logístico · DL-035 / revisión del PR #71
+
+El brief oficial *hackIAthon — reto TVN Media*, modalidad bancaria, CU-05/T09, admite una extensión
+del núcleo editorial. `/boletin/` entrega únicamente **Logística y Canal**, con la pregunta CU-05 literal:
+«¿Qué señales públicas del entorno logístico debo revisar?». Se retiró el segundo sector por el ruido
+del clasificador de temas: agrupaba titulares judiciales, deportivos y de promoción institucional
+poco pertinentes para un analista. No se modifica ese clasificador ni el ranking editorial. Esta
+reducción de alcance fue solicitada por el Lead en la revisión del PR #71 y prevalece sobre la
+entrega dual originalmente descrita en [BANK_BULLETIN_PLAN.md](../docs/BANK_BULLETIN_PLAN.md).
+
+La página muestra usuario, horizonte en Panamá, modo/modelo, límites visibles, síntesis y observaciones
+con citas, tres hipótesis condicionales con sustento, sectores relacionados, tres preguntas verificables,
+eventos usados y fuentes. El resumen se construye por código y no repite las observaciones: mide eventos
+y dominios de medios, advierte que repetición no es corroboración, compara observaciones fechadas del
+Gatún y presenta exportaciones como contexto histórico. Los conteos son mediciones locales del snapshot
+con entradas y método en su tarjeta; no son indicadores externos ni medidas de independencia.
+
+El texto numérico utiliza como máximo dos decimales; cada valor completo permanece en su tarjeta de
+fuente. El adaptador de redondeo, exclusivamente en `scayl/gen/bulletin.py`, usa decimal y
+`ROUND_HALF_UP` a dos decimales, sobre el valor exacto de la fila citada. No usa una tolerancia genérica
+ni admite redondeos a un decimal. `check_sentence`, `numbers_in` y los validadores compartidos
+permanecen intactos; nuevas pruebas rechazan cifras incorrectas, exceso de precisión y magnitudes
+infladas por la ambigüedad de separadores decimales. Nulos nunca se transforman en cero.
+
+El LLM existente puede generar observaciones/hipótesis en modo local/caché mediante JSON con esquema,
+Pydantic y el prompt nuevo `bulletin.v2.md`. El resumen logístico se conserva determinista. Se
+registran los descartes y se aplica fallback ante salida incompleta, duplicación del resumen,
+hipótesis sin observación citada, cifras inventadas, inyección o términos financieros prohibidos.
+El aviso fijo de alcance sigue siendo la única excepción al vocabulario prohibido.
+
+La entrega es **Plantilla (sin IA generativa)**: sin GPU ni caché revisada para esta extensión. El
+backend simulado se usa exclusivamente en pruebas y no aporta textos a la demo. Los titulares no
+se traducen; se rotulan «titular en idioma original (idioma)» según sus metadatos. Los indicadores
+son contexto y no corroboran los titulares; un período ausente sigue nulo y se declara sin
+inventar fecha de publicación ni confundirla con detección/corte. La pertinencia del titular en
+maratí y la utilidad/comprensión de analistas no están medidas.
+
+«Imprimir / guardar PDF» abre citas y restaura su estado al terminar. El estilo se limita al boletín:
+conserva identificadores, valores completos, períodos, URLs y método de conteos, evitando repetir
+los desplegables enteros en cada oración. §8 se verificó de nuevo: 242 pytest, Ruff, npm ci/lint/build
+y prueba con Wi-Fi apagado/restaurado, escritorio/móvil, impresión y flujo editorial existente.
+Capturas y resultado: [bank-verification.json](../docs/screenshots/web/bank-verification.json).
+El texto final íntegro está en el PR #71 para revisión y merge del Lead. Los avisos de desarrollo
+ya documentados siguen vigentes; no se añadieron dependencias ni se modificó el lockfile.

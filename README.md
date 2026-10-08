@@ -4,6 +4,8 @@
 
 Prototipo para el reto **TVN Media · "De la señal a la decisión"** (hackIAthon Panamá, modalidad editorial).
 
+Como extensión bancaria, ofrece un **boletín de entorno sectorial** con citas, hipótesis separadas y preguntas para un analista; la modalidad principal sigue siendo editorial (brief TVN Media, CU-05/T09; [DL-035](docs/BANK_BULLETIN_PLAN.md)).
+
 SCAYL convierte un snapshot congelado de señales públicas en **eventos priorizados**. Cada evento trae su
 **evidencia trazable**, sus **vacíos de investigación** y un **borrador editorial citado**, listo para la
 revisión humana. **La IA no decide qué es verdad ni qué se publica**: "aprobado como borrador" no significa publicado.
@@ -45,6 +47,8 @@ Lo que no medimos queda escrito como **"no medido"**: no afirmamos ahorro de tie
 Next.js estático en Vercel: los mismos 165 eventos, componentes, evidencia y paquetes de SCAYL.
 Las consultas guiadas usan resultados precalculados; la pregunta libre enlaza a Streamlit.
 La revisión de la demo web es de solo lectura.
+
+**Extensión bancaria:** abre `/boletin/` para leer el boletín de Logística y Canal (CU-05) y usa «Imprimir / guardar PDF». El boletín incluido es una plantilla, sin IA generativa; no evalúan personas ni recomiendan operaciones.
 
 **Web local (una vez construido el export, funciona sin internet):**
 ```bash

@@ -108,6 +108,8 @@ def export(out: Path) -> None:
         payloads["qa.json"] = {"examples": answers, "jury": jury}
         payloads["trust_lab.json"] = {"lab": service.trust_lab(), "generation": service.generation_summary(),
                                      "test_definitions": constants(ROOT / "app/pages/3_Trust_Lab.py", {"TESTS"})["TESTS"]}
+        payloads["bulletins.json"] = [service.sector_bulletin(sector).model_dump(mode="json")
+                                      for sector in ("logistica_canal",)]
         # Validate everything before writing anything, including model output citations.
         check_public(payloads)
         for relative, value in sorted(payloads.items()):

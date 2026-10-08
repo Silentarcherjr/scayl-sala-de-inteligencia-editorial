@@ -1,26 +1,26 @@
-# Relevo · worker-web · 2026-10-08 03:58 UTC
+# Relevo · worker-web · 2026-10-08 05:11 UTC
 
-- **Motivo de la parada:** relevo preventivo al completar Tarea A.
-- **Rama:** `worker-web/flujo-completo` · **Último commit:** el que incluye esta nota; consultar `git log -1` (push al cerrar).
-- **PR abierto:** PR de esta rama hacia main; se abre después del push, consultar `gh pr view worker-web/flujo-completo`.
+- **Motivo de la parada:** relevo preventivo al cerrar la ronda de correcciones.
+- **Rama:** `worker-web/bank-bulletin` · **Último commit:** consultar `git log -1`; el commit de correcciones contiene esta nota y se empuja antes de actualizar el PR.
+- **PR abierto:** https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/71
 
 ## Tarea en curso
-Tarea A completada: dejar visible dónde funciona el flujo completo para el jurado.
+DL-035, revisión del Lead: seis correcciones previas al merge. Entrega pública exclusivamente logística (CU-05), autorizada por el usuario sobre el plan original dual.
 
 ## Hecho en esta sesión
-Aviso exacto con enlace a https://scayl-demo.streamlit.app/ en pestaña Revisión de todas las fichas, paso de revisión del recorrido y pie global. Componente compartido sin tooltips. Corregidas dos frases del recorrido para reflejar C-03: Notion opcional.
+Síntesis determinista distinta de observaciones, 112 palabras; conteos reproducibles de 5 eventos y 6 dominios; serie ACP cronológica y exportaciones 2024 a dos decimales, valor completo en fuente. Tres hipótesis condicionales con citas de observaciones; preguntas verificables e idioma original rotulado. Export/web/docs/capturas solo logística; clasificador y producto editorial intactos. Prompt v2 nuevo, v1 preservado; redondeo solo boletín, validadores compartidos intactos.
 
 ## Siguiente paso concreto
-El Lead revisa y mergea el PR de worker-web/flujo-completo. Vercel despliega main por integración Git; no mergear desde el worker.
+Revisar la descripción final completa del PR #71 y sus checks remotos. El Lead revisa y mergea; no mergear ni publicar desde esta rama sin su decisión.
 
 ## Estado de las pruebas
-197 pytest passed; npm run lint y npm run build OK (172 rutas); navegador verificó aviso visible y enlace correcto en las tres ubicaciones, escritorio y móvil, sin desbordamiento horizontal.
+242 pytest; Ruff; npm ci/lint/build (173 rutas). Wi-Fi apagado/restaurado, desktop/mobile, idioma y valor íntegro de fuente, PDF A4 5 páginas inspeccionadas, cero errores/peticiones externas. Evidencia en docs/screenshots/web/bank-verification.json.
 
 ## Archivos tocados
-web/components/shared.tsx, web/components/case-view.tsx, web/app/recorrido/page.tsx, web/app/layout.tsx, web/README.md y documentación de bitácora/relevo.
+scayl/gen/bulletin.py y prompt bulletin.v2.md; scripts/export_web.py; únicamente tests/test_bulletin.py; web/app/boletin, componente nuevo, CSS bancaria y bulletins.json; README/documentación propia, capturas/worklog/handoff/AI_TOOLS_USED. Sin cambios en app/, deploy/, datos, pruebas anteriores, clasificador/ranking ni validators.py compartido.
 
 ## Bloqueos, dudas y decisiones pendientes
-Ninguno técnico. Merge reservado al Lead. Datos, scayl/, app/, deploy/ y tests/ intactos.
+Etapa 4 GPU opcional omitida: no hay caché revisada por humano para esta extensión; modo plantilla explícito. Períodos ausentes se conservan nulos. Utilidad/comprensión sectorial no medida; titular maratí preservado y rotulado. Cinco avisos transitivos de desarrollo preexistentes documentados; no se cambió lockfile.
 
 ## Contexto que no está en el código
-Build requiere escalación para puertos de Turbopack; Node bundled runtime. Verificación temporal /tmp/scayl-notice-check.cjs. No se desplegó producción explícitamente en esta tarea: el encargo termina con PR.
+Python .venv/bin/python, Ruff .venv/bin/ruff; Node bundled runtime. Exportar a /tmp y copiar solo bulletins.json conserva los JSON editoriales anteriores. Prueba local en puerto55330, servidor se cierra al finalizar; Wi-Fi en en0 restaurado a On. El repositorio es privado, su publicación queda para el final por instrucción previa.

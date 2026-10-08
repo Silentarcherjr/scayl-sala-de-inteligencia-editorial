@@ -18,7 +18,7 @@ from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field
 
-CONTRACT_VERSION = "0.3.0"  # 0.3.0: IndicatorObservation periodo/fuente/frecuencia/es_proyeccion (additive)
+CONTRACT_VERSION = "0.4.0"  # 0.4.0: SectorBulletin (additive; existing models unchanged)
 
 
 class _Model(BaseModel):
@@ -374,6 +374,26 @@ class StoryPackage(_Model):
     pending_verifications: list[str]
     sources: list[EvidenceRef]
     scope_disclaimer: str | None  # "Basado únicamente en titular/metadatos"
+    validation: ValidationReport
+    generated_by: GenerationMeta
+
+
+class SectorBulletin(_Model):
+    """Additive DL-035 extension: sector context, never individual financial decisions."""
+
+    bulletin_id: str
+    sector: str
+    question: str
+    horizon: str
+    summary: list[TaggedSentence]  # <= 250 words, checked by the bulletin validator
+    observations: list[TaggedSentence]
+    impact_hypotheses: list[TaggedSentence]
+    related_sectors: list[str]
+    analyst_questions: list[str] = Field(min_length=3, max_length=3)
+    event_ids: list[str]
+    sources: list[EvidenceRef]
+    scope_disclaimer: str | None
+    limits_notice: str
     validation: ValidationReport
     generated_by: GenerationMeta
 
