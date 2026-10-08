@@ -69,3 +69,5 @@ Codex ? LowCrime ? 2026-10-07 22:18 UTC ? B-09: transcripcion de 30 decisiones h
 
 
 | Codex (GPT-6) | 2026-10-08 05:11 UTC · Correcciones del Lead sobre PR #71 / DL-035 | Redujo la entrega pública a CU-05 logístico por ruido de pertinencia del clasificador, sin modificarlo. Síntesis determinista de 112 palabras, conteos medidos (5 eventos/6 dominios), tendencia ACP y exportaciones históricas, redondeo decimal local con valores originales conservados, tres hipótesis citadas, preguntas verificables y etiqueta de idioma original. 242 pytest, Ruff, npm ci/lint/build, escritorio/móvil y PDF offline inspeccionado. Sin inferencia real ni etiquetas humanas inventadas; plantilla y límites visibles. |
+
+| 2026-10-08 | Codex (OpenAI) | DL-036: adaptadores Python nativos, consulta libre y revisión con recibos en Next.js; pruebas de paridad y preview | Código asistido y verificado contra service.ask/ReviewStore, sin modificar el núcleo ni usar IA remota en el producto. Modos cache/template explícitos. |

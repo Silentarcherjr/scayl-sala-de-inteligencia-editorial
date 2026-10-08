@@ -1,0 +1,14 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "installCommand": "npm ci && node scripts/prepare-python.mjs",
+  "buildCommand": "npm run build",
+  "outputDirectory": "out",
+  "functions": {
+    "api/*.py": {
+      "includeFiles": ".python-runtime/**",
+      "excludeFiles": "{node_modules/**,.next/**,out/**,public/**,app/**,components/**,scripts/**}",
+      "maxDuration": 30
+    }
+  }
+}

@@ -104,3 +104,8 @@ Licencias y procedencia en `docs/notion_mirror/03_DATA_CATALOG.md`.
 | `AGENTS.md`, `CLAUDE.md`, `docs/TASKS.md` | Cómo trabajó el equipo humano + agentes |
 
 Equipo SCAYL: Silentarcherjr, frictionspp-svg y LowCrime, con agentes de código (Claude Code y Codex) bajo revisión humana.
+
+DL-036 añade consulta libre y revisión humana dentro de la web Next.js, con funciones Python nativas
+solo en modo caché. El historial de esta demo se guarda en el navegador y el recibo se descarga como
+JSON; aprobar como borrador no publica. El export estático conserva consultas de ejemplo offline.
+Detalles de empaquetado y límites: [web/README.md](web/README.md#dl-036--consulta-libre-y-revisión-en-nextjs).

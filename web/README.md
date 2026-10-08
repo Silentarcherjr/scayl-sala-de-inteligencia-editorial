@@ -123,3 +123,42 @@ y prueba con Wi-Fi apagado/restaurado, escritorio/móvil, impresión y flujo edi
 Capturas y resultado: [bank-verification.json](../docs/screenshots/web/bank-verification.json).
 El texto final íntegro está en el PR #71 para revisión y merge del Lead. Los avisos de desarrollo
 ya documentados siguen vigentes; no se añadieron dependencias ni se modificó el lockfile.
+
+## DL-036 · consulta libre y revisión en Next.js
+
+`output: "export"` permanece: Next genera 173 páginas estáticas en `out/` y no contiene Route Handlers.
+Vercel usa el preset `framework: null` de `web/vercel.json`, sirve `out/` y detecta por separado los
+handlers Python nativos `api/ask.py` y `api/review.py`. No hay FastAPI ni servidor Next en runtime.
+El `installCommand` ejecuta `scripts/prepare-python.mjs`: copia solo `scayl/` (sin bytecode), el
+`bundle.public.json` y la caché pública de `deploy/artifacts/v1/llm` a `.python-runtime/` ignorado.
+`includeFiles` empaqueta ese directorio en las funciones; nunca va a `out/`. No se copian raw, labels,
+state ni pruebas. Runtime Python 3.13 y cuatro dependencias fijadas igual que el núcleo:
+numpy, pydantic, rank-bm25 y PyYAML. Importar SCAYL no carga las dependencias ML/UI.
+
+`POST /api/ask {question}` admite hasta 300 caracteres. El adaptador fija bundle/modelo/caché y
+`mode=cache` aunque el entorno indique live. Usa `service.ask` con los validadores originales.
+Un miss produce la misma plantilla o abstención de SCAYL, con modo/modelo visibles. La API nunca
+contacta Ollama ni fuentes externas. Los botones del Modo jurado siguen usando `qa.json`.
+Si la red/API falla, una coincidencia exacta usa su respuesta guardada; si no existe, se muestran los
+ejemplos guardados con aviso explícito de que no responden a la pregunta libre. Un error 4xx muestra
+los campos inválidos. Preguntas y nombres no se registran en logs de aplicación.
+
+`POST /api/review {event_id, from_state, to_state, reviewer, justification}` valida enums,
+`REVIEW_TRANSITIONS`, persona no vacía (máximo 100) y justificación obligatoria (máximo 500).
+Genera los mismos campos/hashes de evidencia y paquete que `ReviewStore`, sin llamarlo ni escribir
+SQLite/archivos/outbox. Añade el hash SHA-256 del bundle público (no un manifest de raw) y declara
+que el estado previo lo aporta el navegador. No es un estado compartido ni una identidad autenticada.
+Cada recibo lleva hash canónico propio, fecha UTC y aviso de no publicación; la UI muestra Panamá,
+guarda historial por caso en `localStorage` versionado y permite descargar el JSON. No incluye datos
+personales del corpus; solo el nombre que ingresa la persona revisora para esta demo.
+
+Offline: `npm run build && npx serve out`. El snapshot, citas, paquetes y ejemplos funcionan sin API.
+La pregunta libre avisa que usa respuestas guardadas; una revisión nueva requiere la API y, si falla,
+no crea una decisión. Los recibos previamente guardados siguen disponibles para inspección/descarga.
+Streamlit queda únicamente como versión de respaldo en el pie. La producción sigue igual hasta que
+el Lead mergee; si no está estable a las 18:00 de Panamá del 8 de octubre, no debe mergearse.
+
+Pruebas: `node scripts/prepare-python.mjs` desde `web/` y `python -m pytest -q` desde la raíz.
+`tests/test_python_api.py` comprueba paridad semántica de cinco preguntas (timestamps de invocación
+excluidos), bloqueo de live, matriz completa de transiciones, límites/JSON/errores, ausencia de
+persistencia y paridad de hashes con la revisión existente. Ninguna prueba anterior se modifica.
