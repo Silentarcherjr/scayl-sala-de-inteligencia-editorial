@@ -7,14 +7,14 @@
 |---|---|---|---|---|---|---|---|
 | L-01 | Contratos de datos + fixture de UI | Lead (H1+Claude) | DONE | 2026-10-06 19:45 | 2026-10-06 20:30 | rama claude/fervent-babbage-q9fg7h | `scayl/contracts.py`, fixture sintético, 3 pruebas en verde |
 | L-02 | Docs de gobernanza + espejo Notion + onboarding | Lead | DONE | 2026-10-06 19:40 | 2026-10-06 22:00 | rama claude/fervent-babbage-q9fg7h | PLAN_REVIEW, ARCHITECTURE, MASTER_PLAN, TASKS, AGENTS, CLAUDE, espejo |
-| H-01 | Preparar el espacio Notion para migrar | H1 | TODO | — | — | — | — |
-| B-01 | Snapshot propio `data/raw/v1` según el PDF (DL-008) | Worker B (H3) | TODO | — | — | — | — |
-| B-10 | Benchmark de modelos locales | Worker B (H3) | TODO | — | — | — | — |
-| A-01 | Esqueleto Streamlit + FixtureService | Worker A (H2) | TODO | — | — | — | — |
+| H-01 | Preparar el espacio Notion para migrar | H1 | DONE | 2026-10-08 18:06 | 2026-10-08 20:40 | PR #76 | Notion habilitado por la organización (C-04); página SCAYL con 3 entregables + anexo |
+| B-01 | Snapshot propio `data/raw/v1` según el PDF (DL-008) | Worker B (H3) | DONE | 2026-10-06 21:19 | 2026-10-07 03:06 | PR #19 | Snapshot C-01 congelado con manifest SHA-256 (187 noticias) |
+| B-10 | Benchmark de modelos locales | Worker B (H3) | DONE | 2026-10-07 | 2026-10-07 19:17 | PR #48 | qwen3:8b frente a 4b; 8b elegido para la demo |
+| A-01 | Esqueleto Streamlit + FixtureService | Worker A (H2) | DONE | 2026-10-07 | 2026-10-07 02:40 | PR #18 | Sala de Situación y navegación |
 | L-03 | Puntaje P + estado de evidencia | Lead | DONE | 2026-10-06 22:35 | 2026-10-06 23:30 | rama claude/fervent-babbage-q9fg7h | scoring-v1, rangos, desempate, simulador; 11 pruebas T08 |
 | L-09 | Validadores + fallback template | Lead | DONE | 2026-10-06 22:40 | 2026-10-06 23:30 | rama claude/fervent-babbage-q9fg7h | 7 validadores; 1 fallo real corregido (cifras de fechas) |
-| H-02 | Bitácora de herramientas IA → PDF | Todos | DOING | 2026-10-06 19:40 | 2026-10-06 20:45 | — | Bitácora iniciada |
-| H-04 | Migrar a Notion | H1 + Lead | BLOCKED | — | — | — | Sin acceso a Notion todavía |
+| H-02 | Bitácora de herramientas IA → PDF | Todos | DOING | 2026-10-06 19:40 | 2026-10-08 20:45 | — | Bitácora completa en docs/AI_TOOLS_USED.md; PDF al cierre |
+| H-04 | Migrar a Notion | H1 + Lead | DONE | 2026-10-08 18:06 | 2026-10-08 20:40 | PR #76 | Páginas técnica, funcional, pitch y "Ejecución y evidencias" (C-04) |
 
 ## Cronología
 - **2026-10-06 19:40 UTC** — Lectura de las especificaciones oficiales; inspección del repo (vacío); prueba de acceso a las fuentes (bloqueadas en el entorno cloud).
@@ -50,3 +50,8 @@
 - **2026-10-07 22:30 UTC** — PR #58 (LowCrime) integrado: B-09 humano 25/30 (DL-031) y Space probado en local con la caché revisada. Evaluación final consolidada en `latest.json` (el runner ya importa B-07 y el precompute DL-029). Pendiente: publicar el Space privado, grabar el video, el PDF de herramientas IA y la entrega.
 - **2026-10-08 00:55 UTC** — HF exige PRO para Spaces Docker (402). Se publica en Streamlit Community Cloud con el mismo stage; `deploy/space.py` se autoconfigura (DL-032).
 - **2026-10-08 01:30 UTC** — **A-06 desplegada:** https://scayl-demo.streamlit.app/ (contraseña por canal privado). Verificada en local y en remoto (PR #61, DL-032). Quedan: video H-05, capturas C-01/C-02, PDF de herramientas IA y la entrega.
+- **2026-10-08 01:45–04:20 UTC** — Tema visual TVN (PR #63), demo pública sin contraseña (DL-033), web Next.js con recorrido para el jurado (DL-034, PR #66–#69) y plan de la extensión bancaria (DL-035).
+- **2026-10-08 05:17 UTC** — Boletín de entorno logístico CU-05 (PR #71). El precálculo con Qwen copió la plantilla y no se publica como IA (PR #72).
+- **2026-10-08 16:12 UTC** — Consulta libre y revisión humana dentro de la web Next.js con funciones Python en modo caché (DL-036, PR #73). 287 pruebas.
+- **2026-10-08 17:41–18:24 UTC** — Anuncio en video reproducible, con cifras corregidas a las medidas (PR #74, #75).
+- **2026-10-08 20:26 UTC** — **Aclaración oficial C-04:** Notion habilitado. Páginas técnica, funcional y pitch (10 diapositivas) más el anexo "Ejecución y evidencias" (DL-037, PR #76).
