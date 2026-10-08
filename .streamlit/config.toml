@@ -4,3 +4,38 @@ gatherUsageStats = false
 
 [server]
 headless = true
+
+[client]
+# Hide the developer toolbar (Deploy button, rerun menu) for the jury.
+toolbarMode = "minimal"
+
+# Palette inspired by TVN Media (reto TVN): brand blue, light blue kicker, yellow accent, navy.
+# Colors only: no TVN logo or name is used as SCAYL branding. Bundled fonts only (offline demo).
+[theme]
+base = "light"
+primaryColor = "#005588"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F2F4F7"
+textColor = "#2A2A2A"
+linkColor = "#005588"
+borderColor = "#DCE1E7"
+showWidgetBorder = true
+baseRadius = "medium"
+font = "sans-serif"
+headingFont = "sans-serif"
+dataframeHeaderBackgroundColor = "#EAF1F7"
+blueColor = "#005588"
+blueBackgroundColor = "#E3EEF6"
+blueTextColor = "#00446D"
+orangeColor = "#C2410C"
+orangeBackgroundColor = "#FDEEDC"
+orangeTextColor = "#9A3412"
+chartCategoricalColors = ["#005588", "#0077C8", "#FEC526", "#5A6673", "#96B7EA", "#C2410C"]
+
+[theme.sidebar]
+backgroundColor = "#0B1220"
+secondaryBackgroundColor = "#16233A"
+textColor = "#E6ECF3"
+primaryColor = "#FEC526"
+linkColor = "#96B7EA"
+borderColor = "#22314B"

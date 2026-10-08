@@ -36,11 +36,14 @@ def require_password() -> None:
         if valid:
             st.session_state["_space_authenticated"] = fingerprint
 
+    from app.components.theme import apply_theme
+
+    apply_theme("Demo para el jurado · reto TVN Media", login=True)
     st.title("SCAYL · Acceso al jurado")
     st.caption("Demo snapshot · Acceso con contraseña")
     with st.form("space-login"):
         st.text_input("Contraseña", type="password", key="_space_password")
-        st.form_submit_button("Entrar", on_click=attempt_login)
+        st.form_submit_button("Entrar", on_click=attempt_login, type="primary")
     if st.session_state.get("_space_login_failed"):
         st.error("Contraseña incorrecta.")
     st.stop()

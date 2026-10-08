@@ -5,6 +5,7 @@ from zoneinfo import ZoneInfo
 import streamlit as st
 
 from app.components.evidence_card import evidence_card
+from app.components.theme import apply_theme
 from scayl import service
 from scayl.contracts import QAAnswer, UIBundle
 
@@ -100,6 +101,7 @@ def show_jury(bundle: UIBundle, key: str) -> None:
 
 def main() -> None:
     st.set_page_config(page_title="Consultas · SCAYL", layout="wide")
+    apply_theme()
     st.title("Consultas")
     bundle = service.load_bundle()
     st.caption(f"Snapshot: {bundle.snapshot_version} · Respuestas basadas en la evidencia del corpus")

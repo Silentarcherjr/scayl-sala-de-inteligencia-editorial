@@ -1,6 +1,7 @@
 """A-05: Trust Lab. Only measured results; anything not measured is shown as "no medido"."""
 import streamlit as st
 
+from app.components.theme import apply_theme
 from scayl import service
 
 NOT_MEASURED = "no medido"
@@ -30,6 +31,7 @@ def number(value, suffix: str = "") -> str:
 
 def main() -> None:
     st.set_page_config(page_title="Trust Lab · SCAYL", layout="wide")
+    apply_theme()
     st.title("Trust Lab")
     st.caption("Resultados medidos, con numerador y denominador. Lo que no se midió dice \"no medido\".")
 

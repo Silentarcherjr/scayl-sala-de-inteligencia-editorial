@@ -6,6 +6,7 @@ import pandas as pd
 import streamlit as st
 
 from app.components.agenda import agenda
+from app.components.theme import apply_theme
 from scayl import service
 from scayl.contracts import Event, EvidenceStatus, PriorityTier
 
@@ -21,6 +22,7 @@ def ranked_events(events: list[Event]) -> list[Event]:
 
 def main() -> None:
     st.set_page_config(page_title="Sala de Situación · SCAYL", layout="wide")
+    apply_theme()
     st.title("Sala de Situación")
     st.caption("De la señal a la decisión editorial · Priorizar atención, investigar evidencia")
     bundle = service.load_bundle()
