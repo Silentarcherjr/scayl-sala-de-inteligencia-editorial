@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { APIError, postJSON } from "@/lib/api";
 import { panama, readable } from "@/lib/format";
 type State = "nuevo" | "en_revision" | "requiere_evidencia" | "aprobado_como_borrador" | "descartado";
-type Receipt = {review:{review_id:string; event_id:string; from_state:State; to_state:State; reviewer:string; justification:string; decided_at:string}; receipt_sha256:string; note:string};
+type Receipt = {rawJSON?:string; review:{review_id:string; event_id:string; from_state:State; to_state:State; reviewer:string; justification:string; decided_at:string}; receipt_sha256:string; note:string};
 // UI choices mirror REVIEW_TRANSITIONS; the Python endpoint remains authoritative.
 const transitions: Record<State, State[]> = {nuevo:["en_revision"], en_revision:["requiere_evidencia","aprobado_como_borrador","descartado"], requiere_evidencia:["en_revision"], aprobado_como_borrador:["en_revision"], descartado:["en_revision"]};
 const storageNotice = "Registro de esta demo en tu navegador; en la redacción iría a su base de datos";
@@ -34,7 +34,7 @@ export default function ReviewForm({eventId}: {eventId: string}) {
     return ()=>{cancelAnimationFrame(frame); window.removeEventListener("storage",onStorage);};
   },[eventId, storageKey]);
   function download(receipt: Receipt) {
-    const url=URL.createObjectURL(new Blob([JSON.stringify(receipt,null,2)],{type:"application/json"}));
+    const url=URL.createObjectURL(new Blob([receipt.rawJSON ?? JSON.stringify(receipt,null,2)],{type:"application/json"}));
     const anchor=document.createElement("a"); anchor.href=url; anchor.download=`${receipt.review.review_id}.json`; anchor.click(); URL.revokeObjectURL(url);
   }
   async function submit(event: React.FormEvent<HTMLFormElement>) {
@@ -45,8 +45,9 @@ export default function ReviewForm({eventId}: {eventId: string}) {
       let raw:string | null=null;
       try { raw=localStorage.getItem(storageKey); } catch { /* A downloadable receipt still works when storage is disabled. */ }
       if (raw) { const stored:unknown=JSON.parse(raw); if (!validHistory(stored,eventId) || stored.at(-1)?.review.review_id !== history.at(-1)?.review.review_id) { if (validHistory(stored,eventId)) setHistory(stored); throw Error("El historial cambió en otra pestaña. Revisa el estado y vuelve a enviar."); } }
-      const receipt=await postJSON<Receipt>("/api/review",{event_id:eventId,from_state:state,to_state:toState,reviewer:reviewer.trim(),justification:justification.trim()});
-      const updated=[...history,receipt]; setHistory(updated); setDestination(""); setJustification("");
+      let rawJSON="";
+      const receipt=await postJSON<Receipt>("/api/review",{event_id:eventId,from_state:state,to_state:toState,reviewer:reviewer.trim(),justification:justification.trim()}, raw=>{rawJSON=raw;});
+      const updated=[...history,{...receipt,rawJSON}]; setHistory(updated); setDestination(""); setJustification("");
       try { localStorage.setItem(storageKey,JSON.stringify(updated)); setMessage("Decisión registrada en este navegador. Puedes descargar su recibo JSON."); }
       catch { setMessage("La API validó la decisión, pero el navegador no pudo guardarla. Descarga el recibo antes de salir."); }
     } catch(error) { setMessage(error instanceof APIError ? error.message : error instanceof TypeError || (error instanceof DOMException && error.name === "TimeoutError") ? "No se pudo conectar con la API. No se registró una nueva decisión; vuelve a intentarlo cuando haya conexión." : error instanceof Error ? error.message : "No se pudo validar la revisión. No se registró una nueva decisión."); }
