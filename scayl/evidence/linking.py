@@ -192,8 +192,17 @@ def _norm_place(p: str) -> str:
     return {"panama oeste": "panama oeste"}.get(p, p)
 
 
+_TARGET = re.compile(r"\b(?:para|hacia)\s+(?:el\s+|la\s+)?$", re.IGNORECASE)
+
+
+def _located(text: str) -> list[re.Match]:
+    """Place mentions that locate the fact. "riesgo de tsunami PARA Panamá" names who is affected, not
+    where the quake happened (real case: a M7.4 Mexico-Guatemala quake paired with a M4.7 Panamá one)."""
+    return [m for m in _PLACE_RE.finditer(text) if not _TARGET.search(text[:m.start()])]
+
+
 def _places(text: str) -> frozenset[str]:
-    found = {_norm_place(m.group(0)) for m in _PLACE_RE.finditer(text)}
+    found = {_norm_place(m.group(0)) for m in _located(text)}
     # "Canal de Panamá" names the waterway, not a place that distinguishes national from local figures
     if re.search(r"canal de panam[aá]", text, re.IGNORECASE) and len(_PLACE_RE.findall(text)) == 1:
         found.discard("panama")
@@ -209,7 +218,7 @@ def _seismic_places(text: str) -> frozenset[str]:
     """Country level for quakes: a quake felt in Chiriquí and 'in Panamá' can be the same quake, so any
     Panamanian place maps to 'panama'. Different countries only -> different quakes (time also checked)."""
     return frozenset(p if p in _COUNTRIES else "panama" for p in (
-        _norm_place(m.group(0)) for m in _PLACE_RE.finditer(text)))
+        _norm_place(m.group(0)) for m in _located(text)))
 
 
 def foreign_only(text: str) -> bool:

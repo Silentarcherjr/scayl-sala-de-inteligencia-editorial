@@ -166,8 +166,9 @@ def evaluate(cases=None) -> dict:
     from scayl.evidence.assemble import build_event
     from tests.factories import CUTOFF
 
+    cases = CASES if cases is None else cases
     rows, tp, fp, fn, tn = [], 0, 0, 0, 0
-    for cid, cat, items, quakes, expected, why in (CASES if cases is None else cases):
+    for cid, cat, items, quakes, expected, why in cases:
         topic = Topic.EVENTOS_NATURALES if "ismo" in items[0].titulo else Topic.ECONOMIA
         e = build_event(f"EVT-{cid}", items, topic, 0.9, [], quakes, CUTOFF)
         got = bool(e.conflicts)
@@ -177,7 +178,7 @@ def evaluate(cases=None) -> dict:
                      "conflict_fields": [c.field for c in e.conflicts], "rationale": why})
     precision = tp / (tp + fp) if tp + fp else None
     recall = tp / (tp + fn) if tp + fn else None
-    return {"n": len(CASES), "tp": tp, "fp": fp, "fn": fn, "tn": tn,
+    return {"n": len(cases), "tp": tp, "fp": fp, "fn": fn, "tn": tn,
             "precision": {"num": tp, "den": tp + fp, "value": precision},
             "recall": {"num": tp, "den": tp + fn, "value": recall}, "cases": rows}
 
