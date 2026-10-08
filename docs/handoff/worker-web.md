@@ -1,26 +1,26 @@
-# Relevo · worker-web · 2026-10-08 03:13 UTC
+# Relevo · worker-web · 2026-10-08 03:58 UTC
 
-- **Motivo de la parada:** relevo preventivo al cerrar una etapa.
-- **Rama:** `worker-web/next-static` · **Último commit:** el commit de esta etapa incluye esta nota; consultar `git log -1` (empujado al cerrar etapa).
-- **PR abierto:** https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial/pull/67
+- **Motivo de la parada:** relevo preventivo al completar Tarea A.
+- **Rama:** `worker-web/flujo-completo` · **Último commit:** el que incluye esta nota; consultar `git log -1` (push al cerrar).
+- **PR abierto:** PR de esta rama hacia main; se abre después del push, consultar `gh pr view worker-web/flujo-completo`.
 
 ## Tarea en curso
-Mejoras de UX para evaluación autónoma del jurado, autorizadas por el usuario: recorrido guiado, fichas claras y métricas explicadas. Dentro de web/, sin cambiar contratos, datos ni dependencias.
+Tarea A completada: dejar visible dónde funciona el flujo completo para el jurado.
 
 ## Hecho en esta sesión
-Tres etapas UX completadas y subidas. Producción READY dpl_CWXktnUR4TqmMGyTp5F2hE3XziTw, commit de código 957ecf08568f2f79fb8209d1ea5d6830e5691e71. URL pública comprobada sin sesión en seis pantallas y dos tamaños; PR #67 actualizado con todos sus checks en verde.
+Aviso exacto con enlace a https://scayl-demo.streamlit.app/ en pestaña Revisión de todas las fichas, paso de revisión del recorrido y pie global. Componente compartido sin tooltips. Corregidas dos frases del recorrido para reflejar C-03: Notion opcional.
 
 ## Siguiente paso concreto
-El Lead revisa y mergea PR #67. Probar comprensión con un periodista nuevo si se dispone de uno; no afirmar que ya se midió.
+El Lead revisa y mergea el PR de worker-web/flujo-completo. Vercel despliega main por integración Git; no mergear desde el worker.
 
 ## Estado de las pruebas
-197 pytest; ruff; npm ci/lint/build; offline físico y público sin sesión OK; 0 errores/red externa; Wi-Fi restaurado; datos y carpetas restringidas intactos
+197 pytest passed; npm run lint y npm run build OK (172 rutas); navegador verificó aviso visible y enlace correcto en las tres ubicaciones, escritorio y móvil, sin desbordamiento horizontal.
 
 ## Archivos tocados
-Ver el commit de esta etapa. No modificar scayl/, app/, deploy/ ni tests/ existentes.
+web/components/shared.tsx, web/components/case-view.tsx, web/app/recorrido/page.tsx, web/app/layout.tsx, web/README.md y documentación de bitácora/relevo.
 
 ## Bloqueos, dudas y decisiones pendientes
-Mergea el Lead. La rama de producción Vercel sigue siendo main; publicar explícitamente desde worker-web si corresponde.
+Ninguno técnico. Merge reservado al Lead. Datos, scayl/, app/, deploy/ y tests/ intactos.
 
 ## Contexto que no está en el código
-Web pública https://scayl-editorial.vercel.app/. Python .venv/bin/python; Node bundled runtime. Para Playwright usar Chromium 1243 de la caché local. Nunca desactivar protección Vercel.
+Build requiere escalación para puertos de Turbopack; Node bundled runtime. Verificación temporal /tmp/scayl-notice-check.cjs. No se desplegó producción explícitamente en esta tarea: el encargo termina con PR.
