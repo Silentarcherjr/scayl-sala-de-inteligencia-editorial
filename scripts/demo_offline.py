@@ -36,7 +36,7 @@ def main() -> None:
     env = prepare()
     print("Abre http://localhost:8501 · ya puedes apagar el wifi · Ctrl+C para salir")
     subprocess.run([sys.executable, "-m", "streamlit", "run", str(ROOT / "app" / "Home.py"),
-                    "--server.headless", "true", "--browser.gatherUsageStats", "false"], env=env, check=False)
+                    "--server.headless", "true", "--server.address", "localhost", "--browser.gatherUsageStats", "false"], env=env, check=False)
 
 
 if __name__ == "__main__":
