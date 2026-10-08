@@ -1,20 +1,20 @@
-# Relevo · worker-web · 2026-10-08 04:28 UTC
+# Relevo · worker-web · 2026-10-08 04:34 UTC
 
 - **Motivo de la parada:** relevo preventivo al cerrar etapa.
 - **Rama:** `worker-web/bank-bulletin` · **Último commit:** el commit de etapa incluye esta nota; consultar `git log -1` (push al cerrar).
 - **PR abierto:** pendiente hasta completar §8; buscar PR de worker-web/bank-bulletin al cierre.
 
 ## Tarea en curso
-DL-035 / docs/BANK_BULLETIN_PLAN.md. Etapa 1. Cambios aditivos; no alterar Story Studio, Q&A, ranking, app/, deploy/ ni pruebas existentes.
+DL-035 / docs/BANK_BULLETIN_PLAN.md. Etapa 2. Cambios aditivos; no alterar Story Studio, Q&A, ranking, app/, deploy/ ni pruebas existentes.
 
 ## Hecho en esta sesión
-Contrato SectorBulletin 0.4.0, plantilla determinista, validador de términos/citas/cifras/tags/tiempo y nueva función sector_bulletin. Pruebas nuevas; funciones existentes intactas.
+Página /boletin/, selector, citas, límites visibles y estilo de impresión; export público aditivo.
 
 ## Siguiente paso concreto
-Exportar únicamente boletins.json y construir la pantalla con selector, citas e impresión.
+Implementar camino LLM, validación y fallback con backend simulado.
 
 ## Estado de las pruebas
-216 pytest passed; ruff check . OK
+pytest 218; ruff; npm lint y build, 173 rutas
 
 ## Archivos tocados
 Ver commit de etapa. Permitidos por DL-035: contrato nuevo, scayl/gen/bulletin.py y prompt nuevo, función nueva de servicio, export, web/ y tests/test_bulletin.py.

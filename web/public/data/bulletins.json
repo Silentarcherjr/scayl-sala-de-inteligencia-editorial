@@ -1,0 +1,517 @@
+[
+  {
+    "analyst_questions": [
+      "¿Qué confirma Autoridad del Canal de Panamá (ACP) sobre el hecho central?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?",
+      "¿Qué evidencia respalda o descarta: «Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño»?"
+    ],
+    "bulletin_id": "BUL-logistica_canal-v1",
+    "event_ids": [
+      "EVT-0101",
+      "EVT-0116",
+      "EVT-0078",
+      "EVT-0051",
+      "EVT-0083"
+    ],
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-01T00:00:00Z",
+      "latency_ms": 0,
+      "mode": "template",
+      "model": null,
+      "params": {},
+      "prompt_version": "bulletin-template-v1",
+      "tokens_in": null,
+      "tokens_out": null
+    },
+    "horizon": "Snapshot con corte 2026-10-01T00:00:00+00:00 (UTC); cada dato conserva su período de referencia.",
+    "impact_hypotheses": [
+      {
+        "claim_ids": [],
+        "tag": "HIPOTESIS",
+        "text": "Si se mantienen los ajustes de calado, podrían variar los tiempos de tránsito; requiere verificación con la ACP."
+      }
+    ],
+    "limits_notice": "Boletín de contexto sectorial para análisis. No evalúa clientes, no recomienda comprar ni vender, no infiere pérdidas, impagos ni exposición de cartera, y no es una alerta regulatoria.",
+    "observations": [
+      {
+        "claim_ids": [
+          "CLM-0101-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Se reporta, según mundomaritimo.cl: Canal de Panamá aumentará a 33 los cupos diarios de tránsito y fija calado Neopanamax en 14,94 metros."
+      },
+      {
+        "claim_ids": [
+          "CLM-0116-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Se reporta, según telemetro.com: Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño."
+      },
+      {
+        "claim_ids": [
+          "CLM-0078-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Se reporta, según telemetro.com: Canal de Panamá reduce el tránsito de buques por El Niño: ¿qué significa para el país?."
+      },
+      {
+        "claim_ids": [
+          "CLM-0051-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Se reporta, según elcaribe.com.do: El buque gasífero surcoreano cruza el Canal de Panamá."
+      },
+      {
+        "claim_ids": [
+          "CLM-0083-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Se reporta, según maharashtratimes.com: Panama Canal Water Shortage Shipping Impact On India ; आटणारं पाणी जगाला रडवणार! होर्मुझनंतर आणखी एक जलमार्ग संकटात; कृत्रिम 'गेटवे' धोक्यात."
+      },
+      {
+        "claim_ids": [
+          "ind:acp:ACP.GATUN.NIVEL:2026-09-29"
+        ],
+        "tag": "HECHO",
+        "text": "ACP: nivel del lago Gatún (observado), 2026-09-29: 84.88 pies. Período de la evidencia: 2026-09-29."
+      },
+      {
+        "claim_ids": [
+          "wb:PAN:NE.EXP.GNFS.ZS:2024"
+        ],
+        "tag": "HECHO",
+        "text": "Exports of goods and services (% of GDP) = 44.3578422661429 % del PIB. Período de la evidencia: 2024. Dato histórico — 2024. No presentarlo como medición actual."
+      },
+      {
+        "claim_ids": [
+          "ind:acp:ACP.GATUN.NIVEL:2026-07-16"
+        ],
+        "tag": "HECHO",
+        "text": "ACP: nivel del lago Gatún (observado), 2026-07-16: 84.69 pies. Período de la evidencia: 2026-07-16."
+      },
+      {
+        "claim_ids": [
+          "ind:acp:ACP.GATUN.NIVEL:2026-09-04"
+        ],
+        "tag": "HECHO",
+        "text": "ACP: nivel del lago Gatún (observado), 2026-09-04: 84.0 pies. Período de la evidencia: 2026-09-04."
+      }
+    ],
+    "question": "¿Qué señales públicas del entorno logístico debo revisar?",
+    "related_sectors": [
+      "transporte marítimo",
+      "comercio exterior",
+      "zona libre / logística terrestre"
+    ],
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "sector": "logistica_canal",
+    "sources": [
+      {
+        "evidence_id": "news:gdt-335e8e67c36674da5713",
+        "excerpt": "Canal de Panamá aumentará a 33 los cupos diarios de tránsito y fija calado Neopanamax en 14,94 metros",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.mundomaritimo.cl/noticias/canal-de-panama-aumentara-a-33-los-cupos-diarios-de-transito-y-fija-calado-neopanamax-en-1494-metros",
+        "value": "Canal de Panamá aumentará a 33 los cupos diarios de tránsito y fija calado Neopanamax en 14,94 metros"
+      },
+      {
+        "evidence_id": "ind:acp:ACP.GATUN.NIVEL:2026-09-29",
+        "excerpt": "ACP: nivel del lago Gatún (observado), 2026-09-29: 84.88 pies",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2026-09-29",
+        "url": "https://evtms-rpts.pancanal.com/eng/h2o/Download_Gatun_Lake_Water_Level_History.csv",
+        "value": 84.88
+      },
+      {
+        "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+        "excerpt": "Exports of goods and services (% of GDP) = 44.3578422661429 % del PIB",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2024",
+        "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NE.EXP.GNFS.ZS",
+        "value": 44.3578422661429
+      },
+      {
+        "evidence_id": "news:gdt-6efeaf413fa97fd71039",
+        "excerpt": "Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.telemetro.com/nacionales/canal-panama-mantiene-transitos-y-aplica-ajustes-calado-el-nino-n6085500",
+        "value": "Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño"
+      },
+      {
+        "evidence_id": "ind:acp:ACP.GATUN.NIVEL:2026-07-16",
+        "excerpt": "ACP: nivel del lago Gatún (observado), 2026-07-16: 84.69 pies",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2026-07-16",
+        "url": "https://evtms-rpts.pancanal.com/eng/h2o/Download_Gatun_Lake_Water_Level_History.csv",
+        "value": 84.69
+      },
+      {
+        "evidence_id": "news:gdt-f63259a11c73800d786e",
+        "excerpt": "Canal de Panamá reduce el tránsito de buques por El Niño: ¿qué significa para el país?",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.telemetro.com/nacionales/canal-panama-reduce-el-transito-buques-el-nino-que-significa-el-pais-n6090876",
+        "value": "Canal de Panamá reduce el tránsito de buques por El Niño: ¿qué significa para el país?"
+      },
+      {
+        "evidence_id": "ind:acp:ACP.GATUN.NIVEL:2026-09-04",
+        "excerpt": "ACP: nivel del lago Gatún (observado), 2026-09-04: 84.0 pies",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2026-09-04",
+        "url": "https://evtms-rpts.pancanal.com/eng/h2o/Download_Gatun_Lake_Water_Level_History.csv",
+        "value": 84.0
+      },
+      {
+        "evidence_id": "news:gdt-409dc5940ab8ce42363a",
+        "excerpt": "Canal de Panamá flexibiliza el sistema de reservas en medio de restricción al tránsito",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.revistaeyn.com/centroamericaymundo/canal-de-panama-flexibiliza-el-sistema-de-reservas-en-medio-de-restriccion-al-transito-NN31877587",
+        "value": "Canal de Panamá flexibiliza el sistema de reservas en medio de restricción al tránsito"
+      },
+      {
+        "evidence_id": "news:gdt-2c6c6838a15a23376466",
+        "excerpt": "El buque gasífero surcoreano cruza el Canal de Panamá",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.elcaribe.com.do/panorama/internacionales/buque-surcoreano-canal-de-panama/",
+        "value": "El buque gasífero surcoreano cruza el Canal de Panamá"
+      },
+      {
+        "evidence_id": "news:gdt-b8036bf3f39cdd4e8047",
+        "excerpt": "Canal de Panamá cobra una cifra récord: buque paga $5.3 millones por cruzar",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.laestrella.com.pa/panama/nacional/canal-de-panama-cobra-una-cifra-record-buque-paga-53-millones-por-cruzar-MG25233960",
+        "value": "Canal de Panamá cobra una cifra récord: buque paga $5.3 millones por cruzar"
+      },
+      {
+        "evidence_id": "news:gdt-fa53cf8b516a1975a2f8",
+        "excerpt": "Panama Canal Water Shortage Shipping Impact On India ; आटणारं पाणी जगाला रडवणार! होर्मुझनंतर आणखी एक जलमार्ग संकटात; कृत्रिम 'गेटवे' धोक्यात",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://maharashtratimes.com/business/business-news/panama-canal-water-shortage-shipping-impact-on-india-and-world-economy/articleshow/133888152.cms",
+        "value": "Panama Canal Water Shortage Shipping Impact On India ; आटणारं पाणी जगाला रडवणार! होर्मुझनंतर आणखी एक जलमार्ग संकटात; कृत्रिम 'गेटवे' धोक्यात"
+      }
+    ],
+    "summary": [
+      {
+        "claim_ids": [
+          "CLM-0101-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Se reporta, según mundomaritimo.cl: Canal de Panamá aumentará a 33 los cupos diarios de tránsito y fija calado Neopanamax en 14,94 metros."
+      },
+      {
+        "claim_ids": [
+          "CLM-0116-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Se reporta, según telemetro.com: Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño."
+      },
+      {
+        "claim_ids": [
+          "CLM-0078-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Se reporta, según telemetro.com: Canal de Panamá reduce el tránsito de buques por El Niño: ¿qué significa para el país?."
+      },
+      {
+        "claim_ids": [
+          "CLM-0051-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Se reporta, según elcaribe.com.do: El buque gasífero surcoreano cruza el Canal de Panamá."
+      },
+      {
+        "claim_ids": [
+          "CLM-0083-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Se reporta, según maharashtratimes.com: Panama Canal Water Shortage Shipping Impact On India ; आटणारं पाणी जगाला रडवणार! होर्मुझनंतर आणखी एक जलमार्ग संकटात; कृत्रिम 'गेटवे' धोक्यात."
+      },
+      {
+        "claim_ids": [
+          "ind:acp:ACP.GATUN.NIVEL:2026-09-29"
+        ],
+        "tag": "HECHO",
+        "text": "ACP: nivel del lago Gatún (observado), 2026-09-29: 84.88 pies. Período de la evidencia: 2026-09-29."
+      },
+      {
+        "claim_ids": [
+          "wb:PAN:NE.EXP.GNFS.ZS:2024"
+        ],
+        "tag": "HECHO",
+        "text": "Exports of goods and services (% of GDP) = 44.3578422661429 % del PIB. Período de la evidencia: 2024. Dato histórico — 2024. No presentarlo como medición actual."
+      },
+      {
+        "claim_ids": [
+          "ind:acp:ACP.GATUN.NIVEL:2026-07-16"
+        ],
+        "tag": "HECHO",
+        "text": "ACP: nivel del lago Gatún (observado), 2026-07-16: 84.69 pies. Período de la evidencia: 2026-07-16."
+      },
+      {
+        "claim_ids": [
+          "ind:acp:ACP.GATUN.NIVEL:2026-09-04"
+        ],
+        "tag": "HECHO",
+        "text": "ACP: nivel del lago Gatún (observado), 2026-09-04: 84.0 pies. Período de la evidencia: 2026-09-04."
+      }
+    ],
+    "validation": {
+      "issues": [],
+      "passed": true
+    }
+  },
+  {
+    "analyst_questions": [
+      "¿Qué confirma INEC (Instituto Nacional de Estadística y Censo) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Fiscalía amplía medidas cautelares en caso Lili Pink e incluye nueva empresa vinculada a importaciones desde Panamá»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "bulletin_id": "BUL-economia-v1",
+    "event_ids": [
+      "EVT-0135",
+      "EVT-0093",
+      "EVT-0056",
+      "EVT-0008",
+      "EVT-0042"
+    ],
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-01T00:00:00Z",
+      "latency_ms": 0,
+      "mode": "template",
+      "model": null,
+      "params": {},
+      "prompt_version": "bulletin-template-v1",
+      "tokens_in": null,
+      "tokens_out": null
+    },
+    "horizon": "Snapshot con corte 2026-10-01T00:00:00+00:00 (UTC); cada dato conserva su período de referencia.",
+    "impact_hypotheses": [
+      {
+        "claim_ids": [],
+        "tag": "HIPOTESIS",
+        "text": "Si cambian las condiciones de precios, podrían variar las decisiones de consumo; requiere verificación con indicadores del mismo período."
+      }
+    ],
+    "limits_notice": "Boletín de contexto sectorial para análisis. No evalúa clientes, no recomienda comprar ni vender, no infiere pérdidas, impagos ni exposición de cartera, y no es una alerta regulatoria.",
+    "observations": [
+      {
+        "claim_ids": [
+          "CLM-0135-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Se reporta, según hsbnoticias.com: Fiscalía amplía medidas cautelares en caso Lili Pink e incluye nueva empresa vinculada a importaciones desde Panamá."
+      },
+      {
+        "claim_ids": [
+          "CLM-0093-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Se reporta, según mundodeportivo.com: Enrique Riquelme traslada su fortuna a Panamá tras la presión fiscal del gobierno español."
+      },
+      {
+        "claim_ids": [
+          "CLM-0056-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Se reporta, según panamaamerica.com.pa: Mulino visitará Ecuador el viernes para hablar sobre economía y seguridad."
+      },
+      {
+        "claim_ids": [
+          "CLM-0008-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Se reporta, según TVN: TVN Media refuerza su compromiso social con jornada de voluntariado en el Banco de Alimentos."
+      },
+      {
+        "claim_ids": [
+          "CLM-0042-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Se reporta, según TVN: Tu Banco, tu Istmo: Banistmo presenta nueva identidad como parte del Grupo Financiero BSC."
+      },
+      {
+        "claim_ids": [
+          "wb:PAN:FP.CPI.TOTL.ZG:2024"
+        ],
+        "tag": "HECHO",
+        "text": "Inflation, consumer prices (annual %) = 0.69322555100446 % anual. Período de la evidencia: 2024. Dato histórico — 2024. No presentarlo como medición actual."
+      },
+      {
+        "claim_ids": [
+          "wb:PAN:NY.GDP.MKTP.KD.ZG:2024"
+        ],
+        "tag": "HECHO",
+        "text": "GDP growth (annual %) = 2.74784148771307 % anual. Período de la evidencia: 2024. Dato histórico — 2024. No presentarlo como medición actual."
+      },
+      {
+        "claim_ids": [
+          "wb:PAN:SL.UEM.TOTL.ZS:2024"
+        ],
+        "tag": "HECHO",
+        "text": "Unemployment, total (% of total labor force) (modeled ILO estimate) = 8.451 % de la población activa total (estimación modelada OIT). Período de la evidencia: 2024. Dato histórico — 2024. No presentarlo como medición actual."
+      }
+    ],
+    "question": "¿Qué señales públicas del entorno económico debo revisar?",
+    "related_sectors": [
+      "consumo",
+      "construcción",
+      "turismo"
+    ],
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "sector": "economia",
+    "sources": [
+      {
+        "evidence_id": "news:gdt-41710870df708569e2ca",
+        "excerpt": "Fiscalía amplía medidas cautelares en caso Lili Pink e incluye nueva empresa vinculada a importaciones desde Panamá",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.hsbnoticias.com/fiscalia-amplia-medidas-cautelares-en-caso-lili-pink-e-incluye-nueva-empresa-vinculada-a-importaciones-desde-panama/",
+        "value": "Fiscalía amplía medidas cautelares en caso Lili Pink e incluye nueva empresa vinculada a importaciones desde Panamá"
+      },
+      {
+        "evidence_id": "wb:PAN:FP.CPI.TOTL.ZG:2024",
+        "excerpt": "Inflation, consumer prices (annual %) = 0.69322555100446 % anual",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2024",
+        "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/FP.CPI.TOTL.ZG",
+        "value": 0.69322555100446
+      },
+      {
+        "evidence_id": "wb:PAN:NY.GDP.MKTP.KD.ZG:2024",
+        "excerpt": "GDP growth (annual %) = 2.74784148771307 % anual",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2024",
+        "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NY.GDP.MKTP.KD.ZG",
+        "value": 2.74784148771307
+      },
+      {
+        "evidence_id": "wb:PAN:SL.UEM.TOTL.ZS:2024",
+        "excerpt": "Unemployment, total (% of total labor force) (modeled ILO estimate) = 8.451 % de la población activa total (estimación modelada OIT)",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2024",
+        "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/SL.UEM.TOTL.ZS",
+        "value": 8.451
+      },
+      {
+        "evidence_id": "news:gdt-55a4df5c2f430f54c63a",
+        "excerpt": "Enrique Riquelme traslada su fortuna a Panamá tras la presión fiscal del gobierno español",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.mundodeportivo.com/futbol/real-madrid/20260916/1004228105/enrique-riquelme-traslada-fortuna-panama-presion-fiscal-gobierno-espanol.html",
+        "value": "Enrique Riquelme traslada su fortuna a Panamá tras la presión fiscal del gobierno español"
+      },
+      {
+        "evidence_id": "news:gdt-5e9db800e15d1d852ad1",
+        "excerpt": "Mulino visitará Ecuador el viernes para hablar sobre economía y seguridad",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.panamaamerica.com.pa/politica/mulino-visitara-ecuador-el-viernes-para-hablar-sobre-economia-y-seguridad-1265822",
+        "value": "Mulino visitará Ecuador el viernes para hablar sobre economía y seguridad"
+      },
+      {
+        "evidence_id": "news:tvn-ed18ce261c658cddd084",
+        "excerpt": "TVN Media refuerza su compromiso social con jornada de voluntariado en el Banco de Alimentos",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.tvn-2.com/nacionales/tvn-media-refuerza-compromiso-social_1_2217708.html",
+        "value": "TVN Media refuerza su compromiso social con jornada de voluntariado en el Banco de Alimentos"
+      },
+      {
+        "evidence_id": "news:tvn-85293a9ba9bacac2d3f8",
+        "excerpt": "Tu Banco, tu Istmo: Banistmo presenta nueva identidad como parte del Grupo Financiero BSC",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.tvn-2.com/economia/empresas/publirreportajes/banco-istmo-banistmo-presenta-nueva_1_2258123.html",
+        "value": "Tu Banco, tu Istmo: Banistmo presenta nueva identidad como parte del Grupo Financiero BSC"
+      }
+    ],
+    "summary": [
+      {
+        "claim_ids": [
+          "CLM-0135-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Se reporta, según hsbnoticias.com: Fiscalía amplía medidas cautelares en caso Lili Pink e incluye nueva empresa vinculada a importaciones desde Panamá."
+      },
+      {
+        "claim_ids": [
+          "CLM-0093-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Se reporta, según mundodeportivo.com: Enrique Riquelme traslada su fortuna a Panamá tras la presión fiscal del gobierno español."
+      },
+      {
+        "claim_ids": [
+          "CLM-0056-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Se reporta, según panamaamerica.com.pa: Mulino visitará Ecuador el viernes para hablar sobre economía y seguridad."
+      },
+      {
+        "claim_ids": [
+          "CLM-0008-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Se reporta, según TVN: TVN Media refuerza su compromiso social con jornada de voluntariado en el Banco de Alimentos."
+      },
+      {
+        "claim_ids": [
+          "CLM-0042-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Se reporta, según TVN: Tu Banco, tu Istmo: Banistmo presenta nueva identidad como parte del Grupo Financiero BSC."
+      },
+      {
+        "claim_ids": [
+          "wb:PAN:FP.CPI.TOTL.ZG:2024"
+        ],
+        "tag": "HECHO",
+        "text": "Inflation, consumer prices (annual %) = 0.69322555100446 % anual. Período de la evidencia: 2024. Dato histórico — 2024. No presentarlo como medición actual."
+      },
+      {
+        "claim_ids": [
+          "wb:PAN:NY.GDP.MKTP.KD.ZG:2024"
+        ],
+        "tag": "HECHO",
+        "text": "GDP growth (annual %) = 2.74784148771307 % anual. Período de la evidencia: 2024. Dato histórico — 2024. No presentarlo como medición actual."
+      },
+      {
+        "claim_ids": [
+          "wb:PAN:SL.UEM.TOTL.ZS:2024"
+        ],
+        "tag": "HECHO",
+        "text": "Unemployment, total (% of total labor force) (modeled ILO estimate) = 8.451 % de la población activa total (estimación modelada OIT). Período de la evidencia: 2024. Dato histórico — 2024. No presentarlo como medición actual."
+      }
+    ],
+    "validation": {
+      "issues": [],
+      "passed": true
+    }
+  }
+]

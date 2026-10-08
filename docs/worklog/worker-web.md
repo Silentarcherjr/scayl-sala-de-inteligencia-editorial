@@ -26,3 +26,5 @@
 - 2026-10-08 03:58 UTC · Tarea A: aviso visible compartido sobre revisión humana con registro y consulta libre en Streamlit, en Revisión, paso de revisión del recorrido y pie. Recorrido alineado con C-03 (Notion opcional). 197 pytest; lint/build OK (172 rutas); navegador escritorio/móvil comprueba tres ubicaciones y enlaces. Sin datos ni carpetas restringidas modificados. Relevo: ver docs/handoff/worker-web.md.
 
 - 2026-10-08 04:28 UTC · DL-035 etapa 1: Contrato SectorBulletin 0.4.0, plantilla determinista, validador de términos/citas/cifras/tags/tiempo y nueva función sector_bulletin. Pruebas nuevas; funciones existentes intactas. Validación: 216 pytest passed; ruff check . OK. Siguiente: Exportar únicamente boletins.json y construir la pantalla con selector, citas e impresión.. Relevo: ver docs/handoff/worker-web.md.
+
+- 2026-10-08 04:34 UTC · DL-035 etapa 2: Página /boletin/, selector, citas, límites visibles y estilo de impresión; export público aditivo. Validación: pytest 218; ruff; npm lint y build, 173 rutas. Siguiente: Implementar camino LLM, validación y fallback con backend simulado.. Relevo: ver docs/handoff/worker-web.md.

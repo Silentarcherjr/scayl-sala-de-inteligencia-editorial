@@ -105,3 +105,24 @@ def test_selection_matches_official_order_top_five_and_service_is_additive(monke
         assert original == json.dumps(bundle.model_dump(mode="json"), sort_keys=True)
     with pytest.raises(ValueError, match="Sector no soportado"):
         select_events(bundle.events, "clientes")
+
+
+def test_export_adds_two_public_bulletins_without_rss(tmp_path):
+    from deploy.prepare import check_public
+    from scripts.export_web import export
+
+    export(tmp_path)
+    bulletins = json.loads((tmp_path / "bulletins.json").read_text())
+    assert len(bulletins) == 2
+    assert [b["sector"] for b in bulletins] == ["logistica_canal", "economia"]
+    assert all(b["validation"]["passed"] for b in bulletins)
+    assert not any("descripcion" in json.dumps(b) for b in bulletins)
+    check_public(bulletins)
+
+
+def test_attribution_does_not_add_uncited_media_count():
+    event = economic_event()
+    event.claims[0].attributed_to = "fuente.test y 1 medio(s) más"
+    b = build_template_bulletin([event], "economia", CUTOFF)
+    assert any("según fuente.test:" in s.text for s in b.observations)
+    assert not any(i.code == "NUMBER_NOT_IN_EVIDENCE" for i in b.validation.issues)

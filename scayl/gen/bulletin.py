@@ -212,7 +212,8 @@ def build_template_bulletin(events: list[Event], sector: str, cutoff: datetime) 
     for cid in dict.fromkeys(ordered_ids):
         c = claims[cid]
         if c.status == ClaimStatus.SOLO_REPORTADA or c.type == ClaimType.DECLARACION:
-            text = f"Se reporta, según {c.attributed_to or 'la fuente citada'}: {c.statement.rstrip('.')}."
+            attribution = re.sub(r" y \d+ medio\(s\) más$", "", c.attributed_to or "la fuente citada")
+            text = f"Se reporta, según {attribution}: {c.statement.rstrip('.')}."
             tag = ClaimType.DECLARACION
         else:
             text = c.statement.rstrip('.') + "."
