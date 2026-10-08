@@ -37,3 +37,10 @@ Si algo falla durante la grabación: detén, corrige y **vuelve a grabar la esce
 - No digas "verdadero" ni "confirmado" si la pantalla dice *parcial*.
 - Si el número de un evento cambia (por ejemplo, tras regenerar el bundle), busca el caso por su titular.
 - Duración meta: 4–5 min. Exporta en MP4 1080p o 720p.
+
+## Variante web de 3 minutos (jurado en vivo)
+Para la web desplegada (https://scayl-editorial.vercel.app/), sigue el recorrido de `docs/D_UX_AUDIT.md` §2:
+Sala → EVT-0101 (puntaje y evidencia ACP fechada) → EVT-0114 (procedencia, conflicto 4.7/4.5/7.4 y vacíos) →
+EVT-0101 Producir (cabecera «IA local precalculada · no es inferencia en vivo») → Consultas «Sin respuesta» →
+EVT-0101 Revisión («aprobado como borrador · NO publicado» y recibo). Todos los casos son reales; el snapshot no
+tiene eventos sintéticos.
