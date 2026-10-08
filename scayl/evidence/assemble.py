@@ -23,7 +23,13 @@ from scayl.contracts import (
     TextScope,
     Topic,
 )
-from scayl.evidence.linking import link_indicators, link_seismic, news_ref, percent_conflicts
+from scayl.evidence.linking import (
+    denial_conflicts,
+    link_indicators,
+    link_seismic,
+    news_ref,
+    percent_conflicts,
+)
 from scayl.evidence.provenance import outlet_key, source_dna
 from scayl.evidence.recent import link_recent
 from scayl.evidence.scoring import ScoringInput, score
@@ -132,6 +138,7 @@ def build_event(
     recent = link_recent(event_id, items, observations, cutoff)
     warnings = warnings + recent.warnings
     conflicts = seismic.conflicts + percent_conflicts(event_id, items, start=len(seismic.conflicts) + 1)
+    conflicts += denial_conflicts(event_id, items, start=len(conflicts) + 1)
     official = seismic.evidence + recent.evidence + wb_refs
     is_seismic_event = seismic.any
     claims = build_claims(event_id, items, rep, seismic.claims, bool(conflicts), is_seismic_event,
