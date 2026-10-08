@@ -53,3 +53,10 @@ El Lead revisa y mergea el PR. Los siguientes pushes a `main` se despliegan medi
 
 No se modifica `deploy/README.md` porque el encargo prohíbe editar `deploy/`; esta página y el README
 principal registran la URL y el procedimiento de la nueva web.
+
+## Evaluación autónoma del jurado
+
+`/recorrido/` ofrece cinco pasos: agenda, evidencia, paquete editorial, revisión humana y abstención.
+Los enlaces `#evidencia`, `#producir`, `#revision` y `#conflictos` seleccionan la pestaña correspondiente
+sin backend. `/consultas/#sin-respuesta` abre el ejemplo guardado de abstención. La duración sugerida
+no es una medición de usabilidad. Los datos y salidas originales se conservan.

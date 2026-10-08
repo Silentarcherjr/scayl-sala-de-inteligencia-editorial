@@ -1,14 +1,16 @@
 "use client";
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import Link from "next/link";
 import type { Case, Key } from "@/lib/types";
 import { keys, labels } from "@/lib/types";
 import { panama, display, readable } from "@/lib/format";
 import { Heading, Notices, Badge, Citation, External, GenerationNote, ValidationNote, TextList } from "./shared";
 import Sentences from "./sentences";
+import { useSectionHash, selectSection } from "@/lib/section-hash";
+const tabSections = ["evento", "fuentes", "evidencia", "afirmaciones", "conflictos", "vacios", "producir", "revision"];
 const tabs = ["Evento", "Fuentes", "Evidencia", "Afirmaciones", "Conflictos", "Vacíos", "Producir", "Revisión"];
 export default function CaseView({event: e, weights}: {event: Case; weights: Record<Key, number>}) {
-  const [tab, setTab] = useState(0); const refs = useRef<(HTMLButtonElement | null)[]>([]);
+  const hash = useSectionHash(); const tab = Math.max(0, tabSections.indexOf(hash)); const setTab = (index: number) => selectSection(tabSections[index]); const refs = useRef<(HTMLButtonElement | null)[]>([]);
   const p = e.package;
   const resolve = (ids: string[]) => ids.map(id => e.claims.find(c => c.claim_id === id)?.statement ?? id);
   return <><Link href="/" className="muted">← Sala de Situación</Link><div style={{marginTop:22}}><Heading section={`${e.event_id} · ${readable(e.topic)}`} title={e.title}/></div><div className="badges"><Badge value={e.priority.tier}/><Badge value={e.evidence_status}/>{e.synthetic ? <Badge value="SINTÉTICO"/> : null}<span className="muted">{e.priority.rules_version}</span></div><Notices/><section className="card score-panel"><div><p className="eyebrow">Atención editorial</p><div className="score-large">{e.priority.score}</div><p className="muted">de 100 puntos</p></div><div className="component-grid">{keys.map(k => <div className="component" key={k}><strong>{k} · {labels[k]}</strong><p>{e.contributions[k].toLocaleString("es-PA",{maximumFractionDigits:4})} / {weights[k]} puntos</p><progress max={1} value={e.priority.components[k]} aria-label={`${labels[k]}: ${e.priority.components[k]}`}/><p>{e.priority.components.rationale[k]}</p></div>)}</div></section><p><strong>Evidencia:</strong> {e.evidence_status_reason}</p><p className="action">{e.recommended_action}</p>{e.text_scope_note ? <p className="warning">{e.text_scope_note}</p> : null}{e.is_recirculated ? <p className="warning">Noticia recirculada: se conserva la fecha original de publicación.</p> : null}{e.temporal_warnings.map(w => <p className="warning" key={w.evidence_id}>{w.message}</p>)}{e.security_flags.map((flag,i) => <p className="warning" key={i}>Fuente con instrucciones sospechosas, tratada como dato · {flag}</p>)}<div className="tabs" role="tablist" aria-label="Secciones de la ficha">{tabs.map((name,i) => <button key={name} ref={node=>{refs.current[i]=node;}} id={`tab-${i}`} role="tab" aria-selected={tab===i} tabIndex={tab===i ? 0 : -1} aria-controls="case-panel" onClick={()=>setTab(i)} onKeyDown={ev=>{let next=i;if(ev.key==="ArrowRight")next=(i+1)%tabs.length;else if(ev.key==="ArrowLeft")next=(i+tabs.length-1)%tabs.length;else if(ev.key==="Home")next=0;else if(ev.key==="End")next=tabs.length-1;else return;ev.preventDefault();setTab(next);refs.current[next]?.focus();}}>{name}</button>)}</div><div id="case-panel" role="tabpanel" aria-labelledby={`tab-${tab}`} tabIndex={0}>
