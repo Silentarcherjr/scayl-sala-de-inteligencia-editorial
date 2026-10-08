@@ -8,3 +8,5 @@
 - 2026-10-08 02:31 UTC · Etapa 4: Consultas con ejemplos precalculados, recorridos jurado, buscador y pregunta libre enlazada. Pruebas: npm lint y build OK; 169 rutas. Siguiente: Etapa 5: Trust Lab y Simulador de pesos. Relevo preventivo: ver docs/handoff/worker-web.md.
 
 - 2026-10-08 02:33 UTC · Etapa 5: Trust Lab con métricas guardadas y simulador entero con suma 100 y redondeo Python. Pruebas: npm lint y build OK; 171 rutas estáticas. Siguiente: Etapa 6: CI npm ci, lint y build; después verificación offline. Relevo preventivo: ver docs/handoff/worker-web.md.
+
+- 2026-10-08 02:35 UTC · Etapa 6: Workflow web con npm ci, lint y build; actions fijadas y sin secretos. Pruebas: 197 passed; ruff OK; npm ci/lint/build OK. Siguiente: Etapa 7: README, capturas, recorrido offline, contraste Streamlit y PR. Relevo preventivo: ver docs/handoff/worker-web.md.

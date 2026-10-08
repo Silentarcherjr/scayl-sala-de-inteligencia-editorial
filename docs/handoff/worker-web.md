@@ -1,20 +1,20 @@
-# Relevo · worker-web · 2026-10-08 02:33 UTC
+# Relevo · worker-web · 2026-10-08 02:35 UTC
 
 - **Motivo:** relevo preventivo al cerrar etapa; trabajo continúa.
-- **Rama:** `worker-web/next-static` · **Commit anterior:** `30bbec9`; el commit de esta etapa incluye esta nota y se sube a origin.
+- **Rama:** `worker-web/next-static` · **Commit anterior:** `ae7ced8`; el commit de esta etapa incluye esta nota y se sube a origin.
 - **PR abierto:** ninguno
 
 ## Tarea en curso
-DL-034 — web Next.js estática. Etapa 5 completada.
+DL-034 — web Next.js estática. Etapa 6 completada.
 
 ## Hecho en esta sesión
-Trust Lab con métricas guardadas y simulador entero con suma 100 y redondeo Python
+Workflow web con npm ci, lint y build; actions fijadas y sin secretos
 
 ## Siguiente paso concreto
-Etapa 6: CI npm ci, lint y build; después verificación offline
+Etapa 7: README, capturas, recorrido offline, contraste Streamlit y PR
 
 ## Estado de las pruebas
-npm lint y build OK; 171 rutas estáticas
+197 passed; ruff OK; npm ci/lint/build OK
 
 ## Archivos tocados
 Consultar el commit de la etapa y git diff origin/main. Solo archivos autorizados por WEB_NEXT_PLAN.
