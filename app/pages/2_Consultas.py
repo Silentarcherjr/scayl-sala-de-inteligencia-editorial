@@ -5,7 +5,7 @@ from zoneinfo import ZoneInfo
 import streamlit as st
 
 from app.components.evidence_card import evidence_card
-from app.components.theme import apply_theme
+from app.components.theme import apply_theme, mode_note
 from scayl import service
 from scayl.contracts import QAAnswer, UIBundle
 
@@ -28,6 +28,7 @@ def show_answer(answer: QAAnswer) -> None:
     st.text(answer.question)
     meta = answer.generated_by
     st.caption(f"Modo de generación: {meta.mode} · Modelo: {meta.model or 'no aplica'}")
+    st.caption(mode_note(meta.mode))
     st.caption(f"Generado: {meta.created_at.astimezone(ZoneInfo('America/Panama')):%Y-%m-%d %H:%M} Panamá")
     if answer.abstained:
         st.warning("No hay evidencia suficiente en el corpus")

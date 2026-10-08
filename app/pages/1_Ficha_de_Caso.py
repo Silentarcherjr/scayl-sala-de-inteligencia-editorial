@@ -6,7 +6,7 @@ from zoneinfo import ZoneInfo
 import streamlit as st
 
 from app.components.evidence_card import evidence_card
-from app.components.theme import apply_theme
+from app.components.theme import apply_theme, mode_note
 from scayl import service
 from scayl.contracts import REVIEW_TRANSITIONS, Claim, Event, EvidenceRef, StoryPackage
 
@@ -38,6 +38,7 @@ def show_package(package: StoryPackage, event: Event) -> None:
     st.text(package.public_interest_angle)
     meta = package.generated_by
     st.caption(f"Modo: {meta.mode} · Modelo: {meta.model or 'no aplica'} · {local_time(meta.created_at)}")
+    st.caption(mode_note(meta.mode))
     st.caption(f"Prompt: {meta.prompt_version or 'no aplica'}")
     st.caption(f"Latencia: {str(meta.latency_ms) + ' ms' if meta.latency_ms is not None else 'no medido'}")
     st.caption(f"Tokens entrada: {meta.tokens_in if meta.tokens_in is not None else 'no medido'} · "

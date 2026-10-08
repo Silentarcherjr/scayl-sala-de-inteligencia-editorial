@@ -63,3 +63,15 @@ def apply_theme(kicker: str = KICKER, login: bool = False) -> None:
     """Inject the shared CSS and the section kicker shown above each page title."""
     st.html(_CSS + (_LOGIN_CSS if login else ""))
     st.html(f'<div class="scayl-kicker">{kicker}</div>')
+
+
+MODE_NOTES = {
+    "template": "Plantilla sin IA generativa: texto armado por código a partir de la evidencia.",
+    "cache": "IA local precalculada: salida guardada de una ejecución anterior; no es inferencia en vivo.",
+    "live": "IA en vivo: generada ahora con un modelo local. Revisa sus citas antes de usarla.",
+}
+
+
+def mode_note(mode: str) -> str:
+    """Plain-language label so cached or template output is never read as live inference."""
+    return MODE_NOTES.get(mode, f"Modo {mode}: no reconocido por esta interfaz; trátalo como no verificado.")
