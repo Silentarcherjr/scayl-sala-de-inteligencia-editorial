@@ -1,9 +1,24 @@
-"""Copied to app/space.py in the prepared Space; gate every page before running it."""
+"""Copied to app/space.py in the prepared Space; gate every page before running it.
+
+Self-configuring for hosts that ignore the Dockerfile (Streamlit Community Cloud, DL-032): puts the stage
+root on ``sys.path`` and defaults the hosted settings (cache only, stage-relative data). Values already in
+the environment (Docker ENV, host secrets) win. The password is never defaulted.
+"""
 import hashlib
 import hmac
 import os
+import sys
+from pathlib import Path
 
 import streamlit as st
+
+STAGE = Path(__file__).resolve().parents[1]
+if str(STAGE) not in sys.path:
+    sys.path.insert(0, str(STAGE))
+for _key, _value in {"SCAYL_HOSTED": "1", "SCAYL_LLM_MODE": "cache", "SCAYL_SNAPSHOT_DIR": "data/processed/v1",
+                     "SCAYL_LLM_CACHE": str(STAGE / "data" / "cache" / "llm"),
+                     "SCAYL_STATE_DIR": str(STAGE / "data" / "state")}.items():
+    os.environ.setdefault(_key, _value)
 
 
 def require_password() -> None:
