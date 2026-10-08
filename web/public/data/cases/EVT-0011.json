@@ -1,0 +1,204 @@
+{
+  "claims": [
+    {
+      "attributed_to": "TVN",
+      "claim_id": "CLM-0011-001",
+      "event_id": "EVT-0011",
+      "evidence": [
+        {
+          "evidence_id": "news:tvn-167313d4f4b5b5183a4f",
+          "excerpt": "TVN Media y la Feria de La Chorrera firman alianza estratégica",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.tvn-2.com/videos/noticias/video-tvn-media-feria-chorrera-firman_8_2225013.html",
+          "value": "TVN Media y la Feria de La Chorrera firman alianza estratégica"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "TVN Media y la Feria de La Chorrera firman alianza estratégica",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 1.0,
+    "I": 5.0,
+    "N": 15.0,
+    "R": 18.0,
+    "U": 0.0
+  },
+  "entities": [
+    "La Chorrera",
+    "Los Santos"
+  ],
+  "event_id": "EVT-0011",
+  "evidence_status": "insuficiente",
+  "evidence_status_reason": "Fuente única o de procedencia común, sin evidencia oficial.",
+  "first_detected": null,
+  "first_published": "2026-01-29T01:16:20Z",
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma Fuente primaria del hecho reportado sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «TVN Media y la Feria de La Chorrera firman alianza estratégica»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0011-001"
+    ],
+    "we_dont_know": [
+      "Ninguna fuente oficial del corpus confirma el hecho central.",
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": []
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": "2026-01-29T01:16:20Z",
+      "id_noticia": "tvn-167313d4f4b5b5183a4f",
+      "idioma": "es",
+      "medio": "TVN",
+      "origen": "tvn_rss",
+      "titulo": "TVN Media y la Feria de La Chorrera firman alianza estratégica",
+      "url": "https://www.tvn-2.com/videos/noticias/video-tvn-media-feria-chorrera-firman_8_2225013.html"
+    },
+    {
+      "fecha_publicacion": "2026-02-02T18:40:15Z",
+      "id_noticia": "tvn-e9d318e24538779c1274",
+      "idioma": "es",
+      "medio": "TVN",
+      "origen": "tvn_rss",
+      "titulo": "TVN Media y el Carnaval de La Villa de Los Santos renuevan su alianza estratégica",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-carnaval-la-villa-de-los-santos-alianza_1_2225701.html"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": "2026-02-02T18:40:15Z",
+  "member_ids": [
+    "tvn-167313d4f4b5b5183a4f",
+    "tvn-e9d318e24538779c1274"
+  ],
+  "official_evidence": [],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0011-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según TVN: TVN Media y la Feria de La Chorrera firman alianza estratégica."
+      }
+    ],
+    "event_id": "EVT-0011",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T21:01:27.521510Z",
+      "latency_ms": 0,
+      "mode": "template",
+      "model": null,
+      "params": {},
+      "prompt_version": "template-v1",
+      "tokens_in": null,
+      "tokens_out": null
+    },
+    "investigation_questions": [
+      "¿Qué confirma Fuente primaria del hecho reportado sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «TVN Media y la Feria de La Chorrera firman alianza estratégica»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "package_id": "PKG-0011-template-v1",
+    "pending_verifications": [
+      "Verificar: TVN Media y la Feria de La Chorrera firman alianza estratégica"
+    ],
+    "proposed_title": "Lo que se sabe y lo que falta verificar: TVN Media y la Feria de La Chorrera firman alianza estratégica",
+    "public_interest_angle": "Tema de otro con relevancia para Panamá; estado de la evidencia: insuficiente.",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0011-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según TVN: TVN Media y la Feria de La Chorrera firman alianza estratégica."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0011-001"
+      ],
+      "tag": "DECLARACION",
+      "text": "Según TVN: TVN Media y la Feria de La Chorrera firman alianza estratégica."
+    },
+    "sources": [
+      {
+        "evidence_id": "news:tvn-167313d4f4b5b5183a4f",
+        "excerpt": "TVN Media y la Feria de La Chorrera firman alianza estratégica",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.tvn-2.com/videos/noticias/video-tvn-media-feria-chorrera-firman_8_2225013.html",
+        "value": "TVN Media y la Feria de La Chorrera firman alianza estratégica"
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.1,
+      "I": 0.2,
+      "N": 1.0,
+      "R": 0.6,
+      "U": 0.0,
+      "rationale": {
+        "E": "0 evidencia oficial; hasta 1 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema otro = 0.2",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Relacionado con Panamá; tema fuera de alcance",
+        "U": "Publicación original más reciente: hace 5765 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 39.0,
+    "tier": "bajo"
+  },
+  "recommended_action": "Sin acción.",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "2 publicaciones del mismo medio (tvn-2.com)",
+        "group_id": "PG-0011-1",
+        "label": "mismo_medio",
+        "member_ids": [
+          "tvn-167313d4f4b5b5183a4f",
+          "tvn-e9d318e24538779c1274"
+        ]
+      }
+    ],
+    "max_possible_independent": 1,
+    "outlets": 1,
+    "publications": 2,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "TVN Media y la Feria de La Chorrera firman alianza estratégica",
+  "topic": "otro",
+  "topic_confidence": null
+}

@@ -1,0 +1,190 @@
+{
+  "claims": [
+    {
+      "attributed_to": "TVN",
+      "claim_id": "CLM-0044-001",
+      "event_id": "EVT-0044",
+      "evidence": [
+        {
+          "evidence_id": "news:tvn-38360e4fc25d4823d2d1",
+          "excerpt": "Contenido Exclusivo: Turismo en transporte público",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.tvn-2.com/contenido-exclusivo/contenido-exclusivo-turismo-transporte-publico_1_2263290.html",
+          "value": "Contenido Exclusivo: Turismo en transporte público"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "Contenido Exclusivo: Turismo en transporte público",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 1.0,
+    "I": 10.0,
+    "N": 15.0,
+    "R": 21.599999999999998,
+    "U": 7.572
+  },
+  "entities": [],
+  "event_id": "EVT-0044",
+  "evidence_status": "insuficiente",
+  "evidence_status_reason": "Fuente única o de procedencia común, sin evidencia oficial.",
+  "first_detected": null,
+  "first_published": "2026-09-29T01:23:06Z",
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma ATP (Autoridad de Turismo de Panamá) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Contenido Exclusivo: Turismo en transporte público»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0044-001"
+    ],
+    "we_dont_know": [
+      "Ninguna fuente oficial del corpus confirma el hecho central.",
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": []
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": "2026-09-29T01:23:06Z",
+      "id_noticia": "tvn-38360e4fc25d4823d2d1",
+      "idioma": "es",
+      "medio": "TVN",
+      "origen": "tvn_rss",
+      "titulo": "Contenido Exclusivo: Turismo en transporte público",
+      "url": "https://www.tvn-2.com/contenido-exclusivo/contenido-exclusivo-turismo-transporte-publico_1_2263290.html"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": "2026-09-29T01:23:06Z",
+  "member_ids": [
+    "tvn-38360e4fc25d4823d2d1"
+  ],
+  "official_evidence": [],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0044-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según TVN: Contenido Exclusivo: Turismo en transporte público."
+      }
+    ],
+    "event_id": "EVT-0044",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T21:01:27.514389Z",
+      "latency_ms": 0,
+      "mode": "template",
+      "model": null,
+      "params": {},
+      "prompt_version": "template-v1",
+      "tokens_in": null,
+      "tokens_out": null
+    },
+    "investigation_questions": [
+      "¿Qué confirma ATP (Autoridad de Turismo de Panamá) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Contenido Exclusivo: Turismo en transporte público»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "package_id": "PKG-0044-template-v1",
+    "pending_verifications": [
+      "Verificar: Contenido Exclusivo: Turismo en transporte público"
+    ],
+    "proposed_title": "Lo que se sabe y lo que falta verificar: Contenido Exclusivo: Turismo en transporte público",
+    "public_interest_angle": "Tema de turismo con relevancia para Panamá; estado de la evidencia: insuficiente.",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0044-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según TVN: Contenido Exclusivo: Turismo en transporte público."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0044-001"
+      ],
+      "tag": "DECLARACION",
+      "text": "Según TVN: Contenido Exclusivo: Turismo en transporte público."
+    },
+    "sources": [
+      {
+        "evidence_id": "news:tvn-38360e4fc25d4823d2d1",
+        "excerpt": "Contenido Exclusivo: Turismo en transporte público",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.tvn-2.com/contenido-exclusivo/contenido-exclusivo-turismo-transporte-publico_1_2263290.html",
+        "value": "Contenido Exclusivo: Turismo en transporte público"
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.1,
+      "I": 0.4,
+      "N": 1.0,
+      "R": 0.72,
+      "U": 0.3786,
+      "rationale": {
+        "E": "0 evidencia oficial; hasta 1 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema turismo = 0.4",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Relacionado con Panamá; tema en alcance (turismo, confianza 0.30)",
+        "U": "Publicación original más reciente: hace 47 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 55.2,
+    "tier": "medio"
+  },
+  "recommended_action": "Monitorear; no producir aún. Fuente sugerida para verificar: ATP (Autoridad de Turismo de Panamá).",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0044-1",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "tvn-38360e4fc25d4823d2d1"
+        ]
+      }
+    ],
+    "max_possible_independent": 1,
+    "outlets": 1,
+    "publications": 1,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "Contenido Exclusivo: Turismo en transporte público",
+  "topic": "turismo",
+  "topic_confidence": 0.3
+}

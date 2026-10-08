@@ -1,0 +1,331 @@
+{
+  "claims": [
+    {
+      "attributed_to": "telemetro.com",
+      "claim_id": "CLM-0116-001",
+      "event_id": "EVT-0116",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-6efeaf413fa97fd71039",
+          "excerpt": "Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.telemetro.com/nacionales/canal-panama-mantiene-transitos-y-aplica-ajustes-calado-el-nino-n6085500",
+          "value": "Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    },
+    {
+      "attributed_to": null,
+      "claim_id": "CLM-0116-002",
+      "event_id": "EVT-0116",
+      "evidence": [
+        {
+          "evidence_id": "ind:acp:ACP.GATUN.NIVEL:2026-07-16",
+          "excerpt": "ACP: nivel del lago Gatún (observado), 2026-07-16: 84.69 pies",
+          "field": "valor",
+          "kind": "indicador",
+          "period": "2026-07-16",
+          "url": "https://evtms-rpts.pancanal.com/eng/h2o/Download_Gatun_Lake_Water_Level_History.csv",
+          "value": 84.69
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Dato oficial reciente de contexto; no confirma por sí mismo el titular.",
+      "statement": "Según ACP, nivel del lago Gatún (observado) en 2026-07-16: 84.69 pies",
+      "status": "SUSTENTADA",
+      "temporal_note": null,
+      "type": "HECHO"
+    },
+    {
+      "attributed_to": "telemetro.com",
+      "claim_id": "CLM-0116-003",
+      "event_id": "EVT-0116",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-6efeaf413fa97fd71039",
+          "excerpt": "Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.telemetro.com/nacionales/canal-panama-mantiene-transitos-y-aplica-ajustes-calado-el-nino-n6085500",
+          "value": "Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño"
+        }
+      ],
+      "extracted_by": "llm:ollama:qwen3:8b@claims-v1",
+      "reason": "Extraída del titular; afirmada por el medio, sin verificación oficial.",
+      "statement": "Canal de Panamá mantiene tránsitos",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    },
+    {
+      "attributed_to": "telemetro.com",
+      "claim_id": "CLM-0116-004",
+      "event_id": "EVT-0116",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-6efeaf413fa97fd71039",
+          "excerpt": "Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.telemetro.com/nacionales/canal-panama-mantiene-transitos-y-aplica-ajustes-calado-el-nino-n6085500",
+          "value": "Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño"
+        }
+      ],
+      "extracted_by": "llm:ollama:qwen3:8b@claims-v1",
+      "reason": "Extraída del titular; afirmada por el medio, sin verificación oficial.",
+      "statement": "Canal de Panamá aplica ajustes de calado",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 6.0,
+    "I": 22.5,
+    "N": 15.0,
+    "R": 28.799999999999997,
+    "U": 0.0
+  },
+  "entities": [
+    "Canal de Panamá"
+  ],
+  "event_id": "EVT-0116",
+  "evidence_status": "parcial",
+  "evidence_status_reason": "Existe evidencia oficial de contexto, pero no respalda directamente la afirmación central.",
+  "first_detected": "2026-07-17T18:00:00Z",
+  "first_published": null,
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma Autoridad del Canal de Panamá (ACP) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0116-001",
+      "CLM-0116-003",
+      "CLM-0116-004"
+    ],
+    "we_dont_know": [
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": [
+      "CLM-0116-002"
+    ]
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-6efeaf413fa97fd71039",
+      "idioma": "es",
+      "medio": "telemetro.com",
+      "origen": "gdelt",
+      "titulo": "Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño",
+      "url": "https://www.telemetro.com/nacionales/canal-panama-mantiene-transitos-y-aplica-ajustes-calado-el-nino-n6085500"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": null,
+  "member_ids": [
+    "gdt-6efeaf413fa97fd71039"
+  ],
+  "official_evidence": [
+    {
+      "evidence_id": "ind:acp:ACP.GATUN.NIVEL:2026-07-16",
+      "excerpt": "ACP: nivel del lago Gatún (observado), 2026-07-16: 84.69 pies",
+      "field": "valor",
+      "kind": "indicador",
+      "period": "2026-07-16",
+      "url": "https://evtms-rpts.pancanal.com/eng/h2o/Download_Gatun_Lake_Water_Level_History.csv",
+      "value": 84.69
+    },
+    {
+      "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+      "excerpt": "Exports of goods and services (% of GDP) = 44.3578422661429 % del PIB",
+      "field": "valor",
+      "kind": "indicador",
+      "period": "2024",
+      "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NE.EXP.GNFS.ZS",
+      "value": 44.3578422661429
+    }
+  ],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0116-001",
+          "CLM-0116-003",
+          "CLM-0116-004"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según telemetro.com, Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño. La información se basa en un titular de un artículo de noticias."
+      },
+      {
+        "claim_ids": [
+          "CLM-0116-002"
+        ],
+        "tag": "HECHO",
+        "text": "El nivel del lago Gatún fue de 84.69 pies el 16 de julio de 2026, según datos del ACP."
+      }
+    ],
+    "event_id": "EVT-0116",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T20:56:16.494629Z",
+      "latency_ms": 13131,
+      "mode": "cache",
+      "model": "ollama:qwen3:8b",
+      "params": {
+        "num_ctx": 4096,
+        "seed": 42,
+        "temperature": 0
+      },
+      "prompt_version": "studio-v1",
+      "tokens_in": 1529,
+      "tokens_out": 663
+    },
+    "investigation_questions": [
+      "¿Qué medidas específicas está tomando el Canal de Panamá para adaptarse al impacto de El Niño?",
+      "¿Cómo afecta el nivel del lago Gatún a la operación del canal y cuál es su relación con El Niño?",
+      "¿Qué fuentes confiables confirman que el Canal de Panamá mantiene tránsitos bajo condiciones climáticas adversas?"
+    ],
+    "package_id": "PKG-0116-studio-v1",
+    "pending_verifications": [
+      "Confirmar si el Canal de Panamá efectivamente mantiene tránsitos bajo condiciones de El Niño.",
+      "Verificar si los ajustes de calado son parte de una estrategia oficial del canal.",
+      "Validar la relación entre el nivel del lago Gatún y la operación del canal durante El Niño.",
+      "Verificar: Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño",
+      "Verificar: Canal de Panamá mantiene tránsitos",
+      "Verificar: Canal de Panamá aplica ajustes de calado",
+      "Dato histórico — 2024. No presentarlo como medición actual.",
+      "Dato de 2026-07-16 (ACP). Citarlo siempre con su fecha; no es una medición en tiempo real."
+    ],
+    "proposed_title": "Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño",
+    "public_interest_angle": "El Niño afecta operaciones del Canal de Panamá",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0116-001",
+          "CLM-0116-002"
+        ],
+        "tag": "DECLARACION",
+        "text": "Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño, según reporte de telemetro.com. El nivel del lago Gatún fue de 84.69 pies el 16 de julio de 2026, según datos del ACP."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0116-001",
+        "CLM-0116-002"
+      ],
+      "tag": "DECLARACION",
+      "text": "Canal de Panamá mantiene tránsitos y ajusta calado por El Niño. Nivel del lago Gatún: 84.69 pies el 16 de julio de 2026."
+    },
+    "sources": [
+      {
+        "evidence_id": "news:gdt-6efeaf413fa97fd71039",
+        "excerpt": "Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.telemetro.com/nacionales/canal-panama-mantiene-transitos-y-aplica-ajustes-calado-el-nino-n6085500",
+        "value": "Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño"
+      },
+      {
+        "evidence_id": "ind:acp:ACP.GATUN.NIVEL:2026-07-16",
+        "excerpt": "ACP: nivel del lago Gatún (observado), 2026-07-16: 84.69 pies",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2026-07-16",
+        "url": "https://evtms-rpts.pancanal.com/eng/h2o/Download_Gatun_Lake_Water_Level_History.csv",
+        "value": 84.69
+      },
+      {
+        "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+        "excerpt": "Exports of goods and services (% of GDP) = 44.3578422661429 % del PIB",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2024",
+        "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NE.EXP.GNFS.ZS",
+        "value": 44.3578422661429
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.6,
+      "I": 0.9,
+      "N": 1.0,
+      "R": 0.96,
+      "U": 0.0,
+      "rationale": {
+        "E": "1+ evidencia oficial; hasta 1 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema logistica_canal = 0.7; +0.2 por evidencia oficial pertinente",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Relacionado con Panamá; tema en alcance (logistica_canal, confianza 0.90)",
+        "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 1806 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 72.3,
+    "tier": "alto"
+  },
+  "recommended_action": "Investigar los vacíos antes de producir. Fuente sugerida para verificar: Autoridad del Canal de Panamá (ACP). La prioridad alta NO habilita publicación.",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0116-1",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-6efeaf413fa97fd71039"
+        ]
+      }
+    ],
+    "max_possible_independent": 1,
+    "outlets": 1,
+    "publications": 1,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [
+    {
+      "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+      "message": "Dato histórico — 2024. No presentarlo como medición actual.",
+      "period": "2024"
+    },
+    {
+      "evidence_id": "ind:acp:ACP.GATUN.NIVEL:2026-07-16",
+      "message": "Dato de 2026-07-16 (ACP). Citarlo siempre con su fecha; no es una medición en tiempo real.",
+      "period": "2026-07-16"
+    }
+  ],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño",
+  "topic": "logistica_canal",
+  "topic_confidence": 0.9
+}

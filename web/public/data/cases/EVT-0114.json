@@ -1,0 +1,432 @@
+{
+  "claims": [
+    {
+      "attributed_to": null,
+      "claim_id": "CLM-0114-001",
+      "event_id": "EVT-0114",
+      "evidence": [
+        {
+          "evidence_id": "usgs:us7000t0xy",
+          "excerpt": "3 km ENE of Santa Cruz, Panama",
+          "field": "magnitude",
+          "kind": "sismo",
+          "period": "2026-07-16T10:33:30.188000Z",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t0xy",
+          "value": 4.5
+        },
+        {
+          "evidence_id": "usgs:us7000t0xy",
+          "excerpt": "3 km ENE of Santa Cruz, Panama",
+          "field": "place",
+          "kind": "sismo",
+          "period": "2026-07-16T10:33:30.188000Z",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t0xy",
+          "value": "3 km ENE of Santa Cruz, Panama"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "USGS:us7000t0xy → magnitude = 4.5; el titular indica 4.7",
+      "statement": "USGS registró un sismo de magnitud 4.5 (3 km ENE of Santa Cruz, Panama)",
+      "status": "SUSTENTADA",
+      "temporal_note": null,
+      "type": "HECHO"
+    },
+    {
+      "attributed_to": "telemetro.com",
+      "claim_id": "CLM-0114-002",
+      "event_id": "EVT-0114",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-d8c316078fe594bf3304",
+          "excerpt": "Sismo de magnitud 4.7 sacude la frontera entre Panamá y Costa Rica; no se reportan daños",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.telemetro.com/nacionales/sismo-magnitud-47-sacude-la-frontera-panama-y-costa-rica-no-se-reportan-danos-n6085393",
+          "value": "Sismo de magnitud 4.7 sacude la frontera entre Panamá y Costa Rica; no se reportan daños"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Hay versiones incompatibles entre publicaciones.",
+      "statement": "Sismo de magnitud 4.7 sacude la frontera entre Panamá y Costa Rica; no se reportan daños",
+      "status": "EN_CONFLICTO",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    },
+    {
+      "attributed_to": null,
+      "claim_id": "CLM-0114-003",
+      "event_id": "EVT-0114",
+      "evidence": [],
+      "extracted_by": "rule",
+      "reason": "La evidencia disponible confirma el evento sísmico pero no contiene datos verificados de daños.",
+      "statement": "El sismo causó daños o personas afectadas",
+      "status": "SIN_SUSTENTO",
+      "temporal_note": null,
+      "type": "HECHO"
+    },
+    {
+      "attributed_to": "telemetro.com",
+      "claim_id": "CLM-0114-004",
+      "event_id": "EVT-0114",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-c6b01656acfd72f77213",
+          "excerpt": "Sismo de magnitud 7.4 entre México y Guatemala no genera riesgo de tsunami para Panamá",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.telemetro.com/nacionales/sismo-magnitud-74-mexico-y-guatemala-no-genera-riesgo-tsunami-panama-n6085503",
+          "value": "Sismo de magnitud 7.4 entre México y Guatemala no genera riesgo de tsunami para Panamá"
+        }
+      ],
+      "extracted_by": "llm:ollama:qwen3:8b@claims-v1",
+      "reason": "Extraída del titular; afirmada por el medio, sin verificación oficial.",
+      "statement": "Sismo de magnitud 7.4 entre México y Guatemala no genera riesgo de tsunami para Panamá",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [
+    {
+      "conflict_id": "CNF-0114-001",
+      "event_id": "EVT-0114",
+      "field": "magnitud",
+      "kind": "numerico",
+      "status": "sin_resolver",
+      "verification_needed": "Magnitud distinta entre el titular y USGS. Distintas agencias (IGUP, USGS) pueden reportar valores diferentes: citar la fuente de cada cifra.",
+      "version_a": {
+        "evidence": [
+          {
+            "evidence_id": "news:gdt-d8c316078fe594bf3304",
+            "excerpt": "Sismo de magnitud 4.7 sacude la frontera entre Panamá y Costa Rica; no se reportan daños",
+            "field": "titulo",
+            "kind": "noticia",
+            "period": null,
+            "url": "https://www.telemetro.com/nacionales/sismo-magnitud-47-sacude-la-frontera-panama-y-costa-rica-no-se-reportan-danos-n6085393",
+            "value": "Sismo de magnitud 4.7 sacude la frontera entre Panamá y Costa Rica; no se reportan daños"
+          }
+        ],
+        "value": "4.7"
+      },
+      "version_b": {
+        "evidence": [
+          {
+            "evidence_id": "usgs:us7000t0xy",
+            "excerpt": "3 km ENE of Santa Cruz, Panama",
+            "field": "magnitude",
+            "kind": "sismo",
+            "period": "2026-07-16T10:33:30.188000Z",
+            "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t0xy",
+            "value": 4.5
+          }
+        ],
+        "value": "4.5"
+      }
+    },
+    {
+      "conflict_id": "CNF-0114-002",
+      "event_id": "EVT-0114",
+      "field": "magnitud",
+      "kind": "numerico",
+      "status": "sin_resolver",
+      "verification_needed": "Contrastar con USGS y con el Instituto de Geociencias (IGUP).",
+      "version_a": {
+        "evidence": [
+          {
+            "evidence_id": "news:gdt-d8c316078fe594bf3304",
+            "excerpt": "Sismo de magnitud 4.7 sacude la frontera entre Panamá y Costa Rica; no se reportan daños",
+            "field": "titulo",
+            "kind": "noticia",
+            "period": null,
+            "url": "https://www.telemetro.com/nacionales/sismo-magnitud-47-sacude-la-frontera-panama-y-costa-rica-no-se-reportan-danos-n6085393",
+            "value": "Sismo de magnitud 4.7 sacude la frontera entre Panamá y Costa Rica; no se reportan daños"
+          }
+        ],
+        "value": "4.7"
+      },
+      "version_b": {
+        "evidence": [
+          {
+            "evidence_id": "news:gdt-c6b01656acfd72f77213",
+            "excerpt": "Sismo de magnitud 7.4 entre México y Guatemala no genera riesgo de tsunami para Panamá",
+            "field": "titulo",
+            "kind": "noticia",
+            "period": null,
+            "url": "https://www.telemetro.com/nacionales/sismo-magnitud-74-mexico-y-guatemala-no-genera-riesgo-tsunami-panama-n6085503",
+            "value": "Sismo de magnitud 7.4 entre México y Guatemala no genera riesgo de tsunami para Panamá"
+          }
+        ],
+        "value": "7.4"
+      }
+    }
+  ],
+  "contributions": {
+    "E": 6.0,
+    "I": 22.5,
+    "N": 15.0,
+    "R": 24.0,
+    "U": 0.0
+  },
+  "entities": [
+    "Panamá"
+  ],
+  "event_id": "EVT-0114",
+  "evidence_status": "parcial",
+  "evidence_status_reason": "Hay 2 conflicto(s) sin resolver entre versiones.",
+  "first_detected": "2026-07-16T18:00:00Z",
+  "first_published": null,
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma SINAPROC (Sistema Nacional de Protección Civil) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Sismo de magnitud 4.7 sacude la frontera entre Panamá y Costa Rica; no se reportan daños»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0114-002",
+      "CLM-0114-004"
+    ],
+    "we_dont_know": [
+      "El sismo causó daños o personas afectadas",
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos).",
+      "Cuál de las versiones en conflicto es correcta."
+    ],
+    "we_infer": [],
+    "we_know": [
+      "CLM-0114-001"
+    ]
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-c6b01656acfd72f77213",
+      "idioma": "es",
+      "medio": "telemetro.com",
+      "origen": "gdelt",
+      "titulo": "Sismo de magnitud 7.4 entre México y Guatemala no genera riesgo de tsunami para Panamá",
+      "url": "https://www.telemetro.com/nacionales/sismo-magnitud-74-mexico-y-guatemala-no-genera-riesgo-tsunami-panama-n6085503"
+    },
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-d8c316078fe594bf3304",
+      "idioma": "es",
+      "medio": "telemetro.com",
+      "origen": "gdelt",
+      "titulo": "Sismo de magnitud 4.7 sacude la frontera entre Panamá y Costa Rica; no se reportan daños",
+      "url": "https://www.telemetro.com/nacionales/sismo-magnitud-47-sacude-la-frontera-panama-y-costa-rica-no-se-reportan-danos-n6085393"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": null,
+  "member_ids": [
+    "gdt-c6b01656acfd72f77213",
+    "gdt-d8c316078fe594bf3304"
+  ],
+  "official_evidence": [
+    {
+      "evidence_id": "usgs:us7000t0xy",
+      "excerpt": "3 km ENE of Santa Cruz, Panama",
+      "field": "magnitude",
+      "kind": "sismo",
+      "period": "2026-07-16T10:33:30.188000Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t0xy",
+      "value": 4.5
+    },
+    {
+      "evidence_id": "usgs:us7000t0xy",
+      "excerpt": "3 km ENE of Santa Cruz, Panama",
+      "field": "place",
+      "kind": "sismo",
+      "period": "2026-07-16T10:33:30.188000Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t0xy",
+      "value": "3 km ENE of Santa Cruz, Panama"
+    }
+  ],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0114-002"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según telemetro.com, se reportó un sismo de magnitud 4.7 en la frontera entre Panamá y Costa Rica, sin daños reportados. Sin embargo, la magnitud difiere de la registrada por el USGS."
+      },
+      {
+        "claim_ids": [
+          "CLM-0114-003"
+        ],
+        "tag": "HECHO",
+        "text": "No hay evidencia de daños o personas afectadas por el sismo, según los registros disponibles."
+      },
+      {
+        "claim_ids": [
+          "CLM-0114-004"
+        ],
+        "tag": "DECLARACION",
+        "text": "Telemetro.com también reportó que un sismo de magnitud 7.4 entre México y Guatemala no generó riesgo de tsunami para Panamá. Esta afirmación requiere verificación."
+      }
+    ],
+    "event_id": "EVT-0114",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T20:58:23.463248Z",
+      "latency_ms": 18926,
+      "mode": "cache",
+      "model": "ollama:qwen3:8b",
+      "params": {
+        "num_ctx": 4096,
+        "seed": 42,
+        "temperature": 0
+      },
+      "prompt_version": "studio-v1",
+      "tokens_in": 1648,
+      "tokens_out": 968
+    },
+    "investigation_questions": [
+      "¿Cuál es la magnitud exacta del sismo reportado en la frontera entre Panamá y Costa Rica?",
+      "¿El Instituto Geológico de Panamá (IGUP) confirmó el sismo de magnitud 4.5 o no?",
+      "¿Qué instituciones verificaron la afirmación sobre el sismo de magnitud 7.4 y su riesgo de tsunami para Panamá?"
+    ],
+    "package_id": "PKG-0114-studio-v1",
+    "pending_verifications": [
+      "Confirmar la magnitud del sismo reportado en la frontera entre Panamá y Costa Rica.",
+      "Verificar si el Instituto Geológico de Panamá (IGUP) confirmó el sismo de magnitud 4.5.",
+      "Validar la afirmación sobre el sismo de magnitud 7.4 y su riesgo de tsunami para Panamá.",
+      "Verificar: Sismo de magnitud 4.7 sacude la frontera entre Panamá y Costa Rica; no se reportan daños",
+      "Verificar: El sismo causó daños o personas afectadas",
+      "Verificar: Sismo de magnitud 7.4 entre México y Guatemala no genera riesgo de tsunami para Panamá",
+      "Magnitud distinta entre el titular y USGS. Distintas agencias (IGUP, USGS) pueden reportar valores diferentes: citar la fuente de cada cifra.",
+      "Contrastar con USGS y con el Instituto de Geociencias (IGUP)."
+    ],
+    "proposed_title": "Sismo de magnitud 4.5 registrado en Panamá; se reporta sismo de 4.7 en la frontera con Costa Rica",
+    "public_interest_angle": "Evento natural con posible impacto regional",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0114-002"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según telemetro.com, se reportó un sismo de magnitud 4.7 en la frontera entre Panamá y Costa Rica, sin daños reportados. Sin embargo, la magnitud difiere de la registrada por el USGS."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0114-001",
+        "CLM-0114-002"
+      ],
+      "tag": "DECLARACION",
+      "text": "Sismo de magnitud 4.5 registrado en Panamá; se reporta sismo de 4.7 en la frontera con Costa Rica. No hay daños reportados. ¿Cuál es la magnitud real?"
+    },
+    "sources": [
+      {
+        "evidence_id": "usgs:us7000t0xy",
+        "excerpt": "3 km ENE of Santa Cruz, Panama",
+        "field": "place",
+        "kind": "sismo",
+        "period": "2026-07-16T10:33:30.188000Z",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000t0xy",
+        "value": "3 km ENE of Santa Cruz, Panama"
+      },
+      {
+        "evidence_id": "news:gdt-d8c316078fe594bf3304",
+        "excerpt": "Sismo de magnitud 4.7 sacude la frontera entre Panamá y Costa Rica; no se reportan daños",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.telemetro.com/nacionales/sismo-magnitud-47-sacude-la-frontera-panama-y-costa-rica-no-se-reportan-danos-n6085393",
+        "value": "Sismo de magnitud 4.7 sacude la frontera entre Panamá y Costa Rica; no se reportan daños"
+      },
+      {
+        "evidence_id": "news:gdt-c6b01656acfd72f77213",
+        "excerpt": "Sismo de magnitud 7.4 entre México y Guatemala no genera riesgo de tsunami para Panamá",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.telemetro.com/nacionales/sismo-magnitud-74-mexico-y-guatemala-no-genera-riesgo-tsunami-panama-n6085503",
+        "value": "Sismo de magnitud 7.4 entre México y Guatemala no genera riesgo de tsunami para Panamá"
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "NUMBER_NOT_IN_EVIDENCE",
+          "detail": "Cifra sin respaldo en la evidencia citada: «El USGS registró un sismo de magnitud 4.5 a 3 km al este-noreste de Santa Cruz, Panamá, el 16 de julio de 2026, a las 10:33 hora local. Este evento no fue reportado por el Instituto Geológico de Panamá (IGUP).»",
+          "location": "brief[0]",
+          "severity": "error"
+        },
+        {
+          "code": "NUMBER_NOT_IN_EVIDENCE",
+          "detail": "Cifra sin respaldo en la evidencia citada: «El USGS registró un sismo de magnitud 4.5 a 3 km al este-noreste de Santa Cruz, Panamá, el 16 de julio de 2026, a las 10:33 hora local. Este evento no fue reportado por el Instituto Geológico de Panamá (IGUP).»",
+          "location": "script[0]",
+          "severity": "error"
+        },
+        {
+          "code": "UNKNOWN_CLAIM",
+          "detail": "Cita afirmaciones inexistentes: ['CLM-0111-003']",
+          "location": "script[2]",
+          "severity": "error"
+        },
+        {
+          "code": "STATUS_MISMATCH",
+          "detail": "HECHO sobre afirmación EN_CONFLICTO; reetiquetada como DECLARACION",
+          "location": "social_copy",
+          "severity": "warning"
+        },
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.6,
+      "I": 0.9,
+      "N": 1.0,
+      "R": 0.8,
+      "U": 0.0,
+      "rationale": {
+        "E": "1+ evidencia oficial; hasta 1 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema eventos_naturales = 0.7; +0.2 por evidencia oficial pertinente",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Relacionado con Panamá; tema en alcance (eventos_naturales, confianza 0.50)",
+        "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 1806 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 67.5,
+    "tier": "medio"
+  },
+  "recommended_action": "Seguimiento: reunir evidencia adicional. Fuente sugerida para verificar: SINAPROC (Sistema Nacional de Protección Civil).",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "2 publicaciones del mismo medio (telemetro.com)",
+        "group_id": "PG-0114-1",
+        "label": "mismo_medio",
+        "member_ids": [
+          "gdt-c6b01656acfd72f77213",
+          "gdt-d8c316078fe594bf3304"
+        ]
+      }
+    ],
+    "max_possible_independent": 1,
+    "outlets": 1,
+    "publications": 2,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "Sismo de magnitud 4.7 sacude la frontera entre Panamá y Costa Rica; no se reportan daños",
+  "topic": "eventos_naturales",
+  "topic_confidence": 0.5
+}

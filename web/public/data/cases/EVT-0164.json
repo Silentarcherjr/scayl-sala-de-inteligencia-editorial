@@ -1,0 +1,263 @@
+{
+  "claims": [
+    {
+      "attributed_to": "telemetro.com",
+      "claim_id": "CLM-0164-001",
+      "event_id": "EVT-0164",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-c845da2f78574f7052ea",
+          "excerpt": "Feria de empleo en septiembre: Alcaldía de Panamá convoca a empresas para participar sus vacantes",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.telemetro.com/nacionales/feria-empleo-septiembre-alcaldia-panama-convoca-empresas-participar-sus-vacantes-n6090313",
+          "value": "Feria de empleo en septiembre: Alcaldía de Panamá convoca a empresas para participar sus vacantes"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "Feria de empleo en septiembre: Alcaldía de Panamá convoca a empresas para participar sus vacantes",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 6.0,
+    "I": 20.0,
+    "N": 15.0,
+    "R": 24.0,
+    "U": 0.0
+  },
+  "entities": [
+    "Panamá"
+  ],
+  "event_id": "EVT-0164",
+  "evidence_status": "parcial",
+  "evidence_status_reason": "Existe evidencia oficial de contexto, pero no respalda directamente la afirmación central.",
+  "first_detected": "2026-08-31T18:00:00Z",
+  "first_published": null,
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma INEC (Instituto Nacional de Estadística y Censo) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Feria de empleo en septiembre: Alcaldía de Panamá convoca a empresas para participar sus vacantes»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0164-001"
+    ],
+    "we_dont_know": [
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": []
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-c845da2f78574f7052ea",
+      "idioma": "es",
+      "medio": "telemetro.com",
+      "origen": "gdelt",
+      "titulo": "Feria de empleo en septiembre: Alcaldía de Panamá convoca a empresas para participar sus vacantes",
+      "url": "https://www.telemetro.com/nacionales/feria-empleo-septiembre-alcaldia-panama-convoca-empresas-participar-sus-vacantes-n6090313"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": null,
+  "member_ids": [
+    "gdt-c845da2f78574f7052ea"
+  ],
+  "official_evidence": [
+    {
+      "evidence_id": "wb:PAN:FP.CPI.TOTL.ZG:2024",
+      "excerpt": "Inflation, consumer prices (annual %) = 0.69322555100446 % anual",
+      "field": "valor",
+      "kind": "indicador",
+      "period": "2024",
+      "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/FP.CPI.TOTL.ZG",
+      "value": 0.69322555100446
+    },
+    {
+      "evidence_id": "wb:PAN:NY.GDP.MKTP.KD.ZG:2024",
+      "excerpt": "GDP growth (annual %) = 2.74784148771307 % anual",
+      "field": "valor",
+      "kind": "indicador",
+      "period": "2024",
+      "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NY.GDP.MKTP.KD.ZG",
+      "value": 2.74784148771307
+    },
+    {
+      "evidence_id": "wb:PAN:SL.UEM.TOTL.ZS:2024",
+      "excerpt": "Unemployment, total (% of total labor force) (modeled ILO estimate) = 8.451 % de la población activa total (estimación modelada OIT)",
+      "field": "valor",
+      "kind": "indicador",
+      "period": "2024",
+      "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/SL.UEM.TOTL.ZS",
+      "value": 8.451
+    }
+  ],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0164-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según telemetro.com: Feria de empleo en septiembre: Alcaldía de Panamá convoca a empresas para participar sus vacantes."
+      }
+    ],
+    "event_id": "EVT-0164",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T21:01:27.512359Z",
+      "latency_ms": 0,
+      "mode": "template",
+      "model": null,
+      "params": {},
+      "prompt_version": "template-v1",
+      "tokens_in": null,
+      "tokens_out": null
+    },
+    "investigation_questions": [
+      "¿Qué confirma INEC (Instituto Nacional de Estadística y Censo) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Feria de empleo en septiembre: Alcaldía de Panamá convoca a empresas para participar sus vacantes»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "package_id": "PKG-0164-template-v1",
+    "pending_verifications": [
+      "Verificar: Feria de empleo en septiembre: Alcaldía de Panamá convoca a empresas para participar sus vacantes",
+      "Dato histórico — 2024. No presentarlo como medición actual."
+    ],
+    "proposed_title": "Lo que se sabe y lo que falta verificar: Feria de empleo en septiembre: Alcaldía de Panamá convoca a empresas para participar sus vacantes",
+    "public_interest_angle": "Tema de economia con relevancia para Panamá; estado de la evidencia: parcial.",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0164-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según telemetro.com: Feria de empleo en septiembre: Alcaldía de Panamá convoca a empresas para participar sus vacantes."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0164-001"
+      ],
+      "tag": "DECLARACION",
+      "text": "Según telemetro.com: Feria de empleo en septiembre: Alcaldía de Panamá convoca a empresas para participar sus vacantes."
+    },
+    "sources": [
+      {
+        "evidence_id": "news:gdt-c845da2f78574f7052ea",
+        "excerpt": "Feria de empleo en septiembre: Alcaldía de Panamá convoca a empresas para participar sus vacantes",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.telemetro.com/nacionales/feria-empleo-septiembre-alcaldia-panama-convoca-empresas-participar-sus-vacantes-n6090313",
+        "value": "Feria de empleo en septiembre: Alcaldía de Panamá convoca a empresas para participar sus vacantes"
+      },
+      {
+        "evidence_id": "wb:PAN:FP.CPI.TOTL.ZG:2024",
+        "excerpt": "Inflation, consumer prices (annual %) = 0.69322555100446 % anual",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2024",
+        "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/FP.CPI.TOTL.ZG",
+        "value": 0.69322555100446
+      },
+      {
+        "evidence_id": "wb:PAN:NY.GDP.MKTP.KD.ZG:2024",
+        "excerpt": "GDP growth (annual %) = 2.74784148771307 % anual",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2024",
+        "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NY.GDP.MKTP.KD.ZG",
+        "value": 2.74784148771307
+      },
+      {
+        "evidence_id": "wb:PAN:SL.UEM.TOTL.ZS:2024",
+        "excerpt": "Unemployment, total (% of total labor force) (modeled ILO estimate) = 8.451 % de la población activa total (estimación modelada OIT)",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2024",
+        "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/SL.UEM.TOTL.ZS",
+        "value": 8.451
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.6,
+      "I": 0.8,
+      "N": 1.0,
+      "R": 0.8,
+      "U": 0.0,
+      "rationale": {
+        "E": "1+ evidencia oficial; hasta 1 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema economia = 0.6; +0.2 por evidencia oficial pertinente",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Relacionado con Panamá; tema en alcance (economia, confianza 0.50)",
+        "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 726 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 65.0,
+    "tier": "medio"
+  },
+  "recommended_action": "Seguimiento: reunir evidencia adicional. Fuente sugerida para verificar: INEC (Instituto Nacional de Estadística y Censo).",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0164-1",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-c845da2f78574f7052ea"
+        ]
+      }
+    ],
+    "max_possible_independent": 1,
+    "outlets": 1,
+    "publications": 1,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [
+    {
+      "evidence_id": "wb:PAN:FP.CPI.TOTL.ZG:2024",
+      "message": "Dato histórico — 2024. No presentarlo como medición actual.",
+      "period": "2024"
+    },
+    {
+      "evidence_id": "wb:PAN:NY.GDP.MKTP.KD.ZG:2024",
+      "message": "Dato histórico — 2024. No presentarlo como medición actual.",
+      "period": "2024"
+    },
+    {
+      "evidence_id": "wb:PAN:SL.UEM.TOTL.ZS:2024",
+      "message": "Dato histórico — 2024. No presentarlo como medición actual.",
+      "period": "2024"
+    }
+  ],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "Feria de empleo en septiembre: Alcaldía de Panamá convoca a empresas para participar sus vacantes",
+  "topic": "economia",
+  "topic_confidence": 0.5
+}

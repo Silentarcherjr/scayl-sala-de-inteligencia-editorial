@@ -1,0 +1,192 @@
+{
+  "claims": [
+    {
+      "attributed_to": "critica.com.pa",
+      "claim_id": "CLM-0147-001",
+      "event_id": "EVT-0147",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-f0ca498bc4ae4c8b12cc",
+          "excerpt": "Onda tropical trae fuertes lluvias y tormentas a Panamá",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.critica.com.pa/nacional/onda-tropical-trae-fuertes-lluvias-y-tormentas-panama-514778",
+          "value": "Onda tropical trae fuertes lluvias y tormentas a Panamá"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "Onda tropical trae fuertes lluvias y tormentas a Panamá",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 1.0,
+    "I": 17.5,
+    "N": 15.0,
+    "R": 26.4,
+    "U": 0.0
+  },
+  "entities": [
+    "Panamá"
+  ],
+  "event_id": "EVT-0147",
+  "evidence_status": "insuficiente",
+  "evidence_status_reason": "Fuente única o de procedencia común, sin evidencia oficial.",
+  "first_detected": "2026-08-17T18:00:00Z",
+  "first_published": null,
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma SINAPROC (Sistema Nacional de Protección Civil) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Onda tropical trae fuertes lluvias y tormentas a Panamá»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0147-001"
+    ],
+    "we_dont_know": [
+      "Ninguna fuente oficial del corpus confirma el hecho central.",
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": []
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-f0ca498bc4ae4c8b12cc",
+      "idioma": "es",
+      "medio": "critica.com.pa",
+      "origen": "gdelt",
+      "titulo": "Onda tropical trae fuertes lluvias y tormentas a Panamá",
+      "url": "https://www.critica.com.pa/nacional/onda-tropical-trae-fuertes-lluvias-y-tormentas-panama-514778"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": null,
+  "member_ids": [
+    "gdt-f0ca498bc4ae4c8b12cc"
+  ],
+  "official_evidence": [],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0147-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según critica.com.pa: Onda tropical trae fuertes lluvias y tormentas a Panamá."
+      }
+    ],
+    "event_id": "EVT-0147",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T21:01:27.512953Z",
+      "latency_ms": 0,
+      "mode": "template",
+      "model": null,
+      "params": {},
+      "prompt_version": "template-v1",
+      "tokens_in": null,
+      "tokens_out": null
+    },
+    "investigation_questions": [
+      "¿Qué confirma SINAPROC (Sistema Nacional de Protección Civil) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Onda tropical trae fuertes lluvias y tormentas a Panamá»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "package_id": "PKG-0147-template-v1",
+    "pending_verifications": [
+      "Verificar: Onda tropical trae fuertes lluvias y tormentas a Panamá"
+    ],
+    "proposed_title": "Lo que se sabe y lo que falta verificar: Onda tropical trae fuertes lluvias y tormentas a Panamá",
+    "public_interest_angle": "Tema de eventos naturales con relevancia para Panamá; estado de la evidencia: insuficiente.",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0147-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según critica.com.pa: Onda tropical trae fuertes lluvias y tormentas a Panamá."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0147-001"
+      ],
+      "tag": "DECLARACION",
+      "text": "Según critica.com.pa: Onda tropical trae fuertes lluvias y tormentas a Panamá."
+    },
+    "sources": [
+      {
+        "evidence_id": "news:gdt-f0ca498bc4ae4c8b12cc",
+        "excerpt": "Onda tropical trae fuertes lluvias y tormentas a Panamá",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.critica.com.pa/nacional/onda-tropical-trae-fuertes-lluvias-y-tormentas-panama-514778",
+        "value": "Onda tropical trae fuertes lluvias y tormentas a Panamá"
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.1,
+      "I": 0.7,
+      "N": 1.0,
+      "R": 0.88,
+      "U": 0.0,
+      "rationale": {
+        "E": "0 evidencia oficial; hasta 1 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema eventos_naturales = 0.7",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Relacionado con Panamá; tema en alcance (eventos_naturales, confianza 0.70)",
+        "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 1062 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 59.9,
+    "tier": "medio"
+  },
+  "recommended_action": "Monitorear; no producir aún. Fuente sugerida para verificar: SINAPROC (Sistema Nacional de Protección Civil).",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0147-1",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-f0ca498bc4ae4c8b12cc"
+        ]
+      }
+    ],
+    "max_possible_independent": 1,
+    "outlets": 1,
+    "publications": 1,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "Onda tropical trae fuertes lluvias y tormentas a Panamá",
+  "topic": "eventos_naturales",
+  "topic_confidence": 0.7
+}

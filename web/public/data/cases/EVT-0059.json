@@ -1,0 +1,210 @@
+{
+  "claims": [
+    {
+      "attributed_to": "eluniverso.com y 1 medio(s) más",
+      "claim_id": "CLM-0059-001",
+      "event_id": "EVT-0059",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-7dabd3e2f153b026a18b",
+          "excerpt": "Panamá incorporó oficialmente a Ecuador a su lista de países amigos",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.eluniverso.com/noticias/economia/panama-incorporo-oficialmente-a-ecuador-a-su-lista-de-paises-amigos-nota/",
+          "value": "Panamá incorporó oficialmente a Ecuador a su lista de países amigos"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "Panamá incorporó oficialmente a Ecuador a su lista de países amigos",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 2.0,
+    "I": 5.0,
+    "N": 15.0,
+    "R": 18.0,
+    "U": 0.0
+  },
+  "entities": [
+    "Panamá"
+  ],
+  "event_id": "EVT-0059",
+  "evidence_status": "parcial",
+  "evidence_status_reason": "Hasta 2 procedencias posiblemente independientes, sin evidencia oficial.",
+  "first_detected": "2026-09-01T22:15:00Z",
+  "first_published": null,
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma Fuente primaria del hecho reportado sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Panamá incorporó oficialmente a Ecuador a su lista de países amigos»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0059-001"
+    ],
+    "we_dont_know": [
+      "Ninguna fuente oficial del corpus confirma el hecho central.",
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": []
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-7dabd3e2f153b026a18b",
+      "idioma": "es",
+      "medio": "eluniverso.com",
+      "origen": "gdelt",
+      "titulo": "Panamá incorporó oficialmente a Ecuador a su lista de países amigos",
+      "url": "https://www.eluniverso.com/noticias/economia/panama-incorporo-oficialmente-a-ecuador-a-su-lista-de-paises-amigos-nota/"
+    },
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-f5b06b7a9d6dc1486ef0",
+      "idioma": "es",
+      "medio": "revistaeyn.com",
+      "origen": "gdelt",
+      "titulo": "Panamá y Ecuador establecen las bases para negociar un acuerdo comercial",
+      "url": "https://www.revistaeyn.com/centroamericaymundo/panama-y-ecuador-establecen-las-bases-para-negociar-un-acuerdo-comercial-FI31934212"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": null,
+  "member_ids": [
+    "gdt-7dabd3e2f153b026a18b",
+    "gdt-f5b06b7a9d6dc1486ef0"
+  ],
+  "official_evidence": [],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0059-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según eluniverso.com y 1 medio(s) más: Panamá incorporó oficialmente a Ecuador a su lista de países amigos."
+      }
+    ],
+    "event_id": "EVT-0059",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T21:01:27.517939Z",
+      "latency_ms": 0,
+      "mode": "template",
+      "model": null,
+      "params": {},
+      "prompt_version": "template-v1",
+      "tokens_in": null,
+      "tokens_out": null
+    },
+    "investigation_questions": [
+      "¿Qué confirma Fuente primaria del hecho reportado sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Panamá incorporó oficialmente a Ecuador a su lista de países amigos»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "package_id": "PKG-0059-template-v1",
+    "pending_verifications": [
+      "Verificar: Panamá incorporó oficialmente a Ecuador a su lista de países amigos"
+    ],
+    "proposed_title": "Lo que se sabe y lo que falta verificar: Panamá incorporó oficialmente a Ecuador a su lista de países amigos",
+    "public_interest_angle": "Tema de otro con relevancia para Panamá; estado de la evidencia: parcial.",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0059-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según eluniverso.com y 1 medio(s) más: Panamá incorporó oficialmente a Ecuador a su lista de países amigos."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0059-001"
+      ],
+      "tag": "DECLARACION",
+      "text": "Según eluniverso.com y 1 medio(s) más: Panamá incorporó oficialmente a Ecuador a su lista de países amigos."
+    },
+    "sources": [
+      {
+        "evidence_id": "news:gdt-7dabd3e2f153b026a18b",
+        "excerpt": "Panamá incorporó oficialmente a Ecuador a su lista de países amigos",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.eluniverso.com/noticias/economia/panama-incorporo-oficialmente-a-ecuador-a-su-lista-de-paises-amigos-nota/",
+        "value": "Panamá incorporó oficialmente a Ecuador a su lista de países amigos"
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.2,
+      "I": 0.2,
+      "N": 1.0,
+      "R": 0.6,
+      "U": 0.0,
+      "rationale": {
+        "E": "0 evidencia oficial; hasta 2 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema otro = 0.2",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Relacionado con Panamá; tema fuera de alcance",
+        "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 606 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 40.0,
+    "tier": "medio"
+  },
+  "recommended_action": "Seguimiento: reunir evidencia adicional. Fuente sugerida para verificar: Fuente primaria del hecho reportado.",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0059-1",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-7dabd3e2f153b026a18b"
+        ]
+      },
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0059-2",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-f5b06b7a9d6dc1486ef0"
+        ]
+      }
+    ],
+    "max_possible_independent": 2,
+    "outlets": 2,
+    "publications": 2,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "Panamá incorporó oficialmente a Ecuador a su lista de países amigos",
+  "topic": "otro",
+  "topic_confidence": null
+}

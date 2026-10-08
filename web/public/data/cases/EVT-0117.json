@@ -1,0 +1,192 @@
+{
+  "claims": [
+    {
+      "attributed_to": "telemetro.com",
+      "claim_id": "CLM-0117-001",
+      "event_id": "EVT-0117",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-705b6f1fe1ab1d0765e5",
+          "excerpt": "Minsa pide denunciar actos de vandalismo contra instalaciones de salud en Panamá",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.telemetro.com/nacionales/minsa-pide-denunciar-actos-vandalismo-contra-instalaciones-salud-panama-n6085493",
+          "value": "Minsa pide denunciar actos de vandalismo contra instalaciones de salud en Panamá"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "Minsa pide denunciar actos de vandalismo contra instalaciones de salud en Panamá",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 1.0,
+    "I": 15.0,
+    "N": 15.0,
+    "R": 26.4,
+    "U": 0.0
+  },
+  "entities": [
+    "Panamá"
+  ],
+  "event_id": "EVT-0117",
+  "evidence_status": "insuficiente",
+  "evidence_status_reason": "Fuente única o de procedencia común, sin evidencia oficial.",
+  "first_detected": "2026-07-17T18:00:00Z",
+  "first_published": null,
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma ASEP (Autoridad Nacional de los Servicios Públicos) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Minsa pide denunciar actos de vandalismo contra instalaciones de salud en Panamá»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0117-001"
+    ],
+    "we_dont_know": [
+      "Ninguna fuente oficial del corpus confirma el hecho central.",
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": []
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-705b6f1fe1ab1d0765e5",
+      "idioma": "es",
+      "medio": "telemetro.com",
+      "origen": "gdelt",
+      "titulo": "Minsa pide denunciar actos de vandalismo contra instalaciones de salud en Panamá",
+      "url": "https://www.telemetro.com/nacionales/minsa-pide-denunciar-actos-vandalismo-contra-instalaciones-salud-panama-n6085493"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": null,
+  "member_ids": [
+    "gdt-705b6f1fe1ab1d0765e5"
+  ],
+  "official_evidence": [],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0117-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según telemetro.com: Minsa pide denunciar actos de vandalismo contra instalaciones de salud en Panamá."
+      }
+    ],
+    "event_id": "EVT-0117",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T21:01:27.514067Z",
+      "latency_ms": 0,
+      "mode": "template",
+      "model": null,
+      "params": {},
+      "prompt_version": "template-v1",
+      "tokens_in": null,
+      "tokens_out": null
+    },
+    "investigation_questions": [
+      "¿Qué confirma ASEP (Autoridad Nacional de los Servicios Públicos) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Minsa pide denunciar actos de vandalismo contra instalaciones de salud en Panamá»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "package_id": "PKG-0117-template-v1",
+    "pending_verifications": [
+      "Verificar: Minsa pide denunciar actos de vandalismo contra instalaciones de salud en Panamá"
+    ],
+    "proposed_title": "Lo que se sabe y lo que falta verificar: Minsa pide denunciar actos de vandalismo contra instalaciones de salud en Panamá",
+    "public_interest_angle": "Tema de servicios publicos con relevancia para Panamá; estado de la evidencia: insuficiente.",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0117-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según telemetro.com: Minsa pide denunciar actos de vandalismo contra instalaciones de salud en Panamá."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0117-001"
+      ],
+      "tag": "DECLARACION",
+      "text": "Según telemetro.com: Minsa pide denunciar actos de vandalismo contra instalaciones de salud en Panamá."
+    },
+    "sources": [
+      {
+        "evidence_id": "news:gdt-705b6f1fe1ab1d0765e5",
+        "excerpt": "Minsa pide denunciar actos de vandalismo contra instalaciones de salud en Panamá",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.telemetro.com/nacionales/minsa-pide-denunciar-actos-vandalismo-contra-instalaciones-salud-panama-n6085493",
+        "value": "Minsa pide denunciar actos de vandalismo contra instalaciones de salud en Panamá"
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.1,
+      "I": 0.6,
+      "N": 1.0,
+      "R": 0.88,
+      "U": 0.0,
+      "rationale": {
+        "E": "0 evidencia oficial; hasta 1 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema servicios_publicos = 0.6",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Relacionado con Panamá; tema en alcance (servicios_publicos, confianza 0.70)",
+        "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 1806 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 57.4,
+    "tier": "medio"
+  },
+  "recommended_action": "Monitorear; no producir aún. Fuente sugerida para verificar: ASEP (Autoridad Nacional de los Servicios Públicos).",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0117-1",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-705b6f1fe1ab1d0765e5"
+        ]
+      }
+    ],
+    "max_possible_independent": 1,
+    "outlets": 1,
+    "publications": 1,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "Minsa pide denunciar actos de vandalismo contra instalaciones de salud en Panamá",
+  "topic": "servicios_publicos",
+  "topic_confidence": 0.7
+}

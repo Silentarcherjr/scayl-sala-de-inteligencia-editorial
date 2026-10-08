@@ -1,0 +1,291 @@
+{
+  "claims": [
+    {
+      "attributed_to": "unomasuno.com.mx y 1 medio(s) más",
+      "claim_id": "CLM-0108-001",
+      "event_id": "EVT-0108",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-068f3f009085c5f9c883",
+          "excerpt": "Sheinbaum recibe a presidente de Panamá, en Palacio Nacional",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://unomasuno.com.mx/nacional/sheinbaum-recibe-a-presidente-de-panama-en-palacio-nacional/",
+          "value": "Sheinbaum recibe a presidente de Panamá, en Palacio Nacional"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "Sheinbaum recibe a presidente de Panamá, en Palacio Nacional",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    },
+    {
+      "attributed_to": "lajornadasanluis.com.mx",
+      "claim_id": "CLM-0108-002",
+      "event_id": "EVT-0108",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-dc94c9ea0a7c934d0efe",
+          "excerpt": "Sheinbaum recibe al presidente José Raúl Mulino, con quien dialogará sobre la neutralidad del uso del Canal de Panamá",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://lajornadasanluis.com.mx/sheinbaum-recibe-al-presidente-jose-raul-mulino-con-quien-dialogara-sobre-la-neutralidad-del-uso-del-canal-de-panama/",
+          "value": "Sheinbaum recibe al presidente José Raúl Mulino, con quien dialogará sobre la neutralidad del uso del Canal de Panamá"
+        }
+      ],
+      "extracted_by": "llm:ollama:qwen3:8b@claims-v1",
+      "reason": "Extraída del titular; afirmada por el medio, sin verificación oficial.",
+      "statement": "Sheinbaum recibe al presidente José Raúl Mulino, con quien dialogará sobre la neutralidad del uso del Canal de Panamá",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 7.0,
+    "I": 22.5,
+    "N": 15.0,
+    "R": 24.0,
+    "U": 0.0
+  },
+  "entities": [
+    "Canal de Panamá",
+    "Panamá"
+  ],
+  "event_id": "EVT-0108",
+  "evidence_status": "parcial",
+  "evidence_status_reason": "Existe evidencia oficial de contexto, pero no respalda directamente la afirmación central.",
+  "first_detected": "2026-07-15T18:00:00Z",
+  "first_published": null,
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma Autoridad del Canal de Panamá (ACP) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Sheinbaum recibe a presidente de Panamá, en Palacio Nacional»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0108-001",
+      "CLM-0108-002"
+    ],
+    "we_dont_know": [
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": []
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-068f3f009085c5f9c883",
+      "idioma": "es",
+      "medio": "unomasuno.com.mx",
+      "origen": "gdelt",
+      "titulo": "Sheinbaum recibe a presidente de Panamá, en Palacio Nacional",
+      "url": "https://unomasuno.com.mx/nacional/sheinbaum-recibe-a-presidente-de-panama-en-palacio-nacional/"
+    },
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-dc94c9ea0a7c934d0efe",
+      "idioma": "es",
+      "medio": "lajornadasanluis.com.mx",
+      "origen": "gdelt",
+      "titulo": "Sheinbaum recibe al presidente José Raúl Mulino, con quien dialogará sobre la neutralidad del uso del Canal de Panamá",
+      "url": "https://lajornadasanluis.com.mx/sheinbaum-recibe-al-presidente-jose-raul-mulino-con-quien-dialogara-sobre-la-neutralidad-del-uso-del-canal-de-panama/"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": null,
+  "member_ids": [
+    "gdt-068f3f009085c5f9c883",
+    "gdt-dc94c9ea0a7c934d0efe"
+  ],
+  "official_evidence": [
+    {
+      "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+      "excerpt": "Exports of goods and services (% of GDP) = 44.3578422661429 % del PIB",
+      "field": "valor",
+      "kind": "indicador",
+      "period": "2024",
+      "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NE.EXP.GNFS.ZS",
+      "value": 44.3578422661429
+    }
+  ],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0108-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según unmasuno.com.mx y otros medios, Sheinbaum recibe al presidente de Panamá en Palacio Nacional."
+      },
+      {
+        "claim_ids": [
+          "CLM-0108-002"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según lajornadasanluis.com.mx, Sheinbaum dialogará con el presidente José Raúl Mulino sobre la neutralidad del uso del Canal de Panamá."
+      }
+    ],
+    "event_id": "EVT-0108",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T20:57:55.885913Z",
+      "latency_ms": 12886,
+      "mode": "cache",
+      "model": "ollama:qwen3:8b",
+      "params": {
+        "num_ctx": 4096,
+        "seed": 42,
+        "temperature": 0
+      },
+      "prompt_version": "studio-v1",
+      "tokens_in": 1178,
+      "tokens_out": 665
+    },
+    "investigation_questions": [
+      "¿Qué temas específicos se abordaron durante la reunión entre Sheinbaum y el presidente de Panamá?",
+      "¿Qué declaraciones hizo el presidente de Panamá sobre el uso del Canal de Panamá durante la reunión?",
+      "¿Qué acuerdos o compromisos se alcanzaron en la visita de Sheinbaum al país?"
+    ],
+    "package_id": "PKG-0108-studio-v1",
+    "pending_verifications": [
+      "Confirmar el contenido completo de los artículos para verificar los detalles de la reunión y los temas discutidos.",
+      "Verificar si la reunión abordó otros temas además de la neutralidad del Canal de Panamá.",
+      "Confirmar si hubo declaraciones oficiales de parte del presidente de Panamá sobre el uso del Canal.",
+      "Verificar: Sheinbaum recibe a presidente de Panamá, en Palacio Nacional",
+      "Verificar: Sheinbaum recibe al presidente José Raúl Mulino, con quien dialogará sobre la neutralidad del uso del Canal de Panamá",
+      "Dato histórico — 2024. No presentarlo como medición actual."
+    ],
+    "proposed_title": "Sheinbaum recibe al presidente de Panamá en Palacio Nacional",
+    "public_interest_angle": "La visita de la mandataria mexicana al país centroamericano se centra en temas relacionados con el Canal de Panamá.",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0108-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "La mandataria mexicana, Claudia Sheinbaum, recibió al presidente de Panamá, José Raúl Mulino, en el Palacio Nacional. Según unmasuno.com.mx y otros medios, la reunión se enmarca en temas relacionados con el Canal de Panamá."
+      },
+      {
+        "claim_ids": [
+          "CLM-0108-002"
+        ],
+        "tag": "DECLARACION",
+        "text": "Durante la reunión, se abordó la cuestión de la neutralidad del uso del Canal de Panamá, según lajornadasanluis.com.mx."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0108-001",
+        "CLM-0108-002"
+      ],
+      "tag": "DECLARACION",
+      "text": "Claudia Sheinbaum recibió al presidente de Panamá en Palacio Nacional. La reunión abordó temas relacionados con el Canal de Panamá. #NoticiasPanama #Sheinbaum"
+    },
+    "sources": [
+      {
+        "evidence_id": "news:gdt-068f3f009085c5f9c883",
+        "excerpt": "Sheinbaum recibe a presidente de Panamá, en Palacio Nacional",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://unomasuno.com.mx/nacional/sheinbaum-recibe-a-presidente-de-panama-en-palacio-nacional/",
+        "value": "Sheinbaum recibe a presidente de Panamá, en Palacio Nacional"
+      },
+      {
+        "evidence_id": "news:gdt-dc94c9ea0a7c934d0efe",
+        "excerpt": "Sheinbaum recibe al presidente José Raúl Mulino, con quien dialogará sobre la neutralidad del uso del Canal de Panamá",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://lajornadasanluis.com.mx/sheinbaum-recibe-al-presidente-jose-raul-mulino-con-quien-dialogara-sobre-la-neutralidad-del-uso-del-canal-de-panama/",
+        "value": "Sheinbaum recibe al presidente José Raúl Mulino, con quien dialogará sobre la neutralidad del uso del Canal de Panamá"
+      },
+      {
+        "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+        "excerpt": "Exports of goods and services (% of GDP) = 44.3578422661429 % del PIB",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2024",
+        "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NE.EXP.GNFS.ZS",
+        "value": 44.3578422661429
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.7,
+      "I": 0.9,
+      "N": 1.0,
+      "R": 0.8,
+      "U": 0.0,
+      "rationale": {
+        "E": "1+ evidencia oficial; hasta 2 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema logistica_canal = 0.7; +0.2 por evidencia oficial pertinente",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Relacionado con Panamá; tema en alcance (logistica_canal, confianza 0.50)",
+        "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 1854 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 68.5,
+    "tier": "medio"
+  },
+  "recommended_action": "Seguimiento: reunir evidencia adicional. Fuente sugerida para verificar: Autoridad del Canal de Panamá (ACP).",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0108-1",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-068f3f009085c5f9c883"
+        ]
+      },
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0108-2",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-dc94c9ea0a7c934d0efe"
+        ]
+      }
+    ],
+    "max_possible_independent": 2,
+    "outlets": 2,
+    "publications": 2,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [
+    {
+      "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+      "message": "Dato histórico — 2024. No presentarlo como medición actual.",
+      "period": "2024"
+    }
+  ],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "Sheinbaum recibe a presidente de Panamá, en Palacio Nacional",
+  "topic": "logistica_canal",
+  "topic_confidence": 0.5
+}

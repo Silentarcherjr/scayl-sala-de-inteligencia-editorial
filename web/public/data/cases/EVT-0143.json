@@ -1,0 +1,342 @@
+{
+  "claims": [
+    {
+      "attributed_to": "prensa.com",
+      "claim_id": "CLM-0143-001",
+      "event_id": "EVT-0143",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-01a0b491689ea24c2bae",
+          "excerpt": "El Canal de Panamá aplica nueva reducción del calado para enfrentar el fenómeno de El Niño",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.prensa.com/economia/el-canal-de-panama-aplica-nueva-reduccion-del-calado-para-enfrentar-el-fenomeno-de-el-nino/",
+          "value": "El Canal de Panamá aplica nueva reducción del calado para enfrentar el fenómeno de El Niño"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "El Canal de Panamá aplica nueva reducción del calado para enfrentar el fenómeno de El Niño",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    },
+    {
+      "attributed_to": null,
+      "claim_id": "CLM-0143-002",
+      "event_id": "EVT-0143",
+      "evidence": [
+        {
+          "evidence_id": "ind:acp:ACP.GATUN.NIVEL:2026-08-14",
+          "excerpt": "ACP: nivel del lago Gatún (observado), 2026-08-14: 84.12 pies",
+          "field": "valor",
+          "kind": "indicador",
+          "period": "2026-08-14",
+          "url": "https://evtms-rpts.pancanal.com/eng/h2o/Download_Gatun_Lake_Water_Level_History.csv",
+          "value": 84.12
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Dato oficial reciente de contexto; no confirma por sí mismo el titular.",
+      "statement": "Según ACP, nivel del lago Gatún (observado) en 2026-08-14: 84.12 pies",
+      "status": "SUSTENTADA",
+      "temporal_note": null,
+      "type": "HECHO"
+    },
+    {
+      "attributed_to": "prensa.com",
+      "claim_id": "CLM-0143-003",
+      "event_id": "EVT-0143",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-01a0b491689ea24c2bae",
+          "excerpt": "El Canal de Panamá aplica nueva reducción del calado para enfrentar el fenómeno de El Niño",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.prensa.com/economia/el-canal-de-panama-aplica-nueva-reduccion-del-calado-para-enfrentar-el-fenomeno-de-el-nino/",
+          "value": "El Canal de Panamá aplica nueva reducción del calado para enfrentar el fenómeno de El Niño"
+        }
+      ],
+      "extracted_by": "llm:ollama:qwen3:8b@claims-v1",
+      "reason": "Extraída del titular; afirmada por el medio, sin verificación oficial.",
+      "statement": "El Canal de Panamá aplica nueva reducción del calado",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    },
+    {
+      "attributed_to": "prensa.com",
+      "claim_id": "CLM-0143-004",
+      "event_id": "EVT-0143",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-01a0b491689ea24c2bae",
+          "excerpt": "El Canal de Panamá aplica nueva reducción del calado para enfrentar el fenómeno de El Niño",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.prensa.com/economia/el-canal-de-panama-aplica-nueva-reduccion-del-calado-para-enfrentar-el-fenomeno-de-el-nino/",
+          "value": "El Canal de Panamá aplica nueva reducción del calado para enfrentar el fenómeno de El Niño"
+        }
+      ],
+      "extracted_by": "llm:ollama:qwen3:8b@claims-v1",
+      "reason": "Extraída del titular; afirmada por el medio, sin verificación oficial.",
+      "statement": "El Canal de Panamá enfrenta el fenómeno de El Niño",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 6.0,
+    "I": 22.5,
+    "N": 15.0,
+    "R": 26.4,
+    "U": 0.0
+  },
+  "entities": [
+    "Canal de Panamá"
+  ],
+  "event_id": "EVT-0143",
+  "evidence_status": "parcial",
+  "evidence_status_reason": "Existe evidencia oficial de contexto, pero no respalda directamente la afirmación central.",
+  "first_detected": "2026-08-15T18:00:00Z",
+  "first_published": null,
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma Autoridad del Canal de Panamá (ACP) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «El Canal de Panamá aplica nueva reducción del calado para enfrentar el fenómeno de El Niño»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0143-001",
+      "CLM-0143-003",
+      "CLM-0143-004"
+    ],
+    "we_dont_know": [
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": [
+      "CLM-0143-002"
+    ]
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-01a0b491689ea24c2bae",
+      "idioma": "es",
+      "medio": "prensa.com",
+      "origen": "gdelt",
+      "titulo": "El Canal de Panamá aplica nueva reducción del calado para enfrentar el fenómeno de El Niño",
+      "url": "https://www.prensa.com/economia/el-canal-de-panama-aplica-nueva-reduccion-del-calado-para-enfrentar-el-fenomeno-de-el-nino/"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": null,
+  "member_ids": [
+    "gdt-01a0b491689ea24c2bae"
+  ],
+  "official_evidence": [
+    {
+      "evidence_id": "ind:acp:ACP.GATUN.NIVEL:2026-08-14",
+      "excerpt": "ACP: nivel del lago Gatún (observado), 2026-08-14: 84.12 pies",
+      "field": "valor",
+      "kind": "indicador",
+      "period": "2026-08-14",
+      "url": "https://evtms-rpts.pancanal.com/eng/h2o/Download_Gatun_Lake_Water_Level_History.csv",
+      "value": 84.12
+    },
+    {
+      "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+      "excerpt": "Exports of goods and services (% of GDP) = 44.3578422661429 % del PIB",
+      "field": "valor",
+      "kind": "indicador",
+      "period": "2024",
+      "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NE.EXP.GNFS.ZS",
+      "value": 44.3578422661429
+    }
+  ],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0143-001",
+          "CLM-0143-003",
+          "CLM-0143-004"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según prensa.com, el Canal de Panamá aplica una nueva reducción del calado para enfrentar el fenómeno de El Niño. Esta medida se reporta como parte de las acciones para adaptarse a los cambios climáticos."
+      },
+      {
+        "claim_ids": [
+          "CLM-0143-002"
+        ],
+        "tag": "HECHO",
+        "text": "El nivel del lago Gatún, según datos del ACP del 14 de agosto de 2026, se registró en 84.12 pies."
+      }
+    ],
+    "event_id": "EVT-0143",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T20:57:12.270579Z",
+      "latency_ms": 14769,
+      "mode": "cache",
+      "model": "ollama:qwen3:8b",
+      "params": {
+        "num_ctx": 4096,
+        "seed": 42,
+        "temperature": 0
+      },
+      "prompt_version": "studio-v1",
+      "tokens_in": 1542,
+      "tokens_out": 753
+    },
+    "investigation_questions": [
+      "¿Cuál es el impacto de la reducción del calado en la operación del Canal de Panamá durante El Niño?",
+      "¿Qué medidas adicionales está tomando el Canal de Panamá para mitigar los efectos del fenómeno climático?",
+      "¿Cómo se relaciona el nivel del lago Gatún con la capacidad operativa del Canal durante el fenómeno de El Niño?"
+    ],
+    "package_id": "PKG-0143-studio-v1",
+    "pending_verifications": [
+      "Confirmar si la reducción del calado fue oficialmente anunciada por el Canal de Panamá.",
+      "Verificar si el nivel del lago Gatún está relacionado directamente con la operación del Canal durante El Niño.",
+      "Validar la fuente de los datos del ACP sobre el nivel del lago Gatún.",
+      "Verificar: El Canal de Panamá aplica nueva reducción del calado para enfrentar el fenómeno de El Niño",
+      "Verificar: El Canal de Panamá aplica nueva reducción del calado",
+      "Verificar: El Canal de Panamá enfrenta el fenómeno de El Niño",
+      "Dato histórico — 2024. No presentarlo como medición actual.",
+      "Dato de 2026-08-14 (ACP). Citarlo siempre con su fecha; no es una medición en tiempo real."
+    ],
+    "proposed_title": "El Canal de Panamá aplica nueva reducción del calado para enfrentar el fenómeno de El Niño",
+    "public_interest_angle": "El Canal de Panamá ajusta sus operaciones para mitigar el impacto del fenómeno climático El Niño.",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0143-001",
+          "CLM-0143-003",
+          "CLM-0143-004"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según prensa.com, el Canal de Panamá aplica una nueva reducción del calado para enfrentar el fenómeno de El Niño. Esta medida se reporta como parte de las acciones para adaptarse a los cambios climáticos."
+      },
+      {
+        "claim_ids": [
+          "CLM-0143-002"
+        ],
+        "tag": "HECHO",
+        "text": "El nivel del lago Gatún, según datos del ACP del 14 de agosto de 2026, se registró en 84.12 pies."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [],
+      "tag": "HECHO",
+      "text": ""
+    },
+    "sources": [
+      {
+        "evidence_id": "news:gdt-01a0b491689ea24c2bae",
+        "excerpt": "El Canal de Panamá aplica nueva reducción del calado para enfrentar el fenómeno de El Niño",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.prensa.com/economia/el-canal-de-panama-aplica-nueva-reduccion-del-calado-para-enfrentar-el-fenomeno-de-el-nino/",
+        "value": "El Canal de Panamá aplica nueva reducción del calado para enfrentar el fenómeno de El Niño"
+      },
+      {
+        "evidence_id": "ind:acp:ACP.GATUN.NIVEL:2026-08-14",
+        "excerpt": "ACP: nivel del lago Gatún (observado), 2026-08-14: 84.12 pies",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2026-08-14",
+        "url": "https://evtms-rpts.pancanal.com/eng/h2o/Download_Gatun_Lake_Water_Level_History.csv",
+        "value": 84.12
+      },
+      {
+        "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+        "excerpt": "Exports of goods and services (% of GDP) = 44.3578422661429 % del PIB",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2024",
+        "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NE.EXP.GNFS.ZS",
+        "value": 44.3578422661429
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "STATUS_MISMATCH",
+          "detail": "Presenta como HECHO una afirmación SOLO_REPORTADA sin atribución: «El Canal de Panamá aplica nueva reducción del calado para enfrentar El Niño. El nivel del lago Gatún fue de 84.12 pies el 14 de agosto de 2026.»",
+          "location": "social_copy",
+          "severity": "error"
+        },
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.6,
+      "I": 0.9,
+      "N": 1.0,
+      "R": 0.88,
+      "U": 0.0,
+      "rationale": {
+        "E": "1+ evidencia oficial; hasta 1 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema logistica_canal = 0.7; +0.2 por evidencia oficial pertinente",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Relacionado con Panamá; tema en alcance (logistica_canal, confianza 0.70)",
+        "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 1110 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 69.9,
+    "tier": "medio"
+  },
+  "recommended_action": "Seguimiento: reunir evidencia adicional. Fuente sugerida para verificar: Autoridad del Canal de Panamá (ACP).",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0143-1",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-01a0b491689ea24c2bae"
+        ]
+      }
+    ],
+    "max_possible_independent": 1,
+    "outlets": 1,
+    "publications": 1,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [
+    {
+      "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+      "message": "Dato histórico — 2024. No presentarlo como medición actual.",
+      "period": "2024"
+    },
+    {
+      "evidence_id": "ind:acp:ACP.GATUN.NIVEL:2026-08-14",
+      "message": "Dato de 2026-08-14 (ACP). Citarlo siempre con su fecha; no es una medición en tiempo real.",
+      "period": "2026-08-14"
+    }
+  ],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "El Canal de Panamá aplica nueva reducción del calado para enfrentar el fenómeno de El Niño",
+  "topic": "logistica_canal",
+  "topic_confidence": 0.7
+}

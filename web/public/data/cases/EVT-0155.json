@@ -1,0 +1,190 @@
+{
+  "claims": [
+    {
+      "attributed_to": "jyllands-posten.dk",
+      "claim_id": "CLM-0155-001",
+      "event_id": "EVT-0155",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-3beaa141de36c6e5af99",
+          "excerpt": "Panamakanalen må reducere skibstrafikken på grund af tørke",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://jyllands-posten.dk/international/ECE19565490/panamakanalen-maa-reducere-skibstrafikken-paa-grund-af-toerke/?fp-exp=60320002&fp-alg=603200020",
+          "value": "Panamakanalen må reducere skibstrafikken på grund af tørke"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "Panamakanalen må reducere skibstrafikken på grund af tørke",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 1.0,
+    "I": 5.0,
+    "N": 15.0,
+    "R": 0.0,
+    "U": 0.0
+  },
+  "entities": [],
+  "event_id": "EVT-0155",
+  "evidence_status": "insuficiente",
+  "evidence_status_reason": "Fuente única o de procedencia común, sin evidencia oficial.",
+  "first_detected": "2026-08-21T18:00:00Z",
+  "first_published": null,
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma Fuente primaria del hecho reportado sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Panamakanalen må reducere skibstrafikken på grund af tørke»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0155-001"
+    ],
+    "we_dont_know": [
+      "Ninguna fuente oficial del corpus confirma el hecho central.",
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": []
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-3beaa141de36c6e5af99",
+      "idioma": "dan",
+      "medio": "jyllands-posten.dk",
+      "origen": "gdelt",
+      "titulo": "Panamakanalen må reducere skibstrafikken på grund af tørke",
+      "url": "https://jyllands-posten.dk/international/ECE19565490/panamakanalen-maa-reducere-skibstrafikken-paa-grund-af-toerke/?fp-exp=60320002&fp-alg=603200020"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": null,
+  "member_ids": [
+    "gdt-3beaa141de36c6e5af99"
+  ],
+  "official_evidence": [],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0155-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según jyllands-posten.dk: Panamakanalen må reducere skibstrafikken på grund af tørke."
+      }
+    ],
+    "event_id": "EVT-0155",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T21:01:27.534725Z",
+      "latency_ms": 0,
+      "mode": "template",
+      "model": null,
+      "params": {},
+      "prompt_version": "template-v1",
+      "tokens_in": null,
+      "tokens_out": null
+    },
+    "investigation_questions": [
+      "¿Qué confirma Fuente primaria del hecho reportado sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Panamakanalen må reducere skibstrafikken på grund af tørke»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "package_id": "PKG-0155-template-v1",
+    "pending_verifications": [
+      "Verificar: Panamakanalen må reducere skibstrafikken på grund af tørke"
+    ],
+    "proposed_title": "Lo que se sabe y lo que falta verificar: Panamakanalen må reducere skibstrafikken på grund af tørke",
+    "public_interest_angle": "Tema de otro con relevancia para Panamá; estado de la evidencia: insuficiente.",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0155-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según jyllands-posten.dk: Panamakanalen må reducere skibstrafikken på grund af tørke."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0155-001"
+      ],
+      "tag": "DECLARACION",
+      "text": "Según jyllands-posten.dk: Panamakanalen må reducere skibstrafikken på grund af tørke."
+    },
+    "sources": [
+      {
+        "evidence_id": "news:gdt-3beaa141de36c6e5af99",
+        "excerpt": "Panamakanalen må reducere skibstrafikken på grund af tørke",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://jyllands-posten.dk/international/ECE19565490/panamakanalen-maa-reducere-skibstrafikken-paa-grund-af-toerke/?fp-exp=60320002&fp-alg=603200020",
+        "value": "Panamakanalen må reducere skibstrafikken på grund af tørke"
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.1,
+      "I": 0.2,
+      "N": 1.0,
+      "R": 0.0,
+      "U": 0.0,
+      "rationale": {
+        "E": "0 evidencia oficial; hasta 1 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema otro = 0.2",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Sin vínculo explícito con Panamá; tema fuera de alcance",
+        "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 966 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 21.0,
+    "tier": "bajo"
+  },
+  "recommended_action": "Sin acción.",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0155-1",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-3beaa141de36c6e5af99"
+        ]
+      }
+    ],
+    "max_possible_independent": 1,
+    "outlets": 1,
+    "publications": 1,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "Panamakanalen må reducere skibstrafikken på grund af tørke",
+  "topic": "otro",
+  "topic_confidence": null
+}

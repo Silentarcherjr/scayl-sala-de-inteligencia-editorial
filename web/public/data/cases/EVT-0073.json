@@ -1,0 +1,217 @@
+{
+  "claims": [
+    {
+      "attributed_to": "laestrella.com.pa",
+      "claim_id": "CLM-0073-001",
+      "event_id": "EVT-0073",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-b67dc26db0a203e76228",
+          "excerpt": "Autoridad Marítima de Panamá revisará resolución sobre acceso a información pública",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.laestrella.com.pa/panama/nacional/autoridad-maritima-de-panama-revisara-resolucion-sobre-acceso-a-informacion-publica-AH25338459",
+          "value": "Autoridad Marítima de Panamá revisará resolución sobre acceso a información pública"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "Autoridad Marítima de Panamá revisará resolución sobre acceso a información pública",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 6.0,
+    "I": 22.5,
+    "N": 15.0,
+    "R": 21.599999999999998,
+    "U": 0.0
+  },
+  "entities": [
+    "Panamá"
+  ],
+  "event_id": "EVT-0073",
+  "evidence_status": "parcial",
+  "evidence_status_reason": "Existe evidencia oficial de contexto, pero no respalda directamente la afirmación central.",
+  "first_detected": "2026-09-01T18:00:00Z",
+  "first_published": null,
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma Autoridad del Canal de Panamá (ACP) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Autoridad Marítima de Panamá revisará resolución sobre acceso a información pública»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0073-001"
+    ],
+    "we_dont_know": [
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": []
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-b67dc26db0a203e76228",
+      "idioma": "es",
+      "medio": "laestrella.com.pa",
+      "origen": "gdelt",
+      "titulo": "Autoridad Marítima de Panamá revisará resolución sobre acceso a información pública",
+      "url": "https://www.laestrella.com.pa/panama/nacional/autoridad-maritima-de-panama-revisara-resolucion-sobre-acceso-a-informacion-publica-AH25338459"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": null,
+  "member_ids": [
+    "gdt-b67dc26db0a203e76228"
+  ],
+  "official_evidence": [
+    {
+      "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+      "excerpt": "Exports of goods and services (% of GDP) = 44.3578422661429 % del PIB",
+      "field": "valor",
+      "kind": "indicador",
+      "period": "2024",
+      "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NE.EXP.GNFS.ZS",
+      "value": 44.3578422661429
+    }
+  ],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0073-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según laestrella.com.pa: Autoridad Marítima de Panamá revisará resolución sobre acceso a información pública."
+      }
+    ],
+    "event_id": "EVT-0073",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T21:01:27.510269Z",
+      "latency_ms": 0,
+      "mode": "template",
+      "model": null,
+      "params": {},
+      "prompt_version": "template-v1",
+      "tokens_in": null,
+      "tokens_out": null
+    },
+    "investigation_questions": [
+      "¿Qué confirma Autoridad del Canal de Panamá (ACP) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Autoridad Marítima de Panamá revisará resolución sobre acceso a información pública»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "package_id": "PKG-0073-template-v1",
+    "pending_verifications": [
+      "Verificar: Autoridad Marítima de Panamá revisará resolución sobre acceso a información pública",
+      "Dato histórico — 2024. No presentarlo como medición actual."
+    ],
+    "proposed_title": "Lo que se sabe y lo que falta verificar: Autoridad Marítima de Panamá revisará resolución sobre acceso a información pública",
+    "public_interest_angle": "Tema de logistica canal con relevancia para Panamá; estado de la evidencia: parcial.",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0073-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según laestrella.com.pa: Autoridad Marítima de Panamá revisará resolución sobre acceso a información pública."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0073-001"
+      ],
+      "tag": "DECLARACION",
+      "text": "Según laestrella.com.pa: Autoridad Marítima de Panamá revisará resolución sobre acceso a información pública."
+    },
+    "sources": [
+      {
+        "evidence_id": "news:gdt-b67dc26db0a203e76228",
+        "excerpt": "Autoridad Marítima de Panamá revisará resolución sobre acceso a información pública",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.laestrella.com.pa/panama/nacional/autoridad-maritima-de-panama-revisara-resolucion-sobre-acceso-a-informacion-publica-AH25338459",
+        "value": "Autoridad Marítima de Panamá revisará resolución sobre acceso a información pública"
+      },
+      {
+        "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+        "excerpt": "Exports of goods and services (% of GDP) = 44.3578422661429 % del PIB",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2024",
+        "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NE.EXP.GNFS.ZS",
+        "value": 44.3578422661429
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.6,
+      "I": 0.9,
+      "N": 1.0,
+      "R": 0.72,
+      "U": 0.0,
+      "rationale": {
+        "E": "1+ evidencia oficial; hasta 1 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema logistica_canal = 0.7; +0.2 por evidencia oficial pertinente",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Relacionado con Panamá; tema en alcance (logistica_canal, confianza 0.30)",
+        "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 702 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 65.1,
+    "tier": "medio"
+  },
+  "recommended_action": "Seguimiento: reunir evidencia adicional. Fuente sugerida para verificar: Autoridad del Canal de Panamá (ACP).",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0073-1",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-b67dc26db0a203e76228"
+        ]
+      }
+    ],
+    "max_possible_independent": 1,
+    "outlets": 1,
+    "publications": 1,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [
+    {
+      "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+      "message": "Dato histórico — 2024. No presentarlo como medición actual.",
+      "period": "2024"
+    }
+  ],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "Autoridad Marítima de Panamá revisará resolución sobre acceso a información pública",
+  "topic": "logistica_canal",
+  "topic_confidence": 0.3
+}

@@ -1,0 +1,279 @@
+{
+  "claims": [
+    {
+      "attributed_to": "lachainemeteo.com",
+      "claim_id": "CLM-0087-001",
+      "event_id": "EVT-0087",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-11224bbdacde85be739d",
+          "excerpt": "El Niño fait baisser le niveau du canal de Panama et perturbe le commerce mondial",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://actualite.lachainemeteo.com/actualite-meteo/2026-09-15/el-nino-fait-baisser-le-niveau-du-canal-de-panama-et-perturbe-le-commerce-mondial-92326",
+          "value": "El Niño fait baisser le niveau du canal de Panama et perturbe le commerce mondial"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "El Niño fait baisser le niveau du canal de Panama et perturbe le commerce mondial",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    },
+    {
+      "attributed_to": null,
+      "claim_id": "CLM-0087-002",
+      "event_id": "EVT-0087",
+      "evidence": [
+        {
+          "evidence_id": "ind:acp:ACP.GATUN.NIVEL:2026-09-14",
+          "excerpt": "ACP: nivel del lago Gatún (observado), 2026-09-14: 84.28 pies",
+          "field": "valor",
+          "kind": "indicador",
+          "period": "2026-09-14",
+          "url": "https://evtms-rpts.pancanal.com/eng/h2o/Download_Gatun_Lake_Water_Level_History.csv",
+          "value": 84.28
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Dato oficial reciente de contexto; no confirma por sí mismo el titular.",
+      "statement": "Según ACP, nivel del lago Gatún (observado) en 2026-09-14: 84.28 pies",
+      "status": "SUSTENTADA",
+      "temporal_note": null,
+      "type": "HECHO"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 6.0,
+    "I": 22.5,
+    "N": 15.0,
+    "R": 21.599999999999998,
+    "U": 0.01
+  },
+  "entities": [
+    "Panama"
+  ],
+  "event_id": "EVT-0087",
+  "evidence_status": "parcial",
+  "evidence_status_reason": "Existe evidencia oficial de contexto, pero no respalda directamente la afirmación central.",
+  "first_detected": "2026-09-15T18:00:00Z",
+  "first_published": null,
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma Autoridad del Canal de Panamá (ACP) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «El Niño fait baisser le niveau du canal de Panama et perturbe le commerce mondial»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0087-001"
+    ],
+    "we_dont_know": [
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": [
+      "CLM-0087-002"
+    ]
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-11224bbdacde85be739d",
+      "idioma": "fr",
+      "medio": "lachainemeteo.com",
+      "origen": "gdelt",
+      "titulo": "El Niño fait baisser le niveau du canal de Panama et perturbe le commerce mondial",
+      "url": "https://actualite.lachainemeteo.com/actualite-meteo/2026-09-15/el-nino-fait-baisser-le-niveau-du-canal-de-panama-et-perturbe-le-commerce-mondial-92326"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": null,
+  "member_ids": [
+    "gdt-11224bbdacde85be739d"
+  ],
+  "official_evidence": [
+    {
+      "evidence_id": "ind:acp:ACP.GATUN.NIVEL:2026-09-14",
+      "excerpt": "ACP: nivel del lago Gatún (observado), 2026-09-14: 84.28 pies",
+      "field": "valor",
+      "kind": "indicador",
+      "period": "2026-09-14",
+      "url": "https://evtms-rpts.pancanal.com/eng/h2o/Download_Gatun_Lake_Water_Level_History.csv",
+      "value": 84.28
+    },
+    {
+      "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+      "excerpt": "Exports of goods and services (% of GDP) = 44.3578422661429 % del PIB",
+      "field": "valor",
+      "kind": "indicador",
+      "period": "2024",
+      "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NE.EXP.GNFS.ZS",
+      "value": 44.3578422661429
+    }
+  ],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0087-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según lachainemeteo.com: El Niño fait baisser le niveau du canal de Panama et perturbe le commerce mondial."
+      },
+      {
+        "claim_ids": [
+          "CLM-0087-002"
+        ],
+        "tag": "HECHO",
+        "text": "Según ACP, nivel del lago Gatún (observado) en 2026-09-14: 84.28 pies (fuente: ind:acp:ACP.GATUN.NIVEL:2026-09-14)."
+      }
+    ],
+    "event_id": "EVT-0087",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T21:01:27.509453Z",
+      "latency_ms": 0,
+      "mode": "template",
+      "model": null,
+      "params": {},
+      "prompt_version": "template-v1",
+      "tokens_in": null,
+      "tokens_out": null
+    },
+    "investigation_questions": [
+      "¿Qué confirma Autoridad del Canal de Panamá (ACP) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «El Niño fait baisser le niveau du canal de Panama et perturbe le commerce mondial»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "package_id": "PKG-0087-template-v1",
+    "pending_verifications": [
+      "Verificar: El Niño fait baisser le niveau du canal de Panama et perturbe le commerce mondial",
+      "Dato histórico — 2024. No presentarlo como medición actual.",
+      "Dato de 2026-09-14 (ACP). Citarlo siempre con su fecha; no es una medición en tiempo real."
+    ],
+    "proposed_title": "Lo que se sabe y lo que falta verificar: El Niño fait baisser le niveau du canal de Panama et perturbe le commerce mondial",
+    "public_interest_angle": "Tema de logistica canal con relevancia para Panamá; estado de la evidencia: parcial.",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0087-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según lachainemeteo.com: El Niño fait baisser le niveau du canal de Panama et perturbe le commerce mondial."
+      },
+      {
+        "claim_ids": [
+          "CLM-0087-002"
+        ],
+        "tag": "HECHO",
+        "text": "Según ACP, nivel del lago Gatún (observado) en 2026-09-14: 84.28 pies (fuente: ind:acp:ACP.GATUN.NIVEL:2026-09-14)."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0087-002"
+      ],
+      "tag": "HECHO",
+      "text": "Según ACP, nivel del lago Gatún (observado) en 2026-09-14: 84.28 pies (fuente: ind:acp:ACP.GATUN.NIVEL:2026-09-14)."
+    },
+    "sources": [
+      {
+        "evidence_id": "news:gdt-11224bbdacde85be739d",
+        "excerpt": "El Niño fait baisser le niveau du canal de Panama et perturbe le commerce mondial",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://actualite.lachainemeteo.com/actualite-meteo/2026-09-15/el-nino-fait-baisser-le-niveau-du-canal-de-panama-et-perturbe-le-commerce-mondial-92326",
+        "value": "El Niño fait baisser le niveau du canal de Panama et perturbe le commerce mondial"
+      },
+      {
+        "evidence_id": "ind:acp:ACP.GATUN.NIVEL:2026-09-14",
+        "excerpt": "ACP: nivel del lago Gatún (observado), 2026-09-14: 84.28 pies",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2026-09-14",
+        "url": "https://evtms-rpts.pancanal.com/eng/h2o/Download_Gatun_Lake_Water_Level_History.csv",
+        "value": 84.28
+      },
+      {
+        "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+        "excerpt": "Exports of goods and services (% of GDP) = 44.3578422661429 % del PIB",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2024",
+        "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NE.EXP.GNFS.ZS",
+        "value": 44.3578422661429
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.6,
+      "I": 0.9,
+      "N": 1.0,
+      "R": 0.72,
+      "U": 0.0005,
+      "rationale": {
+        "E": "1+ evidencia oficial; hasta 1 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema logistica_canal = 0.7; +0.2 por evidencia oficial pertinente",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Relacionado con Panamá; tema en alcance (logistica_canal, confianza 0.30)",
+        "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 366 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 65.1,
+    "tier": "medio"
+  },
+  "recommended_action": "Seguimiento: reunir evidencia adicional. Fuente sugerida para verificar: Autoridad del Canal de Panamá (ACP).",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0087-1",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-11224bbdacde85be739d"
+        ]
+      }
+    ],
+    "max_possible_independent": 1,
+    "outlets": 1,
+    "publications": 1,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [
+    {
+      "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+      "message": "Dato histórico — 2024. No presentarlo como medición actual.",
+      "period": "2024"
+    },
+    {
+      "evidence_id": "ind:acp:ACP.GATUN.NIVEL:2026-09-14",
+      "message": "Dato de 2026-09-14 (ACP). Citarlo siempre con su fecha; no es una medición en tiempo real.",
+      "period": "2026-09-14"
+    }
+  ],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "El Niño fait baisser le niveau du canal de Panama et perturbe le commerce mondial",
+  "topic": "logistica_canal",
+  "topic_confidence": 0.3
+}

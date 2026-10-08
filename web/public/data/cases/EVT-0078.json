@@ -1,0 +1,366 @@
+{
+  "claims": [
+    {
+      "attributed_to": "telemetro.com y 1 medio(s) más",
+      "claim_id": "CLM-0078-001",
+      "event_id": "EVT-0078",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-f63259a11c73800d786e",
+          "excerpt": "Canal de Panamá reduce el tránsito de buques por El Niño: ¿qué significa para el país?",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.telemetro.com/nacionales/canal-panama-reduce-el-transito-buques-el-nino-que-significa-el-pais-n6090876",
+          "value": "Canal de Panamá reduce el tránsito de buques por El Niño: ¿qué significa para el país?"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "Canal de Panamá reduce el tránsito de buques por El Niño: ¿qué significa para el país?",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    },
+    {
+      "attributed_to": null,
+      "claim_id": "CLM-0078-002",
+      "event_id": "EVT-0078",
+      "evidence": [
+        {
+          "evidence_id": "ind:acp:ACP.GATUN.NIVEL:2026-09-04",
+          "excerpt": "ACP: nivel del lago Gatún (observado), 2026-09-04: 84.0 pies",
+          "field": "valor",
+          "kind": "indicador",
+          "period": "2026-09-04",
+          "url": "https://evtms-rpts.pancanal.com/eng/h2o/Download_Gatun_Lake_Water_Level_History.csv",
+          "value": 84.0
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Dato oficial reciente de contexto; no confirma por sí mismo el titular.",
+      "statement": "Según ACP, nivel del lago Gatún (observado) en 2026-09-04: 84.0 pies",
+      "status": "SUSTENTADA",
+      "temporal_note": null,
+      "type": "HECHO"
+    },
+    {
+      "attributed_to": "revistaeyn.com",
+      "claim_id": "CLM-0078-003",
+      "event_id": "EVT-0078",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-409dc5940ab8ce42363a",
+          "excerpt": "Canal de Panamá flexibiliza el sistema de reservas en medio de restricción al tránsito",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.revistaeyn.com/centroamericaymundo/canal-de-panama-flexibiliza-el-sistema-de-reservas-en-medio-de-restriccion-al-transito-NN31877587",
+          "value": "Canal de Panamá flexibiliza el sistema de reservas en medio de restricción al tránsito"
+        }
+      ],
+      "extracted_by": "llm:ollama:qwen3:8b@claims-v1",
+      "reason": "Extraída del titular; afirmada por el medio, sin verificación oficial.",
+      "statement": "Canal de Panamá flexibiliza el sistema de reservas en medio de restricción al tránsito",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    },
+    {
+      "attributed_to": "telemetro.com",
+      "claim_id": "CLM-0078-004",
+      "event_id": "EVT-0078",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-f63259a11c73800d786e",
+          "excerpt": "Canal de Panamá reduce el tránsito de buques por El Niño: ¿qué significa para el país?",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.telemetro.com/nacionales/canal-panama-reduce-el-transito-buques-el-nino-que-significa-el-pais-n6090876",
+          "value": "Canal de Panamá reduce el tránsito de buques por El Niño: ¿qué significa para el país?"
+        }
+      ],
+      "extracted_by": "llm:ollama:qwen3:8b@claims-v1",
+      "reason": "Extraída del titular; afirmada por el medio, sin verificación oficial.",
+      "statement": "Canal de Panamá reduce el tránsito de buques por El Niño",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 7.0,
+    "I": 22.5,
+    "N": 15.0,
+    "R": 27.6,
+    "U": 0.0
+  },
+  "entities": [
+    "Canal de Panamá"
+  ],
+  "event_id": "EVT-0078",
+  "evidence_status": "parcial",
+  "evidence_status_reason": "Existe evidencia oficial de contexto, pero no respalda directamente la afirmación central.",
+  "first_detected": "2026-08-31T18:00:00Z",
+  "first_published": null,
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma Autoridad del Canal de Panamá (ACP) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Canal de Panamá reduce el tránsito de buques por El Niño: ¿qué significa para el país?»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0078-001",
+      "CLM-0078-003",
+      "CLM-0078-004"
+    ],
+    "we_dont_know": [
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": [
+      "CLM-0078-002"
+    ]
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-409dc5940ab8ce42363a",
+      "idioma": "es",
+      "medio": "revistaeyn.com",
+      "origen": "gdelt",
+      "titulo": "Canal de Panamá flexibiliza el sistema de reservas en medio de restricción al tránsito",
+      "url": "https://www.revistaeyn.com/centroamericaymundo/canal-de-panama-flexibiliza-el-sistema-de-reservas-en-medio-de-restriccion-al-transito-NN31877587"
+    },
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-f63259a11c73800d786e",
+      "idioma": "es",
+      "medio": "telemetro.com",
+      "origen": "gdelt",
+      "titulo": "Canal de Panamá reduce el tránsito de buques por El Niño: ¿qué significa para el país?",
+      "url": "https://www.telemetro.com/nacionales/canal-panama-reduce-el-transito-buques-el-nino-que-significa-el-pais-n6090876"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": null,
+  "member_ids": [
+    "gdt-409dc5940ab8ce42363a",
+    "gdt-f63259a11c73800d786e"
+  ],
+  "official_evidence": [
+    {
+      "evidence_id": "ind:acp:ACP.GATUN.NIVEL:2026-09-04",
+      "excerpt": "ACP: nivel del lago Gatún (observado), 2026-09-04: 84.0 pies",
+      "field": "valor",
+      "kind": "indicador",
+      "period": "2026-09-04",
+      "url": "https://evtms-rpts.pancanal.com/eng/h2o/Download_Gatun_Lake_Water_Level_History.csv",
+      "value": 84.0
+    },
+    {
+      "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+      "excerpt": "Exports of goods and services (% of GDP) = 44.3578422661429 % del PIB",
+      "field": "valor",
+      "kind": "indicador",
+      "period": "2024",
+      "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NE.EXP.GNFS.ZS",
+      "value": 44.3578422661429
+    }
+  ],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0078-001",
+          "CLM-0078-004"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según telemetro.com y otros medios, el Canal de Panamá está reduciendo el tránsito de buques debido al fenómeno climático El Niño. Esta situación podría afectar la logística y la economía del país."
+      },
+      {
+        "claim_ids": [
+          "CLM-0078-002"
+        ],
+        "tag": "HECHO",
+        "text": "El nivel del lago Gatún, un factor clave en el funcionamiento del canal, fue de 84.0 pies el 4 de septiembre de 2026, según datos del ACP."
+      },
+      {
+        "claim_ids": [
+          "CLM-0078-003"
+        ],
+        "tag": "DECLARACION",
+        "text": "Revistaeyn.com reporta que el Canal de Panamá flexibilizó el sistema de reservas para buques en medio de la restricción al tránsito."
+      }
+    ],
+    "event_id": "EVT-0078",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T20:56:32.668329Z",
+      "latency_ms": 16171,
+      "mode": "cache",
+      "model": "ollama:qwen3:8b",
+      "params": {
+        "num_ctx": 4096,
+        "seed": 42,
+        "temperature": 0
+      },
+      "prompt_version": "studio-v1",
+      "tokens_in": 1567,
+      "tokens_out": 825
+    },
+    "investigation_questions": [
+      "¿Cuál es el impacto exacto del El Niño en el tránsito marítimo del Canal de Panamá?",
+      "¿Cómo está afectando la reducción del tránsito a la economía y logística del país?",
+      "¿Qué medidas específicas ha tomado el Canal de Panamá para adaptarse a la situación actual?"
+    ],
+    "package_id": "PKG-0078-studio-v1",
+    "pending_verifications": [
+      "Confirmar el impacto real del El Niño en el tránsito marítimo del Canal de Panamá.",
+      "Verificar cómo la reducción del tránsito afecta la economía y la logística del país.",
+      "Revisar las medidas específicas tomadas por el Canal de Panamá para adaptarse a la situación.",
+      "Verificar: Canal de Panamá reduce el tránsito de buques por El Niño: ¿qué significa para el país?",
+      "Verificar: Canal de Panamá flexibiliza el sistema de reservas en medio de restricción al tránsito",
+      "Verificar: Canal de Panamá reduce el tránsito de buques por El Niño",
+      "Dato histórico — 2024. No presentarlo como medición actual.",
+      "Dato de 2026-09-04 (ACP). Citarlo siempre con su fecha; no es una medición en tiempo real."
+    ],
+    "proposed_title": "Canal de Panamá reduce el tránsito de buques por El Niño: ¿qué significa para el país?",
+    "public_interest_angle": "El Niño afecta el tránsito marítimo en el Canal de Panamá, lo que podría impactar la logística y la economía del país.",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0078-001",
+          "CLM-0078-002",
+          "CLM-0078-003",
+          "CLM-0078-004"
+        ],
+        "tag": "DECLARACION",
+        "text": "El Canal de Panamá está reduciendo el tránsito de buques debido al fenómeno El Niño, según medios como telemetro.com. Esta situación podría afectar la logística y la economía del país. El nivel del lago Gatún, un factor clave en el funcionamiento del canal, fue de 84.0 pies el 4 de septiembre de 2026, según datos del ACP. Además, se reporta que el canal flexibilizó el sistema de reservas para buques en medio de la restricción al tránsito."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0078-001",
+        "CLM-0078-004"
+      ],
+      "tag": "DECLARACION",
+      "text": "El Canal de Panamá reduce el tránsito de buques por El Niño. ¿Qué significa para el país? #CanalPanama #ElNino #Logistica"
+    },
+    "sources": [
+      {
+        "evidence_id": "news:gdt-f63259a11c73800d786e",
+        "excerpt": "Canal de Panamá reduce el tránsito de buques por El Niño: ¿qué significa para el país?",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.telemetro.com/nacionales/canal-panama-reduce-el-transito-buques-el-nino-que-significa-el-pais-n6090876",
+        "value": "Canal de Panamá reduce el tránsito de buques por El Niño: ¿qué significa para el país?"
+      },
+      {
+        "evidence_id": "ind:acp:ACP.GATUN.NIVEL:2026-09-04",
+        "excerpt": "ACP: nivel del lago Gatún (observado), 2026-09-04: 84.0 pies",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2026-09-04",
+        "url": "https://evtms-rpts.pancanal.com/eng/h2o/Download_Gatun_Lake_Water_Level_History.csv",
+        "value": 84.0
+      },
+      {
+        "evidence_id": "news:gdt-409dc5940ab8ce42363a",
+        "excerpt": "Canal de Panamá flexibiliza el sistema de reservas en medio de restricción al tránsito",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.revistaeyn.com/centroamericaymundo/canal-de-panama-flexibiliza-el-sistema-de-reservas-en-medio-de-restriccion-al-transito-NN31877587",
+        "value": "Canal de Panamá flexibiliza el sistema de reservas en medio de restricción al tránsito"
+      },
+      {
+        "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+        "excerpt": "Exports of goods and services (% of GDP) = 44.3578422661429 % del PIB",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2024",
+        "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NE.EXP.GNFS.ZS",
+        "value": 44.3578422661429
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.7,
+      "I": 0.9,
+      "N": 1.0,
+      "R": 0.92,
+      "U": 0.0,
+      "rationale": {
+        "E": "1+ evidencia oficial; hasta 2 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema logistica_canal = 0.7; +0.2 por evidencia oficial pertinente",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Relacionado con Panamá; tema en alcance (logistica_canal, confianza 0.80)",
+        "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 606 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 72.1,
+    "tier": "alto"
+  },
+  "recommended_action": "Investigar los vacíos antes de producir. Fuente sugerida para verificar: Autoridad del Canal de Panamá (ACP). La prioridad alta NO habilita publicación.",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0078-1",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-409dc5940ab8ce42363a"
+        ]
+      },
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0078-2",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-f63259a11c73800d786e"
+        ]
+      }
+    ],
+    "max_possible_independent": 2,
+    "outlets": 2,
+    "publications": 2,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [
+    {
+      "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+      "message": "Dato histórico — 2024. No presentarlo como medición actual.",
+      "period": "2024"
+    },
+    {
+      "evidence_id": "ind:acp:ACP.GATUN.NIVEL:2026-09-04",
+      "message": "Dato de 2026-09-04 (ACP). Citarlo siempre con su fecha; no es una medición en tiempo real.",
+      "period": "2026-09-04"
+    }
+  ],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "Canal de Panamá reduce el tránsito de buques por El Niño: ¿qué significa para el país?",
+  "topic": "logistica_canal",
+  "topic_confidence": 0.8
+}

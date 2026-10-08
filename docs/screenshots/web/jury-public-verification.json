@@ -1,0 +1,33 @@
+{
+  "base": "https://scayl-editorial.vercel.app",
+  "offline": false,
+  "wifi_initial": "sin cambio",
+  "screens": [
+    "desktop /",
+    "desktop /recorrido/",
+    "desktop /caso/EVT-0101/",
+    "desktop /consultas/",
+    "desktop /trust-lab/",
+    "desktop /simulador/",
+    "mobile /",
+    "mobile /recorrido/",
+    "mobile /caso/EVT-0101/",
+    "mobile /consultas/",
+    "mobile /trust-lab/",
+    "mobile /simulador/"
+  ],
+  "checks": [
+    "cinco pasos del recorrido",
+    "enlaces profundos y recarga",
+    "citas desplegables",
+    "borrador guardado",
+    "abstención",
+    "teclado de pestañas",
+    "tres fichas conservan P, motivos, advertencias, brief y modo",
+    "métricas originales inspeccionables",
+    "sin desbordamiento horizontal",
+    "sin peticiones externas ni errores"
+  ],
+  "errors": [],
+  "external": []
+}

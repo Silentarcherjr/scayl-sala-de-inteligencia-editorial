@@ -1,0 +1,289 @@
+{
+  "claims": [
+    {
+      "attributed_to": "elcaribe.com.do y 1 medio(s) más",
+      "claim_id": "CLM-0051-001",
+      "event_id": "EVT-0051",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-2c6c6838a15a23376466",
+          "excerpt": "El buque gasífero surcoreano cruza el Canal de Panamá",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.elcaribe.com.do/panorama/internacionales/buque-surcoreano-canal-de-panama/",
+          "value": "El buque gasífero surcoreano cruza el Canal de Panamá"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "El buque gasífero surcoreano cruza el Canal de Panamá",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    },
+    {
+      "attributed_to": "laestrella.com.pa",
+      "claim_id": "CLM-0051-002",
+      "event_id": "EVT-0051",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-b8036bf3f39cdd4e8047",
+          "excerpt": "Canal de Panamá cobra una cifra récord: buque paga $5.3 millones por cruzar",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.laestrella.com.pa/panama/nacional/canal-de-panama-cobra-una-cifra-record-buque-paga-53-millones-por-cruzar-MG25233960",
+          "value": "Canal de Panamá cobra una cifra récord: buque paga $5.3 millones por cruzar"
+        }
+      ],
+      "extracted_by": "llm:ollama:qwen3:8b@claims-v1",
+      "reason": "Extraída del titular; afirmada por el medio, sin verificación oficial.",
+      "statement": "Canal de Panamá cobra una cifra récord: buque paga $5.3 millones por cruzar",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 7.0,
+    "I": 22.5,
+    "N": 15.0,
+    "R": 26.4,
+    "U": 0.0
+  },
+  "entities": [
+    "Canal de Panamá"
+  ],
+  "event_id": "EVT-0051",
+  "evidence_status": "parcial",
+  "evidence_status_reason": "Existe evidencia oficial de contexto, pero no respalda directamente la afirmación central.",
+  "first_detected": "2026-08-28T18:00:00Z",
+  "first_published": null,
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma Autoridad del Canal de Panamá (ACP) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «El buque gasífero surcoreano cruza el Canal de Panamá»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0051-001",
+      "CLM-0051-002"
+    ],
+    "we_dont_know": [
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": []
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-2c6c6838a15a23376466",
+      "idioma": "es",
+      "medio": "elcaribe.com.do",
+      "origen": "gdelt",
+      "titulo": "El buque gasífero surcoreano cruza el Canal de Panamá",
+      "url": "https://www.elcaribe.com.do/panorama/internacionales/buque-surcoreano-canal-de-panama/"
+    },
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-b8036bf3f39cdd4e8047",
+      "idioma": "es",
+      "medio": "laestrella.com.pa",
+      "origen": "gdelt",
+      "titulo": "Canal de Panamá cobra una cifra récord: buque paga $5.3 millones por cruzar",
+      "url": "https://www.laestrella.com.pa/panama/nacional/canal-de-panama-cobra-una-cifra-record-buque-paga-53-millones-por-cruzar-MG25233960"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": null,
+  "member_ids": [
+    "gdt-2c6c6838a15a23376466",
+    "gdt-b8036bf3f39cdd4e8047"
+  ],
+  "official_evidence": [
+    {
+      "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+      "excerpt": "Exports of goods and services (% of GDP) = 44.3578422661429 % del PIB",
+      "field": "valor",
+      "kind": "indicador",
+      "period": "2024",
+      "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NE.EXP.GNFS.ZS",
+      "value": 44.3578422661429
+    }
+  ],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0051-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según elcaribe.com.do y otros medios, un buque gasífero surcoreano cruzó el Canal de Panamá. La noticia se basa únicamente en titulares y metadatos, sin información detallada sobre el buque o su trayectoria."
+      },
+      {
+        "claim_ids": [
+          "CLM-0051-002"
+        ],
+        "tag": "DECLARACION",
+        "text": "Laestrella.com.pa reportó que el buque pagó $5.3 millones por cruzar el Canal de Panamá, lo que se considera una cifra récord. Sin embargo, no se proporciona evidencia adicional para confirmar este costo."
+      }
+    ],
+    "event_id": "EVT-0051",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T20:56:46.324562Z",
+      "latency_ms": 13653,
+      "mode": "cache",
+      "model": "ollama:qwen3:8b",
+      "params": {
+        "num_ctx": 4096,
+        "seed": 42,
+        "temperature": 0
+      },
+      "prompt_version": "studio-v1",
+      "tokens_in": 1173,
+      "tokens_out": 711
+    },
+    "investigation_questions": [
+      "¿Cuál es el nombre del buque y su destino final?",
+      "¿Qué información detallada se tiene sobre el costo de $5.3 millones?",
+      "¿Existen registros oficiales del Canal de Panamá que confirman el pago y la fecha del tránsito?"
+    ],
+    "package_id": "PKG-0051-studio-v1",
+    "pending_verifications": [
+      "Confirmar si el buque gasífero surcoreano cruzó efectivamente el Canal de Panamá.",
+      "Verificar si el costo de $5.3 millones es realmente un récord y si se tiene evidencia oficial.",
+      "Revisar los artículos completos de los medios para obtener más detalles sobre el buque y el tránsito.",
+      "Verificar: El buque gasífero surcoreano cruza el Canal de Panamá",
+      "Verificar: Canal de Panamá cobra una cifra récord: buque paga $5.3 millones por cruzar",
+      "Dato histórico — 2024. No presentarlo como medición actual."
+    ],
+    "proposed_title": "Buque gasífero surcoreano cruza el Canal de Panamá",
+    "public_interest_angle": "Movimiento logístico y tarifas del Canal de Panamá",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0051-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Un buque gasífero surcoreano cruzó el Canal de Panamá, según reportes de medios como elcaribe.com.do y otros medios. La noticia se basa únicamente en titulares y metadatos, sin información detallada sobre el buque o su trayectoria."
+      },
+      {
+        "claim_ids": [
+          "CLM-0051-002"
+        ],
+        "tag": "DECLARACION",
+        "text": "Laestrella.com.pa informó que el buque pagó $5.3 millones por cruzar el Canal, lo que se considera una cifra récord. Sin embargo, no se proporciona evidencia adicional para confirmar este costo."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0051-001"
+      ],
+      "tag": "DECLARACION",
+      "text": "Un buque gasífero surcoreano cruzó el Canal de Panamá, según medios como elcaribe.com.do. La noticia se basa únicamente en titulares y metadatos. ¿Qué más sabemos sobre este tránsito?"
+    },
+    "sources": [
+      {
+        "evidence_id": "news:gdt-2c6c6838a15a23376466",
+        "excerpt": "El buque gasífero surcoreano cruza el Canal de Panamá",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.elcaribe.com.do/panorama/internacionales/buque-surcoreano-canal-de-panama/",
+        "value": "El buque gasífero surcoreano cruza el Canal de Panamá"
+      },
+      {
+        "evidence_id": "news:gdt-b8036bf3f39cdd4e8047",
+        "excerpt": "Canal de Panamá cobra una cifra récord: buque paga $5.3 millones por cruzar",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.laestrella.com.pa/panama/nacional/canal-de-panama-cobra-una-cifra-record-buque-paga-53-millones-por-cruzar-MG25233960",
+        "value": "Canal de Panamá cobra una cifra récord: buque paga $5.3 millones por cruzar"
+      },
+      {
+        "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+        "excerpt": "Exports of goods and services (% of GDP) = 44.3578422661429 % del PIB",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2024",
+        "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NE.EXP.GNFS.ZS",
+        "value": 44.3578422661429
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.7,
+      "I": 0.9,
+      "N": 1.0,
+      "R": 0.88,
+      "U": 0.0,
+      "rationale": {
+        "E": "1+ evidencia oficial; hasta 2 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema logistica_canal = 0.7; +0.2 por evidencia oficial pertinente",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Relacionado con Panamá; tema en alcance (logistica_canal, confianza 0.70)",
+        "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 700 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 70.9,
+    "tier": "alto"
+  },
+  "recommended_action": "Investigar los vacíos antes de producir. Fuente sugerida para verificar: Autoridad del Canal de Panamá (ACP). La prioridad alta NO habilita publicación.",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0051-1",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-2c6c6838a15a23376466"
+        ]
+      },
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0051-2",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-b8036bf3f39cdd4e8047"
+        ]
+      }
+    ],
+    "max_possible_independent": 2,
+    "outlets": 2,
+    "publications": 2,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [
+    {
+      "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+      "message": "Dato histórico — 2024. No presentarlo como medición actual.",
+      "period": "2024"
+    }
+  ],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "El buque gasífero surcoreano cruza el Canal de Panamá",
+  "topic": "logistica_canal",
+  "topic_confidence": 0.7
+}

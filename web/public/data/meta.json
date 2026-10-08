@@ -1,0 +1,16 @@
+{
+  "events_total": 165,
+  "exported_at": "2026-10-08T02:22:55.969299+00:00",
+  "git_commit": "ea6171828fd9ed9e06ad8c61e7dd030d7864df48",
+  "signals_total": 187,
+  "signals_valid": 187,
+  "snapshot_cutoff_utc": "2026-10-01T00:00:00+00:00",
+  "snapshot_version": "v1",
+  "weights": {
+    "E": 10,
+    "I": 25,
+    "N": 15,
+    "R": 30,
+    "U": 20
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "claims": [
+    {
+      "attributed_to": "laestrella.com.pa",
+      "claim_id": "CLM-0077-001",
+      "event_id": "EVT-0077",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-a783bbb0c437d9c3179f",
+          "excerpt": "MEF apuesta a seguros tras emergencia nacional por El Niño en Panamá",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.laestrella.com.pa/economia/mef-apuesta-a-seguros-tras-emergencia-nacional-por-el-nino-en-panama-CD25402374",
+          "value": "MEF apuesta a seguros tras emergencia nacional por El Niño en Panamá"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "MEF apuesta a seguros tras emergencia nacional por El Niño en Panamá",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 1.0,
+    "I": 17.5,
+    "N": 15.0,
+    "R": 21.599999999999998,
+    "U": 0.0
+  },
+  "entities": [
+    "Panamá"
+  ],
+  "event_id": "EVT-0077",
+  "evidence_status": "insuficiente",
+  "evidence_status_reason": "Fuente única o de procedencia común, sin evidencia oficial.",
+  "first_detected": "2026-09-03T18:00:00Z",
+  "first_published": null,
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma SINAPROC (Sistema Nacional de Protección Civil) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «MEF apuesta a seguros tras emergencia nacional por El Niño en Panamá»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0077-001"
+    ],
+    "we_dont_know": [
+      "Ninguna fuente oficial del corpus confirma el hecho central.",
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": []
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-a783bbb0c437d9c3179f",
+      "idioma": "es",
+      "medio": "laestrella.com.pa",
+      "origen": "gdelt",
+      "titulo": "MEF apuesta a seguros tras emergencia nacional por El Niño en Panamá",
+      "url": "https://www.laestrella.com.pa/economia/mef-apuesta-a-seguros-tras-emergencia-nacional-por-el-nino-en-panama-CD25402374"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": null,
+  "member_ids": [
+    "gdt-a783bbb0c437d9c3179f"
+  ],
+  "official_evidence": [],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0077-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según laestrella.com.pa: MEF apuesta a seguros tras emergencia nacional por El Niño en Panamá."
+      }
+    ],
+    "event_id": "EVT-0077",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T21:01:27.514522Z",
+      "latency_ms": 0,
+      "mode": "template",
+      "model": null,
+      "params": {},
+      "prompt_version": "template-v1",
+      "tokens_in": null,
+      "tokens_out": null
+    },
+    "investigation_questions": [
+      "¿Qué confirma SINAPROC (Sistema Nacional de Protección Civil) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «MEF apuesta a seguros tras emergencia nacional por El Niño en Panamá»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "package_id": "PKG-0077-template-v1",
+    "pending_verifications": [
+      "Verificar: MEF apuesta a seguros tras emergencia nacional por El Niño en Panamá"
+    ],
+    "proposed_title": "Lo que se sabe y lo que falta verificar: MEF apuesta a seguros tras emergencia nacional por El Niño en Panamá",
+    "public_interest_angle": "Tema de eventos naturales con relevancia para Panamá; estado de la evidencia: insuficiente.",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0077-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según laestrella.com.pa: MEF apuesta a seguros tras emergencia nacional por El Niño en Panamá."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0077-001"
+      ],
+      "tag": "DECLARACION",
+      "text": "Según laestrella.com.pa: MEF apuesta a seguros tras emergencia nacional por El Niño en Panamá."
+    },
+    "sources": [
+      {
+        "evidence_id": "news:gdt-a783bbb0c437d9c3179f",
+        "excerpt": "MEF apuesta a seguros tras emergencia nacional por El Niño en Panamá",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.laestrella.com.pa/economia/mef-apuesta-a-seguros-tras-emergencia-nacional-por-el-nino-en-panama-CD25402374",
+        "value": "MEF apuesta a seguros tras emergencia nacional por El Niño en Panamá"
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.1,
+      "I": 0.7,
+      "N": 1.0,
+      "R": 0.72,
+      "U": 0.0,
+      "rationale": {
+        "E": "0 evidencia oficial; hasta 1 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema eventos_naturales = 0.7",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Relacionado con Panamá; tema en alcance (eventos_naturales, confianza 0.30)",
+        "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 654 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 55.1,
+    "tier": "medio"
+  },
+  "recommended_action": "Monitorear; no producir aún. Fuente sugerida para verificar: SINAPROC (Sistema Nacional de Protección Civil).",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0077-1",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-a783bbb0c437d9c3179f"
+        ]
+      }
+    ],
+    "max_possible_independent": 1,
+    "outlets": 1,
+    "publications": 1,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "MEF apuesta a seguros tras emergencia nacional por El Niño en Panamá",
+  "topic": "eventos_naturales",
+  "topic_confidence": 0.3
+}

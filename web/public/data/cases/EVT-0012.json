@@ -1,0 +1,190 @@
+{
+  "claims": [
+    {
+      "attributed_to": "TVN",
+      "claim_id": "CLM-0012-001",
+      "event_id": "EVT-0012",
+      "evidence": [
+        {
+          "evidence_id": "news:tvn-726fbd62c3b626736fbd",
+          "excerpt": "TVN Radio y TVMAX dan el 'Kick-Off' al Carnaval con una lluvia de regalos en vía Centenario",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.tvn-2.com/nacionales/tvn-radio-tvmax-dan-kick-carnaval_1_2227551.html",
+          "value": "TVN Radio y TVMAX dan el 'Kick-Off' al Carnaval con una lluvia de regalos en vía Centenario"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "TVN Radio y TVMAX dan el 'Kick-Off' al Carnaval con una lluvia de regalos en vía Centenario",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 1.0,
+    "I": 17.5,
+    "N": 15.0,
+    "R": 24.0,
+    "U": 0.0
+  },
+  "entities": [],
+  "event_id": "EVT-0012",
+  "evidence_status": "insuficiente",
+  "evidence_status_reason": "Fuente única o de procedencia común, sin evidencia oficial.",
+  "first_detected": null,
+  "first_published": "2026-02-13T23:13:59Z",
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma SINAPROC (Sistema Nacional de Protección Civil) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «TVN Radio y TVMAX dan el 'Kick-Off' al Carnaval con una lluvia de regalos en vía Centenario»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0012-001"
+    ],
+    "we_dont_know": [
+      "Ninguna fuente oficial del corpus confirma el hecho central.",
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": []
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": "2026-02-13T23:13:59Z",
+      "id_noticia": "tvn-726fbd62c3b626736fbd",
+      "idioma": "es",
+      "medio": "TVN",
+      "origen": "tvn_rss",
+      "titulo": "TVN Radio y TVMAX dan el 'Kick-Off' al Carnaval con una lluvia de regalos en vía Centenario",
+      "url": "https://www.tvn-2.com/nacionales/tvn-radio-tvmax-dan-kick-carnaval_1_2227551.html"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": "2026-02-13T23:13:59Z",
+  "member_ids": [
+    "tvn-726fbd62c3b626736fbd"
+  ],
+  "official_evidence": [],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0012-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según TVN: TVN Radio y TVMAX dan el 'Kick-Off' al Carnaval con una lluvia de regalos en vía Centenario."
+      }
+    ],
+    "event_id": "EVT-0012",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T21:01:27.513658Z",
+      "latency_ms": 0,
+      "mode": "template",
+      "model": null,
+      "params": {},
+      "prompt_version": "template-v1",
+      "tokens_in": null,
+      "tokens_out": null
+    },
+    "investigation_questions": [
+      "¿Qué confirma SINAPROC (Sistema Nacional de Protección Civil) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «TVN Radio y TVMAX dan el 'Kick-Off' al Carnaval con una lluvia de regalos en vía Centenario»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "package_id": "PKG-0012-template-v1",
+    "pending_verifications": [
+      "Verificar: TVN Radio y TVMAX dan el 'Kick-Off' al Carnaval con una lluvia de regalos en vía Centenario"
+    ],
+    "proposed_title": "Lo que se sabe y lo que falta verificar: TVN Radio y TVMAX dan el 'Kick-Off' al Carnaval con una lluvia de regalos en vía Centenario",
+    "public_interest_angle": "Tema de eventos naturales con relevancia para Panamá; estado de la evidencia: insuficiente.",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0012-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según TVN: TVN Radio y TVMAX dan el 'Kick-Off' al Carnaval con una lluvia de regalos en vía Centenario."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0012-001"
+      ],
+      "tag": "DECLARACION",
+      "text": "Según TVN: TVN Radio y TVMAX dan el 'Kick-Off' al Carnaval con una lluvia de regalos en vía Centenario."
+    },
+    "sources": [
+      {
+        "evidence_id": "news:tvn-726fbd62c3b626736fbd",
+        "excerpt": "TVN Radio y TVMAX dan el 'Kick-Off' al Carnaval con una lluvia de regalos en vía Centenario",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.tvn-2.com/nacionales/tvn-radio-tvmax-dan-kick-carnaval_1_2227551.html",
+        "value": "TVN Radio y TVMAX dan el 'Kick-Off' al Carnaval con una lluvia de regalos en vía Centenario"
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.1,
+      "I": 0.7,
+      "N": 1.0,
+      "R": 0.8,
+      "U": 0.0,
+      "rationale": {
+        "E": "0 evidencia oficial; hasta 1 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema eventos_naturales = 0.7",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Relacionado con Panamá; tema en alcance (eventos_naturales, confianza 0.50)",
+        "U": "Publicación original más reciente: hace 5497 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 57.5,
+    "tier": "medio"
+  },
+  "recommended_action": "Monitorear; no producir aún. Fuente sugerida para verificar: SINAPROC (Sistema Nacional de Protección Civil).",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0012-1",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "tvn-726fbd62c3b626736fbd"
+        ]
+      }
+    ],
+    "max_possible_independent": 1,
+    "outlets": 1,
+    "publications": 1,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "TVN Radio y TVMAX dan el 'Kick-Off' al Carnaval con una lluvia de regalos en vía Centenario",
+  "topic": "eventos_naturales",
+  "topic_confidence": 0.5
+}
