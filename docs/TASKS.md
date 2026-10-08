@@ -29,7 +29,7 @@
 | A-03 | Ficha de Caso (6 pestañas) | **W** LowCrime | P0 | M1–M2 | DONE (PR #13) | A-01 |
 | A-04 | Consultas (Q&A) | **W** LowCrime | P0 | M2 | DONE (PR #25) | A-01 |
 | A-05 | Trust Lab (vista) | **L** Lead (DL-021) | P1 | M3 | DONE (AP-014 aplicada: red-team, procedencia y limitaciones visibles) | B-08 |
-| A-06 | Despliegue del enlace en modo `cache` | **W** LowCrime | P0 | M3 | PROBADO EN LOCAL (PR #58: stage con caché revisada, contraseña y rutas protegidas; falta publicar el Space privado) | AP-001, L-07 |
+| A-06 | Despliegue del enlace en modo `cache` | **W** LowCrime | P0 | M3 | DONE (https://scayl-demo.streamlit.app/ · Streamlit Cloud, contraseña, cache; verificada en remoto; DL-032) | AP-001, L-07 |
 | B-01 | Construir el snapshot propio según el PDF §6–7 (fetchers) → `data/raw/v1` | **F** frictionspp-svg | P0 | M0 | DONE (PR #19) | — |
 | B-02 | `ingest/manifest.py` (SHA-256, conteos, transformaciones) + diccionario | **F** frictionspp-svg | P0 | M0 | DONE (PR #19) | B-01 |
 | B-03 | `ingest/validate.py` + normalización → `data/processed` + `quality_report` (T01) | **L** Lead (DL-023) | P0 | M1 | DONE | B-01 |
