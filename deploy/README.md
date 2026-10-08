@@ -12,6 +12,9 @@ Hugging Face exige PRO (pago) para Spaces Docker o Gradio, así que se publica g
 
 Probado en local (DL-032): stage sin `PYTHONPATH` ni otras variables, solo la contraseña → acceso pedido, autenticación correcta, Sala en modo cache.
 
+**Publicado:** https://scayl-demo.streamlit.app/ desde el repo público [`Silentarcherjr/scayl-demo`](https://github.com/Silentarcherjr/scayl-demo) (`main` = `f4c7de1`), stage `deploy/stage-cloud` generado desde `ff3a7c2`; solo los 118 archivos inventariados en `PREPARATION.json`, con hashes verificados. Python 3.12; contraseña solo en Secrets de Streamlit.
+Verificación remota (2026-10-07): `/` y `/Trust_Lab` piden contraseña; una contraseña incorrecta se rechaza. El recorrido autenticado remoto no se midió desde esta sesión (la contraseña no se comparte con el agente); en local, con la correcta cargaron Sala, Ficha, Consultas y Trust Lab sin excepciones.
+
 ## Preparación original para HF Space Docker (requiere PRO; no se usa)
 
 
