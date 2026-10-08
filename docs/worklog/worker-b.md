@@ -112,3 +112,14 @@ Medición real E5 en CPU (torch 2.14.1+cpu, CUDA no disponible). Matrices ignora
 2026-10-07 21:03 UTC - DL-029: Temas por reglas y E5 para agrupar; nuevo top15 qwen3:8b live15/15, fallback0/15, citas45/45, mediana13131ms p9516997.5ms. Cache publica30 entradas sin descripciones; hashes32/32, stage118/118. pytest188 y Ruff verde. Space pendiente de LowCrime y Lead.
 
 2026-10-07 21:05 UTC - relevo DL-029: PR #55 abierto, @LowCrime mencionado; ver docs/handoff/frictionspp-svg.md.
+
+2026-10-08 05:27 UTC - DL-035 intento unico qwen3:8b/Vulkan RX9060XT8GiB: salida descartada, fallback1/1. Motivo: Se usó la plantilla determinista: La salida no conservó resumen, observaciones e hipótesis válidos. Qwen omitio claim_ids en resumen, observaciones e hipotesis; latencia cruda40262ms, tokens2050/1253. Revision humana no iniciada; cache publica intacta. 242 pytest con PYTHONUTF8=1 y Ruff verde. Sin reintento; requiere decision del Lead.
+2026-10-08 05:27 UTC - relevo: ver docs/handoff/frictionspp-svg.md; detenido por fallback segun instruccion humana.
+
+2026-10-08 05:36 UTC - DL-035 esquema aprobado por Lead: claim_ids requerido, minItems1 y enum del payload; bulletin-v3 copia identica de v2. Unico intento adicional live ollama:qwen3:8b, 33625ms, tokens2050/1771, incidencias0 y sin fallback; RX9060XT8GiB/Vulkan. 243 pytest con UTF8 y Ruff verde; npm ci/lint/build pasan antes de export. Texto completo mostrado al humano; aprobacion frictionspp-svg pendiente. Cache publica intacta.
+2026-10-08 05:36 UTC - relevo preventivo: ver docs/handoff/frictionspp-svg.md; siguiente paso revision humana, sin nueva inferencia.
+
+2026-10-08 05:47 UTC - DL-035 decision del Lead opcion A: intento1 fallback por claim_ids no obligatorio; intento2 valido pero anclado a plantilla_validada (observaciones9/9, hipotesis3/3 y preguntas3/3 identicas). No publicado como IA; boletin conserva Plantilla (sin IA generativa). Revert bab6ba8 restaura codigo/pruebas/prompt a main sin reescribir historia. Cache publica intacta; sin export ni nuevos intentos. Mejora futura no hecha: quitar plantilla del payload.
+2026-10-08 05:47 UTC - relevo: ver docs/handoff/frictionspp-svg.md; cerrado por decision del Lead, PR solo documental.
+
+2026-10-08 05:47 UTC - DL-035 cierre: pytest242 con PYTHONUTF8=1 y Ruff verde; diff origin/main scayl/tests/web/deploy vacio. PR solo documental.
