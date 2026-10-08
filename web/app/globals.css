@@ -26,3 +26,8 @@
 @media print{.bank-page>section{margin-bottom:0}.bank-page .sentence .citation{display:inline-block;border:0;padding:0;margin:2px 8px 0 0}.bank-page .sentence .citation summary{font-size:9px}.bank-page>section>.citation:last-child{margin-bottom:0}}
 @media print{.bank-page .bank-cited-sentence{display:flow-root}.bank-page li{break-inside:avoid}}
 @media print{.bank-page .card{border:0;padding:0;background:transparent}.bank-page .bank-hypotheses{border-left:3px solid #FEC526;padding:12px;background:#fffbec}.bank-page .sentence>.badge{display:block;width:fit-content}}
+
+/* DL-036: forms share the existing editorial design. */
+textarea { display:block; width:100%; margin:8px 0 16px; padding:12px; color:var(--text); background:white; border:1px solid #DCE1E7; border-radius:8px; font:inherit; resize:vertical; }
+form label { display:block; margin-top:16px; font-weight:600; }
+button:disabled { opacity:.6; cursor:wait; }

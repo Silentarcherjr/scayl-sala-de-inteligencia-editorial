@@ -45,8 +45,8 @@ Lo que no medimos queda escrito como **"no medido"**: no afirmamos ahorro de tie
 ## Probarlo
 **Demo web principal:** [SCAYL · Sala de Inteligencia Editorial](https://scayl-editorial.vercel.app/).
 Next.js estático en Vercel: los mismos 165 eventos, componentes, evidencia y paquetes de SCAYL.
-Las consultas guiadas usan resultados precalculados; la pregunta libre enlaza a Streamlit.
-La revisión de la demo web es de solo lectura.
+Las consultas guiadas usan resultados precalculados; la consulta libre utiliza la API Python en modo caché.
+La revisión de la demo web valida la decisión y guarda recibos en este navegador (DL-036).
 
 **Extensión bancaria:** abre `/boletin/` para leer el boletín de Logística y Canal (CU-05) y usa «Imprimir / guardar PDF». El boletín incluido es una plantilla, sin IA generativa; no evalúan personas ni recomiendan operaciones.
 
@@ -78,7 +78,7 @@ python -m scayl.pipeline build --snapshot data/raw/v1 --llm live  # requiere Oll
 python -m pytest -q && ruff check .
 ```
 
-**Respaldo Streamlit y pregunta libre:** https://scayl-demo.streamlit.app/ (Streamlit Community Cloud, modo cache, acceso abierto sin contraseña). Recomendado: empezar por **Consultas → Modo jurado**, cuyas preguntas tienen respuestas de IA precalculadas. Despliegue en `deploy/README.md`.
+**Versión de respaldo (Streamlit):** https://scayl-demo.streamlit.app/ (Streamlit Community Cloud, modo cache, acceso abierto sin contraseña). Recomendado: empezar por **Consultas → Modo jurado**, cuyas preguntas tienen respuestas de IA precalculadas. Despliegue en `deploy/README.md`.
 
 ## Datos (snapshot `data/raw/v1`, manifest con SHA-256)
 - **Noticias:** GDELT (metadatos) y RSS de TVN, del 2025-10-02 al 2026-09-30 (aclaración oficial C-01). Solo titulares y metadatos.
@@ -104,3 +104,8 @@ Licencias y procedencia en `docs/notion_mirror/03_DATA_CATALOG.md`.
 | `AGENTS.md`, `CLAUDE.md`, `docs/TASKS.md` | Cómo trabajó el equipo humano + agentes |
 
 Equipo SCAYL: Silentarcherjr, frictionspp-svg y LowCrime, con agentes de código (Claude Code y Codex) bajo revisión humana.
+
+DL-036 añade consulta libre y revisión humana dentro de la web Next.js, con funciones Python nativas
+solo en modo caché. El historial de esta demo se guarda en el navegador y el recibo se descarga como
+JSON; aprobar como borrador no publica. El export estático conserva consultas de ejemplo offline.
+Detalles de empaquetado y límites: [web/README.md](web/README.md#dl-036--consulta-libre-y-revisión-en-nextjs).
