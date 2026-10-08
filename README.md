@@ -41,6 +41,23 @@ revisión humana. **La IA no decide qué es verdad ni qué se publica**: "aproba
 Lo que no medimos queda escrito como **"no medido"**: no afirmamos ahorro de tiempo sin el mini-estudio.
 
 ## Probarlo
+**Demo web principal:** [SCAYL · Sala de Inteligencia Editorial](https://scayl-editorial.vercel.app/).
+Next.js estático en Vercel: los mismos 165 eventos, componentes, evidencia y paquetes de SCAYL.
+Las consultas guiadas usan resultados precalculados; la pregunta libre enlaza a Streamlit.
+La revisión de la demo web es de solo lectura.
+
+**Web local (una vez construido el export, funciona sin internet):**
+```bash
+cd web
+npm ci
+npm run build
+npx serve out
+```
+Para regenerar los datos públicos desde el bundle revisado, ejecuta desde la raíz
+`python scripts/export_web.py` con el entorno Python del proyecto activo. Los JSON de
+`web/public/data/` están versionados; Vercel no necesita Python ni variables de entorno.
+Detalles y evidencia de verificación en `web/README.md` y `docs/screenshots/web/`.
+
 **Demo sin internet (recomendado, sin GPU ni compilación):**
 ```bash
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
@@ -57,7 +74,7 @@ python -m scayl.pipeline build --snapshot data/raw/v1 --llm live  # requiere Oll
 python -m pytest -q && ruff check .
 ```
 
-**Enlace del jurado:** https://scayl-demo.streamlit.app/ (Streamlit Community Cloud, modo cache, acceso abierto sin contraseña). Recomendado: empezar por **Consultas → Modo jurado**, cuyas preguntas tienen respuestas de IA precalculadas. Despliegue en `deploy/README.md`.
+**Respaldo Streamlit y pregunta libre:** https://scayl-demo.streamlit.app/ (Streamlit Community Cloud, modo cache, acceso abierto sin contraseña). Recomendado: empezar por **Consultas → Modo jurado**, cuyas preguntas tienen respuestas de IA precalculadas. Despliegue en `deploy/README.md`.
 
 ## Datos (snapshot `data/raw/v1`, manifest con SHA-256)
 - **Noticias:** GDELT (metadatos) y RSS de TVN, del 2025-10-02 al 2026-09-30 (aclaración oficial C-01). Solo titulares y metadatos.

@@ -1,0 +1,83 @@
+{
+  "run_at_utc": "2026-10-08T02:41:34.301123+00:00",
+  "browser": {
+    "screens": 5,
+    "mobile": true,
+    "external": [],
+    "errors": [],
+    "interactions": "filters, eight tabs, citations, conflicts, eight queries, search, simulator and offline navigation",
+    "network": "all non-loopback requests blocked"
+  },
+  "parity": {
+    "cases": [
+      {
+        "event_id": "EVT-0101",
+        "score": 89.9,
+        "components": {
+          "R": 0.96,
+          "I": 0.9,
+          "U": 0.8825,
+          "N": 1.0,
+          "E": 0.6,
+          "rationale": {
+            "R": "Relacionado con Panamá; tema en alcance (logistica_canal, confianza 0.90)",
+            "I": "Peso editorial del tema logistica_canal = 0.7; +0.2 por evidencia oficial pertinente",
+            "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 6 h respecto al corte",
+            "N": "Sin eventos previos similares en la ventana",
+            "E": "1+ evidencia oficial; hasta 1 procedencias posibles; 0 independientes confirmadas"
+          }
+        },
+        "status": "parcial",
+        "mode": "cache",
+        "streamlit": "passed"
+      },
+      {
+        "event_id": "EVT-0139",
+        "score": 39.0,
+        "components": {
+          "R": 0.6,
+          "I": 0.2,
+          "U": 0.0,
+          "N": 1.0,
+          "E": 0.1,
+          "rationale": {
+            "R": "Relacionado con Panamá; tema fuera de alcance",
+            "I": "Peso editorial del tema otro = 0.2",
+            "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 1254 h respecto al corte",
+            "N": "Sin eventos previos similares en la ventana",
+            "E": "0 evidencia oficial; hasta 1 procedencias posibles; 0 independientes confirmadas"
+          }
+        },
+        "status": "insuficiente",
+        "mode": "template",
+        "streamlit": "passed"
+      },
+      {
+        "event_id": "EVT-0027",
+        "score": 39.0,
+        "components": {
+          "R": 0.6,
+          "I": 0.2,
+          "U": 0.0,
+          "N": 1.0,
+          "E": 0.1,
+          "rationale": {
+            "R": "Relacionado con Panamá; tema fuera de alcance",
+            "I": "Peso editorial del tema otro = 0.2",
+            "U": "Publicación original más reciente: hace 2146 h respecto al corte",
+            "N": "Sin eventos previos similares en la ventana",
+            "E": "0 evidencia oficial; hasta 1 procedencias posibles; 0 independientes confirmadas"
+          }
+        },
+        "status": "insuficiente",
+        "mode": "template",
+        "streamlit": "passed"
+      }
+    ],
+    "simulator": "all 165 rows match service.simulate_weights"
+  },
+  "wifi": "Wi-Fi en0 Off verificado; recorrido Chromium de cinco pantallas e interacciones OK. Restaurado al estado inicial.",
+  "pytest": "197 passed",
+  "ruff": "passed",
+  "build": "171 static routes"
+}

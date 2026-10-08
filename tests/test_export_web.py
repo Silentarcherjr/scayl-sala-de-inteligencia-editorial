@@ -23,6 +23,8 @@ def test_export_public_parity(tmp_path):
         assert case["package"] == (package.model_dump(mode="json") if package else None)
         assert all("descripcion" not in h for h in case["headlines"])
     first = {}
+    first_bytes = {p.relative_to(tmp_path): p.read_bytes() for p in tmp_path.rglob("*.json")
+                   if p.name != "meta.json"}
     for path in tmp_path.rglob("*.json"):
         value = json.loads(path.read_text())
         check_public(value)
@@ -30,6 +32,8 @@ def test_export_public_parity(tmp_path):
             value.pop("exported_at")
         first[path.relative_to(tmp_path)] = value
     export(tmp_path)
+    for relative, content in first_bytes.items():
+        assert (tmp_path / relative).read_bytes() == content
     for relative, value in first.items():
         second = json.loads((tmp_path / relative).read_text())
         if relative == Path("meta.json"):

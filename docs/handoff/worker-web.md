@@ -1,20 +1,20 @@
-# Relevo · worker-web · 2026-10-08 02:35 UTC
+# Relevo · worker-web · 2026-10-08 02:49 UTC
 
 - **Motivo:** relevo preventivo al cerrar etapa; trabajo continúa.
-- **Rama:** `worker-web/next-static` · **Commit anterior:** `ae7ced8`; el commit de esta etapa incluye esta nota y se sube a origin.
+- **Rama:** `worker-web/next-static` · **Commit anterior:** `86ffd19`; el commit de esta etapa incluye esta nota y se sube a origin.
 - **PR abierto:** ninguno
 
 ## Tarea en curso
-DL-034 — web Next.js estática. Etapa 6 completada.
+DL-034 — web Next.js estática. Etapa 7 completada.
 
 ## Hecho en esta sesión
-Workflow web con npm ci, lint y build; actions fijadas y sin secretos
+README con URL pública https://scayl-editorial.vercel.app/, diez capturas, verificación offline y contraste Streamlit; Vercel en cuenta silentarcherjr conectado al repo
 
 ## Siguiente paso concreto
-Etapa 7: README, capturas, recorrido offline, contraste Streamlit y PR
+Crear PR hacia main para revisión del Lead y desplegar el commit final
 
 ## Estado de las pruebas
-197 passed; ruff OK; npm ci/lint/build OK
+197 passed; ruff OK; npm ci/lint/build OK; Wi-Fi apagado y restaurado; cero red externa y errores; tres casos y 165 filas de simulador coinciden; cinco pantallas públicas verificadas
 
 ## Archivos tocados
 Consultar el commit de la etapa y git diff origin/main. Solo archivos autorizados por WEB_NEXT_PLAN.
