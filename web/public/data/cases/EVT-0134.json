@@ -1,0 +1,210 @@
+{
+  "claims": [
+    {
+      "attributed_to": "euronews.com y 1 medio(s) más",
+      "claim_id": "CLM-0134-001",
+      "event_id": "EVT-0134",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-e106d696c770790587a7",
+          "excerpt": "Proyecto Panamá: Anthropic destruye millones de libros en secreto",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://es.euronews.com/cultura/2026/08/05/proyecto-panama-anthropic-destruye-millones-de-libros-en-secreto-para-entrenar-su-ia",
+          "value": "Proyecto Panamá: Anthropic destruye millones de libros en secreto"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "Proyecto Panamá: Anthropic destruye millones de libros en secreto",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 2.0,
+    "I": 5.0,
+    "N": 15.0,
+    "R": 18.0,
+    "U": 0.0
+  },
+  "entities": [
+    "Panamá"
+  ],
+  "event_id": "EVT-0134",
+  "evidence_status": "parcial",
+  "evidence_status_reason": "Hasta 2 procedencias posiblemente independientes, sin evidencia oficial.",
+  "first_detected": "2026-08-05T18:00:00Z",
+  "first_published": null,
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma Fuente primaria del hecho reportado sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Proyecto Panamá: Anthropic destruye millones de libros en secreto»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0134-001"
+    ],
+    "we_dont_know": [
+      "Ninguna fuente oficial del corpus confirma el hecho central.",
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": []
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-af7839dd7bb3b88fd076",
+      "idioma": "es",
+      "medio": "zocalo.com.mx",
+      "origen": "gdelt",
+      "titulo": "Preocupa Proyecto Panamá, de Anthropic, por destrucción de libros para alimentar IA – Periódico Zócalo | Noticias de Saltillo, Torreón,  Piedras Negras, Monclova, Acuña",
+      "url": "https://www.zocalo.com.mx/preocupa-proyecto-panama-de-anthropic-por-destruccion-de-libros-para-alimentar-ia/"
+    },
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-e106d696c770790587a7",
+      "idioma": "es",
+      "medio": "euronews.com",
+      "origen": "gdelt",
+      "titulo": "Proyecto Panamá: Anthropic destruye millones de libros en secreto",
+      "url": "https://es.euronews.com/cultura/2026/08/05/proyecto-panama-anthropic-destruye-millones-de-libros-en-secreto-para-entrenar-su-ia"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": null,
+  "member_ids": [
+    "gdt-af7839dd7bb3b88fd076",
+    "gdt-e106d696c770790587a7"
+  ],
+  "official_evidence": [],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0134-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según euronews.com y 1 medio(s) más: Proyecto Panamá: Anthropic destruye millones de libros en secreto."
+      }
+    ],
+    "event_id": "EVT-0134",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T21:01:27.518431Z",
+      "latency_ms": 0,
+      "mode": "template",
+      "model": null,
+      "params": {},
+      "prompt_version": "template-v1",
+      "tokens_in": null,
+      "tokens_out": null
+    },
+    "investigation_questions": [
+      "¿Qué confirma Fuente primaria del hecho reportado sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Proyecto Panamá: Anthropic destruye millones de libros en secreto»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "package_id": "PKG-0134-template-v1",
+    "pending_verifications": [
+      "Verificar: Proyecto Panamá: Anthropic destruye millones de libros en secreto"
+    ],
+    "proposed_title": "Lo que se sabe y lo que falta verificar: Proyecto Panamá: Anthropic destruye millones de libros en secreto",
+    "public_interest_angle": "Tema de otro con relevancia para Panamá; estado de la evidencia: parcial.",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0134-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según euronews.com y 1 medio(s) más: Proyecto Panamá: Anthropic destruye millones de libros en secreto."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0134-001"
+      ],
+      "tag": "DECLARACION",
+      "text": "Según euronews.com y 1 medio(s) más: Proyecto Panamá: Anthropic destruye millones de libros en secreto."
+    },
+    "sources": [
+      {
+        "evidence_id": "news:gdt-e106d696c770790587a7",
+        "excerpt": "Proyecto Panamá: Anthropic destruye millones de libros en secreto",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://es.euronews.com/cultura/2026/08/05/proyecto-panama-anthropic-destruye-millones-de-libros-en-secreto-para-entrenar-su-ia",
+        "value": "Proyecto Panamá: Anthropic destruye millones de libros en secreto"
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.2,
+      "I": 0.2,
+      "N": 1.0,
+      "R": 0.6,
+      "U": 0.0,
+      "rationale": {
+        "E": "0 evidencia oficial; hasta 2 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema otro = 0.2",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Relacionado con Panamá; tema fuera de alcance",
+        "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 1230 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 40.0,
+    "tier": "medio"
+  },
+  "recommended_action": "Seguimiento: reunir evidencia adicional. Fuente sugerida para verificar: Fuente primaria del hecho reportado.",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0134-1",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-af7839dd7bb3b88fd076"
+        ]
+      },
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0134-2",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-e106d696c770790587a7"
+        ]
+      }
+    ],
+    "max_possible_independent": 2,
+    "outlets": 2,
+    "publications": 2,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "Proyecto Panamá: Anthropic destruye millones de libros en secreto",
+  "topic": "otro",
+  "topic_confidence": null
+}

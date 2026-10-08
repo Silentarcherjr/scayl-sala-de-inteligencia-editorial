@@ -54,3 +54,5 @@ Codex · LowCrime · 2026-10-07 · Capturas finales: automatizó navegación/cap
 Codex · LowCrime · 2026-10-07 · Pulido UI: textos/ayudas en español y vacíos de Ficha, sin cambios funcionales; validación con suite existente, sin tests que dupliquen textos triviales.
 
 Codex ? LowCrime ? 2026-10-07 22:18 UTC ? B-09: transcripcion de 30 decisiones humanas recibidas interactivamente; no genero etiquetas. B-08 recalculada con alcance template explicito. A-06: auditoria de hashes/campos RSS, prueba local de autenticacion y cache, capturas reales del Trust Lab; no publico HF ni uso credenciales remotas.
+
+| Codex (GPT-6) | DL-034: exportador público y web Next.js estática | Implementación bajo WEB_NEXT_PLAN; paridad y rechazo RSS verificados con pytest. Validación final y capturas en el worklog de worker-web. |

@@ -1,0 +1,210 @@
+{
+  "claims": [
+    {
+      "attributed_to": "diaadia.com.pa y 1 medio(s) más",
+      "claim_id": "CLM-0095-001",
+      "event_id": "EVT-0095",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-23420a31518f4f8a9001",
+          "excerpt": "Festival de Cine Italiano llega a Panamá con 11 películas en Cinépolis",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.diaadia.com.pa/relax/festival-de-cine-italiano-llega-panama-con-11-peliculas-en-cinepolis-791700",
+          "value": "Festival de Cine Italiano llega a Panamá con 11 películas en Cinépolis"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "Festival de Cine Italiano llega a Panamá con 11 películas en Cinépolis",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 2.0,
+    "I": 10.0,
+    "N": 15.0,
+    "R": 24.0,
+    "U": 0.32399999999999995
+  },
+  "entities": [
+    "Panamá"
+  ],
+  "event_id": "EVT-0095",
+  "evidence_status": "parcial",
+  "evidence_status_reason": "Hasta 2 procedencias posiblemente independientes, sin evidencia oficial.",
+  "first_detected": "2026-09-22T18:00:00Z",
+  "first_published": null,
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma ATP (Autoridad de Turismo de Panamá) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Festival de Cine Italiano llega a Panamá con 11 películas en Cinépolis»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0095-001"
+    ],
+    "we_dont_know": [
+      "Ninguna fuente oficial del corpus confirma el hecho central.",
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": []
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-23420a31518f4f8a9001",
+      "idioma": "es",
+      "medio": "diaadia.com.pa",
+      "origen": "gdelt",
+      "titulo": "Festival de Cine Italiano llega a Panamá con 11 películas en Cinépolis",
+      "url": "https://www.diaadia.com.pa/relax/festival-de-cine-italiano-llega-panama-con-11-peliculas-en-cinepolis-791700"
+    },
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-dfb63af3201c79df323f",
+      "idioma": "es",
+      "medio": "panamaamerica.com.pa",
+      "origen": "gdelt",
+      "titulo": "Cinépolis trae una semana de cine italiano a Panamá",
+      "url": "https://www.panamaamerica.com.pa/variedades/cinepolis-trae-una-semana-de-cine-italiano-panama-1266609"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": null,
+  "member_ids": [
+    "gdt-23420a31518f4f8a9001",
+    "gdt-dfb63af3201c79df323f"
+  ],
+  "official_evidence": [],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0095-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según diaadia.com.pa y 1 medio(s) más: Festival de Cine Italiano llega a Panamá con 11 películas en Cinépolis."
+      }
+    ],
+    "event_id": "EVT-0095",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T21:01:27.516129Z",
+      "latency_ms": 0,
+      "mode": "template",
+      "model": null,
+      "params": {},
+      "prompt_version": "template-v1",
+      "tokens_in": null,
+      "tokens_out": null
+    },
+    "investigation_questions": [
+      "¿Qué confirma ATP (Autoridad de Turismo de Panamá) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Festival de Cine Italiano llega a Panamá con 11 películas en Cinépolis»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "package_id": "PKG-0095-template-v1",
+    "pending_verifications": [
+      "Verificar: Festival de Cine Italiano llega a Panamá con 11 películas en Cinépolis"
+    ],
+    "proposed_title": "Lo que se sabe y lo que falta verificar: Festival de Cine Italiano llega a Panamá con 11 películas en Cinépolis",
+    "public_interest_angle": "Tema de turismo con relevancia para Panamá; estado de la evidencia: parcial.",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0095-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según diaadia.com.pa y 1 medio(s) más: Festival de Cine Italiano llega a Panamá con 11 películas en Cinépolis."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0095-001"
+      ],
+      "tag": "DECLARACION",
+      "text": "Según diaadia.com.pa y 1 medio(s) más: Festival de Cine Italiano llega a Panamá con 11 películas en Cinépolis."
+    },
+    "sources": [
+      {
+        "evidence_id": "news:gdt-23420a31518f4f8a9001",
+        "excerpt": "Festival de Cine Italiano llega a Panamá con 11 películas en Cinépolis",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.diaadia.com.pa/relax/festival-de-cine-italiano-llega-panama-con-11-peliculas-en-cinepolis-791700",
+        "value": "Festival de Cine Italiano llega a Panamá con 11 películas en Cinépolis"
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.2,
+      "I": 0.4,
+      "N": 1.0,
+      "R": 0.8,
+      "U": 0.0162,
+      "rationale": {
+        "E": "0 evidencia oficial; hasta 2 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema turismo = 0.4",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Relacionado con Panamá; tema en alcance (turismo, confianza 0.50)",
+        "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 198 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 51.3,
+    "tier": "medio"
+  },
+  "recommended_action": "Seguimiento: reunir evidencia adicional. Fuente sugerida para verificar: ATP (Autoridad de Turismo de Panamá).",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0095-1",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-23420a31518f4f8a9001"
+        ]
+      },
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0095-2",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-dfb63af3201c79df323f"
+        ]
+      }
+    ],
+    "max_possible_independent": 2,
+    "outlets": 2,
+    "publications": 2,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "Festival de Cine Italiano llega a Panamá con 11 películas en Cinépolis",
+  "topic": "turismo",
+  "topic_confidence": 0.5
+}

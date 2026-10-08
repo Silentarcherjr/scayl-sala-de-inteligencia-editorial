@@ -1,0 +1,203 @@
+{
+  "claims": [
+    {
+      "attributed_to": "TVN",
+      "claim_id": "CLM-0001-001",
+      "event_id": "EVT-0001",
+      "evidence": [
+        {
+          "evidence_id": "news:tvn-a20cb5b0b573f13f7bcc",
+          "excerpt": "TVN Media se consolida en primer lugar como medio de comunicación con mejor reputación en Panamá, según Merco 2025",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.tvn-2.com/nacionales/tvn-media-nuevamente-consolida-empresas-mejor-reputacion_1_2211002.html",
+          "value": "TVN Media se consolida en primer lugar como medio de comunicación con mejor reputación en Panamá, según Merco 2025"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "TVN Media se consolida en primer lugar como medio de comunicación con mejor reputación en Panamá, según Merco 2025",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 1.0,
+    "I": 5.0,
+    "N": 15.0,
+    "R": 18.0,
+    "U": 0.0
+  },
+  "entities": [
+    "Panamá"
+  ],
+  "event_id": "EVT-0001",
+  "evidence_status": "insuficiente",
+  "evidence_status_reason": "Fuente única o de procedencia común, sin evidencia oficial.",
+  "first_detected": null,
+  "first_published": "2025-10-17T02:44:03Z",
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma Fuente primaria del hecho reportado sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «TVN Media se consolida en primer lugar como medio de comunicación con mejor reputación en Panamá, según Merco 2025»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0001-001"
+    ],
+    "we_dont_know": [
+      "Ninguna fuente oficial del corpus confirma el hecho central.",
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": []
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": "2025-10-17T02:44:03Z",
+      "id_noticia": "tvn-a20cb5b0b573f13f7bcc",
+      "idioma": "es",
+      "medio": "TVN",
+      "origen": "tvn_rss",
+      "titulo": "TVN Media se consolida en primer lugar como medio de comunicación con mejor reputación en Panamá, según Merco 2025",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-nuevamente-consolida-empresas-mejor-reputacion_1_2211002.html"
+    },
+    {
+      "fecha_publicacion": "2025-10-21T17:48:33Z",
+      "id_noticia": "tvn-d6fc56859a254ab1b91b",
+      "idioma": "es",
+      "medio": "TVN",
+      "origen": "tvn_rss",
+      "titulo": "TVN Media y DIRCOM Panamá se unen para fortalecer la voz de los Héroes por Panamá",
+      "url": "https://www.tvn-2.com/nacionales/tvn-media-dircom-panama-unen_1_2211616.html"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": "2025-10-21T17:48:33Z",
+  "member_ids": [
+    "tvn-a20cb5b0b573f13f7bcc",
+    "tvn-d6fc56859a254ab1b91b"
+  ],
+  "official_evidence": [],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0001-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según TVN: TVN Media se consolida en primer lugar como medio de comunicación con mejor reputación en Panamá, según Merco 2025."
+      }
+    ],
+    "event_id": "EVT-0001",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T21:01:27.520116Z",
+      "latency_ms": 0,
+      "mode": "template",
+      "model": null,
+      "params": {},
+      "prompt_version": "template-v1",
+      "tokens_in": null,
+      "tokens_out": null
+    },
+    "investigation_questions": [
+      "¿Qué confirma Fuente primaria del hecho reportado sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «TVN Media se consolida en primer lugar como medio de comunicación con mejor reputación en Panamá, según Merco 2025»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "package_id": "PKG-0001-template-v1",
+    "pending_verifications": [
+      "Verificar: TVN Media se consolida en primer lugar como medio de comunicación con mejor reputación en Panamá, según Merco 2025"
+    ],
+    "proposed_title": "Lo que se sabe y lo que falta verificar: TVN Media se consolida en primer lugar como medio de comunicación con mejor reputación en Panamá, según Merco 2025",
+    "public_interest_angle": "Tema de otro con relevancia para Panamá; estado de la evidencia: insuficiente.",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0001-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según TVN: TVN Media se consolida en primer lugar como medio de comunicación con mejor reputación en Panamá, según Merco 2025."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0001-001"
+      ],
+      "tag": "DECLARACION",
+      "text": "Según TVN: TVN Media se consolida en primer lugar como medio de comunicación con mejor reputación en Panamá, según Merco 2025."
+    },
+    "sources": [
+      {
+        "evidence_id": "news:tvn-a20cb5b0b573f13f7bcc",
+        "excerpt": "TVN Media se consolida en primer lugar como medio de comunicación con mejor reputación en Panamá, según Merco 2025",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.tvn-2.com/nacionales/tvn-media-nuevamente-consolida-empresas-mejor-reputacion_1_2211002.html",
+        "value": "TVN Media se consolida en primer lugar como medio de comunicación con mejor reputación en Panamá, según Merco 2025"
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.1,
+      "I": 0.2,
+      "N": 1.0,
+      "R": 0.6,
+      "U": 0.0,
+      "rationale": {
+        "E": "0 evidencia oficial; hasta 1 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema otro = 0.2",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Relacionado con Panamá; tema fuera de alcance",
+        "U": "Publicación original más reciente: hace 8262 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 39.0,
+    "tier": "bajo"
+  },
+  "recommended_action": "Sin acción.",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "2 publicaciones del mismo medio (tvn-2.com)",
+        "group_id": "PG-0001-1",
+        "label": "mismo_medio",
+        "member_ids": [
+          "tvn-a20cb5b0b573f13f7bcc",
+          "tvn-d6fc56859a254ab1b91b"
+        ]
+      }
+    ],
+    "max_possible_independent": 1,
+    "outlets": 1,
+    "publications": 2,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "TVN Media se consolida en primer lugar como medio de comunicación con mejor reputación en Panamá, según Merco 2025",
+  "topic": "otro",
+  "topic_confidence": null
+}

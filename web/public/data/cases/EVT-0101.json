@@ -1,0 +1,337 @@
+{
+  "claims": [
+    {
+      "attributed_to": "mundomaritimo.cl",
+      "claim_id": "CLM-0101-001",
+      "event_id": "EVT-0101",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-335e8e67c36674da5713",
+          "excerpt": "Canal de Panamá aumentará a 33 los cupos diarios de tránsito y fija calado Neopanamax en 14,94 metros",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.mundomaritimo.cl/noticias/canal-de-panama-aumentara-a-33-los-cupos-diarios-de-transito-y-fija-calado-neopanamax-en-1494-metros",
+          "value": "Canal de Panamá aumentará a 33 los cupos diarios de tránsito y fija calado Neopanamax en 14,94 metros"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "Canal de Panamá aumentará a 33 los cupos diarios de tránsito y fija calado Neopanamax en 14,94 metros",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    },
+    {
+      "attributed_to": null,
+      "claim_id": "CLM-0101-002",
+      "event_id": "EVT-0101",
+      "evidence": [
+        {
+          "evidence_id": "ind:acp:ACP.GATUN.NIVEL:2026-09-29",
+          "excerpt": "ACP: nivel del lago Gatún (observado), 2026-09-29: 84.88 pies",
+          "field": "valor",
+          "kind": "indicador",
+          "period": "2026-09-29",
+          "url": "https://evtms-rpts.pancanal.com/eng/h2o/Download_Gatun_Lake_Water_Level_History.csv",
+          "value": 84.88
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Dato oficial reciente de contexto; no confirma por sí mismo el titular.",
+      "statement": "Según ACP, nivel del lago Gatún (observado) en 2026-09-29: 84.88 pies",
+      "status": "SUSTENTADA",
+      "temporal_note": null,
+      "type": "HECHO"
+    },
+    {
+      "attributed_to": "mundomaritimo.cl",
+      "claim_id": "CLM-0101-003",
+      "event_id": "EVT-0101",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-335e8e67c36674da5713",
+          "excerpt": "Canal de Panamá aumentará a 33 los cupos diarios de tránsito y fija calado Neopanamax en 14,94 metros",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.mundomaritimo.cl/noticias/canal-de-panama-aumentara-a-33-los-cupos-diarios-de-transito-y-fija-calado-neopanamax-en-1494-metros",
+          "value": "Canal de Panamá aumentará a 33 los cupos diarios de tránsito y fija calado Neopanamax en 14,94 metros"
+        }
+      ],
+      "extracted_by": "llm:ollama:qwen3:8b@claims-v1",
+      "reason": "Extraída del titular; afirmada por el medio, sin verificación oficial.",
+      "statement": "Canal de Panamá aumentará a 33 los cupos diarios de tránsito",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    },
+    {
+      "attributed_to": "mundomaritimo.cl",
+      "claim_id": "CLM-0101-004",
+      "event_id": "EVT-0101",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-335e8e67c36674da5713",
+          "excerpt": "Canal de Panamá aumentará a 33 los cupos diarios de tránsito y fija calado Neopanamax en 14,94 metros",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.mundomaritimo.cl/noticias/canal-de-panama-aumentara-a-33-los-cupos-diarios-de-transito-y-fija-calado-neopanamax-en-1494-metros",
+          "value": "Canal de Panamá aumentará a 33 los cupos diarios de tránsito y fija calado Neopanamax en 14,94 metros"
+        }
+      ],
+      "extracted_by": "llm:ollama:qwen3:8b@claims-v1",
+      "reason": "Extraída del titular; afirmada por el medio, sin verificación oficial.",
+      "statement": "Canal de Panamá fija calado Neopanamax en 14,94 metros",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 6.0,
+    "I": 22.5,
+    "N": 15.0,
+    "R": 28.799999999999997,
+    "U": 17.65
+  },
+  "entities": [
+    "Canal de Panamá"
+  ],
+  "event_id": "EVT-0101",
+  "evidence_status": "parcial",
+  "evidence_status_reason": "Existe evidencia oficial de contexto, pero no respalda directamente la afirmación central.",
+  "first_detected": "2026-09-30T18:00:00Z",
+  "first_published": null,
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma Autoridad del Canal de Panamá (ACP) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Canal de Panamá aumentará a 33 los cupos diarios de tránsito y fija calado Neopanamax en 14,94 metros»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0101-001",
+      "CLM-0101-003",
+      "CLM-0101-004"
+    ],
+    "we_dont_know": [
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": [
+      "CLM-0101-002"
+    ]
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-335e8e67c36674da5713",
+      "idioma": "es",
+      "medio": "mundomaritimo.cl",
+      "origen": "gdelt",
+      "titulo": "Canal de Panamá aumentará a 33 los cupos diarios de tránsito y fija calado Neopanamax en 14,94 metros",
+      "url": "https://www.mundomaritimo.cl/noticias/canal-de-panama-aumentara-a-33-los-cupos-diarios-de-transito-y-fija-calado-neopanamax-en-1494-metros"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": null,
+  "member_ids": [
+    "gdt-335e8e67c36674da5713"
+  ],
+  "official_evidence": [
+    {
+      "evidence_id": "ind:acp:ACP.GATUN.NIVEL:2026-09-29",
+      "excerpt": "ACP: nivel del lago Gatún (observado), 2026-09-29: 84.88 pies",
+      "field": "valor",
+      "kind": "indicador",
+      "period": "2026-09-29",
+      "url": "https://evtms-rpts.pancanal.com/eng/h2o/Download_Gatun_Lake_Water_Level_History.csv",
+      "value": 84.88
+    },
+    {
+      "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+      "excerpt": "Exports of goods and services (% of GDP) = 44.3578422661429 % del PIB",
+      "field": "valor",
+      "kind": "indicador",
+      "period": "2024",
+      "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NE.EXP.GNFS.ZS",
+      "value": 44.3578422661429
+    }
+  ],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0101-001",
+          "CLM-0101-004"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según mundomaritimo.cl, el Canal de Panamá podría aumentar a 33 los cupos diarios de tránsito y fijar el calado Neopanamax en 14,94 metros. Esta información se basa en un titular publicado en el sitio web de la fuente."
+      },
+      {
+        "claim_ids": [
+          "CLM-0101-002"
+        ],
+        "tag": "HECHO",
+        "text": "El nivel del lago Gatún fue de 84.88 pies el 29 de septiembre de 2026, según datos del ACP."
+      }
+    ],
+    "event_id": "EVT-0101",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T20:56:03.359570Z",
+      "latency_ms": 15274,
+      "mode": "cache",
+      "model": "ollama:qwen3:8b",
+      "params": {
+        "num_ctx": 4096,
+        "seed": 42,
+        "temperature": 0
+      },
+      "prompt_version": "studio-v1",
+      "tokens_in": 1635,
+      "tokens_out": 757
+    },
+    "investigation_questions": [
+      "¿Cuál es el criterio exacto que se utiliza para fijar el calado Neopanamax en el Canal de Panamá?",
+      "¿Qué impacto podría tener el aumento de cupos diarios en la operación del Canal de Panamá?",
+      "¿Qué medidas se tomarán para garantizar que el nivel del lago Gatún se mantenga dentro de los parámetros establecidos?"
+    ],
+    "package_id": "PKG-0101-studio-v1",
+    "pending_verifications": [
+      "Confirmar si el titular de mundomaritimo.cl representa una decisión oficial del Canal de Panamá.",
+      "Verificar si el calado Neopanamax de 14,94 metros es una medida establecida o provisional.",
+      "Confirmar si el aumento de cupos diarios de tránsito está sujeto a condiciones específicas.",
+      "Verificar: Canal de Panamá aumentará a 33 los cupos diarios de tránsito y fija calado Neopanamax en 14,94 metros",
+      "Verificar: Canal de Panamá aumentará a 33 los cupos diarios de tránsito",
+      "Verificar: Canal de Panamá fija calado Neopanamax en 14,94 metros",
+      "Dato histórico — 2024. No presentarlo como medición actual.",
+      "Dato de 2026-09-29 (ACP). Citarlo siempre con su fecha; no es una medición en tiempo real."
+    ],
+    "proposed_title": "Canal de Panamá podría aumentar cupos diarios de tránsito",
+    "public_interest_angle": "El Canal de Panamá podría ajustar sus operaciones para mejorar la logística marítima.",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0101-001",
+          "CLM-0101-004"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según mundomaritimo.cl, el Canal de Panamá podría aumentar a 33 los cupos diarios de tránsito y fijar el calado Neopanamax en 14,94 metros. Esta información se basa en un titular publicado en el sitio web de la fuente."
+      },
+      {
+        "claim_ids": [
+          "CLM-0101-002"
+        ],
+        "tag": "HECHO",
+        "text": "El nivel del lago Gatún fue de 84.88 pies el 29 de septiembre de 2026, según datos del ACP."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0101-001",
+        "CLM-0101-004"
+      ],
+      "tag": "DECLARACION",
+      "text": "El Canal de Panamá podría aumentar a 33 los cupos diarios de tránsito y fijar el calado Neopanamax en 14,94 metros, según un titular publicado en mundomaritimo.cl."
+    },
+    "sources": [
+      {
+        "evidence_id": "news:gdt-335e8e67c36674da5713",
+        "excerpt": "Canal de Panamá aumentará a 33 los cupos diarios de tránsito y fija calado Neopanamax en 14,94 metros",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.mundomaritimo.cl/noticias/canal-de-panama-aumentara-a-33-los-cupos-diarios-de-transito-y-fija-calado-neopanamax-en-1494-metros",
+        "value": "Canal de Panamá aumentará a 33 los cupos diarios de tránsito y fija calado Neopanamax en 14,94 metros"
+      },
+      {
+        "evidence_id": "ind:acp:ACP.GATUN.NIVEL:2026-09-29",
+        "excerpt": "ACP: nivel del lago Gatún (observado), 2026-09-29: 84.88 pies",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2026-09-29",
+        "url": "https://evtms-rpts.pancanal.com/eng/h2o/Download_Gatun_Lake_Water_Level_History.csv",
+        "value": 84.88
+      },
+      {
+        "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+        "excerpt": "Exports of goods and services (% of GDP) = 44.3578422661429 % del PIB",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2024",
+        "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NE.EXP.GNFS.ZS",
+        "value": 44.3578422661429
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.6,
+      "I": 0.9,
+      "N": 1.0,
+      "R": 0.96,
+      "U": 0.8825,
+      "rationale": {
+        "E": "1+ evidencia oficial; hasta 1 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema logistica_canal = 0.7; +0.2 por evidencia oficial pertinente",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Relacionado con Panamá; tema en alcance (logistica_canal, confianza 0.90)",
+        "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 6 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 89.9,
+    "tier": "alto"
+  },
+  "recommended_action": "Investigar los vacíos antes de producir. Fuente sugerida para verificar: Autoridad del Canal de Panamá (ACP). La prioridad alta NO habilita publicación.",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0101-1",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-335e8e67c36674da5713"
+        ]
+      }
+    ],
+    "max_possible_independent": 1,
+    "outlets": 1,
+    "publications": 1,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [
+    {
+      "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+      "message": "Dato histórico — 2024. No presentarlo como medición actual.",
+      "period": "2024"
+    },
+    {
+      "evidence_id": "ind:acp:ACP.GATUN.NIVEL:2026-09-29",
+      "message": "Dato de 2026-09-29 (ACP). Citarlo siempre con su fecha; no es una medición en tiempo real.",
+      "period": "2026-09-29"
+    }
+  ],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "Canal de Panamá aumentará a 33 los cupos diarios de tránsito y fija calado Neopanamax en 14,94 metros",
+  "topic": "logistica_canal",
+  "topic_confidence": 0.9
+}

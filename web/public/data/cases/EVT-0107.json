@@ -1,0 +1,224 @@
+{
+  "claims": [
+    {
+      "attributed_to": "telemetro.com",
+      "claim_id": "CLM-0107-001",
+      "event_id": "EVT-0107",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-23509ef75cdfc7ffa759",
+          "excerpt": "Construcción del Cuarto Puente sobre el Canal de Panamá presenta un 39% de avance",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.telemetro.com/entrevistas/nacionales/construccion-del-cuarto-puente-el-canal-panama-presenta-un-39-avance-n6085128",
+          "value": "Construcción del Cuarto Puente sobre el Canal de Panamá presenta un 39% de avance"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "Construcción del Cuarto Puente sobre el Canal de Panamá presenta un 39% de avance",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 6.0,
+    "I": 22.5,
+    "N": 15.0,
+    "R": 24.0,
+    "U": 0.0
+  },
+  "entities": [
+    "Canal de Panamá"
+  ],
+  "event_id": "EVT-0107",
+  "evidence_status": "parcial",
+  "evidence_status_reason": "Existe evidencia oficial de contexto, pero no respalda directamente la afirmación central.",
+  "first_detected": "2026-07-14T18:00:00Z",
+  "first_published": null,
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma Autoridad del Canal de Panamá (ACP) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Construcción del Cuarto Puente sobre el Canal de Panamá presenta un 39% de avance»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0107-001"
+    ],
+    "we_dont_know": [
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": []
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-23509ef75cdfc7ffa759",
+      "idioma": "es",
+      "medio": "telemetro.com",
+      "origen": "gdelt",
+      "titulo": "Construcción del Cuarto Puente sobre el Canal de Panamá presenta un 39% de avance",
+      "url": "https://www.telemetro.com/entrevistas/nacionales/construccion-del-cuarto-puente-el-canal-panama-presenta-un-39-avance-n6085128"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": null,
+  "member_ids": [
+    "gdt-23509ef75cdfc7ffa759"
+  ],
+  "official_evidence": [
+    {
+      "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+      "excerpt": "Exports of goods and services (% of GDP) = 44.3578422661429 % del PIB",
+      "field": "valor",
+      "kind": "indicador",
+      "period": "2024",
+      "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NE.EXP.GNFS.ZS",
+      "value": 44.3578422661429
+    }
+  ],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0107-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según telemetro.com, la Construcción del Cuarto Puente sobre el Canal de Panamá presenta un 39% de avance, según un titular publicado en su sitio web."
+      }
+    ],
+    "event_id": "EVT-0107",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T20:58:04.534628Z",
+      "latency_ms": 8646,
+      "mode": "cache",
+      "model": "ollama:qwen3:8b",
+      "params": {
+        "num_ctx": 4096,
+        "seed": 42,
+        "temperature": 0
+      },
+      "prompt_version": "studio-v1",
+      "tokens_in": 1002,
+      "tokens_out": 442
+    },
+    "investigation_questions": [
+      "¿Cuál es el progreso actual real de la construcción del Cuarto Puente?",
+      "¿Qué instituciones o autoridades han confirmado el avance del proyecto?",
+      "¿Qué cronograma se sigue para la finalización del puente?"
+    ],
+    "package_id": "PKG-0107-studio-v1",
+    "pending_verifications": [
+      "Confirmar el avance real del proyecto con fuentes oficiales.",
+      "Verificar si el titular de telemetro.com representa un dato actual o histórico.",
+      "Investigar si existen otros medios que hayan reportado el mismo avance.",
+      "Verificar: Construcción del Cuarto Puente sobre el Canal de Panamá presenta un 39% de avance",
+      "Dato histórico — 2024. No presentarlo como medición actual."
+    ],
+    "proposed_title": "Construcción del Cuarto Puente sobre el Canal de Panamá presenta un 39% de avance",
+    "public_interest_angle": "Avance en la infraestructura del Canal de Panamá",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0107-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según telemetro.com, la Construcción del Cuarto Puente sobre el Canal de Panamá presenta un 39% de avance, según un titular publicado en su sitio web."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0107-001"
+      ],
+      "tag": "DECLARACION",
+      "text": "Según telemetro.com, la Construcción del Cuarto Puente sobre el Canal de Panamá presenta un 39% de avance, según un titular publicado en su sitio web."
+    },
+    "sources": [
+      {
+        "evidence_id": "news:gdt-23509ef75cdfc7ffa759",
+        "excerpt": "Construcción del Cuarto Puente sobre el Canal de Panamá presenta un 39% de avance",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.telemetro.com/entrevistas/nacionales/construccion-del-cuarto-puente-el-canal-panama-presenta-un-39-avance-n6085128",
+        "value": "Construcción del Cuarto Puente sobre el Canal de Panamá presenta un 39% de avance"
+      },
+      {
+        "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+        "excerpt": "Exports of goods and services (% of GDP) = 44.3578422661429 % del PIB",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2024",
+        "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NE.EXP.GNFS.ZS",
+        "value": 44.3578422661429
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.6,
+      "I": 0.9,
+      "N": 1.0,
+      "R": 0.8,
+      "U": 0.0,
+      "rationale": {
+        "E": "1+ evidencia oficial; hasta 1 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema logistica_canal = 0.7; +0.2 por evidencia oficial pertinente",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Relacionado con Panamá; tema en alcance (logistica_canal, confianza 0.50)",
+        "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 1878 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 67.5,
+    "tier": "medio"
+  },
+  "recommended_action": "Seguimiento: reunir evidencia adicional. Fuente sugerida para verificar: Autoridad del Canal de Panamá (ACP).",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0107-1",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-23509ef75cdfc7ffa759"
+        ]
+      }
+    ],
+    "max_possible_independent": 1,
+    "outlets": 1,
+    "publications": 1,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [
+    {
+      "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+      "message": "Dato histórico — 2024. No presentarlo como medición actual.",
+      "period": "2024"
+    }
+  ],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "Construcción del Cuarto Puente sobre el Canal de Panamá presenta un 39% de avance",
+  "topic": "logistica_canal",
+  "topic_confidence": 0.5
+}

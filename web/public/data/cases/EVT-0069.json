@@ -1,0 +1,190 @@
+{
+  "claims": [
+    {
+      "attributed_to": "prensa.com",
+      "claim_id": "CLM-0069-001",
+      "event_id": "EVT-0069",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-feb2b6fb0964567eb2e1",
+          "excerpt": "Michael Amir Murillo marca y cierra la goleada del Besiktas JK en la Superliga de Turquía",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.prensa.com/deportes/michael-amir-murillo-marca-y-cierra-la-goleada-del-besiktas-jk-en-la-superliga-de-turquia/",
+          "value": "Michael Amir Murillo marca y cierra la goleada del Besiktas JK en la Superliga de Turquía"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "Michael Amir Murillo marca y cierra la goleada del Besiktas JK en la Superliga de Turquía",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 1.0,
+    "I": 5.0,
+    "N": 15.0,
+    "R": 0.0,
+    "U": 0.0
+  },
+  "entities": [],
+  "event_id": "EVT-0069",
+  "evidence_status": "insuficiente",
+  "evidence_status_reason": "Fuente única o de procedencia común, sin evidencia oficial.",
+  "first_detected": "2026-09-01T02:45:00Z",
+  "first_published": null,
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma Fuente primaria del hecho reportado sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Michael Amir Murillo marca y cierra la goleada del Besiktas JK en la Superliga de Turquía»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0069-001"
+    ],
+    "we_dont_know": [
+      "Ninguna fuente oficial del corpus confirma el hecho central.",
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": []
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-feb2b6fb0964567eb2e1",
+      "idioma": "es",
+      "medio": "prensa.com",
+      "origen": "gdelt",
+      "titulo": "Michael Amir Murillo marca y cierra la goleada del Besiktas JK en la Superliga de Turquía",
+      "url": "https://www.prensa.com/deportes/michael-amir-murillo-marca-y-cierra-la-goleada-del-besiktas-jk-en-la-superliga-de-turquia/"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": null,
+  "member_ids": [
+    "gdt-feb2b6fb0964567eb2e1"
+  ],
+  "official_evidence": [],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0069-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según prensa.com: Michael Amir Murillo marca y cierra la goleada del Besiktas JK en la Superliga de Turquía."
+      }
+    ],
+    "event_id": "EVT-0069",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T21:01:27.534611Z",
+      "latency_ms": 0,
+      "mode": "template",
+      "model": null,
+      "params": {},
+      "prompt_version": "template-v1",
+      "tokens_in": null,
+      "tokens_out": null
+    },
+    "investigation_questions": [
+      "¿Qué confirma Fuente primaria del hecho reportado sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Michael Amir Murillo marca y cierra la goleada del Besiktas JK en la Superliga de Turquía»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "package_id": "PKG-0069-template-v1",
+    "pending_verifications": [
+      "Verificar: Michael Amir Murillo marca y cierra la goleada del Besiktas JK en la Superliga de Turquía"
+    ],
+    "proposed_title": "Lo que se sabe y lo que falta verificar: Michael Amir Murillo marca y cierra la goleada del Besiktas JK en la Superliga de Turquía",
+    "public_interest_angle": "Tema de otro con relevancia para Panamá; estado de la evidencia: insuficiente.",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0069-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según prensa.com: Michael Amir Murillo marca y cierra la goleada del Besiktas JK en la Superliga de Turquía."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0069-001"
+      ],
+      "tag": "DECLARACION",
+      "text": "Según prensa.com: Michael Amir Murillo marca y cierra la goleada del Besiktas JK en la Superliga de Turquía."
+    },
+    "sources": [
+      {
+        "evidence_id": "news:gdt-feb2b6fb0964567eb2e1",
+        "excerpt": "Michael Amir Murillo marca y cierra la goleada del Besiktas JK en la Superliga de Turquía",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.prensa.com/deportes/michael-amir-murillo-marca-y-cierra-la-goleada-del-besiktas-jk-en-la-superliga-de-turquia/",
+        "value": "Michael Amir Murillo marca y cierra la goleada del Besiktas JK en la Superliga de Turquía"
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.1,
+      "I": 0.2,
+      "N": 1.0,
+      "R": 0.0,
+      "U": 0.0,
+      "rationale": {
+        "E": "0 evidencia oficial; hasta 1 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema otro = 0.2",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Sin vínculo explícito con Panamá; tema fuera de alcance",
+        "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 717 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 21.0,
+    "tier": "bajo"
+  },
+  "recommended_action": "Sin acción.",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0069-1",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-feb2b6fb0964567eb2e1"
+        ]
+      }
+    ],
+    "max_possible_independent": 1,
+    "outlets": 1,
+    "publications": 1,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "Michael Amir Murillo marca y cierra la goleada del Besiktas JK en la Superliga de Turquía",
+  "topic": "otro",
+  "topic_confidence": null
+}

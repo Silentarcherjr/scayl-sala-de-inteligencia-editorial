@@ -1,0 +1,281 @@
+{
+  "claims": [
+    {
+      "attributed_to": "mundodeportivo.com y 1 medio(s) más",
+      "claim_id": "CLM-0093-001",
+      "event_id": "EVT-0093",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-55a4df5c2f430f54c63a",
+          "excerpt": "Enrique Riquelme traslada su fortuna a Panamá tras la presión fiscal del gobierno español",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.mundodeportivo.com/futbol/real-madrid/20260916/1004228105/enrique-riquelme-traslada-fortuna-panama-presion-fiscal-gobierno-espanol.html",
+          "value": "Enrique Riquelme traslada su fortuna a Panamá tras la presión fiscal del gobierno español"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "Enrique Riquelme traslada su fortuna a Panamá tras la presión fiscal del gobierno español",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 7.0,
+    "I": 20.0,
+    "N": 15.0,
+    "R": 24.0,
+    "U": 0.196
+  },
+  "entities": [
+    "Panamá"
+  ],
+  "event_id": "EVT-0093",
+  "evidence_status": "parcial",
+  "evidence_status_reason": "Existe evidencia oficial de contexto, pero no respalda directamente la afirmación central.",
+  "first_detected": "2026-09-16T18:00:00Z",
+  "first_published": null,
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma INEC (Instituto Nacional de Estadística y Censo) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Enrique Riquelme traslada su fortuna a Panamá tras la presión fiscal del gobierno español»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0093-001"
+    ],
+    "we_dont_know": [
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": []
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-55a4df5c2f430f54c63a",
+      "idioma": "es",
+      "medio": "mundodeportivo.com",
+      "origen": "gdelt",
+      "titulo": "Enrique Riquelme traslada su fortuna a Panamá tras la presión fiscal del gobierno español",
+      "url": "https://www.mundodeportivo.com/futbol/real-madrid/20260916/1004228105/enrique-riquelme-traslada-fortuna-panama-presion-fiscal-gobierno-espanol.html"
+    },
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-c72924d8c2b87800874a",
+      "idioma": "es",
+      "medio": "laestrella.com.pa",
+      "origen": "gdelt",
+      "titulo": "'No hay absolutamente nada fiscal': así explica Enrique Riquelme el traslado de su holding de España a Panamá",
+      "url": "https://www.laestrella.com.pa/economia/no-hay-absolutamente-nada-fiscal-asi-explica-enrique-riquelme-el-traslado-de-su-holding-de-espana-a-panama-LK25855259"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": null,
+  "member_ids": [
+    "gdt-55a4df5c2f430f54c63a",
+    "gdt-c72924d8c2b87800874a"
+  ],
+  "official_evidence": [
+    {
+      "evidence_id": "wb:PAN:FP.CPI.TOTL.ZG:2024",
+      "excerpt": "Inflation, consumer prices (annual %) = 0.69322555100446 % anual",
+      "field": "valor",
+      "kind": "indicador",
+      "period": "2024",
+      "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/FP.CPI.TOTL.ZG",
+      "value": 0.69322555100446
+    },
+    {
+      "evidence_id": "wb:PAN:NY.GDP.MKTP.KD.ZG:2024",
+      "excerpt": "GDP growth (annual %) = 2.74784148771307 % anual",
+      "field": "valor",
+      "kind": "indicador",
+      "period": "2024",
+      "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NY.GDP.MKTP.KD.ZG",
+      "value": 2.74784148771307
+    },
+    {
+      "evidence_id": "wb:PAN:SL.UEM.TOTL.ZS:2024",
+      "excerpt": "Unemployment, total (% of total labor force) (modeled ILO estimate) = 8.451 % de la población activa total (estimación modelada OIT)",
+      "field": "valor",
+      "kind": "indicador",
+      "period": "2024",
+      "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/SL.UEM.TOTL.ZS",
+      "value": 8.451
+    }
+  ],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0093-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según mundodeportivo.com y 1 medio(s) más: Enrique Riquelme traslada su fortuna a Panamá tras la presión fiscal del gobierno español."
+      }
+    ],
+    "event_id": "EVT-0093",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T21:01:27.508791Z",
+      "latency_ms": 0,
+      "mode": "template",
+      "model": null,
+      "params": {},
+      "prompt_version": "template-v1",
+      "tokens_in": null,
+      "tokens_out": null
+    },
+    "investigation_questions": [
+      "¿Qué confirma INEC (Instituto Nacional de Estadística y Censo) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Enrique Riquelme traslada su fortuna a Panamá tras la presión fiscal del gobierno español»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "package_id": "PKG-0093-template-v1",
+    "pending_verifications": [
+      "Verificar: Enrique Riquelme traslada su fortuna a Panamá tras la presión fiscal del gobierno español",
+      "Dato histórico — 2024. No presentarlo como medición actual."
+    ],
+    "proposed_title": "Lo que se sabe y lo que falta verificar: Enrique Riquelme traslada su fortuna a Panamá tras la presión fiscal del gobierno español",
+    "public_interest_angle": "Tema de economia con relevancia para Panamá; estado de la evidencia: parcial.",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0093-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según mundodeportivo.com y 1 medio(s) más: Enrique Riquelme traslada su fortuna a Panamá tras la presión fiscal del gobierno español."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0093-001"
+      ],
+      "tag": "DECLARACION",
+      "text": "Según mundodeportivo.com y 1 medio(s) más: Enrique Riquelme traslada su fortuna a Panamá tras la presión fiscal del gobierno español."
+    },
+    "sources": [
+      {
+        "evidence_id": "news:gdt-55a4df5c2f430f54c63a",
+        "excerpt": "Enrique Riquelme traslada su fortuna a Panamá tras la presión fiscal del gobierno español",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.mundodeportivo.com/futbol/real-madrid/20260916/1004228105/enrique-riquelme-traslada-fortuna-panama-presion-fiscal-gobierno-espanol.html",
+        "value": "Enrique Riquelme traslada su fortuna a Panamá tras la presión fiscal del gobierno español"
+      },
+      {
+        "evidence_id": "wb:PAN:FP.CPI.TOTL.ZG:2024",
+        "excerpt": "Inflation, consumer prices (annual %) = 0.69322555100446 % anual",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2024",
+        "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/FP.CPI.TOTL.ZG",
+        "value": 0.69322555100446
+      },
+      {
+        "evidence_id": "wb:PAN:NY.GDP.MKTP.KD.ZG:2024",
+        "excerpt": "GDP growth (annual %) = 2.74784148771307 % anual",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2024",
+        "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NY.GDP.MKTP.KD.ZG",
+        "value": 2.74784148771307
+      },
+      {
+        "evidence_id": "wb:PAN:SL.UEM.TOTL.ZS:2024",
+        "excerpt": "Unemployment, total (% of total labor force) (modeled ILO estimate) = 8.451 % de la población activa total (estimación modelada OIT)",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2024",
+        "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/SL.UEM.TOTL.ZS",
+        "value": 8.451
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.7,
+      "I": 0.8,
+      "N": 1.0,
+      "R": 0.8,
+      "U": 0.0098,
+      "rationale": {
+        "E": "1+ evidencia oficial; hasta 2 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema economia = 0.6; +0.2 por evidencia oficial pertinente",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Relacionado con Panamá; tema en alcance (economia, confianza 0.50)",
+        "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 222 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 66.2,
+    "tier": "medio"
+  },
+  "recommended_action": "Seguimiento: reunir evidencia adicional. Fuente sugerida para verificar: INEC (Instituto Nacional de Estadística y Censo).",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0093-1",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-55a4df5c2f430f54c63a"
+        ]
+      },
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0093-2",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-c72924d8c2b87800874a"
+        ]
+      }
+    ],
+    "max_possible_independent": 2,
+    "outlets": 2,
+    "publications": 2,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [
+    {
+      "evidence_id": "wb:PAN:FP.CPI.TOTL.ZG:2024",
+      "message": "Dato histórico — 2024. No presentarlo como medición actual.",
+      "period": "2024"
+    },
+    {
+      "evidence_id": "wb:PAN:NY.GDP.MKTP.KD.ZG:2024",
+      "message": "Dato histórico — 2024. No presentarlo como medición actual.",
+      "period": "2024"
+    },
+    {
+      "evidence_id": "wb:PAN:SL.UEM.TOTL.ZS:2024",
+      "message": "Dato histórico — 2024. No presentarlo como medición actual.",
+      "period": "2024"
+    }
+  ],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "Enrique Riquelme traslada su fortuna a Panamá tras la presión fiscal del gobierno español",
+  "topic": "economia",
+  "topic_confidence": 0.5
+}

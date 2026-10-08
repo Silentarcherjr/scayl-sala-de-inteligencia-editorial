@@ -1,0 +1,192 @@
+{
+  "claims": [
+    {
+      "attributed_to": "avn.info.ve",
+      "claim_id": "CLM-0086-001",
+      "event_id": "EVT-0086",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-a9df80079a17b6149b71",
+          "excerpt": "Copa Airlines reactiva segunda ruta Caracas-Panamá a partir del 15 de septiembre",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://avn.info.ve/copa-airlines-reactiva-segunda-ruta-caracas-panama-a-partir-del-15-de-septiembre/",
+          "value": "Copa Airlines reactiva segunda ruta Caracas-Panamá a partir del 15 de septiembre"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "Copa Airlines reactiva segunda ruta Caracas-Panamá a partir del 15 de septiembre",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 1.0,
+    "I": 10.0,
+    "N": 15.0,
+    "R": 24.0,
+    "U": 0.005999999999999999
+  },
+  "entities": [
+    "Panamá"
+  ],
+  "event_id": "EVT-0086",
+  "evidence_status": "insuficiente",
+  "evidence_status_reason": "Fuente única o de procedencia común, sin evidencia oficial.",
+  "first_detected": "2026-09-14T18:00:00Z",
+  "first_published": null,
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma ATP (Autoridad de Turismo de Panamá) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Copa Airlines reactiva segunda ruta Caracas-Panamá a partir del 15 de septiembre»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0086-001"
+    ],
+    "we_dont_know": [
+      "Ninguna fuente oficial del corpus confirma el hecho central.",
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": []
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-a9df80079a17b6149b71",
+      "idioma": "es",
+      "medio": "avn.info.ve",
+      "origen": "gdelt",
+      "titulo": "Copa Airlines reactiva segunda ruta Caracas-Panamá a partir del 15 de septiembre",
+      "url": "https://avn.info.ve/copa-airlines-reactiva-segunda-ruta-caracas-panama-a-partir-del-15-de-septiembre/"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": null,
+  "member_ids": [
+    "gdt-a9df80079a17b6149b71"
+  ],
+  "official_evidence": [],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0086-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según avn.info.ve: Copa Airlines reactiva segunda ruta Caracas-Panamá a partir del 15 de septiembre."
+      }
+    ],
+    "event_id": "EVT-0086",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T21:01:27.516509Z",
+      "latency_ms": 0,
+      "mode": "template",
+      "model": null,
+      "params": {},
+      "prompt_version": "template-v1",
+      "tokens_in": null,
+      "tokens_out": null
+    },
+    "investigation_questions": [
+      "¿Qué confirma ATP (Autoridad de Turismo de Panamá) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Copa Airlines reactiva segunda ruta Caracas-Panamá a partir del 15 de septiembre»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "package_id": "PKG-0086-template-v1",
+    "pending_verifications": [
+      "Verificar: Copa Airlines reactiva segunda ruta Caracas-Panamá a partir del 15 de septiembre"
+    ],
+    "proposed_title": "Lo que se sabe y lo que falta verificar: Copa Airlines reactiva segunda ruta Caracas-Panamá a partir del 15 de septiembre",
+    "public_interest_angle": "Tema de turismo con relevancia para Panamá; estado de la evidencia: insuficiente.",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0086-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según avn.info.ve: Copa Airlines reactiva segunda ruta Caracas-Panamá a partir del 15 de septiembre."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0086-001"
+      ],
+      "tag": "DECLARACION",
+      "text": "Según avn.info.ve: Copa Airlines reactiva segunda ruta Caracas-Panamá a partir del 15 de septiembre."
+    },
+    "sources": [
+      {
+        "evidence_id": "news:gdt-a9df80079a17b6149b71",
+        "excerpt": "Copa Airlines reactiva segunda ruta Caracas-Panamá a partir del 15 de septiembre",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://avn.info.ve/copa-airlines-reactiva-segunda-ruta-caracas-panama-a-partir-del-15-de-septiembre/",
+        "value": "Copa Airlines reactiva segunda ruta Caracas-Panamá a partir del 15 de septiembre"
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.1,
+      "I": 0.4,
+      "N": 1.0,
+      "R": 0.8,
+      "U": 0.0003,
+      "rationale": {
+        "E": "0 evidencia oficial; hasta 1 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema turismo = 0.4",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Relacionado con Panamá; tema en alcance (turismo, confianza 0.50)",
+        "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 390 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 50.0,
+    "tier": "medio"
+  },
+  "recommended_action": "Monitorear; no producir aún. Fuente sugerida para verificar: ATP (Autoridad de Turismo de Panamá).",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0086-1",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-a9df80079a17b6149b71"
+        ]
+      }
+    ],
+    "max_possible_independent": 1,
+    "outlets": 1,
+    "publications": 1,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "Copa Airlines reactiva segunda ruta Caracas-Panamá a partir del 15 de septiembre",
+  "topic": "turismo",
+  "topic_confidence": 0.5
+}

@@ -1,0 +1,224 @@
+{
+  "claims": [
+    {
+      "attributed_to": "eluniversal.com.mx",
+      "claim_id": "CLM-0133-001",
+      "event_id": "EVT-0133",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-78df76610c1312af15a1",
+          "excerpt": "México vs Panamá: Horario y canales para ver EN VIVO a la Selección Mexicana, HOY, miércoles 5 de agosto",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.eluniversal.com.mx/deportes/mexico-vs-panama-horario-y-canales-para-ver-en-vivo-a-la-seleccion-mexicana-hoy-miercoles-5-de-agosto/",
+          "value": "México vs Panamá: Horario y canales para ver EN VIVO a la Selección Mexicana, HOY, miércoles 5 de agosto"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "México vs Panamá: Horario y canales para ver EN VIVO a la Selección Mexicana, HOY, miércoles 5 de agosto",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 6.0,
+    "I": 22.5,
+    "N": 15.0,
+    "R": 24.0,
+    "U": 0.0
+  },
+  "entities": [
+    "Panamá"
+  ],
+  "event_id": "EVT-0133",
+  "evidence_status": "parcial",
+  "evidence_status_reason": "Existe evidencia oficial de contexto, pero no respalda directamente la afirmación central.",
+  "first_detected": "2026-08-05T18:00:00Z",
+  "first_published": null,
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma Autoridad del Canal de Panamá (ACP) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «México vs Panamá: Horario y canales para ver EN VIVO a la Selección Mexicana, HOY, miércoles 5 de agosto»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0133-001"
+    ],
+    "we_dont_know": [
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": []
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-78df76610c1312af15a1",
+      "idioma": "es",
+      "medio": "eluniversal.com.mx",
+      "origen": "gdelt",
+      "titulo": "México vs Panamá: Horario y canales para ver EN VIVO a la Selección Mexicana, HOY, miércoles 5 de agosto",
+      "url": "https://www.eluniversal.com.mx/deportes/mexico-vs-panama-horario-y-canales-para-ver-en-vivo-a-la-seleccion-mexicana-hoy-miercoles-5-de-agosto/"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": null,
+  "member_ids": [
+    "gdt-78df76610c1312af15a1"
+  ],
+  "official_evidence": [
+    {
+      "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+      "excerpt": "Exports of goods and services (% of GDP) = 44.3578422661429 % del PIB",
+      "field": "valor",
+      "kind": "indicador",
+      "period": "2024",
+      "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NE.EXP.GNFS.ZS",
+      "value": 44.3578422661429
+    }
+  ],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0133-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según eluniversal.com.mx, se informó sobre el horario y canales para ver EN VIVO el partido entre México y Panamá, programado para hoy, miércoles 5 de agosto."
+      }
+    ],
+    "event_id": "EVT-0133",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T20:58:32.676758Z",
+      "latency_ms": 9210,
+      "mode": "cache",
+      "model": "ollama:qwen3:8b",
+      "params": {
+        "num_ctx": 4096,
+        "seed": 42,
+        "temperature": 0
+      },
+      "prompt_version": "studio-v1",
+      "tokens_in": 1038,
+      "tokens_out": 469
+    },
+    "investigation_questions": [
+      "¿Cuál es el horario exacto del partido entre México y Panamá?",
+      "¿Qué canales de televisión transmitirán el partido en vivo?",
+      "¿Hay información adicional sobre la programación del evento?"
+    ],
+    "package_id": "PKG-0133-studio-v1",
+    "pending_verifications": [
+      "Confirmar el horario exacto del partido.",
+      "Verificar los canales de televisión que transmitirán el partido en vivo.",
+      "Comprobar si hay más información sobre la programación del evento.",
+      "Verificar: México vs Panamá: Horario y canales para ver EN VIVO a la Selección Mexicana, HOY, miércoles 5 de agosto",
+      "Dato histórico — 2024. No presentarlo como medición actual."
+    ],
+    "proposed_title": "México vs Panamá: Horario y canales para ver EN VIVO a la Selección Mexicana, HOY, miércoles 5 de agosto",
+    "public_interest_angle": "El partido entre México y Panamá se disputará hoy, miércoles 5 de agosto, y se podrá seguir en vivo a través de canales de televisión.",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0133-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "El partido entre México y Panamá se disputará hoy, miércoles 5 de agosto. Se podrá seguir en vivo a través de canales de televisión. Según eluniversal.com.mx, se informó sobre el horario y los canales disponibles para la transmisión."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0133-001"
+      ],
+      "tag": "DECLARACION",
+      "text": "El partido entre México y Panamá se jugará hoy, miércoles 5 de agosto. ¡No te lo pierdas en vivo!"
+    },
+    "sources": [
+      {
+        "evidence_id": "news:gdt-78df76610c1312af15a1",
+        "excerpt": "México vs Panamá: Horario y canales para ver EN VIVO a la Selección Mexicana, HOY, miércoles 5 de agosto",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.eluniversal.com.mx/deportes/mexico-vs-panama-horario-y-canales-para-ver-en-vivo-a-la-seleccion-mexicana-hoy-miercoles-5-de-agosto/",
+        "value": "México vs Panamá: Horario y canales para ver EN VIVO a la Selección Mexicana, HOY, miércoles 5 de agosto"
+      },
+      {
+        "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+        "excerpt": "Exports of goods and services (% of GDP) = 44.3578422661429 % del PIB",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2024",
+        "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NE.EXP.GNFS.ZS",
+        "value": 44.3578422661429
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.6,
+      "I": 0.9,
+      "N": 1.0,
+      "R": 0.8,
+      "U": 0.0,
+      "rationale": {
+        "E": "1+ evidencia oficial; hasta 1 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema logistica_canal = 0.7; +0.2 por evidencia oficial pertinente",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Relacionado con Panamá; tema en alcance (logistica_canal, confianza 0.50)",
+        "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 1350 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 67.5,
+    "tier": "medio"
+  },
+  "recommended_action": "Seguimiento: reunir evidencia adicional. Fuente sugerida para verificar: Autoridad del Canal de Panamá (ACP).",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0133-1",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-78df76610c1312af15a1"
+        ]
+      }
+    ],
+    "max_possible_independent": 1,
+    "outlets": 1,
+    "publications": 1,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [
+    {
+      "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+      "message": "Dato histórico — 2024. No presentarlo como medición actual.",
+      "period": "2024"
+    }
+  ],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "México vs Panamá: Horario y canales para ver EN VIVO a la Selección Mexicana, HOY, miércoles 5 de agosto",
+  "topic": "logistica_canal",
+  "topic_confidence": 0.5
+}

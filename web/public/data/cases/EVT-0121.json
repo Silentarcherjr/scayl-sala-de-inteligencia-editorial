@@ -1,0 +1,217 @@
+{
+  "claims": [
+    {
+      "attributed_to": "prensa.com",
+      "claim_id": "CLM-0121-001",
+      "event_id": "EVT-0121",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-6d81d100f4164a825bf7",
+          "excerpt": "¿Por qué el Canal de Panamá listó su bono en el mercado secundario de Latinex?",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.prensa.com/economia/por-que-el-canal-de-panama-listo-su-bono-en-el-mercado-secundario-de-latinex/",
+          "value": "¿Por qué el Canal de Panamá listó su bono en el mercado secundario de Latinex?"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "¿Por qué el Canal de Panamá listó su bono en el mercado secundario de Latinex?",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 6.0,
+    "I": 22.5,
+    "N": 15.0,
+    "R": 21.599999999999998,
+    "U": 0.0
+  },
+  "entities": [
+    "Canal de Panamá"
+  ],
+  "event_id": "EVT-0121",
+  "evidence_status": "parcial",
+  "evidence_status_reason": "Existe evidencia oficial de contexto, pero no respalda directamente la afirmación central.",
+  "first_detected": "2026-07-23T18:00:00Z",
+  "first_published": null,
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma Autoridad del Canal de Panamá (ACP) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «¿Por qué el Canal de Panamá listó su bono en el mercado secundario de Latinex?»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0121-001"
+    ],
+    "we_dont_know": [
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": []
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-6d81d100f4164a825bf7",
+      "idioma": "es",
+      "medio": "prensa.com",
+      "origen": "gdelt",
+      "titulo": "¿Por qué el Canal de Panamá listó su bono en el mercado secundario de Latinex?",
+      "url": "https://www.prensa.com/economia/por-que-el-canal-de-panama-listo-su-bono-en-el-mercado-secundario-de-latinex/"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": null,
+  "member_ids": [
+    "gdt-6d81d100f4164a825bf7"
+  ],
+  "official_evidence": [
+    {
+      "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+      "excerpt": "Exports of goods and services (% of GDP) = 44.3578422661429 % del PIB",
+      "field": "valor",
+      "kind": "indicador",
+      "period": "2024",
+      "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NE.EXP.GNFS.ZS",
+      "value": 44.3578422661429
+    }
+  ],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0121-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según prensa.com: ¿Por qué el Canal de Panamá listó su bono en el mercado secundario de Latinex?."
+      }
+    ],
+    "event_id": "EVT-0121",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T21:01:27.511035Z",
+      "latency_ms": 0,
+      "mode": "template",
+      "model": null,
+      "params": {},
+      "prompt_version": "template-v1",
+      "tokens_in": null,
+      "tokens_out": null
+    },
+    "investigation_questions": [
+      "¿Qué confirma Autoridad del Canal de Panamá (ACP) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «¿Por qué el Canal de Panamá listó su bono en el mercado secundario de Latinex?»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "package_id": "PKG-0121-template-v1",
+    "pending_verifications": [
+      "Verificar: ¿Por qué el Canal de Panamá listó su bono en el mercado secundario de Latinex?",
+      "Dato histórico — 2024. No presentarlo como medición actual."
+    ],
+    "proposed_title": "Lo que se sabe y lo que falta verificar: ¿Por qué el Canal de Panamá listó su bono en el mercado secundario de Latinex?",
+    "public_interest_angle": "Tema de logistica canal con relevancia para Panamá; estado de la evidencia: parcial.",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0121-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según prensa.com: ¿Por qué el Canal de Panamá listó su bono en el mercado secundario de Latinex?."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0121-001"
+      ],
+      "tag": "DECLARACION",
+      "text": "Según prensa.com: ¿Por qué el Canal de Panamá listó su bono en el mercado secundario de Latinex?."
+    },
+    "sources": [
+      {
+        "evidence_id": "news:gdt-6d81d100f4164a825bf7",
+        "excerpt": "¿Por qué el Canal de Panamá listó su bono en el mercado secundario de Latinex?",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.prensa.com/economia/por-que-el-canal-de-panama-listo-su-bono-en-el-mercado-secundario-de-latinex/",
+        "value": "¿Por qué el Canal de Panamá listó su bono en el mercado secundario de Latinex?"
+      },
+      {
+        "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+        "excerpt": "Exports of goods and services (% of GDP) = 44.3578422661429 % del PIB",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2024",
+        "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NE.EXP.GNFS.ZS",
+        "value": 44.3578422661429
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.6,
+      "I": 0.9,
+      "N": 1.0,
+      "R": 0.72,
+      "U": 0.0,
+      "rationale": {
+        "E": "1+ evidencia oficial; hasta 1 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema logistica_canal = 0.7; +0.2 por evidencia oficial pertinente",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Relacionado con Panamá; tema en alcance (logistica_canal, confianza 0.30)",
+        "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 1662 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 65.1,
+    "tier": "medio"
+  },
+  "recommended_action": "Seguimiento: reunir evidencia adicional. Fuente sugerida para verificar: Autoridad del Canal de Panamá (ACP).",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0121-1",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-6d81d100f4164a825bf7"
+        ]
+      }
+    ],
+    "max_possible_independent": 1,
+    "outlets": 1,
+    "publications": 1,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [
+    {
+      "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+      "message": "Dato histórico — 2024. No presentarlo como medición actual.",
+      "period": "2024"
+    }
+  ],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "¿Por qué el Canal de Panamá listó su bono en el mercado secundario de Latinex?",
+  "topic": "logistica_canal",
+  "topic_confidence": 0.3
+}

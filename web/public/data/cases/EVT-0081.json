@@ -1,0 +1,316 @@
+{
+  "claims": [
+    {
+      "attributed_to": "elvocero.com y 1 medio(s) más",
+      "claim_id": "CLM-0081-001",
+      "event_id": "EVT-0081",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-588a9a4f397c2d21afc9",
+          "excerpt": "Cambio de liderazgo en el Canal de Panamá: Ilya Espino, primera mujer que asume la administración",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.elvocero.com/el-mundo/latinoamerica/cambio-de-liderazgo-en-el-canal-de-panam-ilya-espino-primera-mujer-que-asume-la/article_84b82375-797f-5f5d-8fda-129bb7a32e4b.html",
+          "value": "Cambio de liderazgo en el Canal de Panamá: Ilya Espino, primera mujer que asume la administración"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "Cambio de liderazgo en el Canal de Panamá: Ilya Espino, primera mujer que asume la administración",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    },
+    {
+      "attributed_to": "elvocero.com",
+      "claim_id": "CLM-0081-002",
+      "event_id": "EVT-0081",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-588a9a4f397c2d21afc9",
+          "excerpt": "Cambio de liderazgo en el Canal de Panamá: Ilya Espino, primera mujer que asume la administración",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.elvocero.com/el-mundo/latinoamerica/cambio-de-liderazgo-en-el-canal-de-panam-ilya-espino-primera-mujer-que-asume-la/article_84b82375-797f-5f5d-8fda-129bb7a32e4b.html",
+          "value": "Cambio de liderazgo en el Canal de Panamá: Ilya Espino, primera mujer que asume la administración"
+        }
+      ],
+      "extracted_by": "llm:ollama:qwen3:8b@claims-v1",
+      "reason": "Extraída del titular; afirmada por el medio, sin verificación oficial.",
+      "statement": "Ilya Espino, primera mujer que asume la administración",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    },
+    {
+      "attributed_to": "mundomaritimo.cl",
+      "claim_id": "CLM-0081-003",
+      "event_id": "EVT-0081",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-ab999357fdd7116f32d2",
+          "excerpt": "Ilya Espino de Marotta asume como administradora del Canal de Panamá para el período 2026-2033",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.mundomaritimo.cl/noticias/ilya-espino-de-marotta-asume-como-administradora-del-canal-de-panama-para-el-periodo-2026-2033",
+          "value": "Ilya Espino de Marotta asume como administradora del Canal de Panamá para el período 2026-2033"
+        }
+      ],
+      "extracted_by": "llm:ollama:qwen3:8b@claims-v1",
+      "reason": "Extraída del titular; afirmada por el medio, sin verificación oficial.",
+      "statement": "Ilya Espino de Marotta asume como administradora del Canal de Panamá para el período 2026-2033",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 7.0,
+    "I": 22.5,
+    "N": 15.0,
+    "R": 24.0,
+    "U": 0.0
+  },
+  "entities": [
+    "Canal de Panamá"
+  ],
+  "event_id": "EVT-0081",
+  "evidence_status": "parcial",
+  "evidence_status_reason": "Existe evidencia oficial de contexto, pero no respalda directamente la afirmación central.",
+  "first_detected": "2026-09-07T18:00:00Z",
+  "first_published": null,
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma Autoridad del Canal de Panamá (ACP) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Cambio de liderazgo en el Canal de Panamá: Ilya Espino, primera mujer que asume la administración»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0081-001",
+      "CLM-0081-002",
+      "CLM-0081-003"
+    ],
+    "we_dont_know": [
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": []
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-588a9a4f397c2d21afc9",
+      "idioma": "es",
+      "medio": "elvocero.com",
+      "origen": "gdelt",
+      "titulo": "Cambio de liderazgo en el Canal de Panamá: Ilya Espino, primera mujer que asume la administración",
+      "url": "https://www.elvocero.com/el-mundo/latinoamerica/cambio-de-liderazgo-en-el-canal-de-panam-ilya-espino-primera-mujer-que-asume-la/article_84b82375-797f-5f5d-8fda-129bb7a32e4b.html"
+    },
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-ab999357fdd7116f32d2",
+      "idioma": "es",
+      "medio": "mundomaritimo.cl",
+      "origen": "gdelt",
+      "titulo": "Ilya Espino de Marotta asume como administradora del Canal de Panamá para el período 2026-2033",
+      "url": "https://www.mundomaritimo.cl/noticias/ilya-espino-de-marotta-asume-como-administradora-del-canal-de-panama-para-el-periodo-2026-2033"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": null,
+  "member_ids": [
+    "gdt-588a9a4f397c2d21afc9",
+    "gdt-ab999357fdd7116f32d2"
+  ],
+  "official_evidence": [
+    {
+      "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+      "excerpt": "Exports of goods and services (% of GDP) = 44.3578422661429 % del PIB",
+      "field": "valor",
+      "kind": "indicador",
+      "period": "2024",
+      "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NE.EXP.GNFS.ZS",
+      "value": 44.3578422661429
+    }
+  ],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0081-001",
+          "CLM-0081-002"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según elvocero.com y otros medios, Ilya Espino asume la administración del Canal de Panamá, siendo la primera mujer en el cargo. La noticia se basa en titulares de medios, pero no se dispone de información detallada sobre el contexto o la confirmación oficial."
+      },
+      {
+        "claim_ids": [
+          "CLM-0081-003"
+        ],
+        "tag": "DECLARACION",
+        "text": "Otro medio, mundomaritimo.cl, reporta que Ilya Espino de Marotta asume como administradora del Canal de Panamá para el período 2026-2033. Sin embargo, no se ha confirmado oficialmente este plazo ni su vinculación con el cargo."
+      }
+    ],
+    "event_id": "EVT-0081",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T20:57:42.996655Z",
+      "latency_ms": 15431,
+      "mode": "cache",
+      "model": "ollama:qwen3:8b",
+      "params": {
+        "num_ctx": 4096,
+        "seed": 42,
+        "temperature": 0
+      },
+      "prompt_version": "studio-v1",
+      "tokens_in": 1374,
+      "tokens_out": 794
+    },
+    "investigation_questions": [
+      "¿Ha sido confirmada oficialmente la asunción de Ilya Espino como administradora del Canal de Panamá?",
+      "¿Cuál es el periodo exacto de su mandato y cómo se determinó?",
+      "¿Qué declaraciones oficiales ha hecho el Canal de Panamá sobre este cambio de liderazgo?"
+    ],
+    "package_id": "PKG-0081-studio-v1",
+    "pending_verifications": [
+      "Confirmar si Ilya Espino ha sido oficialmente nombrada como administradora del Canal de Panamá.",
+      "Verificar el periodo exacto de su mandato y su vinculación con el cargo.",
+      "Obtener declaraciones oficiales del Canal de Panamá sobre el cambio de liderazgo.",
+      "Verificar: Cambio de liderazgo en el Canal de Panamá: Ilya Espino, primera mujer que asume la administración",
+      "Verificar: Ilya Espino, primera mujer que asume la administración",
+      "Verificar: Ilya Espino de Marotta asume como administradora del Canal de Panamá para el período 2026-2033",
+      "Dato histórico — 2024. No presentarlo como medición actual."
+    ],
+    "proposed_title": "Cambio de liderazgo en el Canal de Panamá: Ilya Espino, primera mujer que asume la administración",
+    "public_interest_angle": "El anuncio de un nuevo liderazgo en el Canal de Panamá, con la participación de una mujer en un cargo de alto nivel.",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0081-001",
+          "CLM-0081-002"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según elvocero.com y otros medios, Ilya Espino asume la administración del Canal de Panamá, siendo la primera mujer en el cargo. La noticia se basa en titulares de medios, pero no se dispone de información detallada sobre el contexto o la confirmación oficial."
+      },
+      {
+        "claim_ids": [
+          "CLM-0081-003"
+        ],
+        "tag": "DECLARACION",
+        "text": "Otro medio, mundomaritimo.cl, reporta que Ilya Espino de Marotta asume como administradora del Canal de Panamá para el período 2026-2033. Sin embargo, no se ha confirmado oficialmente este plazo ni su vinculación con el cargo."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0081-001",
+        "CLM-0081-002"
+      ],
+      "tag": "DECLARACION",
+      "text": "Ilya Espino asume la administración del Canal de Panamá, siendo la primera mujer en el cargo. La noticia se basa en titulares de medios, pero no se dispone de información detallada."
+    },
+    "sources": [
+      {
+        "evidence_id": "news:gdt-588a9a4f397c2d21afc9",
+        "excerpt": "Cambio de liderazgo en el Canal de Panamá: Ilya Espino, primera mujer que asume la administración",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.elvocero.com/el-mundo/latinoamerica/cambio-de-liderazgo-en-el-canal-de-panam-ilya-espino-primera-mujer-que-asume-la/article_84b82375-797f-5f5d-8fda-129bb7a32e4b.html",
+        "value": "Cambio de liderazgo en el Canal de Panamá: Ilya Espino, primera mujer que asume la administración"
+      },
+      {
+        "evidence_id": "news:gdt-ab999357fdd7116f32d2",
+        "excerpt": "Ilya Espino de Marotta asume como administradora del Canal de Panamá para el período 2026-2033",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.mundomaritimo.cl/noticias/ilya-espino-de-marotta-asume-como-administradora-del-canal-de-panama-para-el-periodo-2026-2033",
+        "value": "Ilya Espino de Marotta asume como administradora del Canal de Panamá para el período 2026-2033"
+      },
+      {
+        "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+        "excerpt": "Exports of goods and services (% of GDP) = 44.3578422661429 % del PIB",
+        "field": "valor",
+        "kind": "indicador",
+        "period": "2024",
+        "url": "https://api.worldbank.org/v2/country/PAN;CRI;COL;DOM;MEX;GTM/indicator/NE.EXP.GNFS.ZS",
+        "value": 44.3578422661429
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.7,
+      "I": 0.9,
+      "N": 1.0,
+      "R": 0.8,
+      "U": 0.0,
+      "rationale": {
+        "E": "1+ evidencia oficial; hasta 2 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema logistica_canal = 0.7; +0.2 por evidencia oficial pertinente",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Relacionado con Panamá; tema en alcance (logistica_canal, confianza 0.50)",
+        "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 534 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 68.5,
+    "tier": "medio"
+  },
+  "recommended_action": "Seguimiento: reunir evidencia adicional. Fuente sugerida para verificar: Autoridad del Canal de Panamá (ACP).",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0081-1",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-588a9a4f397c2d21afc9"
+        ]
+      },
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0081-2",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-ab999357fdd7116f32d2"
+        ]
+      }
+    ],
+    "max_possible_independent": 2,
+    "outlets": 2,
+    "publications": 2,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [
+    {
+      "evidence_id": "wb:PAN:NE.EXP.GNFS.ZS:2024",
+      "message": "Dato histórico — 2024. No presentarlo como medición actual.",
+      "period": "2024"
+    }
+  ],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "Cambio de liderazgo en el Canal de Panamá: Ilya Espino, primera mujer que asume la administración",
+  "topic": "logistica_canal",
+  "topic_confidence": 0.5
+}

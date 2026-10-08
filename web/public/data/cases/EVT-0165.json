@@ -1,0 +1,319 @@
+{
+  "claims": [
+    {
+      "attributed_to": "telemetro.com",
+      "claim_id": "CLM-0165-001",
+      "event_id": "EVT-0165",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-ecf179e17da0e9ef76c8",
+          "excerpt": "Sismo en Panamá hoy: IGUP descarta que hoy lunes 31 de agosto no se ha registrado algún temblor",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.telemetro.com/nacionales/sismo-panama-hoy-igup-descarta-que-hoy-lunes-31-agosto-no-se-ha-registrado-algun-temblor-n6090312",
+          "value": "Sismo en Panamá hoy: IGUP descarta que hoy lunes 31 de agosto no se ha registrado algún temblor"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "Sismo en Panamá hoy: IGUP descarta que hoy lunes 31 de agosto no se ha registrado algún temblor",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    },
+    {
+      "attributed_to": null,
+      "claim_id": "CLM-0165-002",
+      "event_id": "EVT-0165",
+      "evidence": [],
+      "extracted_by": "rule",
+      "reason": "La evidencia disponible confirma el evento sísmico pero no contiene datos verificados de daños.",
+      "statement": "El sismo causó daños o personas afectadas",
+      "status": "SIN_SUSTENTO",
+      "temporal_note": null,
+      "type": "HECHO"
+    },
+    {
+      "attributed_to": null,
+      "claim_id": "CLM-0165-003",
+      "event_id": "EVT-0165",
+      "evidence": [
+        {
+          "evidence_id": "usgs:us7000tdbz",
+          "excerpt": "4 km WSW of Caldera, Panama",
+          "field": "magnitude",
+          "kind": "sismo",
+          "period": "2026-09-01T04:50:45.457000Z",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tdbz",
+          "value": 3.6
+        },
+        {
+          "evidence_id": "usgs:us7000tdbz",
+          "excerpt": "4 km WSW of Caldera, Panama",
+          "field": "place",
+          "kind": "sismo",
+          "period": "2026-09-01T04:50:45.457000Z",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tdbz",
+          "value": "4 km WSW of Caldera, Panama"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Contexto: el titular no indica magnitud, así que este registro NO confirma el titular.",
+      "statement": "USGS registró un sismo de magnitud 3.6 (4 km WSW of Caldera, Panama) en las 48 h cercanas a la publicación",
+      "status": "SUSTENTADA",
+      "temporal_note": null,
+      "type": "HECHO"
+    },
+    {
+      "attributed_to": "IGUP (según telemetro.com)",
+      "claim_id": "CLM-0165-004",
+      "event_id": "EVT-0165",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-ecf179e17da0e9ef76c8",
+          "excerpt": "Sismo en Panamá hoy: IGUP descarta que hoy lunes 31 de agosto no se ha registrado algún temblor",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.telemetro.com/nacionales/sismo-panama-hoy-igup-descarta-que-hoy-lunes-31-agosto-no-se-ha-registrado-algun-temblor-n6090312",
+          "value": "Sismo en Panamá hoy: IGUP descarta que hoy lunes 31 de agosto no se ha registrado algún temblor"
+        }
+      ],
+      "extracted_by": "llm:ollama:qwen3:8b@claims-v1",
+      "reason": "Extraída del titular; afirmada por el medio, sin verificación oficial.",
+      "statement": "IGUP descarta que hoy lunes 31 de agosto no se ha registrado algún temblor",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 6.0,
+    "I": 22.5,
+    "N": 15.0,
+    "R": 26.4,
+    "U": 0.0
+  },
+  "entities": [
+    "Panamá"
+  ],
+  "event_id": "EVT-0165",
+  "evidence_status": "parcial",
+  "evidence_status_reason": "Existe evidencia oficial de contexto, pero no respalda directamente la afirmación central.",
+  "first_detected": "2026-08-31T18:00:00Z",
+  "first_published": null,
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma SINAPROC (Sistema Nacional de Protección Civil) sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «Sismo en Panamá hoy: IGUP descarta que hoy lunes 31 de agosto no se ha registrado algún temblor»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0165-001",
+      "CLM-0165-004"
+    ],
+    "we_dont_know": [
+      "El sismo causó daños o personas afectadas",
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": [
+      "CLM-0165-003"
+    ]
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-ecf179e17da0e9ef76c8",
+      "idioma": "es",
+      "medio": "telemetro.com",
+      "origen": "gdelt",
+      "titulo": "Sismo en Panamá hoy: IGUP descarta que hoy lunes 31 de agosto no se ha registrado algún temblor",
+      "url": "https://www.telemetro.com/nacionales/sismo-panama-hoy-igup-descarta-que-hoy-lunes-31-agosto-no-se-ha-registrado-algun-temblor-n6090312"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": null,
+  "member_ids": [
+    "gdt-ecf179e17da0e9ef76c8"
+  ],
+  "official_evidence": [
+    {
+      "evidence_id": "usgs:us7000tdbz",
+      "excerpt": "4 km WSW of Caldera, Panama",
+      "field": "magnitude",
+      "kind": "sismo",
+      "period": "2026-09-01T04:50:45.457000Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tdbz",
+      "value": 3.6
+    },
+    {
+      "evidence_id": "usgs:us7000tdbz",
+      "excerpt": "4 km WSW of Caldera, Panama",
+      "field": "place",
+      "kind": "sismo",
+      "period": "2026-09-01T04:50:45.457000Z",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tdbz",
+      "value": "4 km WSW of Caldera, Panama"
+    }
+  ],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0165-001",
+          "CLM-0165-003"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según telemetro.com, la IGUP informó que no se registraron temblores en Panamá el lunes 31 de agosto. Sin embargo, se confirmó un sismo de magnitud 3.6 en la zona de Caldera, Panamá, el 1 de septiembre de 2026, según datos del USGS."
+      }
+    ],
+    "event_id": "EVT-0165",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T20:57:27.562094Z",
+      "latency_ms": 15288,
+      "mode": "cache",
+      "model": "ollama:qwen3:8b",
+      "params": {
+        "num_ctx": 4096,
+        "seed": 42,
+        "temperature": 0
+      },
+      "prompt_version": "studio-v1",
+      "tokens_in": 1519,
+      "tokens_out": 780
+    },
+    "investigation_questions": [
+      "¿Cuál fue la ubicación exacta del sismo de magnitud 3.6 y cuál fue su profundidad?",
+      "¿La IGUP ha emitido declaraciones oficiales sobre la ausencia de temblores el 31 de agosto?",
+      "¿Existen registros de daños o afectaciones en la zona de Caldera tras el sismo de septiembre?"
+    ],
+    "package_id": "PKG-0165-studio-v1",
+    "pending_verifications": [
+      "Confirmar si la IGUP emitió declaraciones oficiales sobre la ausencia de temblores el 31 de agosto.",
+      "Verificar si el sismo de magnitud 3.6 causó daños o afectaciones en la zona de Caldera.",
+      "Revisar el contenido completo de los artículos mencionados en telemetro.com.",
+      "Verificar: Sismo en Panamá hoy: IGUP descarta que hoy lunes 31 de agosto no se ha registrado algún temblor",
+      "Verificar: El sismo causó daños o personas afectadas",
+      "Verificar: IGUP descarta que hoy lunes 31 de agosto no se ha registrado algún temblor"
+    ],
+    "proposed_title": "Sismo en Panamá: IGUP descarta temblores hoy, pero se registró un sismo de magnitud 3.6 en septiembre",
+    "public_interest_angle": "Según telemetro.com, la IGUP informó que no se registraron temblores hoy, pero se confirmó un sismo de magnitud 3.6 en septiembre.",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0165-001",
+          "CLM-0165-003"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según telemetro.com, la IGUP informó que no se registraron temblores en Panamá el lunes 31 de agosto. Sin embargo, se confirmó un sismo de magnitud 3.6 en la zona de Caldera, Panamá, el 1 de septiembre de 2026, según datos del USGS."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0165-001",
+        "CLM-0165-002",
+        "CLM-0165-003"
+      ],
+      "tag": "DECLARACION",
+      "text": "La IGUP informó que no hubo temblores el 31 de agosto, pero se registró un sismo de magnitud 3.6 en septiembre. ¿Hubo daños?"
+    },
+    "sources": [
+      {
+        "evidence_id": "news:gdt-ecf179e17da0e9ef76c8",
+        "excerpt": "Sismo en Panamá hoy: IGUP descarta que hoy lunes 31 de agosto no se ha registrado algún temblor",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.telemetro.com/nacionales/sismo-panama-hoy-igup-descarta-que-hoy-lunes-31-agosto-no-se-ha-registrado-algun-temblor-n6090312",
+        "value": "Sismo en Panamá hoy: IGUP descarta que hoy lunes 31 de agosto no se ha registrado algún temblor"
+      },
+      {
+        "evidence_id": "usgs:us7000tdbz",
+        "excerpt": "4 km WSW of Caldera, Panama",
+        "field": "place",
+        "kind": "sismo",
+        "period": "2026-09-01T04:50:45.457000Z",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us7000tdbz",
+        "value": "4 km WSW of Caldera, Panama"
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "NUMBER_NOT_IN_EVIDENCE",
+          "detail": "Cifra sin respaldo en la evidencia citada: «No se ha proporcionado evidencia de daños o personas afectadas por el sismo de magnitud 3.6.»",
+          "location": "brief[1]",
+          "severity": "error"
+        },
+        {
+          "code": "NUMBER_NOT_IN_EVIDENCE",
+          "detail": "Cifra sin respaldo en la evidencia citada: «No se ha proporcionado evidencia de daños o personas afectadas por el sismo de magnitud 3.6.»",
+          "location": "script[1]",
+          "severity": "error"
+        },
+        {
+          "code": "STATUS_MISMATCH",
+          "detail": "HECHO sobre afirmación SOLO_REPORTADA; reetiquetada como DECLARACION",
+          "location": "social_copy",
+          "severity": "warning"
+        },
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.6,
+      "I": 0.9,
+      "N": 1.0,
+      "R": 0.88,
+      "U": 0.0,
+      "rationale": {
+        "E": "1+ evidencia oficial; hasta 1 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema eventos_naturales = 0.7; +0.2 por evidencia oficial pertinente",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Relacionado con Panamá; tema en alcance (eventos_naturales, confianza 0.70)",
+        "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 726 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 69.9,
+    "tier": "medio"
+  },
+  "recommended_action": "Seguimiento: reunir evidencia adicional. Fuente sugerida para verificar: SINAPROC (Sistema Nacional de Protección Civil).",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0165-1",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-ecf179e17da0e9ef76c8"
+        ]
+      }
+    ],
+    "max_possible_independent": 1,
+    "outlets": 1,
+    "publications": 1,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "Sismo en Panamá hoy: IGUP descarta que hoy lunes 31 de agosto no se ha registrado algún temblor",
+  "topic": "eventos_naturales",
+  "topic_confidence": 0.7
+}

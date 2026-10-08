@@ -1,0 +1,208 @@
+{
+  "claims": [
+    {
+      "attributed_to": "prensa.com y 1 medio(s) más",
+      "claim_id": "CLM-0048-001",
+      "event_id": "EVT-0048",
+      "evidence": [
+        {
+          "evidence_id": "news:gdt-28595189d8d711e62b16",
+          "excerpt": "María Ossa frente al Ejército de Estados Unidos : la historia de la calzada de Amador",
+          "field": "titulo",
+          "kind": "noticia",
+          "period": null,
+          "url": "https://www.prensa.com/historias/maria-ossa-frente-al-ejercito-de-estados-unidos-la-historia-de-la-calzada-de-amador/",
+          "value": "María Ossa frente al Ejército de Estados Unidos : la historia de la calzada de Amador"
+        }
+      ],
+      "extracted_by": "rule",
+      "reason": "Afirmado por medios; sin respaldo oficial directo en el corpus.",
+      "statement": "María Ossa frente al Ejército de Estados Unidos : la historia de la calzada de Amador",
+      "status": "SOLO_REPORTADA",
+      "temporal_note": null,
+      "type": "DECLARACION"
+    }
+  ],
+  "conflicts": [],
+  "contributions": {
+    "E": 2.0,
+    "I": 5.0,
+    "N": 15.0,
+    "R": 0.0,
+    "U": 0.0
+  },
+  "entities": [],
+  "event_id": "EVT-0048",
+  "evidence_status": "parcial",
+  "evidence_status_reason": "Hasta 2 procedencias posiblemente independientes, sin evidencia oficial.",
+  "first_detected": "2026-09-01T07:30:00Z",
+  "first_published": null,
+  "gap": {
+    "investigate_next": [
+      "¿Qué confirma Fuente primaria del hecho reportado sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «María Ossa frente al Ejército de Estados Unidos : la historia de la calzada de Amador»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "it_is_claimed": [
+      "CLM-0048-001"
+    ],
+    "we_dont_know": [
+      "Ninguna fuente oficial del corpus confirma el hecho central.",
+      "El contenido completo de los artículos (solo se dispone de titular/metadatos)."
+    ],
+    "we_infer": [],
+    "we_know": []
+  },
+  "headlines": [
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-28595189d8d711e62b16",
+      "idioma": "es",
+      "medio": "prensa.com",
+      "origen": "gdelt",
+      "titulo": "María Ossa frente al Ejército de Estados Unidos : la historia de la calzada de Amador",
+      "url": "https://www.prensa.com/historias/maria-ossa-frente-al-ejercito-de-estados-unidos-la-historia-de-la-calzada-de-amador/"
+    },
+    {
+      "fecha_publicacion": null,
+      "id_noticia": "gdt-632d786e34893c401e38",
+      "idioma": "es",
+      "medio": "midiario.com",
+      "origen": "gdelt",
+      "titulo": "¿ Sabías que María Ossa de Amador protestó ante militares de EE . UU .? La historia detrás de la Calzada de Amador",
+      "url": "https://www.midiario.com/nacionales/sabias-que-maria-ossa-de-amador-protesto-ante-militares-de-eeuu-la-historia-detras-de-la-calzada-de-amador/"
+    }
+  ],
+  "is_recirculated": false,
+  "last_published": null,
+  "member_ids": [
+    "gdt-28595189d8d711e62b16",
+    "gdt-632d786e34893c401e38"
+  ],
+  "official_evidence": [],
+  "package": {
+    "brief": [
+      {
+        "claim_ids": [
+          "CLM-0048-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según prensa.com y 1 medio(s) más: María Ossa frente al Ejército de Estados Unidos : la historia de la calzada de Amador."
+      }
+    ],
+    "event_id": "EVT-0048",
+    "generated_by": {
+      "cost_usd": 0.0,
+      "created_at": "2026-10-07T21:01:27.532678Z",
+      "latency_ms": 0,
+      "mode": "template",
+      "model": null,
+      "params": {},
+      "prompt_version": "template-v1",
+      "tokens_in": null,
+      "tokens_out": null
+    },
+    "investigation_questions": [
+      "¿Qué confirma Fuente primaria del hecho reportado sobre el hecho central?",
+      "¿Qué evidencia respalda o descarta: «María Ossa frente al Ejército de Estados Unidos : la historia de la calzada de Amador»?",
+      "¿Qué fuentes primarias e independientes (no replicadas) pueden consultarse?"
+    ],
+    "package_id": "PKG-0048-template-v1",
+    "pending_verifications": [
+      "Verificar: María Ossa frente al Ejército de Estados Unidos : la historia de la calzada de Amador"
+    ],
+    "proposed_title": "Lo que se sabe y lo que falta verificar: María Ossa frente al Ejército de Estados Unidos : la historia de la calzada de Amador",
+    "public_interest_angle": "Tema de otro con relevancia para Panamá; estado de la evidencia: parcial.",
+    "scope_disclaimer": "Basado únicamente en titular/metadatos.",
+    "script": [
+      {
+        "claim_ids": [
+          "CLM-0048-001"
+        ],
+        "tag": "DECLARACION",
+        "text": "Según prensa.com y 1 medio(s) más: María Ossa frente al Ejército de Estados Unidos : la historia de la calzada de Amador."
+      }
+    ],
+    "social_copy": {
+      "claim_ids": [
+        "CLM-0048-001"
+      ],
+      "tag": "DECLARACION",
+      "text": "Según prensa.com y 1 medio(s) más: María Ossa frente al Ejército de Estados Unidos : la historia de la calzada de Amador."
+    },
+    "sources": [
+      {
+        "evidence_id": "news:gdt-28595189d8d711e62b16",
+        "excerpt": "María Ossa frente al Ejército de Estados Unidos : la historia de la calzada de Amador",
+        "field": "titulo",
+        "kind": "noticia",
+        "period": null,
+        "url": "https://www.prensa.com/historias/maria-ossa-frente-al-ejercito-de-estados-unidos-la-historia-de-la-calzada-de-amador/",
+        "value": "María Ossa frente al Ejército de Estados Unidos : la historia de la calzada de Amador"
+      }
+    ],
+    "validation": {
+      "issues": [
+        {
+          "code": "SCRIPT_SHORT",
+          "detail": "Guion menor a 45 s: la evidencia disponible no permite más sin inventar",
+          "location": "script",
+          "severity": "warning"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "priority": {
+    "components": {
+      "E": 0.2,
+      "I": 0.2,
+      "N": 1.0,
+      "R": 0.0,
+      "U": 0.0,
+      "rationale": {
+        "E": "0 evidencia oficial; hasta 2 procedencias posibles; 0 independientes confirmadas",
+        "I": "Peso editorial del tema otro = 0.2",
+        "N": "Sin eventos previos similares en la ventana",
+        "R": "Sin vínculo explícito con Panamá; tema fuera de alcance",
+        "U": "Fecha de publicación desconocida; aproximación por detección (GDELT) más reciente: hace 707 h respecto al corte"
+      }
+    },
+    "rules_version": "scoring-v1",
+    "score": 22.0,
+    "tier": "bajo"
+  },
+  "recommended_action": "Monitorear.",
+  "security_flags": [],
+  "source_dna": {
+    "confirmed_independent": 0,
+    "groups": [
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0048-1",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-28595189d8d711e62b16"
+        ]
+      },
+      {
+        "basis": "Sin información de procedencia.",
+        "group_id": "PG-0048-2",
+        "label": "independencia_desconocida",
+        "member_ids": [
+          "gdt-632d786e34893c401e38"
+        ]
+      }
+    ],
+    "max_possible_independent": 2,
+    "outlets": 2,
+    "publications": 2,
+    "statement": "La procedencia independiente no puede determinarse con la evidencia disponible."
+  },
+  "synthetic": false,
+  "temporal_warnings": [],
+  "text_scope_note": "Basado únicamente en titular/metadatos.",
+  "title": "María Ossa frente al Ejército de Estados Unidos : la historia de la calzada de Amador",
+  "topic": "otro",
+  "topic_confidence": null
+}
