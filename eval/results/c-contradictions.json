@@ -1,0 +1,252 @@
+{
+  "metric": "Detección de contradicciones (C4) — nivel evento: ¿build_event produce >= 1 conflicto?",
+  "status": "medido",
+  "run_at": "2026-10-08T23:41:23.518108+00:00",
+  "method": "automático sobre conjunto sintético; etiquetas esperadas escritas por el autor del cambio",
+  "author": "IA (agente Claude, subagente C); sin revisión humana de las etiquetas",
+  "dataset": {
+    "path": "tests/evidence_hard_cases.py",
+    "sha256": "e754738007ebfe79cdaf2a8cb126a0561b472d36163bfb655cfe06aa5f6eebae",
+    "synthetic": true,
+    "title_prefix": "[SINTÉTICO]",
+    "development_cases": 24,
+    "posthoc_cases": 8,
+    "categories": [
+      "afirmaciones_incompatibles",
+      "correccion",
+      "distinto_anio",
+      "distinto_periodo",
+      "duplicado_agencia",
+      "eventos_distintos",
+      "misma_cifra_distinta",
+      "organizaciones_distintas",
+      "titular_vs_oficial",
+      "unidades_incompatibles"
+    ]
+  },
+  "code": {
+    "before": "b4d03f0 (main)",
+    "after": "857ce80",
+    "reproduce": "python -m tests.evidence_hard_cases (con el código de cada commit)"
+  },
+  "before": {
+    "development": {
+      "n": 24,
+      "tp": 5,
+      "fp": 10,
+      "fn": 3,
+      "tn": 6,
+      "precision": {
+        "num": 5,
+        "den": 15,
+        "value": 0.3333333333333333
+      },
+      "recall": {
+        "num": 5,
+        "den": 8,
+        "value": 0.625
+      }
+    },
+    "posthoc": {
+      "n": 8,
+      "tp": 1,
+      "fp": 2,
+      "fn": 1,
+      "tn": 4,
+      "precision": {
+        "num": 1,
+        "den": 3,
+        "value": 0.3333333333333333
+      },
+      "recall": {
+        "num": 1,
+        "den": 2,
+        "value": 0.5
+      }
+    },
+    "errors": [
+      {
+        "case": "C04",
+        "category": "distinto_anio",
+        "expected_conflict": false,
+        "detected": true,
+        "conflict_fields": [
+          "FP.CPI.TOTL.ZG"
+        ]
+      },
+      {
+        "case": "C05",
+        "category": "distinto_anio",
+        "expected_conflict": false,
+        "detected": true,
+        "conflict_fields": [
+          "NE.EXP.GNFS.ZS"
+        ]
+      },
+      {
+        "case": "C06",
+        "category": "distinto_periodo",
+        "expected_conflict": false,
+        "detected": true,
+        "conflict_fields": [
+          "FP.CPI.TOTL.ZG"
+        ]
+      },
+      {
+        "case": "C08",
+        "category": "organizaciones_distintas",
+        "expected_conflict": false,
+        "detected": true,
+        "conflict_fields": [
+          "NY.GDP.MKTP.KD.ZG"
+        ]
+      },
+      {
+        "case": "C09",
+        "category": "organizaciones_distintas",
+        "expected_conflict": false,
+        "detected": true,
+        "conflict_fields": [
+          "NY.GDP.MKTP.KD.ZG"
+        ]
+      },
+      {
+        "case": "C11",
+        "category": "correccion",
+        "expected_conflict": true,
+        "detected": false,
+        "conflict_fields": []
+      },
+      {
+        "case": "C12",
+        "category": "eventos_distintos",
+        "expected_conflict": false,
+        "detected": true,
+        "conflict_fields": [
+          "magnitud"
+        ]
+      },
+      {
+        "case": "C13",
+        "category": "eventos_distintos",
+        "expected_conflict": false,
+        "detected": true,
+        "conflict_fields": [
+          "SL.UEM.TOTL.ZS"
+        ]
+      },
+      {
+        "case": "C14",
+        "category": "eventos_distintos",
+        "expected_conflict": false,
+        "detected": true,
+        "conflict_fields": [
+          "FP.CPI.TOTL.ZG"
+        ]
+      },
+      {
+        "case": "C16",
+        "category": "unidades_incompatibles",
+        "expected_conflict": false,
+        "detected": true,
+        "conflict_fields": [
+          "FP.CPI.TOTL.ZG"
+        ]
+      },
+      {
+        "case": "C17",
+        "category": "unidades_incompatibles",
+        "expected_conflict": false,
+        "detected": true,
+        "conflict_fields": [
+          "FP.CPI.TOTL.ZG",
+          "NE.EXP.GNFS.ZS"
+        ]
+      },
+      {
+        "case": "C18",
+        "category": "afirmaciones_incompatibles",
+        "expected_conflict": true,
+        "detected": false,
+        "conflict_fields": []
+      },
+      {
+        "case": "C19",
+        "category": "afirmaciones_incompatibles",
+        "expected_conflict": true,
+        "detected": false,
+        "conflict_fields": []
+      },
+      {
+        "case": "H03",
+        "category": "distinto_anio",
+        "expected_conflict": false,
+        "detected": true,
+        "conflict_fields": [
+          "SL.UEM.TOTL.ZS"
+        ]
+      },
+      {
+        "case": "H04",
+        "category": "afirmaciones_incompatibles",
+        "expected_conflict": true,
+        "detected": false,
+        "conflict_fields": []
+      },
+      {
+        "case": "H07",
+        "category": "eventos_distintos",
+        "expected_conflict": false,
+        "detected": true,
+        "conflict_fields": [
+          "magnitud"
+        ]
+      }
+    ]
+  },
+  "after": {
+    "development": {
+      "n": 24,
+      "tp": 8,
+      "fp": 0,
+      "fn": 0,
+      "tn": 16,
+      "precision": {
+        "num": 8,
+        "den": 8,
+        "value": 1.0
+      },
+      "recall": {
+        "num": 8,
+        "den": 8,
+        "value": 1.0
+      }
+    },
+    "posthoc": {
+      "n": 8,
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "tn": 6,
+      "precision": {
+        "num": 2,
+        "den": 2,
+        "value": 1.0
+      },
+      "recall": {
+        "num": 2,
+        "den": 2,
+        "value": 1.0
+      }
+    },
+    "errors": []
+  },
+  "real_corpus_impact": "Repetición del ensamblado sobre los 165 clústeres E5 del bundle demo (data/processed/v1) y los 183 del baseline TF-IDF: 0 eventos cambian (P, estado, conflictos, evidencia oficial y Source DNA idénticos). El corpus real casi no tiene versiones numéricas en conflicto (1 conflicto en 165 eventos, sismo 4.7 vs USGS 4.5).",
+  "limitations": [
+    "Conjunto pequeño (24 + 8 casos) y escrito por la misma IA que cambió la lógica: el 'después' del set de desarrollo es optimista por construcción.",
+    "Los 8 casos posthoc se escribieron después del cambio y no se usaron para ajustarlo; aun así no son un conjunto independiente ni etiquetado por humanos.",
+    "Solo titulares: no se leen cuerpos de artículos. Lugares, períodos y proyecciones se detectan con reglas léxicas en español; titulares en otros idiomas tienen menor cobertura.",
+    "La contradicción semántica solo cubre afirmación vs. negación/desmentido explícito.",
+    "No es una medición de exactitud en datos reales: el corpus real no tiene casos etiquetados de contradicción."
+  ]
+}
