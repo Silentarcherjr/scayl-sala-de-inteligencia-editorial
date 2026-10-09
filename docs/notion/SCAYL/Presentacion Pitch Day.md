@@ -42,7 +42,7 @@ Datos públicos: noticias (GDELT y RSS de TVN), ACP, INEC, Banco Mundial y USGS,
 
 1. **Sala de Situación:** 187 señales → 165 eventos priorizados.
 2. **Ficha del Canal:** P = 89.9 con cada componente y su regla; datos de la ACP con fecha.
-3. **Conflicto:** titular 4.7 frente a USGS 4.5. SCAYL no elige ni promedia: muestra ambas.
+3. **Conflicto:** titular 4.7 frente a USGS 4.5. SCAYL no elige ni promedia: muestra ambas. *(Mencionarlo, pero no abrir en vivo la ficha EVT-0114: también muestra un sismo distinto de 7.4 agrupado por error; corrección en el PR #80, no publicada. Para la ficha en vivo, usar EVT-0078.)*
 4. **Consulta:** el nivel del lago Gatún, con fecha y cita.
 5. **Abstención:** "¿Cuál es la moneda oficial de Panamá?" → no está en la evidencia, no inventa.
 6. **Borrador citado** → **aprobado como borrador**, con justificación y recibo.
