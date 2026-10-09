@@ -1,0 +1,56 @@
+{
+ "data": {
+  "proposed_title": "Daniel Noboa se reunirá con el presidente de Panamá para tratar comercio y seguridad",
+  "public_interest_angle": "Reunión entre líder empresarial y autoridad nacional sobre temas clave para la economía",
+  "brief": [
+   {
+    "text": "Según expreso.ec, Daniel Noboa se reunirá con el presidente de Panamá para tratar temas relacionados con comercio y seguridad. La información proviene de un titular publicado en el medio.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0067-001"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Cuál es el contenido completo del artículo de expreso.ec sobre la reunión?",
+   "¿Qué temas específicos se abordarán durante la reunión entre Noboa y el presidente?",
+   "¿Qué instituciones o organismos están involucrados en la coordinación de esta reunión?"
+  ],
+  "script": [
+   {
+    "text": "Daniel Noboa se reunirá con el presidente de Panamá para tratar temas relacionados con comercio y seguridad. La información se basa en un titular publicado por expreso.ec.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0067-001"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "Daniel Noboa se reunirá con el presidente de Panamá para tratar comercio y seguridad. La información proviene de un titular publicado por expreso.ec.",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0067-001"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar el contenido completo del artículo de expreso.ec sobre la reunión.",
+   "Verificar si la reunión incluye otros temas además de comercio y seguridad.",
+   "Identificar las instituciones o organismos que coordinaron la reunión."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 11795,
+  "tokens_in": 1033,
+  "tokens_out": 445,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-09T01:33:40.468511Z"
+ }
+}

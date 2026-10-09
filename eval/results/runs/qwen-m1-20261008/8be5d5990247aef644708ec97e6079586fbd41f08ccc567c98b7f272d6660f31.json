@@ -1,0 +1,56 @@
+{
+ "data": {
+  "proposed_title": "Banistmo presenta nueva identidad como parte del Grupo Financiero BSC",
+  "public_interest_angle": "Banistmo, una institución financiera panameña, ha anunciado una nueva identidad institucional como parte de su integración al Grupo Financiero BSC, según un titular publicado por TVN.",
+  "brief": [
+   {
+    "text": "Según TVN, Banistmo presentó una nueva identidad institucional como parte de su integración al Grupo Financiero BSC. El anuncio se hizo a través de un titular publicado en el medio.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0048-001"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Qué cambios específicos se han implementado en la identidad de Banistmo?",
+   "¿Cuál es el alcance de la integración del Grupo Financiero BSC en Banistmo?",
+   "¿Qué beneficios se espera que aporte esta nueva identidad a los clientes y a la institución?"
+  ],
+  "script": [
+   {
+    "text": "Banistmo, una institución financiera panameña, presentó una nueva identidad institucional como parte de su integración al Grupo Financiero BSC, según un titular publicado por TVN. El anuncio se hizo a través de un titular publicado en el medio.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0048-001"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "Banistmo presenta nueva identidad como parte del Grupo Financiero BSC, según TVN.",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0048-001"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar si el titular de TVN representa un anuncio oficial de Banistmo.",
+   "Verificar si la integración al Grupo Financiero BSC fue anunciada en un comunicado oficial o en un artículo completo.",
+   "Investigar si existen más detalles sobre los cambios en la identidad institucional de Banistmo."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 13295,
+  "tokens_in": 1038,
+  "tokens_out": 501,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-09T01:33:28.671195Z"
+ }
+}

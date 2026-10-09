@@ -1,0 +1,73 @@
+{
+ "data": {
+  "proposed_title": "Sismo en Panamá: IGUP descarta temblores hoy, pero se registró un sismo de magnitud 3.6",
+  "public_interest_angle": "Según telemetro.com, la IGUP informó que no se registraron temblores hoy, pero se confirmó un sismo de magnitud 3.6 en la zona de Caldera.",
+  "brief": [
+   {
+    "text": "Según telemetro.com, la IGUP informó que no se registraron temblores en Panamá el lunes 31 de agosto. Sin embargo, se confirmó un sismo de magnitud 3.6 en la zona de Caldera, a 4 km al oeste-suroeste de la ciudad, según datos del USGS.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0183-001",
+     "CLM-0183-003"
+    ]
+   },
+   {
+    "text": "No se ha confirmado que el sismo haya causado daños ni afectado a personas, según la evidencia disponible.",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0183-002"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Cuál fue la ubicación exacta del sismo de magnitud 3.6 y cuál fue su profundidad?",
+   "¿La IGUP ha proporcionado más detalles sobre la ausencia de temblores el lunes 31 de agosto?",
+   "¿Se han realizado evaluaciones de daños o afectaciones tras el sismo de magnitud 3.6?"
+  ],
+  "script": [
+   {
+    "text": "Según telemetro.com, la IGUP informó que no se registraron temblores en Panamá el lunes 31 de agosto. Sin embargo, se confirmó un sismo de magnitud 3.6 en la zona de Caldera, a 4 km al oeste-suroeste de la ciudad, según datos del USGS.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0183-001",
+     "CLM-0183-003"
+    ]
+   },
+   {
+    "text": "No se ha confirmado que el sismo haya causado daños ni afectado a personas, según la evidencia disponible.",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0183-002"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "La IGUP informó que no se registraron temblores el lunes 31 de agosto, pero se confirmó un sismo de magnitud 3.6 en Caldera. ¿Hubo daños?",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0183-001",
+    "CLM-0183-003"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar si el sismo de magnitud 3.6 causó daños o afectaciones.",
+   "Verificar si la IGUP proporcionó más detalles sobre la ausencia de temblores el lunes 31 de agosto.",
+   "Revisar si existen informes adicionales sobre el sismo de magnitud 3.6."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 25487,
+  "tokens_in": 1519,
+  "tokens_out": 759,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-08T23:38:43.018615Z"
+ }
+}

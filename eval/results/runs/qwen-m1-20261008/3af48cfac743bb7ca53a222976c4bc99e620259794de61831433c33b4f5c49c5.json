@@ -1,0 +1,87 @@
+{
+ "data": {
+  "proposed_title": "Mulino visitará Ecuador el viernes para hablar sobre economía y seguridad",
+  "public_interest_angle": "La visita del Presidente de Panamá a Ecuador se enmarca en temas de cooperación económica y seguridad regional.",
+  "brief": [
+   {
+    "text": "Según panamaamerica.com.pa y otros medios, el Presidente de Panamá visitará Ecuador el viernes para discutir temas de economía y seguridad. La información se basa únicamente en titulares y metadatos.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0062-001"
+    ]
+   },
+   {
+    "text": "Otra fuente atribuye la declaración al Presidente de Panamá mismo, indicando que su visita a Ecuador está programada para el viernes con el propósito de abordar asuntos económicos y de seguridad.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0062-002"
+    ]
+   },
+   {
+    "text": "Los medios reportan la visita como un tema de interés regional, aunque no se dispone de información detallada sobre el contenido de las conversaciones.",
+    "tag": "INFERENCIA",
+    "claim_ids": [
+     "CLM-0062-001",
+     "CLM-0062-002"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Cuál es el propósito específico de la visita del Presidente de Panamá a Ecuador?",
+   "¿Qué instituciones o autoridades ecuatorianas se espera que participen en la reunión?",
+   "¿Existen acuerdos previos entre Panamá y Ecuador sobre temas económicos o de seguridad?"
+  ],
+  "script": [
+   {
+    "text": "El Presidente de Panamá visitará Ecuador el viernes para abordar temas de economía y seguridad, según reportes de medios como panamaamerica.com.pa. La información se basa en titulares y metadatos, sin detalles adicionales.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0062-001"
+    ]
+   },
+   {
+    "text": "Otra fuente atribuye la noticia al Presidente mismo, quien confirmó la visita para el viernes con el objetivo de discutir asuntos económicos y de seguridad.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0062-002"
+    ]
+   },
+   {
+    "text": "La visita se enmarca en la cooperación regional, aunque aún no se conoce el alcance exacto de las conversaciones.",
+    "tag": "INFERENCIA",
+    "claim_ids": [
+     "CLM-0062-001",
+     "CLM-0062-002"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "El Presidente de Panamá visitará Ecuador el viernes para hablar sobre economía y seguridad. La información se basa en reportes de medios.",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0062-001",
+    "CLM-0062-002"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar si el Presidente de Panamá confirmó personalmente la visita a Ecuador.",
+   "Verificar si existen acuerdos previos entre Panamá y Ecuador sobre temas económicos o de seguridad.",
+   "Obtener detalles sobre el contenido de las conversaciones durante la visita."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 34719,
+  "tokens_in": 1192,
+  "tokens_out": 801,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-09T00:28:55.583660Z"
+ }
+}

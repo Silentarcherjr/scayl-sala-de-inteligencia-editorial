@@ -1,0 +1,56 @@
+{
+ "data": {
+  "proposed_title": "Canal de Panamá cumple 112 años de operaciones",
+  "public_interest_angle": "Aniversario del Canal de Panamá y su relevancia en la logística internacional",
+  "brief": [
+   {
+    "text": "Según panamaamerica.com.pa, el Canal de Panamá cumple 112 años de operaciones. La noticia menciona que el canal enfrenta varios retos en el horizonte.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0160-001"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Cuáles son los principales retos que enfrenta el Canal de Panamá en el horizonte?",
+   "¿Qué instituciones o expertos han analizado estos retos?",
+   "¿Existen planes concretos para abordar los desafíos mencionados?"
+  ],
+  "script": [
+   {
+    "text": "El Canal de Panamá celebra 112 años de operaciones. Según panamaamerica.com.pa, el canal enfrenta varios retos en el horizonte. Aunque no se detallan, la noticia sugiere que la gestión del canal sigue siendo un tema relevante en la logística internacional.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0160-001"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "El Canal de Panamá celebra 112 años de operaciones. Según panamaamerica.com.pa, enfrenta varios retos en el horizonte. ¿Cuáles son?",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0160-001"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar los retos específicos que menciona la noticia.",
+   "Identificar las instituciones o expertos que han analizado estos retos.",
+   "Verificar si existen planes concretos para abordar los desafíos mencionados."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 17914,
+  "tokens_in": 1008,
+  "tokens_out": 480,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-08T23:41:45.053101Z"
+ }
+}

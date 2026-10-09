@@ -22,7 +22,7 @@ from scayl.contracts import (
     NewsItem,
     TemporalWarning,
 )
-from scayl.evidence.linking import news_ref
+from scayl.evidence.linking import HEADLINE_PROJECTION, foreign_only, news_ref
 
 
 @dataclass(frozen=True)
@@ -98,6 +98,8 @@ def _usable(observations: list[IndicatorObservation], series_id: str, cutoff: da
 def link_recent(event_id: str, items: list[NewsItem], observations: list[IndicatorObservation],
                 cutoff: datetime) -> RecentLink:
     link = RecentLink()
+    if items and all(foreign_only(i.titulo) for i in items):
+        return link  # Panamanian series are neither confirmation nor context for other countries (C3)
     text = " ".join(i.titulo for i in items)
     dates = [d for d in (i.fecha_publicacion or i.fecha_deteccion for i in items) if d is not None]
     as_of = min(max(dates), cutoff) if dates else cutoff  # context never comes from after the event
@@ -114,6 +116,8 @@ def link_recent(event_id: str, items: list[NewsItem], observations: list[Indicat
                 continue
             if not re.search(s.measure, item.titulo, re.IGNORECASE):
                 continue  # the figure may belong to another measure (e.g. ship draught in feet)
+            if foreign_only(item.titulo) or HEADLINE_PROJECTION.search(item.titulo):
+                continue  # another country's figure, or a forecast: an observation never confirms it (C3)
             for m in re.finditer(s.unit_pattern, item.titulo, re.IGNORECASE):
                 before = item.titulo[max(0, m.start() - 30):m.start()]
                 if s.not_before_figure and re.search(s.not_before_figure, before, re.IGNORECASE):

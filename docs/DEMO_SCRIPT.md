@@ -29,7 +29,7 @@ Si algo falla durante la grabación: detén, corrige y **vuelve a grabar la esce
 | 3 | 1:50–2:30 | **Ficha** de EVT-0114 (sismo 4.7) | Pestaña Evidencia: conflicto visible | "Un titular dice 4.7, USGS registró 4.5 y otro titular del mismo evento dice 7.4. SCAYL no elige ni promedia: muestra los dos conflictos y pide citar la fuente de cada cifra." |
 | 4 | 2:30–3:20 | **Consultas** | Pegar, una por una: (a) "¿Cuál es el nivel actual del lago Gatún?" (b) "¿Cuál es la moneda oficial de Panamá?" (c) "¿La inflación de Panamá fue 12% en 2024?" | (a) "Responde con la última medición **y su fecha**, citada." (b) "Se abstiene: no está en el corpus. No responde de memoria." (c) "La cifra de la pregunta no aparece en la evidencia: se abstiene en vez de confirmarla o inventar otra." |
 | 5 | 3:20–3:50 | **Ficha → Producir y Revisión** (EVT-0101) | Mostrar el borrador con etiquetas HECHO/DECLARACIÓN y citas; aprobar **como borrador** con nombre y justificación; descargar el recibo | "El borrador lo generó un modelo local (qwen3:8b), validado por código: cada frase lleva su cita. La IA no publica: un editor aprueba **como borrador**, con justificación, y queda un recibo." |
-| 6 | 3:50–4:15 | **Trust Lab** | Recorrer métricas | "Medimos todo y decimos lo que no medimos: red-team 16/16, conjunto reservado escrito por un humano, citas 45/45, latencia mediana 13 s en GPU local, costo de API $0. Y las limitaciones están a la vista." |
+| 6 | 3:50–4:15 | **Trust Lab** | Recorrer métricas | "Medimos todo y decimos lo que no medimos: red-team 16/16, conjunto reservado escrito por un humano, citas 45/45, latencia mediana 13 s en GPU local, costo de API $0, sin contar hardware ni electricidad. Y las limitaciones están a la vista." |
 | 7 | 4:15–4:30 | **Simulador de pesos** | Mover un peso y ver el nuevo orden | "Un editor puede probar otros pesos; el ranking oficial no cambia sin autor y justificación." Cierre: "SCAYL no decide qué se publica: acorta el camino de la señal a una historia investigable y trazable." |
 
 ## Cuidados
@@ -37,3 +37,10 @@ Si algo falla durante la grabación: detén, corrige y **vuelve a grabar la esce
 - No digas "verdadero" ni "confirmado" si la pantalla dice *parcial*.
 - Si el número de un evento cambia (por ejemplo, tras regenerar el bundle), busca el caso por su titular.
 - Duración meta: 4–5 min. Exporta en MP4 1080p o 720p.
+
+## Variante web de 3 minutos (jurado en vivo)
+Para la web desplegada (https://scayl-editorial.vercel.app/), sigue el recorrido de `docs/D_UX_AUDIT.md` §2:
+Sala → EVT-0101 (puntaje y evidencia ACP fechada) → EVT-0114 (procedencia, conflicto 4.7/4.5/7.4 y vacíos) →
+EVT-0101 Producir (cabecera «IA local precalculada · no es inferencia en vivo») → Consultas «Sin respuesta» →
+EVT-0101 Revisión («aprobado como borrador · NO publicado» y recibo). Todos los casos son reales; el snapshot no
+tiene eventos sintéticos.

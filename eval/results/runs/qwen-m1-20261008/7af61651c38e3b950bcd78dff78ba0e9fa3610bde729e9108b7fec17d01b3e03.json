@@ -1,0 +1,31 @@
+{
+ "data": {
+  "claims": [
+   {
+    "source_id": "gdt-b8036bf3f39cdd4e8047",
+    "statement": "Canal de Panamá cobra una cifra récord",
+    "type": "HECHO"
+   },
+   {
+    "source_id": "gdt-b8036bf3f39cdd4e8047",
+    "statement": "buque paga $5.3 millones por cruzar",
+    "type": "HECHO"
+   }
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "claims-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 3254,
+  "tokens_in": 463,
+  "tokens_out": 125,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-08T23:34:55.080446Z"
+ }
+}

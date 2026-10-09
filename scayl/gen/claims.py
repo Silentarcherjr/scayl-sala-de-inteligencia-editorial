@@ -60,7 +60,10 @@ def extract(event: Event, items: list[NewsItem], llm: LLM) -> list[Claim]:
     seen = {_norm(c.statement) for c in event.claims}
     out: list[Claim] = []
     n = len(event.claims)
-    for raw in data.get("claims", []):
+    raws = data.get("claims") if isinstance(data, dict) else None
+    for raw in raws if isinstance(raws, list) else []:  # malformed model output -> no new claims
+        if not isinstance(raw, dict):
+            continue
         item = members.get(str(raw.get("source_id", "")))
         statement = str(raw.get("statement", "")).strip().rstrip(".")
         if not item or not statement or scan(statement) or _norm(statement) in seen:
@@ -68,7 +71,7 @@ def extract(event: Event, items: list[NewsItem], llm: LLM) -> list[Claim]:
         source_nums = numbers_in(" ".join(filter(None, [item.titulo, item.descripcion])))
         if any(not (n_ & source_nums) for n_ in (numbers_in(tok) for tok in statement.split()) if n_):
             continue  # invented or altered figure
-        who = (raw.get("attributed_to") or "").strip() or item.medio or "el medio"
+        who = str(raw.get("attributed_to") or "").strip() or item.medio or "el medio"
         if who != (item.medio or "") and item.medio:
             who = f"{who} (según {item.medio})"
         n += 1

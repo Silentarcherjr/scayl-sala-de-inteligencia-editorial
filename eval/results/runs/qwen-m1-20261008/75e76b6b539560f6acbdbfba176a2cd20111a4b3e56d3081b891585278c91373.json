@@ -1,0 +1,70 @@
+{
+ "data": {
+  "proposed_title": "Posible impacto del El Niño en el Canal de Panamá: ¿Nuevas restricciones?",
+  "public_interest_angle": "El fenómeno climático El Niño podría afectar la operación del Canal de Panamá, generando preocupación sobre nuevas restricciones.",
+  "brief": [
+   {
+    "text": "Según otempo.com.br, el fenómeno El Niño podría llevar al Canal de Panamá a nuevas restricciones. Sin embargo, no hay evidencia actual que confirme este impacto.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0090-001"
+    ]
+   },
+   {
+    "text": "El nivel del lago Gatún, según datos del ACP del 6 de septiembre de 2026, fue de 84.1 pies.",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0090-002"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Qué medidas específicas podría tomar el Canal de Panamá ante el impacto del El Niño?",
+   "¿Cómo se está monitoreando el nivel del lago Gatún en relación con el fenómeno climático?",
+   "¿Qué instituciones están evaluando el impacto del El Niño en la operación del Canal de Panamá?"
+  ],
+  "script": [
+   {
+    "text": "Según otempo.com.br, el fenómeno El Niño podría llevar al Canal de Panamá a nuevas restricciones. Sin embargo, no hay evidencia actual que confirme este impacto.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0090-001"
+    ]
+   },
+   {
+    "text": "El nivel del lago Gatún, según datos del ACP del 6 de septiembre de 2026, fue de 84.1 pies.",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0090-002"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "El Niño podría afectar el Canal de Panamá. ¿Nuevas restricciones? No hay evidencia actual. #CanalPanama #ElNino",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0090-001"
+   ]
+  },
+  "pending_verifications": [
+   "¿Qué impacto real tiene el El Niño en la operación del Canal de Panamá?",
+   "¿Cómo se está evaluando el nivel del lago Gatún en relación con el fenómeno climático?",
+   "¿Qué instituciones están monitoreando el impacto del El Niño en el Canal de Panamá?"
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 16997,
+  "tokens_in": 1196,
+  "tokens_out": 640,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-09T01:32:33.114557Z"
+ }
+}

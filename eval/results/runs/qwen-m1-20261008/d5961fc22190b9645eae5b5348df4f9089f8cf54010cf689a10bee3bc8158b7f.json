@@ -1,0 +1,56 @@
+{
+ "data": {
+  "proposed_title": "¿Por qué el Canal de Panamá listó su bono en el mercado secundario de Latinex?",
+  "public_interest_angle": "El Canal de Panamá ha decidido listar su bono en el mercado secundario de Latinex, lo que podría tener implicaciones en su financiación y en la economía regional.",
+  "brief": [
+   {
+    "text": "El Canal de Panamá listó su bono en el mercado secundario de Latinex, según un titular publicado por prensa.com. No se dispone de información detallada sobre las razones de esta decisión.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0134-001"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Cuáles son las razones específicas que llevaron al Canal de Panamá a listar su bono en el mercado secundario de Latinex?",
+   "¿Qué implicaciones tiene esta decisión para la financiación del Canal de Panamá?",
+   "¿Qué otros actores han participado en esta operación de bonos?"
+  ],
+  "script": [
+   {
+    "text": "El Canal de Panamá listó su bono en el mercado secundario de Latinex, según un titular publicado por prensa.com. No se dispone de información detallada sobre las razones de esta decisión.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0134-001"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "El Canal de Panamá listó su bono en el mercado secundario de Latinex, según un titular publicado por prensa.com. ¿Cuáles son las razones de esta decisión?",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0134-001"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar el contenido completo de los artículos que mencionan esta decisión del Canal de Panamá.",
+   "Identificar las razones específicas que llevaron al Canal de Panamá a listar su bono en el mercado secundario de Latinex.",
+   "Verificar si hay otros actores involucrados en esta operación de bonos."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 13888,
+  "tokens_in": 1003,
+  "tokens_out": 526,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-09T01:32:47.007292Z"
+ }
+}

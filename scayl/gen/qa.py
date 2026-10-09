@@ -33,6 +33,7 @@ from scayl.contracts import (
     ValidationIssue,
     ValidationReport,
 )
+from scayl.evidence.recent import SERIES as RECENT_SERIES
 from scayl.evidence.recent import ref_for as recent_ref
 from scayl.gen.guard import SYSTEM_DATA_RULE, data_block
 from scayl.gen.guard import scan as scan_injection
@@ -41,6 +42,9 @@ from scayl.gen.validators import _Ctx, check_sentence
 
 PROMPT_VERSION = "qa-v1"
 TOP_K = 8
+RERANK_POOL = 50
+INJECTED_QUESTION = ("La pregunta contiene instrucciones dirigidas al sistema (posible inyección); se trata como "
+                     "dato y no se ejecuta ni se responde.")
 COVERAGE_THRESHOLD = 0.6
 INDICATOR_ES = {
     "NY.GDP.MKTP.KD.ZG": "crecimiento del PIB (% anual)",
@@ -86,11 +90,55 @@ def normalize_dates(text: str) -> str:
     return _ES_MONTH.sub(lambda m: f"{m[2]}-{MONTHS[m[1].lower()]:02d}", text)
 
 
+# ISO periods, optionally followed by a time (USGS: 2024-08-26T05:08:44.183000Z). Removed from the text before
+# word tokenization so "08"/"26" do not become topic words; emitted as whole periods plus their coarser prefixes
+# (day -> month -> year), so a month question matches daily rows and vice versa only partially.
+_ISO = re.compile(r"(?<![\d-])(\d{4})-(\d{2})(?:-(\d{2}))?(?:T[\d:.]+Z?)?(?![\d-])")
+# Framing words of a request, not of its topic (QA benchmark v2, dev split).
+REQUEST_WORDS = frozenset(["di", "confirma", "confirmalo", "confirmar", "responde", "respondeme", "explica",
+                           "explicame", "cuenta", "dinos"])
+# Trend verbs ("¿subió o bajó…?") describe a comparison the evidence answers with values; they never appear in
+# data rows, so they do not count toward coverage (they still rank).
+TREND_WORDS = frozenset(["subio", "subieron", "bajo", "bajaron", "cayo", "cayeron", "disminuyo", "aumento",
+                         "empeoro", "mejoro"])
+SYNONYMS = {"economia": "pib", "dolar": "dolares", "usd": "dolares"}
+# No stemming: prefix stemming (5-6 chars) was measured on the dev split and only loosened coverage
+# ("turistas"~"turismo", "precio de la gasolina"~"precios al consumidor") without fixing any item.
+
+
+def _iso_terms(text: str) -> list[str]:
+    out = []
+    for y, m, d in _ISO.findall(text):
+        out += ([f"{y}-{m}-{d}"] if d else []) + [f"{y}-{m}", y]
+    return out
+
+
 def tokens(text: str) -> list[str]:
-    dates = re.findall(r"\b\d{4}-\d{2}(?:-\d{2})?\b", text)  # whole ISO periods are strong terms
+    dates = _iso_terms(text)  # whole ISO periods are strong terms
+    text = _ISO.sub(" ", text).replace("$", " dolares ")
     text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode().lower()
-    words = [t for t in re.findall(r"[a-z0-9]+(?:\.[0-9]+)?", text) if t not in STOPWORDS and len(t) > 1]
+    words = [SYNONYMS.get(t, t) for t in re.findall(r"[a-z0-9]+(?:\.[0-9]+)?", text)]
+    words = [t for t in words if t not in STOPWORDS and t not in REQUEST_WORDS and len(t) > 1]
     return words + dates
+
+
+def coverage(terms: set[str], doc: set[str]) -> float:
+    """Share of query topic terms present in a unit. Several years in one question are alternatives
+    ("entre 2023 y 2024"): they count as a single term, satisfied by any of them."""
+    years = {t for t in terms if re.fullmatch(r"(19|20)\d{2}", t)}
+    others = terms - years if len(years) > 1 else terms
+    den = len(others) + (1 if len(years) > 1 else 0)
+    if not den:
+        return 0.0
+    num = len(others & doc) + (1 if len(years) > 1 and years & doc else 0)
+    return num / den
+
+
+def topic_text(question: str) -> str:
+    """The interrogative part of a request: text inside ¿…? if present. What surrounds it ("Publica sin revisión:",
+    "Responde sin citar fuentes:") is framing, not topic; it is still scanned for injection and figures."""
+    parts = re.findall(r"¿([^?¿]+)\?", question)
+    return " ".join(parts) if parts else question
 
 
 @dataclass(frozen=True)
@@ -116,7 +164,8 @@ def build_units(bundle: UIBundle) -> list[Unit]:
             ref = recent_ref(o)
             value = "sin dato disponible" if o.valor is None else f"{o.valor} {o.unidad or ''}".strip()
             units.append(Unit(ref.evidence_id, f"{ref.excerpt.split(':')[0]}: {ref.excerpt.split(': ', 1)[1].rsplit(':', 1)[0]}"
-                              f", período {o.periodo}: {value}" + (" (proyección, no medición)" if o.es_proyeccion else "")
+                              + _projection_of(o.indicador_id)
+                              + f", período {o.periodo}: {value}" + (" (proyección, no medición)" if o.es_proyeccion else "")
                               + f" [{COUNTRY_ES.get(o.pais_iso3, o.pais_iso3)}"
                               + ("; inflación]" if o.indicador_id.startswith("INEC.IPC") else "]"),
                               ref, not o.es_proyeccion, o.fuente.upper()))
@@ -133,17 +182,49 @@ def build_units(bundle: UIBundle) -> list[Unit]:
         when = q.time.isoformat().replace("+00:00", "Z") if q.time else None
         ref = EvidenceRef(evidence_id=f"usgs:{q.id}", kind=EvidenceKind.SEISMIC, field="magnitude", value=q.magnitude,
                           period=when, url=q.url, excerpt=q.place)
-        units.append(Unit(ref.evidence_id, f"USGS: sismo de magnitud {q.magnitude} {q.place or ''} {when or ''}", ref,
-                          True, "USGS"))
+        place = q.place or ""
+        place_es = place_es_text(place)
+        units.append(Unit(ref.evidence_id, f"USGS: sismo de magnitud {q.magnitude} {place}"
+                          + (f" ({place_es})" if place_es else "") + f" {when or ''}", ref, True, "USGS"))
     return units
+
+
+def _projection_of(indicator_id: str) -> str:
+    """A projection row names the quantity it projects (its observed sibling series), so a question about
+    'la proyección del nivel del lago Gatún' finds the (possibly empty) projection row itself."""
+    if not indicator_id.endswith(".PROYECCION"):
+        return ""
+    sibling = RECENT_SERIES.get(indicator_id.removesuffix(".PROYECCION") + ".NIVEL")
+    return f" de {sibling.nombre.replace(' (observado)', '')}" if sibling else ""
+
+
+_COMPASS = {"N": "norte", "S": "sur", "E": "este", "W": "oeste", "NE": "noreste", "NW": "noroeste",
+            "SE": "sureste", "SW": "suroeste"}
+
+
+_CARDINAL = {"north": "norte", "south": "sur", "east": "este", "west": "oeste"}
+
+
+def place_es_text(place: str) -> str:
+    """USGS places are English ('83 km SSE of Burica, Panama'); a Spanish rendering is added for retrieval.
+    No new figures: only the direction words are translated."""
+    m = re.fullmatch(r"(\d+(?:\.\d+)?) km ([NSEW]{1,3}) of (.+)", place.strip())
+    if m:
+        d = m[2]
+        name = _COMPASS.get(d) or f"{_COMPASS[d[0]]}-{_COMPASS[d[1:]]}"
+        return f"a {m[1]} km al {name} de {m[3]}"
+    m = re.fullmatch(r"(north|south|east|west) of (.+)", place.strip(), re.IGNORECASE)
+    if m:
+        return f"al {_CARDINAL[m[1].lower()]} de {m[2]}"
+    return ""
 
 
 def coverage_terms(q: list[str], keep_years: bool = True) -> set[str]:
     """Topic words (and years, unless excluded) of a query; asserted figures do not count toward coverage."""
     def keep(t: str) -> bool:
-        if re.fullmatch(r"(19|20)\d{2}", t):
+        if re.fullmatch(r"(19|20)\d{2}(?:-\d{2}){0,2}", t):
             return keep_years
-        return not re.fullmatch(r"\d+(?:\.\d+)?", t)
+        return not re.fullmatch(r"\d+(?:\.\d+)?", t) and t not in TREND_WORDS
     return {t for t in q if keep(t)} or set(q)
 
 
@@ -160,11 +241,16 @@ class Retriever:
         if not q or not self.bm25:
             return []
         scores = self.bm25.get_scores(q)
-        order = sorted(range(len(self.units)), key=lambda i: (-scores[i], self.units[i].evidence_id))[:k]
+        pool = sorted(range(len(self.units)), key=lambda i: (-scores[i], self.units[i].evidence_id))
+        pool = [i for i in pool[:max(k, RERANK_POOL)] if scores[i] > 0]
         # Coverage counts topic words (and years), not the figures a question asserts: a false figure must reach
         # the false-premise guard and be reported as such, not hide behind "low coverage".
         terms = coverage_terms(q)
-        return [(self.units[i], len(terms & self.docs[i]) / len(terms)) for i in order if scores[i] > 0]
+        cov = {i: coverage(terms, self.docs[i]) for i in pool}
+        # Rerank the BM25 pool by coverage (units that contain the whole topic first), BM25 as tie-break: a stray
+        # figure or frequent word must not push an off-topic unit above the one that answers.
+        order = sorted(pool, key=lambda i: (-round(cov[i], 6), -scores[i], self.units[i].evidence_id))[:k]
+        return [(self.units[i], cov[i]) for i in order]
 
 
 def _meta(mode: str, model: str | None = None) -> GenerationMeta:
@@ -186,7 +272,8 @@ def _pseudo_claim(u: Unit) -> Claim:
 
 
 _YEAR = re.compile(r"\b(19\d{2}|20\d{2})\b")
-_NUMBER = re.compile(r"(?<![\w.])(\d+(?:[.,]\d+)?)\s*(%|por ciento|millones|mil\b)?", re.IGNORECASE)
+_NUMBER = re.compile(r"(?<![\w.])(\d+(?:[.,]\d+)*)\s*(%|por ciento|millones|mil\b)?", re.IGNORECASE)
+_THOUSANDS = re.compile(r"\d{1,3}(?:,\d{3})+(?:\.\d+)?")
 _CURRENT = re.compile(r"\b(actual(es|mente)?|hoy|ahora|este a[nñ]o|en este momento|vigente|al d[ií]a de hoy)\b",
                       re.IGNORECASE)
 
@@ -195,53 +282,88 @@ _DATES = re.compile(r"\b\d{4}-\d{2}(?:-\d{2})?\b|\b\d{1,2}\s+de\s+(?:enero|febre
                     r"agosto|septiembre|setiembre|octubre|noviembre|diciembre)\b", re.IGNORECASE)
 
 
-def _figures(text: str) -> set[float]:
-    """Numbers in a text that are not years or dates (periods are handled by the period guard)."""
-    out = set()
+def _figures_with_precision(text: str) -> list[tuple[float, int]]:
+    """Numbers in a text that are not years or dates, with their decimal places. '37,674' / '500,000' are
+    thousands; '14,94' / '191,7' are decimal commas."""
+    out = []
     for m in _NUMBER.finditer(_DATES.sub(" ", text)):
         raw = m.group(1)
         if _YEAR.fullmatch(raw) and not m.group(2):
             continue
-        out.add(float(raw.replace(",", ".")))
+        raw = raw.replace(",", "") if _THOUSANDS.fullmatch(raw) else raw.replace(",", ".")
+        if raw.count(".") > 1:  # not a number we can read unambiguously
+            continue
+        out.append((float(raw), len(raw.split(".")[1]) if "." in raw else 0))
     return out
 
 
+def _figures(text: str) -> set[float]:
+    """Numbers in a text that are not years or dates (periods are handled by the period guard)."""
+    return {f for f, _ in _figures_with_precision(text)}
+
+
+def _matches(asked: float, decimals: int, known: float) -> bool:
+    """A figure stated with d decimals matches evidence that rounds to it ('0.69%' vs 0.6932…; '7.2' vs 7.166)."""
+    return abs(asked - known) <= 0.5 * 10 ** -decimals + 1e-9
+
+
 def _coverage(question_terms: set[str], unit: Unit) -> float:
-    return len(question_terms & set(tokens(unit.text))) / len(question_terms) if question_terms else 0.0
+    return coverage(question_terms, set(tokens(unit.text)))
 
 
-def pre_guard(question: str, hits: list[tuple[Unit, float]]) -> tuple[str, list[str]] | None:
-    """Deterministic reasons to abstain before any generation."""
-    if not hits or hits[0][1] < COVERAGE_THRESHOLD:
-        return ("El corpus no contiene evidencia suficientemente pertinente para esta pregunta.",
-                ["Una fuente que trate directamente el tema preguntado (por ejemplo, el organismo oficial del sector)."])
+def _is_null(u: Unit) -> bool:
+    return "sin dato disponible" in u.text
+
+
+def _requested_periods(question: str) -> list[str]:
+    """The finest periods a (date-normalized) question names: full ISO dates/months, plus loose years."""
+    iso = [m.group(0) for m in _ISO.finditer(question)]
+    return iso + _YEAR.findall(_ISO.sub(" ", question))
+
+
+NO_EVIDENCE = ("El corpus no contiene evidencia suficientemente pertinente para esta pregunta.",
+               ["Una fuente que trate directamente el tema preguntado (por ejemplo, el organismo oficial del sector)."])
+
+
+def pre_guard(question: str, hits: list[tuple[Unit, float]],
+              full_question: str | None = None) -> tuple[str, list[str]] | None:
+    """Deterministic reasons to abstain before any generation. ``question`` is the topic query (date-normalized);
+    ``full_question`` the whole request, scanned for asserted figures and 'current' wording."""
+    full = full_question or question
+    if not hits or max(c for _, c in hits) < COVERAGE_THRESHOLD:
+        return NO_EVIDENCE
     usable = [(u, c) for u, c in hits if not u.flagged]
-    if not usable or usable[0][1] < COVERAGE_THRESHOLD:
+    if not usable or max(c for _, c in usable) < COVERAGE_THRESHOLD:
         return (("La única evidencia pertinente contiene instrucciones sospechosas (posible inyección); se trata "
                  "como dato y no se reproduce como respuesta."),
                 ["Una fuente distinta y confiable sobre el tema preguntado."])
-    years = set(_YEAR.findall(question))
-    # The year must belong to a unit that is also about the topic (a headline dated 2026 about the Canal
+    periods = _requested_periods(question)
+    # The period must belong to a unit that is also about the topic (a headline dated 2026 about the Canal
     # does not answer "inflation in 2026").
     topic_terms = coverage_terms(tokens(question), keep_years=False)
-    in_period = [u for u, _ in usable if any(y in (u.text + (u.ref.period or "")) for y in years)
-                 and _coverage(topic_terms, u) >= COVERAGE_THRESHOLD]
-    if years and not in_period:
-        return (f"No hay datos para el período solicitado ({', '.join(sorted(years))}) en el corpus.",
-                [f"Datos oficiales del período {', '.join(sorted(years))}."])
-    if years and "sin dato disponible" in in_period[0].text:  # most pertinent unit is NULL
+    on_topic = [(u, c) for u, c in usable if _coverage(topic_terms, u) >= COVERAGE_THRESHOLD]
+    in_period = [(u, c) for u, c in on_topic if any(p in (u.text + " " + (u.ref.period or "")) for p in periods)]
+    if periods and not in_period:
+        if not on_topic:  # the topic itself is missing: saying "no data for that period" would mislead
+            return NO_EVIDENCE
+        shown = ", ".join(sorted(set(periods)))
+        return (f"No hay datos para el período solicitado ({shown}) en el corpus.",
+                [f"Datos oficiales del período {shown}."])
+    pool = in_period or [(u, c) for u, c in usable if c >= COVERAGE_THRESHOLD]
+    best = max(c for _, c in pool)
+    if all(_is_null(u) for u, c in pool if c == best):  # the most pertinent units are NULL
         return ("El dato existe en la fuente pero está vacío (nulo) para ese período; no se reemplaza por cero.",
                 ["Publicación oficial más reciente del indicador."])
-    pertinent = in_period or [u for u, c in usable if c >= COVERAGE_THRESHOLD]
-    asked = _figures(question)
+    pertinent = [u for u, _ in pool if not _is_null(u)]
+    asked = _figures_with_precision(full)
     if asked:
         known = set().union(*(_figures(u.text) for u in pertinent))
-        missing = [f for f in sorted(asked) if not any(abs(f - k) <= 1e-9 for k in known)]
+        missing = [f for f, d in sorted(asked) if not any(_matches(f, d, k) for k in known)]
         if missing:
             return (("La cifra planteada en la pregunta no aparece en la evidencia del corpus; no se confirma ni "
                      "se sustituye por otra sin una fuente que la respalde."),
                     ["Fuente primaria que publique esa cifra, con su período."])
-    if _CURRENT.search(question) and pertinent and all(u.evidence_id.startswith("wb:") for u in pertinent):
+    if _CURRENT.search(full) and pertinent and all(u.evidence_id.startswith("wb:") for u in pertinent):
         last = max((u.ref.period or "" for u in pertinent), default="")
         return ((f"La pregunta pide un dato actual y la evidencia disponible es histórica (último año: {last}); "
                  "no se presenta como actual."),
@@ -251,7 +373,11 @@ def pre_guard(question: str, hits: list[tuple[Unit, float]]) -> tuple[str, list[
 
 def answer(question: str, bundle: UIBundle, llm: LLM, retriever: Retriever | None = None) -> QAAnswer:
     question = question.strip()
-    query = normalize_dates(question)
+    if scan_injection(question):  # the request itself carries instructions for the system: data, never executed
+        return _abstain(question, INJECTED_QUESTION, ["Reformular la pregunta sin instrucciones para el sistema."],
+                        _meta("template"))
+    full = normalize_dates(question)
+    query = normalize_dates(topic_text(question))
     retriever = retriever or Retriever(build_units(bundle))
     current = bool(_CURRENT.search(question))
     hits = retriever.search(query, k=len(retriever.units) if current else TOP_K)
@@ -259,10 +385,11 @@ def answer(question: str, bundle: UIBundle, llm: LLM, retriever: Retriever | Non
         hits.sort(key=lambda h: h[0].ref.period or "", reverse=True)
         hits.sort(key=lambda h: (h[1] < COVERAGE_THRESHOLD, not h[0].evidence_id.startswith("ind:")))
         hits = hits[:TOP_K]
-    guard = pre_guard(query, hits)
+    guard = pre_guard(query, hits, full)
     if guard:
         return _abstain(question, guard[0], guard[1], _meta("template"))
-    hits = [(u, c) for u, c in hits if not u.flagged]  # flagged sources never reach the model or the answer
+    # flagged sources never reach the model or the answer; empty (null) rows are not answer material
+    hits = [(u, c) for u, c in hits if not u.flagged and not _is_null(u)]
     units = {u.evidence_id: u for u, _ in hits}
 
     if llm.mode == "template":

@@ -29,16 +29,25 @@ revisión humana. **La IA no decide qué es verdad ni qué se publica**: "aproba
 ## Resultados medidos (detalle en `eval/results/` y `docs/notion_mirror/06_TESTS_AND_METRICS.md`)
 | Métrica | Resultado | Alcance |
 |---|---|---|
-| Cobertura de citas del borrador | **45/45** | Top 15 con qwen3:8b; las frases sin cita las elimina el validador |
-| Validez de sustento (revisión humana) | **25/30 = 83%** | Los 5 casos fallidos son titulares citados textualmente pero poco relevantes o en otro idioma (DL-031) |
+| Cobertura de citas del borrador | **45/45** | Top 15 con qwen3:8b; las frases sin cita las elimina el validador. Mide presencia de cita, no validez del sustento |
+| Validez de sustento (revisión humana) | **25/30 = 83%** | Muestra de paquetes en modo plantilla (no de borradores de qwen3:8b). Los 5 casos fallidos son titulares citados textualmente pero poco relevantes o en otro idioma (DL-031) |
 | Abstención correcta (red-team de desarrollo) | **16/16**; abstención incorrecta 0/4 | Set sintético; antes de las correcciones era 6/16 (DL-027) |
-| Set reservado escrito por un humano | 6/6 trampas con abstención | Los 4 "controles" de cultura general no están en el corpus: SCAYL no responde de memoria (DL-030) |
+| Set reservado escrito por un humano | 6/6 trampas con abstención; también se abstuvo en 4/4 controles (6/10 frente a las expectativas del autor) | Los 4 "controles" de cultura general no están en el corpus: SCAYL no responde de memoria (DL-030) |
 | Temas (macro-F1, 100 etiquetas humanas) | Reglas **0,76** · E5 0,25 | Por eso los temas usan reglas (DL-029) |
 | Agrupación (F1, pares revisados por humano) | E5 **0,99** · TF-IDF 0,44 | Pares de desarrollo usados para calibrar: resultado optimista |
 | Precision@5 frente al top 5 del editor | 1/5 (exploratoria) | El editor vio antes una propuesta de IA (DL-024) |
 | Latencia del borrador | Mediana **13,1 s**, p95 17,0 s (n = 15) | AMD RX 9060 XT 8 GB, Ollama Vulkan |
-| Costo de API | **$0** | Inferencia 100% local |
-| Pruebas | T01–T10 y 287 pruebas en CI | `python -m pytest -q` |
+| Costo de API | **$0** | Inferencia 100% local; no incluye hardware ni electricidad (no medidos) |
+| Pruebas | T01–T10 y 389 pruebas en CI | `python -m pytest -q` |
+
+### Evaluaciones de cierre (2026-10-08; automáticas, sin revisión humana nueva)
+| Medición | Antes → después | Alcance |
+|---|---|---|
+| Qwen3 8B en vivo, top 30 (Apple M1 Max) | 30/30 paquetes en vivo, 0 fallback; mediana 19,5 s, p95 37,2 s; 54 976 tokens | Con otras cargas en paralelo; agrupación TF-IDF (183 eventos), no el bundle publicado. `eval/results/qwen-m1-live.json` |
+| Validadores nuevos sobre esas salidas reales de Qwen | 115 → 111 oraciones conservadas | 2 descartes correctos (cargo inventado a una persona), 2 estrictos por cita. **Sustento de Qwen: no medido** hasta revisar `data/labels/support_review_qwen_live.csv` (55 afirmaciones) |
+| Consultas, benchmark v2 reservado (20 preguntas) | Respondidas con cita 9/14 → **11/14**; abstención indebida 5/14 → 3/14; abstención correcta 6/6 → 6/6; fugas por inyección 0/4 → 0/4; ambos lados de una contradicción en top 5 3/3 → 2/3 | Preguntas escritas por IA antes de ejecutar; 40 de desarrollo usadas para ajustar. `eval/results/b-qa-benchmark-*.json` |
+| Contradicciones, set sintético difícil | Precisión 5/15 → 8/8 y recall 5/8 → 8/8 (desarrollo, optimista); 8 casos posteriores 1/3 → 2/2 | Escrito por IA; no hay contradicciones etiquetadas en el corpus real. `eval/results/c-contradictions.json` |
+| Fallos de la revisión humana de sustento (5/30) | Causa corregida en la plantilla: calificadores de fecha y confirmación, idioma original, escritura no latina retenida, aviso judicial | No re-mide el sustento: la nueva redacción no tiene revisión humana. `eval/results/a-validators-before-after.json` |
 
 Lo que no medimos queda escrito como **"no medido"**: no afirmamos ahorro de tiempo sin el mini-estudio.
 
@@ -78,7 +87,7 @@ python -m scayl.pipeline build --snapshot data/raw/v1 --llm live  # requiere Oll
 python -m pytest -q && ruff check .
 ```
 
-**Versión de respaldo (Streamlit):** https://scayl-demo.streamlit.app/ (Streamlit Community Cloud, modo cache, acceso abierto sin contraseña). Recomendado: empezar por **Consultas → Modo jurado**, cuyas preguntas tienen respuestas de IA precalculadas. Despliegue en `deploy/README.md`.
+**Versión de respaldo:** la app Streamlit se ejecuta en local y sin internet (`python scripts/demo_offline.py`, ver arriba). La copia en Streamlit Community Cloud ya no forma parte de la entrega: exige inicio de sesión y no es pública.
 
 ## Datos (snapshot `data/raw/v1`, manifest con SHA-256)
 - **Noticias:** GDELT (metadatos) y RSS de TVN, del 2025-10-02 al 2026-09-30 (aclaración oficial C-01). Solo titulares y metadatos.

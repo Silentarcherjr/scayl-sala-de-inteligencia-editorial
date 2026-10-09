@@ -1,0 +1,56 @@
+{
+ "data": {
+  "proposed_title": "El buque gasífero surcoreano cruza el Canal de Panamá",
+  "public_interest_angle": "Movimiento logístico y transporte de recursos energéticos en el Canal de Panamá",
+  "brief": [
+   {
+    "text": "Según elcaribe.com.do, un buque gasífero surcoreano cruzó el Canal de Panamá. La noticia se basa únicamente en el titular de un artículo, sin detalles adicionales.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0057-001"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Cuál es el propósito del buque gasífero en el Canal de Panamá?",
+   "¿Qué carga transporta el buque y cuál es su destino final?",
+   "¿Existen otros buques similares que atraviesan el Canal de Panamá en este periodo?"
+  ],
+  "script": [
+   {
+    "text": "Según elcaribe.com.do, un buque gasífero surcoreano cruzó el Canal de Panamá. La noticia se basa únicamente en el titular de un artículo, sin detalles adicionales.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0057-001"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "Un buque gasífero surcoreano cruzó el Canal de Panamá, según elcaribe.com.do. La noticia se basa únicamente en el titular de un artículo.",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0057-001"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar si el buque gasífero surcoreano efectivamente cruzó el Canal de Panamá.",
+   "Verificar el contenido completo del artículo de elcaribe.com.do para obtener más detalles.",
+   "Identificar si hay otros buques similares que atraviesan el Canal de Panamá en este periodo."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 13167,
+  "tokens_in": 990,
+  "tokens_out": 479,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-08T23:36:57.586744Z"
+ }
+}

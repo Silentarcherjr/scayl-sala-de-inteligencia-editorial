@@ -145,7 +145,7 @@ def generate_with_report(event: Event, llm: LLM) -> tuple[StoryPackage, dict]:
             validation=template.validation.model_copy(update={"issues": []}),
             generated_by=meta,
         )
-    except (KeyError, TypeError, ValidationError) as exc:
+    except (KeyError, TypeError, AttributeError, ValidationError) as exc:  # e.g. null title, non-string items
         reason = f"salida del modelo con formato inválido ({type(exc).__name__})"
         pkg = _fallback(event, reason)
         return pkg, _report(event, pkg, 0, fallback=reason)

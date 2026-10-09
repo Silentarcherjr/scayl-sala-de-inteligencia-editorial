@@ -1,0 +1,67 @@
+{
+ "data": {
+  "proposed_title": "Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño",
+  "public_interest_angle": "El Niño afecta operaciones del Canal de Panamá",
+  "brief": [
+   {
+    "text": "Según telemetro.com, Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño. La información se basa en un titular de un artículo de noticias.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0127-001",
+     "CLM-0127-003",
+     "CLM-0127-004"
+    ]
+   },
+   {
+    "text": "El nivel del lago Gatún fue de 84.69 pies el 16 de julio de 2026, según datos del ACP.",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0127-002"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Qué medidas específicas está tomando el Canal de Panamá para adaptarse al impacto de El Niño?",
+   "¿Cómo afecta el nivel del lago Gatún a la operación del canal y cuál es su relación con El Niño?",
+   "¿Qué fuentes confiables pueden confirmar la información publicada por telemetro.com?"
+  ],
+  "script": [
+   {
+    "text": "Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño, según un titular publicado por telemetro.com. El nivel del lago Gatún fue de 84.69 pies el 16 de julio de 2026, según datos del ACP.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0127-001",
+     "CLM-0127-002"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "Canal de Panamá mantiene tránsitos y aplica ajustes de calado por El Niño, según telemetro.com. El nivel del lago Gatún fue de 84.69 pies el 16 de julio de 2026.",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0127-001",
+    "CLM-0127-002"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar el contenido completo del artículo de telemetro.com para verificar la información sobre ajustes de calado y operaciones del canal.",
+   "Verificar si el nivel del lago Gatún está relacionado con el fenómeno de El Niño.",
+   "Consultar fuentes oficiales del Canal de Panamá para confirmar las medidas tomadas durante el fenómeno climático."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 19828,
+  "tokens_in": 1529,
+  "tokens_out": 675,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-08T23:36:44.417291Z"
+ }
+}

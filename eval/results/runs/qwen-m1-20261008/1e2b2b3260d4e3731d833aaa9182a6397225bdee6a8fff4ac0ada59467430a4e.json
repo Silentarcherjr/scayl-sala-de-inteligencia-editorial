@@ -1,0 +1,76 @@
+{
+ "data": {
+  "proposed_title": "El Niño y el nivel del canal de Panamá: ¿una amenaza para el comercio mundial?",
+  "public_interest_angle": "El fenómeno climático El Niño podría estar afectando el nivel del canal de Panamá, lo que podría impactar en el comercio global.",
+  "brief": [
+   {
+    "text": "Según lachainemeteo.com, El Niño podría estar reduciendo el nivel del canal de Panamá y afectando el comercio mundial. Sin embargo, no hay evidencia directa que confirme esta afirmación.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0096-001",
+     "CLM-0096-003",
+     "CLM-0096-004"
+    ]
+   },
+   {
+    "text": "El nivel del lago Gatún, que es clave para el funcionamiento del canal, fue de 84.28 pies el 14 de septiembre de 2026, según datos del ACP.",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0096-002"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Qué relación existe entre el fenómeno El Niño y el nivel del lago Gatún?",
+   "¿Cómo afecta el nivel del canal de Panamá al comercio mundial?",
+   "¿Qué medidas están tomando las autoridades para mitigar los efectos de El Niño en el canal?"
+  ],
+  "script": [
+   {
+    "text": "Según lachainemeteo.com, El Niño podría estar reduciendo el nivel del canal de Panamá y afectando el comercio mundial. Sin embargo, no hay evidencia directa que confirme esta afirmación.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0096-001",
+     "CLM-0096-003",
+     "CLM-0096-004"
+    ]
+   },
+   {
+    "text": "El nivel del lago Gatún, que es clave para el funcionamiento del canal, fue de 84.28 pies el 14 de septiembre de 2026, según datos del ACP.",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0096-002"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "El Niño podría estar afectando el nivel del canal de Panamá, según lachainemeteo.com. ¿Qué impacto podría tener en el comercio mundial?",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0096-001",
+    "CLM-0096-003",
+    "CLM-0096-004"
+   ]
+  },
+  "pending_verifications": [
+   "¿Qué relación existe entre El Niño y el nivel del lago Gatún?",
+   "¿Cómo afecta el nivel del canal de Panamá al comercio mundial?",
+   "¿Qué medidas están tomando las autoridades para mitigar los efectos de El Niño en el canal?"
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 28131,
+  "tokens_in": 1509,
+  "tokens_out": 734,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-09T01:24:44.806357Z"
+ }
+}

@@ -1,0 +1,126 @@
+{
+ "name": "A · validators/template before-after",
+ "mode": "template",
+ "method": "automatic",
+ "human_review": "none new; the existing human labels (data/labels/support_review.csv) were only read, not altered or re-labelled",
+ "date_utc": "2026-10-08T23:41:54+00:00",
+ "commit_before": "b4d03f013f9fbd1cbba93696a99c1b31c4b3c059",
+ "commit_after": "8f64dcbed4fee641aadada5a12505ab3d9c10c45",
+ "input": {
+  "bundle": "data/processed/v1/bundle.json (local, not versioned)",
+  "events": 165,
+  "cached_llm_packages": 15
+ },
+ "procedure": [
+  "Template: rebuild build_template_package for every event of the bundle (fixed now=2026-10-07) with the code at each commit, count candidate/kept brief sentences and issue codes.",
+  "Cache: re-run validate_package on the 15 stored cache-mode (LLM) packages with each version; they are already post-validation outputs of the old validators, so 'before' removals are ~0 by construction and 'after' removals are the new checks' effect on the demo cache.",
+  "Support review: regenerate the sentence for the same claim statement (event IDs differ between bundles) and show the text before/after. This does NOT re-measure support validity: no human reviewed the new texts."
+ ],
+ "template": {
+  "before": {
+   "events": 165,
+   "candidate_brief_sentences": 190,
+   "kept_brief_sentences": 190,
+   "packages_passed": 165,
+   "removed_by_code": {},
+   "warnings_by_code": {
+    "SCRIPT_SHORT": 165
+   }
+  },
+  "after": {
+   "events": 165,
+   "candidate_brief_sentences": 190,
+   "kept_brief_sentences": 190,
+   "packages_passed": 165,
+   "removed_by_code": {},
+   "warnings_by_code": {
+    "SCRIPT_SHORT": 165
+   }
+  },
+  "after_reported_sentence_qualifiers": {
+   "reported_sentences": 186,
+   "with_event_date": 180,
+   "with_status_qualifier": 180,
+   "foreign_language_labelled": 7,
+   "non_latin_withheld": 2,
+   "judicial_caveat": 2,
+   "non_latin_chars_in_brief": 0
+  }
+ },
+ "cache_revalidation": {
+  "before": {
+   "packages": 15,
+   "stored_sentences": 59,
+   "kept_after_revalidation": 59,
+   "packages_still_passing": 15,
+   "removed_by_code": {
+    "UNCITED_FACT": 1
+   },
+   "warnings_by_code": {
+    "SCRIPT_SHORT": 15
+   },
+   "removed_texts": [
+    "Oración HECHO sin afirmación citada: «»"
+   ]
+  },
+  "after": {
+   "packages": 15,
+   "stored_sentences": 59,
+   "kept_after_revalidation": 58,
+   "packages_still_passing": 15,
+   "removed_by_code": {
+    "UNCITED_FACT": 1,
+    "ENTITY_NOT_IN_EVIDENCE": 1
+   },
+   "warnings_by_code": {
+    "SCRIPT_SHORT": 15
+   },
+   "removed_texts": [
+    "Oración HECHO sin afirmación citada: «»",
+    "Nombra ['José Raúl Mulino'] sin respaldo en la evidencia citada: «La mandataria mexicana, Claudia Sheinbaum, recibió al presidente de Panamá, José Raúl Mulino, en el Palacio Nacional. Según unmasuno.com.mx y otros medios, la reunión se enmarca en temas relacionados con el Canal de Panamá.»"
+   ]
+  }
+ },
+ "support_review_failures": {
+  "SR04": {
+   "human_decision": "parcial",
+   "statement_reviewed": "Según elcaribe.com.do: El buque gasífero surcoreano cruza el Canal de Panamá.",
+   "regenerated_before": "Según elcaribe.com.do y 1 medio(s) más: El buque gasífero surcoreano cruza el Canal de Panamá.",
+   "regenerated_after": "Según elcaribe.com.do y 1 medio(s) más (evento detectado: 2026-08-28; sin confirmación oficial en el corpus): El buque gasífero surcoreano cruza el Canal de Panamá."
+  },
+  "SR05": {
+   "human_decision": "no",
+   "statement_reviewed": "Según maharashtratimes.com: Panama Canal Water Shortage Shipping Impact On India ; आटणारं पाणी जगाला रडवणार! होर्मुझनंतर आणखी एक जलमार्ग संकटात; कृत्रिम 'गेटवे' धोक्यात.",
+   "regenerated_before": "Según maharashtratimes.com: Panama Canal Water Shortage Shipping Impact On India ; आटणारं पाणी जगाला रडवणार! होर्मुझनंतर आणखी एक जलमार्ग संकटात; कृत्रिम 'गेटवे' धोक्यात.",
+   "regenerated_after": "Según maharashtratimes.com (evento detectado: 2026-09-07; sin confirmación oficial en el corpus; titular en escritura no latina, no se reproduce sin traducción verificada)."
+  },
+  "SR10": {
+   "human_decision": "no",
+   "statement_reviewed": "Según elvocero.com: Cambio de liderazgo en el Canal de Panamá: Ilya Espino, primera mujer que asume la administración.",
+   "regenerated_before": "Según elvocero.com y 1 medio(s) más: Cambio de liderazgo en el Canal de Panamá: Ilya Espino, primera mujer que asume la administración.",
+   "regenerated_after": "Según elvocero.com y 1 medio(s) más (evento detectado: 2026-09-07; sin confirmación oficial en el corpus): Cambio de liderazgo en el Canal de Panamá: Ilya Espino, primera mujer que asume la administración."
+  },
+  "SR19": {
+   "human_decision": "no",
+   "statement_reviewed": "Según hsbnoticias.com: Fiscalía amplía medidas cautelares en caso Lili Pink e incluye nueva empresa vinculada a importaciones desde Panamá.",
+   "regenerated_before": "Según hsbnoticias.com: Fiscalía amplía medidas cautelares en caso Lili Pink e incluye nueva empresa vinculada a importaciones desde Panamá.",
+   "regenerated_after": "Según hsbnoticias.com (evento detectado: 2026-08-06; sin confirmación oficial en el corpus; asunto judicial: lo atribuido no establece responsabilidad): Fiscalía amplía medidas cautelares en caso Lili Pink e incluye nueva empresa vinculada a importaciones desde Panamá."
+  },
+  "SR25": {
+   "human_decision": "parcial",
+   "statement_reviewed": "Según otempo.com.br: Seca pelo El Niño pode levar Canal do Panamá a novas restrições.",
+   "regenerated_before": "Según otempo.com.br: Seca pelo El Niño pode levar Canal do Panamá a novas restrições.",
+   "regenerated_after": "Según otempo.com.br (evento detectado: 2026-09-07; sin confirmación oficial en el corpus; titular original en portugués, sin traducir): Seca pelo El Niño pode levar Canal do Panamá a novas restrições."
+  }
+ },
+ "support_review_rows_found_in_current_bundle": 29,
+ "not_measured": [
+  "support validity of the new texts (needs a new human review)",
+  "live LLM behaviour (no model run; cache revalidation only)",
+  "false-positive rate of the new validators on a labelled set (no labelled set exists)"
+ ],
+ "notes": [
+  "The 1 UNCITED_FACT in cache revalidation (both versions) is an empty social_copy placeholder re-entering the validator; not a content removal.",
+  "Template brief count is unchanged (190) because non-Latin headlines are replaced by an explicit withholding sentence instead of being dropped; before the fix those 6 headlines were reproduced verbatim."
+ ]
+}

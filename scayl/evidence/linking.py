@@ -29,7 +29,6 @@ from scayl.contracts import (
 SEISMIC_WINDOW = timedelta(hours=48)
 MAGNITUDE_TOLERANCE = 0.3
 MAGNITUDE_CONFLICT = 0.1
-PERCENT_CONFLICT_REL = 0.05
 
 # Topic -> pertinent World Bank indicators for Panama (context only).
 TOPIC_INDICATORS: dict[Topic, list[str]] = {
@@ -102,9 +101,12 @@ def link_seismic(event_id: str, items: list[NewsItem], quakes: list[SeismicEvent
         if when is None:
             continue
         mag = headline_magnitude(it)
+        where = _seismic_places(it.titulo)
         for q in quakes:
             if q.time is None or abs(q.time - when) > SEISMIC_WINDOW:
                 continue
+            if _disjoint(where, _seismic_places(q.place or "")):
+                continue  # near in time but in another country: neither confirmation nor context (C3)
             gap = abs((q.time - when).total_seconds())
             if mag is not None and q.magnitude is not None and abs(q.magnitude - mag) <= MAGNITUDE_TOLERANCE:
                 matched.append((abs(q.magnitude - mag), gap, q, it, mag))
@@ -139,43 +141,230 @@ def link_seismic(event_id: str, items: list[NewsItem], quakes: list[SeismicEvent
             reason="Contexto: el titular no indica magnitud, así que este registro NO confirma el titular.",
             extracted_by="rule"))
 
-    # Different magnitudes among headlines of the same event -> conflict, never pick one.
-    values = sorted({m for m in (headline_magnitude(i) for i in items) if m is not None})
-    if len(values) >= 2 and values[-1] - values[0] > MAGNITUDE_CONFLICT:
-        a = next(i for i in items if headline_magnitude(i) == values[0])
-        b = next(i for i in items if headline_magnitude(i) == values[-1])
+    # Different magnitudes among headlines of the SAME quake -> conflict, never pick one. Two headlines
+    # describe the same quake only if they are close in time and do not name disjoint places (C4).
+    mentions = [Mention("magnitud", m, 0.0, _when(i), _seismic_places(i.titulo), frozenset(), frozenset(), None, False, i)
+                for i in items if (m := headline_magnitude(i)) is not None]
+    pair = _widest_pair(mentions, MAGNITUDE_CONFLICT, max_gap=SEISMIC_WINDOW)
+    if pair:
+        a, b = pair
         link.conflicts.append(Conflict(
             conflict_id=f"CNF-{eid}-{len(link.conflicts) + 1:03d}", event_id=event_id, kind=ConflictKind.NUMERIC,
-            field="magnitud", version_a=ConflictVersion(value=str(values[0]), evidence=[news_ref(a)]),
-            version_b=ConflictVersion(value=str(values[-1]), evidence=[news_ref(b)]),
-            verification_needed="Contrastar con USGS y con el Instituto de Geociencias (IGUP)."))
+            field="magnitud", version_a=ConflictVersion(value=str(a.value), evidence=[news_ref(a.item)]),
+            version_b=ConflictVersion(value=str(b.value), evidence=[news_ref(b.item)]),
+            verification_needed="Contrastar con USGS y con el Instituto de Geociencias (IGUP)." + _correction_note(items)))
     return link
 
 
-def percent_conflicts(event_id: str, items: list[NewsItem], start: int = 1) -> list[Conflict]:
-    """Same indicator keyword + incompatible percentages across headlines -> conflict."""
-    by_indicator: dict[str, list[tuple[float, NewsItem]]] = {}
-    for it in items:
-        for ind, kw in INDICATOR_KEYWORDS.items():
-            if re.search(kw, it.titulo, re.IGNORECASE):
-                for m in _PERCENT.finditer(it.titulo):
-                    by_indicator.setdefault(ind, []).append((float(m.group(1).replace(",", ".")), it))
+# --- Deterministic conflict detection (C4) --------------------------------------------------------------
+# Two figures are versions of the SAME fact only if: same indicator/measure, same period (when both state
+# one), same place (when both name one), same unit, both observations (a projection never contradicts an
+# observation, and two forecasts are different forecasts) and they come from different publications.
+# Unknown period/place on one side is treated as compatible: the editor must check it (precision first
+# would hide real discrepancies between "inflación 1,2%" and "inflación 2,1%" without dates).
+_YEAR = re.compile(r"\b(19[89]\d|20[0-4]\d)\b")
+_MONTHS = ("enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "setiembre",
+           "octubre", "noviembre", "diciembre")
+_MONTH_RE = re.compile(r"\b(" + "|".join(_MONTHS) + r")\b", re.IGNORECASE)
+_VARIANTS = {"mensual": r"\bmensual", "interanual": r"interanual|anualizad|\ba[nñ]o a a[nñ]o",
+             "acumulada": r"acumulad"}
+HEADLINE_PROJECTION = re.compile(
+    r"\b(proyecta\w*|proyecci[oó]n\w*|prev[eé]n?|previsi[oó]n|estima\w*|pronostica\w*|pron[oó]stico|"
+    r"espera que|meta de|crecer[aá]n?|crecer[ií]a|caer[aá]n?|subir[aá]n?|bajar[aá]n?|se ubicar[aá])\b",
+    re.IGNORECASE)
+_PLACES = ["Bocas del Toro", "Chiriquí", "Chiriqui", "Colón", "Colon", "Darién", "Darien", "Coclé", "Cocle", "Herrera",
+           "Los Santos", "Veraguas", "Panamá Oeste", "Panama Oeste", "Guna Yala", "Azuero", "San Miguelito", "Boquete",
+           "David", "Chitré", "La Chorrera", "Arraiján", "Tocumen", "Panamá", "Panama", "Costa Rica", "Colombia",
+           "México", "Mexico", "Ecuador", "Venezuela", "Nicaragua", "Guatemala", "Honduras", "El Salvador", "Perú",
+           "Chile", "Argentina", "Brasil", "República Dominicana", "Cuba", "Estados Unidos", "China", "India"]
+_PLACE_RE = re.compile(r"\b(" + "|".join(re.escape(p) for p in _PLACES) + r")\b", re.IGNORECASE)
+_DENIAL = re.compile(r"\b(descarta\w*|desmient\w*|desmiente\w*|niega\w*|neg[oó]|no hubo|falso|falsa)\b",
+                     re.IGNORECASE)
+_CORRECTION = re.compile(r"\b(corrig\w*|corrige\w*|rectific\w*|fe de erratas)\b", re.IGNORECASE)
+_STOP = {"panama", "para", "como", "esta", "este", "sobre", "tras", "desde", "entre", "hasta", "segun", "hace",
+         "haya", "sido", "registrado", "registro", "dice", "informa", "reporta"}
+INDICATOR_WINDOW = 60  # max characters between an indicator keyword and the figure attributed to it
+
+
+def _norm_place(p: str) -> str:
+    import unicodedata
+    p = unicodedata.normalize("NFKD", p).encode("ascii", "ignore").decode().lower()
+    return {"panama oeste": "panama oeste"}.get(p, p)
+
+
+_TARGET = re.compile(r"\b(?:para|hacia)\s+(?:el\s+|la\s+)?$", re.IGNORECASE)
+
+
+def _located(text: str) -> list[re.Match]:
+    """Place mentions that locate the fact. "riesgo de tsunami PARA Panamá" names who is affected, not
+    where the quake happened (real case: a M7.4 Mexico-Guatemala quake paired with a M4.7 Panamá one)."""
+    return [m for m in _PLACE_RE.finditer(text) if not _TARGET.search(text[:m.start()])]
+
+
+def _places(text: str) -> frozenset[str]:
+    found = {_norm_place(m.group(0)) for m in _located(text)}
+    # "Canal de Panamá" names the waterway, not a place that distinguishes national from local figures
+    if re.search(r"canal de panam[aá]", text, re.IGNORECASE) and len(_PLACE_RE.findall(text)) == 1:
+        found.discard("panama")
+    return frozenset(found)
+
+
+_COUNTRIES = {"panama", "costa rica", "colombia", "mexico", "ecuador", "venezuela", "nicaragua", "guatemala",
+              "honduras", "el salvador", "peru", "chile", "argentina", "brasil", "republica dominicana", "cuba",
+              "estados unidos", "china", "india"}
+
+
+def _seismic_places(text: str) -> frozenset[str]:
+    """Country level for quakes: a quake felt in Chiriquí and 'in Panamá' can be the same quake, so any
+    Panamanian place maps to 'panama'. Different countries only -> different quakes (time also checked)."""
+    return frozenset(p if p in _COUNTRIES else "panama" for p in (
+        _norm_place(m.group(0)) for m in _located(text)))
+
+
+def foreign_only(text: str) -> bool:
+    """The headline names places and none of them is Panamanian (country mismatch guard, C3)."""
+    places = _seismic_places(text)
+    return bool(places) and "panama" not in places
+
+
+def _when(item: NewsItem):
+    return item.fecha_publicacion or item.fecha_deteccion
+
+
+@dataclass(frozen=True)
+class Mention:
+    """One figure in one headline, with the context needed to decide comparability."""
+
+    field: str
+    value: float
+    precision: float  # half a unit of the last stated digit: "9%" ±0.5, "9,4%" ±0.05 (rounding is not conflict)
+    when: object
+    places: frozenset[str]
+    years: frozenset[str]
+    months: frozenset[str]
+    variant: str | None
+    projection: bool
+    item: NewsItem
+
+
+def _disjoint(a: frozenset, b: frozenset) -> bool:
+    return bool(a) and bool(b) and not (a & b)
+
+
+def comparable(a: Mention, b: Mention, max_gap: timedelta | None = None) -> bool:
+    """True when two mentions can be versions of the same fact (C4 rules above)."""
+    if a.item.id_noticia == b.item.id_noticia or a.field != b.field:
+        return False
+    if _disjoint(a.places, b.places) or _disjoint(a.years, b.years) or _disjoint(a.months, b.months):
+        return False
+    if a.variant and b.variant and a.variant != b.variant:
+        return False
+    if a.projection or b.projection:
+        return False
+    return max_gap is None or not a.when or not b.when or abs(a.when - b.when) <= max_gap
+
+
+def _widest_pair(mentions: list[Mention], min_diff: float,
+                 max_gap: timedelta | None = None) -> tuple[Mention, Mention] | None:
+    pairs = [(abs(a.value - b.value), a, b) for n, a in enumerate(mentions) for b in mentions[n + 1:]
+             if comparable(a, b, max_gap)
+             and abs(a.value - b.value) > max(min_diff, a.precision, b.precision)]
+    if not pairs:
+        return None
+    _, a, b = max(pairs, key=lambda p: p[0])
+    return (a, b) if a.value <= b.value else (b, a)
+
+
+def _precision(raw: str) -> float:
+    decimals = len(re.split(r"[.,]", raw)[1]) if re.search(r"[.,]", raw) else 0
+    return 0.5 * 10 ** -decimals
+
+
+def percent_mentions(item: NewsItem) -> list[Mention]:
+    """Each percentage is attributed to the NEAREST indicator keyword (within INDICATOR_WINDOW chars), so
+    "precios suben 4% y exportaciones caen 9%" yields CPI=4 and exports=9, never CPI=9."""
+    title = item.titulo
+    keywords = [(ind, m.start(), m.end()) for ind, kw in INDICATOR_KEYWORDS.items()
+                for m in re.finditer(kw, title, re.IGNORECASE)]
+    if not keywords:
+        return []
+    years = frozenset(_YEAR.findall(title))
+    months = frozenset(m.lower().replace("setiembre", "septiembre") for m in _MONTH_RE.findall(title))
+    variant = next((v for v, rx in _VARIANTS.items() if re.search(rx, title, re.IGNORECASE)), None)
     out = []
-    for ind, vals in by_indicator.items():
-        lo, hi = min(vals, key=lambda v: v[0]), max(vals, key=lambda v: v[0])
-        if hi[0] and (hi[0] - lo[0]) / hi[0] > PERCENT_CONFLICT_REL:
-            out.append(Conflict(
-                conflict_id=f"CNF-{event_id.removeprefix('EVT-')}-{start + len(out):03d}", event_id=event_id,
-                kind=ConflictKind.NUMERIC, field=ind,
-                version_a=ConflictVersion(value=f"{lo[0]}%", evidence=[news_ref(lo[1])]),
-                version_b=ConflictVersion(value=f"{hi[0]}%", evidence=[news_ref(hi[1])]),
-                verification_needed="Confirmar cifra, período y fuente primaria (p. ej., INEC) antes de publicar."))
+    for m in _PERCENT.finditer(title):
+        dist, ind = min((max(s - m.end(), m.start() - e, 0), ind) for ind, s, e in keywords)
+        if dist > INDICATOR_WINDOW:
+            continue
+        out.append(Mention(ind, float(m.group(1).replace(",", ".")), _precision(m.group(1)), _when(item),
+                           _places(title), years, months, variant, bool(HEADLINE_PROJECTION.search(title)), item))
     return out
+
+
+def _correction_note(items: list[NewsItem]) -> str:
+    if any(_CORRECTION.search(i.titulo) for i in items):
+        return " Una de las publicaciones informa una corrección: verificar cuál es la cifra vigente y su fecha."
+    return ""
+
+
+def percent_conflicts(event_id: str, items: list[NewsItem], start: int = 1) -> list[Conflict]:
+    """Same indicator + same period + same place + same unit (%) + observed, across publications -> conflict."""
+    by_field: dict[str, list[Mention]] = {}
+    for it in items:
+        for mention in percent_mentions(it):
+            by_field.setdefault(mention.field, []).append(mention)
+    out = []
+    for ind in sorted(by_field):
+        pair = _widest_pair(by_field[ind], 0.0)
+        if not pair:
+            continue
+        lo, hi = pair
+        out.append(Conflict(
+            conflict_id=f"CNF-{event_id.removeprefix('EVT-')}-{start + len(out):03d}", event_id=event_id,
+            kind=ConflictKind.NUMERIC, field=ind,
+            version_a=ConflictVersion(value=f"{lo.value}%", evidence=[news_ref(lo.item)]),
+            version_b=ConflictVersion(value=f"{hi.value}%", evidence=[news_ref(hi.item)]),
+            verification_needed=("Confirmar cifra, período y fuente primaria (p. ej., INEC) antes de publicar."
+                                 + _correction_note(items))))
+    return out
+
+
+def _content_tokens(text: str) -> set[str]:
+    import unicodedata
+    text = unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode().lower()
+    return {t for t in re.findall(r"[a-z]{4,}", text) if t not in _STOP and not _DENIAL.search(t)
+            and t != "sintetico"}
+
+
+def denial_conflicts(event_id: str, items: list[NewsItem], start: int = 1) -> list[Conflict]:
+    """One publication asserts a fact and another (in the same event) denies it -> semantic conflict.
+    Requires >= 2 shared content words besides 'Panamá', so unrelated denials are not paired."""
+    denials = [i for i in items if _DENIAL.search(i.titulo)]
+    asserts = [i for i in items if not _DENIAL.search(i.titulo)]
+    best = None
+    for d in denials:
+        for a in asserts:
+            shared = _content_tokens(d.titulo) & _content_tokens(a.titulo)
+            if len(shared) >= 2 and (best is None or len(shared) > best[0]):
+                best = (len(shared), a, d)
+    if best is None:
+        return []
+    _, a, d = best
+    return [Conflict(
+        conflict_id=f"CNF-{event_id.removeprefix('EVT-')}-{start:03d}", event_id=event_id,
+        kind=ConflictKind.SEMANTIC, field="hecho_central",
+        version_a=ConflictVersion(value=a.titulo, evidence=[news_ref(a)]),
+        version_b=ConflictVersion(value=d.titulo, evidence=[news_ref(d)]),
+        verification_needed="Una publicación afirma el hecho y otra lo descarta o desmiente: confirmar con la "
+                            "fuente primaria antes de producir.")]
 
 
 def link_indicators(topic: Topic, items: list[NewsItem], observations: list[IndicatorObservation],
                     country: str = "PAN") -> tuple[list[EvidenceRef], list[TemporalWarning]]:
-    """Latest non-null value of pertinent indicators, as historical CONTEXT with a temporal warning."""
+    """Latest non-null value of pertinent indicators, as historical CONTEXT with a temporal warning.
+    Never attached to stories that only name other countries (a Panama series is not their context)."""
+    if items and all(foreign_only(i.titulo) for i in items):
+        return [], []
     wanted = set(TOPIC_INDICATORS.get(topic, []))
     text = " ".join(i.titulo for i in items)
     wanted |= {ind for ind, kw in INDICATOR_KEYWORDS.items() if re.search(kw, text, re.IGNORECASE)}

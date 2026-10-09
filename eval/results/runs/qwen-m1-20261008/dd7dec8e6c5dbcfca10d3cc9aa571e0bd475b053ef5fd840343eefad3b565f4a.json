@@ -1,0 +1,62 @@
+{
+ "data": {
+  "proposed_title": "Canal de Panamá cobra una cifra récord: buque paga $5.3 millones por cruzar",
+  "public_interest_angle": "El Canal de Panamá podría estar registrando un récord en tarifas de tránsito marítimo, según un titular publicado por laestrella.com.pa.",
+  "brief": [
+   {
+    "text": "Según laestrella.com.pa, el Canal de Panamá cobró una cifra récord, con un buque que pagó $5.3 millones por cruzar. La noticia se basa únicamente en el titular de un artículo sin contenido detallado.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0179-001",
+     "CLM-0179-002",
+     "CLM-0179-003"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿El Canal de Panamá efectivamente cobró una cifra récord en tarifas de tránsito marítimo?",
+   "¿Qué buque pagó $5.3 millones por cruzar el Canal de Panamá?",
+   "¿Qué información detallada se incluye en el artículo completo de laestrella.com.pa?"
+  ],
+  "script": [
+   {
+    "text": "Según laestrella.com.pa, el Canal de Panamá cobró una cifra récord, con un buque que pagó $5.3 millones por cruzar. La noticia se basa únicamente en el titular de un artículo sin contenido detallado.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0179-001",
+     "CLM-0179-002",
+     "CLM-0179-003"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "El Canal de Panamá cobró una cifra récord, según un titular de laestrella.com.pa. El buque pagó $5.3 millones por cruzar. Más información en el artículo completo.",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0179-001",
+    "CLM-0179-002",
+    "CLM-0179-003"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar si el Canal de Panamá efectivamente cobró una cifra récord en tarifas de tránsito marítimo.",
+   "Verificar si el buque mencionado en el titular pagó $5.3 millones por cruzar el Canal de Panamá.",
+   "Acceder al contenido completo del artículo de laestrella.com.pa para obtener más detalles."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 18722,
+  "tokens_in": 1336,
+  "tokens_out": 633,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-08T23:37:56.715912Z"
+ }
+}

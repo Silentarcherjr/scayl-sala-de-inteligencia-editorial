@@ -1,0 +1,98 @@
+{
+ "name": "Qwen3 8B en vivo · top 30 · M1 Max",
+ "status": "medido",
+ "run_at_utc": "2026-10-08T23:00Z–2026-10-09T01:00Z (aprox.)",
+ "method": "automático: validadores deterministas; NO es revisión humana de sustento",
+ "hardware": "Apple M1 Max 32 GB, Ollama (Metal); sin otras cargas controladas: había subagentes ejecutando pruebas y builds en paralelo, la latencia es pesimista",
+ "model": {
+  "name": "qwen3:8b",
+  "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+  "quantization": "Q4_K_M",
+  "parameter_size": "8.2B"
+ },
+ "params": "temperature 0, seed 42, think=false, JSON schema (scayl/gen/llm.py)",
+ "prompts": "scayl/gen/prompts/*.v1 (claims-v1, studio-v1)",
+ "snapshot": "data/raw/v1 · --public · agrupación TF-IDF (E5 no disponible en esta máquina): 183 eventos, no los 165 del bundle publicado",
+ "code": {
+  "generation_commit": "7e4adf2 (validadores previos, = main b4d03f0 en scayl/)",
+  "revalidation": "claude/final-delivery con validadores de A + corrección CLM"
+ },
+ "raw_outputs": "eval/results/runs/qwen-m1-20261008/ (caché direccionada por contenido: respuesta original + metadatos por llamada)",
+ "live_old_validators": {
+  "packages": 30,
+  "modes": {
+   "live": 30
+  },
+  "fallback": 0,
+  "fallback_reasons": [],
+  "sentences_generated": 127,
+  "sentences_kept": 115,
+  "kept_brief_script": 89,
+  "kept_with_valid_citation": 89,
+  "removed_by_code": {
+   "STATUS_MISMATCH": 3,
+   "UNCITED_FACT": 6,
+   "NUMBER_NOT_IN_EVIDENCE": 3
+  },
+  "studio_latency_ms_p50": 19500.5,
+  "studio_latency_ms_p95": 37188,
+  "tokens_in": 36017,
+  "tokens_out": 18959,
+  "attribution": {
+   "candidates": 101,
+   "preserved_before_validation": 98,
+   "preserved_after_validation": 98
+  }
+ },
+ "revalidated_new_validators": {
+  "packages": 30,
+  "modes": {
+   "cache": 30
+  },
+  "fallback": 1,
+  "fallback_reasons": [
+   "ninguna oración del brief sobrevivió a la validación"
+  ],
+  "sentences_generated": 127,
+  "sentences_kept": 111,
+  "kept_brief_script": 85,
+  "kept_with_valid_citation": 85,
+  "removed_by_code": {
+   "STATUS_MISMATCH": 3,
+   "UNCITED_FACT": 6,
+   "ENTITY_NOT_IN_EVIDENCE": 4,
+   "EMPTY_BRIEF": 1,
+   "NUMBER_NOT_IN_EVIDENCE": 3
+  },
+  "studio_latency_ms_p50": 19500.5,
+  "studio_latency_ms_p95": 37188,
+  "tokens_in": 36017,
+  "tokens_out": 18959,
+  "attribution": {
+   "candidates": 97,
+   "preserved_before_validation": 94,
+   "preserved_after_validation": 94
+  }
+ },
+ "lead_inspection_of_new_entity_removals": {
+  "note": "Lectura del Lead (IA), no revisión humana",
+  "EVT-0121": "2 oraciones: Qwen atribuye a Claudia Sheinbaum el cargo de 'jefa de gobierno de la Ciudad de México', ausente de la evidencia: descarte correcto",
+  "EVT-0062": "2 oraciones: 'Presidente de Panamá' no está en el claim citado (sí en un claim hermano del evento): descarte estricto por cita",
+  "EVT-0125": "falso positivo por IDs 'CLM-…' copiados en el texto: corregido, ya no descarta"
+ },
+ "human_review_sample": {
+  "path": "data/labels/support_review_qwen_live.csv",
+  "rows": 55,
+  "events": 29,
+  "status": "pendiente: decisiones vacías; la llena una persona"
+ },
+ "files_sha256": {
+  "eval/results/qwen-m1-live-generation_report.jsonl": "d70b04d55e0d63867124ebf81b363c92719d967532e82647194a0333e1334ada",
+  "eval/results/qwen-m1-revalidated-generation_report.jsonl": "f77641cd76eb4e36808455ae595e3019a45d00c7ca8f241c1d053f20db274588",
+  "data/labels/support_review_qwen_live.csv": "f9cdd12e90e2df254e9e8d09a5de124f6f87e928e779f80866f0d351dd868a39"
+ },
+ "not_measured": [
+  "validez del sustento de las salidas de Qwen (requiere revisión humana de la muestra)",
+  "latencia en condiciones controladas"
+ ]
+}

@@ -1,0 +1,56 @@
+{
+ "data": {
+  "proposed_title": "Autoridad Marítima de Panamá revisará resolución sobre acceso a información pública",
+  "public_interest_angle": "La revisión de la resolución podría afectar la transparencia en la gestión del Canal de Panamá.",
+  "brief": [
+   {
+    "text": "Autoridad Marítima de Panamá revisará resolución sobre acceso a información pública, según laestrella.com.pa.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0080-001"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Cuál es el contenido exacto de la resolución que se revisará?",
+   "¿Qué instituciones o partes interesadas han solicitado esta revisión?",
+   "¿Cuál es el plazo estimado para completar la revisión?"
+  ],
+  "script": [
+   {
+    "text": "La Autoridad Marítima de Panamá está revisando una resolución sobre el acceso a información pública, según un reporte de laestrella.com.pa.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0080-001"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "La Autoridad Marítima de Panamá revisará una resolución sobre acceso a información pública, según laestrella.com.pa.",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0080-001"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar el contenido completo de la resolución que se revisará.",
+   "Verificar si hay otros medios que hayan reportado esta noticia.",
+   "Identificar las instituciones o partes interesadas que han solicitado la revisión."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 10837,
+  "tokens_in": 987,
+  "tokens_out": 404,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-09T01:32:16.111433Z"
+ }
+}

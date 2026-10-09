@@ -1,0 +1,77 @@
+{
+ "data": {
+  "proposed_title": "Canal de Panamá aumentará cupos diarios de tránsito y fija calado Neopanamax",
+  "public_interest_angle": "El Canal de Panamá podría incrementar su capacidad de tránsito marítimo y ajustar el calado para barcos Neopanamax, según un reporte de mundomaritimo.cl.",
+  "brief": [
+   {
+    "text": "Según mundomaritimo.cl, el Canal de Panamá aumentará a 33 los cupos diarios de tránsito y fija calado Neopanamax en 14,94 metros. Esta información se basa en un titular publicado en el sitio web de la fuente.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0111-001",
+     "CLM-0111-003",
+     "CLM-0111-004"
+    ]
+   },
+   {
+    "text": "El nivel del lago Gatún fue de 84.88 pies el 29 de septiembre de 2026, según datos del ACP.",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0111-002"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Cuál es la base legal o técnica que respalda el aumento de cupos diarios de tránsito en el Canal de Panamá?",
+   "¿Qué criterios se utilizaron para fijar el calado Neopanamax en 14,94 metros?",
+   "¿Cómo se relaciona el nivel del lago Gatún con la operación del Canal de Panamá?"
+  ],
+  "script": [
+   {
+    "text": "Según mundomaritimo.cl, el Canal de Panamá podría aumentar a 33 los cupos diarios de tránsito y fijar el calado Neopanamax en 14,94 metros. Esta información se basa en un titular publicado en el sitio web de la fuente.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0111-001",
+     "CLM-0111-003",
+     "CLM-0111-004"
+    ]
+   },
+   {
+    "text": "El nivel del lago Gatún fue de 84.88 pies el 29 de septiembre de 2026, según datos del ACP.",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0111-002"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "El Canal de Panamá podría aumentar a 33 los cupos diarios de tránsito y fijar el calado Neopanamax en 14,94 metros, según mundomaritimo.cl. El nivel del lago Gatún fue de 84.88 pies el 29 de septiembre de 2026.",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0111-001",
+    "CLM-0111-002",
+    "CLM-0111-003",
+    "CLM-0111-004"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar si el aumento de cupos diarios de tránsito y la fijación del calado Neopanamax son oficiales o solo reportados por mundomaritimo.cl.",
+   "Verificar si el nivel del lago Gatún de 84.88 pies el 29 de septiembre de 2026 es una medición actual o histórica.",
+   "Revisar el contenido completo de los artículos mencionados para confirmar la información publicada."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 28037,
+  "tokens_in": 1635,
+  "tokens_out": 891,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-08T23:36:04.040226Z"
+ }
+}

@@ -1,0 +1,66 @@
+{
+ "data": {
+  "proposed_title": "Cambio de liderazgo en el Canal de Panamá: Ilya Espino, primera mujer que asume la administración",
+  "public_interest_angle": "El Canal de Panamá, uno de los corredores de transporte más importantes del mundo, está experimentando un cambio de liderazgo con la llegada de Ilya Espino, quien podría ser la primera mujer en asumir la administración del organismo.",
+  "brief": [
+   {
+    "text": "Según elvocero.com, se reporta un cambio de liderazgo en el Canal de Panamá, donde Ilya Espino sería la primera mujer que asume la administración. La noticia se basa únicamente en el titular de un artículo disponible en la web.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0089-001"
+    ]
+   },
+   {
+    "text": "El contenido completo de los artículos no está disponible, por lo que no se puede confirmar si la información sobre Ilya Espino es precisa o si hay más contexto sobre su nombramiento.",
+    "tag": "HECHO",
+    "claim_ids": []
+   }
+  ],
+  "investigation_questions": [
+   "¿Ilya Espino ha sido oficialmente nombrada como nueva directora del Canal de Panamá?",
+   "¿Qué cargo específico asume Ilya Espino en la administración del Canal de Panamá?",
+   "¿Existen declaraciones oficiales de la administración del Canal de Panamá confirmando el cambio de liderazgo y el nombramiento de Ilya Espino?"
+  ],
+  "script": [
+   {
+    "text": "Según elvocero.com, se reporta un cambio de liderazgo en el Canal de Panamá, donde Ilya Espino sería la primera mujer que asume la administración. La noticia se basa únicamente en el titular de un artículo disponible en la web.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0089-001"
+    ]
+   },
+   {
+    "text": "El contenido completo de los artículos no está disponible, por lo que no se puede confirmar si la información sobre Ilya Espino es precisa o si hay más contexto sobre su nombramiento.",
+    "tag": "HECHO",
+    "claim_ids": []
+   }
+  ],
+  "social_copy": {
+   "text": "Según elvocero.com, se reporta un cambio de liderazgo en el Canal de Panamá, donde Ilya Espino sería la primera mujer que asume la administración. La noticia se basa únicamente en el titular de un artículo disponible en la web.",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0089-001"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar si Ilya Espino ha sido oficialmente nombrada como nueva directora del Canal de Panamá.",
+   "Verificar si elvocero.com es una fuente confiable y si el titular se refiere a un cambio de liderazgo real.",
+   "Revisar si existen declaraciones oficiales de la administración del Canal de Panamá sobre el nombramiento de Ilya Espino."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 23587,
+  "tokens_in": 1015,
+  "tokens_out": 741,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-08T23:39:06.613512Z"
+ }
+}

@@ -29,12 +29,24 @@ def normalize_text(text: str) -> str:
     return " ".join(re.sub(r"[^a-z0-9 ]+", " ", text.lower()).split())
 
 
+_EDITION_PREFIXES = ("www.", "m.", "amp.", "mobile.")
+_OUTLET_SUFFIX = re.compile(r"\s+[-|–—]\s+[^-|–—]{1,40}$")
+
+
 def outlet_key(item: NewsItem) -> str:
+    """Host without edition prefixes: www./m./amp. editions of one outlet are the same outlet (C2)."""
     if item.url:
-        host = urlparse(item.url).netloc.lower().removeprefix("www.")
+        host = urlparse(item.url).netloc.lower()
+        for prefix in _EDITION_PREFIXES:
+            host = host.removeprefix(prefix)
         if host:
             return host
     return (item.medio or "desconocido").strip().lower()
+
+
+def core_title(title: str) -> str:
+    """Headline without a trailing " - Outlet" / " | Outlet" tag, so syndicated copies compare equal."""
+    return _OUTLET_SUFFIX.sub("", title.strip())
 
 
 def agency_of(item: NewsItem) -> str | None:
@@ -71,7 +83,7 @@ def source_dna(items: list[NewsItem], group_prefix: str = "PG") -> SourceDNA:
             if outlet_key(a) == outlet_key(b):
                 pair_reasons.append("mismo_medio")
             else:
-                if SequenceMatcher(None, normalize_text(a.titulo), normalize_text(b.titulo)).ratio() >= \
+                if SequenceMatcher(None, normalize_text(core_title(a.titulo)), normalize_text(core_title(b.titulo))).ratio() >= \
                         IDENTICAL_TITLE_RATIO:
                     pair_reasons.append("titular idéntico en medios distintos")
                 if agency_of(a) and agency_of(a) == agency_of(b):

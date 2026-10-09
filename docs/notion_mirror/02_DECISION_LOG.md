@@ -209,7 +209,7 @@
   - agrupación, pares de desarrollo revisados por humano: TF-IDF F1 0,44 (P 12/12, R 12/43) frente a E5 F1 0,99 (P 42/42, R 42/43).
   - Confirma DL-029: reglas para temas, E5 para agrupar.
   - **Limitación:** los pares de agrupación son el conjunto de desarrollo usado para calibrar τ, así que el F1 es optimista y no es una evaluación ciega.
-- **Set reservado v2 (10 preguntas escritas por un humano sin ver el código):** 6/6 trampas con abstención correcta. Las 4 preguntas esperadas como "respondibles" eran de cultura general (moneda, año de inauguración del Canal, provincia más grande, presidente que inauguró el Canal) y **no están en el corpus** (verificado: 0 coincidencias). SCAYL responde solo con evidencia citada, no de memoria, así que la abstención es el comportamiento diseñado. Se reportan ambas lecturas sin reescribir las expectativas humanas: 6/10 según las expectativas del autor; 10/10 con el criterio "solo con evidencia del corpus".
+- **Set reservado v2 (10 preguntas escritas por un integrante sin ver los casos existentes):** 6/6 trampas con abstención correcta. Las 4 preguntas esperadas como "respondibles" eran de cultura general (moneda, año de inauguración del Canal, provincia más grande, presidente que inauguró el Canal) y **no están en el corpus** (verificado: 0 coincidencias). SCAYL responde solo con evidencia citada, no de memoria, así que la abstención es el comportamiento diseñado. Se reportan ambas lecturas sin reescribir las expectativas humanas: 6/10 según las expectativas del autor; 10/10 con el criterio "solo con evidencia del corpus".
 - **Para el pitch:** "no responde de memoria" es una garantía, no una carencia; se muestra con HV2-07 ("¿Cuál es la moneda oficial de Panamá?" → abstención con la información que faltaría).
 - **Fecha:** 2026-10-07
 
@@ -261,4 +261,11 @@
 ### DL-037 · Notion vuelve a ser entregable (C-04)
 - **Contexto:** la organización habilitó Notion el día del cierre y pidió una página con tres enlaces: documentación técnica, documentación funcional y presentación del Pitch Day, esta última en Notion (sin Canva ni PPT).
 - **Decisión:** generar las páginas desde el repositorio (`docs/notion/`, importables como Markdown) con las mismas cifras medidas. Deja sin efecto la interpretación de C-03.
+- **Fecha:** 2026-10-08
+
+### DL-038 · Cierre: integrar mejoras probadas sin regenerar el bundle público
+- **Contexto:** en la noche del cierre se integraron validadores de generación, reglas de contradicción, mejoras de consultas y arreglos de UX (PR #78), cada uno con pruebas y medición antes/después (`docs/handoff/lead.md`). Esta máquina no tiene E5 en caché: regenerar el bundle produciría otra agrupación (TF-IDF, 183 eventos) distinta de la publicada (E5, 165 eventos).
+- **Decisión:** se integra el código y se despliega la web, pero **no se regenera** `web/public/data`. Las salidas publicadas siguen siendo las precalculadas y medidas. Se declaran dos efectos conocidos que el bundle aún no refleja: el falso conflicto de magnitud 7.4 en EVT-0114 y una oración de Qwen que nombra a una persona ausente de la evidencia citada. La corrida real de Qwen3 8B en el M1 Max queda como evaluación (`eval/results/qwen-m1-live.json`), no como datos de la demo.
+- **Retiro de enlace:** la copia en Streamlit Community Cloud exige inicio de sesión; se retira de la entrega. El respaldo es la app local sin internet.
+- **Pendiente humano:** revisar la muestra de 55 afirmaciones de Qwen (`data/labels/support_review_qwen_live.csv`); sin esa revisión, el sustento de Qwen figura como «no medido».
 - **Fecha:** 2026-10-08
