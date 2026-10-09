@@ -22,6 +22,16 @@
 | B | Sub B + Lead | P1 | HECHO | Benchmark QA v2 (40 dev + 20 reservadas, escrito por IA, sin revisión humana); normalización ISO/sinónimos, lugares USGS en español, rerank, abstención ante pregunta con instrucciones | +5 pruebas; T06/T07 verdes | Reservadas: respondidas con cita 9/14→11/14; abstención indebida 5/14→3/14; abstención correcta 6/6; fugas 0/4; lados de contradicción en top 5 3/3→2/3 (regresión). E5 no medido | cherry-picks de ead8dfa, 10c4a81, 86acee3 | GO |
 | Q | Lead | P1 | HECHO | Corrida real de Qwen3 8B (M1 Max, top 30, agrupación TF-IDF porque E5 no está en caché), revalidada con validadores nuevos; muestra `data/labels/support_review_qwen_live.csv` (55 afirmaciones, 29 eventos) | +1 prueba | 30/30 en vivo, 0 fallback; mediana 19,5 s; 115→111 oraciones (2 descartes correctos por cargo inventado, 2 estrictos por cita). Sustento: NO medido hasta revisión humana | ac66493 | GO |
 
+| C5 | Lead | P1 | HECHO | `docs/C5_PRECISION_AT5_ANALYSIS.md`: los 10 eventos (editor y sistema) son del tema Canal; la historia de El Niño está partida en 4 eventos; pesos NO reajustados | — | P@5 sigue 1/5 (exploratoria) | ver log | GO (solo documentación) |
+| DOC | Lead | P0 | HECHO | README + Notion técnica con «Evaluaciones de cierre»; DL-038; Notion: alcances de métricas corregidos y enlace Streamlit retirado | — | — | 7de701e, 639fa56 | GO |
+| MERGE | Lead | P0 | ESPERANDO CI | PR #78 aprobado por Silentarcherjr para merge + verificación de Vercel; `main` exige checks verdes | — | — | — | GO |
+
+## Siguiente paso si este agente se corta
+1. Cuando los checks del PR #78 estén en verde: `gh pr merge 78 --merge`.
+2. Verificar Vercel en https://scayl-editorial.vercel.app/ (Inicio, `/caso/EVT-0101/`, Consultas, Trust Lab, la API `/api/ask` con POST). Si algo falla: `gh pr revert`/revert del merge y avisar.
+3. Hacer público el repo **solo cuando Silentarcherjr lo confirme** («lo hacemos público cuando terminemos»). Historial auditado: sin secretos.
+4. Entregar a Silentarcherjr el checklist de «Requiere acción humana».
+
 ## Notas importantes
 - **El bundle público (web/public/data) NO se regeneró**: los cambios de A y C aplican al regenerar. En la demo, EVT-0114 aún
   muestra el 7.4 (sismo México–Guatemala) como versión en conflicto; C demostró que es un falso conflicto. Regenerar el bundle
