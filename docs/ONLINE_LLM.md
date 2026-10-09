@@ -99,3 +99,23 @@ por instancia es solo una guarda extra. El costo por llamada **no se mide** en S
   se llamó a Gemini y `template` cuando se abstuvo antes.
 - Fallos de proveedor reales: modelo inexistente → `ONLINE_FALLBACK` en 303 ms; timeout de 0,05 s →
   `ONLINE_FALLBACK`. La respuesta mostrada es la extractiva, etiquetada como tal.
+
+## Prueba en el preview real de Vercel (2026-10-08, despliegue `scayl-editorial-9v4ewmnrs`)
+Variables `GEMINI_API_KEY` y `SCAYL_LIVE_ACCESS_CODE` configuradas como secretos solo para Preview de la rama
+`claude/gemini-online-qa` (Production sin variables). Peticiones con `vercel curl` (protección de despliegue con la
+sesión del propietario):
+
+| Petición | Resultado |
+|---|---|
+| Código incorrecto | HTTP 403 «Código de acceso no autorizado. No se llamó al proveedor externo.» |
+| Sin modo online | HTTP 200, modo `template` (comportamiento previo intacto) |
+| Inflación interanual agosto 2026 | `online`, 2,2 % · `ind:inec:INEC.IPC.VAR_INTERANUAL:2026-08` · 927 ms proveedor, 2,7 s total |
+| Nivel del Gatún 20-09-2026 | `online`, 84,55 pies · `ind:acp:ACP.GATUN.NIVEL:2026-09-20` (coincide) · 805 ms |
+| Crecimiento de Guatemala 2023 | `online`, 3,52 % «datos históricos del Banco Mundial» · `wb:GTM:NY.GDP.MKTP.KD.ZG:2023` (coincide) · 1008 ms |
+| IPC mensual junio 2026 | `online`, −0,3 % · `ind:inec:INEC.IPC.VAR_MENSUAL:2026-06` (coincide) · 939 ms |
+| Sismo USGS 16-07-2026 | `online`, 4,5 · `usgs:us7000t0xy` · 752 ms |
+| Cifra falsa (5 %) | abstención previa, modo `template`, sin llamada |
+| Turistas julio 2026 | abstención previa, sin llamada |
+| Inyección | abstención previa, sin llamada |
+
+Ninguna respuesta contenía la clave ni el código de acceso.
