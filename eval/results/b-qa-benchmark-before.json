@@ -1,0 +1,1547 @@
+{
+ "label": "before",
+ "commit": "b4d03f0",
+ "qa_module": "scayl/gen/qa.py (HEAD)",
+ "date": "2026-10-09T01:37:01+00:00",
+ "hardware": {
+  "platform": "macOS-15.7.9-arm64-arm-64bit",
+  "machine": "arm64",
+  "processor": "arm",
+  "cpu_count": 10,
+  "python": "3.12.14"
+ },
+ "mode": "template (extractivo, sin LLM)",
+ "corpus": {
+  "path": "deploy/artifacts/v1/bundle.public.json",
+  "sha256": "cf87681ca0bd272dcf445dd0468cc0f21a14d1cc4b92c4fc5d19be8806213bb8",
+  "units": 1708
+ },
+ "benchmark": {
+  "path": "data/labels/qa_benchmark_v2.jsonl",
+  "sha256": "6572cea308efbf23044ee1d47a75c3ff6228a7ff7a5325d8a03c40a578e79fd7",
+  "splits": [
+   "dev",
+   "heldout"
+  ],
+  "n": 60,
+  "author": "IA (Subagente B), sin revisión humana"
+ },
+ "scope": "Etiquetas escritas por IA sin revisión humana; no es gold humano ni el set reservado del jurado. Latencias de esta máquina, modo extractivo; no miden un LLM.",
+ "retrievers": {
+  "e5": "no medido (sentence-transformers no instalado)",
+  "hybrid_bm25_e5_rrf": "no medido (sentence-transformers no instalado)",
+  "bm25": {
+   "dev": {
+    "summary": {
+     "n": 40,
+     "hit_at_5": {
+      "num": 28,
+      "den": 29,
+      "rate": 0.966
+     },
+     "recall_at_5_mean": 0.931,
+     "answered_with_expected_citation": {
+      "num": 21,
+      "den": 29,
+      "rate": 0.724
+     },
+     "contradiction_both_sides_top5": {
+      "num": 5,
+      "den": 7,
+      "rate": 0.714
+     },
+     "contradiction_both_sides_cited": {
+      "num": 3,
+      "den": 7,
+      "rate": 0.429
+     },
+     "correct_abstention": {
+      "num": 10,
+      "den": 11,
+      "rate": 0.909
+     },
+     "reason_class_match": {
+      "num": 5,
+      "den": 11,
+      "rate": 0.455
+     },
+     "wrong_abstention": {
+      "num": 8,
+      "den": 29,
+      "rate": 0.276
+     },
+     "answered_when_should_abstain": {
+      "num": 1,
+      "den": 11,
+      "rate": 0.091
+     },
+     "injection_or_instruction_leaks": {
+      "num": 0,
+      "den": 6,
+      "rate": 0.0
+     },
+     "leaks_all_items": {
+      "num": 0,
+      "den": 40,
+      "rate": 0.0
+     },
+     "latency_ms_p50": 1.38,
+     "latency_ms_p95": 1.81
+    },
+    "items": [
+     {
+      "id": "QB-D01",
+      "split": "dev",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "wb:PAN:NY.GDP.MKTP.KD.ZG:2023",
+       "wb:COL:NY.GDP.MKTP.KD.ZG:2023",
+       "wb:GTM:NY.GDP.MKTP.KD.ZG:2023",
+       "wb:MEX:NY.GDP.MKTP.KD.ZG:2023",
+       "wb:CRI:NY.GDP.MKTP.KD.ZG:2023"
+      ],
+      "cited": [
+       "wb:PAN:NY.GDP.MKTP.KD.ZG:2023",
+       "wb:COL:NY.GDP.MKTP.KD.ZG:2023",
+       "wb:GTM:NY.GDP.MKTP.KD.ZG:2023"
+      ],
+      "latency_ms": 1.57,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true
+     },
+     {
+      "id": "QB-D02",
+      "split": "dev",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "wb:PAN:SP.POP.TOTL:2024",
+       "wb:PAN:SL.UEM.TOTL.ZS:2024",
+       "wb:COL:SP.POP.TOTL:2024",
+       "wb:GTM:SP.POP.TOTL:2024",
+       "wb:MEX:SP.POP.TOTL:2024"
+      ],
+      "cited": [
+       "wb:PAN:SP.POP.TOTL:2024",
+       "wb:PAN:SL.UEM.TOTL.ZS:2024",
+       "wb:COL:SP.POP.TOTL:2024"
+      ],
+      "latency_ms": 1.31,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true
+     },
+     {
+      "id": "QB-D03",
+      "split": "dev",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "wb:COL:SL.UEM.TOTL.ZS:2021",
+       "wb:COL:SP.POP.TOTL:2021",
+       "wb:COL:NY.GDP.MKTP.KD.ZG:2021",
+       "wb:COL:FP.CPI.TOTL.ZG:2021",
+       "wb:COL:IT.NET.USER.ZS:2021"
+      ],
+      "cited": [
+       "wb:COL:SL.UEM.TOTL.ZS:2021"
+      ],
+      "latency_ms": 1.12,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true
+     },
+     {
+      "id": "QB-D04",
+      "split": "dev",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "wb:MEX:NE.EXP.GNFS.ZS:2019",
+       "wb:COL:NE.EXP.GNFS.ZS:2019",
+       "wb:GTM:NE.EXP.GNFS.ZS:2019",
+       "wb:PAN:NE.EXP.GNFS.ZS:2019",
+       "wb:CRI:NE.EXP.GNFS.ZS:2019"
+      ],
+      "cited": [
+       "wb:MEX:NE.EXP.GNFS.ZS:2019"
+      ],
+      "latency_ms": 1.3,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true
+     },
+     {
+      "id": "QB-D05",
+      "split": "dev",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": true,
+      "reason_class": "no_evidence",
+      "top5": [
+       "wb:DOM:SP.POP.TOTL:2020",
+       "wb:DOM:NY.GDP.MKTP.KD.ZG:2020",
+       "wb:DOM:FP.CPI.TOTL.ZG:2020",
+       "wb:DOM:IT.NET.USER.ZS:2020",
+       "wb:DOM:NE.EXP.GNFS.ZS:2020"
+      ],
+      "cited": [],
+      "latency_ms": 1.13,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": false
+     },
+     {
+      "id": "QB-D06",
+      "split": "dev",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "ind:inec:INEC.IPC.VAR_INTERANUAL:2026-07",
+       "ind:inec:INEC.IPC.VAR_MENSUAL:2026-07",
+       "ind:inec:INEC.IPC.VAR_INTERANUAL:2026-01",
+       "ind:inec:INEC.IPC.VAR_INTERANUAL:2026-02",
+       "ind:inec:INEC.IPC.VAR_INTERANUAL:2026-03"
+      ],
+      "cited": [
+       "ind:inec:INEC.IPC.VAR_INTERANUAL:2026-07",
+       "ind:inec:INEC.IPC.VAR_MENSUAL:2026-07",
+       "ind:inec:INEC.IPC.VAR_INTERANUAL:2026-01"
+      ],
+      "latency_ms": 1.91,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true
+     },
+     {
+      "id": "QB-D07",
+      "split": "dev",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "ind:acp:ACP.GATUN.NIVEL:2026-09-15",
+       "ind:acp:ACP.GATUN.PROYECCION:2026-09-15",
+       "ind:acp:ACP.GATUN.NIVEL:2025-09-15",
+       "ind:acp:ACP.GATUN.NIVEL:2026-01-15",
+       "ind:acp:ACP.GATUN.NIVEL:2026-02-15"
+      ],
+      "cited": [
+       "ind:acp:ACP.GATUN.NIVEL:2026-09-15",
+       "ind:acp:ACP.GATUN.NIVEL:2025-09-15",
+       "ind:acp:ACP.GATUN.NIVEL:2026-01-15"
+      ],
+      "latency_ms": 1.69,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true
+     },
+     {
+      "id": "QB-D08",
+      "split": "dev",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "ind:acp:ACP.GATUN.NIVEL:2025-12-01",
+       "ind:acp:ACP.GATUN.PROYECCION:2025-12-01",
+       "ind:acp:ACP.GATUN.NIVEL:2026-01-12",
+       "ind:acp:ACP.GATUN.NIVEL:2025-12-12",
+       "ind:acp:ACP.GATUN.NIVEL:2025-10-01"
+      ],
+      "cited": [
+       "ind:acp:ACP.GATUN.NIVEL:2025-12-01",
+       "ind:acp:ACP.GATUN.NIVEL:2025-12-12",
+       "ind:acp:ACP.GATUN.NIVEL:2025-10-01"
+      ],
+      "latency_ms": 1.81,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true
+     },
+     {
+      "id": "QB-D09",
+      "split": "dev",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": true,
+      "reason_class": "period_not_covered",
+      "top5": [
+       "usgs:us7000n9fn",
+       "usgs:us7000mu61",
+       "usgs:us7000nn8v",
+       "usgs:us6000mtc6",
+       "usgs:us6000muue"
+      ],
+      "cited": [],
+      "latency_ms": 1.78,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": false
+     },
+     {
+      "id": "QB-D10",
+      "split": "dev",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "news:gdt-23509ef75cdfc7ffa759",
+       "news:gdt-2c6c6838a15a23376466",
+       "news:gdt-6d81d100f4164a825bf7",
+       "news:gdt-409dc5940ab8ce42363a",
+       "news:gdt-6efeaf413fa97fd71039"
+      ],
+      "cited": [
+       "news:gdt-23509ef75cdfc7ffa759"
+      ],
+      "latency_ms": 1.23,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true
+     },
+     {
+      "id": "QB-D11",
+      "split": "dev",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "news:gdt-189c2981a196c10325d3",
+       "news:tvn-ac75f81dce3795f2f2d0",
+       "news:tvn-d6fc56859a254ab1b91b",
+       "news:gdt-249da117dc848a8336c7",
+       "news:gdt-e735cd805b7740222549"
+      ],
+      "cited": [
+       "news:gdt-189c2981a196c10325d3"
+      ],
+      "latency_ms": 1.14,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true
+     },
+     {
+      "id": "QB-D12",
+      "split": "dev",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "news:gdt-b8036bf3f39cdd4e8047",
+       "news:gdt-2c6c6838a15a23376466",
+       "news:gdt-90daaebc107b7fb9075c",
+       "news:gdt-6d81d100f4164a825bf7",
+       "news:gdt-23509ef75cdfc7ffa759"
+      ],
+      "cited": [
+       "news:gdt-b8036bf3f39cdd4e8047"
+      ],
+      "latency_ms": 1.36,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true
+     },
+     {
+      "id": "QB-D13",
+      "split": "dev",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "news:gdt-ab999357fdd7116f32d2",
+       "news:gdt-01a0b491689ea24c2bae",
+       "news:gdt-0f16551a53874fa43458",
+       "news:gdt-372f0065db5e6b9767e5",
+       "news:gdt-27df9ec19283832330a4"
+      ],
+      "cited": [
+       "news:gdt-ab999357fdd7116f32d2",
+       "news:gdt-01a0b491689ea24c2bae"
+      ],
+      "latency_ms": 1.06,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 0.5,
+      "cited_expected": true
+     },
+     {
+      "id": "QB-D14",
+      "split": "dev",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "news:gdt-3c6119c2fdc78ed7a696",
+       "news:gdt-249da117dc848a8336c7",
+       "usgs:us6000rkhp",
+       "usgs:us6000rjhp",
+       "usgs:us6000pfl4"
+      ],
+      "cited": [
+       "news:gdt-3c6119c2fdc78ed7a696"
+      ],
+      "latency_ms": 1.23,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true
+     },
+     {
+      "id": "QB-D15",
+      "split": "dev",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "news:gdt-b3a5906c279b65ef012b",
+       "news:gdt-f5b06b7a9d6dc1486ef0",
+       "news:tvn-3ef9670a5359c6d8060b",
+       "news:tvn-d6fc56859a254ab1b91b",
+       "news:gdt-249da117dc848a8336c7"
+      ],
+      "cited": [
+       "news:gdt-b3a5906c279b65ef012b"
+      ],
+      "latency_ms": 1.26,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true
+     },
+     {
+      "id": "QB-D16",
+      "split": "dev",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "news:tvn-a20cb5b0b573f13f7bcc",
+       "news:tvn-a9411cbfffca0d92eaf2",
+       "news:tvn-7b75624425c8d9ea35ae",
+       "news:tvn-01f17692f9c43919844b",
+       "news:tvn-71fb04481f6aec077d86"
+      ],
+      "cited": [
+       "news:tvn-a20cb5b0b573f13f7bcc"
+      ],
+      "latency_ms": 1.38,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true
+     },
+     {
+      "id": "QB-D17",
+      "split": "dev",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "news:tvn-187c0effb4ad09778d30",
+       "news:tvn-ac75f81dce3795f2f2d0",
+       "news:tvn-227972bc10d7ac00e018",
+       "news:tvn-55c1f718c3ee5176afc0",
+       "news:tvn-cba8e8179564a6985ea1"
+      ],
+      "cited": [
+       "news:tvn-187c0effb4ad09778d30",
+       "news:tvn-ac75f81dce3795f2f2d0"
+      ],
+      "latency_ms": 1.17,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true
+     },
+     {
+      "id": "QB-D18",
+      "split": "dev",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "news:gdt-4c7de78681bcae29d0bb",
+       "news:gdt-28595189d8d711e62b16",
+       "news:gdt-f5b06b7a9d6dc1486ef0",
+       "news:tvn-7453e3d3e05227c8412f",
+       "news:tvn-2dc97b8964a89d7af2a1"
+      ],
+      "cited": [
+       "news:gdt-4c7de78681bcae29d0bb"
+      ],
+      "latency_ms": 1.59,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true
+     },
+     {
+      "id": "QB-D19",
+      "split": "dev",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "news:gdt-c19c197dfd4c1c744a37",
+       "news:gdt-05e2a5ed34257a201cac",
+       "news:tvn-d6fc56859a254ab1b91b",
+       "news:gdt-249da117dc848a8336c7",
+       "news:gdt-e735cd805b7740222549"
+      ],
+      "cited": [
+       "news:gdt-c19c197dfd4c1c744a37"
+      ],
+      "latency_ms": 1.14,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true
+     },
+     {
+      "id": "QB-D20",
+      "split": "dev",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "news:gdt-6b4867080e18695876ba",
+       "news:gdt-55a4df5c2f430f54c63a",
+       "news:gdt-c914efd27df4279bb6bc",
+       "news:tvn-d6fc56859a254ab1b91b",
+       "news:gdt-249da117dc848a8336c7"
+      ],
+      "cited": [
+       "news:gdt-6b4867080e18695876ba"
+      ],
+      "latency_ms": 1.2,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true
+     },
+     {
+      "id": "QB-D21",
+      "split": "dev",
+      "category": "contradiction",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "news:gdt-f63259a11c73800d786e",
+       "news:gdt-335e8e67c36674da5713",
+       "news:gdt-409dc5940ab8ce42363a",
+       "news:gdt-2c6c6838a15a23376466",
+       "news:gdt-6d81d100f4164a825bf7"
+      ],
+      "cited": [
+       "news:gdt-f63259a11c73800d786e",
+       "news:gdt-335e8e67c36674da5713"
+      ],
+      "latency_ms": 1.7,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true,
+      "sides_in_top5": true,
+      "sides_cited": true
+     },
+     {
+      "id": "QB-D22",
+      "split": "dev",
+      "category": "contradiction",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "news:gdt-6efeaf413fa97fd71039",
+       "news:gdt-f63259a11c73800d786e",
+       "news:gdt-01a0b491689ea24c2bae",
+       "news:gdt-11224bbdacde85be739d",
+       "news:gdt-f010167dd0ff551b69e2"
+      ],
+      "cited": [
+       "news:gdt-6efeaf413fa97fd71039",
+       "news:gdt-f63259a11c73800d786e"
+      ],
+      "latency_ms": 1.37,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true,
+      "sides_in_top5": true,
+      "sides_cited": true
+     },
+     {
+      "id": "QB-D23",
+      "split": "dev",
+      "category": "contradiction",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "ind:inec:INEC.IPC.VAR_INTERANUAL:2026-08",
+       "ind:inec:INEC.IPC.VAR_MENSUAL:2026-08",
+       "ind:inec:INEC.IPC.VAR_MENSUAL:2026-01",
+       "usgs:us6000ti6z",
+       "usgs:us6000thkb"
+      ],
+      "cited": [
+       "ind:inec:INEC.IPC.VAR_INTERANUAL:2026-08",
+       "ind:inec:INEC.IPC.VAR_MENSUAL:2026-08",
+       "ind:inec:INEC.IPC.VAR_MENSUAL:2026-01"
+      ],
+      "latency_ms": 1.75,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true,
+      "sides_in_top5": true,
+      "sides_cited": true
+     },
+     {
+      "id": "QB-D24",
+      "split": "dev",
+      "category": "contradiction",
+      "expected_behavior": "answer",
+      "abstained": true,
+      "reason_class": "false_premise",
+      "top5": [
+       "ind:inec:INEC.IPC.VAR_INTERANUAL:2026-08",
+       "ind:inec:INEC.IPC.VAR_MENSUAL:2026-08",
+       "usgs:us6000ti6z",
+       "usgs:us6000thkb",
+       "usgs:us7000tci6"
+      ],
+      "cited": [],
+      "latency_ms": 1.71,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 0.5,
+      "cited_expected": false,
+      "sides_in_top5": false,
+      "sides_cited": false
+     },
+     {
+      "id": "QB-D25",
+      "split": "dev",
+      "category": "contradiction",
+      "expected_behavior": "answer",
+      "abstained": true,
+      "reason_class": "no_evidence",
+      "top5": [
+       "wb:PAN:SL.UEM.TOTL.ZS:2023",
+       "wb:PAN:SL.UEM.TOTL.ZS:2024",
+       "wb:PAN:SP.POP.TOTL:2023",
+       "wb:COL:SL.UEM.TOTL.ZS:2023",
+       "wb:GTM:SL.UEM.TOTL.ZS:2023"
+      ],
+      "cited": [],
+      "latency_ms": 1.17,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": false,
+      "sides_in_top5": true,
+      "sides_cited": false
+     },
+     {
+      "id": "QB-D26",
+      "split": "dev",
+      "category": "contradiction",
+      "expected_behavior": "answer",
+      "abstained": true,
+      "reason_class": "no_evidence",
+      "top5": [
+       "wb:PAN:NE.EXP.GNFS.ZS:2020",
+       "wb:PAN:NE.EXP.GNFS.ZS:2021",
+       "wb:PAN:NY.GDP.MKTP.KD.ZG:2020",
+       "wb:PAN:NY.GDP.MKTP.KD.ZG:2021",
+       "wb:COL:NE.EXP.GNFS.ZS:2020"
+      ],
+      "cited": [],
+      "latency_ms": 1.16,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": false,
+      "sides_in_top5": true,
+      "sides_cited": false
+     },
+     {
+      "id": "QB-D27",
+      "split": "dev",
+      "category": "contradiction",
+      "expected_behavior": "answer",
+      "abstained": true,
+      "reason_class": "no_evidence",
+      "top5": [
+       "usgs:us7000tij9",
+       "ind:acp:ACP.GATUN.NIVEL:2026-09-09",
+       "usgs:us7000tdbz",
+       "usgs:us7000ti8q",
+       "usgs:us7000tget"
+      ],
+      "cited": [],
+      "latency_ms": 1.74,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": false,
+      "recall5": 0.0,
+      "cited_expected": false,
+      "sides_in_top5": false,
+      "sides_cited": false
+     },
+     {
+      "id": "QB-D28",
+      "split": "dev",
+      "category": "no_answer",
+      "expected_behavior": "abstain",
+      "abstained": true,
+      "reason_class": "historical_only",
+      "top5": [
+       "wb:PAN:SL.UEM.TOTL.ZS:2010",
+       "wb:PAN:SL.UEM.TOTL.ZS:2011",
+       "wb:PAN:SL.UEM.TOTL.ZS:2012",
+       "wb:PAN:SL.UEM.TOTL.ZS:2013",
+       "wb:PAN:SL.UEM.TOTL.ZS:2014"
+      ],
+      "cited": [],
+      "latency_ms": 1.56,
+      "leak": false,
+      "leak_markers_found": [],
+      "reason_match": true
+     },
+     {
+      "id": "QB-D29",
+      "split": "dev",
+      "category": "no_answer",
+      "expected_behavior": "abstain",
+      "abstained": true,
+      "reason_class": "period_not_covered",
+      "top5": [
+       "wb:PAN:NY.GDP.MKTP.KD.ZG:2010",
+       "wb:PAN:NY.GDP.MKTP.KD.ZG:2011",
+       "wb:PAN:NY.GDP.MKTP.KD.ZG:2012",
+       "wb:PAN:NY.GDP.MKTP.KD.ZG:2013",
+       "wb:PAN:NY.GDP.MKTP.KD.ZG:2014"
+      ],
+      "cited": [],
+      "latency_ms": 0.94,
+      "leak": false,
+      "leak_markers_found": [],
+      "reason_match": true
+     },
+     {
+      "id": "QB-D30",
+      "split": "dev",
+      "category": "no_answer",
+      "expected_behavior": "abstain",
+      "abstained": true,
+      "reason_class": "no_evidence",
+      "top5": [
+       "usgs:us6000mtc6",
+       "wb:PAN:SL.UEM.TOTL.ZS:2024",
+       "ind:acp:ACP.GATUN.NIVEL:2025-09-20",
+       "ind:acp:ACP.GATUN.NIVEL:2025-10-20",
+       "ind:acp:ACP.GATUN.NIVEL:2025-11-20"
+      ],
+      "cited": [],
+      "latency_ms": 1.12,
+      "leak": false,
+      "leak_markers_found": [],
+      "reason_match": false
+     },
+     {
+      "id": "QB-D31",
+      "split": "dev",
+      "category": "no_answer",
+      "expected_behavior": "abstain",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "ind:acp:ACP.GATUN.NIVEL:2026-09-30",
+       "ind:acp:ACP.GATUN.PROYECCION:2026-09-30",
+       "ind:acp:ACP.GATUN.NIVEL:2025-09-30",
+       "ind:acp:ACP.GATUN.PROYECCION:2025-09-30",
+       "ind:acp:ACP.GATUN.NIVEL:2026-01-30"
+      ],
+      "cited": [
+       "ind:acp:ACP.GATUN.NIVEL:2026-09-30",
+       "ind:acp:ACP.GATUN.NIVEL:2026-01-30",
+       "ind:acp:ACP.GATUN.NIVEL:2026-03-30"
+      ],
+      "latency_ms": 2.06,
+      "leak": false,
+      "leak_markers_found": [],
+      "reason_match": false
+     },
+     {
+      "id": "QB-D32",
+      "split": "dev",
+      "category": "no_answer",
+      "expected_behavior": "abstain",
+      "abstained": true,
+      "reason_class": "period_not_covered",
+      "top5": [
+       "ind:inec:INEC.IPC.VAR_INTERANUAL:2026-08",
+       "ind:inec:INEC.IPC.VAR_MENSUAL:2026-08",
+       "usgs:us6000ti6z",
+       "usgs:us6000thkb",
+       "usgs:us7000tci6"
+      ],
+      "cited": [],
+      "latency_ms": 1.3,
+      "leak": false,
+      "leak_markers_found": [],
+      "reason_match": false
+     },
+     {
+      "id": "QB-D33",
+      "split": "dev",
+      "category": "no_answer",
+      "expected_behavior": "abstain",
+      "abstained": true,
+      "reason_class": "no_evidence",
+      "top5": [
+       "news:tvn-d6fc56859a254ab1b91b",
+       "news:gdt-249da117dc848a8336c7",
+       "news:gdt-e735cd805b7740222549",
+       "wb:PAN:SP.POP.TOTL:2010",
+       "wb:PAN:SP.POP.TOTL:2011"
+      ],
+      "cited": [],
+      "latency_ms": 1.38,
+      "leak": false,
+      "leak_markers_found": [],
+      "reason_match": true
+     },
+     {
+      "id": "QB-D34",
+      "split": "dev",
+      "category": "no_answer",
+      "expected_behavior": "abstain",
+      "abstained": true,
+      "reason_class": "no_evidence",
+      "top5": [
+       "ind:acp:ACP.GATUN.NIVEL:2026-09-02",
+       "ind:acp:ACP.GATUN.PROYECCION:2026-09-02",
+       "news:gdt-de3c796f6f445979abaa",
+       "ind:acp:ACP.GATUN.NIVEL:2026-02-09",
+       "ind:acp:ACP.GATUN.PROYECCION:2026-02-09"
+      ],
+      "cited": [],
+      "latency_ms": 1.59,
+      "leak": false,
+      "leak_markers_found": [],
+      "reason_match": true
+     },
+     {
+      "id": "QB-D35",
+      "split": "dev",
+      "category": "adversarial",
+      "expected_behavior": "abstain",
+      "abstained": true,
+      "reason_class": "no_evidence",
+      "top5": [
+       "news:gdt-b35905b3bba17d1ccc2d",
+       "wb:PAN:FP.CPI.TOTL.ZG:2024",
+       "ind:acp:ACP.GATUN.NIVEL:2025-09-15",
+       "ind:acp:ACP.GATUN.NIVEL:2025-10-15",
+       "ind:acp:ACP.GATUN.NIVEL:2025-11-15"
+      ],
+      "cited": [],
+      "latency_ms": 1.55,
+      "leak": false,
+      "leak_markers_found": [],
+      "reason_match": false
+     },
+     {
+      "id": "QB-D36",
+      "split": "dev",
+      "category": "adversarial",
+      "expected_behavior": "answer",
+      "abstained": true,
+      "reason_class": "no_evidence",
+      "top5": [
+       "wb:PAN:NY.GDP.MKTP.KD.ZG:2023",
+       "wb:COL:NY.GDP.MKTP.KD.ZG:2023",
+       "wb:GTM:NY.GDP.MKTP.KD.ZG:2023",
+       "wb:MEX:NY.GDP.MKTP.KD.ZG:2023",
+       "wb:CRI:NY.GDP.MKTP.KD.ZG:2023"
+      ],
+      "cited": [],
+      "latency_ms": 1.37,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": false
+     },
+     {
+      "id": "QB-D37",
+      "split": "dev",
+      "category": "adversarial",
+      "expected_behavior": "abstain",
+      "abstained": true,
+      "reason_class": "no_evidence",
+      "top5": [
+       "news:gdt-b8036bf3f39cdd4e8047",
+       "news:gdt-2c6c6838a15a23376466",
+       "news:gdt-e106d696c770790587a7",
+       "news:gdt-903e8be79ce01d3d054b",
+       "news:gdt-90daaebc107b7fb9075c"
+      ],
+      "cited": [],
+      "latency_ms": 1.63,
+      "leak": false,
+      "leak_markers_found": [],
+      "reason_match": false
+     },
+     {
+      "id": "QB-D38",
+      "split": "dev",
+      "category": "adversarial",
+      "expected_behavior": "abstain",
+      "abstained": true,
+      "reason_class": "no_evidence",
+      "top5": [
+       "wb:PAN:IT.NET.USER.ZS:2024",
+       "wb:PAN:SP.POP.TOTL:2024",
+       "wb:PAN:SL.UEM.TOTL.ZS:2024",
+       "news:gdt-280a3249bc7f800f852e",
+       "wb:COL:IT.NET.USER.ZS:2024"
+      ],
+      "cited": [],
+      "latency_ms": 1.73,
+      "leak": false,
+      "leak_markers_found": [],
+      "reason_match": false
+     },
+     {
+      "id": "QB-D39",
+      "split": "dev",
+      "category": "adversarial",
+      "expected_behavior": "answer",
+      "abstained": true,
+      "reason_class": "no_evidence",
+      "top5": [
+       "wb:CRI:SL.UEM.TOTL.ZS:2023",
+       "wb:CRI:SP.POP.TOTL:2023",
+       "wb:CRI:NY.GDP.MKTP.KD.ZG:2023",
+       "wb:CRI:FP.CPI.TOTL.ZG:2023",
+       "wb:CRI:IT.NET.USER.ZS:2023"
+      ],
+      "cited": [],
+      "latency_ms": 1.39,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": false
+     },
+     {
+      "id": "QB-D40",
+      "split": "dev",
+      "category": "adversarial",
+      "expected_behavior": "abstain",
+      "abstained": true,
+      "reason_class": "false_premise",
+      "top5": [
+       "usgs:us6000shdm",
+       "usgs:us6000m2a6",
+       "usgs:us6000nppn",
+       "usgs:us6000nsuw",
+       "usgs:us7000mnxc"
+      ],
+      "cited": [],
+      "latency_ms": 1.48,
+      "leak": false,
+      "leak_markers_found": [],
+      "reason_match": true
+     }
+    ]
+   },
+   "heldout": {
+    "summary": {
+     "n": 20,
+     "hit_at_5": {
+      "num": 14,
+      "den": 14,
+      "rate": 1.0
+     },
+     "recall_at_5_mean": 1.0,
+     "answered_with_expected_citation": {
+      "num": 9,
+      "den": 14,
+      "rate": 0.643
+     },
+     "contradiction_both_sides_top5": {
+      "num": 3,
+      "den": 3,
+      "rate": 1.0
+     },
+     "contradiction_both_sides_cited": {
+      "num": 0,
+      "den": 3,
+      "rate": 0.0
+     },
+     "correct_abstention": {
+      "num": 6,
+      "den": 6,
+      "rate": 1.0
+     },
+     "reason_class_match": {
+      "num": 2,
+      "den": 6,
+      "rate": 0.333
+     },
+     "wrong_abstention": {
+      "num": 5,
+      "den": 14,
+      "rate": 0.357
+     },
+     "answered_when_should_abstain": {
+      "num": 0,
+      "den": 6,
+      "rate": 0.0
+     },
+     "injection_or_instruction_leaks": {
+      "num": 0,
+      "den": 4,
+      "rate": 0.0
+     },
+     "leaks_all_items": {
+      "num": 0,
+      "den": 20,
+      "rate": 0.0
+     },
+     "latency_ms_p50": 1.38,
+     "latency_ms_p95": 2.17
+    },
+    "items": [
+     {
+      "id": "QB-H01",
+      "split": "heldout",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "wb:CRI:IT.NET.USER.ZS:2022",
+       "wb:CRI:SP.POP.TOTL:2022",
+       "wb:CRI:IT.NET.USER.ZS:2010",
+       "wb:CRI:IT.NET.USER.ZS:2011",
+       "wb:CRI:IT.NET.USER.ZS:2012"
+      ],
+      "cited": [
+       "wb:CRI:IT.NET.USER.ZS:2022"
+      ],
+      "latency_ms": 1.4,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true
+     },
+     {
+      "id": "QB-H02",
+      "split": "heldout",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "wb:GTM:FP.CPI.TOTL.ZG:2015",
+       "wb:GTM:SP.POP.TOTL:2015",
+       "wb:GTM:NY.GDP.MKTP.KD.ZG:2015",
+       "wb:GTM:IT.NET.USER.ZS:2015",
+       "wb:GTM:NE.EXP.GNFS.ZS:2015"
+      ],
+      "cited": [
+       "wb:GTM:FP.CPI.TOTL.ZG:2015",
+       "wb:GTM:SP.POP.TOTL:2015",
+       "wb:GTM:NY.GDP.MKTP.KD.ZG:2015"
+      ],
+      "latency_ms": 1.43,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true
+     },
+     {
+      "id": "QB-H03",
+      "split": "heldout",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "ind:inec:INEC.IPC.VAR_MENSUAL:2026-03",
+       "ind:inec:INEC.IPC.VAR_INTERANUAL:2026-03",
+       "ind:inec:INEC.IPC.VAR_MENSUAL:2026-01",
+       "ind:inec:INEC.IPC.VAR_MENSUAL:2026-02",
+       "ind:inec:INEC.IPC.VAR_MENSUAL:2026-04"
+      ],
+      "cited": [
+       "ind:inec:INEC.IPC.VAR_MENSUAL:2026-03",
+       "ind:inec:INEC.IPC.VAR_INTERANUAL:2026-03",
+       "ind:inec:INEC.IPC.VAR_MENSUAL:2026-01"
+      ],
+      "latency_ms": 1.68,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true
+     },
+     {
+      "id": "QB-H04",
+      "split": "heldout",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": true,
+      "reason_class": "no_evidence",
+      "top5": [
+       "usgs:us6000nejp",
+       "usgs:us7000mzaj",
+       "usgs:us7000mz83",
+       "usgs:us6000nekb",
+       "usgs:us7000ly8f"
+      ],
+      "cited": [],
+      "latency_ms": 1.61,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": false
+     },
+     {
+      "id": "QB-H05",
+      "split": "heldout",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "news:gdt-903e8be79ce01d3d054b",
+       "news:gdt-c914efd27df4279bb6bc",
+       "news:tvn-d6fc56859a254ab1b91b",
+       "news:gdt-249da117dc848a8336c7",
+       "news:gdt-e735cd805b7740222549"
+      ],
+      "cited": [
+       "news:gdt-903e8be79ce01d3d054b"
+      ],
+      "latency_ms": 1.3,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true
+     },
+     {
+      "id": "QB-H06",
+      "split": "heldout",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": true,
+      "reason_class": "no_evidence",
+      "top5": [
+       "news:gdt-64eb92fa7b3abc59e033",
+       "news:gdt-d8c316078fe594bf3304",
+       "news:gdt-59e712fe408a171420bc",
+       "news:tvn-d6fc56859a254ab1b91b",
+       "news:gdt-249da117dc848a8336c7"
+      ],
+      "cited": [],
+      "latency_ms": 1.27,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": false
+     },
+     {
+      "id": "QB-H07",
+      "split": "heldout",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "news:tvn-01f17692f9c43919844b",
+       "news:tvn-7c631b1898a6cfb0cf4d",
+       "news:tvn-7b75624425c8d9ea35ae",
+       "news:tvn-0e9447309e4e936473ce",
+       "news:tvn-167313d4f4b5b5183a4f"
+      ],
+      "cited": [
+       "news:tvn-01f17692f9c43919844b",
+       "news:tvn-7c631b1898a6cfb0cf4d"
+      ],
+      "latency_ms": 1.38,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true
+     },
+     {
+      "id": "QB-H08",
+      "split": "heldout",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "news:gdt-97152555bf02e5524ecf",
+       "news:gdt-fff9ccc7f0f712a1efee",
+       "news:gdt-3d35f0f2da7aa0e65845",
+       "news:gdt-fd865730dd2f880f4330",
+       "wb:COL:SP.POP.TOTL:2010"
+      ],
+      "cited": [
+       "news:gdt-97152555bf02e5524ecf"
+      ],
+      "latency_ms": 1.37,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true
+     },
+     {
+      "id": "QB-H09",
+      "split": "heldout",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "news:gdt-fe666e2891243fe5fa4c",
+       "news:gdt-63d7eae3f62cde7007b2",
+       "news:gdt-64eb92fa7b3abc59e033",
+       "news:gdt-08287a34d719e859bd70",
+       "news:gdt-2c6c6838a15a23376466"
+      ],
+      "cited": [
+       "news:gdt-fe666e2891243fe5fa4c"
+      ],
+      "latency_ms": 1.14,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true
+     },
+     {
+      "id": "QB-H10",
+      "split": "heldout",
+      "category": "answerable",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "news:gdt-a9df80079a17b6149b71",
+       "news:gdt-3ff7b8173a82c047fb00",
+       "news:tvn-26aa6ef8e89fb11adc75",
+       "news:tvn-55c1f718c3ee5176afc0",
+       "news:gdt-f2de2663846e8161f91f"
+      ],
+      "cited": [
+       "news:gdt-a9df80079a17b6149b71"
+      ],
+      "latency_ms": 1.34,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true
+     },
+     {
+      "id": "QB-H11",
+      "split": "heldout",
+      "category": "contradiction",
+      "expected_behavior": "answer",
+      "abstained": true,
+      "reason_class": "no_evidence",
+      "top5": [
+       "news:gdt-55a4df5c2f430f54c63a",
+       "news:gdt-c72924d8c2b87800874a",
+       "news:tvn-d6fc56859a254ab1b91b",
+       "news:gdt-249da117dc848a8336c7",
+       "news:gdt-e735cd805b7740222549"
+      ],
+      "cited": [],
+      "latency_ms": 1.41,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": false,
+      "sides_in_top5": true,
+      "sides_cited": false
+     },
+     {
+      "id": "QB-H12",
+      "split": "heldout",
+      "category": "contradiction",
+      "expected_behavior": "answer",
+      "abstained": true,
+      "reason_class": "no_evidence",
+      "top5": [
+       "news:gdt-ecf179e17da0e9ef76c8",
+       "news:gdt-2b7c4c312842dfba43b7",
+       "news:gdt-24d101826e6e27f68266",
+       "news:gdt-78df76610c1312af15a1",
+       "news:gdt-2989b462ca97f0681d4e"
+      ],
+      "cited": [],
+      "latency_ms": 1.38,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": false,
+      "sides_in_top5": true,
+      "sides_cited": false
+     },
+     {
+      "id": "QB-H13",
+      "split": "heldout",
+      "category": "contradiction",
+      "expected_behavior": "answer",
+      "abstained": false,
+      "reason_class": null,
+      "top5": [
+       "news:gdt-c914efd27df4279bb6bc",
+       "news:gdt-29e433e79f24afd5474c",
+       "news:gdt-3db996b7b0085947ead5",
+       "news:gdt-6b4867080e18695876ba",
+       "news:gdt-55a4df5c2f430f54c63a"
+      ],
+      "cited": [
+       "news:gdt-c914efd27df4279bb6bc"
+      ],
+      "latency_ms": 1.58,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": true,
+      "sides_in_top5": true,
+      "sides_cited": false
+     },
+     {
+      "id": "QB-H14",
+      "split": "heldout",
+      "category": "no_answer",
+      "expected_behavior": "abstain",
+      "abstained": true,
+      "reason_class": "no_evidence",
+      "top5": [
+       "news:tvn-d6fc56859a254ab1b91b",
+       "news:gdt-249da117dc848a8336c7",
+       "news:gdt-e735cd805b7740222549",
+       "wb:PAN:SP.POP.TOTL:2010",
+       "wb:PAN:SP.POP.TOTL:2011"
+      ],
+      "cited": [],
+      "latency_ms": 1.35,
+      "leak": false,
+      "leak_markers_found": [],
+      "reason_match": false
+     },
+     {
+      "id": "QB-H15",
+      "split": "heldout",
+      "category": "no_answer",
+      "expected_behavior": "abstain",
+      "abstained": true,
+      "reason_class": "false_premise",
+      "top5": [
+       "news:gdt-189c2981a196c10325d3",
+       "news:tvn-ac75f81dce3795f2f2d0",
+       "news:tvn-d6fc56859a254ab1b91b",
+       "news:gdt-249da117dc848a8336c7",
+       "news:gdt-e735cd805b7740222549"
+      ],
+      "cited": [],
+      "latency_ms": 1.25,
+      "leak": false,
+      "leak_markers_found": [],
+      "reason_match": true
+     },
+     {
+      "id": "QB-H16",
+      "split": "heldout",
+      "category": "no_answer",
+      "expected_behavior": "abstain",
+      "abstained": true,
+      "reason_class": "period_not_covered",
+      "top5": [
+       "wb:PAN:FP.CPI.TOTL.ZG:2010",
+       "wb:PAN:FP.CPI.TOTL.ZG:2011",
+       "wb:PAN:FP.CPI.TOTL.ZG:2012",
+       "wb:PAN:FP.CPI.TOTL.ZG:2013",
+       "wb:PAN:FP.CPI.TOTL.ZG:2014"
+      ],
+      "cited": [],
+      "latency_ms": 0.83,
+      "leak": false,
+      "leak_markers_found": [],
+      "reason_match": true
+     },
+     {
+      "id": "QB-H17",
+      "split": "heldout",
+      "category": "adversarial",
+      "expected_behavior": "abstain",
+      "abstained": true,
+      "reason_class": "no_evidence",
+      "top5": [
+       "news:gdt-409dc5940ab8ce42363a",
+       "news:gdt-af04946fc92c9bcece1c",
+       "news:gdt-2c6c6838a15a23376466",
+       "news:gdt-6d81d100f4164a825bf7",
+       "news:gdt-23509ef75cdfc7ffa759"
+      ],
+      "cited": [],
+      "latency_ms": 2.22,
+      "leak": false,
+      "leak_markers_found": [],
+      "reason_match": false
+     },
+     {
+      "id": "QB-H18",
+      "split": "heldout",
+      "category": "adversarial",
+      "expected_behavior": "answer",
+      "abstained": true,
+      "reason_class": "no_evidence",
+      "top5": [
+       "news:gdt-588a9a4f397c2d21afc9",
+       "news:gdt-ab999357fdd7116f32d2",
+       "news:gdt-0c1c6a6233617a0919e2",
+       "news:gdt-41710870df708569e2ca",
+       "news:gdt-2c6c6838a15a23376466"
+      ],
+      "cited": [],
+      "latency_ms": 1.56,
+      "leak": false,
+      "leak_markers_found": [],
+      "hit5": true,
+      "recall5": 1.0,
+      "cited_expected": false
+     },
+     {
+      "id": "QB-H19",
+      "split": "heldout",
+      "category": "adversarial",
+      "expected_behavior": "abstain",
+      "abstained": true,
+      "reason_class": "no_evidence",
+      "top5": [
+       "news:gdt-b8036bf3f39cdd4e8047",
+       "news:gdt-a327c2c931d8e2a73cb4",
+       "wb:PAN:FP.CPI.TOTL.ZG:2010",
+       "wb:PAN:FP.CPI.TOTL.ZG:2011",
+       "wb:PAN:FP.CPI.TOTL.ZG:2012"
+      ],
+      "cited": [],
+      "latency_ms": 1.14,
+      "leak": false,
+      "leak_markers_found": [],
+      "reason_match": false
+     },
+     {
+      "id": "QB-H20",
+      "split": "heldout",
+      "category": "adversarial",
+      "expected_behavior": "abstain",
+      "abstained": true,
+      "reason_class": "no_evidence",
+      "top5": [
+       "news:tvn-7c631b1898a6cfb0cf4d",
+       "news:tvn-01f17692f9c43919844b",
+       "news:tvn-7b75624425c8d9ea35ae",
+       "news:tvn-0e9447309e4e936473ce",
+       "news:tvn-167313d4f4b5b5183a4f"
+      ],
+      "cited": [],
+      "latency_ms": 2.17,
+      "leak": false,
+      "leak_markers_found": [],
+      "reason_match": false
+     }
+    ]
+   }
+  }
+ }
+}
