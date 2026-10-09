@@ -6,7 +6,9 @@ from http.server import BaseHTTPRequestHandler
 
 from pydantic import ValidationError
 
-from python_api.actions import ask, review
+from python_api.actions import ask, check, review
+
+ACTIONS = {"ask": ask, "check": check, "review": review}
 
 MAX_BODY = 8192
 
@@ -15,7 +17,7 @@ def dispatch(action: str, payload: object) -> tuple[int, dict]:
     if not isinstance(payload, dict):
         return 400, {"error": "Se requiere un objeto JSON."}
     try:
-        return 200, (ask if action == "ask" else review)(payload)
+        return 200, ACTIONS[action](payload)
     except ValidationError as exc:
         fields = sorted({str(error["loc"][0]) for error in exc.errors() if error["loc"]})
         return 422, {"error": "Entrada inválida. Revisa los campos y sus límites.", "fields": fields}

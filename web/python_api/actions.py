@@ -1,4 +1,4 @@
-"""Native API actions: shared Q&A, stateless human-review receipt."""
+"""Native API actions: shared Q&A, claim checker, stateless human-review receipt."""
 from __future__ import annotations
 
 import hashlib
@@ -30,6 +30,10 @@ class AskInput(Input):
     # Optional, off by default: "online" is honoured only with server-side env + a matching access code.
     mode: Literal["cache", "online"] | None = None
     access_code: StrictStr | None = Field(default=None, max_length=200)
+
+
+class CheckInput(Input):
+    claim: StrictStr = Field(min_length=1, max_length=300)
 
 
 class ReviewInput(Input):
@@ -113,6 +117,15 @@ def ask(payload: dict) -> dict:
     if online_allowed(request):
         return _ask_online(request.question)
     return service.ask(request.question, mode="cache").model_dump(mode="json")
+
+
+def check(payload: dict) -> dict:
+    """Claim checker: retrieval + deterministic comparison over the public snapshot. No model is called."""
+    from scayl.gen.check import check as run_check
+
+    request = CheckInput.model_validate(payload)
+    enforce_cache()
+    return run_check(request.claim, service._retriever())
 
 
 def review(payload: dict) -> dict:
