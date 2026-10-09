@@ -31,7 +31,7 @@ Si algo falla durante la grabación: detén, corrige y **vuelve a grabar la esce
 | 7 | 4:15–4:30 | **Simulador de pesos** | Mover un peso y ver el nuevo orden | "Un editor puede probar otros pesos; el ranking oficial no cambia sin autor y justificación." Cierre: "SCAYL no decide qué se publica: acorta el camino de la señal a una historia investigable y trazable." |
 
 ## Evidencia y control de calidad
-Los casos del recorrido conservan las fechas y procedencias de sus fuentes. La detección de contradicciones se evalúa además con T05 sobre casos sintéticos identificados como tales. Registro técnico: [control de agrupación](EVT0114_FALSE_CONFLICT.md) y [pruebas y métricas](notion_mirror/06_TESTS_AND_METRICS.md).
+Los casos del recorrido conservan las fechas y procedencias de sus fuentes. La detección de contradicciones se evalúa además con T05 sobre casos sintéticos identificados como tales. Registro técnico: [control de agrupación](notion/SCAYL/Documentacion%20tecnica.md) y [pruebas y métricas](notion_mirror/06_TESTS_AND_METRICS.md).
 
 ## Cuidados
 - No muestres datos personales, pestañas ajenas ni la contraseña del Space.

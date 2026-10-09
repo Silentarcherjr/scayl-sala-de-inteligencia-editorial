@@ -107,7 +107,7 @@ Solo se publican el bundle público (sin descripciones RSS) y la caché revisada
 
 ## 8 bis. Control de calidad de agrupación
 
-EVT-0114 reúne dos sismos distintos; la comparación 4,7 frente a 7,4 no es válida. El registro y las pruebas están en [EVT0114_FALSE_CONFLICT.md](../../EVT0114_FALSE_CONFLICT.md). El recorrido utiliza EVT-0078 para mostrar procedencia, evidencia fechada y vacíos de investigación.
+EVT-0114 reúne dos sismos distintos; la comparación 4,7 frente a 7,4 no es válida. El contraste técnico está en [la revisión de entrega](../../audit/final-2026-10-08/CONTRASTE_OFICIAL.md). El recorrido utiliza EVT-0078 para mostrar procedencia, evidencia fechada y vacíos de investigación.
 
 ## 9. Decisiones técnicas clave
 
