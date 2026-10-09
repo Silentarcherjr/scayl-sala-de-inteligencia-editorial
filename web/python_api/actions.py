@@ -2,8 +2,12 @@
 from __future__ import annotations
 
 import hashlib
+import hmac
+import os
+import threading
 import uuid
 from datetime import UTC, datetime
+from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
 
@@ -23,6 +27,9 @@ class Input(BaseModel):
 
 class AskInput(Input):
     question: StrictStr = Field(min_length=1, max_length=300)
+    # Optional, off by default: "online" is honoured only with server-side env + a matching access code.
+    mode: Literal["cache", "online"] | None = None
+    access_code: StrictStr | None = Field(default=None, max_length=200)
 
 
 class ReviewInput(Input):
@@ -33,9 +40,58 @@ class ReviewInput(Input):
     justification: StrictStr = Field(min_length=1, max_length=500)
 
 
+class _OnlineQuota:
+    """Per-instance cap on external provider calls (extra guard only; the real spending cap is set in
+    Google AI Studio / Cloud billing). Counts actual provider calls, not abstentions."""
+
+    def __init__(self):
+        self.calls = 0
+        self.lock = threading.Lock()
+
+    def take(self) -> bool:
+        try:
+            limit = int(os.environ.get("SCAYL_LIVE_MAX_CALLS", "50"))
+        except ValueError:
+            limit = 50
+        with self.lock:
+            if self.calls >= limit:
+                return False
+            self.calls += 1
+            return True
+
+
+ONLINE_QUOTA = _OnlineQuota()
+
+
+def online_allowed(request: AskInput) -> bool:
+    """Online only if the key AND the access code are configured server-side AND the request asks for it with
+    the matching code (constant-time compare). Otherwise the request is served exactly as before."""
+    key = os.environ.get("GEMINI_API_KEY", "").strip()
+    code = os.environ.get("SCAYL_LIVE_ACCESS_CODE", "").strip()
+    if request.mode != "online" or not key or not code or not request.access_code:
+        return False
+    return hmac.compare_digest(request.access_code.encode("utf-8"), code.encode("utf-8"))
+
+
+def _ask_online(question: str) -> dict:
+    from scayl.gen import qa
+    from scayl.gen.llm import LLM, GeminiBackend, LLMUnavailable
+
+    class QuotaBackend(GeminiBackend):
+        def chat_json(self, system, user, schema):
+            if not ONLINE_QUOTA.take():
+                raise LLMUnavailable("Cupo de llamadas en vivo agotado en esta instancia")
+            return super().chat_json(system, user, schema)
+
+    llm = LLM(mode="online", backend=QuotaBackend())
+    return qa.answer(question, service.load_bundle(), llm, retriever=service._retriever()).model_dump(mode="json")
+
+
 def ask(payload: dict) -> dict:
     request = AskInput.model_validate(payload)
     enforce_cache()
+    if online_allowed(request):
+        return _ask_online(request.question)
     return service.ask(request.question, mode="cache").model_dump(mode="json")
 
 

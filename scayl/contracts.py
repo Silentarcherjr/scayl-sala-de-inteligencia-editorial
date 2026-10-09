@@ -333,8 +333,9 @@ class Event(_Model):
 
 
 class GenerationMeta(_Model):
-    mode: Literal["live", "cache", "template"]
-    model: str | None  # e.g. "ollama:qwen3:8b-q4_K_M"; None for template
+    # "online" (additive, optional): external provider (Gemini), see docs/ONLINE_LLM.md
+    mode: Literal["live", "cache", "template", "online"]
+    model: str | None  # e.g. "ollama:qwen3:8b-q4_K_M" or "gemini:<model>"; None for template
     prompt_version: str | None
     params: dict[str, float | int | str] = Field(default_factory=dict)
     latency_ms: int | None
