@@ -186,28 +186,49 @@ def api(monkeypatch):
     http = importlib.import_module("python_api.http")
     actions = importlib.import_module("python_api.actions")
     monkeypatch.setattr(actions, "ONLINE_QUOTA", actions._OnlineQuota())
+    monkeypatch.setattr(actions, "_failed", {"n": 0})
     fake = FakeHTTP(gemini_reply(good()))
     monkeypatch.setattr(llm_mod, "_post_json", fake)
     yield http, fake
     service._retriever.cache_clear()
 
 
-@pytest.mark.parametrize(("env", "extra"), [
-    ({}, {"mode": "online", "access_code": "abc"}),                                  # nothing configured
-    ({"GEMINI_API_KEY": KEY}, {"mode": "online", "access_code": "abc"}),            # no access code set
-    ({"GEMINI_API_KEY": KEY, "SCAYL_LIVE_ACCESS_CODE": "abc"}, {"mode": "online"}),  # code missing
-    ({"GEMINI_API_KEY": KEY, "SCAYL_LIVE_ACCESS_CODE": "abc"}, {"mode": "online", "access_code": "abd"}),
-    ({"GEMINI_API_KEY": KEY, "SCAYL_LIVE_ACCESS_CODE": "abc"}, {"access_code": "abc"}),  # mode not requested
+@pytest.mark.parametrize(("env", "extra", "message"), [
+    ({}, {"mode": "online", "access_code": "abc"}, "no está configurada"),                      # nothing configured
+    ({"GEMINI_API_KEY": KEY}, {"mode": "online", "access_code": "abc"}, "no está configurada"),  # no code set
+    ({"GEMINI_API_KEY": KEY, "SCAYL_LIVE_ACCESS_CODE": "abc"}, {"mode": "online"}, "no autorizado"),  # code missing
+    ({"GEMINI_API_KEY": KEY, "SCAYL_LIVE_ACCESS_CODE": "abc"}, {"mode": "online", "access_code": "abd"},
+     "no autorizado"),
 ])
-def test_api_online_requires_key_code_and_request(api, monkeypatch, env, extra):
+def test_api_online_not_allowed_is_an_explicit_403(api, monkeypatch, env, extra, message):
     http, fake = api
     for name in ("GEMINI_API_KEY", "SCAYL_LIVE_ACCESS_CODE"):
         monkeypatch.delenv(name, raising=False)
     for name, value in env.items():
         monkeypatch.setenv(name, value)
     status, body = http.dispatch("ask", {"question": Q, **extra})
+    assert status == 403 and message in body["error"] and fake.calls == []
+    assert "generated_by" not in body  # never a cached/extractive answer presented as online
+
+
+def test_api_without_online_mode_is_unchanged(api, monkeypatch):
+    http, fake = api
+    monkeypatch.setenv("GEMINI_API_KEY", KEY)
+    monkeypatch.setenv("SCAYL_LIVE_ACCESS_CODE", "abc")
+    status, body = http.dispatch("ask", {"question": Q, "access_code": "abc"})
     assert status == 200 and body["generated_by"]["mode"] in {"cache", "template"} and fake.calls == []
-    assert not any(i["code"] == "ONLINE_FALLBACK" for i in body["validation"]["issues"])
+
+
+def test_repeated_wrong_codes_are_throttled(api, monkeypatch):
+    http, fake = api
+    actions = importlib.import_module("python_api.actions")
+    monkeypatch.setattr(actions, "_failed", {"n": 0})
+    monkeypatch.setenv("GEMINI_API_KEY", KEY)
+    monkeypatch.setenv("SCAYL_LIVE_ACCESS_CODE", "abc")
+    for _ in range(actions.MAX_FAILED_CODES):
+        assert http.dispatch("ask", {"question": Q, "mode": "online", "access_code": "x"})[0] == 403
+    status, body = http.dispatch("ask", {"question": Q, "mode": "online", "access_code": "abc"})
+    assert status == 403 and "Demasiados" in body["error"] and fake.calls == []
 
 
 def test_api_online_used_with_valid_code_and_quota(api, monkeypatch, caplog):

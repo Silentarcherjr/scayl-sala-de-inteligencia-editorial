@@ -63,14 +63,28 @@ class _OnlineQuota:
 ONLINE_QUOTA = _OnlineQuota()
 
 
+MAX_FAILED_CODES = 20  # per instance: slows down guessing; the access code is not a strong secret by itself
+_failed = {"n": 0}
+NOT_CONFIGURED = "La IA generativa en vivo no está configurada en este despliegue. Usa «Consulta con evidencia»."
+NOT_AUTHORIZED = "Código de acceso no autorizado. No se llamó al proveedor externo."
+
+
 def online_allowed(request: AskInput) -> bool:
     """Online only if the key AND the access code are configured server-side AND the request asks for it with
-    the matching code (constant-time compare). Otherwise the request is served exactly as before."""
+    the matching code (constant-time compare). A request that asks for online and is not allowed gets an explicit
+    error (PermissionError -> 403), never a cached or extractive answer presented as if Gemini had answered."""
+    if request.mode != "online":
+        return False
     key = os.environ.get("GEMINI_API_KEY", "").strip()
     code = os.environ.get("SCAYL_LIVE_ACCESS_CODE", "").strip()
-    if request.mode != "online" or not key or not code or not request.access_code:
-        return False
-    return hmac.compare_digest(request.access_code.encode("utf-8"), code.encode("utf-8"))
+    if not key or not code:
+        raise PermissionError(NOT_CONFIGURED)
+    if _failed["n"] >= MAX_FAILED_CODES:
+        raise PermissionError("Demasiados intentos con código incorrecto en esta instancia. Inténtalo más tarde.")
+    if not request.access_code or not hmac.compare_digest(request.access_code.encode("utf-8"), code.encode("utf-8")):
+        _failed["n"] += 1
+        raise PermissionError(NOT_AUTHORIZED)
+    return True
 
 
 def _ask_online(question: str) -> dict:
