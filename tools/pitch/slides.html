@@ -1,0 +1,139 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,-apple-system,Helvetica,Arial,sans-serif;background:#000}
+.s{width:1920px;height:1080px;position:relative;overflow:hidden;background:#fff;color:#0B1220;padding:110px 140px}
+.dark{background:#0B1220;color:#fff}
+.kick{display:flex;align-items:center;gap:18px;font-size:26px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#0077C8;margin-bottom:28px}
+.dark .kick{color:#96B7EA}
+.kick:before{content:"";width:64px;height:9px;border-radius:5px;background:#FEC526}
+h1{font-size:92px;font-weight:900;letter-spacing:-.03em;line-height:1.02}
+h2{font-size:72px;font-weight:900;letter-spacing:-.025em;line-height:1.05;margin-bottom:46px}
+p,li{font-size:36px;line-height:1.45;color:#2A2A2A}
+.dark p,.dark li{color:#D6DEEA}
+ul{list-style:none} li{padding-left:44px;position:relative;margin:18px 0}
+li:before{content:"";position:absolute;left:0;top:20px;width:18px;height:18px;border-radius:4px;background:#005588}
+.dark li:before{background:#FEC526}
+.acc{color:#FEC526}.blue{color:#005588}
+.top{position:absolute;left:0;top:0;width:100%;height:14px;background:#005588}
+.foot{position:absolute;left:140px;bottom:56px;font-size:22px;letter-spacing:.14em;text-transform:uppercase;color:#8A97A8;font-weight:700}
+.num{position:absolute;right:140px;bottom:52px;font-size:24px;font-weight:800;color:#8A97A8}
+.grid{display:grid;gap:34px}
+.card{border:2px solid #DCE1E7;border-top:10px solid #005588;border-radius:18px;padding:38px 40px;background:#fff;box-shadow:0 8px 28px rgba(11,18,32,.08)}
+.dark .card{background:#16233A;border-color:#22314B;border-top-color:#FEC526}
+.card b{display:block;font-size:84px;font-weight:900;color:#005588;letter-spacing:-.02em;line-height:1}
+.dark .card b{color:#FEC526}
+.card span{display:block;font-size:28px;line-height:1.35;margin-top:16px;color:#4A5563}
+.dark .card span{color:#C4CFDD}
+.shot{position:absolute;border-radius:16px;box-shadow:0 26px 70px rgba(11,18,32,.28);border:2px solid #DCE1E7;overflow:hidden}
+.shot img{display:block;width:100%}
+.flow{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin:20px 0 50px}
+.flow span{font-size:32px;font-weight:800;padding:16px 26px;border-radius:14px;background:#EAF1F7;color:#005588}
+.flow i{font-style:normal;font-size:34px;color:#8A97A8}
+.flow .last{background:#005588;color:#fff}
+table{border-collapse:collapse;width:100%;font-size:34px}
+td,th{padding:22px 26px;border-bottom:2px solid #DCE1E7;text-align:left}
+th{font-size:24px;letter-spacing:.1em;text-transform:uppercase;color:#5A6673}
+.win{background:#EAF7EE;font-weight:800;color:#0F6B35}
+.tag{display:inline-block;font-size:24px;font-weight:800;padding:8px 18px;border-radius:999px;background:#FEC526;color:#0B1220;letter-spacing:.06em}
+</style></head><body>
+
+<section class="s dark" id="s1">
+ <div class="top" style="background:#FEC526"></div>
+ <div class="kick">hackIAthon Panamá · Reto TVN Media</div>
+ <h1 style="font-size:190px;letter-spacing:.02em;margin-top:120px">SCAYL</h1>
+ <p style="font-size:52px;margin-top:26px;color:#fff;font-weight:700">Sala de Inteligencia Editorial</p>
+ <p style="font-size:44px;margin-top:18px">De la <span class="acc">señal</span> a la <span class="acc">decisión</span>.</p>
+ <div class="foot">Equipo SCAYL · Modalidad editorial</div>
+</section>
+
+<section class="s" id="s2"><div class="top"></div>
+ <div class="kick">01 · El problema</div>
+ <h2>Cada día, cientos de señales.<br><span class="blue">Pocas certezas.</span></h2>
+ <div class="grid" style="grid-template-columns:repeat(3,1fr);margin-top:30px">
+  <div class="card"><b>×5</b><span>Cinco medios replicando una agencia <strong>no son cinco confirmaciones</strong>.</span></div>
+  <div class="card"><b>2024</b><span>Un dato histórico <strong>puede parecer actual</strong> si pierde su fecha.</span></div>
+  <div class="card"><b>⏱</b><span>Reunir evidencia trazable para una pieza <strong>toma tiempo</strong> que la redacción no tiene.</span></div>
+ </div>
+ <div class="foot">El costo: tiempo y errores de contexto que dañan la credibilidad</div><div class="num">02</div>
+</section>
+
+<section class="s" id="s3"><div class="top"></div>
+ <div class="kick">02 · La solución</div>
+ <h2>De una señal a una historia investigable</h2>
+ <div class="flow"><span>Señal</span><i>→</i><span>Evento</span><i>→</i><span>Prioridad</span><i>→</i><span>Evidencia</span><i>→</i><span>Vacíos</span><i>→</i><span>Borrador citado</span><i>→</i><span class="last">Decisión humana</span></div>
+ <div class="grid" style="grid-template-columns:1fr 1fr">
+  <div class="card"><b style="font-size:54px">La prioridad<br>no es verdad</b><span>P mide atención. El estado de evidencia se calcula aparte.</span></div>
+  <div class="card"><b style="font-size:54px">La IA<br>no publica</b><span>"Aprobado como borrador" no significa publicado: decide una persona.</span></div>
+ </div>
+ <div class="foot">Datos públicos: GDELT · RSS TVN · ACP · INEC · Banco Mundial · USGS</div><div class="num">03</div>
+</section>
+
+<section class="s" id="s4"><div class="top"></div>
+ <div class="kick">03 · Sala de Situación</div>
+ <h2 style="width:640px">187 señales<br>→ <span class="blue">165 eventos</span></h2>
+ <ul style="width:640px"><li>Agenda de la mañana: top 5 con motivos y acción sugerida.</li><li>Prioridad y evidencia, siempre separadas.</li><li>Fuente sugerida para verificar, no para confirmar.</li></ul>
+ <div class="shot" style="left:860px;top:150px;width:960px"><img src="01-sala.png"></div>
+ <div class="num">04</div>
+</section>
+
+<section class="s" id="s5"><div class="top"></div>
+ <div class="kick">04 · Ficha de caso</div>
+ <h2 style="width:660px">Cada punto,<br>con su regla</h2>
+ <ul style="width:660px"><li><strong>P = 89.9</strong>: relevancia, impacto, urgencia, novedad y evidencia, desglosados.</li><li>Datos de la ACP <strong>con fecha</strong>; lo histórico nunca pasa por actual.</li><li>Conflicto visible: titular <strong>4.7</strong> frente a USGS <strong>4.5</strong>. No elige ni promedia.</li></ul>
+ <div class="shot" style="left:880px;top:150px;width:940px"><img src="jury-ficha-desktop.png"></div>
+ <div class="num">05</div>
+</section>
+
+<section class="s" id="s6"><div class="top"></div>
+ <div class="kick">05 · Consultas y abstención</div>
+ <h2 style="width:660px">Responde con evidencia.<br><span class="blue">O no responde.</span></h2>
+ <ul style="width:660px"><li>"¿Nivel actual del lago Gatún?" → medición oficial de la ACP, con fecha y cita.</li><li>"¿Moneda oficial de Panamá?" → <strong>se abstiene</strong>: no está en la evidencia y no responde de memoria.</li></ul>
+ <div class="shot" style="left:880px;top:150px;width:940px"><img src="jury-consultas-desktop.png"></div>
+ <div class="num">06</div>
+</section>
+
+<section class="s dark" id="s7"><div class="top" style="background:#FEC526"></div>
+ <div class="kick">06 · IA medida, no por moda</div>
+ <h2>Usamos IA donde ganó.<br><span class="acc">Reglas donde perdió.</span></h2>
+ <div class="grid" style="grid-template-columns:repeat(4,1fr)">
+  <div class="card"><b>0,99</b><span>F1 agrupando titulares con <strong>E5</strong> (TF-IDF: 0,44) · pares de calibración: optimista</span></div>
+  <div class="card"><b>0,76</b><span>Macro-F1 de <strong>reglas</strong> en temas (E5: 0,25)</span></div>
+  <div class="card"><b>45/45</b><span>Frases del borrador de <strong>Qwen3 8B local</strong> con cita (cobertura; la validez la revisa una persona)</span></div>
+  <div class="card"><b>$0</b><span>De API: todo corre local, mediana de <strong>13 s</strong> por borrador · sin contar hardware ni electricidad</span></div>
+ </div>
+ <div class="foot">Lo que no tiene respaldo, el código lo elimina antes de llegar al editor</div><div class="num">07</div>
+</section>
+
+<section class="s" id="s8"><div class="top"></div>
+ <div class="kick">07 · Confianza</div>
+ <h2>Medido, no prometido</h2>
+ <div class="grid" style="grid-template-columns:repeat(4,1fr)">
+  <div class="card"><b>10/10</b><span>Pruebas automatizadas del reto T01–T10, aprobadas</span></div>
+  <div class="card"><b>6/6</b><span>Trampas con abstención correcta en un set escrito por un integrante sin ver los casos</span></div>
+  <div class="card"><b>83%</b><span>Validez de sustento (25/30, modo plantilla): <strong>bajo la meta del 90 %</strong>, y lo decimos</span></div>
+  <div class="card"><b style="font-size:58px;line-height:1.45">No medido</b><span>Ahorro de tiempo: no lo afirmamos</span></div>
+ </div>
+ <p style="margin-top:48px">Nuestro red-team nos encontró fallos (6/16). Los corregimos y quedaron registrados, con sus pruebas.</p>
+ <div class="num">08</div>
+</section>
+
+<section class="s" id="s9"><div class="top"></div>
+ <div class="kick">08 · El mismo núcleo, otro usuario</div>
+ <h2 style="width:660px">Boletín de entorno<br><span class="blue">para la banca</span></h2>
+ <ul style="width:660px"><li>CU-05: señales del entorno logístico para un analista sectorial.</li><li>Observaciones citadas, hipótesis separadas y tres preguntas.</li><li>Sin evaluar clientes ni recomendar operaciones.</li></ul>
+ <div class="shot" style="left:880px;top:150px;width:940px"><img src="bank-top.png"></div>
+ <div class="num">09</div>
+</section>
+
+<section class="s dark" id="s10"><div class="top" style="background:#FEC526"></div>
+ <div class="kick">09 · Límites y próximos pasos</div>
+ <div class="grid" style="grid-template-columns:1fr 1fr;gap:80px;margin-top:10px">
+  <div><p style="font-size:30px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#96B7EA;margin-bottom:10px">Límites honestos</p><ul><li>Hoy solo hay titulares: ningún caso real llega a "suficiente", y eso es lo correcto.</li><li>La independencia entre medios casi nunca se demuestra con metadatos.</li></ul></div>
+  <div><p style="font-size:30px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#96B7EA;margin-bottom:10px">Próximos pasos</p><ul><li>Cuerpos de artículos con licencia de TVN.</li><li>Más fuentes oficiales (SINAPROC, MEF).</li><li>Snapshot diario y operación en la redacción.</li></ul></div>
+ </div>
+ <h2 style="margin-top:70px;font-size:64px">SCAYL no decide qué se publica.<br>Acorta el camino de la <span class="acc">señal</span> a la <span class="acc">decisión</span>.</h2>
+ <div class="foot">scayl-editorial.vercel.app</div><div class="num">10</div>
+</section>
+</body></html>
