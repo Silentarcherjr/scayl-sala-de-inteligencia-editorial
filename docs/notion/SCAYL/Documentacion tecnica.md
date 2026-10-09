@@ -68,13 +68,24 @@ Parámetros del LLM: temperatura 0, semilla 42, salida JSON con esquema. Prompts
 | Métrica | Resultado | Alcance |
 |---|---|---|
 | Pruebas del reto T01–T10 | **10/10 aprobadas** (pruebas automatizadas) | `eval/results/latest.json`; T10 se verifica con la red bloqueada en pytest, no equivale a un ensayo real sin wifi |
-| Pruebas automatizadas | **287** (pytest) + lint, en CI | GitHub Actions |
+| Pruebas automatizadas | **389** (pytest) + lint, en CI | GitHub Actions |
 | Cobertura de citas del borrador | **45/45** | Top 15 con Qwen3 8B; mide presencia de cita, no validez del sustento |
 | Validez de sustento (revisión humana) | **25/30 = 83 %** | Muestra de paquetes en modo plantilla (no de borradores de Qwen). Por debajo de la meta orientativa del 90 %; se explica en DL-031 |
 | Abstención en set reservado escrito por un humano | **6/6** trampas | Escrito por un integrante del equipo sin ver los casos existentes; también se abstuvo en 4/4 controles de cultura general (6/10 frente a sus expectativas, DL-030) |
 | Abstención en red-team de desarrollo | 16/16 (antes 6/16) | Set sintético; corregido sobre ese mismo set (DL-027) |
 | Precision@5 frente al top 5 del editor | 1/5 | Exploratoria (DL-024) |
 | Ahorro de tiempo | **No medido** | No lo afirmamos |
+
+
+#### Evaluaciones de cierre (2026-10-08; automáticas, sin revisión humana nueva)
+| Medición | Antes → después | Alcance |
+|---|---|---|
+| Qwen3 8B en vivo, top 30 (Apple M1 Max) | 30/30 paquetes en vivo, 0 fallback; mediana 19,5 s, p95 37,2 s; 54 976 tokens | Con otras cargas en paralelo; agrupación TF-IDF (183 eventos), no el bundle publicado. `eval/results/qwen-m1-live.json` |
+| Validadores nuevos sobre esas salidas reales de Qwen | 115 → 111 oraciones conservadas | 2 descartes correctos (cargo inventado a una persona), 2 estrictos por cita. **Sustento de Qwen: no medido** hasta revisar `data/labels/support_review_qwen_live.csv` (55 afirmaciones) |
+| Consultas, benchmark v2 reservado (20 preguntas) | Respondidas con cita 9/14 → **11/14**; abstención indebida 5/14 → 3/14; abstención correcta 6/6 → 6/6; fugas por inyección 0/4 → 0/4; ambos lados de una contradicción en top 5 3/3 → 2/3 | Preguntas escritas por IA antes de ejecutar; 40 de desarrollo usadas para ajustar. `eval/results/b-qa-benchmark-*.json` |
+| Contradicciones, set sintético difícil | Precisión 5/15 → 8/8 y recall 5/8 → 8/8 (desarrollo, optimista); 8 casos posteriores 1/3 → 2/2 | Escrito por IA; no hay contradicciones etiquetadas en el corpus real. `eval/results/c-contradictions.json` |
+| Fallos de la revisión humana de sustento (5/30) | Causa corregida en la plantilla: calificadores de fecha y confirmación, idioma original, escritura no latina retenida, aviso judicial | No re-mide el sustento: la nueva redacción no tiene revisión humana. `eval/results/a-validators-before-after.json` |
+
 
 ## 7. Despliegue
 

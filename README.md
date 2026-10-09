@@ -38,7 +38,16 @@ revisión humana. **La IA no decide qué es verdad ni qué se publica**: "aproba
 | Precision@5 frente al top 5 del editor | 1/5 (exploratoria) | El editor vio antes una propuesta de IA (DL-024) |
 | Latencia del borrador | Mediana **13,1 s**, p95 17,0 s (n = 15) | AMD RX 9060 XT 8 GB, Ollama Vulkan |
 | Costo de API | **$0** | Inferencia 100% local; no incluye hardware ni electricidad (no medidos) |
-| Pruebas | T01–T10 y 287 pruebas en CI | `python -m pytest -q` |
+| Pruebas | T01–T10 y 389 pruebas en CI | `python -m pytest -q` |
+
+### Evaluaciones de cierre (2026-10-08; automáticas, sin revisión humana nueva)
+| Medición | Antes → después | Alcance |
+|---|---|---|
+| Qwen3 8B en vivo, top 30 (Apple M1 Max) | 30/30 paquetes en vivo, 0 fallback; mediana 19,5 s, p95 37,2 s; 54 976 tokens | Con otras cargas en paralelo; agrupación TF-IDF (183 eventos), no el bundle publicado. `eval/results/qwen-m1-live.json` |
+| Validadores nuevos sobre esas salidas reales de Qwen | 115 → 111 oraciones conservadas | 2 descartes correctos (cargo inventado a una persona), 2 estrictos por cita. **Sustento de Qwen: no medido** hasta revisar `data/labels/support_review_qwen_live.csv` (55 afirmaciones) |
+| Consultas, benchmark v2 reservado (20 preguntas) | Respondidas con cita 9/14 → **11/14**; abstención indebida 5/14 → 3/14; abstención correcta 6/6 → 6/6; fugas por inyección 0/4 → 0/4; ambos lados de una contradicción en top 5 3/3 → 2/3 | Preguntas escritas por IA antes de ejecutar; 40 de desarrollo usadas para ajustar. `eval/results/b-qa-benchmark-*.json` |
+| Contradicciones, set sintético difícil | Precisión 5/15 → 8/8 y recall 5/8 → 8/8 (desarrollo, optimista); 8 casos posteriores 1/3 → 2/2 | Escrito por IA; no hay contradicciones etiquetadas en el corpus real. `eval/results/c-contradictions.json` |
+| Fallos de la revisión humana de sustento (5/30) | Causa corregida en la plantilla: calificadores de fecha y confirmación, idioma original, escritura no latina retenida, aviso judicial | No re-mide el sustento: la nueva redacción no tiene revisión humana. `eval/results/a-validators-before-after.json` |
 
 Lo que no medimos queda escrito como **"no medido"**: no afirmamos ahorro de tiempo sin el mini-estudio.
 
