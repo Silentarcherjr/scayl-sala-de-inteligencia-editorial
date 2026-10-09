@@ -24,10 +24,11 @@
 
 | C5 | Lead | P1 | HECHO | `docs/C5_PRECISION_AT5_ANALYSIS.md`: los 10 eventos (editor y sistema) son del tema Canal; la historia de El Niño está partida en 4 eventos; pesos NO reajustados | — | P@5 sigue 1/5 (exploratoria) | ver log | GO (solo documentación) |
 | DOC | Lead | P0 | HECHO | README + Notion técnica con «Evaluaciones de cierre»; DL-038; Notion: alcances de métricas corregidos y enlace Streamlit retirado | — | — | 7de701e, 639fa56 | GO |
-| MERGE | Lead | P0 | ESPERANDO CI | PR #78 aprobado por Silentarcherjr para merge + verificación de Vercel; `main` exige checks verdes | — | — | — | GO |
+| MERGE | Lead | P0 | HECHO | PR #78 mergeado (f5e3f7c); Vercel producción verificada: rutas 200, 404 en español, `/api/ask` responde con cita y rechaza inyección | 5/5 checks | — | f5e3f7c | GO |
+| QA-TB | Lead | P1 | PR #79 ABIERTO | Ante empate, dato más reciente de la serie (pregunta sin fecha sobre Gatún mostraba 2025-09 primero) + slides del pitch versionadas (06/07 con alcance; ya subidas a Notion) | 390 pytest | dev 28/29→29/29; reservadas sin cambios | c7795d7, 414e5b9 | GO si Silentarcherjr aprueba merge |
 
 ## Siguiente paso si este agente se corta
-1. Cuando los checks del PR #78 estén en verde: `gh pr merge 78 --merge`.
+1. PR #78 ya mergeado y verificado. PR #79: mergear solo con aprobación de Silentarcherjr y verificar Vercel igual que #78.
 2. Verificar Vercel en https://scayl-editorial.vercel.app/ (Inicio, `/caso/EVT-0101/`, Consultas, Trust Lab, la API `/api/ask` con POST). Si algo falla: `gh pr revert`/revert del merge y avisar.
 3. Hacer público el repo **solo cuando Silentarcherjr lo confirme** («lo hacemos público cuando terminemos»). Historial auditado: sin secretos.
 4. Entregar a Silentarcherjr el checklist de «Requiere acción humana».
