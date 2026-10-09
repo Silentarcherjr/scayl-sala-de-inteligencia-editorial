@@ -24,3 +24,6 @@ Ningún bloqueante comprobado restante. Gemini facturación desactivada NO VERIF
 
 ## Contexto externo
 Notion4propias publicadas con autorización específica; URLs notion.site en correo. curl403 automatizado pero navegador público renderiza sin login. Rechazos anteriores resueltos por permisos explícitos, sin bypass. .claude/ y SCAYL_Notion_import.zip preexistentes preservados.
+
+## Actualización posterior solicitada por humano
+PDF regenerado con todo el cierre PR86,442pruebas,9rutas,7regresiones yNotion público. Facturación no verificadasin suponergratis. Fuente HTML actualizada,3páginas inspeccionadas. SHA256 c944302ff887e386aa842dcdcdbb70cbb917ef65d476a198f8b9d5f94e4b5fc0. Adjuntar esta versión del mismo archivo estable. Notas y PDF se empujan en rama; no segundo merge/despliegue.
