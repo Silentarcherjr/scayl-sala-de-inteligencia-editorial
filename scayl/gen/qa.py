@@ -235,13 +235,17 @@ class Retriever:
         self.units = units
         self.docs = [set(tokens(u.text)) for u in units]
         self.bm25 = BM25Okapi([tokens(u.text) or ["_"] for u in units]) if units else None
+        # Ties (same series, different dates) prefer the most recent period: an undated question must not
+        # surface a series' oldest rows first. Dates stay visible, so history is never presented as current.
+        periods = sorted({u.ref.period or "" for u in units})
+        self.recency = [periods.index(u.ref.period or "") for u in units]
 
     def search(self, question: str, k: int = TOP_K) -> list[tuple[Unit, float]]:
         q = tokens(question)
         if not q or not self.bm25:
             return []
         scores = self.bm25.get_scores(q)
-        pool = sorted(range(len(self.units)), key=lambda i: (-scores[i], self.units[i].evidence_id))
+        pool = sorted(range(len(self.units)), key=lambda i: (-scores[i], -self.recency[i], self.units[i].evidence_id))
         pool = [i for i in pool[:max(k, RERANK_POOL)] if scores[i] > 0]
         # Coverage counts topic words (and years), not the figures a question asserts: a false figure must reach
         # the false-premise guard and be reported as such, not hide behind "low coverage".
@@ -249,7 +253,7 @@ class Retriever:
         cov = {i: coverage(terms, self.docs[i]) for i in pool}
         # Rerank the BM25 pool by coverage (units that contain the whole topic first), BM25 as tie-break: a stray
         # figure or frequent word must not push an off-topic unit above the one that answers.
-        order = sorted(pool, key=lambda i: (-round(cov[i], 6), -scores[i], self.units[i].evidence_id))[:k]
+        order = sorted(pool, key=lambda i: (-round(cov[i], 6), -scores[i], -self.recency[i], self.units[i].evidence_id))[:k]
         return [(self.units[i], cov[i]) for i in order]
 
 
