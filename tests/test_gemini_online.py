@@ -63,10 +63,10 @@ def test_online_success_with_valid_citations_and_no_cache_write(online, tmp_path
     llm, http = online(gemini_reply(good()))
     a = answer(Q, bundle(), llm)
     assert not a.abstained and [c.evidence_id for c in a.citations] == [EID]
-    assert a.generated_by.mode == "online" and a.generated_by.model == "gemini:gemini-2.5-flash-lite"
+    assert a.generated_by.mode == "online" and a.generated_by.model == "gemini:gemini-3.5-flash-lite"
     assert a.generated_by.tokens_in == 321 and a.generated_by.params["cost_usd"] == "no medido"
     call = http.calls[0]
-    assert call["url"].endswith("/models/gemini-2.5-flash-lite:generateContent") and KEY not in call["url"]
+    assert call["url"].endswith("/models/gemini-3.5-flash-lite:generateContent") and KEY not in call["url"]
     assert call["headers"] == {"x-goog-api-key": KEY} and call["timeout"] <= 12
     cfg = call["body"]["generationConfig"]
     assert cfg["temperature"] == 0 and cfg["maxOutputTokens"] <= 600

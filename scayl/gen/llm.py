@@ -101,7 +101,7 @@ class OllamaBackend:
 
 
 GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent"
-GEMINI_DEFAULT_MODEL = "gemini-2.5-flash-lite"
+GEMINI_DEFAULT_MODEL = "gemini-3.5-flash-lite"  # 2.5-flash-lite: 404 for new projects (2026-10-08)
 GEMINI_TIMEOUT_S = 12.0
 GEMINI_MAX_OUTPUT_TOKENS = 600
 GEMINI_PARAMS: dict[str, float | int | str] = {"temperature": 0, "maxOutputTokens": GEMINI_MAX_OUTPUT_TOKENS,
