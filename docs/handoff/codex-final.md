@@ -20,10 +20,12 @@ Humano copia docs/ENTREGA_CORREO.md y adjunta docs/ai_tools/SCAYL_Herramientas_I
 Ver PR86 y commits notas finales. Corrección check.py/tests propios, docs y texto C04 recorrido; sin contratos/deps/secretos/config Gemini/corpus.
 
 ## Bloqueos y dudas
-Ningún bloqueante comprobado restante. Gemini facturación desactivada NO VERIFICADA: no nuevas llamadas. PDF afirma configuración gratuita, no corroborada en esta auditoría.
+Ningún bloqueante comprobado restante. Gemini facturación desactivada NO VERIFICADA: no nuevas llamadas. PDF actualizado: proveedor externo con cuotas y costo sujetos al proyecto.
 
 ## Contexto externo
 Notion4propias publicadas con autorización específica; URLs notion.site en correo. curl403 automatizado pero navegador público renderiza sin login. Rechazos anteriores resueltos por permisos explícitos, sin bypass. .claude/ y SCAYL_Notion_import.zip preexistentes preservados.
 
 ## Actualización posterior solicitada por humano
-PDF regenerado con todo el cierre PR86,442pruebas,9rutas,7regresiones yNotion público. Facturación no verificadasin suponergratis. Fuente HTML actualizada,3páginas inspeccionadas. SHA256 c944302ff887e386aa842dcdcdbb70cbb917ef65d476a198f8b9d5f94e4b5fc0. Adjuntar esta versión del mismo archivo estable. Notas y PDF se empujan en rama; no segundo merge/despliegue.
+PDF regenerado con todo el cierre PR86,442pruebas,9rutas,7regresiones yNotion público. Facturación no verificadasin suponergratis. Fuente HTML actualizada,3páginas inspeccionadas. SHA256 9e3800807dbe337f9fafda3e3d34bc55b66bb438c67cc26836925c9554a343ec. Adjuntar esta versión del mismo archivo estable. Notas y PDF se empujan en rama; no segundo merge/despliegue.
+
+Edición de presentación solicitada por humano, 2026-10-09 04:29 UTC: PDF de 3 páginas centrado en herramientas, resultados y alcance; eliminadas notas administrativas. Notion técnica, funcional, pitch y ejecución depuradas y verificadas por lectura posterior; 5 fichas y tablas oficiales preservadas. Detalle en NOTION_EDITORIAL.md. PR87 documental pendiente de merge autorizado; correo no enviado.
