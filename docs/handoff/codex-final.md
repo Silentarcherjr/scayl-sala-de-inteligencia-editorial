@@ -29,3 +29,5 @@ Notion4propias publicadas con autorización específica; URLs notion.site en cor
 PDF regenerado con todo el cierre PR86,442pruebas,9rutas,7regresiones yNotion público. Facturación no verificadasin suponergratis. Fuente HTML actualizada,3páginas inspeccionadas. SHA256 9e3800807dbe337f9fafda3e3d34bc55b66bb438c67cc26836925c9554a343ec. Adjuntar esta versión del mismo archivo estable. Notas y PDF se empujan en rama; no segundo merge/despliegue.
 
 Edición de presentación solicitada por humano, 2026-10-09 04:29 UTC: PDF de 3 páginas centrado en herramientas, resultados y alcance; eliminadas notas administrativas. Notion técnica, funcional, pitch y ejecución depuradas y verificadas por lectura posterior; 5 fichas y tablas oficiales preservadas. Detalle en NOTION_EDITORIAL.md. PR87 documental pendiente de merge autorizado; correo no enviado.
+
+2026-10-09 04:35 UTC: revisión de GitHub solicitada; portada y guiones depurados, fuentes y registros técnicos preservados. Cambios en PR87 documental. Siguiente paso: autorización específica y merge de PR87 para que la portada/PDF actualizados aparezcan en main. Correo listo y no enviado.

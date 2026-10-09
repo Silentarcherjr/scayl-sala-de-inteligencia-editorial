@@ -7,9 +7,9 @@
 |---|---|---|
 | 0:00–1:00 | **Problema** | "Un editor de TVN recibe cientos de señales al día. Ver algo repetido no lo confirma, y un dato viejo puede parecer nuevo. El costo es tiempo y errores de contexto." |
 | 1:00–2:00 | **Solución** | "SCAYL lleva la señal hasta una historia investigable: evento → prioridad → evidencia → vacíos → borrador citado → **decisión humana**. Con dos reglas: la prioridad no es verdad, y la IA no publica." |
-| 2:00–6:00 | **Demo en vivo** (guion `docs/DEMO_SCRIPT.md`, escenas 1–6; respaldo: demo local; NO usar el MP4 antiguo de EVT-0114) | Sala → Ficha del Canal (Source DNA, ACP con fecha, vacíos) → EVT-0078 (dos medios, independencia no demostrable, ACP fechada, dato histórico, vacíos) → Consultas (Gatún con fecha; "moneda" con abstención; cifra falsa con abstención) → borrador citado → aprobado como borrador con recibo. |
-| 6:00–8:00 | **IA medida, no por moda** | "Usamos IA donde ganó y reglas donde perdió: E5 agrupa (F1 0,99 frente a 0,44), pero para temas las reglas sacaron 0,76 contra 0,25. El LLM es local (qwen3:8b, 13 s de mediana, $0) y lo vigila código: 45/45 frases con cita; las frases sin respaldo se eliminan." |
-| 8:00–9:00 | **Confianza** | "Nuestro propio red-team nos encontró fallos: 6/16. Los corregimos: 16/16. Luego un integrante escribió preguntas nuevas sin ver los casos existentes: 6/6 trampas con abstención correcta, aunque también se abstuvo en 4/4 preguntas de cultura general que no están en el corpus. Cada fallo y su corrección está en el registro." |
+| 2:00–6:00 | **Demo en vivo** (guion `docs/DEMO_SCRIPT.md`, escenas 1–6; respaldo: demo local) | Sala → Ficha del Canal (Source DNA, ACP con fecha, vacíos) → EVT-0078 (dos medios, independencia no demostrable, ACP fechada, dato histórico, vacíos) → Consultas (Gatún con fecha; "moneda" con abstención; cifra falsa con abstención) → borrador citado → aprobado como borrador con recibo. |
+| 6:00–8:00 | **IA medida, no por moda** | "Usamos IA donde ganó y reglas donde perdió: E5 agrupa (F1 0,99 frente a 0,44 en evaluación de desarrollo utilizada para calibrar), pero para temas las reglas sacaron 0,76 contra 0,25. Qwen3 8B genera localmente (13,1 s de mediana, sin cargos de API; hardware y electricidad excluidos). Gemini es un proveedor externo opcional con cuota y costo sujetos al proyecto La evaluación de Qwen registró 45/45 frases con cita; los validadores comprueban las referencias y cifras." |
+| 8:00–9:00 | **Confianza** | "442 pruebas automatizadas aprobadas. El red-team de desarrollo registró 16/16 abstenciones correctas y el set humano reservado, 6/6 trampas. La revisión humana de paquetes en modo plantilla registró sustento válido en 25/30 afirmaciones. Los resultados y su alcance están documentados." |
 | 9:00–10:00 | **Límites y siguientes pasos** | "Hoy solo hay titulares, así que ningún caso real llega a 'suficiente', y eso es lo correcto. Siguientes pasos: cuerpos de artículos con licencia de TVN, más fuentes oficiales (SINAPROC, MEF) y operación diaria." Cierre: **"SCAYL no decide qué se publica: acorta el camino de la señal a una historia trazable, lista para la decisión humana."** |
 
 ## Respuestas preparadas (pruebas dinámicas del jurado)
@@ -19,10 +19,10 @@
 - **"¿Y si una fuente trae instrucciones maliciosas?"** → Se marca como dato sospechoso, nunca se cita ni se envía al modelo; red-team 16/16 (Trust Lab).
 - **"Muéstrame una decisión, una prueba fallida y su corrección."** → DL-027: el red-team encontró que el modo sin modelo copiaba titulares con inyección (6/16); se corrigió con reglas generales y pruebas de regresión (16/16). Registro completo en 06.
 - **"¿Por qué ningún evento es 'suficiente'?"** → Ningún titular del corpus cita una cifra oficial comparable (Gatún, IPC). Confirmar sin cifra sería inventar. Los casos sintéticos etiquetados (B-04) muestran cómo se ve un "suficiente".
-- **"¿Cuánto tiempo ahorra?"** → No medido (mini-estudio pendiente); no lo afirmamos.
+- **"¿Cuánto tiempo ahorra?"** → El ahorro de tiempo es una hipótesis para validar en una redacción; las métricas actuales evalúan calidad y comportamiento técnico.
 - **"¿Cuánto cuesta?"** → $0 de API para Qwen local, excluyendo hardware y electricidad. Gemini externo opcional: cuota/costo sujetos al proyecto; costo global no medido.
 
 ## Material
-- Capturas: `docs/screenshots/final/` · Video antiguo: retirado como respaldo por EVT-0114; no reutilizar hasta regeneración y validación completa · Métricas: Trust Lab y `eval/results/latest.json`.
+- Capturas: `docs/screenshots/final/` · Respaldo: demo local · Métricas: Trust Lab y `eval/results/latest.json`.
 
 Consultas ofrece Gemini externo opcional para redacción citada; cada salida identifica su modo. `/verificar/` compara evidencia de forma determinista, sin IA generativa.

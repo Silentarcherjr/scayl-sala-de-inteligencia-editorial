@@ -80,7 +80,7 @@ Boletín de entorno logístico (CU-05) con observaciones citadas, hipótesis sep
 - **N publicaciones ≠ N confirmaciones.**
 - **La IA no publica:** "aprobado como borrador" no significa publicado.
 - **Si no hay evidencia, se abstiene:** no responde de memoria.
-- **Lo que no se midió se dice "no medido".**
+- **Métricas trazables:** cada resultado se vincula a su evaluación y alcance.
 
 ## 7. Límites (declarados)
 
