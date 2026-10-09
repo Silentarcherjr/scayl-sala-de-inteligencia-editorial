@@ -55,6 +55,56 @@ def test_indicator_is_disambiguated_by_topic_words_not_by_the_figure():
     assert r["hallazgos"][0]["evidencia"]["evidence_id"] == "wb:PAN:NY.GDP.MKTP.KD.ZG:2010"
 
 
+@pytest.mark.parametrize("claim, expected_series", [
+    ("La inflación mensual de Panamá fue de 2,2% en agosto de 2026", "INEC.IPC.VAR_MENSUAL"),
+    ("La inflación interanual de Panamá fue de 0,2% en agosto de 2026", "INEC.IPC.VAR_INTERANUAL"),
+])
+def test_matching_value_of_other_ipc_indicator_does_not_confirm_claim(claim, expected_series):
+    r = run(claim)
+    assert r["estado"] == "discrepancia_oficial"
+    compared = [h for h in r["hallazgos"] if h["relacion"] != "contexto"]
+    assert compared and all(expected_series in h["evidencia"]["evidence_id"] for h in compared)
+
+
+@pytest.mark.parametrize("unit", ["metros", "kilómetros", "centímetros"])
+def test_metric_length_is_not_compared_with_feet(unit):
+    r = run(f"El nivel del lago Gatún era de 84,88 {unit} el 29 de septiembre de 2026")
+    assert r["estado"] == "no_comparable"
+    assert all(h["relacion"] == "contexto" for h in r["hallazgos"])
+    assert any("Otra unidad" in h["nota"] for h in r["hallazgos"])
+
+
+def test_correct_monthly_ipc_value_still_matches_the_monthly_indicator():
+    r = run("La inflación mensual de Panamá fue de 0,2% en agosto de 2026")
+    assert r["estado"] == "compatible_oficial"
+    assert r["hallazgos"][0]["evidencia"]["evidence_id"] == "ind:inec:INEC.IPC.VAR_MENSUAL:2026-08"
+
+
+@pytest.mark.parametrize("sign", ["-", "−"])
+def test_negative_claim_cannot_match_a_positive_observation(sign):
+    r = run(f"La inflación mensual de Panamá fue de {sign}0,2% en agosto de 2026")
+    assert r["estado"] == "discrepancia_oficial"
+    assert r["detectado"]["cifras"] == [-0.2]
+    assert r["hallazgos"][0]["evidencia"]["valor"] == 0.2
+
+
+def test_negative_official_value_still_matches_a_negative_claim():
+    r = run("La inflación mensual de Panamá fue de -0,3% en julio de 2026")
+    assert r["estado"] == "compatible_oficial"
+    assert r["hallazgos"][0]["evidencia"]["valor"] == -0.3
+
+
+def test_same_number_in_another_world_bank_indicator_cannot_select_that_indicator():
+    # Synthetic development query and candidate shortlist: both indicators are retrieved,
+    # but the matching inflation value must not confirm a claim about GDP growth.
+    units = [u for u in retriever().units if u.evidence_id in {
+        "wb:PAN:NY.GDP.MKTP.KD.ZG:2010", "wb:PAN:FP.CPI.TOTL.ZG:2010",
+    } or u.evidence_id.startswith("usgs:")][:20]
+    r = check("El crecimiento del PIB de Panamá fue 3,49% en 2010", qa.Retriever(units))
+    assert r["estado"] == "discrepancia_oficial"
+    assert r["hallazgos"][0]["evidencia"]["evidence_id"] == "wb:PAN:NY.GDP.MKTP.KD.ZG:2010"
+
+
 def test_other_country_is_never_compared():
     r = run("La inflación de Costa Rica fue 0,9% en 2024")
     compared = [h for h in r["hallazgos"] if h["relacion"] != "contexto"]

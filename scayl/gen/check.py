@@ -14,10 +14,11 @@ from dataclasses import dataclass
 from scayl.gen.guard import scan as scan_injection
 from scayl.gen.qa import (
     _CURRENT,
+    _DATES,
+    _NUMBER,
     COVERAGE_THRESHOLD,
     Retriever,
     Unit,
-    _figures,
     _figures_with_precision,
     _is_null,
     _matches,
@@ -49,6 +50,23 @@ def _fold(text: str) -> str:
     return unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode().lower()
 
 
+def _signed_figures(text: str) -> list[tuple[float, int]]:
+    """Keep the sign in this verifier without changing the shared Q&A parser."""
+    dated = _DATES.sub(" ", text)
+    out = []
+    for match in _NUMBER.finditer(dated):
+        for value, precision in _figures_with_precision(match.group(0)):
+            negative = match.start() > 0 and dated[match.start() - 1] in "-−"
+            out.append((-value if negative else value, precision))
+    return out
+
+
+def _known_figures(u: Unit) -> set[float]:
+    if u.official and isinstance(u.ref.value, (int, float)):
+        return {float(u.ref.value)}
+    return {value for value, _ in _signed_figures(u.text)}
+
+
 def countries(text: str) -> set[str]:
     """Countries a text locates something in; Panamanian places map to Panamá; 'para Panamá' (who is affected)
     does not locate."""
@@ -72,6 +90,10 @@ def unit_kind(text: str) -> str | None:
         return "porcentaje"
     if re.search(r"\bpies\b", t):
         return "pies"
+    for name, pattern in (("metros", r"\bmetros?\b"), ("kilómetros", r"\bkilometros?\b"),
+                          ("centímetros", r"\bcentimetros?\b")):
+        if re.search(pattern, t):
+            return name
     if "magnitud" in t or re.search(r"\bsismo|temblor|terremoto\b", t):
         return "magnitud"
     if re.search(r"\b(dolares|usd|b/\.|balboas)\b", t) or "$" in text:
@@ -173,7 +195,7 @@ def check(claim: str, retriever: Retriever) -> dict:
                        "El texto contiene instrucciones dirigidas al sistema; se trata como dato y no se ejecuta.",
                        [], ["Reformular la afirmación sin instrucciones."], {})
     norm = normalize_dates(claim)
-    asked = _figures_with_precision(norm)
+    asked = _signed_figures(norm)
     periods = _requested_periods(norm)
     where = countries(claim)
     kind = unit_kind(claim)
@@ -215,6 +237,12 @@ def check(claim: str, retriever: Retriever) -> dict:
     comparable = []
     for u in official:
         u_where = countries(u.text)
+        # Monthly and year-on-year IPC are different indicators even with the same period and unit.
+        frequency = re.search(r"\b(mensual|interanual)\b", norm)
+        if frequency and u.evidence_id.startswith("ind:inec:INEC.IPC.") and (
+                frequency.group(1).upper() not in u.evidence_id):
+            findings.append(Finding(u, "contexto", "Otro indicador (mensual/interanual): no se compara."))
+            continue
         if kind and _unit_kind_of(u) and _unit_kind_of(u) != kind:
             findings.append(Finding(u, "contexto", "Otra unidad de medida: no se compara."))
             continue
@@ -227,7 +255,15 @@ def check(claim: str, retriever: Retriever) -> dict:
         comparable.append(u)
 
     if asked and comparable and periods:
-        match = [u for u in comparable if any(_matches(f, d, k) for f, d in asked for k in _figures(u.text))]
+        # Select by the topic first: a matching number must never select a different indicator.
+        comparable = _closest(norm, comparable)
+        if len({_series(u) for u in comparable}) > 1:
+            findings = [Finding(u, "contexto", "Indicador candidato: no se elige por coincidencia de cifra.")
+                        for u in comparable] + findings
+            return _result(claim, "no_comparable",
+                           "Varios indicadores oficiales distintos encajan; precisar el indicador antes de comparar.",
+                           findings, ["Precisar el indicador y su definición (por ejemplo, mensual o interanual)."], detected)
+        match = [u for u in comparable if any(_matches(f, d, k) for f, d in asked for k in _known_figures(u))]
         if match:
             findings = [Finding(u, "coincide", "La cifra coincide con este registro (redondeo incluido).")
                         for u in match] + findings
@@ -258,7 +294,7 @@ def check(claim: str, retriever: Retriever) -> dict:
                        ["Precisar el indicador (por ejemplo, variación mensual o interanual) y la fuente."], detected)
 
     # News: figures in headlines are what a medium reported, never a confirmation.
-    reported = [u for u in news if asked and any(_matches(f, d, k) for f, d in asked for k in _figures(u.text))]
+    reported = [u for u in news if asked and any(_matches(f, d, k) for f, d in asked for k in _known_figures(u))]
     if reported:
         findings = [Finding(u, "coincide", f"Lo reporta {_source(u)} (declaración periodística, no confirmación).")
                     for u in reported] + findings
@@ -266,7 +302,7 @@ def check(claim: str, retriever: Retriever) -> dict:
                        "La cifra aparece en titulares de medios; no hay evidencia oficial comparable en el snapshot.",
                        findings, ["Confirmar con la fuente primaria (organismo oficial) antes de presentarlo como hecho.",
                                   "Comprobar si los medios replican una misma fuente."], detected)
-    with_figures = [u for u in news if asked and _figures(u.text)]
+    with_figures = [u for u in news if asked and _known_figures(u)]
     if with_figures:
         findings = [Finding(u, "difiere", f"El titular de {_source(u)} menciona otras cifras.")
                     for u in with_figures[:3]] + findings
