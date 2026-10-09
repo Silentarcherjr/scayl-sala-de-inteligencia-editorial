@@ -23,8 +23,10 @@ lo contradice (con año y período, para no presentar datos históricos como act
 verificar. A partir de esa evidencia, un modelo local (Qwen3 8B) prepara un borrador editorial en el que cada
 oración cita su evidencia; cuando la evidencia no alcanza, el sistema se abstiene de forma explícita. La IA no
 decide qué es verdad ni qué se publica: el borrador queda pendiente de una decisión humana registrada con recibo.
-La demo pública sirve salidas de IA precalculadas (modo caché), identificadas como tales; la inferencia en vivo se
-ejecuta en local.
+Además, el jurado puede escribir sus propias consultas: en **Consultas** puede elegir «IA generativa en vivo (Gemini)»,
+que redacta en el momento una respuesta citada solo con evidencia del corpus (o se abstiene), y en **Verificar** puede
+contrastar cualquier afirmación con cifras contra los datos oficiales y las noticias del corpus. Cada salida indica
+su modo (IA en vivo, IA precalculada, plantilla o abstención).
 
 Recomendamos empezar por **«Empieza aquí»** (recorrido de unos 3 minutos).
 
@@ -37,7 +39,7 @@ Recomendamos empezar por **«Empieza aquí»** (recorrido de unos 3 minutos).
 **Adjunto:** `SCAYL_Herramientas_IA.pdf` (herramientas de IA utilizadas: propósito, aplicación y resultados).
 
 **Repositorio:** https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial
-*(incluir solo si el repositorio es público al momento del envío)*
+
 
 Quedamos atentos.
 
