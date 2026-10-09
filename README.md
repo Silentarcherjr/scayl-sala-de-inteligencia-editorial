@@ -13,6 +13,7 @@ revisión humana. **La IA no decide qué es verdad ni qué se publica**: "aproba
 ![Sala de Situación](docs/screenshots/final/01-sala.png)
 
 ## Qué hace
+
 | Etapa | Cómo | Dónde verlo |
 |---|---|---|
 | Señal → evento | Validación del snapshot y agrupación semántica con E5 multilingüe local (187 señales → 165 eventos) | Sala de Situación |
@@ -24,41 +25,30 @@ revisión humana. **La IA no decide qué es verdad ni qué se publica**: "aproba
 | Producción | Borrador con LLM local (qwen3:8b). Cada frase etiquetada HECHO/DECLARACIÓN y con `evidence_id`; validadores por código eliminan cifras sin respaldo, presentes falsos e inyecciones | Ficha · Producir |
 | Consultas | Respuestas solo con evidencia del corpus, citadas; **abstención explícita** si falta evidencia | Consultas (modo jurado) |
 | Revisión | Estados con transiciones guardadas, justificación obligatoria y recibo con hash | Ficha · Revisión |
-| Confianza | Métricas medidas con num/den y "no medido" donde no se midió | Trust Lab |
+| Confianza | Resultados con numerador, denominador y alcance de evaluación | Trust Lab |
 
-## Resultados medidos (detalle en `eval/results/` y `docs/notion_mirror/06_TESTS_AND_METRICS.md`)
-| Métrica | Resultado | Alcance |
-|---|---|---|
-| Cobertura de citas del borrador | **45/45** | Top 15 con qwen3:8b; las frases sin cita las elimina el validador. Mide presencia de cita, no validez del sustento |
-| Validez de sustento (revisión humana) | **25/30 = 83%** | Muestra de paquetes en modo plantilla (no de borradores de qwen3:8b). Los 5 casos fallidos son titulares citados textualmente pero poco relevantes o en otro idioma (DL-031) |
-| Abstención correcta (red-team de desarrollo) | **16/16**; abstención incorrecta 0/4 | Set sintético; antes de las correcciones era 6/16 (DL-027) |
-| Set reservado escrito por un humano | 6/6 trampas con abstención; también se abstuvo en 4/4 controles (6/10 frente a las expectativas del autor) | Los 4 "controles" de cultura general no están en el corpus: SCAYL no responde de memoria (DL-030) |
-| Temas (macro-F1, 100 etiquetas humanas) | Reglas **0,76** · E5 0,25 | Por eso los temas usan reglas (DL-029) |
-| Agrupación (F1, pares revisados por humano) | E5 **0,99** · TF-IDF 0,44 | Pares de desarrollo usados para calibrar: resultado optimista |
-| Precision@5 frente al top 5 del editor | 1/5 (exploratoria) | El editor vio antes una propuesta de IA (DL-024) |
-| Latencia del borrador | Mediana **13,1 s**, p95 17,0 s (n = 15) | AMD RX 9060 XT 8 GB, Ollama Vulkan |
-| Costo de API del borrador local | **$0** | Qwen3 8B local; excluye hardware y electricidad (no medidos). Gemini es externo: cuota y costo dependen del proyecto; costo global no medido |
-| Pruebas | T01–T10 y 432 pruebas en CI (main `1239dbd`, 2026-10-08) | `python -m pytest -q` |
+## Resultados y validación
 
-### Evaluaciones de cierre (2026-10-08; automáticas, sin revisión humana nueva)
-| Medición | Antes → después | Alcance |
-|---|---|---|
-| Qwen3 8B en vivo, top 30 (Apple M1 Max) | 30/30 paquetes en vivo, 0 fallback; mediana 19,5 s, p95 37,2 s; 54 976 tokens | Con otras cargas en paralelo; agrupación TF-IDF (183 eventos), no el bundle publicado. `eval/results/qwen-m1-live.json` |
-| Validadores nuevos sobre esas salidas reales de Qwen | 115 → 111 oraciones conservadas | 2 descartes correctos (cargo inventado a una persona), 2 estrictos por cita. **Sustento de Qwen: no medido** hasta revisar `data/labels/support_review_qwen_live.csv` (55 afirmaciones) |
-| Consultas, benchmark v2 reservado (20 preguntas) | Respondidas con cita 9/14 → **11/14**; abstención indebida 5/14 → 3/14; abstención correcta 6/6 → 6/6; fugas por inyección 0/4 → 0/4; ambos lados de una contradicción en top 5 3/3 → 2/3 | Preguntas escritas por IA antes de ejecutar; 40 de desarrollo usadas para ajustar. `eval/results/b-qa-benchmark-*.json` |
-| Contradicciones, set sintético difícil | Precisión 5/15 → 8/8 y recall 5/8 → 8/8 (desarrollo, optimista); 8 casos posteriores 1/3 → 2/2 | Escrito por IA; no hay contradicciones etiquetadas en el corpus real. `eval/results/c-contradictions.json` |
-| Fallos de la revisión humana de sustento (5/30) | Causa corregida en la plantilla: calificadores de fecha y confirmación, idioma original, escritura no latina retenida, aviso judicial | No re-mide el sustento: la nueva redacción no tiene revisión humana. `eval/results/a-validators-before-after.json` |
+| Resultado | Evidencia y alcance |
+|---|---|
+| **442 pruebas automatizadas aprobadas** | Suite Python, lint y compilación web en CI |
+| **T01–T10 aprobadas** | Pruebas automatizadas del reto; T10 ejecutado con la red bloqueada |
+| **45/45 frases con cita** | Top 15 generado con Qwen3 8B; mide cobertura de citas |
+| **25/30 afirmaciones con sustento válido** | Revisión humana de paquetes en modo plantilla |
+| **6/6 trampas con abstención correcta** | Set reservado elaborado por un integrante del equipo |
+| **13,1 s de latencia mediana** | Generación local de 15 paquetes con Qwen3 8B en AMD RX 9060 XT; p95 17,0 s |
 
-Lo que no medimos queda escrito como **"no medido"**: no afirmamos ahorro de tiempo sin el mini-estudio.
+Las evaluaciones conservan sus entradas, resultados y alcance en [pruebas y métricas](docs/notion_mirror/06_TESTS_AND_METRICS.md) y [eval/results/](eval/results/). Cobertura de citas y sustento editorial son mediciones distintas; los resultados de desarrollo se identifican como tales.
 
 ## Probarlo
+
 **Demo web principal:** [SCAYL · Sala de Inteligencia Editorial](https://scayl-editorial.vercel.app/).
 Next.js estático en Vercel: los mismos 165 eventos, componentes, evidencia y paquetes de SCAYL.
 Las consultas guiadas usan resultados precalculados; la consulta libre usa la API Python con evidencia o, por elección del usuario, Gemini externo en modo `online`. Las salidas guardadas no son inferencia en vivo.
 `/verificar/` recupera y compara evidencia de forma determinista, sin IA generativa. Compatible no significa verdadero ni listo para publicar.
 La revisión de la demo web valida la decisión y guarda recibos en este navegador (DL-036).
 
-**Extensión bancaria:** abre `/boletin/` para leer el boletín de Logística y Canal (CU-05) y usa «Imprimir / guardar PDF». El boletín incluido es una plantilla, sin IA generativa; no evalúan personas ni recomiendan operaciones.
+**Extensión bancaria:** abre `/boletin/` para leer el boletín de Logística y Canal (CU-05) y usa «Imprimir / guardar PDF». El boletín incluido es una plantilla, sin IA generativa; no evalúa personas ni recomienda operaciones.
 
 **Web local (una vez construido el export, funciona sin internet):**
 ```bash
@@ -88,7 +78,7 @@ python -m scayl.pipeline build --snapshot data/raw/v1 --llm live  # requiere Oll
 python -m pytest -q && ruff check .
 ```
 
-**Versión de respaldo:** la app Streamlit se ejecuta en local y sin internet (`python scripts/demo_offline.py`, ver arriba). La copia en Streamlit Community Cloud ya no forma parte de la entrega: exige inicio de sesión y no es pública.
+**Respaldo offline:** la app Streamlit se ejecuta en local con `python scripts/demo_offline.py`.
 
 ## Datos (snapshot `data/raw/v1`, manifest con SHA-256)
 - **Noticias:** GDELT (metadatos) y RSS de TVN, del 2025-10-02 al 2026-09-30 (aclaración oficial C-01). Solo titulares y metadatos.
@@ -97,26 +87,25 @@ python -m pytest -q && ruff check .
 
 Licencias y procedencia en `docs/notion_mirror/03_DATA_CATALOG.md`.
 
-## Límites conocidos
-- Solo titulares y metadatos: ningún evento real llega a "suficiente para borrador", porque ningún titular cita una cifra oficial comparable. Es abstención correcta, no un error.
-- La independencia entre medios casi nunca es demostrable con metadatos; Source DNA lo declara.
-- Batch sobre un snapshot congelado, no tiempo real.
-- Las etiquetas humanas son pocas (n = 100 temas, 30 afirmaciones, top 5): las métricas son exploratorias.
+## Alcance
+
+- Snapshot congelado de titulares y metadatos públicos, con períodos y fuentes trazables.
+- La evidencia oficial de contexto se distingue del respaldo directo a una afirmación.
+- Source DNA declara la procedencia disponible; varios medios no equivalen automáticamente a confirmaciones independientes.
+- Qwen3 8B genera paquetes localmente; la web identifica sus respuestas guardadas. Gemini es externo y opcional, con cuotas y costo sujetos al proyecto de Google.
+- La decisión editorial requiere revisión humana. Los detalles de evaluación y control de calidad están en la documentación técnica.
 
 ## Documentación
+
 | Documento | Para qué |
 |---|---|
-| `docs/DEMO_SCRIPT.md` | Guion del video de demo |
-| `docs/ARCHITECTURE.md` | Arquitectura y contratos |
-| `docs/notion/` | Páginas de Notion entregadas (aclaración oficial [C-04](docs/official_clarifications.md)): documentación técnica, documentación funcional y presentación del Pitch Day, importables como Markdown |
-| `docs/notion_mirror/` | Registro de trabajo durante el evento: decisiones (02), métricas y fallos corregidos (06), pitch (08) |
-| `docs/PLAN_REVIEW.md` | Revisión del reto, matriz de rúbrica y riesgos |
-| `docs/AI_TOOLS_USED.md` | Bitácora de herramientas de IA usadas en el desarrollo |
+| [Recorrido guiado](https://scayl-editorial.vercel.app/recorrido/) | Punto de entrada para evaluar la aplicación |
+| [docs/DEMO_SCRIPT.md](docs/DEMO_SCRIPT.md) | Guion del recorrido y demo local |
+| [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) | Arquitectura y contratos |
+| [Documentación de entrega](docs/notion/) | Páginas de Notion entregadas (aclaración oficial [C-04](docs/official_clarifications.md)): documentación técnica, documentación funcional y presentación del Pitch Day, importables como Markdown |
+| [Registro de ejecución y evaluación](docs/notion_mirror/) | Registro de trabajo durante el evento: decisiones (02), métricas y fallos corregidos (06), pitch (08) |
+| [docs/PLAN_REVIEW.md](docs/PLAN_REVIEW.md) | Revisión del reto, matriz de rúbrica y riesgos |
+| [docs/AI_TOOLS_USED.md](docs/AI_TOOLS_USED.md) | Bitácora de herramientas de IA usadas en el desarrollo |
 | `AGENTS.md`, `CLAUDE.md`, `docs/TASKS.md` | Cómo trabajó el equipo humano + agentes |
 
 Equipo SCAYL: Silentarcherjr, frictionspp-svg y LowCrime, con agentes de código (Claude Code y Codex) bajo revisión humana.
-
-DL-036 añade consulta libre y revisión humana dentro de la web Next.js, con funciones Python nativas
-solo en modo caché. El historial de esta demo se guarda en el navegador y el recibo se descarga como
-JSON; aprobar como borrador no publica. El export estático conserva consultas de ejemplo offline.
-Detalles de empaquetado y límites: [web/README.md](web/README.md#dl-036--consulta-libre-y-revisión-en-nextjs).

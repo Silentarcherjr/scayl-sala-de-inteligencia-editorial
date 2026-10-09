@@ -1,4 +1,6 @@
-# Cierre SCAYL · 8 de octubre de 2026, Panamá
+# Auditoría inicial SCAYL · 8 de octubre de 2026, Panamá
+
+> Estado inicial histórico, superado por CIERRE_GO.md: PR86 integrado, corrección desplegada y Notion publicado.
 
 Producción verificada: `1239dbdc50a2e639583032b3c995d41643fb1d2c` (PR #85), despliegue success 22:55:07 Panamá. No se hizo merge ni despliegue en esta auditoría.
 

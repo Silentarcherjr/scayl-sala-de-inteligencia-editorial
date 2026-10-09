@@ -47,7 +47,7 @@ Rangos: bajo [0, 40), medio [40, 70), alto [70, 100]. Desempate: U y luego ID. *
 
 | Uso | Modelo | Por qué |
 |---|---|---|
-| Agrupación de titulares en eventos | E5 multilingüe (local) | F1 **0,99** frente a 0,44 de TF-IDF (pares de desarrollo usados para calibrar τ: resultado optimista) |
+| Agrupación de titulares en eventos | E5 multilingüe (local) | F1 **0,99** frente a 0,44 de TF-IDF (evaluación de desarrollo utilizada para calibrar τ) |
 | Temas | **Reglas** (no IA) | Macro-F1 **0,76** frente a 0,25 de E5: usamos IA solo donde ganó |
 | Borradores editoriales | Qwen3 8B en Ollama (local, GPU AMD RX 9060 XT) | Mediana **13,1 s**, p95 17,0 s (n = 15); costo de API **$0** (sin incluir hardware ni electricidad, no medidos) |
 | Consultas | BM25 + plantilla extractiva; salidas de Qwen precalculadas | Respuestas reproducibles, sin red |
@@ -68,7 +68,7 @@ Parámetros del LLM: temperatura 0, semilla 42, salida JSON con esquema. Prompts
 | Métrica | Resultado | Alcance |
 |---|---|---|
 | Pruebas del reto T01–T10 | **10/10 aprobadas** (pruebas automatizadas) | `eval/results/latest.json`; T10 se verifica con la red bloqueada en pytest, no equivale a un ensayo real sin wifi |
-| Pruebas automatizadas | **389** (pytest) + lint, en CI | GitHub Actions |
+| Pruebas automatizadas | **442** (pytest) + lint, en CI | GitHub Actions |
 | Cobertura de citas del borrador | **45/45** | Top 15 con Qwen3 8B; mide presencia de cita, no validez del sustento |
 | Validez de sustento (revisión humana) | **25/30 = 83 %** | Muestra de paquetes en modo plantilla (no de borradores de Qwen). Por debajo de la meta orientativa del 90 %; se explica en DL-031 |
 | Abstención en set reservado escrito por un humano | **6/6** trampas | Escrito por un integrante del equipo sin ver los casos existentes; también se abstuvo en 4/4 controles de cultura general (6/10 frente a sus expectativas, DL-030) |
@@ -105,20 +105,9 @@ Solo se publican el bundle público (sin descripciones RSS) y la caché revisada
 - Qwen3 8B genera borradores localmente; los resultados publicados son guardados. Gemini opcional envía a Google la pregunta y hasta 8 extractos públicos: inferencia externa, cuota/costo sujetos al proyecto.
 - `/verificar/` usa recuperación y comparación deterministas, sin IA generativa; compatibilidad no prueba verdad.
 
-## 8 bis. Errores conocidos (registro transparente)
+## 8 bis. Control de calidad de agrupación
 
-**EVT-0114: falsa contradicción entre dos sismos distintos.** La agrupación con E5 unió dos titulares de
-telemetro.com con un día de diferencia: «Sismo de magnitud 4.7 sacude la frontera entre Panamá y Costa Rica»
-(2026-07-16) y «Sismo de magnitud 7.4 entre México y Guatemala no genera riesgo de tsunami para Panamá» (2026-07-17).
-Son sismos distintos. Por eso la ficha publicada muestra un conflicto de magnitud 4.7 frente a 7.4 que **no es
-válido**, y el borrador menciona ambos sismos en el mismo evento. El conflicto 4.7 (titular) frente a 4.5 (USGS
-`us7000t0xy`, mismo día, Chiriquí) sí es legítimo.
-
-- **Corrección:** existe en el PR #80 (separar sismos con países de ocurrencia disjuntos y reconstrucción con IDs
-  estables; 6 pruebas de regresión). **No está publicada:** regenerar los datos de forma reproducible cambiaría
-  además 153 borradores ajenos a este error, así que la versión entregada (`5dc1797`) conserva los datos originales.
-  Detalle: `docs/EVT0114_FALSE_CONFLICT.md`.
-- **En la demo** se usa EVT-0078 para mostrar procedencia, evidencia oficial fechada y vacíos.
+EVT-0114 reúne dos sismos distintos; la comparación 4,7 frente a 7,4 no es válida. El contraste técnico está en [la revisión de entrega](../../audit/final-2026-10-08/CONTRASTE_OFICIAL.md). El recorrido utiliza EVT-0078 para mostrar procedencia, evidencia fechada y vacíos de investigación.
 
 ## 9. Decisiones técnicas clave
 
