@@ -119,3 +119,11 @@ sesión del propietario):
 | Inyección | abstención previa, sin llamada |
 
 Ninguna respuesta contenía la clave ni el código de acceso.
+
+## Modo público (sin código de acceso)
+`SCAYL_LIVE_PUBLIC=1` permite usar Gemini sin código. **Solo es seguro si el proyecto de Google no tiene la
+facturación activada** (nivel gratuito): entonces no hay cargos y la cuota gratuita de Google actúa como límite
+global; al agotarse, Gemini responde 429 y SCAYL muestra la respuesta con evidencia como fallback visible. En el
+nivel gratuito, Google puede usar las solicitudes para mejorar sus productos: el aviso de la interfaz lo indica y
+solo se envían la pregunta y extractos de evidencia pública. Si se activa la facturación, desactivar este modo o
+fijar un presupuesto con alertas y cuota por minuto.

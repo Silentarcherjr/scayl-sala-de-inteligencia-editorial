@@ -77,7 +77,13 @@ def online_allowed(request: AskInput) -> bool:
         return False
     key = os.environ.get("GEMINI_API_KEY", "").strip()
     code = os.environ.get("SCAYL_LIVE_ACCESS_CODE", "").strip()
-    if not key or not code:
+    if not key:
+        raise PermissionError(NOT_CONFIGURED)
+    # Public mode: only for a Gemini project WITHOUT billing (free tier). Google's free-tier quota is then the
+    # global spending limit: when exhausted the provider answers 429 and SCAYL falls back visibly.
+    if os.environ.get("SCAYL_LIVE_PUBLIC", "").strip() == "1":
+        return True
+    if not code:
         raise PermissionError(NOT_CONFIGURED)
     if _failed["n"] >= MAX_FAILED_CODES:
         raise PermissionError("Demasiados intentos con código incorrecto en esta instancia. Inténtalo más tarde.")

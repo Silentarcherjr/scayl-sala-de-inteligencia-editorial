@@ -260,3 +260,16 @@ def test_key_never_in_results_or_logs(online, caplog):
         a = answer(Q, bundle(), llm)
         assert KEY not in a.model_dump_json()
     assert KEY not in caplog.text
+
+
+def test_public_mode_needs_no_code_but_still_needs_the_key(api, monkeypatch):
+    http, fake = api
+    monkeypatch.setenv("SCAYL_LIVE_PUBLIC", "1")
+    monkeypatch.delenv("SCAYL_LIVE_ACCESS_CODE", raising=False)
+    monkeypatch.delenv("GEMINI_API_KEY", raising=False)
+    status, body = http.dispatch("ask", {"question": Q, "mode": "online"})
+    assert status == 403 and "no está configurada" in body["error"] and fake.calls == []
+    monkeypatch.setenv("GEMINI_API_KEY", KEY)
+    status, body = http.dispatch("ask", {"question": Q, "mode": "online"})
+    assert status == 200 and body["generated_by"]["mode"] == "online" and len(fake.calls) == 1
+    assert KEY not in json.dumps(body, ensure_ascii=False)
