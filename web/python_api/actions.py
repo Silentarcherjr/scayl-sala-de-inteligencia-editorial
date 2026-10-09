@@ -1,4 +1,4 @@
-"""Native API actions: shared Q&A, stateless human-review receipt."""
+"""Native API actions: shared Q&A, claim checker, stateless human-review receipt."""
 from __future__ import annotations
 
 import hashlib
@@ -25,6 +25,10 @@ class AskInput(Input):
     question: StrictStr = Field(min_length=1, max_length=300)
 
 
+class CheckInput(Input):
+    claim: StrictStr = Field(min_length=1, max_length=300)
+
+
 class ReviewInput(Input):
     event_id: StrictStr = Field(min_length=1, max_length=80)
     from_state: ReviewState
@@ -37,6 +41,15 @@ def ask(payload: dict) -> dict:
     request = AskInput.model_validate(payload)
     enforce_cache()
     return service.ask(request.question, mode="cache").model_dump(mode="json")
+
+
+def check(payload: dict) -> dict:
+    """Claim checker: retrieval + deterministic comparison over the public snapshot. No model is called."""
+    from scayl.gen.check import check as run_check
+
+    request = CheckInput.model_validate(payload)
+    enforce_cache()
+    return run_check(request.claim, service._retriever())
 
 
 def review(payload: dict) -> dict:

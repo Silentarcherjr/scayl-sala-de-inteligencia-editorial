@@ -16,7 +16,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *a, **k):
         super().__init__(*a, directory=str(WEB / "out"), **k)
     def do_POST(self):
-        if self.path.split("?")[0] in ("/api/ask", "/api/review"):
+        if self.path.split("?")[0] in ("/api/ask", "/api/review", "/api/check"):
             self.action = self.path.split("?")[0].rsplit("/", 1)[1]
             return JSONHandler.do_POST(self)
         self.send_error(404)
