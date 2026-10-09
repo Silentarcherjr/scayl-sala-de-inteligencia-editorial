@@ -234,12 +234,12 @@ def _negation_flip(sentence: str, evidence: str) -> str | None:
     Only predicates that appear in the evidence are compared, so editorial caveats ("no prueba
     independencia") are not flagged."""
     core = _HEDGE.sub(" ", sentence)
-    if not _NEGATION.search(evidence):
-        if _NEG_VERB.search(core) or any(re.search(rf"\b{re.escape(w)}\b", evidence) for w in _negated_words(core)):
-            return "added"
-    if not _NEGATION.search(sentence):
-        if any(re.search(rf"\b{re.escape(w)}\b", sentence) for w in _negated_words(evidence)):
-            return "dropped"
+    if not _NEGATION.search(evidence) and (
+            _NEG_VERB.search(core) or any(re.search(rf"\b{re.escape(w)}\b", evidence) for w in _negated_words(core))):
+        return "added"
+    if not _NEGATION.search(sentence) and any(
+            re.search(rf"\b{re.escape(w)}\b", sentence) for w in _negated_words(evidence)):
+        return "dropped"
     return None
 
 
