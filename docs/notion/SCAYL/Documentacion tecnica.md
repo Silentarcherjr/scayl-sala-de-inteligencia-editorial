@@ -104,6 +104,21 @@ Solo se publican el bundle público (sin descripciones RSS) y la caché revisada
 - Sin secretos en el repositorio (`.env` ignorado; `.env.example` sin valores secretos).
 - Inferencia 100 % local: ningún dato de la redacción sale a un tercero.
 
+## 8 bis. Errores conocidos (registro transparente)
+
+**EVT-0114: falsa contradicción entre dos sismos distintos.** La agrupación con E5 unió dos titulares de
+telemetro.com con un día de diferencia: «Sismo de magnitud 4.7 sacude la frontera entre Panamá y Costa Rica»
+(2026-07-16) y «Sismo de magnitud 7.4 entre México y Guatemala no genera riesgo de tsunami para Panamá» (2026-07-17).
+Son sismos distintos. Por eso la ficha publicada muestra un conflicto de magnitud 4.7 frente a 7.4 que **no es
+válido**, y el borrador menciona ambos sismos en el mismo evento. El conflicto 4.7 (titular) frente a 4.5 (USGS
+`us7000t0xy`, mismo día, Chiriquí) sí es legítimo.
+
+- **Corrección:** existe en el PR #80 (separar sismos con países de ocurrencia disjuntos y reconstrucción con IDs
+  estables; 6 pruebas de regresión). **No está publicada:** regenerar los datos de forma reproducible cambiaría
+  además 153 borradores ajenos a este error, así que la versión entregada (`5dc1797`) conserva los datos originales.
+  Detalle: `docs/EVT0114_FALSE_CONFLICT.md`.
+- **En la demo** se usa EVT-0078 para mostrar procedencia, evidencia oficial fechada y vacíos.
+
 ## 9. Decisiones técnicas clave
 
 37 decisiones registradas (DL-001 a DL-037) en `docs/notion_mirror/02_DECISION_LOG.md`. Las principales:

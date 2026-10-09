@@ -174,13 +174,13 @@ async def main():
         await page.wait_for_timeout(1300)
         await cap(page, "Temporal Guard", "Los datos oficiales del Canal (ACP) siempre llevan su fecha. Lo histórico nunca pasa por actual.", 3.8, voice="ficha3")
 
-        # 3 · Conflict
-        await goto(page, "/caso/EVT-0114/")
-        await move_click(page, page.get_by_role("tab", name="Conflictos"))
+        # 3 · Provenance (EVT-0078). Not EVT-0114: it groups two different quakes by mistake (docs/EVT0114_FALSE_CONFLICT.md)
+        await goto(page, "/caso/EVT-0078/")
+        await move_click(page, page.get_by_role("tab", name="Fuentes"))
         await page.wait_for_timeout(500)
-        await scroll_to(page, "#tab-4", "start", 1.4)
+        await scroll_to(page, "#tab-1", "start", 1.4)
         await highlight(page, "#case-panel")
-        await cap(page, "Conflictos visibles", "Titular 4.7 · USGS 4.5 · otro titular 7.4. SCAYL no elige ni promedia: lo muestra y pide verificar.", 4.6, voice="conflicto")
+        await cap(page, "Procedencia, no conteo", "Dos medios publican la historia, pero su independencia no se puede demostrar: no son dos confirmaciones.", 4.6, voice="conflicto")
 
         # 4 · Producir
         await goto(page, "/caso/EVT-0101/")

@@ -37,6 +37,7 @@ python tools/ad/inspect_video.py tools/ad/build/SCAYL_anuncio.mp4 --transcribe
 | Duración mínima de cada subtítulo | `record.py`: `len(kicker + text) / 14 + 1.2` (≈14 caracteres por segundo) |
 
 ## Reglas
+- **El MP4 renderizado antes del 2026-10-09 no debe usarse:** su escena 3 mostraba EVT-0114 y presentaba un sismo de 7.4 (México–Guatemala) como otra versión del sismo de 4.7 en Panamá–Costa Rica. Son sismos distintos agrupados por error (`docs/EVT0114_FALSE_CONFLICT.md`). La escena ahora usa EVT-0078; hay que volver a generar la voz `conflicto` y renderizar.
 - Cada cifra que aparezca debe estar medida en el repo (`eval/results/latest.json`, `06_TESTS_AND_METRICS.md`).
 - No mostrar contraseñas, datos personales ni descripciones RSS.
 - Los videos y audios generados viven en `tools/ad/build/` (ignorado por git): se comparten fuera del repo.
