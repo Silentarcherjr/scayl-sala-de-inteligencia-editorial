@@ -37,11 +37,14 @@ from scayl.evidence.recent import SERIES as RECENT_SERIES
 from scayl.evidence.recent import ref_for as recent_ref
 from scayl.gen.guard import SYSTEM_DATA_RULE, data_block
 from scayl.gen.guard import scan as scan_injection
-from scayl.gen.llm import LLM, LLMError, load_prompt
+from scayl.gen.llm import LLM, LLMError, LLMUnavailable, load_prompt
 from scayl.gen.validators import _Ctx, check_sentence
 
 PROMPT_VERSION = "qa-v1"
 TOP_K = 8
+ONLINE_MAX_QUESTION = 300  # online (external provider) inputs are truncated
+ONLINE_MAX_UNITS = 8
+ONLINE_MAX_UNIT_CHARS = 400
 RERANK_POOL = 50
 INJECTED_QUESTION = ("La pregunta contiene instrucciones dirigidas al sistema (posible inyección); se trata como "
                      "dato y no se ejecuta ni se responde.")
@@ -398,13 +401,28 @@ def answer(question: str, bundle: UIBundle, llm: LLM, retriever: Retriever | Non
 
     if llm.mode == "template":
         return _extractive(question, hits)
-    payload = {"pregunta": question,
-               "evidencia": [{"evidence_id": u.evidence_id, "texto": u.text, "oficial": u.official} for u, _ in hits]}
+    if llm.mode == "online":  # external provider: only retrieved public evidence units + the question, truncated
+        hits = hits[:ONLINE_MAX_UNITS]
+        units = {u.evidence_id: u for u, _ in hits}
+        payload = {"pregunta": question[:ONLINE_MAX_QUESTION],
+                   "evidencia": [{"evidence_id": u.evidence_id, "texto": u.text[:ONLINE_MAX_UNIT_CHARS],
+                                  "periodo": u.ref.period, "oficial": u.official} for u, _ in hits]}
+    else:
+        payload = {"pregunta": question,
+                   "evidencia": [{"evidence_id": u.evidence_id, "texto": u.text, "oficial": u.official}
+                                 for u, _ in hits]}
     system = load_prompt("qa", "v1").replace("REGLA_DE_SEGURIDAD", SYSTEM_DATA_RULE)
     try:
         data, meta = llm.generate(PROMPT_VERSION, system, "Responde la pregunta.\n" + data_block(payload), SCHEMA)
-    except LLMError:
-        return _extractive(question, hits)
+    except LLMError as exc:
+        fallback = _extractive(question, hits)
+        if llm.mode == "online":
+            fallback.validation.issues.insert(0, ValidationIssue(
+                code="ONLINE_FALLBACK", severity="warning",
+                detail=("IA online no disponible (" + ("proveedor sin respuesta, sin configurar o con error"
+                        if isinstance(exc, LLMUnavailable) else "salida inválida del proveedor")
+                        + "); se muestra la respuesta extractiva sin IA generativa.")))
+        return fallback
 
     if data.get("abstain"):
         return _abstain(question, data.get("reason") or "El modelo determinó que la evidencia no basta.",
@@ -415,7 +433,7 @@ def answer(question: str, bundle: UIBundle, llm: LLM, retriever: Retriever | Non
     for i, raw in enumerate(data.get("answer", [])):
         try:
             s = TaggedSentence(text=raw["text"], tag=raw["tag"], claim_ids=list(raw.get("evidence_ids", [])))
-        except (KeyError, ValueError):
+        except (KeyError, TypeError, ValueError):
             continue
         checked = check_sentence(s, ctx, f"answer[{i}]")
         if checked is not None:

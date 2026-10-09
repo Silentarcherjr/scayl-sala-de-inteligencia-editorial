@@ -21,6 +21,8 @@ def dispatch(action: str, payload: object) -> tuple[int, dict]:
     except ValidationError as exc:
         fields = sorted({str(error["loc"][0]) for error in exc.errors() if error["loc"]})
         return 422, {"error": "Entrada inválida. Revisa los campos y sus límites.", "fields": fields}
+    except PermissionError as exc:  # online mode requested without configuration or a valid access code
+        return 403, {"error": str(exc)}
     except KeyError:
         return 404, {"error": "El caso no existe en el snapshot público."}
     except ValueError as exc:

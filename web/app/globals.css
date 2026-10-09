@@ -32,4 +32,6 @@ textarea { display:block; width:100%; margin:8px 0 16px; padding:12px; color:var
 form label { display:block; margin-top:16px; font-weight:600; }
 button:disabled { opacity:.6; cursor:wait; }
 
+.mode-choice{border:1px solid var(--line,#d6dbe1);border-radius:8px;padding:10px 12px;margin:0 0 12px}.mode-choice legend{font-weight:600;padding:0 4px}.mode-choice label{display:block;margin:4px 0;font-weight:400}
+.mode-choice label{display:flex;align-items:center;gap:8px}.mode-choice input[type=radio]{width:auto;margin:0;flex:0 0 auto}
 .link-button{background:none;border:0;padding:0;color:inherit;text-decoration:underline;cursor:pointer;font:inherit;text-align:left}
