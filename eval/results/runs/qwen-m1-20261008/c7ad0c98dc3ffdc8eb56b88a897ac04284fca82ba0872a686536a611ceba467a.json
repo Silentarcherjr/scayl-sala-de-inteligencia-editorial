@@ -1,0 +1,84 @@
+{
+ "data": {
+  "proposed_title": "Fiscalía amplía medidas cautelares en caso Lili Pink",
+  "public_interest_angle": "El caso Lili Pink sigue siendo un tema de interés público en Panamá debido a su relevancia en la lucha contra la corrupción.",
+  "brief": [
+   {
+    "text": "Según hsbnoticias.com, la Fiscalía amplió medidas cautelares en el caso Lili Pink y incluyó una nueva empresa vinculada a importaciones desde Panamá.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0149-001"
+    ]
+   },
+   {
+    "text": "La Fiscalía reportó la ampliación de medidas cautelares en el caso Lili Pink, según la misma fuente.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0149-002"
+    ]
+   },
+   {
+    "text": "La Fiscalía incluyó una nueva empresa vinculada a importaciones desde Panamá en el caso Lili Pink, según hsbnoticias.com.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0149-003"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Cuál es el nombre de la empresa incluida en las nuevas medidas cautelares?",
+   "¿Qué tipo de importaciones se relacionan con la empresa incluida en el caso?",
+   "¿Qué acciones específicas se tomarán contra la empresa en el marco del caso Lili Pink?"
+  ],
+  "script": [
+   {
+    "text": "Según hsbnoticias.com, la Fiscalía amplió medidas cautelares en el caso Lili Pink y incluyó una nueva empresa vinculada a importaciones desde Panamá.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0149-001"
+    ]
+   },
+   {
+    "text": "La Fiscalía reportó la ampliación de medidas cautelares en el caso Lili Pink, según la misma fuente.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0149-002"
+    ]
+   },
+   {
+    "text": "La Fiscalía incluyó una nueva empresa vinculada a importaciones desde Panamá en el caso Lili Pink, según hsbnoticias.com.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0149-003"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "La Fiscalía amplió medidas cautelares en el caso Lili Pink y incluyó una nueva empresa vinculada a importaciones desde Panamá, según hsbnoticias.com.",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0149-001"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar el nombre de la empresa incluida en las nuevas medidas cautelares.",
+   "Verificar el vínculo entre la empresa y las importaciones desde Panamá.",
+   "Validar la información con la Fiscalía para obtener detalles adicionales."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 26254,
+  "tokens_in": 1411,
+  "tokens_out": 718,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-08T23:42:30.485893Z"
+ }
+}

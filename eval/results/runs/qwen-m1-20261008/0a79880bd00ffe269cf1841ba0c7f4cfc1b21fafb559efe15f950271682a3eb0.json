@@ -1,0 +1,56 @@
+{
+ "data": {
+  "proposed_title": "TVN Media refuerza su compromiso social con jornada de voluntariado en el Banco de Alimentos",
+  "public_interest_angle": "TVN Media participa en actividades de voluntariado para apoyar causas sociales.",
+  "brief": [
+   {
+    "text": "TVN Media anunció una jornada de voluntariado en el Banco de Alimentos, lo que refleja su compromiso social. La iniciativa fue reportada por la propia empresa.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0009-001"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Cuál fue el alcance de la jornada de voluntariado en el Banco de Alimentos?",
+   "¿Qué actividades específicas se llevaron a cabo durante el evento?",
+   "¿Cómo se midió el impacto de esta iniciativa en la comunidad?"
+  ],
+  "script": [
+   {
+    "text": "TVN Media refuerza su compromiso social con una jornada de voluntariado en el Banco de Alimentos. La empresa anunció la iniciativa, que forma parte de su esfuerzo por apoyar causas sociales.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0009-001"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "TVN Media refuerza su compromiso social con una jornada de voluntariado en el Banco de Alimentos. La empresa anunció la iniciativa.",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0009-001"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar el contenido completo de los artículos que reportaron la iniciativa.",
+   "Verificar si la jornada de voluntariado fue efectivamente realizada y su alcance.",
+   "Comprobar si la participación de TVN Media fue oficial y cuál fue su rol en la actividad."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 12100,
+  "tokens_in": 1037,
+  "tokens_out": 455,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-09T01:33:15.373768Z"
+ }
+}

@@ -1,0 +1,56 @@
+{
+ "data": {
+  "proposed_title": "Construcción del Cuarto Puente sobre el Canal de Panamá presenta un 39% de avance",
+  "public_interest_angle": "Avance en la infraestructura del Canal de Panamá",
+  "brief": [
+   {
+    "text": "Según telemetro.com, la Construcción del Cuarto Puente sobre el Canal de Panamá presenta un 39% de avance, según un titular publicado en su sitio web.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0117-001"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Cuál es el progreso actual real de la construcción del Cuarto Puente?",
+   "¿Qué instituciones o autoridades han confirmado el avance del 39%?",
+   "¿Qué se espera completar en los próximos meses con respecto al proyecto?"
+  ],
+  "script": [
+   {
+    "text": "Según telemetro.com, la Construcción del Cuarto Puente sobre el Canal de Panamá presenta un 39% de avance, según un titular publicado en su sitio web.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0117-001"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "Según telemetro.com, la Construcción del Cuarto Puente sobre el Canal de Panamá presenta un 39% de avance, según un titular publicado en su sitio web.",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0117-001"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar el avance real del 39% del Cuarto Puente con fuentes oficiales.",
+   "Verificar si el titular de telemetro.com representa un dato actual o histórico.",
+   "Investigar si existen otros medios que hayan reportado el mismo avance."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 15486,
+  "tokens_in": 1002,
+  "tokens_out": 455,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-08T23:39:43.991462Z"
+ }
+}

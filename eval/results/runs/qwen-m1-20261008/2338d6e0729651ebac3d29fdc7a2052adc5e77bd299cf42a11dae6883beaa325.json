@@ -1,0 +1,73 @@
+{
+ "data": {
+  "proposed_title": "Enrique Riquelme explica traslado de su holding a Panamá: 'No hay absolutamente nada fiscal'",
+  "public_interest_angle": "El traslado de activos empresariales a Panamá y su relación con la fiscalidad.",
+  "brief": [
+   {
+    "text": "Según laestrella.com.pa, Enrique Riquelme explicó el traslado de su holding de España a Panamá con la frase: 'No hay absolutamente nada fiscal'.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0104-002",
+     "CLM-0104-003"
+    ]
+   },
+   {
+    "text": "La afirmación de Riquelme se presenta como una explicación del movimiento de su holding, aunque no se dispone de información detallada sobre el contexto o motivos del traslado.",
+    "tag": "INFERENCIA",
+    "claim_ids": [
+     "CLM-0104-003"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Cuál es el contexto exacto del traslado de la holding de España a Panamá?",
+   "¿Qué significa exactamente la frase 'No hay absolutamente nada fiscal' en este contexto?",
+   "¿Existen otros casos similares de traslados de activos empresariales a Panamá con justificaciones fiscales?"
+  ],
+  "script": [
+   {
+    "text": "Según laestrella.com.pa, Enrique Riquelme explicó el traslado de su holding de España a Panamá con la frase: 'No hay absolutamente nada fiscal'.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0104-002",
+     "CLM-0104-003"
+    ]
+   },
+   {
+    "text": "La afirmación de Riquelme se presenta como una explicación del movimiento de su holding, aunque no se dispone de información detallada sobre el contexto o motivos del traslado.",
+    "tag": "INFERENCIA",
+    "claim_ids": [
+     "CLM-0104-003"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "Enrique Riquelme explica el traslado de su holding a Panamá: 'No hay absolutamente nada fiscal'.",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0104-002",
+    "CLM-0104-003"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar el contenido completo del artículo de laestrella.com.pa para contextualizar la declaración de Riquelme.",
+   "Verificar si existen otros casos similares de traslados de activos empresariales a Panamá con justificaciones fiscales.",
+   "Investigar si la frase 'No hay absolutamente nada fiscal' se refiere a un sistema fiscal específico o a una crítica general."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 37188,
+  "tokens_in": 1412,
+  "tokens_out": 682,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-09T00:34:53.915753Z"
+ }
+}

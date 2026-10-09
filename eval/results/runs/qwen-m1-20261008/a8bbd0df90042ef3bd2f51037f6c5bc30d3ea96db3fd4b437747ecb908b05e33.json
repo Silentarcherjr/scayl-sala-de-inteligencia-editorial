@@ -1,0 +1,33 @@
+{
+ "data": {
+  "claims": [
+   {
+    "source_id": "gdt-c72924d8c2b87800874a",
+    "statement": "'No hay absolutamente nada fiscal'",
+    "type": "DECLARACION",
+    "attributed_to": "Enrique Riquelme"
+   },
+   {
+    "source_id": "gdt-c72924d8c2b87800874a",
+    "statement": "así explica Enrique Riquelme el traslado de su holding de España a Panamá",
+    "type": "DECLARACION",
+    "attributed_to": "Enrique Riquelme"
+   }
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "claims-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 3633,
+  "tokens_in": 467,
+  "tokens_out": 141,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-08T23:35:25.697111Z"
+ }
+}

@@ -1,0 +1,56 @@
+{
+ "data": {
+  "proposed_title": "Canal de Panamá destinará la mayor parte de sus aportes al presupuesto y gastos del Estado",
+  "public_interest_angle": "El Canal de Panamá podría contribuir significativamente al financiamiento del Estado, según un titular reportado.",
+  "brief": [
+   {
+    "text": "Según larepublica.co, el Canal de Panamá destinará la mayor parte de sus aportes al presupuesto y gastos del Estado. La noticia se basa únicamente en el titular de un artículo.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0055-001"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Qué porcentaje exacto de los aportes del Canal de Panamá se destinará al presupuesto del Estado?",
+   "¿Cuál es la base legal o contractual que permite esta asignación de recursos?",
+   "¿Qué instituciones o autoridades han confirmado esta información?"
+  ],
+  "script": [
+   {
+    "text": "Según larepublica.co, el Canal de Panamá podría destinar la mayor parte de sus aportes al presupuesto y gastos del Estado. La noticia se basa únicamente en el titular de un artículo. ¿Qué porcentaje exacto se destinará y cuál es la base legal para esta asignación?",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0055-001"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "Según larepublica.co, el Canal de Panamá podría destinar la mayor parte de sus aportes al presupuesto del Estado. ¿Qué porcentaje exacto se destinará?",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0055-001"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar si el Canal de Panamá efectivamente destinará la mayor parte de sus aportes al presupuesto del Estado.",
+   "Verificar la base legal o contractual que respalda esta asignación de recursos.",
+   "Consultar a fuentes oficiales del Canal de Panamá para confirmar la información."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 16835,
+  "tokens_in": 1009,
+  "tokens_out": 516,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-09T01:32:05.266007Z"
+ }
+}

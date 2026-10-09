@@ -1,0 +1,73 @@
+{
+ "data": {
+  "proposed_title": "El Canal de Panamá aplica nueva reducción del calado para enfrentar el fenómeno de El Niño",
+  "public_interest_angle": "El Canal de Panamá ajusta sus operaciones para mitigar el impacto del fenómeno climático El Niño.",
+  "brief": [
+   {
+    "text": "Según prensa.com, el Canal de Panamá aplica una nueva reducción del calado para enfrentar el fenómeno de El Niño. Esta medida se reporta como parte de las acciones para garantizar la operación del canal en condiciones climáticas adversas.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0158-001",
+     "CLM-0158-003"
+    ]
+   },
+   {
+    "text": "El nivel del lago Gatún, según datos del ACP del 14 de agosto de 2026, se registró en 84.12 pies.",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0158-002"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Cuál es el impacto de la reducción del calado en la capacidad operativa del Canal de Panamá?",
+   "¿Qué medidas adicionales se están tomando para mitigar los efectos del El Niño en el sistema de agua del canal?",
+   "¿Cómo se relaciona el nivel del lago Gatún con la operación del canal durante el fenómeno de El Niño?"
+  ],
+  "script": [
+   {
+    "text": "Según prensa.com, el Canal de Panamá aplica una nueva reducción del calado para enfrentar el fenómeno de El Niño. Esta medida se reporta como parte de las acciones para garantizar la operación del canal en condiciones climáticas adversas.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0158-001",
+     "CLM-0158-003"
+    ]
+   },
+   {
+    "text": "El nivel del lago Gatún, según datos del ACP del 14 de agosto de 2026, se registró en 84.12 pies.",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0158-002"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "El Canal de Panamá aplica nueva reducción del calado para enfrentar el fenómeno de El Niño. El nivel del lago Gatún fue de 84.12 pies el 14 de agosto de 2026.",
+   "tag": "HECHO",
+   "claim_ids": [
+    "CLM-0158-001",
+    "CLM-0158-002"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar si la reducción del calado se implementó oficialmente y cuáles son sus implicaciones operativas.",
+   "Verificar si el nivel del lago Gatún se mantiene en la misma tendencia a partir del 14 de agosto de 2026.",
+   "Validar si el fenómeno de El Niño está directamente relacionado con la decisión de reducir el calado."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 21877,
+  "tokens_in": 1377,
+  "tokens_out": 755,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-08T23:37:37.990666Z"
+ }
+}

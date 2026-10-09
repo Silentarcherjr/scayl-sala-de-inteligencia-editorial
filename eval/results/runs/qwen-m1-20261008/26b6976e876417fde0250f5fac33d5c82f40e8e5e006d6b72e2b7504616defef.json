@@ -1,0 +1,56 @@
+{
+ "data": {
+  "proposed_title": "Sheinbaum recibe al presidente Mulino en discusión sobre neutralidad del Canal de Panamá",
+  "public_interest_angle": "Relación entre la administración mexicana y Panamá en temas de infraestructura y logística.",
+  "brief": [
+   {
+    "text": "Según la página web lajornadasanluis.com.mx, la jefa del gobierno de la Ciudad de México, Claudia Sheinbaum, recibió al presidente de Panamá, José Raúl Mulino, en una reunión donde se abordó el tema de la neutralidad del uso del Canal de Panamá. La información se basa únicamente en el titular de un artículo publicado en esa fuente.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0121-001"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Cuál fue el resultado de la reunión entre Sheinbaum y Mulino?",
+   "¿Qué aspectos específicos se discutieron sobre la neutralidad del Canal de Panamá?",
+   "¿Qué otros temas se abordaron durante la reunión?"
+  ],
+  "script": [
+   {
+    "text": "La jefa del gobierno de la Ciudad de México, Claudia Sheinbaum, recibió al presidente de Panamá, José Raúl Mulino, en una reunión donde se abordó el tema de la neutralidad del uso del Canal de Panamá. Según la página web lajornadasanluis.com.mx, la conversación se centró en este punto clave. Aunque no se tiene acceso al contenido completo del artículo, el titular sugiere que el tema fue central en la reunión.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0121-001"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "Claudia Sheinbaum recibió al presidente de Panamá, José Raúl Mulino, en una reunión sobre la neutralidad del Canal de Panamá. La información proviene de lajornadasanluis.com.mx.",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0121-001"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar el contenido completo del artículo de lajornadasanluis.com.mx para obtener más detalles sobre la reunión.",
+   "Verificar si la reunión entre Sheinbaum y Mulino fue oficial y si se abordaron otros temas.",
+   "Asegurar que la información sobre la neutralidad del Canal de Panamá sea precisa y actual."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 20331,
+  "tokens_in": 1026,
+  "tokens_out": 598,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-08T23:40:04.326945Z"
+ }
+}

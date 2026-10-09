@@ -1,0 +1,71 @@
+{
+ "data": {
+  "proposed_title": "Canal de Panamá flexibiliza el sistema de reservas en medio de restricción al tránsito",
+  "public_interest_angle": "Logística y operaciones del Canal de Panamá",
+  "brief": [
+   {
+    "text": "Según revistaeyn.com, Canal de Panamá flexibilizó el sistema de reservas en medio de restricción al tránsito. La medida se tomó como parte de ajustes operativos en respuesta a condiciones actuales.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0181-001"
+    ]
+   },
+   {
+    "text": "El nivel del lago Gatún, según datos del ACP del 30 de agosto de 2026, se registró en 84.08 pies.",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0181-002"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Cuáles son los detalles específicos de la flexibilización del sistema de reservas del Canal de Panamá?",
+   "¿Qué impacto tiene la restricción al tránsito en las operaciones del canal?",
+   "¿Cómo se relaciona el nivel del lago Gatún con la operación del canal?"
+  ],
+  "script": [
+   {
+    "text": "Según revistaeyn.com, el Canal de Panamá flexibilizó su sistema de reservas en medio de una restricción al tránsito. Esta medida forma parte de ajustes operativos en respuesta a condiciones actuales.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0181-001"
+    ]
+   },
+   {
+    "text": "El nivel del lago Gatún, según datos del ACP del 30 de agosto de 2026, se registró en 84.08 pies.",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0181-002"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "Canal de Panamá flexibiliza reservas en medio de restricción al tránsito. Nivel del lago Gatún: 84.08 pies (30 de agosto de 2026).",
+   "tag": "HECHO",
+   "claim_ids": [
+    "CLM-0181-001",
+    "CLM-0181-002"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar los detalles de la flexibilización del sistema de reservas del Canal de Panamá.",
+   "Verificar si la restricción al tránsito afecta directamente las operaciones del canal.",
+   "Asegurar que los datos del nivel del lago Gatún se refieran a la medición del 30 de agosto de 2026."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 20807,
+  "tokens_in": 1214,
+  "tokens_out": 673,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-08T23:38:17.527245Z"
+ }
+}

@@ -1,0 +1,56 @@
+{
+ "data": {
+  "proposed_title": "Panamá investiga la pérdida total del buque carguero que naufragó en India y dejó 22 desaparecidos",
+  "public_interest_angle": "Panamá está revisando su responsabilidad en la pérdida de un buque carguero que naufragó en India, dejando 22 personas desaparecidas.",
+  "brief": [
+   {
+    "text": "Según infobae.com, Panamá investiga la pérdida total del buque carguero que naufragó en India y dejó 22 desaparecidos. La información se basa en un titular publicado en el medio.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0175-001"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Cuál fue el rol de Panamá en la operación del buque carguero que naufragó?",
+   "¿Qué información se tiene sobre la causa del naufragio?",
+   "¿Cómo se está evaluando la responsabilidad de Panamá en este incidente?"
+  ],
+  "script": [
+   {
+    "text": "Panamá está investigando la pérdida total de un buque carguero que naufragó en India, dejando 22 personas desaparecidas. Según infobae.com, el país revisa su responsabilidad en el incidente. La información se basa en un titular publicado en el medio.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0175-001"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "Panamá investiga la pérdida total de un buque carguero que naufragó en India, dejando 22 desaparecidos. La información se basa en un titular publicado en infobae.com.",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0175-001"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar el rol de Panamá en la operación del buque carguero.",
+   "Verificar la causa del naufragio y su relación con Panamá.",
+   "Validar la información del titular publicado en infobae.com."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 19173,
+  "tokens_in": 1025,
+  "tokens_out": 523,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-08T23:42:04.229151Z"
+ }
+}

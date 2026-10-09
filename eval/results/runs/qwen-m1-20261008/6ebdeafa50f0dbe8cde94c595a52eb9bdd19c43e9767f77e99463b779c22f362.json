@@ -1,0 +1,71 @@
+{
+ "data": {
+  "proposed_title": "Canal de Panamá reduce el tránsito de buques por El Niño: ¿qué significa para el país?",
+  "public_interest_angle": "El Niño afecta el tránsito marítimo en el Canal de Panamá, impactando la logística y la economía del país.",
+  "brief": [
+   {
+    "text": "Según telemetro.com, el Canal de Panamá reduce el tránsito de buques debido al fenómeno climático El Niño, lo que podría afectar la logística y la economía del país. Sin embargo, no se dispone de información detallada sobre el impacto real de este fenómeno.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0088-001"
+    ]
+   },
+   {
+    "text": "El nivel del lago Gatún, un factor clave en el funcionamiento del Canal, fue de 84.0 pies el 4 de septiembre de 2026, según datos del ACP.",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0088-002"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Cuál es el impacto real del fenómeno El Niño en el tránsito marítimo del Canal de Panamá?",
+   "¿Cómo afecta el nivel del lago Gatún a la operación del Canal y cuál es su relación con el fenómeno climático?",
+   "¿Qué medidas ha tomado el Canal de Panamá para mitigar los efectos del El Niño en su operación?"
+  ],
+  "script": [
+   {
+    "text": "Según telemetro.com, el Canal de Panamá reduce el tránsito de buques debido al fenómeno climático El Niño. Sin embargo, no se dispone de información detallada sobre el impacto real de este fenómeno.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0088-001"
+    ]
+   },
+   {
+    "text": "El nivel del lago Gatún, un factor clave en el funcionamiento del Canal, fue de 84.0 pies el 4 de septiembre de 2026, según datos del ACP.",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0088-002"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "El Canal de Panamá reduce el tránsito de buques por El Niño. ¿Qué significa para el país? El nivel del lago Gatún fue de 84.0 pies el 4 de septiembre de 2026.",
+   "tag": "HECHO",
+   "claim_ids": [
+    "CLM-0088-001",
+    "CLM-0088-002"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar el impacto real del fenómeno El Niño en el tránsito marítimo del Canal de Panamá.",
+   "Verificar cómo el nivel del lago Gatún afecta la operación del Canal.",
+   "Obtener información detallada sobre el artículo publicado en telemetro.com."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 20542,
+  "tokens_in": 1216,
+  "tokens_out": 744,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-08T23:36:24.586171Z"
+ }
+}

@@ -126,3 +126,9 @@ def test_fixture_cached_packages_still_validate(events, bundle):
     for p in bundle.packages:
         cleaned, _ = validate_package(p, events[p.event_id])
         assert len(cleaned.brief) == len(p.brief), cleaned.validation.issues
+
+
+def test_internal_claim_ids_are_not_unsupported_entities():
+    from scayl.gen.validators import _unsupported_names
+    text = "Según telemetro.com, hubo un sismo de magnitud 4.7. (claim_ids: CLM-0125-002, CLM-0125-004)"
+    assert _unsupported_names(text, "sismo de magnitud 4.7 sacude la frontera") == []

@@ -1,0 +1,66 @@
+{
+ "data": {
+  "proposed_title": "Ilya Espino de Marotta asume como administradora del Canal de Panamá para el período 2026-2033",
+  "public_interest_angle": "La designación de nueva administradora del Canal de Panamá ha sido reportada por medios digitales, aunque aún no se dispone de información detallada sobre el proceso o su confirmación oficial.",
+  "brief": [
+   {
+    "text": "Según mundomaritimo.cl, Ilya Espino de Marotta asume como administradora del Canal de Panamá para el período 2026-2033. La información se basa únicamente en el titular de un artículo.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0092-001"
+    ]
+   },
+   {
+    "text": "No se dispone de información detallada sobre el proceso de designación ni de la confirmación oficial de la administración del Canal de Panamá.",
+    "tag": "HECHO",
+    "claim_ids": []
+   }
+  ],
+  "investigation_questions": [
+   "¿Ha sido confirmada oficialmente la designación de Ilya Espino de Marotta como administradora del Canal de Panamá?",
+   "¿Qué proceso se sigue para la designación de la administradora del Canal de Panamá?",
+   "¿Qué información adicional se puede obtener sobre el rol y responsabilidades de Ilya Espino de Marotta en este cargo?"
+  ],
+  "script": [
+   {
+    "text": "Según mundomaritimo.cl, Ilya Espino de Marotta asume como administradora del Canal de Panamá para el período 2026-2033. La información se basa únicamente en el titular de un artículo.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0092-001"
+    ]
+   },
+   {
+    "text": "Hasta ahora, no se ha confirmado oficialmente esta designación ni se dispone de más detalles sobre el proceso.",
+    "tag": "HECHO",
+    "claim_ids": []
+   }
+  ],
+  "social_copy": {
+   "text": "Ilya Espino de Marotta asume como administradora del Canal de Panamá para el período 2026-2033, según reporte de mundomaritimo.cl. No se ha confirmado oficialmente.",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0092-001"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar si la designación de Ilya Espino de Marotta como administradora del Canal de Panamá ha sido oficialmente anunciada por la institución.",
+   "Verificar el proceso de designación y si se ha publicado información detallada sobre el mismo.",
+   "Consultar fuentes oficiales del Canal de Panamá para confirmar la información reportada."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 21884,
+  "tokens_in": 1027,
+  "tokens_out": 670,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-08T23:39:28.501297Z"
+ }
+}

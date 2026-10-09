@@ -1,0 +1,66 @@
+{
+ "data": {
+  "proposed_title": "Enrique Riquelme traslada su fortuna a Panamá tras la presión fiscal del gobierno español",
+  "public_interest_angle": "Movimiento de patrimonio de un deportista internacional en contexto de regulación fiscal",
+  "brief": [
+   {
+    "text": "Según mundodeportivo.com, se reporta que Enrique Riquelme trasladó su fortuna a Panamá tras la presión fiscal del gobierno español. La noticia se basa únicamente en el titular de un artículo disponible en la web.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0102-001"
+    ]
+   },
+   {
+    "text": "No se dispone de información adicional sobre el monto de la transferencia ni sobre el impacto fiscal de este movimiento.",
+    "tag": "HECHO",
+    "claim_ids": []
+   }
+  ],
+  "investigation_questions": [
+   "¿Qué información adicional se puede obtener sobre el traslado de patrimonio de Enrique Riquelme?",
+   "¿Cuál fue el impacto fiscal de este movimiento en el gobierno español?",
+   "¿Existen otros casos similares de deportistas que han trasladado su fortuna a Panamá?"
+  ],
+  "script": [
+   {
+    "text": "Según mundodeportivo.com, se reporta que Enrique Riquelme trasladó su fortuna a Panamá tras la presión fiscal del gobierno español. La noticia se basa únicamente en el titular de un artículo disponible en la web.",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0102-001"
+    ]
+   },
+   {
+    "text": "No se dispone de información adicional sobre el monto de la transferencia ni sobre el impacto fiscal de este movimiento.",
+    "tag": "HECHO",
+    "claim_ids": []
+   }
+  ],
+  "social_copy": {
+   "text": "Según mundodeportivo.com, se reporta que Enrique Riquelme trasladó su fortuna a Panamá tras la presión fiscal del gobierno español. La noticia se basa únicamente en el titular de un artículo disponible en la web.",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0102-001"
+   ]
+  },
+  "pending_verifications": [
+   "Confirmar si el traslado de patrimonio de Enrique Riquelme fue realmente realizado y cuáles son los detalles del movimiento.",
+   "Verificar si el gobierno español efectivamente ejerció presión fiscal sobre Riquelme.",
+   "Investigar si existen otros casos similares de deportistas que han trasladado su fortuna a Panamá."
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 16260,
+  "tokens_in": 1046,
+  "tokens_out": 626,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-09T01:33:03.271149Z"
+ }
+}

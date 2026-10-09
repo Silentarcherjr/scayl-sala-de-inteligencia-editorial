@@ -1,0 +1,90 @@
+{
+ "data": {
+  "proposed_title": "Sismo de magnitud 4.5 registrado en Panamá; se reporta sismo de magnitud 4.7 en frontera con Costa Rica",
+  "public_interest_angle": "Evento natural con posible discrepancia en la magnitud del sismo",
+  "brief": [
+   {
+    "text": "El USGS registró un sismo de magnitud 4.5 a 3 km al este-noreste de Santa Cruz, Panamá, el 16 de julio de 2026, a las 10:33 hora local. (claim_ids: CLM-0125-001)",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0125-001"
+    ]
+   },
+   {
+    "text": "Según telemetro.com, se reportó un sismo de magnitud 4.7 que sacudió la frontera entre Panamá y Costa Rica, sin reportes de daños. (claim_ids: CLM-0125-002, CLM-0125-004, CLM-0125-005)",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0125-002",
+     "CLM-0125-004",
+     "CLM-0125-005"
+    ]
+   },
+   {
+    "text": "No hay evidencia de daños causados por el sismo. (claim_ids: CLM-0125-003)",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0125-003"
+    ]
+   }
+  ],
+  "investigation_questions": [
+   "¿Cuál es la fuente exacta de la magnitud 4.7 mencionada en el titular de telemetro.com?",
+   "¿Qué instituciones responsables de monitorear sismos en la zona confirmaron la magnitud del evento?",
+   "¿Qué información adicional se puede obtener de los artículos completos de telemetro.com para verificar los reportes?"
+  ],
+  "script": [
+   {
+    "text": "El USGS registró un sismo de magnitud 4.5 a 3 km al este-noreste de Santa Cruz, Panamá, el 16 de julio de 2026, a las 10:33 hora local. (claim_ids: CLM-0125-001)",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0125-001"
+    ]
+   },
+   {
+    "text": "Según telemetro.com, se reportó un sismo de magnitud 4.7 que sacudió la frontera entre Panamá y Costa Rica, sin reportes de daños. (claim_ids: CLM-0125-002, CLM-0125-004, CLM-0125-005)",
+    "tag": "DECLARACION",
+    "claim_ids": [
+     "CLM-0125-002",
+     "CLM-0125-004",
+     "CLM-0125-005"
+    ]
+   },
+   {
+    "text": "No hay evidencia de daños causados por el sismo. (claim_ids: CLM-0125-003)",
+    "tag": "HECHO",
+    "claim_ids": [
+     "CLM-0125-003"
+    ]
+   }
+  ],
+  "social_copy": {
+   "text": "Sismo de magnitud 4.5 registrado en Panamá; se reporta sismo de magnitud 4.7 en frontera con Costa Rica. No se reportan daños.",
+   "tag": "DECLARACION",
+   "claim_ids": [
+    "CLM-0125-002",
+    "CLM-0125-004",
+    "CLM-0125-005"
+   ]
+  },
+  "pending_verifications": [
+   "¿Cuál es la fuente exacta de la magnitud 4.7 mencionada en el titular de telemetro.com?",
+   "¿Qué instituciones responsables de monitorear sismos en la zona confirmaron la magnitud del evento?",
+   "¿Qué información adicional se puede obtener de los artículos completos de telemetro.com para verificar los reportes?"
+  ]
+ },
+ "meta": {
+  "mode": "live",
+  "model": "ollama:qwen3:8b",
+  "prompt_version": "studio-v1",
+  "params": {
+   "temperature": 0,
+   "seed": 42,
+   "num_ctx": 4096
+  },
+  "latency_ms": 39185,
+  "tokens_in": 1750,
+  "tokens_out": 1012,
+  "cost_usd": 0.0,
+  "created_at": "2026-10-08T23:40:43.514492Z"
+ }
+}

@@ -253,6 +253,8 @@ def _unsupported_names(text: str, evidence: str) -> list[str]:
     targets entities the evidence never mentions, not fuller forms of a cited name."""
     missing = []
     for m in _NAME_RUN.finditer(text):
+        if re.match(r"-\d", text[m.end():m.end() + 2]):
+            continue  # internal identifiers such as CLM-0125-002 are not named entities
         before = text[:m.start()].rstrip()
         words_ = [w for w in m.group(0).split() if w[:1].isupper()]
         if not before or before[-1] in ".:;¿¡!?\"“«(—-":
