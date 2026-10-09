@@ -1,6 +1,8 @@
 import asyncio
 from pathlib import Path
+
 from playwright.async_api import async_playwright
+
 HERE = Path(__file__).parent
 async def main():
     async with async_playwright() as p:
