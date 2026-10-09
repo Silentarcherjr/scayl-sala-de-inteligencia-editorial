@@ -69,3 +69,17 @@ Fetch actual no contiene video ni recomendación plan B, por lo que no se modifi
 
 Nota: las imágenes existentes de las diapositivas se preservaron; esta corrección actualiza el guion y añade aclaración visible de funciones y límites.
 
+
+## Publicación autorizada y acceso (2026-10-09 04:13 UTC / 23:13 Panamá)
+
+La persona autorizó explícitamente: «Sí, publica las cuatro páginas propias de SCAYL».
+La página del equipo se publicó desde Compartir → Publicar. Las tres páginas hijas muestran por herencia «Deshacer / Ver sitio», es decir, publicadas.
+Antes de publicación, todas estaban compartidas con Todos en hackIAthon 4taEd (54 miembros de espacio de equipo, acceso completo).
+URLs reales:
+- https://conscious-handbell-91a.notion.site/SCAYL-Sala-de-Inteligencia-Editorial-3f36d0f0b11481188e1ae1f61304fe7d
+- https://conscious-handbell-91a.notion.site/Documentaci-n-t-cnica-3f36d0f0b11481e5a2d9e50ea351c61a
+- https://conscious-handbell-91a.notion.site/Documentaci-n-funcional-3f36d0f0b11481f3a6dcd472e557e6e9
+- https://conscious-handbell-91a.notion.site/Presentaci-n-Pitch-Day-3f36d0f0b11481e08c92e5440b11d9f6
+Las cuatro renderizan en la vista pública Chrome, con «Comienza ahora» y sin formulario de acceso. Técnica y Pitch incluyen las correcciones tras hidratación; funcional contiene Gemini/Verificar.
+HTTP anónimo Python obtuvo 403 (bloqueo automatizado de Notion); no se afirma HTTP200. Browser IAB dejó de estar disponible tras selección de Chrome; comprobación adicional en sesión totalmente limpia pendiente del agente raíz si su IAB funciona.
+/tmp/scayl-correo-final.txt actualizado con los cuatro enlaces públicos reales. Correo no enviado.

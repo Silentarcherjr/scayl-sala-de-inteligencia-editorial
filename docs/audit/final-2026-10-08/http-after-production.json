@@ -1,0 +1,62 @@
+{
+  "http": [
+    {
+      "path": "/",
+      "status": 200,
+      "url": "https://scayl-editorial.vercel.app/"
+    },
+    {
+      "path": "/recorrido/",
+      "status": 200,
+      "url": "https://scayl-editorial.vercel.app/recorrido/"
+    },
+    {
+      "path": "/caso/EVT-0101/",
+      "status": 200,
+      "url": "https://scayl-editorial.vercel.app/caso/EVT-0101/"
+    },
+    {
+      "path": "/caso/EVT-0078/",
+      "status": 200,
+      "url": "https://scayl-editorial.vercel.app/caso/EVT-0078/"
+    },
+    {
+      "path": "/consultas/",
+      "status": 200,
+      "url": "https://scayl-editorial.vercel.app/consultas/"
+    },
+    {
+      "path": "/verificar/",
+      "status": 200,
+      "url": "https://scayl-editorial.vercel.app/verificar/"
+    },
+    {
+      "path": "/trust-lab/",
+      "status": 200,
+      "url": "https://scayl-editorial.vercel.app/trust-lab/"
+    },
+    {
+      "path": "/simulador/",
+      "status": 200,
+      "url": "https://scayl-editorial.vercel.app/simulador/"
+    },
+    {
+      "path": "/boletin/",
+      "status": 200,
+      "url": "https://scayl-editorial.vercel.app/boletin/"
+    }
+  ],
+  "secret_scan": {
+    "scope": "versioned working-tree files, common key signatures only",
+    "files": 1034,
+    "findings": []
+  },
+  "production": {
+    "sha": "ffa0108bee912bb5df714f8b2860a668dfe7077c",
+    "deployment_id": 6952737857,
+    "state": "success",
+    "created_at_utc": "2026-10-09T04:09:58Z",
+    "immutable_url": "https://scayl-editorial-lerrjzq53-hacks10.vercel.app",
+    "source": "GitHub deployments API"
+  }
+}
