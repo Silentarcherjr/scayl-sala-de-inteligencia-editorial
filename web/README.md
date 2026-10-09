@@ -77,7 +77,7 @@ escritorio/móvil, recorrido completo, enlaces profundos, teclado y cero peticio
 apagado y restaurado. La comprensión con una persona nueva aún no se ha medido.
 
 DL-036 reemplaza los avisos que derivaban consulta/revisión a Streamlit: ambos formularios están
-en esta web. Streamlit permanece como versión de respaldo en el pie. Notion es opcional según C-03.
+en esta web. Streamlit local es el respaldo offline. C-04 sustituye C-03 y exige los tres enlaces de Notion en la entrega.
 
 
 ## Boletín de entorno logístico · DL-035 / revisión del PR #71

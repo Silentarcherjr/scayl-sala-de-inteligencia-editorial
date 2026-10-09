@@ -1,9 +1,6 @@
 # Modo opcional "IA online en vivo" (Gemini) para Preguntas y respuestas
 
-**Estado:** implementado y probado solo con HTTP simulado (sin clave real). **Apagado por defecto.** Si no se
-configuran las variables de entorno, SCAYL se comporta exactamente igual que antes (respuestas guardadas /
-plantilla). Requiere aprobación humana explícita antes de activarse con una clave real (AGENTS.md §4: sin APIs
-pagas sin aprobación).
+**Estado:** implementado, con pruebas HTTP simuladas y pruebas reales locales y en Vercel Preview registradas abajo. La interfaz de Production ofrece Gemini opcional. Esta auditoría de cierre no ha ejecutado llamadas nuevas a Production: falta confirmar que el proyecto de Google tiene facturación desactivada. Las pruebas anteriores declaradas en el PDF no sustituyen esa comprobación. Sin configuración, se mantiene la respuesta con evidencia y el fallback explícito.
 
 ## Diseño
 
@@ -36,7 +33,7 @@ pregunta tampoco se registra (`log_message` del handler está silenciado).
 
 ## Control de acceso y límites (web/api/ask)
 
-El modo online se usa **solo si** se cumplen todas:
+El modo online requiere clave en servidor y uno de los dos controles: `SCAYL_LIVE_PUBLIC=1`, o código de acceso configurado y coincidente. Para el modo con código:
 
 1. `GEMINI_API_KEY` configurada en el servidor;
 2. `SCAYL_LIVE_ACCESS_CODE` configurada en el servidor;
@@ -58,12 +55,12 @@ es un límite de gasto**.
 | `SCAYL_LIVE_MAX_CALLS` | no | por defecto `50` (por instancia) |
 
 Luego redeploy. Prueba: `POST /api/ask` con `{"question": "...", "mode": "online", "access_code": "..."}`.
-La interfaz actual no tiene campo para el código; la etiqueta de modo sí reconoce `online`.
+La interfaz pública permite elegir Gemini; el control sin código depende de `SCAYL_LIVE_PUBLIC=1`.
 
 ## Tope de costo
 
 El tope real de gasto **debe** fijarse fuera de la app: en Google AI Studio (límites de uso / cuota del proyecto) y
-en Google Cloud Billing (presupuesto con alertas, o usar el nivel gratuito sin facturación activada). El contador
+en Google Cloud Billing (cuotas efectivas; un presupuesto con alertas no es un corte automático de gasto, o usar el nivel gratuito sin facturación activada). El contador
 por instancia es solo una guarda extra. El costo por llamada **no se mide** en SCAYL ("no medido").
 
 ## Inferencia local vs. externa
@@ -102,7 +99,7 @@ por instancia es solo una guarda extra. El costo por llamada **no se mide** en S
 
 ## Prueba en el preview real de Vercel (2026-10-08, despliegue `scayl-editorial-9v4ewmnrs`)
 Variables `GEMINI_API_KEY` y `SCAYL_LIVE_ACCESS_CODE` configuradas como secretos solo para Preview de la rama
-`claude/gemini-online-qa` (Production sin variables). Peticiones con `vercel curl` (protección de despliegue con la
+`claude/gemini-online-qa` (Production sin variables en ese momento; este registro corresponde al Preview, no al estado actual). Peticiones con `vercel curl` (protección de despliegue con la
 sesión del propietario):
 
 | Petición | Resultado |

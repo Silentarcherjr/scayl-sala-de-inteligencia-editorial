@@ -37,8 +37,8 @@ revisión humana. **La IA no decide qué es verdad ni qué se publica**: "aproba
 | Agrupación (F1, pares revisados por humano) | E5 **0,99** · TF-IDF 0,44 | Pares de desarrollo usados para calibrar: resultado optimista |
 | Precision@5 frente al top 5 del editor | 1/5 (exploratoria) | El editor vio antes una propuesta de IA (DL-024) |
 | Latencia del borrador | Mediana **13,1 s**, p95 17,0 s (n = 15) | AMD RX 9060 XT 8 GB, Ollama Vulkan |
-| Costo de API | **$0** | Inferencia 100% local; no incluye hardware ni electricidad (no medidos) |
-| Pruebas | T01–T10 y 389 pruebas en CI | `python -m pytest -q` |
+| Costo de API del borrador local | **$0** | Qwen3 8B local; excluye hardware y electricidad (no medidos). Gemini es externo: cuota y costo dependen del proyecto; costo global no medido |
+| Pruebas | T01–T10 y 432 pruebas en CI (main `1239dbd`, 2026-10-08) | `python -m pytest -q` |
 
 ### Evaluaciones de cierre (2026-10-08; automáticas, sin revisión humana nueva)
 | Medición | Antes → después | Alcance |
@@ -54,7 +54,8 @@ Lo que no medimos queda escrito como **"no medido"**: no afirmamos ahorro de tie
 ## Probarlo
 **Demo web principal:** [SCAYL · Sala de Inteligencia Editorial](https://scayl-editorial.vercel.app/).
 Next.js estático en Vercel: los mismos 165 eventos, componentes, evidencia y paquetes de SCAYL.
-Las consultas guiadas usan resultados precalculados; la consulta libre utiliza la API Python en modo caché.
+Las consultas guiadas usan resultados precalculados; la consulta libre usa la API Python con evidencia o, por elección del usuario, Gemini externo en modo `online`. Las salidas guardadas no son inferencia en vivo.
+`/verificar/` recupera y compara evidencia de forma determinista, sin IA generativa. Compatible no significa verdadero ni listo para publicar.
 La revisión de la demo web valida la decisión y guarda recibos en este navegador (DL-036).
 
 **Extensión bancaria:** abre `/boletin/` para leer el boletín de Logística y Canal (CU-05) y usa «Imprimir / guardar PDF». El boletín incluido es una plantilla, sin IA generativa; no evalúan personas ni recomiendan operaciones.
@@ -68,7 +69,7 @@ npx serve out
 ```
 Para regenerar los datos públicos desde el bundle revisado, ejecuta desde la raíz
 `python scripts/export_web.py` con el entorno Python del proyecto activo. Los JSON de
-`web/public/data/` están versionados; Vercel no necesita Python ni variables de entorno.
+`web/public/data/` están versionados; el frontend se exporta estático; las funciones de consultas y revisión usan Python. Gemini necesita configuración secreta en el servidor.
 Detalles y evidencia de verificación en `web/README.md` y `docs/screenshots/web/`.
 
 **Demo sin internet (recomendado, sin GPU ni compilación):**

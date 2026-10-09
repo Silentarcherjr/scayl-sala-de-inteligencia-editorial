@@ -42,7 +42,10 @@ Resumen "Qué puedes hacer con este caso", desglose de P y pestañas: Evento, Fu
 ![Ficha de Caso](img/jury-ficha-desktop.png)
 
 ### Consultas
-Preguntas libres en español respondidas solo con evidencia del corpus, citada, o con **abstención explícita** si falta evidencia. Incluye el Modo jurado con preguntas preparadas.
+Preguntas libres en español respondidas solo con evidencia del corpus, citada, o con **abstención explícita** si falta evidencia. Incluye el Modo jurado con respuestas guardadas y permite elegir Gemini externo para redacción en vivo con evidencia. Cada resultado indica su modo; sin evidencia se abstiene antes de llamar al modelo.
+
+### Verificar
+Contrasta afirmaciones con cifras mediante recuperación y comparación deterministas, sin IA generativa. Muestra fuentes y limitaciones; «compatible» no significa verdadero ni listo para publicar.
 
 ![Consultas](img/jury-consultas-desktop.png)
 

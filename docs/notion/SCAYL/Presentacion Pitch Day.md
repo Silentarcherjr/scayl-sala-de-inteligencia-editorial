@@ -60,7 +60,7 @@ Datos públicos: noticias (GDELT y RSS de TVN), ACP, INEC, Banco Mundial y USGS,
 | Agrupar titulares | **E5: F1 0,99** (pares de calibración: optimista) | TF-IDF: 0,44 | IA |
 | Clasificar temas | E5: 0,25 | **Reglas: 0,76** | Reglas |
 
-**El borrador lo escribe un LLM local** (Qwen3 8B): mediana de 13 s, **$0** de API (sin contar hardware ni electricidad), ningún dato sale de la redacción.
+**El borrador lo escribe un LLM local** (Qwen3 8B): mediana de 13 s, **$0** de API (sin contar hardware ni electricidad), esa inferencia es local. Consultas también ofrece Gemini externo opcional con pregunta y extractos públicos; cuota y costo dependen del proyecto. Verificar es determinista, sin IA generativa.
 
 **Y lo vigila el código:** **45/45** frases conservadas con cita (cobertura, no validez del sustento); las frases sin cita o con cifras sin respaldo se eliminan antes de llegar al editor.
 
@@ -114,5 +114,5 @@ Demo: https://scayl-editorial.vercel.app/ · Código: https://github.com/Silenta
 - **Si cinco medios replican una agencia, ¿cuántas fuentes independientes hay?** → Una procedencia.
 - **¿Qué pasa si no hay evidencia?** → Se abstiene y dice qué fuente faltaría.
 - **¿Y si una fuente trae instrucciones maliciosas?** → Se marca como sospechosa; nunca se cita ni se envía al modelo.
-- **¿Cuánto cuesta?** → $0 de API: todo corre local. El hardware (RX 9060 XT 8 GB) y la electricidad no están incluidos ni medidos.
+- **¿Cuánto cuesta?** → $0 de API para Qwen local, excluyendo hardware y electricidad. Gemini es externo: cuota y costo sujetos al proyecto; costo global no medido.
 - **¿Cuánto tiempo ahorra?** → No medido; no lo afirmamos.

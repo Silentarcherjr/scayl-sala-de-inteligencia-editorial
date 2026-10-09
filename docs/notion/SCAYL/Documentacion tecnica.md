@@ -91,8 +91,8 @@ Parámetros del LLM: temperatura 0, semilla 42, salida JSON con esquema. Prompts
 
 | Superficie | Tecnología | Detalle |
 |---|---|---|
-| Demo principal | Next.js estático en Vercel + funciones Python | Consulta libre y revisión en modo caché; sin claves ni costo |
-| Respaldo | Streamlit Community Cloud | Mismo stage auditado |
+| Demo principal | Next.js estático en Vercel + funciones Python | Consultas con evidencia y Gemini externo opcional; secretos solo en servidor, costo global no medido |
+| Respaldo | Streamlit local | `python scripts/demo_offline.py`; Community Cloud no forma parte de la entrega |
 | Offline | `python scripts/demo_offline.py` o `npx serve out` | Sin descargas ni llamadas externas; T10 verificado en pytest con la red bloqueada |
 
 Solo se publican el bundle público (sin descripciones RSS) y la caché revisada; cada archivo del stage tiene un hash verificado.
@@ -102,7 +102,8 @@ Solo se publican el bundle público (sin descripciones RSS) y la caché revisada
 - Solo titulares, URL y metadatos: no se redistribuyen artículos, imágenes ni videos.
 - Sin datos personales ni perfiles; las acusaciones se etiquetan como DECLARACIÓN con atribución.
 - Sin secretos en el repositorio (`.env` ignorado; `.env.example` sin valores secretos).
-- Inferencia 100 % local: ningún dato de la redacción sale a un tercero.
+- Qwen3 8B genera borradores localmente; los resultados publicados son guardados. Gemini opcional envía a Google la pregunta y hasta 8 extractos públicos: inferencia externa, cuota/costo sujetos al proyecto.
+- `/verificar/` usa recuperación y comparación deterministas, sin IA generativa; compatibilidad no prueba verdad.
 
 ## 8 bis. Errores conocidos (registro transparente)
 

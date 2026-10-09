@@ -181,3 +181,15 @@
 - Riesgo: más texto en pantalla. Se agrupan origen/limitaciones junto a las métricas, sin cambiar cálculos.
 - Recomendación: ACCEPT.
 - Decisión (Lead/humano + fecha): **ACEPTADA** por el Lead, 2026-10-07 (DL-028). Parche aplicado sin cambios y verificado con AppTest.
+
+## AP-015 · Corregir comparación de indicador y unidad en /verificar
+- Autor/fecha: Codex, 2026-10-09 UTC (cierre del 8 de octubre en Panamá).
+- Estado: **AUTORIZADA por solicitud humana de corregir errores críticos en PR aislado; sin merge ni despliegue**.
+- Problema comprobado en producción: inflación mensual 2,2% en agosto de 2026 resulta compatible citando IPC interanual; Gatún 84,88 metros resulta compatible citando 84,88 pies.
+- Cambio propuesto: desambiguar el indicador antes de buscar coincidencias numéricas, exigir la frecuencia explícita mensual/interanual, reconocer metros y otras unidades métricas sin convertirlas.
+- Archivos afectados: `scayl/gen/check.py`, `tests/test_claim_check.py`. Sin cambios de contratos, dependencias, corpus, umbrales ni Gemini.
+- Adaptador local: guardas dentro del verificador determinista; el resto del motor y las interfaces permanecen iguales.
+- Riesgo: aumenta la abstención ante indicadores ambiguos; se verifica con regresiones y los controles existentes.
+- Validación: casos sintéticos de desarrollo sobre el snapshot público, sin nuevas llamadas LLM. Producción seguirá con los fallos hasta aprobar y desplegar el PR.
+- Extensión crítica autorizada durante la auditoría: conservar signos negativo ASCII/Unicode en el adaptador local y comparar la cifra oficial con `EvidenceRef.value`; el parser compartido de Q&A no cambia. Regresiones verifican -0,2 ≠ +0,2 y -0,3 = -0,3.
+- Resultado del adaptador: 29 pruebas del verificador pasan (10 nuevas); la afirmación mensual 2,2% discrepa de la observación mensual 0,2%, y metros frente a pies queda no comparable.
