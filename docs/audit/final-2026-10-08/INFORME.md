@@ -27,3 +27,5 @@ Correo breve con destinatario, app, GitHub, cuatro enlaces Notion y adjunto: `do
 Recomendación actual: **NO-GO — BLOQUEANTE IDENTIFICADO** en /verificar. Resolver únicamente la corrección ya preparada y confirmar Notion; no ampliar la auditoría. Si el humano decide entregar con estas limitaciones declaradas, el correo y PDF ya están preparados para no perder las 23:59.
 
 La sincronización fetch+merge solicitada por AGENTS.md fue rechazada por revisión automática porque el usuario prohíbe merges sin aprobación. Se creó rama aislada desde checkout existente (05e2150), sin sustituir archivos ajenos. Archivos preexistentes no versionados .claude/ y SCAYL_Notion_import.zip preservados.
+
+Rama local `codex/final-delivery-audit`: corrección y documentación guardadas en commits. Descripción PR.md lista; push y apertura pendientes de autorización por posible Preview automático. No hay PR nuevo ni cambios en producción.

@@ -1,8 +1,8 @@
 # Relevo · codex-final · 2026-10-09 04:02 UTC
 
 - Motivo: relevo preventivo al cerrar auditoría; envío vence 23:59 Panamá 8/oct, corte operativo 23:15.
-- Rama: `codex/final-delivery-audit`. Último commit: consultar `git log -1`; este relevo se incluye en el commit final y push.
-- PR: localizar por rama; no mergear ni desplegar sin aprobación humana.
+- Rama: `codex/final-delivery-audit`. Último commit: consultar `git log -1`; relevo guardado en Git. Push pendiente de aprobación porque puede activar Preview automático.
+- PR: descripción preparada en docs/audit/final-2026-10-08/PR.md; aún no abierto. No mergear ni desplegar sin aprobación humana.
 
 ## Tarea en curso
 Cierre definitivo de entrega solicitado por usuario. Auditoría y corrección mínima listas; aprobación/entrega pendientes.
