@@ -1,47 +1,28 @@
-# Borrador del correo de entrega (C-04) — NO ENVIADO
+# Correo definitivo de entrega — NO ENVIADO
 
-> Lo envía una persona del equipo desde su correo. Revisar antes: que las páginas de Notion se abran en una
-> ventana privada (sin sesión) y que el repositorio sea público si se incluye su enlace.
+> Adjuntar `docs/ai_tools/SCAYL_Herramientas_IA.pdf`. El acceso del jurado a Notion requiere confirmación; no equivale al acceso del equipo.
 
-**Para:** hackiathon@viamatica.com
-**Asunto:** hackIAthon Panamá 2026 · Reto TVN Media · Entrega del equipo SCAYL
-
----
+```text
+Para: hackiathon@viamatica.com
+Asunto: hackIAthon Panamá 2026 · Reto TVN Media · Entrega del equipo SCAYL
 
 Estimado equipo organizador:
 
-Les enviamos la entrega del equipo **SCAYL** (Silentarcherjr, frictionspp-svg y LowCrime) para el reto TVN Media
-«De la señal a la decisión», modalidad editorial.
+Presentamos SCAYL, del equipo Silentarcherjr, frictionspp-svg y LowCrime, para el reto TVN Media «De la señal a la decisión», modalidad editorial.
 
-**1. Enlace público del reto desarrollado**
-https://scayl-editorial.vercel.app/
+SCAYL organiza señales públicas de Panamá en una agenda editorial priorizada, con fuentes, cifras fechadas y vacíos de investigación. Permite consultar el corpus con citas, contrastar afirmaciones mediante un verificador determinista y revisar borradores. La prioridad no equivale a verdad y aprobar un borrador no significa publicarlo. La aplicación identifica las respuestas guardadas y ofrece Gemini como modo opcional de generación en vivo con evidencia y abstención.
 
-**Breve explicación.** SCAYL es una sala de inteligencia editorial: convierte señales públicas de Panamá (titulares
-de GDELT y TVN, datos oficiales del Banco Mundial, ACP, INEC y USGS) en eventos priorizados. Cada evento muestra
-por qué es prioritario, cuántas procedencias realmente independientes lo respaldan, qué dato oficial lo confirma o
-lo contradice (con año y período, para no presentar datos históricos como actuales) y qué vacíos faltan por
-verificar. A partir de esa evidencia, un modelo local (Qwen3 8B) prepara un borrador editorial en el que cada
-oración cita su evidencia; cuando la evidencia no alcanza, el sistema se abstiene de forma explícita. La IA no
-decide qué es verdad ni qué se publica: el borrador queda pendiente de una decisión humana registrada con recibo.
-Además, el jurado puede escribir sus propias consultas: en **Consultas** puede elegir «IA generativa en vivo (Gemini)»,
-que redacta en el momento una respuesta citada solo con evidencia del corpus (o se abstiene), y en **Verificar** puede
-contrastar cualquier afirmación con cifras contra los datos oficiales y las noticias del corpus. Cada salida indica
-su modo (IA en vivo, IA precalculada, plantilla o abstención).
+Aplicación pública: https://scayl-editorial.vercel.app/
+Repositorio: https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial
+Página del equipo: https://www.notion.so/3f36d0f0b11481188e1ae1f61304fe7d
+Documentación técnica: https://www.notion.so/3f36d0f0b11481e5a2d9e50ea351c61a
+Documentación funcional: https://www.notion.so/3f36d0f0b11481f3a6dcd472e557e6e9
+Presentación para el Pitch Day: https://www.notion.so/3f36d0f0b11481e08c92e5440b11d9f6
 
-Recomendamos empezar por **«Empieza aquí»** (recorrido de unos 3 minutos).
+Adjuntamos SCAYL_Herramientas_IA.pdf, con el propósito, aplicación y resultados de las herramientas utilizadas.
 
-**2. Enlaces de Notion**
-- Página del equipo: https://www.notion.so/3f36d0f0b11481188e1ae1f61304fe7d
-- Documentación técnica: https://www.notion.so/3f36d0f0b11481e5a2d9e50ea351c61a
-- Documentación funcional: https://www.notion.so/3f36d0f0b11481f3a6dcd472e557e6e9
-- Presentación para el Pitch Day: https://www.notion.so/3f36d0f0b11481e08c92e5440b11d9f6
-
-**Adjunto:** `SCAYL_Herramientas_IA.pdf` (herramientas de IA utilizadas: propósito, aplicación y resultados).
-
-**Repositorio:** https://github.com/Silentarcherjr/scayl-sala-de-inteligencia-editorial
-
-
-Quedamos atentos.
+Recomendamos comenzar por «Empieza aquí», el recorrido guiado de la aplicación.
 
 Saludos cordiales,
 Equipo SCAYL
+```
