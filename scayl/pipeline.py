@@ -33,6 +33,7 @@ from scayl.gen.claims import extract as extract_claims
 from scayl.gen.llm import LLM
 from scayl.gen.studio import generate_with_report
 from scayl.gen.template import build_template_package
+from scayl.intel.cluster import split_distinct_quakes
 
 log = logging.getLogger("scayl.pipeline")
 GENERATION_REPORTS: list[dict] = []  # measured per-package generation facts of the last build (Trust Lab)
@@ -71,22 +72,27 @@ def build_bundle(
     llm: LLM | None = None,
     llm_top_n: int = 15,
     public: bool = False,
+    reference: dict[str, list[str]] | None = None,
 ) -> UIBundle:
     """``llm`` (live/cache) enriches the top-N events with LLM claims and an LLM Story Studio package;
     other events get the deterministic template. ``public`` strips RSS descriptions (rights)."""
     by_id = {n.id_noticia: n for n in news}
     topics = dict(zip((n.id_noticia for n in news), classify(news)))
-    clusters = [c for c in cluster(news) if c]
+    clusters = split_distinct_quakes(news, [c for c in cluster(news) if c])
 
     def first_date(ids: list[str]):
         dates = [by_id[i].fecha_publicacion or by_id[i].fecha_extraccion for i in ids]
         return min(dates), min(ids)
 
+    if reference is None:
+        numbered = [(f"EVT-{n:04d}", ids) for n, ids in enumerate(sorted(clusters, key=first_date), start=1)]
+    else:
+        numbered = stable_ids(clusters, reference, first_date)
     events: list[Event] = []
-    for n, ids in enumerate(sorted(clusters, key=first_date), start=1):
+    for event_id, ids in numbered:
         items = [by_id[i] for i in ids]
         topic, conf = _majority_topic([topics[i] for i in ids])
-        events.append(build_event(f"EVT-{n:04d}", items, topic, conf, indicators, quakes, cutoff))
+        events.append(build_event(event_id, items, topic, conf, indicators, quakes, cutoff))
 
     events = rank(events)
     if llm is not None and llm.mode != "template":
@@ -114,6 +120,26 @@ def build_bundle(
     return UIBundle(snapshot_version=snapshot_version, snapshot_cutoff_utc=cutoff, signals_total=signals_total,
                     signals_valid=len(news), events=events, packages=packages, news=kept_news,
                     indicators=indicators, seismic=quakes)
+
+
+def stable_ids(clusters: list[list[str]], reference: dict[str, list[str]], first_date) -> list[tuple[str, list[str]]]:
+    """Event IDs from a previous bundle (``--clusters-from``), so a correction does not renumber other events.
+
+    A cluster equal to a reference event keeps its ID. When a reference event is split, the piece holding its
+    earliest publication keeps the ID; other pieces, and clusters with no reference, get new IDs after the
+    highest existing one, in date order."""
+    owner = {nid: eid for eid, ids in reference.items() for nid in ids}
+    keep: dict[str, list[str]] = {}
+    for eid, ref_ids in reference.items():
+        earliest = min(ref_ids, key=lambda i: first_date([i]))
+        piece = next((c for c in clusters if earliest in c and all(owner.get(i) == eid for i in c)), None)
+        if piece is not None:
+            keep[eid] = piece
+    kept = {tuple(c) for c in keep.values()}
+    fresh = sorted((c for c in clusters if tuple(c) not in kept), key=first_date)
+    top = max((int(e.removeprefix("EVT-")) for e in reference), default=0)
+    numbered = list(keep.items()) + [(f"EVT-{top + n:04d}", c) for n, c in enumerate(fresh, start=1)]
+    return sorted(numbered, key=lambda pair: pair[0])
 
 
 def fichas(bundle: UIBundle) -> list[Ficha]:
@@ -230,13 +256,24 @@ def main(argv: list[str] | None = None) -> None:
                    help="live: Ollama on this machine (fills the cache); cache: reuse precomputed outputs")
     b.add_argument("--top", type=int, default=15, help="events enriched with LLM claims + package")
     b.add_argument("--public", action="store_true", help="strip RSS descriptions (hosted demo)")
+    b.add_argument("--clusters-from", type=Path, default=None,
+                   help="reuse the clustering and event IDs of a previous bundle (no embedder needed); "
+                        "split_distinct_quakes still applies")
     args = parser.parse_args(argv)
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
 
     news, indicators, quakes, classify, cluster, total = _load_worker_b(args.snapshot)
+    reference = None
+    if args.clusters_from:
+        ref = json.loads(args.clusters_from.read_text(encoding="utf-8"))
+        reference = {e["event_id"]: e["member_ids"] for e in ref["events"]}
+        log.info("Agrupación congelada desde %s (%d eventos)", args.clusters_from, len(reference))
+
+        def cluster(items):
+            return [list(ids) for ids in reference.values()]
     llm = None if args.llm == "template" else LLM(mode=args.llm)
     bundle = build_bundle(news, indicators, quakes, _cutoff(args.snapshot), args.snapshot.name, total,
-                          classify, cluster, llm=llm, llm_top_n=args.top, public=args.public)
+                          classify, cluster, llm=llm, llm_top_n=args.top, public=args.public, reference=reference)
     out = args.out or Path("data/processed") / args.snapshot.name
     write_outputs(bundle, out)
     log.info("bundle: %d signals -> %d events -> %s", len(news), len(bundle.events), out / "bundle.json")

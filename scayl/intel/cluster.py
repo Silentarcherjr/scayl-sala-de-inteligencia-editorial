@@ -49,3 +49,28 @@ def cluster(items: list[NewsItem], embedder: Embedder, tau: float | None = None)
     for item, label in zip(items, labels):
         groups.setdefault(int(label), []).append(item.id_noticia)
     return sorted((sorted(g) for g in groups.values()), key=lambda g: g[0])
+
+
+def split_distinct_quakes(items: list[NewsItem], clusters: list[list[str]]) -> list[list[str]]:
+    """Headlines about quakes located in disjoint countries are different quakes, however similar the
+    wording ("Sismo de magnitud 7.4 entre México y Guatemala ... para Panamá" vs "Sismo de magnitud 4.7 sacude
+    la frontera entre Panamá y Costa Rica"). Places named as who is affected ("para Panamá") do not locate the
+    quake. Headlines without a located place stay with the first group: absence of a place proves nothing."""
+    from scayl.evidence.linking import _seismic_places, is_seismic
+
+    by_id = {i.id_noticia: i for i in items}
+    out: list[list[str]] = []
+    for ids in clusters:
+        groups: list[tuple[frozenset[str], list[str]]] = []
+        for nid in ids:
+            item = by_id[nid]
+            places = _seismic_places(item.titulo) if is_seismic([item]) else frozenset()
+            target = next((g for g in groups if not places or not g[0] or g[0] & places), None)
+            if target is None:
+                groups.append((places, [nid]))
+            else:
+                target[1].append(nid)
+                if places and not target[0]:
+                    groups[groups.index(target)] = (places, target[1])
+        out.extend(sorted(g) for _, g in groups)
+    return out
