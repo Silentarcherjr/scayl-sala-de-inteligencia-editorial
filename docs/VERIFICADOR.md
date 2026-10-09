@@ -55,7 +55,7 @@ verdadero ni falso**: muestra la evidencia compatible, la que difiere y lo que f
 | demasiado largo | (entrada malformada) | HTTP 422 | — |
 | tipo incorrecto | (entrada malformada) | HTTP 422 | — |
 
-Además: `tests/test_claim_check.py` (21 pruebas sobre el bundle público real) y una prueba de la acción en
+Además: `tests/test_claim_check.py` (19 pruebas sobre el bundle público real) y una prueba de la acción en
 `tests/test_python_api.py`; pytest 410, ruff, `npm run lint` y `npm run build` (174 páginas) en verde. Latencias medidas en
 un M1 Max local; no se midieron en Vercel.
 
