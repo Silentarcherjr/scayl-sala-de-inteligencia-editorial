@@ -151,3 +151,11 @@ def test_http_limits_and_sanitized_failure(api, monkeypatch):
         assert "secret" not in json.dumps(body)
     finally:
         server.shutdown(); server.server_close(); thread.join(timeout=2)
+
+
+def test_check_endpoint_returns_findings_and_rejects_bad_input(api):
+    status, body = api.dispatch("check", {"claim": "El nivel del lago Gatún era de 90 pies el 29 de septiembre de 2026"})
+    assert status == 200 and body["estado"] == "discrepancia_oficial" and body["modo"].startswith("extractivo")
+    assert api.dispatch("check", {"claim": "corto"})[0] == 422
+    assert api.dispatch("check", {"claim": "El PIB creció 6% en 2010", "extra": 1})[0] == 422
+    assert api.dispatch("check", ["no es un objeto"])[0] == 400

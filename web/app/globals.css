@@ -31,3 +31,5 @@
 textarea { display:block; width:100%; margin:8px 0 16px; padding:12px; color:var(--text); background:white; border:1px solid #DCE1E7; border-radius:8px; font:inherit; resize:vertical; }
 form label { display:block; margin-top:16px; font-weight:600; }
 button:disabled { opacity:.6; cursor:wait; }
+
+.link-button{background:none;border:0;padding:0;color:inherit;text-decoration:underline;cursor:pointer;font:inherit;text-align:left}
